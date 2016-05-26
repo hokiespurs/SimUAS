@@ -5,6 +5,12 @@ from math import sin, cos, pi
 
 DIST2CENTER = 10
 
+bpy.context.scene.render.resolution_percentage = 100 #Rendering to 100 percent
+bpy.context.scene.render.use_stamp_lens = True #Lens in Metadata
+bpy.context.scene.compression = 0  #Image Compression
+bpy.context.scene.file_format = 'PNG' #Output Format
+bpy.context.scene.render.filepath = "C:/tmp\\BlenderTest" #FilePath
+
 def rtp2xyz(R,T,P):
     x_val = R * sin(P) * cos(T)
     y_val = R * sin(P) * sin(T)

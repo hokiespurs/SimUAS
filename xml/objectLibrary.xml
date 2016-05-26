@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library>
+	<object name="GCP" path = "C:\Users\Richie\Desktop\gcp.blend" blenderType = "Object" filename = "gcp"/>
+	<object name="dummy" path = "C:\Users\Richie\Desktop\dummy.blend" blenderType = "Object" filename = "dummy"/>
+  </library>
