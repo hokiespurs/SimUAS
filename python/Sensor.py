@@ -20,6 +20,9 @@ class Sensor:
         print("applying settings")
         bpy.context.scene.render.resolution_percentage = self.percentage #Rendering to 100 percent
         bpy.context.scene.render.use_stamp_lens = True #Lens in Metadata
+        bpy.context.scene.render.resolution_x = self.resolution[0]
+        bpy.context.scene.render.resolution_y = self.resolution[1]
+
         # Unable to add the following parameters, bad bpy documentation?
         #bpy.context.scene.compression = self.compression  #Image Compression
         #bpy.context.scene.file_format = self.type #Output Format

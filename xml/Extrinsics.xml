@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <extrinsics name = "50mFlight">
 	<pose name = "Image00001">
-		<translation x = "0" y = "2" z = "10"/>
+		<translation x = "0" y = "2" z = "5"/>
 		<rotation x = "1" y = "2" z = "3" />
 	</pose>
 	<pose name = "Image00002">
-		<translation x = "2" y = "2" z = "10"/>
-		<rotation x = "4" y = "2" z = "3" />
+		<translation x = "2" y = "2" z = "5"/>
+		<rotation x = "0" y = "0" z = "0" />
 	</pose>
 	<pose name = "Image00003">
-		<translation x = "0" y = "0" z = "10"/>
-		<rotation x = "-5" y = "0" z = "4" />
+		<translation x = "0" y = "0" z = "5"/>
+		<rotation x = "-5" y = "0" z = "180" />
 	</pose>
 	<pose name = "Image00004">
-		<translation x = "-2" y = "2" z = "10"/>
+		<translation x = "-2" y = "2" z = "5"/>
 		<rotation x = "1" y = "2" z = "3" />
 	</pose>
 	<pose name = "Image00005">
-		<translation x = "-2" y = "0" z = "10"/>
+		<translation x = "-2" y = "0" z = "5"/>
 		<rotation x = "4" y = "2" z = "3" />
 	</pose>
 	<pose name = "Image00006">
-		<translation x = "0" y = "-2" z = "10"/>
+		<translation x = "0" y = "-2" z = "5"/>
 		<rotation x = "-5" y = "0" z = "4" />
 	</pose>
 </extrinsics>
