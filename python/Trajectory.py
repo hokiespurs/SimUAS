@@ -14,6 +14,7 @@ class Pose:
         R = (self.Rotation.x, self.Rotation.y, self.Rotation.z)
         bpy.ops.object.camera_add(view_align=True, enter_editmode=True, location=T, rotation=R)
         bpy.context.object.data.lens = Sensor.focalLength
+        bpy.context.object.data.sensor_width = Sensor.sensorWidth
         bpy.context.object.name = self.name
         bpy.context.object.data.name = self.name
         print("ADDING POSE" + self.name)
