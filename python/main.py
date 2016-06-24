@@ -7,7 +7,7 @@ import bpy
 wipe()  # clear all objects
 
 # User defined textbook
-outputFolder = "C:/Users/Richie/Documents/GitHub/BlenderPythonTest/xml/"
+outputFolder = "C:/Users/Richie/Documents/GitHub/BlenderPythonTest/output/"
 xmlLibrary = "C:/Users/Richie/Documents/GitHub/BlenderPythonTest/xml/objectLibrary.xml"
 xmlScene = "C:/Users/Richie/Documents/GitHub/BlenderPythonTest/xml/scene.xml"
 xmlSensor = "C:/Users/Richie/Documents/GitHub/BlenderPythonTest/xml/sensor.xml"
