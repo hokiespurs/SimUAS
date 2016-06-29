@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extrinsics name = "Test">	<pose name = "ImTest0001">
+		<translation x = "-10.000000" y = "-10.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0002">
+		<translation x = "-10.000000" y = "-8.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0003">
+		<translation x = "-10.000000" y = "-6.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0004">
+		<translation x = "-10.000000" y = "-4.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0005">
+		<translation x = "-10.000000" y = "-2.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0006">
+		<translation x = "-10.000000" y = "0.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0007">
+		<translation x = "-10.000000" y = "2.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0008">
+		<translation x = "-10.000000" y = "4.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0009">
+		<translation x = "-10.000000" y = "6.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0010">
+		<translation x = "-10.000000" y = "8.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0011">
+		<translation x = "-10.000000" y = "10.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0012">
+		<translation x = "-8.000000" y = "-10.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0013">
+		<translation x = "-8.000000" y = "-8.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0014">
+		<translation x = "-8.000000" y = "-6.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0015">
+		<translation x = "-8.000000" y = "-4.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0016">
+		<translation x = "-8.000000" y = "-2.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0017">
+		<translation x = "-8.000000" y = "0.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0018">
+		<translation x = "-8.000000" y = "2.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0019">
+		<translation x = "-8.000000" y = "4.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0020">
+		<translation x = "-8.000000" y = "6.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0021">
+		<translation x = "-8.000000" y = "8.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0022">
+		<translation x = "-8.000000" y = "10.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0023">
+		<translation x = "-6.000000" y = "-10.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0024">
+		<translation x = "-6.000000" y = "-8.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0025">
+		<translation x = "-6.000000" y = "-6.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0026">
+		<translation x = "-6.000000" y = "-4.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0027">
+		<translation x = "-6.000000" y = "-2.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0028">
+		<translation x = "-6.000000" y = "0.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0029">
+		<translation x = "-6.000000" y = "2.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0030">
+		<translation x = "-6.000000" y = "4.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0031">
+		<translation x = "-6.000000" y = "6.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0032">
+		<translation x = "-6.000000" y = "8.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0033">
+		<translation x = "-6.000000" y = "10.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0034">
+		<translation x = "-4.000000" y = "-10.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0035">
+		<translation x = "-4.000000" y = "-8.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0036">
+		<translation x = "-4.000000" y = "-6.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0037">
+		<translation x = "-4.000000" y = "-4.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0038">
+		<translation x = "-4.000000" y = "-2.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0039">
+		<translation x = "-4.000000" y = "0.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0040">
+		<translation x = "-4.000000" y = "2.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0041">
+		<translation x = "-4.000000" y = "4.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0042">
+		<translation x = "-4.000000" y = "6.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0043">
+		<translation x = "-4.000000" y = "8.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0044">
+		<translation x = "-4.000000" y = "10.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0045">
+		<translation x = "-2.000000" y = "-10.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0046">
+		<translation x = "-2.000000" y = "-8.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0047">
+		<translation x = "-2.000000" y = "-6.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0048">
+		<translation x = "-2.000000" y = "-4.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0049">
+		<translation x = "-2.000000" y = "-2.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0050">
+		<translation x = "-2.000000" y = "0.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0051">
+		<translation x = "-2.000000" y = "2.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0052">
+		<translation x = "-2.000000" y = "4.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0053">
+		<translation x = "-2.000000" y = "6.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0054">
+		<translation x = "-2.000000" y = "8.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0055">
+		<translation x = "-2.000000" y = "10.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0056">
+		<translation x = "0.000000" y = "-10.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0057">
+		<translation x = "0.000000" y = "-8.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0058">
+		<translation x = "0.000000" y = "-6.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0059">
+		<translation x = "0.000000" y = "-4.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0060">
+		<translation x = "0.000000" y = "-2.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0061">
+		<translation x = "0.000000" y = "0.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0062">
+		<translation x = "0.000000" y = "2.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0063">
+		<translation x = "0.000000" y = "4.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0064">
+		<translation x = "0.000000" y = "6.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0065">
+		<translation x = "0.000000" y = "8.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0066">
+		<translation x = "0.000000" y = "10.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0067">
+		<translation x = "2.000000" y = "-10.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0068">
+		<translation x = "2.000000" y = "-8.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0069">
+		<translation x = "2.000000" y = "-6.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0070">
+		<translation x = "2.000000" y = "-4.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0071">
+		<translation x = "2.000000" y = "-2.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0072">
+		<translation x = "2.000000" y = "0.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0073">
+		<translation x = "2.000000" y = "2.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0074">
+		<translation x = "2.000000" y = "4.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0075">
+		<translation x = "2.000000" y = "6.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0076">
+		<translation x = "2.000000" y = "8.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0077">
+		<translation x = "2.000000" y = "10.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0078">
+		<translation x = "4.000000" y = "-10.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0079">
+		<translation x = "4.000000" y = "-8.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0080">
+		<translation x = "4.000000" y = "-6.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0081">
+		<translation x = "4.000000" y = "-4.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0082">
+		<translation x = "4.000000" y = "-2.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0083">
+		<translation x = "4.000000" y = "0.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0084">
+		<translation x = "4.000000" y = "2.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0085">
+		<translation x = "4.000000" y = "4.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0086">
+		<translation x = "4.000000" y = "6.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0087">
+		<translation x = "4.000000" y = "8.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0088">
+		<translation x = "4.000000" y = "10.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0089">
+		<translation x = "6.000000" y = "-10.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0090">
+		<translation x = "6.000000" y = "-8.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0091">
+		<translation x = "6.000000" y = "-6.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0092">
+		<translation x = "6.000000" y = "-4.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0093">
+		<translation x = "6.000000" y = "-2.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0094">
+		<translation x = "6.000000" y = "0.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0095">
+		<translation x = "6.000000" y = "2.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0096">
+		<translation x = "6.000000" y = "4.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0097">
+		<translation x = "6.000000" y = "6.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0098">
+		<translation x = "6.000000" y = "8.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0099">
+		<translation x = "6.000000" y = "10.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0100">
+		<translation x = "8.000000" y = "-10.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0101">
+		<translation x = "8.000000" y = "-8.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0102">
+		<translation x = "8.000000" y = "-6.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0103">
+		<translation x = "8.000000" y = "-4.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0104">
+		<translation x = "8.000000" y = "-2.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0105">
+		<translation x = "8.000000" y = "0.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0106">
+		<translation x = "8.000000" y = "2.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0107">
+		<translation x = "8.000000" y = "4.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0108">
+		<translation x = "8.000000" y = "6.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0109">
+		<translation x = "8.000000" y = "8.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0110">
+		<translation x = "8.000000" y = "10.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0111">
+		<translation x = "10.000000" y = "-10.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0112">
+		<translation x = "10.000000" y = "-8.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0113">
+		<translation x = "10.000000" y = "-6.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0114">
+		<translation x = "10.000000" y = "-4.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0115">
+		<translation x = "10.000000" y = "-2.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0116">
+		<translation x = "10.000000" y = "0.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0117">
+		<translation x = "10.000000" y = "2.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0118">
+		<translation x = "10.000000" y = "4.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0119">
+		<translation x = "10.000000" y = "6.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0120">
+		<translation x = "10.000000" y = "8.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0121">
+		<translation x = "10.000000" y = "10.000000" z = "10.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+</extrinsics>

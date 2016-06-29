@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<library>
-	<object name="GCP" path = "C:\Users\Richie\Documents\GitHub\BlenderPythonTest\blend\gcp.blend" blenderType = "Object" filename = "gcp"/>
-	<object name="dummy" path = "C:\Users\Richie\Documents\GitHub\BlenderPythonTest\blend\dummy.blend" blenderType = "Object" filename = "dummy"/>
-	<object name="checkercube" path = "C:\Users\Richie\Documents\GitHub\BlenderPythonTest\blend\checkercube.blend" blenderType = "Object" filename = "checkercube"/>
-	<object name="trichecker" path = "C:\Users\Richie\Documents\GitHub\BlenderPythonTest\blend\trichecker.blend" blenderType = "Object" filename = "trichecker"/>
-	<object name="pinkpipe" path = "C:\Users\Richie\Documents\GitHub\BlenderPythonTest\blend\pinkpipe.blend" blenderType = "Object" filename = "pinkpipe"/>
-  </library>
