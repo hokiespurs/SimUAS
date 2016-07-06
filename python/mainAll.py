@@ -35,8 +35,8 @@ class Sensor:
 
 
 class BObject:
-    def __init__(self, LibObj, iName, T, R, S):
-        self.linname = LibObj.libname
+    def __init__(self, LibObj, iName, T, R, S, isGCP):
+        self.libname = LibObj.libname
         self.name = iName
         self.path = LibObj.path
         self.blenderType = LibObj.blenderType
@@ -44,7 +44,7 @@ class BObject:
         self.Translation = T
         self.Rotation = R
         self.Scale = S
-
+        self.isGCP = isGCP
 
 class Objlib:
     def __init__(self, name, path, blenderType, filename):
@@ -81,6 +81,7 @@ class Scene:
             iname = iObj.get('name')
             ind = allLibNames.index(libname)
 
+            isGCP = iObj.get('isGCP')
             Tx = float(iObj.find('translation').get('x'))
             Ty = float(iObj.find('translation').get('y'))
             Tz = float(iObj.find('translation').get('z'))
@@ -95,11 +96,16 @@ class Scene:
             iR = Triplet(Rx, Ry, Rz)
             iS = Triplet(Sx, Sy, Sz)
 
-            iBObject = BObject(AllLibObj[ind], iname, iT, iR, iS)
+            iBObject = BObject(AllLibObj[ind], iname, iT, iR, iS, isGCP)
             self.BObjects.append(iBObject)
 
-    def build(self):
+    def build(self,controlCSV):
         logging.info("Building " + self.name)
+
+        GCPwriter = csv.writer(open(controlCSV, 'w', newline=''))
+        trajectoryHeader = ["ControlPointName", "Tx", "Ty", "Tz", "Rx", "Ry", "Rz"]
+        GCPwriter.writerow(trajectoryHeader)
+
         for iObj in self.BObjects:
             iName = iObj.name
 
@@ -113,6 +119,11 @@ class Scene:
             bpy.data.objects[iName].rotation_euler = (iObj.Rotation.x, iObj.Rotation.y, iObj.Rotation.z)
             bpy.data.objects[iName].scale = (iObj.Scale.x, iObj.Scale.y, iObj.Scale.z)
             logging.debug('Added ' + iName + " to scene")
+            logging.debug(iObj.name + " isGCP = " + iObj.isGCP)
+
+            if iObj.isGCP == "1":
+                GCPwriter.writerow([iObj.name, iObj.Translation.x, iObj.Translation.y, iObj.Translation.z,
+                                    iObj.Rotation.x*180/pi, iObj.Rotation.y*180/pi, iObj.Rotation.z*180/pi])
 
 
 class Pose:
@@ -211,7 +222,7 @@ def main():
     LOGFORMAT = "[%(asctime)s] %(funcName)s: %(message)s"
     logging.basicConfig(filename=experimentName + "/output/metadata.log", level=logging.DEBUG, format= LOGFORMAT)
     trajectoryCSV = experimentName + "/output/trajectory.csv"
-
+    controlCSV = experimentName + "/output/Control.csv"
     wipe()  # clear all blender objects
 
     # Populate Classes
@@ -220,7 +231,7 @@ def main():
     myTrajectory = Trajectory(xmlTrajectory)
 
     # MakeScene
-    myScene.build()
+    myScene.build(controlCSV)
     # Apply Sensor Parameters
     mySensor.apply()
     iCount = 0
@@ -240,7 +251,8 @@ def main():
         # write trajectory csv
         print(sys.version)
 
-        rawrow = [iPose.name, iPose.Translation.x, iPose.Translation.y, iPose.Translation.z, iPose.Rotation.x, iPose.Rotation.y, iPose.Rotation.z]
+        rawrow = [iPose.name, iPose.Translation.x, iPose.Translation.y, iPose.Translation.z, iPose.Rotation.x*180/pi,
+                  iPose.Rotation.y*180/pi, iPose.Rotation.z*180/pi]
         writer.writerow(rawrow)
 
 if __name__ == "__main__":
