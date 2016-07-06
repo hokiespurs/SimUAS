@@ -1,0 +1,1030 @@
+[2016-07-06 10:54:23,459] wipe: Clearing all existing blender objects
+[2016-07-06 10:54:23,461] build: Building testRange
+[2016-07-06 10:54:23,464] build: Added GCP0 to scene
+[2016-07-06 10:54:23,464] build: GCP0 isGCP = 1
+[2016-07-06 10:54:23,466] build: Added GCP1 to scene
+[2016-07-06 10:54:23,466] build: GCP1 isGCP = 1
+[2016-07-06 10:54:23,468] build: Added GCP2 to scene
+[2016-07-06 10:54:23,468] build: GCP2 isGCP = 1
+[2016-07-06 10:54:23,469] build: Added GCP3 to scene
+[2016-07-06 10:54:23,469] build: GCP3 isGCP = 1
+[2016-07-06 10:54:23,471] build: Added dummy1 to scene
+[2016-07-06 10:54:23,471] build: dummy1 isGCP = 0
+[2016-07-06 10:54:23,472] build: Added checkercube1 to scene
+[2016-07-06 10:54:23,473] build: checkercube1 isGCP = 0
+[2016-07-06 10:54:23,474] build: Added checkercube2 to scene
+[2016-07-06 10:54:23,474] build: checkercube2 isGCP = 0
+[2016-07-06 10:54:23,475] build: Added checkercube3 to scene
+[2016-07-06 10:54:23,476] build: checkercube3 isGCP = 0
+[2016-07-06 10:54:23,477] build: Added checkercube4 to scene
+[2016-07-06 10:54:23,477] build: checkercube4 isGCP = 0
+[2016-07-06 10:54:23,479] build: Added pinkpipe to scene
+[2016-07-06 10:54:23,479] build: pinkpipe isGCP = 0
+[2016-07-06 10:54:23,480] build: Added trichecker1 to scene
+[2016-07-06 10:54:23,480] build: trichecker1 isGCP = 0
+[2016-07-06 10:54:23,482] build: Added trichecker2 to scene
+[2016-07-06 10:54:23,482] build: trichecker2 isGCP = 0
+[2016-07-06 10:54:23,483] build: Added trichecker3 to scene
+[2016-07-06 10:54:23,483] build: trichecker3 isGCP = 0
+[2016-07-06 10:54:23,485] build: Added trichecker4 to scene
+[2016-07-06 10:54:23,485] build: trichecker4 isGCP = 0
+[2016-07-06 10:54:23,485] apply: applying settings
+[2016-07-06 10:54:23,486] add: ADDING POSE: ImTest0001
+[2016-07-06 10:54:23,486] link: running as background
+[2016-07-06 10:54:23,486] main: Rendering [ImTest0001] started
+[2016-07-06 10:54:24,977] main: Rendered Finished
+[2016-07-06 10:54:24,977] add: ADDING POSE: ImTest0002
+[2016-07-06 10:54:24,978] link: running as background
+[2016-07-06 10:54:24,978] main: Rendering [ImTest0002] started
+[2016-07-06 10:54:26,398] main: Rendered Finished
+[2016-07-06 10:54:26,399] add: ADDING POSE: ImTest0003
+[2016-07-06 10:54:26,399] link: running as background
+[2016-07-06 10:54:26,399] main: Rendering [ImTest0003] started
+[2016-07-06 10:54:27,811] main: Rendered Finished
+[2016-07-06 10:54:27,811] add: ADDING POSE: ImTest0004
+[2016-07-06 10:54:27,811] link: running as background
+[2016-07-06 10:54:27,811] main: Rendering [ImTest0004] started
+[2016-07-06 10:54:29,315] main: Rendered Finished
+[2016-07-06 10:54:29,315] add: ADDING POSE: ImTest0005
+[2016-07-06 10:54:29,316] link: running as background
+[2016-07-06 10:54:29,316] main: Rendering [ImTest0005] started
+[2016-07-06 10:54:30,907] main: Rendered Finished
+[2016-07-06 10:54:30,908] add: ADDING POSE: ImTest0006
+[2016-07-06 10:54:30,908] link: running as background
+[2016-07-06 10:54:30,908] main: Rendering [ImTest0006] started
+[2016-07-06 10:54:32,568] main: Rendered Finished
+[2016-07-06 10:54:32,568] add: ADDING POSE: ImTest0007
+[2016-07-06 10:54:32,569] link: running as background
+[2016-07-06 10:54:32,569] main: Rendering [ImTest0007] started
+[2016-07-06 10:54:34,484] main: Rendered Finished
+[2016-07-06 10:54:34,485] add: ADDING POSE: ImTest0008
+[2016-07-06 10:54:34,485] link: running as background
+[2016-07-06 10:54:34,485] main: Rendering [ImTest0008] started
+[2016-07-06 10:54:36,195] main: Rendered Finished
+[2016-07-06 10:54:36,196] add: ADDING POSE: ImTest0009
+[2016-07-06 10:54:36,196] link: running as background
+[2016-07-06 10:54:36,196] main: Rendering [ImTest0009] started
+[2016-07-06 10:54:37,777] main: Rendered Finished
+[2016-07-06 10:54:37,778] add: ADDING POSE: ImTest0010
+[2016-07-06 10:54:37,778] link: running as background
+[2016-07-06 10:54:37,778] main: Rendering [ImTest0010] started
+[2016-07-06 10:54:39,315] main: Rendered Finished
+[2016-07-06 10:54:39,316] add: ADDING POSE: ImTest0011
+[2016-07-06 10:54:39,316] link: running as background
+[2016-07-06 10:54:39,316] main: Rendering [ImTest0011] started
+[2016-07-06 10:54:40,852] main: Rendered Finished
+[2016-07-06 10:54:40,852] add: ADDING POSE: ImTest0012
+[2016-07-06 10:54:40,852] link: running as background
+[2016-07-06 10:54:40,852] main: Rendering [ImTest0012] started
+[2016-07-06 10:54:42,469] main: Rendered Finished
+[2016-07-06 10:54:42,470] add: ADDING POSE: ImTest0013
+[2016-07-06 10:54:42,470] link: running as background
+[2016-07-06 10:54:42,470] main: Rendering [ImTest0013] started
+[2016-07-06 10:54:43,951] main: Rendered Finished
+[2016-07-06 10:54:43,951] add: ADDING POSE: ImTest0014
+[2016-07-06 10:54:43,951] link: running as background
+[2016-07-06 10:54:43,952] main: Rendering [ImTest0014] started
+[2016-07-06 10:54:45,447] main: Rendered Finished
+[2016-07-06 10:54:45,448] add: ADDING POSE: ImTest0015
+[2016-07-06 10:54:45,448] link: running as background
+[2016-07-06 10:54:45,448] main: Rendering [ImTest0015] started
+[2016-07-06 10:54:46,951] main: Rendered Finished
+[2016-07-06 10:54:46,952] add: ADDING POSE: ImTest0016
+[2016-07-06 10:54:46,952] link: running as background
+[2016-07-06 10:54:46,952] main: Rendering [ImTest0016] started
+[2016-07-06 10:54:48,727] main: Rendered Finished
+[2016-07-06 10:54:48,727] add: ADDING POSE: ImTest0017
+[2016-07-06 10:54:48,728] link: running as background
+[2016-07-06 10:54:48,728] main: Rendering [ImTest0017] started
+[2016-07-06 10:54:50,543] main: Rendered Finished
+[2016-07-06 10:54:50,544] add: ADDING POSE: ImTest0018
+[2016-07-06 10:54:50,544] link: running as background
+[2016-07-06 10:54:50,544] main: Rendering [ImTest0018] started
+[2016-07-06 10:54:52,454] main: Rendered Finished
+[2016-07-06 10:54:52,454] add: ADDING POSE: ImTest0019
+[2016-07-06 10:54:52,454] link: running as background
+[2016-07-06 10:54:52,454] main: Rendering [ImTest0019] started
+[2016-07-06 10:54:54,203] main: Rendered Finished
+[2016-07-06 10:54:54,204] add: ADDING POSE: ImTest0020
+[2016-07-06 10:54:54,204] link: running as background
+[2016-07-06 10:54:54,204] main: Rendering [ImTest0020] started
+[2016-07-06 10:54:55,845] main: Rendered Finished
+[2016-07-06 10:54:55,846] add: ADDING POSE: ImTest0021
+[2016-07-06 10:54:55,846] link: running as background
+[2016-07-06 10:54:55,846] main: Rendering [ImTest0021] started
+[2016-07-06 10:54:57,300] main: Rendered Finished
+[2016-07-06 10:54:57,301] add: ADDING POSE: ImTest0022
+[2016-07-06 10:54:57,301] link: running as background
+[2016-07-06 10:54:57,301] main: Rendering [ImTest0022] started
+[2016-07-06 10:54:58,840] main: Rendered Finished
+[2016-07-06 10:54:58,841] add: ADDING POSE: ImTest0023
+[2016-07-06 10:54:58,841] link: running as background
+[2016-07-06 10:54:58,841] main: Rendering [ImTest0023] started
+[2016-07-06 10:55:00,372] main: Rendered Finished
+[2016-07-06 10:55:00,373] add: ADDING POSE: ImTest0024
+[2016-07-06 10:55:00,373] link: running as background
+[2016-07-06 10:55:00,373] main: Rendering [ImTest0024] started
+[2016-07-06 10:55:01,912] main: Rendered Finished
+[2016-07-06 10:55:01,912] add: ADDING POSE: ImTest0025
+[2016-07-06 10:55:01,912] link: running as background
+[2016-07-06 10:55:01,912] main: Rendering [ImTest0025] started
+[2016-07-06 10:55:03,406] main: Rendered Finished
+[2016-07-06 10:55:03,407] add: ADDING POSE: ImTest0026
+[2016-07-06 10:55:03,407] link: running as background
+[2016-07-06 10:55:03,407] main: Rendering [ImTest0026] started
+[2016-07-06 10:55:04,957] main: Rendered Finished
+[2016-07-06 10:55:04,958] add: ADDING POSE: ImTest0027
+[2016-07-06 10:55:04,958] link: running as background
+[2016-07-06 10:55:04,958] main: Rendering [ImTest0027] started
+[2016-07-06 10:55:06,716] main: Rendered Finished
+[2016-07-06 10:55:06,716] add: ADDING POSE: ImTest0028
+[2016-07-06 10:55:06,717] link: running as background
+[2016-07-06 10:55:06,717] main: Rendering [ImTest0028] started
+[2016-07-06 10:55:08,598] main: Rendered Finished
+[2016-07-06 10:55:08,599] add: ADDING POSE: ImTest0029
+[2016-07-06 10:55:08,599] link: running as background
+[2016-07-06 10:55:08,599] main: Rendering [ImTest0029] started
+[2016-07-06 10:55:10,672] main: Rendered Finished
+[2016-07-06 10:55:10,673] add: ADDING POSE: ImTest0030
+[2016-07-06 10:55:10,673] link: running as background
+[2016-07-06 10:55:10,673] main: Rendering [ImTest0030] started
+[2016-07-06 10:55:12,485] main: Rendered Finished
+[2016-07-06 10:55:12,486] add: ADDING POSE: ImTest0031
+[2016-07-06 10:55:12,486] link: running as background
+[2016-07-06 10:55:12,486] main: Rendering [ImTest0031] started
+[2016-07-06 10:55:14,103] main: Rendered Finished
+[2016-07-06 10:55:14,104] add: ADDING POSE: ImTest0032
+[2016-07-06 10:55:14,104] link: running as background
+[2016-07-06 10:55:14,104] main: Rendering [ImTest0032] started
+[2016-07-06 10:55:15,607] main: Rendered Finished
+[2016-07-06 10:55:15,608] add: ADDING POSE: ImTest0033
+[2016-07-06 10:55:15,608] link: running as background
+[2016-07-06 10:55:15,608] main: Rendering [ImTest0033] started
+[2016-07-06 10:55:17,102] main: Rendered Finished
+[2016-07-06 10:55:17,104] add: ADDING POSE: ImTest0034
+[2016-07-06 10:55:17,104] link: running as background
+[2016-07-06 10:55:17,104] main: Rendering [ImTest0034] started
+[2016-07-06 10:55:18,646] main: Rendered Finished
+[2016-07-06 10:55:18,647] add: ADDING POSE: ImTest0035
+[2016-07-06 10:55:18,647] link: running as background
+[2016-07-06 10:55:18,647] main: Rendering [ImTest0035] started
+[2016-07-06 10:55:20,225] main: Rendered Finished
+[2016-07-06 10:55:20,226] add: ADDING POSE: ImTest0036
+[2016-07-06 10:55:20,226] link: running as background
+[2016-07-06 10:55:20,226] main: Rendering [ImTest0036] started
+[2016-07-06 10:55:21,829] main: Rendered Finished
+[2016-07-06 10:55:21,830] add: ADDING POSE: ImTest0037
+[2016-07-06 10:55:21,830] link: running as background
+[2016-07-06 10:55:21,830] main: Rendering [ImTest0037] started
+[2016-07-06 10:55:23,574] main: Rendered Finished
+[2016-07-06 10:55:23,575] add: ADDING POSE: ImTest0038
+[2016-07-06 10:55:23,575] link: running as background
+[2016-07-06 10:55:23,575] main: Rendering [ImTest0038] started
+[2016-07-06 10:55:25,429] main: Rendered Finished
+[2016-07-06 10:55:25,430] add: ADDING POSE: ImTest0039
+[2016-07-06 10:55:25,430] link: running as background
+[2016-07-06 10:55:25,430] main: Rendering [ImTest0039] started
+[2016-07-06 10:55:27,411] main: Rendered Finished
+[2016-07-06 10:55:27,412] add: ADDING POSE: ImTest0040
+[2016-07-06 10:55:27,412] link: running as background
+[2016-07-06 10:55:27,412] main: Rendering [ImTest0040] started
+[2016-07-06 10:55:29,447] main: Rendered Finished
+[2016-07-06 10:55:29,448] add: ADDING POSE: ImTest0041
+[2016-07-06 10:55:29,448] link: running as background
+[2016-07-06 10:55:29,448] main: Rendering [ImTest0041] started
+[2016-07-06 10:55:31,316] main: Rendered Finished
+[2016-07-06 10:55:31,317] add: ADDING POSE: ImTest0042
+[2016-07-06 10:55:31,317] link: running as background
+[2016-07-06 10:55:31,317] main: Rendering [ImTest0042] started
+[2016-07-06 10:55:33,010] main: Rendered Finished
+[2016-07-06 10:55:33,011] add: ADDING POSE: ImTest0043
+[2016-07-06 10:55:33,011] link: running as background
+[2016-07-06 10:55:33,011] main: Rendering [ImTest0043] started
+[2016-07-06 10:55:34,548] main: Rendered Finished
+[2016-07-06 10:55:34,549] add: ADDING POSE: ImTest0044
+[2016-07-06 10:55:34,549] link: running as background
+[2016-07-06 10:55:34,549] main: Rendering [ImTest0044] started
+[2016-07-06 10:55:36,157] main: Rendered Finished
+[2016-07-06 10:55:36,158] add: ADDING POSE: ImTest0045
+[2016-07-06 10:55:36,158] link: running as background
+[2016-07-06 10:55:36,158] main: Rendering [ImTest0045] started
+[2016-07-06 10:55:37,708] main: Rendered Finished
+[2016-07-06 10:55:37,709] add: ADDING POSE: ImTest0046
+[2016-07-06 10:55:37,709] link: running as background
+[2016-07-06 10:55:37,709] main: Rendering [ImTest0046] started
+[2016-07-06 10:55:39,396] main: Rendered Finished
+[2016-07-06 10:55:39,396] add: ADDING POSE: ImTest0047
+[2016-07-06 10:55:39,396] link: running as background
+[2016-07-06 10:55:39,397] main: Rendering [ImTest0047] started
+[2016-07-06 10:55:41,154] main: Rendered Finished
+[2016-07-06 10:55:41,155] add: ADDING POSE: ImTest0048
+[2016-07-06 10:55:41,155] link: running as background
+[2016-07-06 10:55:41,155] main: Rendering [ImTest0048] started
+[2016-07-06 10:55:42,987] main: Rendered Finished
+[2016-07-06 10:55:42,988] add: ADDING POSE: ImTest0049
+[2016-07-06 10:55:42,988] link: running as background
+[2016-07-06 10:55:42,989] main: Rendering [ImTest0049] started
+[2016-07-06 10:55:44,918] main: Rendered Finished
+[2016-07-06 10:55:44,919] add: ADDING POSE: ImTest0050
+[2016-07-06 10:55:44,919] link: running as background
+[2016-07-06 10:55:44,919] main: Rendering [ImTest0050] started
+[2016-07-06 10:55:47,068] main: Rendered Finished
+[2016-07-06 10:55:47,069] add: ADDING POSE: ImTest0051
+[2016-07-06 10:55:47,069] link: running as background
+[2016-07-06 10:55:47,069] main: Rendering [ImTest0051] started
+[2016-07-06 10:55:49,407] main: Rendered Finished
+[2016-07-06 10:55:49,408] add: ADDING POSE: ImTest0052
+[2016-07-06 10:55:49,408] link: running as background
+[2016-07-06 10:55:49,408] main: Rendering [ImTest0052] started
+[2016-07-06 10:55:51,379] main: Rendered Finished
+[2016-07-06 10:55:51,380] add: ADDING POSE: ImTest0053
+[2016-07-06 10:55:51,380] link: running as background
+[2016-07-06 10:55:51,380] main: Rendering [ImTest0053] started
+[2016-07-06 10:55:53,172] main: Rendered Finished
+[2016-07-06 10:55:53,173] add: ADDING POSE: ImTest0054
+[2016-07-06 10:55:53,173] link: running as background
+[2016-07-06 10:55:53,173] main: Rendering [ImTest0054] started
+[2016-07-06 10:55:54,914] main: Rendered Finished
+[2016-07-06 10:55:54,915] add: ADDING POSE: ImTest0055
+[2016-07-06 10:55:54,915] link: running as background
+[2016-07-06 10:55:54,915] main: Rendering [ImTest0055] started
+[2016-07-06 10:55:56,854] main: Rendered Finished
+[2016-07-06 10:55:56,855] add: ADDING POSE: ImTest0056
+[2016-07-06 10:55:56,855] link: running as background
+[2016-07-06 10:55:56,856] main: Rendering [ImTest0056] started
+[2016-07-06 10:55:58,511] main: Rendered Finished
+[2016-07-06 10:55:58,512] add: ADDING POSE: ImTest0057
+[2016-07-06 10:55:58,512] link: running as background
+[2016-07-06 10:55:58,512] main: Rendering [ImTest0057] started
+[2016-07-06 10:56:00,186] main: Rendered Finished
+[2016-07-06 10:56:00,187] add: ADDING POSE: ImTest0058
+[2016-07-06 10:56:00,187] link: running as background
+[2016-07-06 10:56:00,187] main: Rendering [ImTest0058] started
+[2016-07-06 10:56:01,967] main: Rendered Finished
+[2016-07-06 10:56:01,968] add: ADDING POSE: ImTest0059
+[2016-07-06 10:56:01,968] link: running as background
+[2016-07-06 10:56:01,968] main: Rendering [ImTest0059] started
+[2016-07-06 10:56:03,904] main: Rendered Finished
+[2016-07-06 10:56:03,905] add: ADDING POSE: ImTest0060
+[2016-07-06 10:56:03,905] link: running as background
+[2016-07-06 10:56:03,905] main: Rendering [ImTest0060] started
+[2016-07-06 10:56:05,845] main: Rendered Finished
+[2016-07-06 10:56:05,846] add: ADDING POSE: ImTest0061
+[2016-07-06 10:56:05,846] link: running as background
+[2016-07-06 10:56:05,846] main: Rendering [ImTest0061] started
+[2016-07-06 10:56:08,185] main: Rendered Finished
+[2016-07-06 10:56:08,187] add: ADDING POSE: ImTest0062
+[2016-07-06 10:56:08,187] link: running as background
+[2016-07-06 10:56:08,188] main: Rendering [ImTest0062] started
+[2016-07-06 10:56:10,576] main: Rendered Finished
+[2016-07-06 10:56:10,577] add: ADDING POSE: ImTest0063
+[2016-07-06 10:56:10,577] link: running as background
+[2016-07-06 10:56:10,577] main: Rendering [ImTest0063] started
+[2016-07-06 10:56:12,833] main: Rendered Finished
+[2016-07-06 10:56:12,834] add: ADDING POSE: ImTest0064
+[2016-07-06 10:56:12,834] link: running as background
+[2016-07-06 10:56:12,834] main: Rendering [ImTest0064] started
+[2016-07-06 10:56:14,694] main: Rendered Finished
+[2016-07-06 10:56:14,695] add: ADDING POSE: ImTest0065
+[2016-07-06 10:56:14,695] link: running as background
+[2016-07-06 10:56:14,695] main: Rendering [ImTest0065] started
+[2016-07-06 10:56:16,686] main: Rendered Finished
+[2016-07-06 10:56:16,687] add: ADDING POSE: ImTest0066
+[2016-07-06 10:56:16,687] link: running as background
+[2016-07-06 10:56:16,687] main: Rendering [ImTest0066] started
+[2016-07-06 10:56:18,842] main: Rendered Finished
+[2016-07-06 10:56:18,843] add: ADDING POSE: ImTest0067
+[2016-07-06 10:56:18,843] link: running as background
+[2016-07-06 10:56:18,843] main: Rendering [ImTest0067] started
+[2016-07-06 10:56:20,427] main: Rendered Finished
+[2016-07-06 10:56:20,428] add: ADDING POSE: ImTest0068
+[2016-07-06 10:56:20,428] link: running as background
+[2016-07-06 10:56:20,428] main: Rendering [ImTest0068] started
+[2016-07-06 10:56:22,118] main: Rendered Finished
+[2016-07-06 10:56:22,119] add: ADDING POSE: ImTest0069
+[2016-07-06 10:56:22,119] link: running as background
+[2016-07-06 10:56:22,119] main: Rendering [ImTest0069] started
+[2016-07-06 10:56:23,941] main: Rendered Finished
+[2016-07-06 10:56:23,942] add: ADDING POSE: ImTest0070
+[2016-07-06 10:56:23,942] link: running as background
+[2016-07-06 10:56:23,943] main: Rendering [ImTest0070] started
+[2016-07-06 10:56:25,914] main: Rendered Finished
+[2016-07-06 10:56:25,915] add: ADDING POSE: ImTest0071
+[2016-07-06 10:56:25,915] link: running as background
+[2016-07-06 10:56:25,915] main: Rendering [ImTest0071] started
+[2016-07-06 10:56:27,857] main: Rendered Finished
+[2016-07-06 10:56:27,858] add: ADDING POSE: ImTest0072
+[2016-07-06 10:56:27,858] link: running as background
+[2016-07-06 10:56:27,858] main: Rendering [ImTest0072] started
+[2016-07-06 10:56:30,051] main: Rendered Finished
+[2016-07-06 10:56:30,052] add: ADDING POSE: ImTest0073
+[2016-07-06 10:56:30,052] link: running as background
+[2016-07-06 10:56:30,052] main: Rendering [ImTest0073] started
+[2016-07-06 10:56:32,298] main: Rendered Finished
+[2016-07-06 10:56:32,299] add: ADDING POSE: ImTest0074
+[2016-07-06 10:56:32,299] link: running as background
+[2016-07-06 10:56:32,299] main: Rendering [ImTest0074] started
+[2016-07-06 10:56:34,510] main: Rendered Finished
+[2016-07-06 10:56:34,511] add: ADDING POSE: ImTest0075
+[2016-07-06 10:56:34,511] link: running as background
+[2016-07-06 10:56:34,511] main: Rendering [ImTest0075] started
+[2016-07-06 10:56:36,535] main: Rendered Finished
+[2016-07-06 10:56:36,537] add: ADDING POSE: ImTest0076
+[2016-07-06 10:56:36,537] link: running as background
+[2016-07-06 10:56:36,537] main: Rendering [ImTest0076] started
+[2016-07-06 10:56:38,885] main: Rendered Finished
+[2016-07-06 10:56:38,886] add: ADDING POSE: ImTest0077
+[2016-07-06 10:56:38,886] link: running as background
+[2016-07-06 10:56:38,886] main: Rendering [ImTest0077] started
+[2016-07-06 10:56:41,621] main: Rendered Finished
+[2016-07-06 10:56:41,623] add: ADDING POSE: ImTest0078
+[2016-07-06 10:56:41,623] link: running as background
+[2016-07-06 10:56:41,623] main: Rendering [ImTest0078] started
+[2016-07-06 10:56:43,601] main: Rendered Finished
+[2016-07-06 10:56:43,602] add: ADDING POSE: ImTest0079
+[2016-07-06 10:56:43,602] link: running as background
+[2016-07-06 10:56:43,602] main: Rendering [ImTest0079] started
+[2016-07-06 10:56:45,388] main: Rendered Finished
+[2016-07-06 10:56:45,389] add: ADDING POSE: ImTest0080
+[2016-07-06 10:56:45,389] link: running as background
+[2016-07-06 10:56:45,389] main: Rendering [ImTest0080] started
+[2016-07-06 10:56:47,159] main: Rendered Finished
+[2016-07-06 10:56:47,160] add: ADDING POSE: ImTest0081
+[2016-07-06 10:56:47,160] link: running as background
+[2016-07-06 10:56:47,160] main: Rendering [ImTest0081] started
+[2016-07-06 10:56:49,192] main: Rendered Finished
+[2016-07-06 10:56:49,195] add: ADDING POSE: ImTest0082
+[2016-07-06 10:56:49,195] link: running as background
+[2016-07-06 10:56:49,195] main: Rendering [ImTest0082] started
+[2016-07-06 10:56:51,183] main: Rendered Finished
+[2016-07-06 10:56:51,184] add: ADDING POSE: ImTest0083
+[2016-07-06 10:56:51,184] link: running as background
+[2016-07-06 10:56:51,184] main: Rendering [ImTest0083] started
+[2016-07-06 10:56:53,224] main: Rendered Finished
+[2016-07-06 10:56:53,225] add: ADDING POSE: ImTest0084
+[2016-07-06 10:56:53,225] link: running as background
+[2016-07-06 10:56:53,225] main: Rendering [ImTest0084] started
+[2016-07-06 10:56:55,329] main: Rendered Finished
+[2016-07-06 10:56:55,330] add: ADDING POSE: ImTest0085
+[2016-07-06 10:56:55,330] link: running as background
+[2016-07-06 10:56:55,330] main: Rendering [ImTest0085] started
+[2016-07-06 10:56:57,297] main: Rendered Finished
+[2016-07-06 10:56:57,298] add: ADDING POSE: ImTest0086
+[2016-07-06 10:56:57,298] link: running as background
+[2016-07-06 10:56:57,298] main: Rendering [ImTest0086] started
+[2016-07-06 10:56:59,202] main: Rendered Finished
+[2016-07-06 10:56:59,203] add: ADDING POSE: ImTest0087
+[2016-07-06 10:56:59,204] link: running as background
+[2016-07-06 10:56:59,204] main: Rendering [ImTest0087] started
+[2016-07-06 10:57:01,293] main: Rendered Finished
+[2016-07-06 10:57:01,294] add: ADDING POSE: ImTest0088
+[2016-07-06 10:57:01,294] link: running as background
+[2016-07-06 10:57:01,294] main: Rendering [ImTest0088] started
+[2016-07-06 10:57:03,547] main: Rendered Finished
+[2016-07-06 10:57:03,548] add: ADDING POSE: ImTest0089
+[2016-07-06 10:57:03,549] link: running as background
+[2016-07-06 10:57:03,549] main: Rendering [ImTest0089] started
+[2016-07-06 10:57:05,130] main: Rendered Finished
+[2016-07-06 10:57:05,132] add: ADDING POSE: ImTest0090
+[2016-07-06 10:57:05,132] link: running as background
+[2016-07-06 10:57:05,132] main: Rendering [ImTest0090] started
+[2016-07-06 10:57:06,773] main: Rendered Finished
+[2016-07-06 10:57:06,774] add: ADDING POSE: ImTest0091
+[2016-07-06 10:57:06,774] link: running as background
+[2016-07-06 10:57:06,774] main: Rendering [ImTest0091] started
+[2016-07-06 10:57:08,418] main: Rendered Finished
+[2016-07-06 10:57:08,419] add: ADDING POSE: ImTest0092
+[2016-07-06 10:57:08,419] link: running as background
+[2016-07-06 10:57:08,419] main: Rendering [ImTest0092] started
+[2016-07-06 10:57:10,050] main: Rendered Finished
+[2016-07-06 10:57:10,052] add: ADDING POSE: ImTest0093
+[2016-07-06 10:57:10,052] link: running as background
+[2016-07-06 10:57:10,052] main: Rendering [ImTest0093] started
+[2016-07-06 10:57:11,660] main: Rendered Finished
+[2016-07-06 10:57:11,661] add: ADDING POSE: ImTest0094
+[2016-07-06 10:57:11,661] link: running as background
+[2016-07-06 10:57:11,661] main: Rendering [ImTest0094] started
+[2016-07-06 10:57:13,211] main: Rendered Finished
+[2016-07-06 10:57:13,212] add: ADDING POSE: ImTest0095
+[2016-07-06 10:57:13,212] link: running as background
+[2016-07-06 10:57:13,212] main: Rendering [ImTest0095] started
+[2016-07-06 10:57:14,936] main: Rendered Finished
+[2016-07-06 10:57:14,937] add: ADDING POSE: ImTest0096
+[2016-07-06 10:57:14,937] link: running as background
+[2016-07-06 10:57:14,937] main: Rendering [ImTest0096] started
+[2016-07-06 10:57:16,635] main: Rendered Finished
+[2016-07-06 10:57:16,636] add: ADDING POSE: ImTest0097
+[2016-07-06 10:57:16,636] link: running as background
+[2016-07-06 10:57:16,637] main: Rendering [ImTest0097] started
+[2016-07-06 10:57:18,377] main: Rendered Finished
+[2016-07-06 10:57:18,379] add: ADDING POSE: ImTest0098
+[2016-07-06 10:57:18,379] link: running as background
+[2016-07-06 10:57:18,379] main: Rendering [ImTest0098] started
+[2016-07-06 10:57:20,239] main: Rendered Finished
+[2016-07-06 10:57:20,240] add: ADDING POSE: ImTest0099
+[2016-07-06 10:57:20,240] link: running as background
+[2016-07-06 10:57:20,240] main: Rendering [ImTest0099] started
+[2016-07-06 10:57:22,221] main: Rendered Finished
+[2016-07-06 10:57:22,222] add: ADDING POSE: ImTest0100
+[2016-07-06 10:57:22,222] link: running as background
+[2016-07-06 10:57:22,222] main: Rendering [ImTest0100] started
+[2016-07-06 10:57:23,703] main: Rendered Finished
+[2016-07-06 10:57:23,704] add: ADDING POSE: ImTest0101
+[2016-07-06 10:57:23,704] link: running as background
+[2016-07-06 10:57:23,704] main: Rendering [ImTest0101] started
+[2016-07-06 10:57:25,193] main: Rendered Finished
+[2016-07-06 10:57:25,195] add: ADDING POSE: ImTest0102
+[2016-07-06 10:57:25,195] link: running as background
+[2016-07-06 10:57:25,196] main: Rendering [ImTest0102] started
+[2016-07-06 10:57:26,668] main: Rendered Finished
+[2016-07-06 10:57:26,669] add: ADDING POSE: ImTest0103
+[2016-07-06 10:57:26,669] link: running as background
+[2016-07-06 10:57:26,669] main: Rendering [ImTest0103] started
+[2016-07-06 10:57:28,164] main: Rendered Finished
+[2016-07-06 10:57:28,166] add: ADDING POSE: ImTest0104
+[2016-07-06 10:57:28,166] link: running as background
+[2016-07-06 10:57:28,166] main: Rendering [ImTest0104] started
+[2016-07-06 10:57:29,655] main: Rendered Finished
+[2016-07-06 10:57:29,656] add: ADDING POSE: ImTest0105
+[2016-07-06 10:57:29,656] link: running as background
+[2016-07-06 10:57:29,656] main: Rendering [ImTest0105] started
+[2016-07-06 10:57:31,161] main: Rendered Finished
+[2016-07-06 10:57:31,162] add: ADDING POSE: ImTest0106
+[2016-07-06 10:57:31,162] link: running as background
+[2016-07-06 10:57:31,162] main: Rendering [ImTest0106] started
+[2016-07-06 10:57:32,899] main: Rendered Finished
+[2016-07-06 10:57:32,901] add: ADDING POSE: ImTest0107
+[2016-07-06 10:57:32,901] link: running as background
+[2016-07-06 10:57:32,901] main: Rendering [ImTest0107] started
+[2016-07-06 10:57:34,539] main: Rendered Finished
+[2016-07-06 10:57:34,542] add: ADDING POSE: ImTest0108
+[2016-07-06 10:57:34,542] link: running as background
+[2016-07-06 10:57:34,542] main: Rendering [ImTest0108] started
+[2016-07-06 10:57:36,454] main: Rendered Finished
+[2016-07-06 10:57:36,456] add: ADDING POSE: ImTest0109
+[2016-07-06 10:57:36,456] link: running as background
+[2016-07-06 10:57:36,456] main: Rendering [ImTest0109] started
+[2016-07-06 10:57:38,280] main: Rendered Finished
+[2016-07-06 10:57:38,281] add: ADDING POSE: ImTest0110
+[2016-07-06 10:57:38,281] link: running as background
+[2016-07-06 10:57:38,281] main: Rendering [ImTest0110] started
+[2016-07-06 10:57:39,979] main: Rendered Finished
+[2016-07-06 10:57:39,981] add: ADDING POSE: ImTest0111
+[2016-07-06 10:57:39,981] link: running as background
+[2016-07-06 10:57:39,981] main: Rendering [ImTest0111] started
+[2016-07-06 10:57:41,512] main: Rendered Finished
+[2016-07-06 10:57:41,514] add: ADDING POSE: ImTest0112
+[2016-07-06 10:57:41,514] link: running as background
+[2016-07-06 10:57:41,514] main: Rendering [ImTest0112] started
+[2016-07-06 10:57:43,056] main: Rendered Finished
+[2016-07-06 10:57:43,057] add: ADDING POSE: ImTest0113
+[2016-07-06 10:57:43,057] link: running as background
+[2016-07-06 10:57:43,057] main: Rendering [ImTest0113] started
+[2016-07-06 10:57:44,577] main: Rendered Finished
+[2016-07-06 10:57:44,578] add: ADDING POSE: ImTest0114
+[2016-07-06 10:57:44,578] link: running as background
+[2016-07-06 10:57:44,578] main: Rendering [ImTest0114] started
+[2016-07-06 10:57:46,064] main: Rendered Finished
+[2016-07-06 10:57:46,065] add: ADDING POSE: ImTest0115
+[2016-07-06 10:57:46,065] link: running as background
+[2016-07-06 10:57:46,065] main: Rendering [ImTest0115] started
+[2016-07-06 10:57:47,653] main: Rendered Finished
+[2016-07-06 10:57:47,655] add: ADDING POSE: ImTest0116
+[2016-07-06 10:57:47,655] link: running as background
+[2016-07-06 10:57:47,655] main: Rendering [ImTest0116] started
+[2016-07-06 10:57:49,163] main: Rendered Finished
+[2016-07-06 10:57:49,165] add: ADDING POSE: ImTest0117
+[2016-07-06 10:57:49,165] link: running as background
+[2016-07-06 10:57:49,165] main: Rendering [ImTest0117] started
+[2016-07-06 10:57:50,745] main: Rendered Finished
+[2016-07-06 10:57:50,746] add: ADDING POSE: ImTest0118
+[2016-07-06 10:57:50,746] link: running as background
+[2016-07-06 10:57:50,746] main: Rendering [ImTest0118] started
+[2016-07-06 10:57:52,383] main: Rendered Finished
+[2016-07-06 10:57:52,385] add: ADDING POSE: ImTest0119
+[2016-07-06 10:57:52,385] link: running as background
+[2016-07-06 10:57:52,385] main: Rendering [ImTest0119] started
+[2016-07-06 10:57:54,063] main: Rendered Finished
+[2016-07-06 10:57:54,064] add: ADDING POSE: ImTest0120
+[2016-07-06 10:57:54,065] link: running as background
+[2016-07-06 10:57:54,065] main: Rendering [ImTest0120] started
+[2016-07-06 10:57:55,723] main: Rendered Finished
+[2016-07-06 10:57:55,724] add: ADDING POSE: ImTest0121
+[2016-07-06 10:57:55,724] link: running as background
+[2016-07-06 10:57:55,724] main: Rendering [ImTest0121] started
+[2016-07-06 10:57:57,286] main: Rendered Finished
+[2016-07-06 11:01:20,058] wipe: Clearing all existing blender objects
+[2016-07-06 11:01:20,060] build: Building testRange
+[2016-07-06 11:01:20,063] build: Added GCP0 to scene
+[2016-07-06 11:01:20,063] build: GCP0 isGCP = 1
+[2016-07-06 11:01:20,065] build: Added GCP1 to scene
+[2016-07-06 11:01:20,065] build: GCP1 isGCP = 1
+[2016-07-06 11:01:20,066] build: Added GCP2 to scene
+[2016-07-06 11:01:20,066] build: GCP2 isGCP = 1
+[2016-07-06 11:01:20,068] build: Added GCP3 to scene
+[2016-07-06 11:01:20,068] build: GCP3 isGCP = 1
+[2016-07-06 11:01:20,070] build: Added dummy1 to scene
+[2016-07-06 11:01:20,070] build: dummy1 isGCP = 0
+[2016-07-06 11:01:20,071] build: Added checkercube1 to scene
+[2016-07-06 11:01:20,071] build: checkercube1 isGCP = 0
+[2016-07-06 11:01:20,073] build: Added checkercube2 to scene
+[2016-07-06 11:01:20,073] build: checkercube2 isGCP = 0
+[2016-07-06 11:01:20,074] build: Added checkercube3 to scene
+[2016-07-06 11:01:20,074] build: checkercube3 isGCP = 0
+[2016-07-06 11:01:20,076] build: Added checkercube4 to scene
+[2016-07-06 11:01:20,076] build: checkercube4 isGCP = 0
+[2016-07-06 11:01:20,077] build: Added pinkpipe to scene
+[2016-07-06 11:01:20,078] build: pinkpipe isGCP = 0
+[2016-07-06 11:01:20,079] build: Added trichecker1 to scene
+[2016-07-06 11:01:20,079] build: trichecker1 isGCP = 0
+[2016-07-06 11:01:20,081] build: Added trichecker2 to scene
+[2016-07-06 11:01:20,081] build: trichecker2 isGCP = 0
+[2016-07-06 11:01:20,082] build: Added trichecker3 to scene
+[2016-07-06 11:01:20,082] build: trichecker3 isGCP = 0
+[2016-07-06 11:01:20,084] build: Added trichecker4 to scene
+[2016-07-06 11:01:20,084] build: trichecker4 isGCP = 0
+[2016-07-06 11:01:20,084] apply: applying settings
+[2016-07-06 11:01:20,085] add: ADDING POSE: ImTest0001
+[2016-07-06 11:01:20,085] link: running as background
+[2016-07-06 11:01:20,085] main: Rendering [ImTest0001] started
+[2016-07-06 11:01:21,622] main: Rendered Finished
+[2016-07-06 11:01:21,623] add: ADDING POSE: ImTest0002
+[2016-07-06 11:01:21,623] link: running as background
+[2016-07-06 11:01:21,623] main: Rendering [ImTest0002] started
+[2016-07-06 11:01:23,027] main: Rendered Finished
+[2016-07-06 11:01:23,028] add: ADDING POSE: ImTest0003
+[2016-07-06 11:01:23,028] link: running as background
+[2016-07-06 11:01:23,028] main: Rendering [ImTest0003] started
+[2016-07-06 11:01:24,528] main: Rendered Finished
+[2016-07-06 11:01:24,529] add: ADDING POSE: ImTest0004
+[2016-07-06 11:01:24,529] link: running as background
+[2016-07-06 11:01:24,529] main: Rendering [ImTest0004] started
+[2016-07-06 11:01:25,978] main: Rendered Finished
+[2016-07-06 11:01:25,979] add: ADDING POSE: ImTest0005
+[2016-07-06 11:01:25,979] link: running as background
+[2016-07-06 11:01:25,979] main: Rendering [ImTest0005] started
+[2016-07-06 11:01:27,577] main: Rendered Finished
+[2016-07-06 11:01:27,578] add: ADDING POSE: ImTest0006
+[2016-07-06 11:01:27,579] link: running as background
+[2016-07-06 11:01:27,579] main: Rendering [ImTest0006] started
+[2016-07-06 11:01:29,359] main: Rendered Finished
+[2016-07-06 11:01:29,359] add: ADDING POSE: ImTest0007
+[2016-07-06 11:01:29,359] link: running as background
+[2016-07-06 11:01:29,360] main: Rendering [ImTest0007] started
+[2016-07-06 11:01:31,116] main: Rendered Finished
+[2016-07-06 11:01:31,117] add: ADDING POSE: ImTest0008
+[2016-07-06 11:01:31,117] link: running as background
+[2016-07-06 11:01:31,117] main: Rendering [ImTest0008] started
+[2016-07-06 11:01:32,835] main: Rendered Finished
+[2016-07-06 11:01:32,836] add: ADDING POSE: ImTest0009
+[2016-07-06 11:01:32,836] link: running as background
+[2016-07-06 11:01:32,836] main: Rendering [ImTest0009] started
+[2016-07-06 11:01:34,529] main: Rendered Finished
+[2016-07-06 11:01:34,530] add: ADDING POSE: ImTest0010
+[2016-07-06 11:01:34,530] link: running as background
+[2016-07-06 11:01:34,530] main: Rendering [ImTest0010] started
+[2016-07-06 11:01:36,000] main: Rendered Finished
+[2016-07-06 11:01:36,000] add: ADDING POSE: ImTest0011
+[2016-07-06 11:01:36,001] link: running as background
+[2016-07-06 11:01:36,001] main: Rendering [ImTest0011] started
+[2016-07-06 11:01:37,476] main: Rendered Finished
+[2016-07-06 11:01:37,477] add: ADDING POSE: ImTest0012
+[2016-07-06 11:01:37,477] link: running as background
+[2016-07-06 11:01:37,477] main: Rendering [ImTest0012] started
+[2016-07-06 11:01:38,955] main: Rendered Finished
+[2016-07-06 11:01:38,956] add: ADDING POSE: ImTest0013
+[2016-07-06 11:01:38,956] link: running as background
+[2016-07-06 11:01:38,956] main: Rendering [ImTest0013] started
+[2016-07-06 11:01:40,401] main: Rendered Finished
+[2016-07-06 11:01:40,401] add: ADDING POSE: ImTest0014
+[2016-07-06 11:01:40,401] link: running as background
+[2016-07-06 11:01:40,402] main: Rendering [ImTest0014] started
+[2016-07-06 11:01:41,920] main: Rendered Finished
+[2016-07-06 11:01:41,921] add: ADDING POSE: ImTest0015
+[2016-07-06 11:01:41,921] link: running as background
+[2016-07-06 11:01:41,921] main: Rendering [ImTest0015] started
+[2016-07-06 11:01:43,400] main: Rendered Finished
+[2016-07-06 11:01:43,401] add: ADDING POSE: ImTest0016
+[2016-07-06 11:01:43,401] link: running as background
+[2016-07-06 11:01:43,401] main: Rendering [ImTest0016] started
+[2016-07-06 11:01:45,040] main: Rendered Finished
+[2016-07-06 11:01:45,041] add: ADDING POSE: ImTest0017
+[2016-07-06 11:01:45,042] link: running as background
+[2016-07-06 11:01:45,042] main: Rendering [ImTest0017] started
+[2016-07-06 11:01:46,790] main: Rendered Finished
+[2016-07-06 11:01:46,790] add: ADDING POSE: ImTest0018
+[2016-07-06 11:01:46,791] link: running as background
+[2016-07-06 11:01:46,791] main: Rendering [ImTest0018] started
+[2016-07-06 11:01:48,591] main: Rendered Finished
+[2016-07-06 11:01:48,592] add: ADDING POSE: ImTest0019
+[2016-07-06 11:01:48,592] link: running as background
+[2016-07-06 11:01:48,592] main: Rendering [ImTest0019] started
+[2016-07-06 11:01:50,310] main: Rendered Finished
+[2016-07-06 11:01:50,311] add: ADDING POSE: ImTest0020
+[2016-07-06 11:01:50,311] link: running as background
+[2016-07-06 11:01:50,311] main: Rendering [ImTest0020] started
+[2016-07-06 11:01:51,935] main: Rendered Finished
+[2016-07-06 11:01:51,936] add: ADDING POSE: ImTest0021
+[2016-07-06 11:01:51,937] link: running as background
+[2016-07-06 11:01:51,937] main: Rendering [ImTest0021] started
+[2016-07-06 11:01:53,396] main: Rendered Finished
+[2016-07-06 11:01:53,397] add: ADDING POSE: ImTest0022
+[2016-07-06 11:01:53,397] link: running as background
+[2016-07-06 11:01:53,397] main: Rendering [ImTest0022] started
+[2016-07-06 11:01:54,843] main: Rendered Finished
+[2016-07-06 11:01:54,844] add: ADDING POSE: ImTest0023
+[2016-07-06 11:01:54,844] link: running as background
+[2016-07-06 11:01:54,844] main: Rendering [ImTest0023] started
+[2016-07-06 11:01:56,299] main: Rendered Finished
+[2016-07-06 11:01:56,300] add: ADDING POSE: ImTest0024
+[2016-07-06 11:01:56,300] link: running as background
+[2016-07-06 11:01:56,300] main: Rendering [ImTest0024] started
+[2016-07-06 11:01:57,766] main: Rendered Finished
+[2016-07-06 11:01:57,766] add: ADDING POSE: ImTest0025
+[2016-07-06 11:01:57,766] link: running as background
+[2016-07-06 11:01:57,767] main: Rendering [ImTest0025] started
+[2016-07-06 11:01:59,308] main: Rendered Finished
+[2016-07-06 11:01:59,309] add: ADDING POSE: ImTest0026
+[2016-07-06 11:01:59,309] link: running as background
+[2016-07-06 11:01:59,309] main: Rendering [ImTest0026] started
+[2016-07-06 11:02:00,864] main: Rendered Finished
+[2016-07-06 11:02:00,865] add: ADDING POSE: ImTest0027
+[2016-07-06 11:02:00,865] link: running as background
+[2016-07-06 11:02:00,865] main: Rendering [ImTest0027] started
+[2016-07-06 11:02:02,551] main: Rendered Finished
+[2016-07-06 11:02:02,552] add: ADDING POSE: ImTest0028
+[2016-07-06 11:02:02,552] link: running as background
+[2016-07-06 11:02:02,553] main: Rendering [ImTest0028] started
+[2016-07-06 11:02:04,428] main: Rendered Finished
+[2016-07-06 11:02:04,429] add: ADDING POSE: ImTest0029
+[2016-07-06 11:02:04,429] link: running as background
+[2016-07-06 11:02:04,429] main: Rendering [ImTest0029] started
+[2016-07-06 11:02:06,504] main: Rendered Finished
+[2016-07-06 11:02:06,505] add: ADDING POSE: ImTest0030
+[2016-07-06 11:02:06,505] link: running as background
+[2016-07-06 11:02:06,505] main: Rendering [ImTest0030] started
+[2016-07-06 11:02:08,298] main: Rendered Finished
+[2016-07-06 11:02:08,299] add: ADDING POSE: ImTest0031
+[2016-07-06 11:02:08,299] link: running as background
+[2016-07-06 11:02:08,299] main: Rendering [ImTest0031] started
+[2016-07-06 11:02:09,881] main: Rendered Finished
+[2016-07-06 11:02:09,882] add: ADDING POSE: ImTest0032
+[2016-07-06 11:02:09,882] link: running as background
+[2016-07-06 11:02:09,882] main: Rendering [ImTest0032] started
+[2016-07-06 11:02:11,326] main: Rendered Finished
+[2016-07-06 11:02:11,326] add: ADDING POSE: ImTest0033
+[2016-07-06 11:02:11,327] link: running as background
+[2016-07-06 11:02:11,327] main: Rendering [ImTest0033] started
+[2016-07-06 11:02:12,705] main: Rendered Finished
+[2016-07-06 11:02:12,705] add: ADDING POSE: ImTest0034
+[2016-07-06 11:02:12,705] link: running as background
+[2016-07-06 11:02:12,705] main: Rendering [ImTest0034] started
+[2016-07-06 11:02:14,165] main: Rendered Finished
+[2016-07-06 11:02:14,166] add: ADDING POSE: ImTest0035
+[2016-07-06 11:02:14,166] link: running as background
+[2016-07-06 11:02:14,166] main: Rendering [ImTest0035] started
+[2016-07-06 11:02:15,712] main: Rendered Finished
+[2016-07-06 11:02:15,714] add: ADDING POSE: ImTest0036
+[2016-07-06 11:02:15,715] link: running as background
+[2016-07-06 11:02:15,715] main: Rendering [ImTest0036] started
+[2016-07-06 11:02:17,376] main: Rendered Finished
+[2016-07-06 11:02:17,376] add: ADDING POSE: ImTest0037
+[2016-07-06 11:02:17,377] link: running as background
+[2016-07-06 11:02:17,377] main: Rendering [ImTest0037] started
+[2016-07-06 11:02:19,058] main: Rendered Finished
+[2016-07-06 11:02:19,059] add: ADDING POSE: ImTest0038
+[2016-07-06 11:02:19,059] link: running as background
+[2016-07-06 11:02:19,059] main: Rendering [ImTest0038] started
+[2016-07-06 11:02:20,869] main: Rendered Finished
+[2016-07-06 11:02:20,870] add: ADDING POSE: ImTest0039
+[2016-07-06 11:02:20,870] link: running as background
+[2016-07-06 11:02:20,870] main: Rendering [ImTest0039] started
+[2016-07-06 11:02:22,932] main: Rendered Finished
+[2016-07-06 11:02:22,933] add: ADDING POSE: ImTest0040
+[2016-07-06 11:02:22,933] link: running as background
+[2016-07-06 11:02:22,933] main: Rendering [ImTest0040] started
+[2016-07-06 11:02:25,204] main: Rendered Finished
+[2016-07-06 11:02:25,205] add: ADDING POSE: ImTest0041
+[2016-07-06 11:02:25,205] link: running as background
+[2016-07-06 11:02:25,205] main: Rendering [ImTest0041] started
+[2016-07-06 11:02:27,666] main: Rendered Finished
+[2016-07-06 11:02:27,667] add: ADDING POSE: ImTest0042
+[2016-07-06 11:02:27,667] link: running as background
+[2016-07-06 11:02:27,667] main: Rendering [ImTest0042] started
+[2016-07-06 11:02:29,621] main: Rendered Finished
+[2016-07-06 11:02:29,621] add: ADDING POSE: ImTest0043
+[2016-07-06 11:02:29,622] link: running as background
+[2016-07-06 11:02:29,622] main: Rendering [ImTest0043] started
+[2016-07-06 11:02:31,362] main: Rendered Finished
+[2016-07-06 11:02:31,363] add: ADDING POSE: ImTest0044
+[2016-07-06 11:02:31,363] link: running as background
+[2016-07-06 11:02:31,364] main: Rendering [ImTest0044] started
+[2016-07-06 11:02:33,250] main: Rendered Finished
+[2016-07-06 11:02:33,251] add: ADDING POSE: ImTest0045
+[2016-07-06 11:02:33,251] link: running as background
+[2016-07-06 11:02:33,251] main: Rendering [ImTest0045] started
+[2016-07-06 11:02:35,161] main: Rendered Finished
+[2016-07-06 11:02:35,162] add: ADDING POSE: ImTest0046
+[2016-07-06 11:02:35,163] link: running as background
+[2016-07-06 11:02:35,163] main: Rendering [ImTest0046] started
+[2016-07-06 11:02:37,101] main: Rendered Finished
+[2016-07-06 11:02:37,102] add: ADDING POSE: ImTest0047
+[2016-07-06 11:02:37,102] link: running as background
+[2016-07-06 11:02:37,102] main: Rendering [ImTest0047] started
+[2016-07-06 11:02:39,360] main: Rendered Finished
+[2016-07-06 11:02:39,361] add: ADDING POSE: ImTest0048
+[2016-07-06 11:02:39,361] link: running as background
+[2016-07-06 11:02:39,361] main: Rendering [ImTest0048] started
+[2016-07-06 11:02:41,458] main: Rendered Finished
+[2016-07-06 11:02:41,459] add: ADDING POSE: ImTest0049
+[2016-07-06 11:02:41,459] link: running as background
+[2016-07-06 11:02:41,459] main: Rendering [ImTest0049] started
+[2016-07-06 11:02:43,901] main: Rendered Finished
+[2016-07-06 11:02:43,903] add: ADDING POSE: ImTest0050
+[2016-07-06 11:02:43,903] link: running as background
+[2016-07-06 11:02:43,903] main: Rendering [ImTest0050] started
+[2016-07-06 11:02:46,411] main: Rendered Finished
+[2016-07-06 11:02:46,413] add: ADDING POSE: ImTest0051
+[2016-07-06 11:02:46,413] link: running as background
+[2016-07-06 11:02:46,413] main: Rendering [ImTest0051] started
+[2016-07-06 11:02:49,209] main: Rendered Finished
+[2016-07-06 11:02:49,210] add: ADDING POSE: ImTest0052
+[2016-07-06 11:02:49,210] link: running as background
+[2016-07-06 11:02:49,210] main: Rendering [ImTest0052] started
+[2016-07-06 11:02:51,630] main: Rendered Finished
+[2016-07-06 11:02:51,631] add: ADDING POSE: ImTest0053
+[2016-07-06 11:02:51,631] link: running as background
+[2016-07-06 11:02:51,632] main: Rendering [ImTest0053] started
+[2016-07-06 11:02:53,507] main: Rendered Finished
+[2016-07-06 11:02:53,508] add: ADDING POSE: ImTest0054
+[2016-07-06 11:02:53,508] link: running as background
+[2016-07-06 11:02:53,508] main: Rendering [ImTest0054] started
+[2016-07-06 11:02:55,407] main: Rendered Finished
+[2016-07-06 11:02:55,409] add: ADDING POSE: ImTest0055
+[2016-07-06 11:02:55,409] link: running as background
+[2016-07-06 11:02:55,409] main: Rendering [ImTest0055] started
+[2016-07-06 11:02:57,431] main: Rendered Finished
+[2016-07-06 11:02:57,433] add: ADDING POSE: ImTest0056
+[2016-07-06 11:02:57,433] link: running as background
+[2016-07-06 11:02:57,433] main: Rendering [ImTest0056] started
+[2016-07-06 11:02:59,046] main: Rendered Finished
+[2016-07-06 11:02:59,047] add: ADDING POSE: ImTest0057
+[2016-07-06 11:02:59,048] link: running as background
+[2016-07-06 11:02:59,048] main: Rendering [ImTest0057] started
+[2016-07-06 11:03:00,651] main: Rendered Finished
+[2016-07-06 11:03:00,652] add: ADDING POSE: ImTest0058
+[2016-07-06 11:03:00,653] link: running as background
+[2016-07-06 11:03:00,653] main: Rendering [ImTest0058] started
+[2016-07-06 11:03:02,455] main: Rendered Finished
+[2016-07-06 11:03:02,456] add: ADDING POSE: ImTest0059
+[2016-07-06 11:03:02,456] link: running as background
+[2016-07-06 11:03:02,456] main: Rendering [ImTest0059] started
+[2016-07-06 11:03:04,407] main: Rendered Finished
+[2016-07-06 11:03:04,407] add: ADDING POSE: ImTest0060
+[2016-07-06 11:03:04,408] link: running as background
+[2016-07-06 11:03:04,408] main: Rendering [ImTest0060] started
+[2016-07-06 11:03:06,358] main: Rendered Finished
+[2016-07-06 11:03:06,359] add: ADDING POSE: ImTest0061
+[2016-07-06 11:03:06,359] link: running as background
+[2016-07-06 11:03:06,360] main: Rendering [ImTest0061] started
+[2016-07-06 11:03:08,672] main: Rendered Finished
+[2016-07-06 11:03:08,673] add: ADDING POSE: ImTest0062
+[2016-07-06 11:03:08,673] link: running as background
+[2016-07-06 11:03:08,673] main: Rendering [ImTest0062] started
+[2016-07-06 11:03:11,015] main: Rendered Finished
+[2016-07-06 11:03:11,016] add: ADDING POSE: ImTest0063
+[2016-07-06 11:03:11,016] link: running as background
+[2016-07-06 11:03:11,016] main: Rendering [ImTest0063] started
+[2016-07-06 11:03:13,090] main: Rendered Finished
+[2016-07-06 11:03:13,091] add: ADDING POSE: ImTest0064
+[2016-07-06 11:03:13,091] link: running as background
+[2016-07-06 11:03:13,092] main: Rendering [ImTest0064] started
+[2016-07-06 11:03:14,987] main: Rendered Finished
+[2016-07-06 11:03:14,988] add: ADDING POSE: ImTest0065
+[2016-07-06 11:03:14,989] link: running as background
+[2016-07-06 11:03:14,989] main: Rendering [ImTest0065] started
+[2016-07-06 11:03:16,978] main: Rendered Finished
+[2016-07-06 11:03:16,979] add: ADDING POSE: ImTest0066
+[2016-07-06 11:03:16,979] link: running as background
+[2016-07-06 11:03:16,979] main: Rendering [ImTest0066] started
+[2016-07-06 11:03:19,166] main: Rendered Finished
+[2016-07-06 11:03:19,167] add: ADDING POSE: ImTest0067
+[2016-07-06 11:03:19,167] link: running as background
+[2016-07-06 11:03:19,167] main: Rendering [ImTest0067] started
+[2016-07-06 11:03:20,871] main: Rendered Finished
+[2016-07-06 11:03:20,872] add: ADDING POSE: ImTest0068
+[2016-07-06 11:03:20,873] link: running as background
+[2016-07-06 11:03:20,873] main: Rendering [ImTest0068] started
+[2016-07-06 11:03:22,678] main: Rendered Finished
+[2016-07-06 11:03:22,679] add: ADDING POSE: ImTest0069
+[2016-07-06 11:03:22,679] link: running as background
+[2016-07-06 11:03:22,679] main: Rendering [ImTest0069] started
+[2016-07-06 11:03:24,677] main: Rendered Finished
+[2016-07-06 11:03:24,678] add: ADDING POSE: ImTest0070
+[2016-07-06 11:03:24,678] link: running as background
+[2016-07-06 11:03:24,678] main: Rendering [ImTest0070] started
+[2016-07-06 11:03:26,687] main: Rendered Finished
+[2016-07-06 11:03:26,689] add: ADDING POSE: ImTest0071
+[2016-07-06 11:03:26,689] link: running as background
+[2016-07-06 11:03:26,689] main: Rendering [ImTest0071] started
+[2016-07-06 11:03:28,581] main: Rendered Finished
+[2016-07-06 11:03:28,583] add: ADDING POSE: ImTest0072
+[2016-07-06 11:03:28,583] link: running as background
+[2016-07-06 11:03:28,583] main: Rendering [ImTest0072] started
+[2016-07-06 11:03:30,707] main: Rendered Finished
+[2016-07-06 11:03:30,708] add: ADDING POSE: ImTest0073
+[2016-07-06 11:03:30,708] link: running as background
+[2016-07-06 11:03:30,708] main: Rendering [ImTest0073] started
+[2016-07-06 11:03:32,996] main: Rendered Finished
+[2016-07-06 11:03:32,997] add: ADDING POSE: ImTest0074
+[2016-07-06 11:03:32,998] link: running as background
+[2016-07-06 11:03:32,998] main: Rendering [ImTest0074] started
+[2016-07-06 11:03:35,102] main: Rendered Finished
+[2016-07-06 11:03:35,103] add: ADDING POSE: ImTest0075
+[2016-07-06 11:03:35,103] link: running as background
+[2016-07-06 11:03:35,103] main: Rendering [ImTest0075] started
+[2016-07-06 11:03:37,107] main: Rendered Finished
+[2016-07-06 11:03:37,108] add: ADDING POSE: ImTest0076
+[2016-07-06 11:03:37,108] link: running as background
+[2016-07-06 11:03:37,108] main: Rendering [ImTest0076] started
+[2016-07-06 11:03:39,286] main: Rendered Finished
+[2016-07-06 11:03:39,287] add: ADDING POSE: ImTest0077
+[2016-07-06 11:03:39,288] link: running as background
+[2016-07-06 11:03:39,288] main: Rendering [ImTest0077] started
+[2016-07-06 11:03:41,813] main: Rendered Finished
+[2016-07-06 11:03:41,814] add: ADDING POSE: ImTest0078
+[2016-07-06 11:03:41,814] link: running as background
+[2016-07-06 11:03:41,814] main: Rendering [ImTest0078] started
+[2016-07-06 11:03:43,402] main: Rendered Finished
+[2016-07-06 11:03:43,403] add: ADDING POSE: ImTest0079
+[2016-07-06 11:03:43,403] link: running as background
+[2016-07-06 11:03:43,403] main: Rendering [ImTest0079] started
+[2016-07-06 11:03:45,079] main: Rendered Finished
+[2016-07-06 11:03:45,080] add: ADDING POSE: ImTest0080
+[2016-07-06 11:03:45,080] link: running as background
+[2016-07-06 11:03:45,080] main: Rendering [ImTest0080] started
+[2016-07-06 11:03:46,907] main: Rendered Finished
+[2016-07-06 11:03:46,909] add: ADDING POSE: ImTest0081
+[2016-07-06 11:03:46,909] link: running as background
+[2016-07-06 11:03:46,909] main: Rendering [ImTest0081] started
+[2016-07-06 11:03:48,779] main: Rendered Finished
+[2016-07-06 11:03:48,781] add: ADDING POSE: ImTest0082
+[2016-07-06 11:03:48,781] link: running as background
+[2016-07-06 11:03:48,781] main: Rendering [ImTest0082] started
+[2016-07-06 11:03:50,604] main: Rendered Finished
+[2016-07-06 11:03:50,605] add: ADDING POSE: ImTest0083
+[2016-07-06 11:03:50,605] link: running as background
+[2016-07-06 11:03:50,605] main: Rendering [ImTest0083] started
+[2016-07-06 11:03:52,662] main: Rendered Finished
+[2016-07-06 11:03:52,664] add: ADDING POSE: ImTest0084
+[2016-07-06 11:03:52,664] link: running as background
+[2016-07-06 11:03:52,664] main: Rendering [ImTest0084] started
+[2016-07-06 11:03:54,809] main: Rendered Finished
+[2016-07-06 11:03:54,810] add: ADDING POSE: ImTest0085
+[2016-07-06 11:03:54,811] link: running as background
+[2016-07-06 11:03:54,811] main: Rendering [ImTest0085] started
+[2016-07-06 11:03:56,754] main: Rendered Finished
+[2016-07-06 11:03:56,755] add: ADDING POSE: ImTest0086
+[2016-07-06 11:03:56,755] link: running as background
+[2016-07-06 11:03:56,755] main: Rendering [ImTest0086] started
+[2016-07-06 11:03:58,616] main: Rendered Finished
+[2016-07-06 11:03:58,617] add: ADDING POSE: ImTest0087
+[2016-07-06 11:03:58,618] link: running as background
+[2016-07-06 11:03:58,618] main: Rendering [ImTest0087] started
+[2016-07-06 11:04:00,671] main: Rendered Finished
+[2016-07-06 11:04:00,672] add: ADDING POSE: ImTest0088
+[2016-07-06 11:04:00,672] link: running as background
+[2016-07-06 11:04:00,672] main: Rendering [ImTest0088] started
+[2016-07-06 11:04:02,947] main: Rendered Finished
+[2016-07-06 11:04:02,948] add: ADDING POSE: ImTest0089
+[2016-07-06 11:04:02,948] link: running as background
+[2016-07-06 11:04:02,948] main: Rendering [ImTest0089] started
+[2016-07-06 11:04:04,459] main: Rendered Finished
+[2016-07-06 11:04:04,460] add: ADDING POSE: ImTest0090
+[2016-07-06 11:04:04,460] link: running as background
+[2016-07-06 11:04:04,460] main: Rendering [ImTest0090] started
+[2016-07-06 11:04:06,039] main: Rendered Finished
+[2016-07-06 11:04:06,040] add: ADDING POSE: ImTest0091
+[2016-07-06 11:04:06,040] link: running as background
+[2016-07-06 11:04:06,040] main: Rendering [ImTest0091] started
+[2016-07-06 11:04:07,646] main: Rendered Finished
+[2016-07-06 11:04:07,647] add: ADDING POSE: ImTest0092
+[2016-07-06 11:04:07,647] link: running as background
+[2016-07-06 11:04:07,647] main: Rendering [ImTest0092] started
+[2016-07-06 11:04:09,402] main: Rendered Finished
+[2016-07-06 11:04:09,403] add: ADDING POSE: ImTest0093
+[2016-07-06 11:04:09,403] link: running as background
+[2016-07-06 11:04:09,403] main: Rendering [ImTest0093] started
+[2016-07-06 11:04:11,103] main: Rendered Finished
+[2016-07-06 11:04:11,104] add: ADDING POSE: ImTest0094
+[2016-07-06 11:04:11,104] link: running as background
+[2016-07-06 11:04:11,104] main: Rendering [ImTest0094] started
+[2016-07-06 11:04:12,639] main: Rendered Finished
+[2016-07-06 11:04:12,640] add: ADDING POSE: ImTest0095
+[2016-07-06 11:04:12,640] link: running as background
+[2016-07-06 11:04:12,640] main: Rendering [ImTest0095] started
+[2016-07-06 11:04:14,319] main: Rendered Finished
+[2016-07-06 11:04:14,320] add: ADDING POSE: ImTest0096
+[2016-07-06 11:04:14,320] link: running as background
+[2016-07-06 11:04:14,320] main: Rendering [ImTest0096] started
+[2016-07-06 11:04:15,952] main: Rendered Finished
+[2016-07-06 11:04:15,953] add: ADDING POSE: ImTest0097
+[2016-07-06 11:04:15,954] link: running as background
+[2016-07-06 11:04:15,954] main: Rendering [ImTest0097] started
+[2016-07-06 11:04:17,842] main: Rendered Finished
+[2016-07-06 11:04:17,843] add: ADDING POSE: ImTest0098
+[2016-07-06 11:04:17,843] link: running as background
+[2016-07-06 11:04:17,843] main: Rendering [ImTest0098] started
+[2016-07-06 11:04:19,682] main: Rendered Finished
+[2016-07-06 11:04:19,684] add: ADDING POSE: ImTest0099
+[2016-07-06 11:04:19,684] link: running as background
+[2016-07-06 11:04:19,684] main: Rendering [ImTest0099] started
+[2016-07-06 11:04:21,696] main: Rendered Finished
+[2016-07-06 11:04:21,697] add: ADDING POSE: ImTest0100
+[2016-07-06 11:04:21,697] link: running as background
+[2016-07-06 11:04:21,697] main: Rendering [ImTest0100] started
+[2016-07-06 11:04:23,159] main: Rendered Finished
+[2016-07-06 11:04:23,161] add: ADDING POSE: ImTest0101
+[2016-07-06 11:04:23,161] link: running as background
+[2016-07-06 11:04:23,161] main: Rendering [ImTest0101] started
+[2016-07-06 11:04:24,650] main: Rendered Finished
+[2016-07-06 11:04:24,652] add: ADDING POSE: ImTest0102
+[2016-07-06 11:04:24,652] link: running as background
+[2016-07-06 11:04:24,652] main: Rendering [ImTest0102] started
+[2016-07-06 11:04:26,110] main: Rendered Finished
+[2016-07-06 11:04:26,111] add: ADDING POSE: ImTest0103
+[2016-07-06 11:04:26,111] link: running as background
+[2016-07-06 11:04:26,111] main: Rendering [ImTest0103] started
+[2016-07-06 11:04:27,641] main: Rendered Finished
+[2016-07-06 11:04:27,642] add: ADDING POSE: ImTest0104
+[2016-07-06 11:04:27,642] link: running as background
+[2016-07-06 11:04:27,642] main: Rendering [ImTest0104] started
+[2016-07-06 11:04:28,928] main: Rendered Finished
+[2016-07-06 11:04:28,929] add: ADDING POSE: ImTest0105
+[2016-07-06 11:04:28,929] link: running as background
+[2016-07-06 11:04:28,929] main: Rendering [ImTest0105] started
+[2016-07-06 11:04:30,219] main: Rendered Finished
+[2016-07-06 11:04:30,221] add: ADDING POSE: ImTest0106
+[2016-07-06 11:04:30,221] link: running as background
+[2016-07-06 11:04:30,221] main: Rendering [ImTest0106] started
+[2016-07-06 11:04:31,516] main: Rendered Finished
+[2016-07-06 11:04:31,517] add: ADDING POSE: ImTest0107
+[2016-07-06 11:04:31,517] link: running as background
+[2016-07-06 11:04:31,517] main: Rendering [ImTest0107] started
+[2016-07-06 11:04:32,819] main: Rendered Finished
+[2016-07-06 11:04:32,820] add: ADDING POSE: ImTest0108
+[2016-07-06 11:04:32,820] link: running as background
+[2016-07-06 11:04:32,820] main: Rendering [ImTest0108] started
+[2016-07-06 11:04:34,195] main: Rendered Finished
+[2016-07-06 11:04:34,197] add: ADDING POSE: ImTest0109
+[2016-07-06 11:04:34,197] link: running as background
+[2016-07-06 11:04:34,197] main: Rendering [ImTest0109] started
+[2016-07-06 11:04:35,682] main: Rendered Finished
+[2016-07-06 11:04:35,684] add: ADDING POSE: ImTest0110
+[2016-07-06 11:04:35,684] link: running as background
+[2016-07-06 11:04:35,684] main: Rendering [ImTest0110] started
+[2016-07-06 11:04:37,081] main: Rendered Finished
+[2016-07-06 11:04:37,082] add: ADDING POSE: ImTest0111
+[2016-07-06 11:04:37,082] link: running as background
+[2016-07-06 11:04:37,082] main: Rendering [ImTest0111] started
+[2016-07-06 11:04:38,333] main: Rendered Finished
+[2016-07-06 11:04:38,334] add: ADDING POSE: ImTest0112
+[2016-07-06 11:04:38,334] link: running as background
+[2016-07-06 11:04:38,334] main: Rendering [ImTest0112] started
+[2016-07-06 11:04:39,581] main: Rendered Finished
+[2016-07-06 11:04:39,583] add: ADDING POSE: ImTest0113
+[2016-07-06 11:04:39,583] link: running as background
+[2016-07-06 11:04:39,583] main: Rendering [ImTest0113] started
+[2016-07-06 11:04:40,845] main: Rendered Finished
+[2016-07-06 11:04:40,847] add: ADDING POSE: ImTest0114
+[2016-07-06 11:04:40,847] link: running as background
+[2016-07-06 11:04:40,847] main: Rendering [ImTest0114] started
+[2016-07-06 11:04:42,084] main: Rendered Finished
+[2016-07-06 11:04:42,086] add: ADDING POSE: ImTest0115
+[2016-07-06 11:04:42,086] link: running as background
+[2016-07-06 11:04:42,086] main: Rendering [ImTest0115] started
+[2016-07-06 11:04:43,308] main: Rendered Finished
+[2016-07-06 11:04:43,309] add: ADDING POSE: ImTest0116
+[2016-07-06 11:04:43,309] link: running as background
+[2016-07-06 11:04:43,309] main: Rendering [ImTest0116] started
+[2016-07-06 11:04:44,568] main: Rendered Finished
+[2016-07-06 11:04:44,569] add: ADDING POSE: ImTest0117
+[2016-07-06 11:04:44,569] link: running as background
+[2016-07-06 11:04:44,569] main: Rendering [ImTest0117] started
+[2016-07-06 11:04:45,864] main: Rendered Finished
+[2016-07-06 11:04:45,865] add: ADDING POSE: ImTest0118
+[2016-07-06 11:04:45,866] link: running as background
+[2016-07-06 11:04:45,866] main: Rendering [ImTest0118] started
+[2016-07-06 11:04:47,156] main: Rendered Finished
+[2016-07-06 11:04:47,157] add: ADDING POSE: ImTest0119
+[2016-07-06 11:04:47,157] link: running as background
+[2016-07-06 11:04:47,157] main: Rendering [ImTest0119] started
+[2016-07-06 11:04:48,534] main: Rendered Finished
+[2016-07-06 11:04:48,536] add: ADDING POSE: ImTest0120
+[2016-07-06 11:04:48,536] link: running as background
+[2016-07-06 11:04:48,536] main: Rendering [ImTest0120] started
+[2016-07-06 11:04:49,922] main: Rendered Finished
+[2016-07-06 11:04:49,923] add: ADDING POSE: ImTest0121
+[2016-07-06 11:04:49,923] link: running as background
+[2016-07-06 11:04:49,923] main: Rendering [ImTest0121] started
+[2016-07-06 11:04:51,252] main: Rendered Finished

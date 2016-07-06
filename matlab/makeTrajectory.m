@@ -1,7 +1,7 @@
 function makeTrajectory(fname, tName, tx, ty, tz, rx, ry, rz, prefix, ndigits)
 fid = fopen(fname,'w+t');
 fprintf(fid,'<?xml version="1.0" encoding="UTF-8"?>\n');
-fprintf(fid,'<extrinsics name = "%s">',tName);
+fprintf(fid,'<extrinsics name = "%s">\n',tName);
 for i=1:numel(tx)
     iName = [prefix sprintf(['%0' sprintf('%.0f',ndigits) '.0f'],i)];
     fprintf(fid,'\t<pose name = "%s">\n',iName);

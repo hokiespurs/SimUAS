@@ -5,7 +5,7 @@ import glob
 import sys
 import logging
 import csv
-
+import os
 
 class Sensor:
     def __init__(self, xmlsensor):
@@ -30,8 +30,8 @@ class Sensor:
         bpy.context.scene.render.resolution_y = self.resolution[1]
 
         # Unable to add the following parameters, bad bpy documentation?
-        #bpy.context.scene.compression = self.compression  #Image Compression
-        #bpy.context.scene.file_format = self.type #Output Format
+        # bpy.context.scene.compression = self.compression  #Image Compression
+        # bpy.context.scene.file_format = self.type #Output Format
 
 
 class BObject:
@@ -45,6 +45,7 @@ class BObject:
         self.Rotation = R
         self.Scale = S
         self.isGCP = isGCP
+
 
 class Objlib:
     def __init__(self, name, path, blenderType, filename):
@@ -102,7 +103,8 @@ class Scene:
     def build(self,controlCSV):
         logging.info("Building " + self.name)
 
-        GCPwriter = csv.writer(open(controlCSV, 'w', newline=''))
+        controlFileHandle = open(controlCSV, 'w', newline='')
+        GCPwriter = csv.writer(controlFileHandle)
         trajectoryHeader = ["ControlPointName", "Tx", "Ty", "Tz", "Rx", "Ry", "Rz"]
         GCPwriter.writerow(trajectoryHeader)
 
@@ -124,6 +126,8 @@ class Scene:
             if iObj.isGCP == "1":
                 GCPwriter.writerow([iObj.name, iObj.Translation.x, iObj.Translation.y, iObj.Translation.z,
                                     iObj.Rotation.x*180/pi, iObj.Rotation.y*180/pi, iObj.Rotation.z*180/pi])
+                controlFileHandle.flush()
+        controlFileHandle.close()
 
 
 class Pose:
@@ -132,12 +136,18 @@ class Pose:
         self.Rotation = Triplet(rx, ry, rz)
         self.name = name
 
-    def add(self,Sensor):
+    def add(self, Sensor):
         T = (self.Translation.x, self.Translation.y, self.Translation.z)
         R = (self.Rotation.x, self.Rotation.y, self.Rotation.z)
         bpy.ops.object.camera_add(view_align=True, enter_editmode=True, location=T, rotation=R)
         bpy.context.object.data.lens = Sensor.focalLength
         bpy.context.object.data.sensor_width = Sensor.sensorWidth
+        #clipping constants
+        bpy.context.object.data.clip_end = 500
+        bpy.context.object.data.clip_start = 0.0001
+        #assume square pixels
+        bpy.context.object.data.shift_x = (Sensor.principalPoint[0] - Sensor.resolution[0]/2) * 1 / Sensor.sensorWidth
+        bpy.context.object.data.shift_y = (Sensor.principalPoint[1] - Sensor.resolution[1]/2) * 1 / Sensor.sensorWidth
         bpy.context.object.name = self.name
         bpy.context.object.data.name = self.name
         logging.debug("ADDING POSE: " + self.name)
@@ -205,6 +215,12 @@ def wipe():
     for cam in cameras:
         cameras.remove(cam)
 
+
+def makedir(directory):
+    if not os.path.exists(directory):
+        os.makedirs(directory)
+
+
 def main():
 
     # parse argument
@@ -214,15 +230,17 @@ def main():
         experimentName = argv[0]
     except ValueError:
         experimentName = 'C:\\Users\\Richie\\Documents\\GitHub\\BlenderPythonTest\\data\\example'
+    makedir(experimentName + "/output/")
+    makedir(experimentName + "/output/images/")
 
     outputFolder = experimentName + "/output/"
     xmlScene = glob.glob(experimentName + '/input/scene*.xml')[0]
     xmlSensor = glob.glob(experimentName + '/input/sensor*.xml')[0]
     xmlTrajectory = glob.glob(experimentName + '/input/trajectory*.xml')[0]
     LOGFORMAT = "[%(asctime)s] %(funcName)s: %(message)s"
-    logging.basicConfig(filename=experimentName + "/output/metadata.log", level=logging.DEBUG, format= LOGFORMAT)
-    trajectoryCSV = experimentName + "/output/trajectory.csv"
-    controlCSV = experimentName + "/output/Control.csv"
+    logging.basicConfig(filename=experimentName + "/output/log.txt", level=logging.DEBUG, format= LOGFORMAT)
+    trajectoryCSV = experimentName + "/output/trajectory.txt"
+    controlCSV = experimentName + "/output/Control.txt"
     wipe()  # clear all blender objects
 
     # Populate Classes
@@ -236,7 +254,8 @@ def main():
     mySensor.apply()
     iCount = 0
 
-    writer = csv.writer(open(trajectoryCSV, 'w', newline=''))
+    trajectoryFile = open(trajectoryCSV, 'w', newline='')
+    writer = csv.writer(trajectoryFile)
     trajectoryHeader = ["ImageName", "Tx", "Ty", "Tz", "Rx", "Ry", "Rz"]
     writer.writerow(trajectoryHeader)
     for iPose in myTrajectory.Pose:
@@ -245,15 +264,17 @@ def main():
         iPose.link(iCount)
         logging.debug("Rendering [" + iPose.name + "] started")
         bpy.context.scene.camera = bpy.data.objects[iPose.name]
-        bpy.context.scene.render.filepath = outputFolder + iPose.name
+        bpy.context.scene.render.filepath = outputFolder + "/images/" + iPose.name
         bpy.ops.render.render( write_still=True )
         logging.debug("Rendered Finished")
         # write trajectory csv
         print(sys.version)
 
-        rawrow = [iPose.name, iPose.Translation.x, iPose.Translation.y, iPose.Translation.z, iPose.Rotation.x*180/pi,
+        rawrow = [iPose.name + '.png', iPose.Translation.x, iPose.Translation.y, iPose.Translation.z, iPose.Rotation.x*180/pi,
                   iPose.Rotation.y*180/pi, iPose.Rotation.z*180/pi]
         writer.writerow(rawrow)
+        trajectoryFile.flush()
+    trajectoryFile.close()
 
 if __name__ == "__main__":
     main()
