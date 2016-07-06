@@ -1,6 +1,10 @@
 import bpy
 import xml.etree.ElementTree as ET
 from math import pi
+import glob
+import sys
+import logging
+
 
 class Sensor:
     def __init__(self, xmlsensor):
@@ -18,7 +22,7 @@ class Sensor:
         self.antialiasing = root.find('image').get('antialiasing')
 
     def apply(self):
-        print("applying settings")
+        logging.debug("applying settings")
         bpy.context.scene.render.resolution_percentage = self.percentage #Rendering to 100 percent
         bpy.context.scene.render.use_stamp_lens = True #Lens in Metadata
         bpy.context.scene.render.resolution_x = self.resolution[0]
@@ -27,6 +31,7 @@ class Sensor:
         # Unable to add the following parameters, bad bpy documentation?
         #bpy.context.scene.compression = self.compression  #Image Compression
         #bpy.context.scene.file_format = self.type #Output Format
+
 
 class BObject:
     def __init__(self, LibObj, iName, T, R, S):
@@ -39,6 +44,7 @@ class BObject:
         self.Rotation = R
         self.Scale = S
 
+
 class Objlib:
     def __init__(self, name, path, blenderType, filename):
         self.libname = name
@@ -46,8 +52,13 @@ class Objlib:
         self.blenderType = blenderType
         self.filename = filename
 
+
 class Scene:
-    def __init__(self, xmlLibrary, xmlScene):
+    def __init__(self, xmlScene):
+        treescene = ET.parse(xmlScene)
+        rootscene = treescene.getroot()
+        xmlLibrary = rootscene.get('lib')
+
         treelib = ET.parse(xmlLibrary)
         rootlib = treelib.getroot()
 
@@ -62,8 +73,6 @@ class Scene:
             AllLibObj.append(iLibObj)
             allLibNames.append(iname)
 
-        treescene = ET.parse(xmlScene)
-        rootscene = treescene.getroot()
         self.name = rootscene.get('name')
         self.BObjects = list()
         for iObj in rootscene.findall('object'):
@@ -89,7 +98,7 @@ class Scene:
             self.BObjects.append(iBObject)
 
     def build(self):
-        print("Building" + self.name)
+        logging.info("Building " + self.name)
         for iObj in self.BObjects:
             iName = iObj.name
 
@@ -102,7 +111,8 @@ class Scene:
             bpy.data.objects[iName].location = (iObj.Translation.x, iObj.Translation.y, iObj.Translation.z)
             bpy.data.objects[iName].rotation_euler = (iObj.Rotation.x, iObj.Rotation.y, iObj.Rotation.z)
             bpy.data.objects[iName].scale = (iObj.Scale.x, iObj.Scale.y, iObj.Scale.z)
-            print('blender append new')
+            logging.debug('Added ' + iName + " to scene")
+
 
 class Pose:
     def __init__(self, name, tx, ty, tz, rx, ry, rz):
@@ -118,17 +128,21 @@ class Pose:
         bpy.context.object.data.sensor_width = Sensor.sensorWidth
         bpy.context.object.name = self.name
         bpy.context.object.data.name = self.name
-        print("ADDING POSE" + self.name)
+        logging.debug("ADDING POSE: " + self.name)
 
     def link(self, num):
-        curType = bpy.context.area.type
-        bpy.context.area.type = 'TIMELINE'
-        bpy.context.scene.camera = bpy.data.objects[self.name]
-        bpy.context.scene.frame_current = num
-        bpy.ops.marker.add()
-        bpy.ops.marker.camera_bind()
-        print("Linking" + self.name)
-        bpy.context.area.type = curType
+        try:
+            curType = bpy.context.area.type
+            bpy.context.area.type = 'TIMELINE'
+            bpy.context.scene.camera = bpy.data.objects[self.name]
+            bpy.context.scene.frame_current = num
+            bpy.ops.marker.add()
+            bpy.ops.marker.camera_bind()
+            logging.debug("Linking: " + self.name)
+            bpy.context.area.type = curType
+        except AttributeError:
+            logging.info('running as background')
+
 
 class Trajectory:
     def __init__(self, xmlExtrinsics):
@@ -150,13 +164,16 @@ class Trajectory:
             iPose = Pose(iName, tx, ty, tz, rx, ry, rz)
             self.Pose.append(iPose)
 
+
 class Triplet:
     def __init__(self, x, y, z):
         self.x = x
         self.y = y
         self.z = z
 
+
 def wipe():
+    logging.info("Clearing all existing blender objects")
     scene = bpy.context.scene
     objs = bpy.data.objects
     meshes = bpy.data.meshes
@@ -176,34 +193,48 @@ def wipe():
     for cam in cameras:
         cameras.remove(cam)
 
-wipe()  # clear all objects
+def main():
 
-# User defined textbook
-outputFolder = "C:/Users/Richie/Documents/GitHub/BlenderPythonTest/data/example/output/"
-xmlLibrary = "C:/Users/Richie/Documents/GitHub/BlenderPythonTest/objects/objectLibrary.xml"
-xmlScene = "C:/Users/Richie/Documents/GitHub/BlenderPythonTest/data/example/input/scene_example.xml"
-xmlSensor = "C:/Users/Richie/Documents/GitHub/BlenderPythonTest/data/example/input/sensor_demo.xml"
-xmlTrajectory = "C:/Users/Richie/Documents/GitHub/BlenderPythonTest/data/example/input/trajectory_demoGrid_121.xml"
-doRender = True
+    # parse argument
+    argv = sys.argv
+    try:
+        argv = argv[argv.index("--") + 1:]
+        experimentName = argv[0]
+    except ValueError:
+        experimentName = 'C:\\Users\\Richie\\Documents\\GitHub\\BlenderPythonTest\\data\\example'
 
-# Populate Classes
-myScene = Scene(xmlLibrary,xmlScene) # (build) object (add)
-mySensor = Sensor(xmlSensor)
-myTrajectory = Trajectory(xmlTrajectory) #pose (add) (link)
+    outputFolder = experimentName + "/output/"
+    xmlScene = glob.glob(experimentName + '/input/scene*.xml')[0]
+    xmlSensor = glob.glob(experimentName + '/input/sensor*.xml')[0]
+    xmlTrajectory = glob.glob(experimentName + '/input/trajectory*.xml')[0]
+    LOGFORMAT = "[%(asctime)s] %(funcName)s: %(message)s"
+    logging.basicConfig(filename=experimentName + "/output/metadata.log", level=logging.DEBUG, format= LOGFORMAT)
+    doRender = True
 
-# MakeScene
-myScene.build()
-# Apply Sensor Parameters
-mySensor.apply()
-iCount = 0
-for iPose in myTrajectory.Pose:
-    iCount =   iCount + 1
-    iPose.add(mySensor)
-    iPose.link(iCount)
-    if doRender:
-        print('and Rendering')
-        bpy.context.scene.camera = bpy.data.objects[iPose.name]
-        bpy.context.scene.render.filepath = outputFolder + iPose.name
-        bpy.ops.render.render( write_still=True )
-        # update logfile
-        # update extrinsics.txt
+
+    wipe()  # clear all blender objects
+
+    # Populate Classes
+    myScene = Scene(xmlScene)
+    mySensor = Sensor(xmlSensor)
+    myTrajectory = Trajectory(xmlTrajectory)
+
+    # MakeScene
+    myScene.build()
+    # Apply Sensor Parameters
+    mySensor.apply()
+    iCount = 0
+    for iPose in myTrajectory.Pose:
+        iCount += 1
+        iPose.add(mySensor)
+        iPose.link(iCount)
+        if doRender:
+            logging.debug("Rendering [" + iPose.name + "] started")
+            bpy.context.scene.camera = bpy.data.objects[iPose.name]
+            bpy.context.scene.render.filepath = outputFolder + iPose.name
+            bpy.ops.render.render( write_still=True )
+            logging.debug("Rendered Finished")
+            # update extrinsics.txt
+
+if __name__ == "__main__":
+    main()
