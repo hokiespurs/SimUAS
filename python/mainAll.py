@@ -4,6 +4,7 @@ from math import pi
 import glob
 import sys
 import logging
+import csv
 
 
 class Sensor:
@@ -209,8 +210,7 @@ def main():
     xmlTrajectory = glob.glob(experimentName + '/input/trajectory*.xml')[0]
     LOGFORMAT = "[%(asctime)s] %(funcName)s: %(message)s"
     logging.basicConfig(filename=experimentName + "/output/metadata.log", level=logging.DEBUG, format= LOGFORMAT)
-    doRender = True
-
+    trajectoryCSV = experimentName + "/output/trajectory.csv"
 
     wipe()  # clear all blender objects
 
@@ -224,17 +224,24 @@ def main():
     # Apply Sensor Parameters
     mySensor.apply()
     iCount = 0
+
+    writer = csv.writer(open(trajectoryCSV, 'w', newline=''))
+    trajectoryHeader = ["ImageName", "Tx", "Ty", "Tz", "Rx", "Ry", "Rz"]
+    writer.writerow(trajectoryHeader)
     for iPose in myTrajectory.Pose:
         iCount += 1
         iPose.add(mySensor)
         iPose.link(iCount)
-        if doRender:
-            logging.debug("Rendering [" + iPose.name + "] started")
-            bpy.context.scene.camera = bpy.data.objects[iPose.name]
-            bpy.context.scene.render.filepath = outputFolder + iPose.name
-            bpy.ops.render.render( write_still=True )
-            logging.debug("Rendered Finished")
-            # update extrinsics.txt
+        logging.debug("Rendering [" + iPose.name + "] started")
+        bpy.context.scene.camera = bpy.data.objects[iPose.name]
+        bpy.context.scene.render.filepath = outputFolder + iPose.name
+        bpy.ops.render.render( write_still=True )
+        logging.debug("Rendered Finished")
+        # write trajectory csv
+        print(sys.version)
+
+        rawrow = [iPose.name, iPose.Translation.x, iPose.Translation.y, iPose.Translation.z, iPose.Rotation.x, iPose.Rotation.y, iPose.Rotation.z]
+        writer.writerow(rawrow)
 
 if __name__ == "__main__":
     main()
