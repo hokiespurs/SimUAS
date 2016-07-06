@@ -13,25 +13,26 @@ class Sensor:
         root = tree.getroot()
 
         self.name = root.get('name')
-        self.type = root.get('type')
+        self.fileformat = root.get('fileformat')
         self.focalLength = float(root.find('physical').get('focallength'))
         self.sensorWidth = float(root.find('physical').get('sensorWidth'))
         self.resolution = (float(root.find('resolution').get('x')), float(root.find('resolution').get('y')))
         self.principalPoint = (float(root.find('principalPoint').get('x')), float(root.find('principalPoint').get('y')))
         self.compression = float(root.find('image').get('compression'))
         self.percentage = float(root.find('image').get('percentage'))
-        self.antialiasing = root.find('image').get('antialiasing')
+        self.antialiasing = float(root.find('image').get('antialiasing'))
+        self.clipStart = float(root.find('clipping').get('start'))
+        self.clipEnd = float(root.find('clipping').get('end'))
 
     def apply(self):
         logging.debug("applying settings")
-        bpy.context.scene.render.resolution_percentage = self.percentage #Rendering to 100 percent
+        bpy.context.scene.render.resolution_percentage = self.percentage
         bpy.context.scene.render.use_stamp_lens = True #Lens in Metadata
         bpy.context.scene.render.resolution_x = self.resolution[0]
         bpy.context.scene.render.resolution_y = self.resolution[1]
-
-        # Unable to add the following parameters, bad bpy documentation?
-        # bpy.context.scene.compression = self.compression  #Image Compression
-        # bpy.context.scene.file_format = self.type #Output Format
+        bpy.context.scene.render.use_antialiasing = self.antialiasing
+        bpy.context.scene.render.image_settings.compression = self.compression
+        bpy.context.scene.render.image_settings.file_format = self.fileformat
 
 
 class BObject:
@@ -136,18 +137,21 @@ class Pose:
         self.Rotation = Triplet(rx, ry, rz)
         self.name = name
 
-    def add(self, Sensor):
+    def add(self, camSensor):
         T = (self.Translation.x, self.Translation.y, self.Translation.z)
         R = (self.Rotation.x, self.Rotation.y, self.Rotation.z)
         bpy.ops.object.camera_add(view_align=True, enter_editmode=True, location=T, rotation=R)
-        bpy.context.object.data.lens = Sensor.focalLength
-        bpy.context.object.data.sensor_width = Sensor.sensorWidth
+        bpy.context.object.data.lens = camSensor.focalLength
+        bpy.context.object.data.sensor_width = camSensor.sensorWidth
+
         #clipping constants
-        bpy.context.object.data.clip_end = 500
-        bpy.context.object.data.clip_start = 0.0001
+        bpy.context.object.data.clip_end = camSensor.clipEnd
+        bpy.context.object.data.clip_start = camSensor.clipStart
         #assume square pixels
-        bpy.context.object.data.shift_x = (Sensor.principalPoint[0] - Sensor.resolution[0]/2) * 1 / Sensor.sensorWidth
-        bpy.context.object.data.shift_y = (Sensor.principalPoint[1] - Sensor.resolution[1]/2) * 1 / Sensor.sensorWidth
+        pixPerMm = camSensor.sensorWidth / camSensor.resolution[0]
+        bpy.context.object.data.shift_x = (camSensor.principalPoint[0] - camSensor.resolution[0]/2) * pixPerMm
+        bpy.context.object.data.shift_y = (camSensor.principalPoint[1] - camSensor.resolution[1]/2) * pixPerMm
+
         bpy.context.object.name = self.name
         bpy.context.object.data.name = self.name
         logging.debug("ADDING POSE: " + self.name)
@@ -222,6 +226,7 @@ def makedir(directory):
 
 
 def main():
+    logging.info(sys.version)
 
     # parse argument
     argv = sys.argv
@@ -268,7 +273,6 @@ def main():
         bpy.ops.render.render( write_still=True )
         logging.debug("Rendered Finished")
         # write trajectory csv
-        print(sys.version)
 
         rawrow = [iPose.name + '.png', iPose.Translation.x, iPose.Translation.y, iPose.Translation.z, iPose.Rotation.x*180/pi,
                   iPose.Rotation.y*180/pi, iPose.Rotation.z*180/pi]

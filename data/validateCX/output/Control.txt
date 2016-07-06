@@ -1,0 +1,1 @@
+ControlPointName,Tx,Ty,Tz,Rx,Ry,Rz
