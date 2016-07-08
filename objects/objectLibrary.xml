@@ -1,8 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <library>
-	<object name="GCP" path = "C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\gcp.blend" blenderType = "Object" filename = "gcp"/>
-	<object name="dummy" path = "C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\dummy.blend" blenderType = "Object" filename = "dummy"/>
-	<object name="checkercube" path = "C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\checkercube.blend" blenderType = "Object" filename = "checkercube"/>
-	<object name="trichecker" path = "C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\trichecker.blend" blenderType = "Object" filename = "trichecker"/>
-	<object name="pinkpipe" path = "C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\pinkpipe.blend" blenderType = "Object" filename = "pinkpipe"/>
+	<object>
+		<name>GCP</name>
+		<path>C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\gcp.blend</path>
+		<markerPath>C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\gcp.txt</markerPath>
+		<blenderType>Object</blenderType>
+		<libname>gcp</libname>
+	</object>
+	<object>
+		<name>dummy</name>
+		<path>C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\dummy.blend</path>
+		<markerPath>C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\dummy.txt</markerPath>
+		<blenderType>Object</blenderType>
+		<libname>dummy</libname>
+	</object>
+	<object>
+		<name>checkercube</name>
+		<path>C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\checkercube.blend</path>
+		<markerPath>C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\checkercube.txt</markerPath>
+		<blenderType>Object</blenderType>
+		<libname>checkercube</libname>
+	</object>
+	<object>
+		<name>trichecker</name>
+		<path>C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\trichecker.blend</path>
+		<markerPath>C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\trichecker.txt</markerPath>
+		<blenderType>Object</blenderType>
+		<libname>trichecker</libname>
+	</object>
+	<object>
+		<name>pinkpipe</name>
+		<path>C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\pinkpipe.blend</path>
+		<markerPath>C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\pinkpipe.txt</markerPath>
+		<blenderType>Object</blenderType>
+		<libname>pinkpipe</libname>
+	</object>
   </library>

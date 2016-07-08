@@ -23,4 +23,3 @@ ry = iPhi;
 rz = iTheta;
 
 makeTrajectory('test2.xml', 'Test', x, y, z, rx, ry, rz, 'ImTest2', 4)
-
