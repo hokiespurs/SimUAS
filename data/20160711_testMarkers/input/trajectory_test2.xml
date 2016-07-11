@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extrinsics name = "Test">
+	<pose name = "ImTest20001">
+		<translation x = "-4.782635" y = "2.517455" z = "-1.428482" />
+		<rotation x = "0.000000" y = "104.804850" z = "152.238848" />
+	</pose>
+	<pose name = "ImTest20002">
+		<translation x = "7.029291" y = "4.727506" z = "-1.090150" />
+		<rotation x = "0.000000" y = "97.333081" z = "33.922562" />
+	</pose>
+	<pose name = "ImTest20003">
+		<translation x = "-1.125700" y = "-0.802021" z = "-3.192421" />
+		<rotation x = "0.000000" y = "156.589386" z = "215.468521" />
+	</pose>
+	<pose name = "ImTest20004">
+		<translation x = "-3.242003" y = "0.598954" z = "3.004105" />
+		<rotation x = "0.000000" y = "47.660225" z = "169.532732" />
+	</pose>
+	<pose name = "ImTest20005">
+		<translation x = "-0.151967" y = "-0.430137" z = "0.293395" />
+		<rotation x = "0.000000" y = "57.253334" z = "250.541753" />
+	</pose>
+	<pose name = "ImTest20006">
+		<translation x = "-0.200650" y = "-0.616059" z = "1.648308" />
+		<rotation x = "0.000000" y = "21.458617" z = "251.959626" />
+	</pose>
+	<pose name = "ImTest20007">
+		<translation x = "-0.802715" y = "-0.952279" z = "-6.510013" />
+		<rotation x = "0.000000" y = "169.169305" z = "229.871073" />
+	</pose>
+	<pose name = "ImTest20008">
+		<translation x = "2.902488" y = "0.622101" z = "-1.460595" />
+		<rotation x = "0.000000" y = "116.199337" z = "12.097381" />
+	</pose>
+	<pose name = "ImTest20009">
+		<translation x = "8.141240" y = "3.756643" z = "0.579285" />
+		<rotation x = "0.000000" y = "86.303380" z = "24.770196" />
+	</pose>
+	<pose name = "ImTest20010">
+		<translation x = "-0.453223" y = "0.969468" z = "-0.500785" />
+		<rotation x = "0.000000" y = "115.077053" z = "115.055905" />
+	</pose>
+</extrinsics>

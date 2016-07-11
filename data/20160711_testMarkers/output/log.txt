@@ -1,0 +1,380 @@
+[2016-07-11 14:41:16,609] main: logger opened
+[2016-07-11 14:41:16,609] main: 3.4.2 (default, Dec  7 2014, 18:21:18) [MSC v.1800 64 bit (AMD64)]
+[2016-07-11 14:41:16,609] wipe: Clearing all existing blender objects
+[2016-07-11 14:41:16,620] build: Building testRange
+[2016-07-11 14:41:16,630] build: Added trichecker4 to scene
+[2016-07-11 14:41:16,630] build: trichecker4 isControl = 0
+[2016-07-11 14:41:16,630] build: trichecker4 being used as marker
+[2016-07-11 14:41:16,633] build: MARKER
+[2016-07-11 14:41:16,633] build: [-1.2217304763960306, 0.17453292519943295, 0.3490658503988659]
+[2016-07-11 14:41:16,633] build: [5.0, 15.0, 9.0]
+[2016-07-11 14:41:16,634] build: [2.0, 4.0, 6.0]
+[2016-07-11 14:41:16,640] apply: applying settings
+[2016-07-11 14:41:16,641] add: ADDING POSE: ImTest20001
+[2016-07-11 14:41:16,641] link: running as background
+[2016-07-11 14:41:16,641] main: Rendering [ImTest20001] started
+[2016-07-11 14:41:18,190] main: Rendered Finished
+[2016-07-11 14:41:18,191] add: ADDING POSE: ImTest20002
+[2016-07-11 14:41:18,191] link: running as background
+[2016-07-11 14:41:18,191] main: Rendering [ImTest20002] started
+[2016-07-11 14:41:19,720] main: Rendered Finished
+[2016-07-11 14:41:19,721] add: ADDING POSE: ImTest20003
+[2016-07-11 14:41:19,721] link: running as background
+[2016-07-11 14:41:19,721] main: Rendering [ImTest20003] started
+[2016-07-11 14:41:21,299] main: Rendered Finished
+[2016-07-11 14:41:21,299] add: ADDING POSE: ImTest20004
+[2016-07-11 14:41:21,299] link: running as background
+[2016-07-11 14:41:21,299] main: Rendering [ImTest20004] started
+[2016-07-11 14:41:22,830] main: Rendered Finished
+[2016-07-11 14:41:22,831] add: ADDING POSE: ImTest20005
+[2016-07-11 14:41:22,831] link: running as background
+[2016-07-11 14:41:22,831] main: Rendering [ImTest20005] started
+[2016-07-11 14:41:24,329] main: Rendered Finished
+[2016-07-11 14:41:24,329] add: ADDING POSE: ImTest20006
+[2016-07-11 14:41:24,329] link: running as background
+[2016-07-11 14:41:24,329] main: Rendering [ImTest20006] started
+[2016-07-11 14:41:25,861] main: Rendered Finished
+[2016-07-11 14:41:25,862] add: ADDING POSE: ImTest20007
+[2016-07-11 14:41:25,862] link: running as background
+[2016-07-11 14:41:25,862] main: Rendering [ImTest20007] started
+[2016-07-11 14:41:27,471] main: Rendered Finished
+[2016-07-11 14:41:27,472] add: ADDING POSE: ImTest20008
+[2016-07-11 14:41:27,472] link: running as background
+[2016-07-11 14:41:27,472] main: Rendering [ImTest20008] started
+[2016-07-11 14:41:29,021] main: Rendered Finished
+[2016-07-11 14:41:29,022] add: ADDING POSE: ImTest20009
+[2016-07-11 14:41:29,022] link: running as background
+[2016-07-11 14:41:29,022] main: Rendering [ImTest20009] started
+[2016-07-11 14:41:30,521] main: Rendered Finished
+[2016-07-11 14:41:30,522] add: ADDING POSE: ImTest20010
+[2016-07-11 14:41:30,522] link: running as background
+[2016-07-11 14:41:30,522] main: Rendering [ImTest20010] started
+[2016-07-11 14:41:32,096] main: Rendered Finished
+[2016-07-11 16:37:30,990] main: logger opened
+[2016-07-11 16:37:30,990] main: 3.4.2 (default, Dec  7 2014, 18:21:18) [MSC v.1800 64 bit (AMD64)]
+[2016-07-11 16:37:30,990] wipe: Clearing all existing blender objects
+[2016-07-11 16:37:30,991] build: Building testRange
+[2016-07-11 16:37:30,994] build: Added trichecker4 to scene
+[2016-07-11 16:37:30,994] build: trichecker4 isControl = 0
+[2016-07-11 16:37:30,994] build: trichecker4 being used as marker
+[2016-07-11 16:37:30,995] build: MARKER
+[2016-07-11 16:37:30,995] build: [-1.2217304763960306, 0.17453292519943295, 0.3490658503988659]
+[2016-07-11 16:37:30,995] build: [5.0, 15.0, 9.0]
+[2016-07-11 16:37:30,995] build: [2.0, 4.0, 6.0]
+[2016-07-11 16:37:31,000] apply: applying settings
+[2016-07-11 16:37:31,001] add: ADDING POSE: ImTest20001
+[2016-07-11 16:37:31,001] link: running as background
+[2016-07-11 16:37:31,001] main: Rendering [ImTest20001] started
+[2016-07-11 16:37:32,643] main: Rendered Finished
+[2016-07-11 16:37:32,644] add: ADDING POSE: ImTest20002
+[2016-07-11 16:37:32,644] link: running as background
+[2016-07-11 16:37:32,644] main: Rendering [ImTest20002] started
+[2016-07-11 16:37:34,183] main: Rendered Finished
+[2016-07-11 16:37:34,184] add: ADDING POSE: ImTest20003
+[2016-07-11 16:37:34,184] link: running as background
+[2016-07-11 16:37:34,184] main: Rendering [ImTest20003] started
+[2016-07-11 16:37:35,799] main: Rendered Finished
+[2016-07-11 16:37:35,800] add: ADDING POSE: ImTest20004
+[2016-07-11 16:37:35,800] link: running as background
+[2016-07-11 16:37:35,800] main: Rendering [ImTest20004] started
+[2016-07-11 16:37:37,329] main: Rendered Finished
+[2016-07-11 16:37:37,329] add: ADDING POSE: ImTest20005
+[2016-07-11 16:37:37,329] link: running as background
+[2016-07-11 16:37:37,329] main: Rendering [ImTest20005] started
+[2016-07-11 16:37:38,858] main: Rendered Finished
+[2016-07-11 16:37:38,858] add: ADDING POSE: ImTest20006
+[2016-07-11 16:37:38,858] link: running as background
+[2016-07-11 16:37:38,858] main: Rendering [ImTest20006] started
+[2016-07-11 16:37:40,373] main: Rendered Finished
+[2016-07-11 16:37:40,374] add: ADDING POSE: ImTest20007
+[2016-07-11 16:37:40,374] link: running as background
+[2016-07-11 16:37:40,374] main: Rendering [ImTest20007] started
+[2016-07-11 16:37:42,072] main: Rendered Finished
+[2016-07-11 16:37:42,073] add: ADDING POSE: ImTest20008
+[2016-07-11 16:37:42,073] link: running as background
+[2016-07-11 16:37:42,074] main: Rendering [ImTest20008] started
+[2016-07-11 16:37:43,587] main: Rendered Finished
+[2016-07-11 16:37:43,587] add: ADDING POSE: ImTest20009
+[2016-07-11 16:37:43,587] link: running as background
+[2016-07-11 16:37:43,587] main: Rendering [ImTest20009] started
+[2016-07-11 16:37:45,150] main: Rendered Finished
+[2016-07-11 16:37:45,150] add: ADDING POSE: ImTest20010
+[2016-07-11 16:37:45,150] link: running as background
+[2016-07-11 16:37:45,150] main: Rendering [ImTest20010] started
+[2016-07-11 16:37:46,761] main: Rendered Finished
+[2016-07-11 16:40:35,486] main: logger opened
+[2016-07-11 16:40:35,486] main: 3.4.2 (default, Dec  7 2014, 18:21:18) [MSC v.1800 64 bit (AMD64)]
+[2016-07-11 16:40:35,487] wipe: Clearing all existing blender objects
+[2016-07-11 16:40:35,488] build: Building testRange
+[2016-07-11 16:40:35,490] build: Added trichecker4 to scene
+[2016-07-11 16:40:35,491] build: trichecker4 isControl = 0
+[2016-07-11 16:40:35,491] build: trichecker4 being used as marker
+[2016-07-11 16:40:35,491] build: MARKER
+[2016-07-11 16:40:35,491] build: C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\trichecker.txt
+[2016-07-11 16:40:35,492] build: [-1.2217304763960306, 0.17453292519943295, 0.3490658503988659]
+[2016-07-11 16:40:35,492] build: [5.0, 15.0, 9.0]
+[2016-07-11 16:40:35,492] build: [2.0, 4.0, 6.0]
+[2016-07-11 16:40:35,497] apply: applying settings
+[2016-07-11 16:40:35,497] add: ADDING POSE: ImTest20001
+[2016-07-11 16:40:35,497] link: running as background
+[2016-07-11 16:40:35,497] main: Rendering [ImTest20001] started
+[2016-07-11 16:40:37,096] main: Rendered Finished
+[2016-07-11 16:40:37,097] add: ADDING POSE: ImTest20002
+[2016-07-11 16:40:37,097] link: running as background
+[2016-07-11 16:40:37,097] main: Rendering [ImTest20002] started
+[2016-07-11 16:40:38,644] main: Rendered Finished
+[2016-07-11 16:40:38,645] add: ADDING POSE: ImTest20003
+[2016-07-11 16:40:38,645] link: running as background
+[2016-07-11 16:40:38,645] main: Rendering [ImTest20003] started
+[2016-07-11 16:40:40,224] main: Rendered Finished
+[2016-07-11 16:40:40,225] add: ADDING POSE: ImTest20004
+[2016-07-11 16:40:40,225] link: running as background
+[2016-07-11 16:40:40,225] main: Rendering [ImTest20004] started
+[2016-07-11 16:40:41,781] main: Rendered Finished
+[2016-07-11 16:40:41,782] add: ADDING POSE: ImTest20005
+[2016-07-11 16:40:41,782] link: running as background
+[2016-07-11 16:40:41,782] main: Rendering [ImTest20005] started
+[2016-07-11 16:40:43,315] main: Rendered Finished
+[2016-07-11 16:40:43,316] add: ADDING POSE: ImTest20006
+[2016-07-11 16:40:43,316] link: running as background
+[2016-07-11 16:40:43,316] main: Rendering [ImTest20006] started
+[2016-07-11 16:40:44,818] main: Rendered Finished
+[2016-07-11 16:40:44,818] add: ADDING POSE: ImTest20007
+[2016-07-11 16:40:44,818] link: running as background
+[2016-07-11 16:40:44,818] main: Rendering [ImTest20007] started
+[2016-07-11 16:40:46,458] main: Rendered Finished
+[2016-07-11 16:40:46,459] add: ADDING POSE: ImTest20008
+[2016-07-11 16:40:46,459] link: running as background
+[2016-07-11 16:40:46,459] main: Rendering [ImTest20008] started
+[2016-07-11 16:40:47,966] main: Rendered Finished
+[2016-07-11 16:40:47,967] add: ADDING POSE: ImTest20009
+[2016-07-11 16:40:47,967] link: running as background
+[2016-07-11 16:40:47,967] main: Rendering [ImTest20009] started
+[2016-07-11 16:40:49,460] main: Rendered Finished
+[2016-07-11 16:40:49,461] add: ADDING POSE: ImTest20010
+[2016-07-11 16:40:49,461] link: running as background
+[2016-07-11 16:40:49,461] main: Rendering [ImTest20010] started
+[2016-07-11 16:40:50,993] main: Rendered Finished
+[2016-07-11 16:43:38,517] main: logger opened
+[2016-07-11 16:43:38,517] main: 3.4.2 (default, Dec  7 2014, 18:21:18) [MSC v.1800 64 bit (AMD64)]
+[2016-07-11 16:43:38,517] wipe: Clearing all existing blender objects
+[2016-07-11 16:43:38,518] build: Building testRange
+[2016-07-11 16:43:38,521] build: Added trichecker4 to scene
+[2016-07-11 16:43:38,521] build: trichecker4 isControl = 0
+[2016-07-11 16:43:38,521] build: trichecker4 being used as marker
+[2016-07-11 16:44:14,938] main: logger opened
+[2016-07-11 16:44:14,938] main: 3.4.2 (default, Dec  7 2014, 18:21:18) [MSC v.1800 64 bit (AMD64)]
+[2016-07-11 16:44:14,938] wipe: Clearing all existing blender objects
+[2016-07-11 16:44:14,939] build: Building testRange
+[2016-07-11 16:44:14,942] build: Added trichecker4 to scene
+[2016-07-11 16:44:14,942] build: trichecker4 isControl = 0
+[2016-07-11 16:44:14,942] build: trichecker4 being used as marker
+[2016-07-11 16:44:14,943] build: rawmarkerpt = [0.1, 0.0, 0.0]
+[2016-07-11 16:44:14,943] build: MARKER
+[2016-07-11 16:44:14,943] build: C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\trichecker.txt
+[2016-07-11 16:44:14,943] build: [-1.2217304763960306, 0.17453292519943295, 0.3490658503988659]
+[2016-07-11 16:44:14,943] build: [5.0, 15.0, 9.0]
+[2016-07-11 16:44:14,943] build: [2.0, 4.0, 6.0]
+[2016-07-11 16:44:14,948] apply: applying settings
+[2016-07-11 16:44:14,949] add: ADDING POSE: ImTest20001
+[2016-07-11 16:44:14,949] link: running as background
+[2016-07-11 16:44:14,949] main: Rendering [ImTest20001] started
+[2016-07-11 16:44:16,540] main: Rendered Finished
+[2016-07-11 16:44:16,540] add: ADDING POSE: ImTest20002
+[2016-07-11 16:44:16,540] link: running as background
+[2016-07-11 16:44:16,541] main: Rendering [ImTest20002] started
+[2016-07-11 16:44:18,086] main: Rendered Finished
+[2016-07-11 16:44:18,087] add: ADDING POSE: ImTest20003
+[2016-07-11 16:44:18,087] link: running as background
+[2016-07-11 16:44:18,087] main: Rendering [ImTest20003] started
+[2016-07-11 16:44:19,662] main: Rendered Finished
+[2016-07-11 16:44:19,662] add: ADDING POSE: ImTest20004
+[2016-07-11 16:44:19,662] link: running as background
+[2016-07-11 16:44:19,662] main: Rendering [ImTest20004] started
+[2016-07-11 16:44:21,297] main: Rendered Finished
+[2016-07-11 16:44:21,297] add: ADDING POSE: ImTest20005
+[2016-07-11 16:44:21,298] link: running as background
+[2016-07-11 16:44:21,298] main: Rendering [ImTest20005] started
+[2016-07-11 16:44:22,845] main: Rendered Finished
+[2016-07-11 16:44:22,846] add: ADDING POSE: ImTest20006
+[2016-07-11 16:44:22,846] link: running as background
+[2016-07-11 16:44:22,846] main: Rendering [ImTest20006] started
+[2016-07-11 16:44:24,386] main: Rendered Finished
+[2016-07-11 16:44:24,386] add: ADDING POSE: ImTest20007
+[2016-07-11 16:44:24,386] link: running as background
+[2016-07-11 16:44:24,387] main: Rendering [ImTest20007] started
+[2016-07-11 16:44:26,010] main: Rendered Finished
+[2016-07-11 16:44:26,011] add: ADDING POSE: ImTest20008
+[2016-07-11 16:44:26,011] link: running as background
+[2016-07-11 16:44:26,011] main: Rendering [ImTest20008] started
+[2016-07-11 16:44:27,591] main: Rendered Finished
+[2016-07-11 16:44:27,592] add: ADDING POSE: ImTest20009
+[2016-07-11 16:44:27,592] link: running as background
+[2016-07-11 16:44:27,592] main: Rendering [ImTest20009] started
+[2016-07-11 16:44:29,118] main: Rendered Finished
+[2016-07-11 16:44:29,118] add: ADDING POSE: ImTest20010
+[2016-07-11 16:44:29,118] link: running as background
+[2016-07-11 16:44:29,118] main: Rendering [ImTest20010] started
+[2016-07-11 16:44:30,669] main: Rendered Finished
+[2016-07-11 16:46:15,680] main: logger opened
+[2016-07-11 16:46:15,680] main: 3.4.2 (default, Dec  7 2014, 18:21:18) [MSC v.1800 64 bit (AMD64)]
+[2016-07-11 16:46:15,680] wipe: Clearing all existing blender objects
+[2016-07-11 16:46:15,681] build: Building testRange
+[2016-07-11 16:46:15,684] build: Added trichecker4 to scene
+[2016-07-11 16:46:15,684] build: trichecker4 isControl = 0
+[2016-07-11 16:46:15,685] build: trichecker4 being used as marker
+[2016-07-11 16:46:15,685] build: rawmarkerpt = [0.1, 0.3, 0.0]
+[2016-07-11 16:46:15,685] build: MARKER
+[2016-07-11 16:46:15,685] build: C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\trichecker.txt
+[2016-07-11 16:46:15,685] build: [-1.2217304763960306, 0.17453292519943295, 0.3490658503988659]
+[2016-07-11 16:46:15,685] build: [5.0, 15.0, 9.0]
+[2016-07-11 16:46:15,686] build: [2.0, 4.0, 6.0]
+[2016-07-11 16:46:15,690] apply: applying settings
+[2016-07-11 16:46:15,691] add: ADDING POSE: ImTest20001
+[2016-07-11 16:46:15,691] link: running as background
+[2016-07-11 16:46:15,691] main: Rendering [ImTest20001] started
+[2016-07-11 16:46:17,295] main: Rendered Finished
+[2016-07-11 16:46:17,296] add: ADDING POSE: ImTest20002
+[2016-07-11 16:46:17,296] link: running as background
+[2016-07-11 16:46:17,296] main: Rendering [ImTest20002] started
+[2016-07-11 16:46:18,855] main: Rendered Finished
+[2016-07-11 16:46:18,855] add: ADDING POSE: ImTest20003
+[2016-07-11 16:46:18,855] link: running as background
+[2016-07-11 16:46:18,855] main: Rendering [ImTest20003] started
+[2016-07-11 16:46:20,435] main: Rendered Finished
+[2016-07-11 16:46:20,435] add: ADDING POSE: ImTest20004
+[2016-07-11 16:46:20,435] link: running as background
+[2016-07-11 16:46:20,435] main: Rendering [ImTest20004] started
+[2016-07-11 16:46:21,996] main: Rendered Finished
+[2016-07-11 16:46:21,997] add: ADDING POSE: ImTest20005
+[2016-07-11 16:46:21,997] link: running as background
+[2016-07-11 16:46:21,997] main: Rendering [ImTest20005] started
+[2016-07-11 16:46:23,532] main: Rendered Finished
+[2016-07-11 16:46:23,533] add: ADDING POSE: ImTest20006
+[2016-07-11 16:46:23,533] link: running as background
+[2016-07-11 16:46:23,533] main: Rendering [ImTest20006] started
+[2016-07-11 16:46:25,070] main: Rendered Finished
+[2016-07-11 16:46:25,070] add: ADDING POSE: ImTest20007
+[2016-07-11 16:46:25,070] link: running as background
+[2016-07-11 16:46:25,070] main: Rendering [ImTest20007] started
+[2016-07-11 16:46:26,694] main: Rendered Finished
+[2016-07-11 16:46:26,695] add: ADDING POSE: ImTest20008
+[2016-07-11 16:46:26,695] link: running as background
+[2016-07-11 16:46:26,695] main: Rendering [ImTest20008] started
+[2016-07-11 16:46:28,235] main: Rendered Finished
+[2016-07-11 16:46:28,236] add: ADDING POSE: ImTest20009
+[2016-07-11 16:46:28,236] link: running as background
+[2016-07-11 16:46:28,236] main: Rendering [ImTest20009] started
+[2016-07-11 16:46:29,758] main: Rendered Finished
+[2016-07-11 16:46:29,759] add: ADDING POSE: ImTest20010
+[2016-07-11 16:46:29,759] link: running as background
+[2016-07-11 16:46:29,759] main: Rendering [ImTest20010] started
+[2016-07-11 16:46:31,315] main: Rendered Finished
+[2016-07-11 16:47:09,872] main: logger opened
+[2016-07-11 16:47:09,873] main: 3.4.2 (default, Dec  7 2014, 18:21:18) [MSC v.1800 64 bit (AMD64)]
+[2016-07-11 16:47:09,873] wipe: Clearing all existing blender objects
+[2016-07-11 16:47:09,874] build: Building testRange
+[2016-07-11 16:47:09,876] build: Added trichecker4 to scene
+[2016-07-11 16:47:09,877] build: trichecker4 isControl = 0
+[2016-07-11 16:47:09,877] build: trichecker4 being used as marker
+[2016-07-11 16:47:09,877] build: rawmarkerpt = [0.1, 0.3, 0.0]
+[2016-07-11 16:47:09,877] build: MARKER
+[2016-07-11 16:47:09,878] build: C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\trichecker.txt
+[2016-07-11 16:47:09,878] build: [-1.2217304763960306, 0.17453292519943295, 0.3490658503988659]
+[2016-07-11 16:47:09,878] build: [5.0, 15.0, 9.0]
+[2016-07-11 16:47:09,878] build: [2.0, 4.0, 6.0]
+[2016-07-11 16:47:09,883] apply: applying settings
+[2016-07-11 16:47:09,883] add: ADDING POSE: ImTest20001
+[2016-07-11 16:47:09,883] link: running as background
+[2016-07-11 16:47:09,883] main: Rendering [ImTest20001] started
+[2016-07-11 16:47:11,546] main: Rendered Finished
+[2016-07-11 16:47:11,547] add: ADDING POSE: ImTest20002
+[2016-07-11 16:47:11,547] link: running as background
+[2016-07-11 16:47:11,547] main: Rendering [ImTest20002] started
+[2016-07-11 16:47:13,124] main: Rendered Finished
+[2016-07-11 16:47:13,125] add: ADDING POSE: ImTest20003
+[2016-07-11 16:47:13,125] link: running as background
+[2016-07-11 16:47:13,125] main: Rendering [ImTest20003] started
+[2016-07-11 16:47:14,751] main: Rendered Finished
+[2016-07-11 16:47:14,751] add: ADDING POSE: ImTest20004
+[2016-07-11 16:47:14,751] link: running as background
+[2016-07-11 16:47:14,751] main: Rendering [ImTest20004] started
+[2016-07-11 16:47:16,257] main: Rendered Finished
+[2016-07-11 16:47:16,258] add: ADDING POSE: ImTest20005
+[2016-07-11 16:47:16,258] link: running as background
+[2016-07-11 16:47:16,258] main: Rendering [ImTest20005] started
+[2016-07-11 16:47:17,806] main: Rendered Finished
+[2016-07-11 16:47:17,807] add: ADDING POSE: ImTest20006
+[2016-07-11 16:47:17,807] link: running as background
+[2016-07-11 16:47:17,807] main: Rendering [ImTest20006] started
+[2016-07-11 16:47:19,316] main: Rendered Finished
+[2016-07-11 16:47:19,317] add: ADDING POSE: ImTest20007
+[2016-07-11 16:47:19,317] link: running as background
+[2016-07-11 16:47:19,317] main: Rendering [ImTest20007] started
+[2016-07-11 16:47:20,997] main: Rendered Finished
+[2016-07-11 16:47:20,997] add: ADDING POSE: ImTest20008
+[2016-07-11 16:47:20,997] link: running as background
+[2016-07-11 16:47:20,997] main: Rendering [ImTest20008] started
+[2016-07-11 16:47:22,517] main: Rendered Finished
+[2016-07-11 16:47:22,518] add: ADDING POSE: ImTest20009
+[2016-07-11 16:47:22,518] link: running as background
+[2016-07-11 16:47:22,518] main: Rendering [ImTest20009] started
+[2016-07-11 16:47:24,060] main: Rendered Finished
+[2016-07-11 16:47:24,061] add: ADDING POSE: ImTest20010
+[2016-07-11 16:47:24,061] link: running as background
+[2016-07-11 16:47:24,061] main: Rendering [ImTest20010] started
+[2016-07-11 16:47:25,559] main: Rendered Finished
+[2016-07-11 16:54:10,435] main: logger opened
+[2016-07-11 16:54:10,436] main: 3.4.2 (default, Dec  7 2014, 18:21:18) [MSC v.1800 64 bit (AMD64)]
+[2016-07-11 16:54:10,436] wipe: Clearing all existing blender objects
+[2016-07-11 16:54:10,437] build: Building testRange
+[2016-07-11 16:54:10,439] build: Added trichecker4 to scene
+[2016-07-11 16:54:10,439] build: trichecker4 isControl = 0
+[2016-07-11 16:54:10,439] build: trichecker4 being used as marker
+[2016-07-11 16:54:10,441] build: rawmarkerpt = [0.1, 0.3, 0.0]
+[2016-07-11 16:54:10,441] build: MARKER
+[2016-07-11 16:54:10,441] build: C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\trichecker.txt
+[2016-07-11 16:54:10,441] build: [-1.2217304763960306, 0.17453292519943295, 0.3490658503988659]
+[2016-07-11 16:54:10,441] build: [5.0, 15.0, 9.0]
+[2016-07-11 16:54:10,441] build: [2.0, 4.0, 6.0]
+[2016-07-11 16:54:10,450] apply: applying settings
+[2016-07-11 16:54:10,451] add: ADDING POSE: ImTest20001
+[2016-07-11 16:54:10,452] link: Linking: ImTest20001
+[2016-07-11 16:54:10,452] main: Rendering [ImTest20001] started
+[2016-07-11 16:54:11,633] main: Rendered Finished
+[2016-07-11 16:54:11,634] add: ADDING POSE: ImTest20002
+[2016-07-11 16:54:11,634] link: Linking: ImTest20002
+[2016-07-11 16:54:11,634] main: Rendering [ImTest20002] started
+[2016-07-11 16:54:12,733] main: Rendered Finished
+[2016-07-11 16:54:12,734] add: ADDING POSE: ImTest20003
+[2016-07-11 16:54:12,734] link: Linking: ImTest20003
+[2016-07-11 16:54:12,735] main: Rendering [ImTest20003] started
+[2016-07-11 16:54:13,901] main: Rendered Finished
+[2016-07-11 16:54:13,901] add: ADDING POSE: ImTest20004
+[2016-07-11 16:54:13,901] link: Linking: ImTest20004
+[2016-07-11 16:54:13,902] main: Rendering [ImTest20004] started
+[2016-07-11 16:54:14,987] main: Rendered Finished
+[2016-07-11 16:54:14,987] add: ADDING POSE: ImTest20005
+[2016-07-11 16:54:14,988] link: Linking: ImTest20005
+[2016-07-11 16:54:14,988] main: Rendering [ImTest20005] started
+[2016-07-11 16:54:16,096] main: Rendered Finished
+[2016-07-11 16:54:16,096] add: ADDING POSE: ImTest20006
+[2016-07-11 16:54:16,097] link: Linking: ImTest20006
+[2016-07-11 16:54:16,097] main: Rendering [ImTest20006] started
+[2016-07-11 16:54:17,192] main: Rendered Finished
+[2016-07-11 16:54:17,193] add: ADDING POSE: ImTest20007
+[2016-07-11 16:54:17,193] link: Linking: ImTest20007
+[2016-07-11 16:54:17,193] main: Rendering [ImTest20007] started
+[2016-07-11 16:54:18,405] main: Rendered Finished
+[2016-07-11 16:54:18,405] add: ADDING POSE: ImTest20008
+[2016-07-11 16:54:18,405] link: Linking: ImTest20008
+[2016-07-11 16:54:18,406] main: Rendering [ImTest20008] started
+[2016-07-11 16:54:19,487] main: Rendered Finished
+[2016-07-11 16:54:19,488] add: ADDING POSE: ImTest20009
+[2016-07-11 16:54:19,488] link: Linking: ImTest20009
+[2016-07-11 16:54:19,488] main: Rendering [ImTest20009] started
+[2016-07-11 16:54:20,578] main: Rendered Finished
+[2016-07-11 16:54:20,579] add: ADDING POSE: ImTest20010
+[2016-07-11 16:54:20,579] link: Linking: ImTest20010
+[2016-07-11 16:54:20,580] main: Rendering [ImTest20010] started
+[2016-07-11 16:54:21,660] main: Rendered Finished

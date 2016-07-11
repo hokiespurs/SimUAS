@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scene name="testRange" version="0.1" lib="C:\\Users\\Richie\\Documents\\GitHub\\BlenderPythonTest\\objects/objectLibrary.xml">
+	<object libname="trichecker" name="trichecker4" isControl = "0" isMarker = "1">
+        <translation x="5" y="15" z="9"/>
+        <rotation x="-70" y="10" z="20"/>
+        <scale x="2" y="4" z="6"/>
+    </object>
+</scene>
