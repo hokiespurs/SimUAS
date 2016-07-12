@@ -2,11 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fdb15085-f695-4c71-8e63-4b6b6aee15c9" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/example/output/Control.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/example/output/trajectory.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validateCX/output/log.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validateChecker1/output/log.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validateChecker2/output/log.txt" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/validateChecker2/input/sensor_dem.xml" afterPath="$PROJECT_DIR$/data/validateChecker2/input/sensor_dem.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/validateChecker2/output/log.txt" afterPath="$PROJECT_DIR$/data/validateChecker2/output/log.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/example/input/scene_example.xml" afterPath="$PROJECT_DIR$/data/example/input/scene_example.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/example/input/sensor_demo.xml" afterPath="$PROJECT_DIR$/data/example/input/sensor_demo.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/example/output/log.txt" afterPath="$PROJECT_DIR$/data/example/output/log.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/validateChecker1/input/scene_trichecker.xml" afterPath="$PROJECT_DIR$/data/validateChecker1/input/scene_trichecker.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/validateChecker1/input/sensor_demo.xml" afterPath="$PROJECT_DIR$/data/validateChecker1/input/sensor_demo.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/validateChecker2/output/trajectory.txt" afterPath="$PROJECT_DIR$/data/validateChecker2/output/trajectory.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/objects/trichecker.txt" afterPath="$PROJECT_DIR$/objects/trichecker.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python/mainAll.py" afterPath="$PROJECT_DIR$/python/mainAll.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python/testRun.bat" afterPath="$PROJECT_DIR$/python/testRun.bat" />
     </list>
     <ignored path="BlenderPythonTest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,14 +40,15 @@
       <file leaf-file-name="mainAll.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/python/mainAll.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.37393767">
-              <caret line="229" column="0" selection-start-line="229" selection-start-column="0" selection-end-line="229" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.8397351">
+              <caret line="167" column="32" selection-start-line="167" selection-start-column="32" selection-end-line="167" selection-end-column="32" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
-                <element signature="e#1646#1983#0" expanded="false" />
-                <element signature="e#2004#2183#0" expanded="false" />
-                <element signature="e#7741#7826#0" expanded="false" />
-                <element signature="e#7845#8311#0" expanded="false" />
+                <element signature="e#2181#2409#0" expanded="false" />
+                <element signature="e#7173#8848#0" expanded="false" />
+                <element signature="e#8873#9574#0" expanded="false" />
+                <element signature="e#9596#9681#0" expanded="false" />
+                <element signature="e#9739#11066#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -60,9 +71,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="862" />
-    <option name="width" value="861" />
-    <option name="height" value="1080" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1739" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -365,15 +377,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="862" y="0" width="861" height="1080" extended-state="0" />
+    <frame x="-8" y="-8" width="1739" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18833536" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.091122866" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32953367" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32987553" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22573839" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15767635" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32987553" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -400,21 +412,22 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="8" />
+      <option name="time" value="9" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/python/mainAll.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37393767">
-          <caret line="229" column="0" selection-start-line="229" selection-start-column="0" selection-end-line="229" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.8397351">
+          <caret line="167" column="32" selection-start-line="167" selection-start-column="32" selection-end-line="167" selection-end-column="32" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <element signature="e#1646#1983#0" expanded="false" />
-            <element signature="e#2004#2183#0" expanded="false" />
-            <element signature="e#7741#7826#0" expanded="false" />
-            <element signature="e#7845#8311#0" expanded="false" />
+            <element signature="e#2181#2409#0" expanded="false" />
+            <element signature="e#7173#8848#0" expanded="false" />
+            <element signature="e#8873#9574#0" expanded="false" />
+            <element signature="e#9596#9681#0" expanded="false" />
+            <element signature="e#9739#11066#0" expanded="false" />
           </folding>
         </state>
       </provider>

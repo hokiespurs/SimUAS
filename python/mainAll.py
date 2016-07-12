@@ -6,6 +6,10 @@ import sys
 import logging
 import csv
 import os
+import copy
+import numpy as np
+import math
+
 
 class Sensor:
     def __init__(self, xmlsensor):
@@ -23,6 +27,8 @@ class Sensor:
         self.antialiasing = float(root.find('image').get('antialiasing'))
         self.clipStart = float(root.find('clipping').get('start'))
         self.clipEnd = float(root.find('clipping').get('end'))
+        # output sensor.xml file
+
 
     def apply(self):
         logging.debug("applying settings")
@@ -36,24 +42,27 @@ class Sensor:
 
 
 class BObject:
-    def __init__(self, LibObj, iName, T, R, S, isGCP):
+    def __init__(self, LibObj, iName, T, R, S, isControl, isMarker):
         self.libname = LibObj.libname
         self.name = iName
         self.path = LibObj.path
         self.blenderType = LibObj.blenderType
         self.filename = LibObj.filename
+        self.markerPath = LibObj.markerPath
         self.Translation = T
         self.Rotation = R
         self.Scale = S
-        self.isGCP = isGCP
+        self.isControl = isControl
+        self.isMarker = isMarker
 
 
 class Objlib:
-    def __init__(self, name, path, blenderType, filename):
+    def __init__(self, name, path, blenderType, filename, markerPath):
         self.libname = name
         self.path = path
         self.blenderType = blenderType
         self.filename = filename
+        self.markerPath = markerPath
 
 
 class Scene:
@@ -68,14 +77,15 @@ class Scene:
         AllLibObj = list()
         allLibNames = list()
         for i in rootlib.findall('object'):
-            iname = i.get('name')
-            ipath = i.get('path')
-            iblenderType = i.get('blenderType')
-            ifilename = i.get('filename')
-            iLibObj = Objlib(iname, ipath, iblenderType, ifilename)
+            iname = i.find('name').text
+            ipath = i.find('path').text
+            iMarkerPath = i.find('markerPath').text
+            iblenderType = i.find('blenderType').text
+            ifilename = i.find('libname').text
+            iLibObj = Objlib(iname, ipath, iblenderType, ifilename, iMarkerPath)
             AllLibObj.append(iLibObj)
             allLibNames.append(iname)
-
+        print(allLibNames)
         self.name = rootscene.get('name')
         self.BObjects = list()
         for iObj in rootscene.findall('object'):
@@ -83,7 +93,8 @@ class Scene:
             iname = iObj.get('name')
             ind = allLibNames.index(libname)
 
-            isGCP = iObj.get('isGCP')
+            isControl = iObj.get('isControl')
+            isMarker = iObj.get('isMarker')
             Tx = float(iObj.find('translation').get('x'))
             Ty = float(iObj.find('translation').get('y'))
             Tz = float(iObj.find('translation').get('z'))
@@ -98,20 +109,24 @@ class Scene:
             iR = Triplet(Rx, Ry, Rz)
             iS = Triplet(Sx, Sy, Sz)
 
-            iBObject = BObject(AllLibObj[ind], iname, iT, iR, iS, isGCP)
+            iBObject = BObject(AllLibObj[ind], iname, iT, iR, iS, isControl, isMarker)
             self.BObjects.append(iBObject)
 
-    def build(self,controlCSV):
+    def build(self,controlCSV, markerCSV):
         logging.info("Building " + self.name)
 
         controlFileHandle = open(controlCSV, 'w', newline='')
-        GCPwriter = csv.writer(controlFileHandle)
-        trajectoryHeader = ["ControlPointName", "Tx", "Ty", "Tz", "Rx", "Ry", "Rz"]
-        GCPwriter.writerow(trajectoryHeader)
+        controlwriter = csv.writer(controlFileHandle)
+        controlHeader = ["ControlPointName", "Tx", "Ty", "Tz", "Rx", "Ry", "Rz"]
+        controlwriter.writerow(controlHeader)
+
+        markerFileHandle = open(markerCSV, 'w', newline='')
+        markerwriter = csv.writer(markerFileHandle)
+        markerHeader = ["X", "Y", "Z"]
+        markerwriter.writerow(markerHeader)
 
         for iObj in self.BObjects:
             iName = iObj.name
-
             iPath = iObj.path
             iPath.replace("\\", "\\\\")
             iPath = iPath + "\\" + iObj.blenderType + "\\"
@@ -122,13 +137,35 @@ class Scene:
             bpy.data.objects[iName].rotation_euler = (iObj.Rotation.x, iObj.Rotation.y, iObj.Rotation.z)
             bpy.data.objects[iName].scale = (iObj.Scale.x, iObj.Scale.y, iObj.Scale.z)
             logging.debug('Added ' + iName + " to scene")
-            logging.debug(iObj.name + " isGCP = " + iObj.isGCP)
+            print(iObj.name, iObj.isControl)
 
-            if iObj.isGCP == "1":
-                GCPwriter.writerow([iObj.name, iObj.Translation.x, iObj.Translation.y, iObj.Translation.z,
+            logging.debug(iObj.name + " isControl = " + iObj.isControl)
+
+            if iObj.isControl == "1":
+                controlwriter.writerow([iObj.name, iObj.Translation.x, iObj.Translation.y, iObj.Translation.z,
                                     iObj.Rotation.x*180/pi, iObj.Rotation.y*180/pi, iObj.Rotation.z*180/pi])
                 controlFileHandle.flush()
+
+            if iObj.isMarker == "1":
+                logging.debug(iObj.name + " being used as marker")
+                # load marker points from csv
+                rawMarkerPts = readXyzCsv(iObj.markerPath)
+                # rotate, translate, and scale marker points
+                logging.debug("rawmarkerpt = [" + str(rawMarkerPts.x[14]) + ", " + str(rawMarkerPts.y[14]) + ", " + str(rawMarkerPts.z[14]) + "]")
+                logging.debug("MARKER")
+                logging.debug(iObj.markerPath)
+                logging.debug([iObj.Rotation.x, iObj.Rotation.y, iObj.Rotation.z])
+                logging.debug([iObj.Translation.x, iObj.Translation.y, iObj.Translation.z])
+                logging.debug([iObj.Scale.x, iObj.Scale.y, iObj.Scale.z])
+
+                newMarkerPts = RotatePoint(rawMarkerPts, iObj.Rotation, iObj.Translation, iObj.Scale)
+                # print to csv file
+                for i in range(len(newMarkerPts.x)):
+                    markerwriter.writerow([newMarkerPts.x[i], newMarkerPts.y[i], newMarkerPts.z[i], rawMarkerPts.x[i], rawMarkerPts.y[i], rawMarkerPts.z[i]])
+                markerFileHandle.flush()
+
         controlFileHandle.close()
+        markerFileHandle.close()
 
 
 class Pose:
@@ -198,6 +235,70 @@ class Triplet:
         self.z = z
 
 
+def RotatePoint(Points, Rotate, Translate, Scale):
+    newPoints = copy.deepcopy(Points)
+    # Apply Scale
+    for i in range(len(newPoints.x)):
+        newPoints.x[i] = newPoints.x[i] * Scale.x
+        newPoints.y[i] = newPoints.y[i] * Scale.y
+        newPoints.z[i] = newPoints.z[i] * Scale.z
+
+    # Apply Rotation
+    cosx = math.cos(Rotate.x)
+    sinx = math.cos(Rotate.x)
+    cosy = math.cos(Rotate.y)
+    siny = math.cos(Rotate.y)
+    cosz = math.cos(Rotate.z)
+    sinz = math.cos(Rotate.z)
+
+    Rz = [[cosz, -sinz, 0],
+          [sinz, cosz, 0],
+          [0, 0, 1]]
+
+    Ry = [[cosy, 0, siny],
+          [0, 1, 0],
+          [-siny, 0, cosy]]
+
+    Rx = [[1, 0, 0],
+          [0, cosx, -sinx],
+          [0, sinx, cosx]]
+
+    R = np.dot(Rz,np.dot(Ry,Rx))
+
+    for i in range(len(newPoints.x)):
+        # Should make everything a numpy array rather than storing as an object
+        # so few computations that performance shouldnt be too bad
+        P = np.array([newPoints.x[i], newPoints.y[i], newPoints.z[i]])
+        Pnew = np.dot(R,P)
+        newPoints.x[i] = P[0]
+        newPoints.y[i] = P[1]
+        newPoints.z[i] = P[2]
+
+    # Apply Translation
+    for i in range(len(newPoints.x)):
+        newPoints.x[i] = newPoints.x[i] + Translate.x
+        newPoints.y[i] = newPoints.y[i] + Translate.y
+        newPoints.z[i] = newPoints.z[i] + Translate.z
+
+    return newPoints
+
+
+def readXyzCsv(csvfilename):
+    csvfile = open(csvfilename)
+    allrows = csv.reader(csvfile)
+
+    x = []
+    y = []
+    z = []
+
+    for row in allrows:
+        x.append(float(row[0]))
+        y.append(float(row[1]))
+        z.append(float(row[2]))
+
+    return Triplet(x, y, z)
+
+
 def wipe():
     logging.info("Clearing all existing blender objects")
     scene = bpy.context.scene
@@ -226,8 +327,6 @@ def makedir(directory):
 
 
 def main():
-    logging.info(sys.version)
-
     # parse argument
     argv = sys.argv
     try:
@@ -235,6 +334,7 @@ def main():
         experimentName = argv[0]
     except ValueError:
         experimentName = 'C:\\Users\\Richie\\Documents\\GitHub\\BlenderPythonTest\\data\\example'
+
     makedir(experimentName + "/output/")
     makedir(experimentName + "/output/images/")
 
@@ -243,9 +343,13 @@ def main():
     xmlSensor = glob.glob(experimentName + '/input/sensor*.xml')[0]
     xmlTrajectory = glob.glob(experimentName + '/input/trajectory*.xml')[0]
     LOGFORMAT = "[%(asctime)s] %(funcName)s: %(message)s"
-    logging.basicConfig(filename=experimentName + "/output/log.txt", level=logging.DEBUG, format= LOGFORMAT)
+    logging.basicConfig(filename=experimentName + "/output/log.txt", level=logging.DEBUG, format=LOGFORMAT)
+    logging.debug('logger opened')
+    logging.info(sys.version)
+
     trajectoryCSV = experimentName + "/output/trajectory.txt"
-    controlCSV = experimentName + "/output/Control.txt"
+    controlCSV = experimentName + "/output/control.txt"
+    markerCSV = experimentName + "/output/marker.txt"
     wipe()  # clear all blender objects
 
     # Populate Classes
@@ -254,7 +358,7 @@ def main():
     myTrajectory = Trajectory(xmlTrajectory)
 
     # MakeScene
-    myScene.build(controlCSV)
+    myScene.build(controlCSV, markerCSV)
     # Apply Sensor Parameters
     mySensor.apply()
     iCount = 0
