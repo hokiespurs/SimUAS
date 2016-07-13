@@ -134,6 +134,7 @@ class Scene:
             bpy.ops.wm.append(directory=iPath, link=False, filename=iFilename)
             bpy.data.objects[iFilename].name = iName
             bpy.data.objects[iName].location = (iObj.Translation.x, iObj.Translation.y, iObj.Translation.z)
+            bpy.data.objects[iName].rotation_mode = 'ZYX'
             bpy.data.objects[iName].rotation_euler = (iObj.Rotation.x, iObj.Rotation.y, iObj.Rotation.z)
             bpy.data.objects[iName].scale = (iObj.Scale.x, iObj.Scale.y, iObj.Scale.z)
             logging.debug('Added ' + iName + " to scene")
@@ -151,7 +152,6 @@ class Scene:
                 # load marker points from csv
                 rawMarkerPts = readXyzCsv(iObj.markerPath)
                 # rotate, translate, and scale marker points
-                logging.debug("rawmarkerpt = [" + str(rawMarkerPts.x[14]) + ", " + str(rawMarkerPts.y[14]) + ", " + str(rawMarkerPts.z[14]) + "]")
                 logging.debug("MARKER")
                 logging.debug(iObj.markerPath)
                 logging.debug([iObj.Rotation.x, iObj.Rotation.y, iObj.Rotation.z])
@@ -177,13 +177,16 @@ class Pose:
     def add(self, camSensor):
         T = (self.Translation.x, self.Translation.y, self.Translation.z)
         R = (self.Rotation.x, self.Rotation.y, self.Rotation.z)
-        bpy.ops.object.camera_add(view_align=True, enter_editmode=True, location=T, rotation=R)
+        bpy.ops.object.camera_add(view_align=True, enter_editmode=True, location=T, rotation=(0, 0, 0))
+        bpy.context.object.rotation_mode = 'ZYX'
+        bpy.context.object.rotation_euler = R
         bpy.context.object.data.lens = camSensor.focalLength
         bpy.context.object.data.sensor_width = camSensor.sensorWidth
 
         #clipping constants
         bpy.context.object.data.clip_end = camSensor.clipEnd
         bpy.context.object.data.clip_start = camSensor.clipStart
+
         #assume square pixels
         pixPerMm = camSensor.sensorWidth / camSensor.resolution[0]
         bpy.context.object.data.shift_x = (camSensor.principalPoint[0] - camSensor.resolution[0]/2) * pixPerMm
@@ -270,9 +273,13 @@ def RotatePoint(Points, Rotate, Translate, Scale):
         # so few computations that performance shouldnt be too bad
         P = np.array([newPoints.x[i], newPoints.y[i], newPoints.z[i]])
         Pnew = np.dot(R,P)
-        newPoints.x[i] = P[0]
-        newPoints.y[i] = P[1]
-        newPoints.z[i] = P[2]
+        logging.debug("ROTATE PRE")
+        logging.debug([newPoints.x[i], newPoints.y[i], newPoints.z[i]])
+        newPoints.x[i] = Pnew[0]
+        newPoints.y[i] = Pnew[1]
+        newPoints.z[i] = Pnew[2]
+        logging.debug("ROTATE POST")
+        logging.debug([newPoints.x[i], newPoints.y[i], newPoints.z[i]])
 
     # Apply Translation
     for i in range(len(newPoints.x)):
@@ -333,7 +340,7 @@ def main():
         argv = argv[argv.index("--") + 1:]
         experimentName = argv[0]
     except ValueError:
-        experimentName = 'C:\\Users\\Richie\\Documents\\GitHub\\BlenderPythonTest\\data\\example'
+        experimentName = 'C:\\Users\\Richie\\Documents\\GitHub\\BlenderPythonTest\\data\\20160711_testMarkers'
 
     makedir(experimentName + "/output/")
     makedir(experimentName + "/output/images/")

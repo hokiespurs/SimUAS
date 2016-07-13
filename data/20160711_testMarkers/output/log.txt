@@ -378,3 +378,776 @@
 [2016-07-11 16:54:20,579] link: Linking: ImTest20010
 [2016-07-11 16:54:20,580] main: Rendering [ImTest20010] started
 [2016-07-11 16:54:21,660] main: Rendered Finished
+[2016-07-13 10:18:49,421] main: logger opened
+[2016-07-13 10:18:49,422] main: 3.4.2 (default, Dec  7 2014, 18:21:18) [MSC v.1800 64 bit (AMD64)]
+[2016-07-13 10:18:49,422] wipe: Clearing all existing blender objects
+[2016-07-13 10:18:49,434] build: Building testRange
+[2016-07-13 10:18:49,449] build: Added trichecker4 to scene
+[2016-07-13 10:18:49,449] build: trichecker4 isControl = 0
+[2016-07-13 10:18:49,449] build: trichecker4 being used as marker
+[2016-07-13 10:18:49,453] build: rawmarkerpt = [0.1, 0.3, 0.0]
+[2016-07-13 10:18:49,453] build: MARKER
+[2016-07-13 10:18:49,453] build: C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\trichecker.txt
+[2016-07-13 10:18:49,453] build: [-1.2217304763960306, 0.17453292519943295, 0.3490658503988659]
+[2016-07-13 10:18:49,453] build: [5.0, 15.0, 9.0]
+[2016-07-13 10:18:49,453] build: [2.0, 4.0, 6.0]
+[2016-07-13 10:18:49,465] apply: applying settings
+[2016-07-13 10:18:49,466] add: ADDING POSE: ImTest20001
+[2016-07-13 10:18:49,467] link: Linking: ImTest20001
+[2016-07-13 10:18:49,468] main: Rendering [ImTest20001] started
+[2016-07-13 10:18:50,671] main: Rendered Finished
+[2016-07-13 10:18:50,671] add: ADDING POSE: ImTest20002
+[2016-07-13 10:18:50,672] link: Linking: ImTest20002
+[2016-07-13 10:18:50,672] main: Rendering [ImTest20002] started
+[2016-07-13 10:18:51,780] main: Rendered Finished
+[2016-07-13 10:18:51,780] add: ADDING POSE: ImTest20003
+[2016-07-13 10:18:51,780] link: Linking: ImTest20003
+[2016-07-13 10:18:51,780] main: Rendering [ImTest20003] started
+[2016-07-13 10:18:52,934] main: Rendered Finished
+[2016-07-13 10:18:52,934] add: ADDING POSE: ImTest20004
+[2016-07-13 10:18:52,934] link: Linking: ImTest20004
+[2016-07-13 10:18:52,935] main: Rendering [ImTest20004] started
+[2016-07-13 10:18:54,031] main: Rendered Finished
+[2016-07-13 10:18:54,032] add: ADDING POSE: ImTest20005
+[2016-07-13 10:18:54,032] link: Linking: ImTest20005
+[2016-07-13 10:18:54,032] main: Rendering [ImTest20005] started
+[2016-07-13 10:18:55,117] main: Rendered Finished
+[2016-07-13 10:18:55,118] add: ADDING POSE: ImTest20006
+[2016-07-13 10:18:55,118] link: Linking: ImTest20006
+[2016-07-13 10:18:55,118] main: Rendering [ImTest20006] started
+[2016-07-13 10:18:56,551] main: Rendered Finished
+[2016-07-13 10:18:56,552] add: ADDING POSE: ImTest20007
+[2016-07-13 10:18:56,552] link: Linking: ImTest20007
+[2016-07-13 10:18:56,552] main: Rendering [ImTest20007] started
+[2016-07-13 10:18:57,815] main: Rendered Finished
+[2016-07-13 10:18:57,816] add: ADDING POSE: ImTest20008
+[2016-07-13 10:18:57,816] link: Linking: ImTest20008
+[2016-07-13 10:18:57,816] main: Rendering [ImTest20008] started
+[2016-07-13 10:18:58,946] main: Rendered Finished
+[2016-07-13 10:18:58,946] add: ADDING POSE: ImTest20009
+[2016-07-13 10:18:58,946] link: Linking: ImTest20009
+[2016-07-13 10:18:58,947] main: Rendering [ImTest20009] started
+[2016-07-13 10:19:00,055] main: Rendered Finished
+[2016-07-13 10:19:00,056] add: ADDING POSE: ImTest20010
+[2016-07-13 10:19:00,056] link: Linking: ImTest20010
+[2016-07-13 10:19:00,056] main: Rendering [ImTest20010] started
+[2016-07-13 10:19:01,209] main: Rendered Finished
+[2016-07-13 10:25:53,756] main: logger opened
+[2016-07-13 10:25:53,756] main: 3.4.2 (default, Dec  7 2014, 18:21:18) [MSC v.1800 64 bit (AMD64)]
+[2016-07-13 10:25:53,756] wipe: Clearing all existing blender objects
+[2016-07-13 10:25:53,757] build: Building testRange
+[2016-07-13 10:25:53,759] build: Added trichecker4 to scene
+[2016-07-13 10:25:53,760] build: trichecker4 isControl = 0
+[2016-07-13 10:25:53,760] build: trichecker4 being used as marker
+[2016-07-13 10:25:53,761] build: rawmarkerpt = [0.1, 0.3, 0.0]
+[2016-07-13 10:25:53,761] build: MARKER
+[2016-07-13 10:25:53,761] build: C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\trichecker.txt
+[2016-07-13 10:25:53,761] build: [-1.2217304763960306, 0.17453292519943295, 0.3490658503988659]
+[2016-07-13 10:25:53,761] build: [5.0, 15.0, 9.0]
+[2016-07-13 10:25:53,761] build: [2.0, 4.0, 6.0]
+[2016-07-13 10:25:53,772] apply: applying settings
+[2016-07-13 10:25:53,773] add: ADDING POSE: ImTest20001
+[2016-07-13 10:25:53,773] link: Linking: ImTest20001
+[2016-07-13 10:25:53,774] main: Rendering [ImTest20001] started
+[2016-07-13 10:25:54,932] main: Rendered Finished
+[2016-07-13 10:25:54,932] add: ADDING POSE: ImTest20002
+[2016-07-13 10:25:54,932] link: Linking: ImTest20002
+[2016-07-13 10:25:54,933] main: Rendering [ImTest20002] started
+[2016-07-13 10:25:56,052] main: Rendered Finished
+[2016-07-13 10:25:56,053] add: ADDING POSE: ImTest20003
+[2016-07-13 10:25:56,053] link: Linking: ImTest20003
+[2016-07-13 10:25:56,053] main: Rendering [ImTest20003] started
+[2016-07-13 10:25:57,221] main: Rendered Finished
+[2016-07-13 10:25:57,221] add: ADDING POSE: ImTest20004
+[2016-07-13 10:25:57,222] link: Linking: ImTest20004
+[2016-07-13 10:25:57,222] main: Rendering [ImTest20004] started
+[2016-07-13 10:25:58,325] main: Rendered Finished
+[2016-07-13 10:25:58,325] add: ADDING POSE: ImTest20005
+[2016-07-13 10:25:58,326] link: Linking: ImTest20005
+[2016-07-13 10:25:58,326] main: Rendering [ImTest20005] started
+[2016-07-13 10:25:59,480] main: Rendered Finished
+[2016-07-13 10:25:59,480] add: ADDING POSE: ImTest20006
+[2016-07-13 10:25:59,480] link: Linking: ImTest20006
+[2016-07-13 10:25:59,481] main: Rendering [ImTest20006] started
+[2016-07-13 10:26:00,624] main: Rendered Finished
+[2016-07-13 10:26:00,625] add: ADDING POSE: ImTest20007
+[2016-07-13 10:26:00,625] link: Linking: ImTest20007
+[2016-07-13 10:26:00,625] main: Rendering [ImTest20007] started
+[2016-07-13 10:26:01,902] main: Rendered Finished
+[2016-07-13 10:26:01,902] add: ADDING POSE: ImTest20008
+[2016-07-13 10:26:01,903] link: Linking: ImTest20008
+[2016-07-13 10:26:01,903] main: Rendering [ImTest20008] started
+[2016-07-13 10:26:03,050] main: Rendered Finished
+[2016-07-13 10:26:03,051] add: ADDING POSE: ImTest20009
+[2016-07-13 10:26:03,051] link: Linking: ImTest20009
+[2016-07-13 10:26:03,052] main: Rendering [ImTest20009] started
+[2016-07-13 10:26:04,180] main: Rendered Finished
+[2016-07-13 10:26:04,181] add: ADDING POSE: ImTest20010
+[2016-07-13 10:26:04,181] link: Linking: ImTest20010
+[2016-07-13 10:26:04,181] main: Rendering [ImTest20010] started
+[2016-07-13 10:26:05,298] main: Rendered Finished
+[2016-07-13 10:30:35,738] main: logger opened
+[2016-07-13 10:30:35,738] main: 3.4.2 (default, Dec  7 2014, 18:21:18) [MSC v.1800 64 bit (AMD64)]
+[2016-07-13 10:30:35,739] wipe: Clearing all existing blender objects
+[2016-07-13 10:30:47,558] main: logger opened
+[2016-07-13 10:30:47,558] main: 3.4.2 (default, Dec  7 2014, 18:21:18) [MSC v.1800 64 bit (AMD64)]
+[2016-07-13 10:30:47,558] wipe: Clearing all existing blender objects
+[2016-07-13 10:30:47,560] build: Building testRange
+[2016-07-13 10:30:47,562] build: Added trichecker4 to scene
+[2016-07-13 10:30:47,563] build: trichecker4 isControl = 0
+[2016-07-13 10:30:47,563] build: trichecker4 being used as marker
+[2016-07-13 10:30:53,020] main: logger opened
+[2016-07-13 10:30:53,020] main: 3.4.2 (default, Dec  7 2014, 18:21:18) [MSC v.1800 64 bit (AMD64)]
+[2016-07-13 10:30:53,020] wipe: Clearing all existing blender objects
+[2016-07-13 10:30:53,022] build: Building testRange
+[2016-07-13 10:30:53,024] build: Added trichecker4 to scene
+[2016-07-13 10:30:53,024] build: trichecker4 isControl = 0
+[2016-07-13 10:30:53,024] build: trichecker4 being used as marker
+[2016-07-13 10:31:28,035] main: logger opened
+[2016-07-13 10:31:28,035] main: 3.4.2 (default, Dec  7 2014, 18:21:18) [MSC v.1800 64 bit (AMD64)]
+[2016-07-13 10:31:28,035] wipe: Clearing all existing blender objects
+[2016-07-13 10:31:28,036] build: Building testRange
+[2016-07-13 10:31:28,039] build: Added trichecker4 to scene
+[2016-07-13 10:31:28,039] build: trichecker4 isControl = 0
+[2016-07-13 10:31:28,039] build: trichecker4 being used as marker
+[2016-07-13 10:33:37,936] main: logger opened
+[2016-07-13 10:33:37,936] main: 3.4.2 (default, Dec  7 2014, 18:21:18) [MSC v.1800 64 bit (AMD64)]
+[2016-07-13 10:33:37,936] wipe: Clearing all existing blender objects
+[2016-07-13 10:33:37,937] build: Building testRange
+[2016-07-13 10:33:37,940] build: Added trichecker4 to scene
+[2016-07-13 10:33:37,940] build: trichecker4 isControl = 0
+[2016-07-13 10:33:37,940] build: trichecker4 being used as marker
+[2016-07-13 10:33:37,940] build: MARKER
+[2016-07-13 10:33:37,941] build: C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\trichecker.txt
+[2016-07-13 10:33:37,941] build: [-1.2217304763960306, 0.17453292519943295, 0.3490658503988659]
+[2016-07-13 10:33:37,941] build: [5.0, 15.0, 9.0]
+[2016-07-13 10:33:37,941] build: [2.0, 4.0, 6.0]
+[2016-07-13 10:33:37,943] apply: applying settings
+[2016-07-13 10:33:37,944] add: ADDING POSE: ImTest20001
+[2016-07-13 10:33:37,945] link: Linking: ImTest20001
+[2016-07-13 10:33:37,945] main: Rendering [ImTest20001] started
+[2016-07-13 10:33:38,997] main: Rendered Finished
+[2016-07-13 10:33:38,998] add: ADDING POSE: ImTest20002
+[2016-07-13 10:33:38,998] link: Linking: ImTest20002
+[2016-07-13 10:33:38,998] main: Rendering [ImTest20002] started
+[2016-07-13 10:33:40,132] main: Rendered Finished
+[2016-07-13 10:33:40,132] add: ADDING POSE: ImTest20003
+[2016-07-13 10:33:40,133] link: Linking: ImTest20003
+[2016-07-13 10:33:40,133] main: Rendering [ImTest20003] started
+[2016-07-13 10:33:41,327] main: Rendered Finished
+[2016-07-13 10:33:41,327] add: ADDING POSE: ImTest20004
+[2016-07-13 10:33:41,328] link: Linking: ImTest20004
+[2016-07-13 10:33:41,328] main: Rendering [ImTest20004] started
+[2016-07-13 10:33:42,448] main: Rendered Finished
+[2016-07-13 10:33:42,448] add: ADDING POSE: ImTest20005
+[2016-07-13 10:33:42,449] link: Linking: ImTest20005
+[2016-07-13 10:33:42,449] main: Rendering [ImTest20005] started
+[2016-07-13 10:33:43,563] main: Rendered Finished
+[2016-07-13 10:33:43,565] add: ADDING POSE: ImTest20006
+[2016-07-13 10:33:43,565] link: Linking: ImTest20006
+[2016-07-13 10:33:43,566] main: Rendering [ImTest20006] started
+[2016-07-13 10:33:44,730] main: Rendered Finished
+[2016-07-13 10:33:44,731] add: ADDING POSE: ImTest20007
+[2016-07-13 10:33:44,731] link: Linking: ImTest20007
+[2016-07-13 10:33:44,732] main: Rendering [ImTest20007] started
+[2016-07-13 10:33:45,955] main: Rendered Finished
+[2016-07-13 10:33:45,956] add: ADDING POSE: ImTest20008
+[2016-07-13 10:33:45,956] link: Linking: ImTest20008
+[2016-07-13 10:33:45,956] main: Rendering [ImTest20008] started
+[2016-07-13 10:33:47,034] main: Rendered Finished
+[2016-07-13 10:33:47,035] add: ADDING POSE: ImTest20009
+[2016-07-13 10:33:47,036] link: Linking: ImTest20009
+[2016-07-13 10:33:47,036] main: Rendering [ImTest20009] started
+[2016-07-13 10:33:48,112] main: Rendered Finished
+[2016-07-13 10:33:48,112] add: ADDING POSE: ImTest20010
+[2016-07-13 10:33:48,113] link: Linking: ImTest20010
+[2016-07-13 10:33:48,113] main: Rendering [ImTest20010] started
+[2016-07-13 10:33:49,208] main: Rendered Finished
+[2016-07-13 10:39:43,258] main: logger opened
+[2016-07-13 10:39:43,258] main: 3.4.2 (default, Dec  7 2014, 18:21:18) [MSC v.1800 64 bit (AMD64)]
+[2016-07-13 10:39:43,258] wipe: Clearing all existing blender objects
+[2016-07-13 10:39:43,259] build: Building testRange
+[2016-07-13 10:39:43,262] build: Added trichecker4 to scene
+[2016-07-13 10:39:43,262] build: trichecker4 isControl = 0
+[2016-07-13 10:39:43,262] build: trichecker4 being used as marker
+[2016-07-13 10:39:43,262] build: MARKER
+[2016-07-13 10:39:43,262] build: C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\trichecker.txt
+[2016-07-13 10:39:43,262] build: [-1.2217304763960306, 0.17453292519943295, 0.3490658503988659]
+[2016-07-13 10:39:43,262] build: [5.0, 15.0, 9.0]
+[2016-07-13 10:39:43,263] build: [2.0, 4.0, 6.0]
+[2016-07-13 10:39:43,263] RotatePoint: COSX = 0.3420201433256688
+[2016-07-13 10:39:43,264] apply: applying settings
+[2016-07-13 10:39:43,264] add: ADDING POSE: ImTest20001
+[2016-07-13 10:39:43,264] link: running as background
+[2016-07-13 10:39:43,264] main: Rendering [ImTest20001] started
+[2016-07-13 10:39:44,882] main: Rendered Finished
+[2016-07-13 10:39:44,883] add: ADDING POSE: ImTest20002
+[2016-07-13 10:39:44,883] link: running as background
+[2016-07-13 10:39:44,883] main: Rendering [ImTest20002] started
+[2016-07-13 10:39:46,381] main: Rendered Finished
+[2016-07-13 10:39:46,381] add: ADDING POSE: ImTest20003
+[2016-07-13 10:39:46,381] link: running as background
+[2016-07-13 10:39:46,382] main: Rendering [ImTest20003] started
+[2016-07-13 10:39:47,990] main: Rendered Finished
+[2016-07-13 10:39:47,991] add: ADDING POSE: ImTest20004
+[2016-07-13 10:39:47,991] link: running as background
+[2016-07-13 10:39:47,991] main: Rendering [ImTest20004] started
+[2016-07-13 10:39:49,631] main: Rendered Finished
+[2016-07-13 10:39:49,632] add: ADDING POSE: ImTest20005
+[2016-07-13 10:39:49,632] link: running as background
+[2016-07-13 10:39:49,632] main: Rendering [ImTest20005] started
+[2016-07-13 10:39:51,196] main: Rendered Finished
+[2016-07-13 10:39:51,197] add: ADDING POSE: ImTest20006
+[2016-07-13 10:39:51,197] link: running as background
+[2016-07-13 10:39:51,197] main: Rendering [ImTest20006] started
+[2016-07-13 10:39:52,758] main: Rendered Finished
+[2016-07-13 10:39:52,759] add: ADDING POSE: ImTest20007
+[2016-07-13 10:39:52,759] link: running as background
+[2016-07-13 10:39:52,759] main: Rendering [ImTest20007] started
+[2016-07-13 10:39:54,478] main: Rendered Finished
+[2016-07-13 10:39:54,478] add: ADDING POSE: ImTest20008
+[2016-07-13 10:39:54,479] link: running as background
+[2016-07-13 10:39:54,479] main: Rendering [ImTest20008] started
+[2016-07-13 10:39:56,007] main: Rendered Finished
+[2016-07-13 10:39:56,008] add: ADDING POSE: ImTest20009
+[2016-07-13 10:39:56,008] link: running as background
+[2016-07-13 10:39:56,008] main: Rendering [ImTest20009] started
+[2016-07-13 10:39:57,543] main: Rendered Finished
+[2016-07-13 10:39:57,543] add: ADDING POSE: ImTest20010
+[2016-07-13 10:39:57,543] link: running as background
+[2016-07-13 10:39:57,543] main: Rendering [ImTest20010] started
+[2016-07-13 10:39:59,062] main: Rendered Finished
+[2016-07-13 10:44:35,658] main: logger opened
+[2016-07-13 10:44:35,658] main: 3.4.2 (default, Dec  7 2014, 18:21:18) [MSC v.1800 64 bit (AMD64)]
+[2016-07-13 10:44:35,658] wipe: Clearing all existing blender objects
+[2016-07-13 10:44:35,659] build: Building testRange
+[2016-07-13 10:44:35,662] build: Added trichecker4 to scene
+[2016-07-13 10:44:35,662] build: trichecker4 isControl = 0
+[2016-07-13 10:44:35,662] build: trichecker4 being used as marker
+[2016-07-13 10:44:35,662] build: MARKER
+[2016-07-13 10:44:35,662] build: C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\trichecker.txt
+[2016-07-13 10:44:35,662] build: [-1.2217304763960306, 0.17453292519943295, 0.3490658503988659]
+[2016-07-13 10:44:35,662] build: [5.0, 15.0, 9.0]
+[2016-07-13 10:44:35,662] build: [2.0, 4.0, 6.0]
+[2016-07-13 10:44:35,663] RotatePoint: COSX = 0.3420201433256688
+[2016-07-13 10:44:35,663] RotatePoint: ROTATE PRE
+[2016-07-13 10:44:35,663] RotatePoint: [0.0, 0.0, 0.0]
+[2016-07-13 10:44:35,663] RotatePoint: ROTATE POST
+[2016-07-13 10:44:35,663] RotatePoint: [0.0, 0.0, 0.0]
+[2016-07-13 10:44:35,663] RotatePoint: ROTATE PRE
+[2016-07-13 10:44:35,663] RotatePoint: [0.0, 0.0, 6.0]
+[2016-07-13 10:44:35,663] RotatePoint: ROTATE POST
+[2016-07-13 10:44:35,663] RotatePoint: [0.0, 0.0, 6.0]
+[2016-07-13 10:44:35,663] RotatePoint: ROTATE PRE
+[2016-07-13 10:44:35,663] RotatePoint: [0.0, 4.0, 0.0]
+[2016-07-13 10:44:35,663] RotatePoint: ROTATE POST
+[2016-07-13 10:44:35,663] RotatePoint: [0.0, 4.0, 0.0]
+[2016-07-13 10:44:35,664] RotatePoint: ROTATE PRE
+[2016-07-13 10:44:35,664] RotatePoint: [0.0, 4.0, 6.0]
+[2016-07-13 10:44:35,664] RotatePoint: ROTATE POST
+[2016-07-13 10:44:35,664] RotatePoint: [0.0, 4.0, 6.0]
+[2016-07-13 10:44:35,664] RotatePoint: ROTATE PRE
+[2016-07-13 10:44:35,664] RotatePoint: [2.0, 0.0, 0.0]
+[2016-07-13 10:44:35,664] RotatePoint: ROTATE POST
+[2016-07-13 10:44:35,664] RotatePoint: [2.0, 0.0, 0.0]
+[2016-07-13 10:44:35,664] RotatePoint: ROTATE PRE
+[2016-07-13 10:44:35,664] RotatePoint: [2.0, 4.0, 0.0]
+[2016-07-13 10:44:35,664] RotatePoint: ROTATE POST
+[2016-07-13 10:44:35,664] RotatePoint: [2.0, 4.0, 0.0]
+[2016-07-13 10:44:35,664] RotatePoint: ROTATE PRE
+[2016-07-13 10:44:35,664] RotatePoint: [2.0, 0.0, 6.0]
+[2016-07-13 10:44:35,664] RotatePoint: ROTATE POST
+[2016-07-13 10:44:35,664] RotatePoint: [2.0, 0.0, 6.0]
+[2016-07-13 10:44:35,667] apply: applying settings
+[2016-07-13 10:44:35,668] add: ADDING POSE: ImTest20001
+[2016-07-13 10:44:35,668] link: running as background
+[2016-07-13 10:44:35,668] main: Rendering [ImTest20001] started
+[2016-07-13 10:44:37,256] main: Rendered Finished
+[2016-07-13 10:44:37,257] add: ADDING POSE: ImTest20002
+[2016-07-13 10:44:37,257] link: running as background
+[2016-07-13 10:44:37,257] main: Rendering [ImTest20002] started
+[2016-07-13 10:44:38,760] main: Rendered Finished
+[2016-07-13 10:44:38,760] add: ADDING POSE: ImTest20003
+[2016-07-13 10:44:38,760] link: running as background
+[2016-07-13 10:44:38,760] main: Rendering [ImTest20003] started
+[2016-07-13 10:44:40,304] main: Rendered Finished
+[2016-07-13 10:44:40,305] add: ADDING POSE: ImTest20004
+[2016-07-13 10:44:40,305] link: running as background
+[2016-07-13 10:44:40,305] main: Rendering [ImTest20004] started
+[2016-07-13 10:44:41,783] main: Rendered Finished
+[2016-07-13 10:44:41,784] add: ADDING POSE: ImTest20005
+[2016-07-13 10:44:41,784] link: running as background
+[2016-07-13 10:44:41,784] main: Rendering [ImTest20005] started
+[2016-07-13 10:44:43,299] main: Rendered Finished
+[2016-07-13 10:44:43,300] add: ADDING POSE: ImTest20006
+[2016-07-13 10:44:43,300] link: running as background
+[2016-07-13 10:44:43,300] main: Rendering [ImTest20006] started
+[2016-07-13 10:44:44,778] main: Rendered Finished
+[2016-07-13 10:44:44,779] add: ADDING POSE: ImTest20007
+[2016-07-13 10:44:44,779] link: running as background
+[2016-07-13 10:44:44,779] main: Rendering [ImTest20007] started
+[2016-07-13 10:44:46,390] main: Rendered Finished
+[2016-07-13 10:44:46,391] add: ADDING POSE: ImTest20008
+[2016-07-13 10:44:46,391] link: running as background
+[2016-07-13 10:44:46,391] main: Rendering [ImTest20008] started
+[2016-07-13 10:44:47,862] main: Rendered Finished
+[2016-07-13 10:44:47,862] add: ADDING POSE: ImTest20009
+[2016-07-13 10:44:47,862] link: running as background
+[2016-07-13 10:44:47,862] main: Rendering [ImTest20009] started
+[2016-07-13 10:44:49,368] main: Rendered Finished
+[2016-07-13 10:44:49,368] add: ADDING POSE: ImTest20010
+[2016-07-13 10:44:49,368] link: running as background
+[2016-07-13 10:44:49,368] main: Rendering [ImTest20010] started
+[2016-07-13 10:44:50,871] main: Rendered Finished
+[2016-07-13 10:47:09,799] main: logger opened
+[2016-07-13 10:47:09,799] main: 3.4.2 (default, Dec  7 2014, 18:21:18) [MSC v.1800 64 bit (AMD64)]
+[2016-07-13 10:47:09,799] wipe: Clearing all existing blender objects
+[2016-07-13 10:47:09,800] build: Building testRange
+[2016-07-13 10:47:09,803] build: Added trichecker4 to scene
+[2016-07-13 10:47:09,803] build: trichecker4 isControl = 0
+[2016-07-13 10:47:09,804] build: trichecker4 being used as marker
+[2016-07-13 10:47:09,804] build: MARKER
+[2016-07-13 10:47:09,804] build: C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\trichecker.txt
+[2016-07-13 10:47:09,804] build: [-1.2217304763960306, 0.17453292519943295, 0.3490658503988659]
+[2016-07-13 10:47:09,804] build: [5.0, 15.0, 9.0]
+[2016-07-13 10:47:09,804] build: [2.0, 4.0, 6.0]
+[2016-07-13 10:47:09,804] RotatePoint: COSX = 0.3420201433256688
+[2016-07-13 10:47:09,804] RotatePoint: ROTATE PRE
+[2016-07-13 10:47:09,804] RotatePoint: [0.0, 0.0, 0.0]
+[2016-07-13 10:47:09,804] RotatePoint: ROTATE POST
+[2016-07-13 10:47:09,805] RotatePoint: [0.0, 0.0, 0.0]
+[2016-07-13 10:47:09,805] RotatePoint: ROTATE PRE
+[2016-07-13 10:47:09,805] RotatePoint: [0.0, 0.0, 6.0]
+[2016-07-13 10:47:09,805] RotatePoint: ROTATE POST
+[2016-07-13 10:47:09,805] RotatePoint: [3.8274294937380859, -0.029296164381150902, 2.0209445330007916]
+[2016-07-13 10:47:09,805] RotatePoint: ROTATE PRE
+[2016-07-13 10:47:09,805] RotatePoint: [0.0, 4.0, 0.0]
+[2016-07-13 10:47:09,805] RotatePoint: ROTATE POST
+[2016-07-13 10:47:09,805] RotatePoint: [-0.019530776254100601, 2.5516196624920573, 1.3472963553338611]
+[2016-07-13 10:47:09,805] RotatePoint: ROTATE PRE
+[2016-07-13 10:47:09,805] RotatePoint: [0.0, 4.0, 6.0]
+[2016-07-13 10:47:09,805] RotatePoint: ROTATE POST
+[2016-07-13 10:47:09,805] RotatePoint: [3.8078987174839853, 2.5223234981109064, 3.3682408883346526]
+[2016-07-13 10:47:09,805] RotatePoint: ROTATE PRE
+[2016-07-13 10:47:09,806] RotatePoint: [2.0, 0.0, 0.0]
+[2016-07-13 10:47:09,806] RotatePoint: ROTATE POST
+[2016-07-13 10:47:09,806] RotatePoint: [1.8508331567966467, 1.8508331567966467, -1.969615506024416]
+[2016-07-13 10:47:09,806] RotatePoint: ROTATE PRE
+[2016-07-13 10:47:09,806] RotatePoint: [2.0, 4.0, 0.0]
+[2016-07-13 10:47:09,806] RotatePoint: ROTATE POST
+[2016-07-13 10:47:09,806] RotatePoint: [1.8313023805425461, 4.4024528192887038, -0.62231915069055499]
+[2016-07-13 10:47:09,806] RotatePoint: ROTATE PRE
+[2016-07-13 10:47:09,806] RotatePoint: [2.0, 0.0, 6.0]
+[2016-07-13 10:47:09,806] RotatePoint: ROTATE POST
+[2016-07-13 10:47:09,806] RotatePoint: [5.6782626505347329, 1.8215369924154958, 0.051329026976375536]
+[2016-07-13 10:47:09,809] apply: applying settings
+[2016-07-13 10:47:09,810] add: ADDING POSE: ImTest20001
+[2016-07-13 10:47:09,810] link: running as background
+[2016-07-13 10:47:09,810] main: Rendering [ImTest20001] started
+[2016-07-13 10:47:11,364] main: Rendered Finished
+[2016-07-13 10:47:11,364] add: ADDING POSE: ImTest20002
+[2016-07-13 10:47:11,364] link: running as background
+[2016-07-13 10:47:11,365] main: Rendering [ImTest20002] started
+[2016-07-13 10:47:12,902] main: Rendered Finished
+[2016-07-13 10:47:12,902] add: ADDING POSE: ImTest20003
+[2016-07-13 10:47:12,902] link: running as background
+[2016-07-13 10:47:12,903] main: Rendering [ImTest20003] started
+[2016-07-13 10:47:14,471] main: Rendered Finished
+[2016-07-13 10:47:14,471] add: ADDING POSE: ImTest20004
+[2016-07-13 10:47:14,471] link: running as background
+[2016-07-13 10:47:14,471] main: Rendering [ImTest20004] started
+[2016-07-13 10:47:16,005] main: Rendered Finished
+[2016-07-13 10:47:16,005] add: ADDING POSE: ImTest20005
+[2016-07-13 10:47:16,006] link: running as background
+[2016-07-13 10:47:16,006] main: Rendering [ImTest20005] started
+[2016-07-13 10:47:17,500] main: Rendered Finished
+[2016-07-13 10:47:17,501] add: ADDING POSE: ImTest20006
+[2016-07-13 10:47:17,501] link: running as background
+[2016-07-13 10:47:17,501] main: Rendering [ImTest20006] started
+[2016-07-13 10:47:19,021] main: Rendered Finished
+[2016-07-13 10:47:19,022] add: ADDING POSE: ImTest20007
+[2016-07-13 10:47:19,022] link: running as background
+[2016-07-13 10:47:19,022] main: Rendering [ImTest20007] started
+[2016-07-13 10:47:20,634] main: Rendered Finished
+[2016-07-13 10:47:20,635] add: ADDING POSE: ImTest20008
+[2016-07-13 10:47:20,635] link: running as background
+[2016-07-13 10:47:20,635] main: Rendering [ImTest20008] started
+[2016-07-13 10:47:22,128] main: Rendered Finished
+[2016-07-13 10:47:22,129] add: ADDING POSE: ImTest20009
+[2016-07-13 10:47:22,129] link: running as background
+[2016-07-13 10:47:22,129] main: Rendering [ImTest20009] started
+[2016-07-13 10:47:23,634] main: Rendered Finished
+[2016-07-13 10:47:23,635] add: ADDING POSE: ImTest20010
+[2016-07-13 10:47:23,635] link: running as background
+[2016-07-13 10:47:23,635] main: Rendering [ImTest20010] started
+[2016-07-13 10:47:25,235] main: Rendered Finished
+[2016-07-13 10:48:20,049] main: logger opened
+[2016-07-13 10:48:20,049] main: 3.4.2 (default, Dec  7 2014, 18:21:18) [MSC v.1800 64 bit (AMD64)]
+[2016-07-13 10:48:20,049] wipe: Clearing all existing blender objects
+[2016-07-13 10:48:20,051] build: Building testRange
+[2016-07-13 10:48:20,053] build: Added trichecker4 to scene
+[2016-07-13 10:48:20,054] build: trichecker4 isControl = 0
+[2016-07-13 10:48:20,054] build: trichecker4 being used as marker
+[2016-07-13 10:48:20,054] build: MARKER
+[2016-07-13 10:48:20,054] build: C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\trichecker.txt
+[2016-07-13 10:48:20,054] build: [-1.2217304763960306, 0.17453292519943295, 0.3490658503988659]
+[2016-07-13 10:48:20,054] build: [5.0, 15.0, 9.0]
+[2016-07-13 10:48:20,054] build: [2.0, 4.0, 6.0]
+[2016-07-13 10:48:20,054] RotatePoint: COSX = 0.3420201433256688
+[2016-07-13 10:48:20,054] RotatePoint: ROTATE PRE
+[2016-07-13 10:48:20,055] RotatePoint: [0.0, 0.0, 0.0]
+[2016-07-13 10:48:20,055] RotatePoint: ROTATE POST
+[2016-07-13 10:48:20,055] RotatePoint: [0.0, 0.0, 0.0]
+[2016-07-13 10:48:20,055] RotatePoint: ROTATE PRE
+[2016-07-13 10:48:20,055] RotatePoint: [0.0, 0.0, 6.0]
+[2016-07-13 10:48:20,055] RotatePoint: ROTATE POST
+[2016-07-13 10:48:20,055] RotatePoint: [5.9088465180732479, -2.0209445330007916, 2.0209445330007916]
+[2016-07-13 10:48:20,055] RotatePoint: ROTATE PRE
+[2016-07-13 10:48:20,055] RotatePoint: [0.0, 4.0, 0.0]
+[2016-07-13 10:48:20,055] RotatePoint: ROTATE POST
+[2016-07-13 10:48:20,055] RotatePoint: [-3.7016663135932935, 0.019530776254100601, 2.5516196624920573]
+[2016-07-13 10:48:20,055] RotatePoint: ROTATE PRE
+[2016-07-13 10:48:20,055] RotatePoint: [0.0, 4.0, 6.0]
+[2016-07-13 10:48:20,055] RotatePoint: ROTATE POST
+[2016-07-13 10:48:20,055] RotatePoint: [2.2071802044799544, -2.001413756746691, 4.5725641954928484]
+[2016-07-13 10:48:20,056] RotatePoint: ROTATE PRE
+[2016-07-13 10:48:20,056] RotatePoint: [2.0, 0.0, 0.0]
+[2016-07-13 10:48:20,056] RotatePoint: ROTATE POST
+[2016-07-13 10:48:20,056] RotatePoint: [1.8508331567966467, 1.2758098312460286, 0.0097653881270503007]
+[2016-07-13 10:48:20,056] RotatePoint: ROTATE PRE
+[2016-07-13 10:48:20,056] RotatePoint: [2.0, 4.0, 0.0]
+[2016-07-13 10:48:20,056] RotatePoint: ROTATE POST
+[2016-07-13 10:48:20,056] RotatePoint: [-1.8508331567966467, 1.2953406075001292, 2.5613850506191076]
+[2016-07-13 10:48:20,056] RotatePoint: ROTATE PRE
+[2016-07-13 10:48:20,056] RotatePoint: [2.0, 0.0, 6.0]
+[2016-07-13 10:48:20,056] RotatePoint: ROTATE POST
+[2016-07-13 10:48:20,056] RotatePoint: [7.7596796748698944, -0.74513470175476293, 2.0307099211278419]
+[2016-07-13 10:48:20,059] apply: applying settings
+[2016-07-13 10:48:20,060] add: ADDING POSE: ImTest20001
+[2016-07-13 10:48:20,060] link: running as background
+[2016-07-13 10:48:20,060] main: Rendering [ImTest20001] started
+[2016-07-13 10:48:21,603] main: Rendered Finished
+[2016-07-13 10:48:21,603] add: ADDING POSE: ImTest20002
+[2016-07-13 10:48:21,604] link: running as background
+[2016-07-13 10:48:21,604] main: Rendering [ImTest20002] started
+[2016-07-13 10:48:23,120] main: Rendered Finished
+[2016-07-13 10:48:23,120] add: ADDING POSE: ImTest20003
+[2016-07-13 10:48:23,121] link: running as background
+[2016-07-13 10:48:23,121] main: Rendering [ImTest20003] started
+[2016-07-13 10:48:24,646] main: Rendered Finished
+[2016-07-13 10:48:24,646] add: ADDING POSE: ImTest20004
+[2016-07-13 10:48:24,646] link: running as background
+[2016-07-13 10:48:24,647] main: Rendering [ImTest20004] started
+[2016-07-13 10:48:26,167] main: Rendered Finished
+[2016-07-13 10:48:26,168] add: ADDING POSE: ImTest20005
+[2016-07-13 10:48:26,168] link: running as background
+[2016-07-13 10:48:26,168] main: Rendering [ImTest20005] started
+[2016-07-13 10:48:27,663] main: Rendered Finished
+[2016-07-13 10:48:27,663] add: ADDING POSE: ImTest20006
+[2016-07-13 10:48:27,663] link: running as background
+[2016-07-13 10:48:27,663] main: Rendering [ImTest20006] started
+[2016-07-13 10:48:29,239] main: Rendered Finished
+[2016-07-13 10:48:29,240] add: ADDING POSE: ImTest20007
+[2016-07-13 10:48:29,240] link: running as background
+[2016-07-13 10:48:29,240] main: Rendering [ImTest20007] started
+[2016-07-13 10:48:30,846] main: Rendered Finished
+[2016-07-13 10:48:30,846] add: ADDING POSE: ImTest20008
+[2016-07-13 10:48:30,846] link: running as background
+[2016-07-13 10:48:30,846] main: Rendering [ImTest20008] started
+[2016-07-13 10:48:32,351] main: Rendered Finished
+[2016-07-13 10:48:32,351] add: ADDING POSE: ImTest20009
+[2016-07-13 10:48:32,351] link: running as background
+[2016-07-13 10:48:32,351] main: Rendering [ImTest20009] started
+[2016-07-13 10:48:33,869] main: Rendered Finished
+[2016-07-13 10:48:33,870] add: ADDING POSE: ImTest20010
+[2016-07-13 10:48:33,870] link: running as background
+[2016-07-13 10:48:33,870] main: Rendering [ImTest20010] started
+[2016-07-13 10:48:35,410] main: Rendered Finished
+[2016-07-13 14:47:41,238] main: logger opened
+[2016-07-13 14:47:41,238] main: 3.4.2 (default, Dec  7 2014, 18:21:18) [MSC v.1800 64 bit (AMD64)]
+[2016-07-13 14:47:41,238] wipe: Clearing all existing blender objects
+[2016-07-13 14:47:41,239] build: Building testRange
+[2016-07-13 14:47:41,242] build: Added trichecker4 to scene
+[2016-07-13 14:47:41,242] build: trichecker4 isControl = 0
+[2016-07-13 14:47:41,242] build: trichecker4 being used as marker
+[2016-07-13 14:47:41,243] build: MARKER
+[2016-07-13 14:47:41,243] build: C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\trichecker.txt
+[2016-07-13 14:47:41,243] build: [-1.2217304763960306, 0.17453292519943295, 0.3490658503988659]
+[2016-07-13 14:47:41,243] build: [5.0, 15.0, 9.0]
+[2016-07-13 14:47:41,243] build: [2.0, 4.0, 6.0]
+[2016-07-13 14:47:41,243] RotatePoint: COSX = 0.3420201433256688
+[2016-07-13 14:47:41,243] RotatePoint: ROTATE PRE
+[2016-07-13 14:47:41,243] RotatePoint: [0.0, 0.0, 0.0]
+[2016-07-13 14:47:41,243] RotatePoint: ROTATE POST
+[2016-07-13 14:47:41,243] RotatePoint: [0.0, 0.0, 0.0]
+[2016-07-13 14:47:41,244] RotatePoint: ROTATE PRE
+[2016-07-13 14:47:41,244] RotatePoint: [0.0, 0.0, 6.0]
+[2016-07-13 14:47:41,244] RotatePoint: ROTATE POST
+[2016-07-13 14:47:41,244] RotatePoint: [5.9088465180732479, -2.0209445330007916, 2.0209445330007916]
+[2016-07-13 14:47:41,244] RotatePoint: ROTATE PRE
+[2016-07-13 14:47:41,244] RotatePoint: [0.0, 4.0, 0.0]
+[2016-07-13 14:47:41,244] RotatePoint: ROTATE POST
+[2016-07-13 14:47:41,244] RotatePoint: [-3.7016663135932935, 0.019530776254100601, 2.5516196624920573]
+[2016-07-13 14:47:41,244] RotatePoint: ROTATE PRE
+[2016-07-13 14:47:41,244] RotatePoint: [0.0, 4.0, 6.0]
+[2016-07-13 14:47:41,244] RotatePoint: ROTATE POST
+[2016-07-13 14:47:41,244] RotatePoint: [2.2071802044799544, -2.001413756746691, 4.5725641954928484]
+[2016-07-13 14:47:41,244] RotatePoint: ROTATE PRE
+[2016-07-13 14:47:41,244] RotatePoint: [2.0, 0.0, 0.0]
+[2016-07-13 14:47:41,245] RotatePoint: ROTATE POST
+[2016-07-13 14:47:41,245] RotatePoint: [1.8508331567966467, 1.2758098312460286, 0.0097653881270503007]
+[2016-07-13 14:47:41,245] RotatePoint: ROTATE PRE
+[2016-07-13 14:47:41,245] RotatePoint: [2.0, 4.0, 0.0]
+[2016-07-13 14:47:41,245] RotatePoint: ROTATE POST
+[2016-07-13 14:47:41,245] RotatePoint: [-1.8508331567966467, 1.2953406075001292, 2.5613850506191076]
+[2016-07-13 14:47:41,245] RotatePoint: ROTATE PRE
+[2016-07-13 14:47:41,245] RotatePoint: [2.0, 0.0, 6.0]
+[2016-07-13 14:47:41,245] RotatePoint: ROTATE POST
+[2016-07-13 14:47:41,245] RotatePoint: [7.7596796748698944, -0.74513470175476293, 2.0307099211278419]
+[2016-07-13 14:47:41,246] apply: applying settings
+[2016-07-13 14:52:03,368] main: logger opened
+[2016-07-13 14:52:03,368] main: 3.4.2 (default, Dec  7 2014, 18:21:18) [MSC v.1800 64 bit (AMD64)]
+[2016-07-13 14:52:03,368] wipe: Clearing all existing blender objects
+[2016-07-13 14:52:03,369] build: Building testRange
+[2016-07-13 14:52:03,372] build: Added trichecker4 to scene
+[2016-07-13 14:52:03,372] build: trichecker4 isControl = 0
+[2016-07-13 14:52:03,372] build: trichecker4 being used as marker
+[2016-07-13 14:52:03,372] build: MARKER
+[2016-07-13 14:52:03,372] build: C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\trichecker.txt
+[2016-07-13 14:52:03,372] build: [-1.2217304763960306, 0.17453292519943295, 0.3490658503988659]
+[2016-07-13 14:52:03,372] build: [5.0, 15.0, 9.0]
+[2016-07-13 14:52:03,372] build: [2.0, 4.0, 6.0]
+[2016-07-13 14:52:03,373] RotatePoint: COSX = 0.3420201433256688
+[2016-07-13 14:52:03,373] RotatePoint: ROTATE PRE
+[2016-07-13 14:52:03,373] RotatePoint: [0.0, 0.0, 0.0]
+[2016-07-13 14:52:03,373] RotatePoint: ROTATE POST
+[2016-07-13 14:52:03,373] RotatePoint: [0.0, 0.0, 0.0]
+[2016-07-13 14:52:03,373] RotatePoint: ROTATE PRE
+[2016-07-13 14:52:03,373] RotatePoint: [0.0, 0.0, 6.0]
+[2016-07-13 14:52:03,373] RotatePoint: ROTATE POST
+[2016-07-13 14:52:03,373] RotatePoint: [5.9088465180732479, -2.0209445330007916, 2.0209445330007916]
+[2016-07-13 14:52:03,373] RotatePoint: ROTATE PRE
+[2016-07-13 14:52:03,373] RotatePoint: [0.0, 4.0, 0.0]
+[2016-07-13 14:52:03,373] RotatePoint: ROTATE POST
+[2016-07-13 14:52:03,373] RotatePoint: [-3.7016663135932935, 0.019530776254100601, 2.5516196624920573]
+[2016-07-13 14:52:03,373] RotatePoint: ROTATE PRE
+[2016-07-13 14:52:03,374] RotatePoint: [0.0, 4.0, 6.0]
+[2016-07-13 14:52:03,374] RotatePoint: ROTATE POST
+[2016-07-13 14:52:03,374] RotatePoint: [2.2071802044799544, -2.001413756746691, 4.5725641954928484]
+[2016-07-13 14:52:03,374] RotatePoint: ROTATE PRE
+[2016-07-13 14:52:03,374] RotatePoint: [2.0, 0.0, 0.0]
+[2016-07-13 14:52:03,374] RotatePoint: ROTATE POST
+[2016-07-13 14:52:03,374] RotatePoint: [1.8508331567966467, 1.2758098312460286, 0.0097653881270503007]
+[2016-07-13 14:52:03,374] RotatePoint: ROTATE PRE
+[2016-07-13 14:52:03,374] RotatePoint: [2.0, 4.0, 0.0]
+[2016-07-13 14:52:03,374] RotatePoint: ROTATE POST
+[2016-07-13 14:52:03,374] RotatePoint: [-1.8508331567966467, 1.2953406075001292, 2.5613850506191076]
+[2016-07-13 14:52:03,374] RotatePoint: ROTATE PRE
+[2016-07-13 14:52:03,374] RotatePoint: [2.0, 0.0, 6.0]
+[2016-07-13 14:52:03,374] RotatePoint: ROTATE POST
+[2016-07-13 14:52:03,374] RotatePoint: [7.7596796748698944, -0.74513470175476293, 2.0307099211278419]
+[2016-07-13 14:52:03,375] apply: applying settings
+[2016-07-13 14:52:03,376] add: ADDING POSE: ImTest20001
+[2016-07-13 14:52:03,376] link: running as background
+[2016-07-13 14:52:03,376] main: Rendering [ImTest20001] started
+[2016-07-13 14:52:04,942] main: Rendered Finished
+[2016-07-13 14:52:04,942] add: ADDING POSE: ImTest20002
+[2016-07-13 14:52:04,942] link: running as background
+[2016-07-13 14:52:04,942] main: Rendering [ImTest20002] started
+[2016-07-13 14:52:06,450] main: Rendered Finished
+[2016-07-13 14:52:06,451] add: ADDING POSE: ImTest20003
+[2016-07-13 14:52:06,451] link: running as background
+[2016-07-13 14:52:06,451] main: Rendering [ImTest20003] started
+[2016-07-13 14:52:07,970] main: Rendered Finished
+[2016-07-13 14:52:07,970] add: ADDING POSE: ImTest20004
+[2016-07-13 14:52:07,970] link: running as background
+[2016-07-13 14:52:07,970] main: Rendering [ImTest20004] started
+[2016-07-13 14:52:09,488] main: Rendered Finished
+[2016-07-13 14:52:09,489] add: ADDING POSE: ImTest20005
+[2016-07-13 14:52:09,489] link: running as background
+[2016-07-13 14:52:09,489] main: Rendering [ImTest20005] started
+[2016-07-13 14:52:10,977] main: Rendered Finished
+[2016-07-13 14:52:10,978] add: ADDING POSE: ImTest20006
+[2016-07-13 14:52:10,978] link: running as background
+[2016-07-13 14:52:10,978] main: Rendering [ImTest20006] started
+[2016-07-13 14:52:12,506] main: Rendered Finished
+[2016-07-13 14:52:12,506] add: ADDING POSE: ImTest20007
+[2016-07-13 14:52:12,506] link: running as background
+[2016-07-13 14:52:12,506] main: Rendering [ImTest20007] started
+[2016-07-13 14:52:14,005] main: Rendered Finished
+[2016-07-13 14:52:14,006] add: ADDING POSE: ImTest20008
+[2016-07-13 14:52:14,006] link: running as background
+[2016-07-13 14:52:14,006] main: Rendering [ImTest20008] started
+[2016-07-13 14:52:15,531] main: Rendered Finished
+[2016-07-13 14:52:15,531] add: ADDING POSE: ImTest20009
+[2016-07-13 14:52:15,531] link: running as background
+[2016-07-13 14:52:15,531] main: Rendering [ImTest20009] started
+[2016-07-13 14:52:17,033] main: Rendered Finished
+[2016-07-13 14:52:17,033] add: ADDING POSE: ImTest20010
+[2016-07-13 14:52:17,034] link: running as background
+[2016-07-13 14:52:17,034] main: Rendering [ImTest20010] started
+[2016-07-13 14:52:18,613] main: Rendered Finished
+[2016-07-13 15:07:02,803] main: logger opened
+[2016-07-13 15:07:02,803] main: 3.4.2 (default, Dec  7 2014, 18:21:18) [MSC v.1800 64 bit (AMD64)]
+[2016-07-13 15:07:02,803] wipe: Clearing all existing blender objects
+[2016-07-13 15:07:02,804] build: Building testRange
+[2016-07-13 15:07:02,807] build: Added trichecker4 to scene
+[2016-07-13 15:07:02,807] build: trichecker4 isControl = 0
+[2016-07-13 15:07:02,807] build: trichecker4 being used as marker
+[2016-07-13 15:07:02,807] build: MARKER
+[2016-07-13 15:07:02,807] build: C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\trichecker.txt
+[2016-07-13 15:07:02,807] build: [-1.2217304763960306, 0.17453292519943295, 0.3490658503988659]
+[2016-07-13 15:07:02,808] build: [5.0, 15.0, 9.0]
+[2016-07-13 15:07:02,808] build: [2.0, 4.0, 6.0]
+[2016-07-13 15:07:02,808] RotatePoint: COSX = 0.3420201433256688
+[2016-07-13 15:07:02,808] RotatePoint: ROTATE PRE
+[2016-07-13 15:07:02,808] RotatePoint: [0.0, 0.0, 0.0]
+[2016-07-13 15:07:02,808] RotatePoint: ROTATE POST
+[2016-07-13 15:07:02,808] RotatePoint: [0.0, 0.0, 0.0]
+[2016-07-13 15:07:02,808] RotatePoint: ROTATE PRE
+[2016-07-13 15:07:02,808] RotatePoint: [0.0, 0.0, 6.0]
+[2016-07-13 15:07:02,808] RotatePoint: ROTATE POST
+[2016-07-13 15:07:02,808] RotatePoint: [3.8274294937380859, -0.029296164381150902, 2.0209445330007916]
+[2016-07-13 15:07:02,808] RotatePoint: ROTATE PRE
+[2016-07-13 15:07:02,808] RotatePoint: [0.0, 4.0, 0.0]
+[2016-07-13 15:07:02,808] RotatePoint: ROTATE POST
+[2016-07-13 15:07:02,809] RotatePoint: [-0.019530776254100601, 2.5516196624920573, 1.3472963553338611]
+[2016-07-13 15:07:02,809] RotatePoint: ROTATE PRE
+[2016-07-13 15:07:02,809] RotatePoint: [0.0, 4.0, 6.0]
+[2016-07-13 15:07:02,809] RotatePoint: ROTATE POST
+[2016-07-13 15:07:02,809] RotatePoint: [3.8078987174839853, 2.5223234981109064, 3.3682408883346526]
+[2016-07-13 15:07:02,809] RotatePoint: ROTATE PRE
+[2016-07-13 15:07:02,809] RotatePoint: [2.0, 0.0, 0.0]
+[2016-07-13 15:07:02,809] RotatePoint: ROTATE POST
+[2016-07-13 15:07:02,809] RotatePoint: [1.8508331567966467, 1.8508331567966467, -1.969615506024416]
+[2016-07-13 15:07:02,809] RotatePoint: ROTATE PRE
+[2016-07-13 15:07:02,809] RotatePoint: [2.0, 4.0, 0.0]
+[2016-07-13 15:07:02,809] RotatePoint: ROTATE POST
+[2016-07-13 15:07:02,809] RotatePoint: [1.8313023805425461, 4.4024528192887038, -0.62231915069055499]
+[2016-07-13 15:07:02,810] RotatePoint: ROTATE PRE
+[2016-07-13 15:07:02,810] RotatePoint: [2.0, 0.0, 6.0]
+[2016-07-13 15:07:02,810] RotatePoint: ROTATE POST
+[2016-07-13 15:07:02,810] RotatePoint: [5.6782626505347329, 1.8215369924154958, 0.051329026976375536]
+[2016-07-13 15:07:02,812] apply: applying settings
+[2016-07-13 15:07:02,813] add: ADDING POSE: ImTest20001
+[2016-07-13 15:07:02,813] link: running as background
+[2016-07-13 15:07:02,813] main: Rendering [ImTest20001] started
+[2016-07-13 15:07:04,350] main: Rendered Finished
+[2016-07-13 15:07:04,351] add: ADDING POSE: ImTest20002
+[2016-07-13 15:07:04,351] link: running as background
+[2016-07-13 15:07:04,351] main: Rendering [ImTest20002] started
+[2016-07-13 15:07:05,844] main: Rendered Finished
+[2016-07-13 15:07:05,844] add: ADDING POSE: ImTest20003
+[2016-07-13 15:07:05,844] link: running as background
+[2016-07-13 15:07:05,844] main: Rendering [ImTest20003] started
+[2016-07-13 15:07:07,367] main: Rendered Finished
+[2016-07-13 15:07:07,367] add: ADDING POSE: ImTest20004
+[2016-07-13 15:07:07,367] link: running as background
+[2016-07-13 15:07:07,367] main: Rendering [ImTest20004] started
+[2016-07-13 15:07:08,882] main: Rendered Finished
+[2016-07-13 15:07:08,882] add: ADDING POSE: ImTest20005
+[2016-07-13 15:07:08,882] link: running as background
+[2016-07-13 15:07:08,882] main: Rendering [ImTest20005] started
+[2016-07-13 15:07:10,400] main: Rendered Finished
+[2016-07-13 15:07:10,401] add: ADDING POSE: ImTest20006
+[2016-07-13 15:07:10,401] link: running as background
+[2016-07-13 15:07:10,401] main: Rendering [ImTest20006] started
+[2016-07-13 15:07:11,894] main: Rendered Finished
+[2016-07-13 15:07:11,895] add: ADDING POSE: ImTest20007
+[2016-07-13 15:07:11,895] link: running as background
+[2016-07-13 15:07:11,895] main: Rendering [ImTest20007] started
+[2016-07-13 15:07:13,405] main: Rendered Finished
+[2016-07-13 15:07:13,406] add: ADDING POSE: ImTest20008
+[2016-07-13 15:07:13,406] link: running as background
+[2016-07-13 15:07:13,406] main: Rendering [ImTest20008] started
+[2016-07-13 15:07:14,932] main: Rendered Finished
+[2016-07-13 15:07:14,933] add: ADDING POSE: ImTest20009
+[2016-07-13 15:07:14,933] link: running as background
+[2016-07-13 15:07:14,933] main: Rendering [ImTest20009] started
+[2016-07-13 15:07:16,436] main: Rendered Finished
+[2016-07-13 15:07:16,436] add: ADDING POSE: ImTest20010
+[2016-07-13 15:07:16,436] link: running as background
+[2016-07-13 15:07:16,436] main: Rendering [ImTest20010] started
+[2016-07-13 15:07:17,939] main: Rendered Finished
+[2016-07-13 15:14:01,835] main: logger opened
+[2016-07-13 15:14:01,835] main: 3.4.2 (default, Dec  7 2014, 18:21:18) [MSC v.1800 64 bit (AMD64)]
+[2016-07-13 15:14:01,835] wipe: Clearing all existing blender objects
+[2016-07-13 15:14:01,836] build: Building testRange
+[2016-07-13 15:14:01,839] build: Added trichecker4 to scene
+[2016-07-13 15:14:01,839] build: trichecker4 isControl = 0
+[2016-07-13 15:14:01,839] build: trichecker4 being used as marker
+[2016-07-13 15:14:01,840] build: MARKER
+[2016-07-13 15:14:01,840] build: C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\trichecker.txt
+[2016-07-13 15:14:01,840] build: [-1.2217304763960306, 0.17453292519943295, 0.3490658503988659]
+[2016-07-13 15:14:01,840] build: [5.0, 15.0, 9.0]
+[2016-07-13 15:14:01,840] build: [2.0, 4.0, 6.0]
+[2016-07-13 15:14:01,840] RotatePoint: COSX = 0.3420201433256688
+[2016-07-13 15:14:01,840] RotatePoint: ROTATE PRE
+[2016-07-13 15:14:01,840] RotatePoint: [0.0, 0.0, 0.0]
+[2016-07-13 15:14:01,840] RotatePoint: ROTATE POST
+[2016-07-13 15:14:01,840] RotatePoint: [0.0, 0.0, 0.0]
+[2016-07-13 15:14:01,840] RotatePoint: ROTATE PRE
+[2016-07-13 15:14:01,841] RotatePoint: [0.0, 0.0, 6.0]
+[2016-07-13 15:14:01,841] RotatePoint: ROTATE POST
+[2016-07-13 15:14:01,841] RotatePoint: [3.8274294937380859, -0.029296164381150902, 2.0209445330007916]
+[2016-07-13 15:14:01,841] RotatePoint: ROTATE PRE
+[2016-07-13 15:14:01,841] RotatePoint: [0.0, 4.0, 0.0]
+[2016-07-13 15:14:01,841] RotatePoint: ROTATE POST
+[2016-07-13 15:14:01,841] RotatePoint: [-0.019530776254100601, 2.5516196624920573, 1.3472963553338611]
+[2016-07-13 15:14:01,841] RotatePoint: ROTATE PRE
+[2016-07-13 15:14:01,841] RotatePoint: [0.0, 4.0, 6.0]
+[2016-07-13 15:14:01,841] RotatePoint: ROTATE POST
+[2016-07-13 15:14:01,841] RotatePoint: [3.8078987174839853, 2.5223234981109064, 3.3682408883346526]
+[2016-07-13 15:14:01,841] RotatePoint: ROTATE PRE
+[2016-07-13 15:14:01,841] RotatePoint: [2.0, 0.0, 0.0]
+[2016-07-13 15:14:01,841] RotatePoint: ROTATE POST
+[2016-07-13 15:14:01,841] RotatePoint: [1.8508331567966467, 1.8508331567966467, -1.969615506024416]
+[2016-07-13 15:14:01,841] RotatePoint: ROTATE PRE
+[2016-07-13 15:14:01,842] RotatePoint: [2.0, 4.0, 0.0]
+[2016-07-13 15:14:01,842] RotatePoint: ROTATE POST
+[2016-07-13 15:14:01,842] RotatePoint: [1.8313023805425461, 4.4024528192887038, -0.62231915069055499]
+[2016-07-13 15:14:01,842] RotatePoint: ROTATE PRE
+[2016-07-13 15:14:01,842] RotatePoint: [2.0, 0.0, 6.0]
+[2016-07-13 15:14:01,842] RotatePoint: ROTATE POST
+[2016-07-13 15:14:01,842] RotatePoint: [5.6782626505347329, 1.8215369924154958, 0.051329026976375536]
+[2016-07-13 15:14:01,843] apply: applying settings
+[2016-07-13 15:14:01,844] add: ADDING POSE: ImTest20001
+[2016-07-13 15:14:01,844] link: Linking: ImTest20001
+[2016-07-13 15:14:01,844] main: Rendering [ImTest20001] started
+[2016-07-13 15:14:02,900] main: Rendered Finished
+[2016-07-13 15:14:02,901] add: ADDING POSE: ImTest20002
+[2016-07-13 15:14:02,901] link: Linking: ImTest20002
+[2016-07-13 15:14:02,901] main: Rendering [ImTest20002] started
+[2016-07-13 15:14:03,989] main: Rendered Finished
+[2016-07-13 15:14:03,990] add: ADDING POSE: ImTest20003
+[2016-07-13 15:14:03,990] link: Linking: ImTest20003
+[2016-07-13 15:14:03,990] main: Rendering [ImTest20003] started
+[2016-07-13 15:14:05,062] main: Rendered Finished
+[2016-07-13 15:14:05,063] add: ADDING POSE: ImTest20004
+[2016-07-13 15:14:05,063] link: Linking: ImTest20004
+[2016-07-13 15:14:05,063] main: Rendering [ImTest20004] started
+[2016-07-13 15:14:06,150] main: Rendered Finished
+[2016-07-13 15:14:06,151] add: ADDING POSE: ImTest20005
+[2016-07-13 15:14:06,151] link: Linking: ImTest20005
+[2016-07-13 15:14:06,151] main: Rendering [ImTest20005] started
+[2016-07-13 15:14:07,252] main: Rendered Finished
+[2016-07-13 15:14:07,252] add: ADDING POSE: ImTest20006
+[2016-07-13 15:14:07,253] link: Linking: ImTest20006
+[2016-07-13 15:14:07,253] main: Rendering [ImTest20006] started
+[2016-07-13 15:14:08,340] main: Rendered Finished
+[2016-07-13 15:14:08,341] add: ADDING POSE: ImTest20007
+[2016-07-13 15:14:08,341] link: Linking: ImTest20007
+[2016-07-13 15:14:08,341] main: Rendering [ImTest20007] started
+[2016-07-13 15:14:09,428] main: Rendered Finished
+[2016-07-13 15:14:09,429] add: ADDING POSE: ImTest20008
+[2016-07-13 15:14:09,429] link: Linking: ImTest20008
+[2016-07-13 15:14:09,430] main: Rendering [ImTest20008] started
+[2016-07-13 15:14:10,507] main: Rendered Finished
+[2016-07-13 15:14:10,508] add: ADDING POSE: ImTest20009
+[2016-07-13 15:14:10,509] link: Linking: ImTest20009
+[2016-07-13 15:14:10,509] main: Rendering [ImTest20009] started
+[2016-07-13 15:14:11,602] main: Rendered Finished
+[2016-07-13 15:14:11,603] add: ADDING POSE: ImTest20010
+[2016-07-13 15:14:11,603] link: Linking: ImTest20010
+[2016-07-13 15:14:11,603] main: Rendering [ImTest20010] started
+[2016-07-13 15:14:12,695] main: Rendered Finished
