@@ -30,7 +30,7 @@ class Sensor:
         # output sensor.xml file
 
 
-    def apply(self):
+    def apply(self, intrinsicsXML):
         logging.debug("applying settings")
         bpy.context.scene.render.resolution_percentage = self.percentage
         bpy.context.scene.render.use_stamp_lens = True #Lens in Metadata
@@ -39,6 +39,12 @@ class Sensor:
         bpy.context.scene.render.use_antialiasing = self.antialiasing
         bpy.context.scene.render.image_settings.compression = self.compression
         bpy.context.scene.render.image_settings.file_format = self.fileformat
+
+        intrinsicsFileHandle = open(intrinsicsXML, 'w', newline='')
+        intrinsicswriter = csv.writer(intrinsicsFileHandle)
+        
+        intrinsicswriter.writerow(controlHeader)
+
 
 
 class BObject:
@@ -122,7 +128,7 @@ class Scene:
 
         markerFileHandle = open(markerCSV, 'w', newline='')
         markerwriter = csv.writer(markerFileHandle)
-        markerHeader = ["X", "Y", "Z"]
+        markerHeader = ["objectName_markerName", "X", "Y", "Z", "localX", "localY", "localZ"]
         markerwriter.writerow(markerHeader)
 
         for iObj in self.BObjects:
@@ -161,7 +167,9 @@ class Scene:
                 newMarkerPts = RotatePoint(rawMarkerPts, iObj.Rotation, iObj.Translation, iObj.Scale)
                 # print to csv file
                 for i in range(len(newMarkerPts.x)):
-                    markerwriter.writerow([newMarkerPts.x[i], newMarkerPts.y[i], newMarkerPts.z[i], rawMarkerPts.x[i], rawMarkerPts.y[i], rawMarkerPts.z[i]])
+                    markerwriter.writerow([iObj.name + '_' + rawMarkerPts.names[i],
+                                           newMarkerPts.x[i], newMarkerPts.y[i], newMarkerPts.z[i],
+                                           rawMarkerPts.x[i], rawMarkerPts.y[i], rawMarkerPts.z[i]])
                 markerFileHandle.flush()
 
         controlFileHandle.close()
@@ -178,7 +186,7 @@ class Pose:
         T = (self.Translation.x, self.Translation.y, self.Translation.z)
         R = (self.Rotation.x, self.Rotation.y, self.Rotation.z)
         bpy.ops.object.camera_add(view_align=True, enter_editmode=True, location=T, rotation=(0, 0, 0))
-        bpy.context.object.rotation_mode = 'ZYX'
+        # bpy.context.object.rotation_mode = 'ZYX'
         bpy.context.object.rotation_euler = R
         bpy.context.object.data.lens = camSensor.focalLength
         bpy.context.object.data.sensor_width = camSensor.sensorWidth
@@ -232,10 +240,18 @@ class Trajectory:
 
 
 class Triplet:
-    def __init__(self, x, y, z):
+    def __init__(self, x, y, z, names=''):
         self.x = x
         self.y = y
         self.z = z
+        if isinstance(x, list):
+            if len(names) < len(x):
+                names = []
+                for i in range(len(x)):
+                    buf = "%03.0d" % i
+                    names.append(buf)
+
+        self.names = names
 
 
 def RotatePoint(Points, Rotate, Translate, Scale):
@@ -248,11 +264,11 @@ def RotatePoint(Points, Rotate, Translate, Scale):
 
     # Apply Rotation
     cosx = math.cos(Rotate.x)
-    sinx = math.cos(Rotate.x)
+    sinx = math.sin(Rotate.x)
     cosy = math.cos(Rotate.y)
-    siny = math.cos(Rotate.y)
+    siny = math.sin(Rotate.y)
     cosz = math.cos(Rotate.z)
-    sinz = math.cos(Rotate.z)
+    sinz = math.sin(Rotate.z)
 
     Rz = [[cosz, -sinz, 0],
           [sinz, cosz, 0],
@@ -266,26 +282,26 @@ def RotatePoint(Points, Rotate, Translate, Scale):
           [0, cosx, -sinx],
           [0, sinx, cosx]]
 
-    R = np.dot(Rz,np.dot(Ry,Rx))
+    R = np.dot(Rx, np.dot(Ry, Rz))
 
     for i in range(len(newPoints.x)):
         # Should make everything a numpy array rather than storing as an object
         # so few computations that performance shouldnt be too bad
         P = np.array([newPoints.x[i], newPoints.y[i], newPoints.z[i]])
         Pnew = np.dot(R,P)
-        logging.debug("ROTATE PRE")
-        logging.debug([newPoints.x[i], newPoints.y[i], newPoints.z[i]])
         newPoints.x[i] = Pnew[0]
         newPoints.y[i] = Pnew[1]
         newPoints.z[i] = Pnew[2]
-        logging.debug("ROTATE POST")
-        logging.debug([newPoints.x[i], newPoints.y[i], newPoints.z[i]])
 
     # Apply Translation
     for i in range(len(newPoints.x)):
         newPoints.x[i] = newPoints.x[i] + Translate.x
         newPoints.y[i] = newPoints.y[i] + Translate.y
         newPoints.z[i] = newPoints.z[i] + Translate.z
+        logging.debug(" PRE")
+        logging.debug([Points.x[i], Points.y[i], Points.z[i]])
+        logging.debug(" POST")
+        logging.debug([newPoints.x[i], newPoints.y[i], newPoints.z[i]])
 
     return newPoints
 
@@ -297,11 +313,19 @@ def readXyzCsv(csvfilename):
     x = []
     y = []
     z = []
+    names = []
 
     for row in allrows:
-        x.append(float(row[0]))
-        y.append(float(row[1]))
-        z.append(float(row[2]))
+        if len(row) == 4:
+            names.append(row[0])
+            x.append(float(row[1]))
+            y.append(float(row[2]))
+            z.append(float(row[3]))
+        else:
+            x.append(float(row[0]))
+            y.append(float(row[1]))
+            z.append(float(row[2]))
+            names.append('')
 
     return Triplet(x, y, z)
 
@@ -357,6 +381,7 @@ def main():
     trajectoryCSV = experimentName + "/output/trajectory.txt"
     controlCSV = experimentName + "/output/control.txt"
     markerCSV = experimentName + "/output/marker.txt"
+    IntrinsicsXML = experimentName + "/output/camera.xml"
     wipe()  # clear all blender objects
 
     # Populate Classes
@@ -367,7 +392,7 @@ def main():
     # MakeScene
     myScene.build(controlCSV, markerCSV)
     # Apply Sensor Parameters
-    mySensor.apply()
+    mySensor.apply(IntrinsicsXML)
     iCount = 0
 
     trajectoryFile = open(trajectoryCSV, 'w', newline='')
@@ -385,8 +410,8 @@ def main():
         logging.debug("Rendered Finished")
         # write trajectory csv
 
-        rawrow = [iPose.name + '.png', iPose.Translation.x, iPose.Translation.y, iPose.Translation.z, iPose.Rotation.x*180/pi,
-                  iPose.Rotation.y*180/pi, iPose.Rotation.z*180/pi]
+        rawrow = [iPose.name + '.png', iPose.Translation.x, iPose.Translation.y, iPose.Translation.z,
+                  iPose.Rotation.x*180/pi, iPose.Rotation.y*180/pi, iPose.Rotation.z*180/pi]
         writer.writerow(rawrow)
         trajectoryFile.flush()
     trajectoryFile.close()
