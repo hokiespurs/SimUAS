@@ -9,7 +9,7 @@ import os
 import copy
 import numpy as np
 import math
-
+import time
 
 class Sensor:
     def __init__(self, xmlsensor):
@@ -27,7 +27,6 @@ class Sensor:
         self.antialiasing = float(root.find('image').get('antialiasing'))
         self.clipStart = float(root.find('clipping').get('start'))
         self.clipEnd = float(root.find('clipping').get('end'))
-        # output sensor.xml file
 
 
     def apply(self, intrinsicsXML):
@@ -40,11 +39,29 @@ class Sensor:
         bpy.context.scene.render.image_settings.compression = self.compression
         bpy.context.scene.render.image_settings.file_format = self.fileformat
 
+        # output sensor.xml
         intrinsicsFileHandle = open(intrinsicsXML, 'w', newline='')
-        intrinsicswriter = csv.writer(intrinsicsFileHandle)
-        
-        intrinsicswriter.writerow(controlHeader)
 
+        f = self.resolution[0] / self.sensorWidth * self.focalLength
+
+        intrinsicsFileHandle.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n")
+        intrinsicsFileHandle.write("<calibration>\r\n")
+        intrinsicsFileHandle.write("\t<projection>frame</projection>\r\n")
+        intrinsicsFileHandle.write("\t<width>" + str(self.resolution[0]) + "</width>\r\n")
+        intrinsicsFileHandle.write("\t<height>" + str(self.resolution[1]) + "</height>\r\n")
+        intrinsicsFileHandle.write("\t<fx>" + str(f) + "</fx>\r\n")
+        intrinsicsFileHandle.write("\t<fy>" + str(f) + "</fy>\r\n")
+        intrinsicsFileHandle.write("\t<cx>" + str(self.principalPoint[0]) + "</cx>\r\n")
+        intrinsicsFileHandle.write("\t<cy>" + str(self.principalPoint[1]) + "</cy>\r\n")
+        intrinsicsFileHandle.write("\t<skew>0</skew>\r\n")
+        intrinsicsFileHandle.write("\t<k1>0</k1>\r\n")
+        intrinsicsFileHandle.write("\t<k2>0</k2>\r\n")
+        intrinsicsFileHandle.write("\t<k3>0</k3>\r\n")
+        intrinsicsFileHandle.write("\t<k4>0</k4>\r\n")
+        intrinsicsFileHandle.write("\t<p1>0</p1>\r\n")
+        intrinsicsFileHandle.write("\t<p2>0</p2>\r\n")
+        intrinsicsFileHandle.write("\t<date>" + time.strftime('%Y-%m-%dT%H:%M:%SZ') + "</date>\r\n")
+        intrinsicsFileHandle.write("</calibration>\r\n")
 
 
 class BObject:
@@ -381,7 +398,7 @@ def main():
     trajectoryCSV = experimentName + "/output/trajectory.txt"
     controlCSV = experimentName + "/output/control.txt"
     markerCSV = experimentName + "/output/marker.txt"
-    IntrinsicsXML = experimentName + "/output/camera.xml"
+    IntrinsicsXML = experimentName + "/output/sensor.xml"
     wipe()  # clear all blender objects
 
     # Populate Classes
