@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <calibration>
 	<projection>frame</projection>
-	<width>4000.0</width>
-	<height>3000.0</height>
-	<fx>2000.0</fx>
-	<fy>2000.0</fy>
+	<width>5456.0</width>
+	<height>3632.0</height>
+	<fx>3714.723404255319</fx>
+	<fy>3714.723404255319</fy>
 	<skew>0</skew>
 	<k1>0</k1>
 	<k2>0</k2>
@@ -12,5 +12,5 @@
 	<k4>0</k4>
 	<p1>0</p1>
 	<p2>0</p2>
-	<date>2016-07-16T15:13:23Z</date>
+	<date>2016-07-16T15:01:33Z</date>
 </calibration>
