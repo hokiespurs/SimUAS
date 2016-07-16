@@ -1,73 +1,143 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <scene name="testRange" version="0.1" lib="C:\\Users\\Richie\\Documents\\GitHub\\BlenderPythonTest\\objects/objectLibrary.xml">
-	<object libname="GCP" name = "GCP0" isControl = "1" isMarker = "1">
-        <translation x="0" y="-5" z="0"/>
-        <rotation x="0" y="0" z="0"/>
-        <scale x="1" y="1" z="1"/>
-    </object>
-	<object libname="GCP" name = "GCP1" isControl = "1" isMarker = "1">
-        <translation x="0" y="0" z="0"/>
-        <rotation x="1" y="2" z="3"/>
-        <scale x="2" y="2" z="1"/>
-    </object>
-	<object libname="GCP" name = "GCP2" isControl = "1" isMarker = "1">
-        <translation x="0" y="5" z="0"/>
-        <rotation x="0" y="0" z="0"/>
-        <scale x="1" y="1" z="1"/>
-    </object>
-	<object libname="GCP" name = "GCP3" isControl = "1" isMarker = "1">
-        <translation x="5" y="5" z="0"/>
-        <rotation x="1" y="2" z="3"/>
-        <scale x="3" y="2" z="1"/>
-    </object>
+<object libname="GCP" name = "GCP01" isControl = "1" isMarker = "1">
+	<translation x="-50" y="-50" z="1"/>
+	<rotation x="0" y="0" z="0"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object libname="GCP" name = "GCP02" isControl = "1" isMarker = "1">
+	<translation x="-50" y="-25" z="1"/>
+	<rotation x="0" y="0" z="0"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object libname="GCP" name = "GCP03" isControl = "1" isMarker = "1">
+	<translation x="-50" y="0" z="1"/>
+	<rotation x="0" y="0" z="0"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object libname="GCP" name = "GCP04" isControl = "1" isMarker = "1">
+	<translation x="-50" y="25" z="1"/>
+	<rotation x="0" y="0" z="0"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object libname="GCP" name = "GCP05" isControl = "1" isMarker = "1">
+	<translation x="-50" y="50" z="1"/>
+	<rotation x="0" y="0" z="0"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object libname="GCP" name = "GCP06" isControl = "1" isMarker = "1">
+	<translation x="-25" y="-50" z="1"/>
+	<rotation x="0" y="0" z="0"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object libname="GCP" name = "GCP07" isControl = "1" isMarker = "1">
+	<translation x="-25" y="-25" z="1"/>
+	<rotation x="0" y="0" z="0"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object libname="GCP" name = "GCP08" isControl = "1" isMarker = "1">
+	<translation x="-25" y="0" z="1"/>
+	<rotation x="0" y="0" z="0"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object libname="GCP" name = "GCP09" isControl = "1" isMarker = "1">
+	<translation x="-25" y="25" z="1"/>
+	<rotation x="0" y="0" z="0"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object libname="GCP" name = "GCP10" isControl = "1" isMarker = "1">
+	<translation x="-25" y="50" z="1"/>
+	<rotation x="0" y="0" z="0"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object libname="GCP" name = "GCP11" isControl = "1" isMarker = "1">
+	<translation x="0" y="-50" z="1"/>
+	<rotation x="0" y="0" z="0"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object libname="GCP" name = "GCP12" isControl = "1" isMarker = "1">
+	<translation x="0" y="-25" z="1"/>
+	<rotation x="0" y="0" z="0"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object libname="GCP" name = "GCP13" isControl = "1" isMarker = "1">
+	<translation x="0" y="0" z="1"/>
+	<rotation x="0" y="0" z="0"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object libname="GCP" name = "GCP14" isControl = "1" isMarker = "1">
+	<translation x="0" y="25" z="1"/>
+	<rotation x="0" y="0" z="0"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object libname="GCP" name = "GCP15" isControl = "1" isMarker = "1">
+	<translation x="0" y="50" z="1"/>
+	<rotation x="0" y="0" z="0"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object libname="GCP" name = "GCP16" isControl = "1" isMarker = "1">
+	<translation x="25" y="-50" z="1"/>
+	<rotation x="0" y="0" z="0"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object libname="GCP" name = "GCP17" isControl = "1" isMarker = "1">
+	<translation x="25" y="-25" z="1"/>
+	<rotation x="0" y="0" z="0"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object libname="GCP" name = "GCP18" isControl = "1" isMarker = "1">
+	<translation x="25" y="0" z="1"/>
+	<rotation x="0" y="0" z="0"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object libname="GCP" name = "GCP19" isControl = "1" isMarker = "1">
+	<translation x="25" y="25" z="1"/>
+	<rotation x="0" y="0" z="0"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object libname="GCP" name = "GCP20" isControl = "1" isMarker = "1">
+	<translation x="25" y="50" z="1"/>
+	<rotation x="0" y="0" z="0"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object libname="GCP" name = "GCP21" isControl = "1" isMarker = "1">
+	<translation x="50" y="-50" z="1"/>
+	<rotation x="0" y="0" z="0"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object libname="GCP" name = "GCP22" isControl = "1" isMarker = "1">
+	<translation x="50" y="-25" z="1"/>
+	<rotation x="0" y="0" z="0"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object libname="GCP" name = "GCP23" isControl = "1" isMarker = "1">
+	<translation x="50" y="0" z="1"/>
+	<rotation x="0" y="0" z="0"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object libname="GCP" name = "GCP24" isControl = "1" isMarker = "1">
+	<translation x="50" y="25" z="1"/>
+	<rotation x="0" y="0" z="0"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object libname="GCP" name = "GCP25" isControl = "1" isMarker = "1">
+	<translation x="50" y="50" z="1"/>
+	<rotation x="0" y="0" z="0"/>
+	<scale x="1" y="1" z="1"/>
+</object>
 	<object libname="dummy" name="dummy1" isControl = "0" isMarker = "1">
-        <translation x="1" y="2" z="3"/>
+        <translation x="-10" y="0" z="1"/>
         <rotation x="180" y="2" z="3"/>
-        <scale x="2" y="2" z="1"/>
-    </object>
-	<object libname="checkercube" name="checkercube1" isControl = "0" isMarker = "1">
-        <translation x="-2" y="2" z="0"/>
-        <rotation x="0" y="0" z="45"/>
-        <scale x="1" y="1" z="1"/>
-    </object>
-	<object libname="checkercube" name="checkercube2" isControl = "0" isMarker = "1">
-        <translation x="-2" y="-2" z="0"/>
-        <rotation x="0" y="0" z="45"/>
-        <scale x="1" y="1" z="1"/>
-    </object>
-	<object libname="checkercube" name="checkercube3" isControl = "0" isMarker = "1">
-        <translation x="2" y="2" z="0"/>
-        <rotation x="0" y="0" z="45"/>
-        <scale x="1" y="1" z="1"/>
-    </object>
-	<object libname="checkercube" name="checkercube4" isControl = "0" isMarker = "1">
-        <translation x="2" y="-2" z="0"/>
-        <rotation x="0" y="0" z="45"/>
-        <scale x="1" y="1" z="1"/>
-    </object>
-	<object libname="pinkpipe" name="pinkpipe" isControl = "0" isMarker = "1">
-        <translation x="0" y="-2" z="2"/>
-        <rotation x="0" y="90" z="45"/>
-        <scale x="1" y="1" z="5"/>
-    </object>
-	<object libname="trichecker" name="trichecker1" isControl = "0" isMarker = "1">
-        <translation x="8" y="0" z="0"/>
-        <rotation x="0" y="0" z="0"/>
-        <scale x="1" y="1" z="1"/>
-    </object>
-	<object libname="trichecker" name="trichecker2" isControl = "0" isMarker = "1">
-        <translation x="0" y="8" z="0"/>
-        <rotation x="0" y="0" z="0"/>
-        <scale x="5" y="5" z="5"/>
+        <scale x="3" y="3" z="3"/>
     </object>
 	<object libname="trichecker" name="trichecker3" isControl = "0" isMarker = "1">
-        <translation x="-8" y="0" z="0"/>
+        <translation x="10" y="10" z="1"/>
         <rotation x="0" y="0" z="0"/>
         <scale x="4" y="4" z="4"/>
     </object>
-	<object libname="trichecker" name="trichecker4" isControl = "0" isMarker = "1">
-        <translation x="0" y="-8" z="0"/>
+	<object libname="noiseCube" name="noiseCube" isControl = "0" isMarker = "1">
+        <translation x="0" y="0" z="0"/>
         <rotation x="0" y="0" z="0"/>
-        <scale x="3" y="3" z="3"/>
-    </object>
+        <scale x="10" y="10" z="1"/>
+    </object>	
 </scene>

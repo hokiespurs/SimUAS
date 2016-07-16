@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sensor name = "demo" fileformat = "PNG">
-  <physical focallength="10" sensorWidth = "20"/>
-  <resolution x = "4000" y = "3000"/>
-  <principalPoint x = "2000" y="1500"/>
+  <physical focallength="16" sensorWidth = "23.5"/>
+  <resolution x = "5456" y = "3632"/>
+  <principalPoint x = "2728" y="1816"/>
   <image compression = "100" percentage = "100" antialiasing = "0"/>
   <clipping start = "0" end = "100"/>
 </sensor>

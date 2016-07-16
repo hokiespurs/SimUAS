@@ -135,7 +135,7 @@ class Scene:
             iBObject = BObject(AllLibObj[ind], iname, iT, iR, iS, isControl, isMarker)
             self.BObjects.append(iBObject)
 
-    def build(self,controlCSV, markerCSV):
+    def build(self,controlCSV, markerCSV, outputOBJ):
         logging.info("Building " + self.name)
 
         controlFileHandle = open(controlCSV, 'w', newline='')
@@ -192,6 +192,7 @@ class Scene:
         controlFileHandle.close()
         markerFileHandle.close()
 
+        bpy.ops.export_scene.obj(filepath=outputOBJ, axis_forward='Y', axis_up='Z')
 
 class Pose:
     def __init__(self, name, tx, ty, tz, rx, ry, rz):
@@ -399,15 +400,15 @@ def main():
     controlCSV = experimentName + "/output/control.txt"
     markerCSV = experimentName + "/output/marker.txt"
     IntrinsicsXML = experimentName + "/output/sensor.xml"
-    wipe()  # clear all blender objects
-
+    outputOBJ = experimentName + "/output/model.obj"
     # Populate Classes
     myScene = Scene(xmlScene)
     mySensor = Sensor(xmlSensor)
     myTrajectory = Trajectory(xmlTrajectory)
 
     # MakeScene
-    myScene.build(controlCSV, markerCSV)
+    wipe()
+    myScene.build(controlCSV, markerCSV, outputOBJ)
     # Apply Sensor Parameters
     mySensor.apply(IntrinsicsXML)
     iCount = 0

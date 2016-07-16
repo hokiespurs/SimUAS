@@ -35,4 +35,12 @@
 		<blenderType>Object</blenderType>
 		<libname>pinkpipe</libname>
 	</object>
+	<object>
+		<name>noiseCube</name>
+		<path>C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\noiseCube.blend</path>
+		<markerPath>C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\noiseCube.txt</markerPath>
+		<blenderType>Object</blenderType>
+		<libname>noiseCube</libname>
+	</object>
+
   </library>
