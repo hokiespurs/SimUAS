@@ -8235,3 +8235,2808 @@
 [2016-07-16 14:47:58,088] add: ADDING POSE: ImTest0007
 [2016-07-16 14:47:58,088] link: running as background
 [2016-07-16 14:47:58,088] main: Rendering [ImTest0007] started
+[2016-07-16 14:49:27,240] main: Rendered Finished
+[2016-07-16 14:49:27,241] add: ADDING POSE: ImTest0008
+[2016-07-16 14:49:27,241] link: running as background
+[2016-07-16 14:49:27,241] main: Rendering [ImTest0008] started
+[2016-07-16 14:50:30,256] main: logger opened
+[2016-07-16 14:50:30,256] main: 3.4.2 (default, Dec  7 2014, 18:21:18) [MSC v.1800 64 bit (AMD64)]
+[2016-07-16 14:50:30,257] wipe: Clearing all existing blender objects
+[2016-07-16 14:50:30,258] build: Building testRange
+[2016-07-16 14:50:30,260] build: Added GCP01 to scene
+[2016-07-16 14:50:30,261] build: GCP01 isControl = 1
+[2016-07-16 14:50:30,261] build: GCP01 being used as marker
+[2016-07-16 14:50:30,261] build: MARKER
+[2016-07-16 14:50:30,261] build: C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\gcp.txt
+[2016-07-16 14:50:30,261] build: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,261] build: [-50.0, -50.0, 1.0]
+[2016-07-16 14:50:30,261] build: [1.0, 1.0, 1.0]
+[2016-07-16 14:50:30,261] RotatePoint:  PRE
+[2016-07-16 14:50:30,261] RotatePoint: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,262] RotatePoint:  POST
+[2016-07-16 14:50:30,262] RotatePoint: [-50.0, -50.0, 1.0]
+[2016-07-16 14:50:30,262] RotatePoint:  PRE
+[2016-07-16 14:50:30,262] RotatePoint: [1.0, 1.0, 0.0]
+[2016-07-16 14:50:30,262] RotatePoint:  POST
+[2016-07-16 14:50:30,262] RotatePoint: [-49.0, -49.0, 1.0]
+[2016-07-16 14:50:30,262] RotatePoint:  PRE
+[2016-07-16 14:50:30,262] RotatePoint: [1.0, -1.0, 0.0]
+[2016-07-16 14:50:30,262] RotatePoint:  POST
+[2016-07-16 14:50:30,262] RotatePoint: [-49.0, -51.0, 1.0]
+[2016-07-16 14:50:30,262] RotatePoint:  PRE
+[2016-07-16 14:50:30,262] RotatePoint: [-1.0, 1.0, 0.0]
+[2016-07-16 14:50:30,262] RotatePoint:  POST
+[2016-07-16 14:50:30,262] RotatePoint: [-51.0, -49.0, 1.0]
+[2016-07-16 14:50:30,262] RotatePoint:  PRE
+[2016-07-16 14:50:30,262] RotatePoint: [-1.0, -1.0, 0.0]
+[2016-07-16 14:50:30,263] RotatePoint:  POST
+[2016-07-16 14:50:30,263] RotatePoint: [-51.0, -51.0, 1.0]
+[2016-07-16 14:50:30,264] build: Added GCP02 to scene
+[2016-07-16 14:50:30,264] build: GCP02 isControl = 1
+[2016-07-16 14:50:30,264] build: GCP02 being used as marker
+[2016-07-16 14:50:30,265] build: MARKER
+[2016-07-16 14:50:30,265] build: C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\gcp.txt
+[2016-07-16 14:50:30,265] build: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,265] build: [-50.0, -25.0, 1.0]
+[2016-07-16 14:50:30,265] build: [1.0, 1.0, 1.0]
+[2016-07-16 14:50:30,265] RotatePoint:  PRE
+[2016-07-16 14:50:30,265] RotatePoint: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,265] RotatePoint:  POST
+[2016-07-16 14:50:30,265] RotatePoint: [-50.0, -25.0, 1.0]
+[2016-07-16 14:50:30,265] RotatePoint:  PRE
+[2016-07-16 14:50:30,265] RotatePoint: [1.0, 1.0, 0.0]
+[2016-07-16 14:50:30,265] RotatePoint:  POST
+[2016-07-16 14:50:30,265] RotatePoint: [-49.0, -24.0, 1.0]
+[2016-07-16 14:50:30,266] RotatePoint:  PRE
+[2016-07-16 14:50:30,266] RotatePoint: [1.0, -1.0, 0.0]
+[2016-07-16 14:50:30,266] RotatePoint:  POST
+[2016-07-16 14:50:30,266] RotatePoint: [-49.0, -26.0, 1.0]
+[2016-07-16 14:50:30,266] RotatePoint:  PRE
+[2016-07-16 14:50:30,266] RotatePoint: [-1.0, 1.0, 0.0]
+[2016-07-16 14:50:30,266] RotatePoint:  POST
+[2016-07-16 14:50:30,266] RotatePoint: [-51.0, -24.0, 1.0]
+[2016-07-16 14:50:30,266] RotatePoint:  PRE
+[2016-07-16 14:50:30,266] RotatePoint: [-1.0, -1.0, 0.0]
+[2016-07-16 14:50:30,266] RotatePoint:  POST
+[2016-07-16 14:50:30,266] RotatePoint: [-51.0, -26.0, 1.0]
+[2016-07-16 14:50:30,268] build: Added GCP03 to scene
+[2016-07-16 14:50:30,268] build: GCP03 isControl = 1
+[2016-07-16 14:50:30,268] build: GCP03 being used as marker
+[2016-07-16 14:50:30,268] build: MARKER
+[2016-07-16 14:50:30,268] build: C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\gcp.txt
+[2016-07-16 14:50:30,268] build: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,268] build: [-50.0, 0.0, 1.0]
+[2016-07-16 14:50:30,268] build: [1.0, 1.0, 1.0]
+[2016-07-16 14:50:30,269] RotatePoint:  PRE
+[2016-07-16 14:50:30,269] RotatePoint: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,269] RotatePoint:  POST
+[2016-07-16 14:50:30,269] RotatePoint: [-50.0, 0.0, 1.0]
+[2016-07-16 14:50:30,269] RotatePoint:  PRE
+[2016-07-16 14:50:30,269] RotatePoint: [1.0, 1.0, 0.0]
+[2016-07-16 14:50:30,269] RotatePoint:  POST
+[2016-07-16 14:50:30,269] RotatePoint: [-49.0, 1.0, 1.0]
+[2016-07-16 14:50:30,269] RotatePoint:  PRE
+[2016-07-16 14:50:30,269] RotatePoint: [1.0, -1.0, 0.0]
+[2016-07-16 14:50:30,269] RotatePoint:  POST
+[2016-07-16 14:50:30,269] RotatePoint: [-49.0, -1.0, 1.0]
+[2016-07-16 14:50:30,269] RotatePoint:  PRE
+[2016-07-16 14:50:30,269] RotatePoint: [-1.0, 1.0, 0.0]
+[2016-07-16 14:50:30,270] RotatePoint:  POST
+[2016-07-16 14:50:30,270] RotatePoint: [-51.0, 1.0, 1.0]
+[2016-07-16 14:50:30,270] RotatePoint:  PRE
+[2016-07-16 14:50:30,270] RotatePoint: [-1.0, -1.0, 0.0]
+[2016-07-16 14:50:30,270] RotatePoint:  POST
+[2016-07-16 14:50:30,270] RotatePoint: [-51.0, -1.0, 1.0]
+[2016-07-16 14:50:30,271] build: Added GCP04 to scene
+[2016-07-16 14:50:30,272] build: GCP04 isControl = 1
+[2016-07-16 14:50:30,272] build: GCP04 being used as marker
+[2016-07-16 14:50:30,272] build: MARKER
+[2016-07-16 14:50:30,272] build: C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\gcp.txt
+[2016-07-16 14:50:30,272] build: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,272] build: [-50.0, 25.0, 1.0]
+[2016-07-16 14:50:30,272] build: [1.0, 1.0, 1.0]
+[2016-07-16 14:50:30,272] RotatePoint:  PRE
+[2016-07-16 14:50:30,272] RotatePoint: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,272] RotatePoint:  POST
+[2016-07-16 14:50:30,273] RotatePoint: [-50.0, 25.0, 1.0]
+[2016-07-16 14:50:30,273] RotatePoint:  PRE
+[2016-07-16 14:50:30,273] RotatePoint: [1.0, 1.0, 0.0]
+[2016-07-16 14:50:30,273] RotatePoint:  POST
+[2016-07-16 14:50:30,273] RotatePoint: [-49.0, 26.0, 1.0]
+[2016-07-16 14:50:30,273] RotatePoint:  PRE
+[2016-07-16 14:50:30,273] RotatePoint: [1.0, -1.0, 0.0]
+[2016-07-16 14:50:30,273] RotatePoint:  POST
+[2016-07-16 14:50:30,273] RotatePoint: [-49.0, 24.0, 1.0]
+[2016-07-16 14:50:30,273] RotatePoint:  PRE
+[2016-07-16 14:50:30,273] RotatePoint: [-1.0, 1.0, 0.0]
+[2016-07-16 14:50:30,273] RotatePoint:  POST
+[2016-07-16 14:50:30,273] RotatePoint: [-51.0, 26.0, 1.0]
+[2016-07-16 14:50:30,273] RotatePoint:  PRE
+[2016-07-16 14:50:30,273] RotatePoint: [-1.0, -1.0, 0.0]
+[2016-07-16 14:50:30,273] RotatePoint:  POST
+[2016-07-16 14:50:30,274] RotatePoint: [-51.0, 24.0, 1.0]
+[2016-07-16 14:50:30,275] build: Added GCP05 to scene
+[2016-07-16 14:50:30,275] build: GCP05 isControl = 1
+[2016-07-16 14:50:30,276] build: GCP05 being used as marker
+[2016-07-16 14:50:30,276] build: MARKER
+[2016-07-16 14:50:30,276] build: C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\gcp.txt
+[2016-07-16 14:50:30,276] build: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,276] build: [-50.0, 50.0, 1.0]
+[2016-07-16 14:50:30,276] build: [1.0, 1.0, 1.0]
+[2016-07-16 14:50:30,276] RotatePoint:  PRE
+[2016-07-16 14:50:30,276] RotatePoint: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,276] RotatePoint:  POST
+[2016-07-16 14:50:30,276] RotatePoint: [-50.0, 50.0, 1.0]
+[2016-07-16 14:50:30,276] RotatePoint:  PRE
+[2016-07-16 14:50:30,277] RotatePoint: [1.0, 1.0, 0.0]
+[2016-07-16 14:50:30,277] RotatePoint:  POST
+[2016-07-16 14:50:30,277] RotatePoint: [-49.0, 51.0, 1.0]
+[2016-07-16 14:50:30,277] RotatePoint:  PRE
+[2016-07-16 14:50:30,277] RotatePoint: [1.0, -1.0, 0.0]
+[2016-07-16 14:50:30,277] RotatePoint:  POST
+[2016-07-16 14:50:30,277] RotatePoint: [-49.0, 49.0, 1.0]
+[2016-07-16 14:50:30,277] RotatePoint:  PRE
+[2016-07-16 14:50:30,277] RotatePoint: [-1.0, 1.0, 0.0]
+[2016-07-16 14:50:30,277] RotatePoint:  POST
+[2016-07-16 14:50:30,277] RotatePoint: [-51.0, 51.0, 1.0]
+[2016-07-16 14:50:30,277] RotatePoint:  PRE
+[2016-07-16 14:50:30,277] RotatePoint: [-1.0, -1.0, 0.0]
+[2016-07-16 14:50:30,277] RotatePoint:  POST
+[2016-07-16 14:50:30,277] RotatePoint: [-51.0, 49.0, 1.0]
+[2016-07-16 14:50:30,279] build: Added GCP06 to scene
+[2016-07-16 14:50:30,279] build: GCP06 isControl = 1
+[2016-07-16 14:50:30,279] build: GCP06 being used as marker
+[2016-07-16 14:50:30,279] build: MARKER
+[2016-07-16 14:50:30,280] build: C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\gcp.txt
+[2016-07-16 14:50:30,280] build: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,280] build: [-25.0, -50.0, 1.0]
+[2016-07-16 14:50:30,280] build: [1.0, 1.0, 1.0]
+[2016-07-16 14:50:30,280] RotatePoint:  PRE
+[2016-07-16 14:50:30,280] RotatePoint: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,280] RotatePoint:  POST
+[2016-07-16 14:50:30,280] RotatePoint: [-25.0, -50.0, 1.0]
+[2016-07-16 14:50:30,280] RotatePoint:  PRE
+[2016-07-16 14:50:30,280] RotatePoint: [1.0, 1.0, 0.0]
+[2016-07-16 14:50:30,280] RotatePoint:  POST
+[2016-07-16 14:50:30,280] RotatePoint: [-24.0, -49.0, 1.0]
+[2016-07-16 14:50:30,280] RotatePoint:  PRE
+[2016-07-16 14:50:30,281] RotatePoint: [1.0, -1.0, 0.0]
+[2016-07-16 14:50:30,281] RotatePoint:  POST
+[2016-07-16 14:50:30,281] RotatePoint: [-24.0, -51.0, 1.0]
+[2016-07-16 14:50:30,281] RotatePoint:  PRE
+[2016-07-16 14:50:30,281] RotatePoint: [-1.0, 1.0, 0.0]
+[2016-07-16 14:50:30,281] RotatePoint:  POST
+[2016-07-16 14:50:30,281] RotatePoint: [-26.0, -49.0, 1.0]
+[2016-07-16 14:50:30,281] RotatePoint:  PRE
+[2016-07-16 14:50:30,281] RotatePoint: [-1.0, -1.0, 0.0]
+[2016-07-16 14:50:30,281] RotatePoint:  POST
+[2016-07-16 14:50:30,281] RotatePoint: [-26.0, -51.0, 1.0]
+[2016-07-16 14:50:30,283] build: Added GCP07 to scene
+[2016-07-16 14:50:30,283] build: GCP07 isControl = 1
+[2016-07-16 14:50:30,283] build: GCP07 being used as marker
+[2016-07-16 14:50:30,283] build: MARKER
+[2016-07-16 14:50:30,283] build: C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\gcp.txt
+[2016-07-16 14:50:30,283] build: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,283] build: [-25.0, -25.0, 1.0]
+[2016-07-16 14:50:30,283] build: [1.0, 1.0, 1.0]
+[2016-07-16 14:50:30,284] RotatePoint:  PRE
+[2016-07-16 14:50:30,284] RotatePoint: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,284] RotatePoint:  POST
+[2016-07-16 14:50:30,284] RotatePoint: [-25.0, -25.0, 1.0]
+[2016-07-16 14:50:30,284] RotatePoint:  PRE
+[2016-07-16 14:50:30,284] RotatePoint: [1.0, 1.0, 0.0]
+[2016-07-16 14:50:30,284] RotatePoint:  POST
+[2016-07-16 14:50:30,284] RotatePoint: [-24.0, -24.0, 1.0]
+[2016-07-16 14:50:30,284] RotatePoint:  PRE
+[2016-07-16 14:50:30,284] RotatePoint: [1.0, -1.0, 0.0]
+[2016-07-16 14:50:30,284] RotatePoint:  POST
+[2016-07-16 14:50:30,284] RotatePoint: [-24.0, -26.0, 1.0]
+[2016-07-16 14:50:30,284] RotatePoint:  PRE
+[2016-07-16 14:50:30,284] RotatePoint: [-1.0, 1.0, 0.0]
+[2016-07-16 14:50:30,284] RotatePoint:  POST
+[2016-07-16 14:50:30,284] RotatePoint: [-26.0, -24.0, 1.0]
+[2016-07-16 14:50:30,285] RotatePoint:  PRE
+[2016-07-16 14:50:30,285] RotatePoint: [-1.0, -1.0, 0.0]
+[2016-07-16 14:50:30,285] RotatePoint:  POST
+[2016-07-16 14:50:30,285] RotatePoint: [-26.0, -26.0, 1.0]
+[2016-07-16 14:50:30,286] build: Added GCP08 to scene
+[2016-07-16 14:50:30,286] build: GCP08 isControl = 1
+[2016-07-16 14:50:30,287] build: GCP08 being used as marker
+[2016-07-16 14:50:30,287] build: MARKER
+[2016-07-16 14:50:30,287] build: C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\gcp.txt
+[2016-07-16 14:50:30,287] build: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,287] build: [-25.0, 0.0, 1.0]
+[2016-07-16 14:50:30,287] build: [1.0, 1.0, 1.0]
+[2016-07-16 14:50:30,287] RotatePoint:  PRE
+[2016-07-16 14:50:30,287] RotatePoint: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,287] RotatePoint:  POST
+[2016-07-16 14:50:30,287] RotatePoint: [-25.0, 0.0, 1.0]
+[2016-07-16 14:50:30,288] RotatePoint:  PRE
+[2016-07-16 14:50:30,288] RotatePoint: [1.0, 1.0, 0.0]
+[2016-07-16 14:50:30,288] RotatePoint:  POST
+[2016-07-16 14:50:30,288] RotatePoint: [-24.0, 1.0, 1.0]
+[2016-07-16 14:50:30,288] RotatePoint:  PRE
+[2016-07-16 14:50:30,288] RotatePoint: [1.0, -1.0, 0.0]
+[2016-07-16 14:50:30,288] RotatePoint:  POST
+[2016-07-16 14:50:30,288] RotatePoint: [-24.0, -1.0, 1.0]
+[2016-07-16 14:50:30,288] RotatePoint:  PRE
+[2016-07-16 14:50:30,288] RotatePoint: [-1.0, 1.0, 0.0]
+[2016-07-16 14:50:30,288] RotatePoint:  POST
+[2016-07-16 14:50:30,288] RotatePoint: [-26.0, 1.0, 1.0]
+[2016-07-16 14:50:30,288] RotatePoint:  PRE
+[2016-07-16 14:50:30,288] RotatePoint: [-1.0, -1.0, 0.0]
+[2016-07-16 14:50:30,288] RotatePoint:  POST
+[2016-07-16 14:50:30,289] RotatePoint: [-26.0, -1.0, 1.0]
+[2016-07-16 14:50:30,290] build: Added GCP09 to scene
+[2016-07-16 14:50:30,290] build: GCP09 isControl = 1
+[2016-07-16 14:50:30,291] build: GCP09 being used as marker
+[2016-07-16 14:50:30,291] build: MARKER
+[2016-07-16 14:50:30,291] build: C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\gcp.txt
+[2016-07-16 14:50:30,291] build: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,291] build: [-25.0, 25.0, 1.0]
+[2016-07-16 14:50:30,291] build: [1.0, 1.0, 1.0]
+[2016-07-16 14:50:30,291] RotatePoint:  PRE
+[2016-07-16 14:50:30,291] RotatePoint: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,291] RotatePoint:  POST
+[2016-07-16 14:50:30,291] RotatePoint: [-25.0, 25.0, 1.0]
+[2016-07-16 14:50:30,291] RotatePoint:  PRE
+[2016-07-16 14:50:30,291] RotatePoint: [1.0, 1.0, 0.0]
+[2016-07-16 14:50:30,292] RotatePoint:  POST
+[2016-07-16 14:50:30,292] RotatePoint: [-24.0, 26.0, 1.0]
+[2016-07-16 14:50:30,292] RotatePoint:  PRE
+[2016-07-16 14:50:30,292] RotatePoint: [1.0, -1.0, 0.0]
+[2016-07-16 14:50:30,292] RotatePoint:  POST
+[2016-07-16 14:50:30,292] RotatePoint: [-24.0, 24.0, 1.0]
+[2016-07-16 14:50:30,292] RotatePoint:  PRE
+[2016-07-16 14:50:30,292] RotatePoint: [-1.0, 1.0, 0.0]
+[2016-07-16 14:50:30,292] RotatePoint:  POST
+[2016-07-16 14:50:30,292] RotatePoint: [-26.0, 26.0, 1.0]
+[2016-07-16 14:50:30,292] RotatePoint:  PRE
+[2016-07-16 14:50:30,292] RotatePoint: [-1.0, -1.0, 0.0]
+[2016-07-16 14:50:30,292] RotatePoint:  POST
+[2016-07-16 14:50:30,292] RotatePoint: [-26.0, 24.0, 1.0]
+[2016-07-16 14:50:30,294] build: Added GCP10 to scene
+[2016-07-16 14:50:30,294] build: GCP10 isControl = 1
+[2016-07-16 14:50:30,294] build: GCP10 being used as marker
+[2016-07-16 14:50:30,295] build: MARKER
+[2016-07-16 14:50:30,295] build: C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\gcp.txt
+[2016-07-16 14:50:30,295] build: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,295] build: [-25.0, 50.0, 1.0]
+[2016-07-16 14:50:30,295] build: [1.0, 1.0, 1.0]
+[2016-07-16 14:50:30,295] RotatePoint:  PRE
+[2016-07-16 14:50:30,295] RotatePoint: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,295] RotatePoint:  POST
+[2016-07-16 14:50:30,295] RotatePoint: [-25.0, 50.0, 1.0]
+[2016-07-16 14:50:30,295] RotatePoint:  PRE
+[2016-07-16 14:50:30,295] RotatePoint: [1.0, 1.0, 0.0]
+[2016-07-16 14:50:30,295] RotatePoint:  POST
+[2016-07-16 14:50:30,295] RotatePoint: [-24.0, 51.0, 1.0]
+[2016-07-16 14:50:30,295] RotatePoint:  PRE
+[2016-07-16 14:50:30,296] RotatePoint: [1.0, -1.0, 0.0]
+[2016-07-16 14:50:30,296] RotatePoint:  POST
+[2016-07-16 14:50:30,296] RotatePoint: [-24.0, 49.0, 1.0]
+[2016-07-16 14:50:30,296] RotatePoint:  PRE
+[2016-07-16 14:50:30,296] RotatePoint: [-1.0, 1.0, 0.0]
+[2016-07-16 14:50:30,296] RotatePoint:  POST
+[2016-07-16 14:50:30,296] RotatePoint: [-26.0, 51.0, 1.0]
+[2016-07-16 14:50:30,296] RotatePoint:  PRE
+[2016-07-16 14:50:30,296] RotatePoint: [-1.0, -1.0, 0.0]
+[2016-07-16 14:50:30,296] RotatePoint:  POST
+[2016-07-16 14:50:30,296] RotatePoint: [-26.0, 49.0, 1.0]
+[2016-07-16 14:50:30,298] build: Added GCP11 to scene
+[2016-07-16 14:50:30,298] build: GCP11 isControl = 1
+[2016-07-16 14:50:30,298] build: GCP11 being used as marker
+[2016-07-16 14:50:30,298] build: MARKER
+[2016-07-16 14:50:30,298] build: C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\gcp.txt
+[2016-07-16 14:50:30,299] build: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,299] build: [0.0, -50.0, 1.0]
+[2016-07-16 14:50:30,299] build: [1.0, 1.0, 1.0]
+[2016-07-16 14:50:30,299] RotatePoint:  PRE
+[2016-07-16 14:50:30,299] RotatePoint: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,299] RotatePoint:  POST
+[2016-07-16 14:50:30,299] RotatePoint: [0.0, -50.0, 1.0]
+[2016-07-16 14:50:30,299] RotatePoint:  PRE
+[2016-07-16 14:50:30,299] RotatePoint: [1.0, 1.0, 0.0]
+[2016-07-16 14:50:30,299] RotatePoint:  POST
+[2016-07-16 14:50:30,299] RotatePoint: [1.0, -49.0, 1.0]
+[2016-07-16 14:50:30,299] RotatePoint:  PRE
+[2016-07-16 14:50:30,299] RotatePoint: [1.0, -1.0, 0.0]
+[2016-07-16 14:50:30,300] RotatePoint:  POST
+[2016-07-16 14:50:30,300] RotatePoint: [1.0, -51.0, 1.0]
+[2016-07-16 14:50:30,300] RotatePoint:  PRE
+[2016-07-16 14:50:30,300] RotatePoint: [-1.0, 1.0, 0.0]
+[2016-07-16 14:50:30,300] RotatePoint:  POST
+[2016-07-16 14:50:30,300] RotatePoint: [-1.0, -49.0, 1.0]
+[2016-07-16 14:50:30,300] RotatePoint:  PRE
+[2016-07-16 14:50:30,300] RotatePoint: [-1.0, -1.0, 0.0]
+[2016-07-16 14:50:30,300] RotatePoint:  POST
+[2016-07-16 14:50:30,300] RotatePoint: [-1.0, -51.0, 1.0]
+[2016-07-16 14:50:30,302] build: Added GCP12 to scene
+[2016-07-16 14:50:30,302] build: GCP12 isControl = 1
+[2016-07-16 14:50:30,302] build: GCP12 being used as marker
+[2016-07-16 14:50:30,302] build: MARKER
+[2016-07-16 14:50:30,302] build: C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\gcp.txt
+[2016-07-16 14:50:30,302] build: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,302] build: [0.0, -25.0, 1.0]
+[2016-07-16 14:50:30,302] build: [1.0, 1.0, 1.0]
+[2016-07-16 14:50:30,303] RotatePoint:  PRE
+[2016-07-16 14:50:30,303] RotatePoint: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,303] RotatePoint:  POST
+[2016-07-16 14:50:30,303] RotatePoint: [0.0, -25.0, 1.0]
+[2016-07-16 14:50:30,303] RotatePoint:  PRE
+[2016-07-16 14:50:30,303] RotatePoint: [1.0, 1.0, 0.0]
+[2016-07-16 14:50:30,303] RotatePoint:  POST
+[2016-07-16 14:50:30,303] RotatePoint: [1.0, -24.0, 1.0]
+[2016-07-16 14:50:30,303] RotatePoint:  PRE
+[2016-07-16 14:50:30,303] RotatePoint: [1.0, -1.0, 0.0]
+[2016-07-16 14:50:30,303] RotatePoint:  POST
+[2016-07-16 14:50:30,303] RotatePoint: [1.0, -26.0, 1.0]
+[2016-07-16 14:50:30,303] RotatePoint:  PRE
+[2016-07-16 14:50:30,303] RotatePoint: [-1.0, 1.0, 0.0]
+[2016-07-16 14:50:30,303] RotatePoint:  POST
+[2016-07-16 14:50:30,304] RotatePoint: [-1.0, -24.0, 1.0]
+[2016-07-16 14:50:30,304] RotatePoint:  PRE
+[2016-07-16 14:50:30,304] RotatePoint: [-1.0, -1.0, 0.0]
+[2016-07-16 14:50:30,304] RotatePoint:  POST
+[2016-07-16 14:50:30,304] RotatePoint: [-1.0, -26.0, 1.0]
+[2016-07-16 14:50:30,305] build: Added GCP13 to scene
+[2016-07-16 14:50:30,306] build: GCP13 isControl = 1
+[2016-07-16 14:50:30,306] build: GCP13 being used as marker
+[2016-07-16 14:50:30,306] build: MARKER
+[2016-07-16 14:50:30,306] build: C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\gcp.txt
+[2016-07-16 14:50:30,306] build: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,306] build: [0.0, 0.0, 1.0]
+[2016-07-16 14:50:30,306] build: [1.0, 1.0, 1.0]
+[2016-07-16 14:50:30,306] RotatePoint:  PRE
+[2016-07-16 14:50:30,306] RotatePoint: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,306] RotatePoint:  POST
+[2016-07-16 14:50:30,306] RotatePoint: [0.0, 0.0, 1.0]
+[2016-07-16 14:50:30,307] RotatePoint:  PRE
+[2016-07-16 14:50:30,307] RotatePoint: [1.0, 1.0, 0.0]
+[2016-07-16 14:50:30,307] RotatePoint:  POST
+[2016-07-16 14:50:30,307] RotatePoint: [1.0, 1.0, 1.0]
+[2016-07-16 14:50:30,307] RotatePoint:  PRE
+[2016-07-16 14:50:30,307] RotatePoint: [1.0, -1.0, 0.0]
+[2016-07-16 14:50:30,307] RotatePoint:  POST
+[2016-07-16 14:50:30,307] RotatePoint: [1.0, -1.0, 1.0]
+[2016-07-16 14:50:30,307] RotatePoint:  PRE
+[2016-07-16 14:50:30,307] RotatePoint: [-1.0, 1.0, 0.0]
+[2016-07-16 14:50:30,307] RotatePoint:  POST
+[2016-07-16 14:50:30,307] RotatePoint: [-1.0, 1.0, 1.0]
+[2016-07-16 14:50:30,307] RotatePoint:  PRE
+[2016-07-16 14:50:30,307] RotatePoint: [-1.0, -1.0, 0.0]
+[2016-07-16 14:50:30,308] RotatePoint:  POST
+[2016-07-16 14:50:30,308] RotatePoint: [-1.0, -1.0, 1.0]
+[2016-07-16 14:50:30,309] build: Added GCP14 to scene
+[2016-07-16 14:50:30,310] build: GCP14 isControl = 1
+[2016-07-16 14:50:30,310] build: GCP14 being used as marker
+[2016-07-16 14:50:30,310] build: MARKER
+[2016-07-16 14:50:30,310] build: C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\gcp.txt
+[2016-07-16 14:50:30,310] build: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,310] build: [0.0, 25.0, 1.0]
+[2016-07-16 14:50:30,310] build: [1.0, 1.0, 1.0]
+[2016-07-16 14:50:30,310] RotatePoint:  PRE
+[2016-07-16 14:50:30,310] RotatePoint: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,310] RotatePoint:  POST
+[2016-07-16 14:50:30,310] RotatePoint: [0.0, 25.0, 1.0]
+[2016-07-16 14:50:30,311] RotatePoint:  PRE
+[2016-07-16 14:50:30,311] RotatePoint: [1.0, 1.0, 0.0]
+[2016-07-16 14:50:30,311] RotatePoint:  POST
+[2016-07-16 14:50:30,311] RotatePoint: [1.0, 26.0, 1.0]
+[2016-07-16 14:50:30,311] RotatePoint:  PRE
+[2016-07-16 14:50:30,311] RotatePoint: [1.0, -1.0, 0.0]
+[2016-07-16 14:50:30,311] RotatePoint:  POST
+[2016-07-16 14:50:30,311] RotatePoint: [1.0, 24.0, 1.0]
+[2016-07-16 14:50:30,311] RotatePoint:  PRE
+[2016-07-16 14:50:30,311] RotatePoint: [-1.0, 1.0, 0.0]
+[2016-07-16 14:50:30,311] RotatePoint:  POST
+[2016-07-16 14:50:30,311] RotatePoint: [-1.0, 26.0, 1.0]
+[2016-07-16 14:50:30,311] RotatePoint:  PRE
+[2016-07-16 14:50:30,311] RotatePoint: [-1.0, -1.0, 0.0]
+[2016-07-16 14:50:30,311] RotatePoint:  POST
+[2016-07-16 14:50:30,311] RotatePoint: [-1.0, 24.0, 1.0]
+[2016-07-16 14:50:30,313] build: Added GCP15 to scene
+[2016-07-16 14:50:30,314] build: GCP15 isControl = 1
+[2016-07-16 14:50:30,314] build: GCP15 being used as marker
+[2016-07-16 14:50:30,314] build: MARKER
+[2016-07-16 14:50:30,314] build: C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\gcp.txt
+[2016-07-16 14:50:30,314] build: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,314] build: [0.0, 50.0, 1.0]
+[2016-07-16 14:50:30,314] build: [1.0, 1.0, 1.0]
+[2016-07-16 14:50:30,314] RotatePoint:  PRE
+[2016-07-16 14:50:30,314] RotatePoint: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,314] RotatePoint:  POST
+[2016-07-16 14:50:30,314] RotatePoint: [0.0, 50.0, 1.0]
+[2016-07-16 14:50:30,315] RotatePoint:  PRE
+[2016-07-16 14:50:30,315] RotatePoint: [1.0, 1.0, 0.0]
+[2016-07-16 14:50:30,315] RotatePoint:  POST
+[2016-07-16 14:50:30,315] RotatePoint: [1.0, 51.0, 1.0]
+[2016-07-16 14:50:30,315] RotatePoint:  PRE
+[2016-07-16 14:50:30,315] RotatePoint: [1.0, -1.0, 0.0]
+[2016-07-16 14:50:30,315] RotatePoint:  POST
+[2016-07-16 14:50:30,315] RotatePoint: [1.0, 49.0, 1.0]
+[2016-07-16 14:50:30,315] RotatePoint:  PRE
+[2016-07-16 14:50:30,315] RotatePoint: [-1.0, 1.0, 0.0]
+[2016-07-16 14:50:30,315] RotatePoint:  POST
+[2016-07-16 14:50:30,315] RotatePoint: [-1.0, 51.0, 1.0]
+[2016-07-16 14:50:30,315] RotatePoint:  PRE
+[2016-07-16 14:50:30,315] RotatePoint: [-1.0, -1.0, 0.0]
+[2016-07-16 14:50:30,315] RotatePoint:  POST
+[2016-07-16 14:50:30,315] RotatePoint: [-1.0, 49.0, 1.0]
+[2016-07-16 14:50:30,317] build: Added GCP16 to scene
+[2016-07-16 14:50:30,317] build: GCP16 isControl = 1
+[2016-07-16 14:50:30,317] build: GCP16 being used as marker
+[2016-07-16 14:50:30,318] build: MARKER
+[2016-07-16 14:50:30,318] build: C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\gcp.txt
+[2016-07-16 14:50:30,318] build: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,318] build: [25.0, -50.0, 1.0]
+[2016-07-16 14:50:30,318] build: [1.0, 1.0, 1.0]
+[2016-07-16 14:50:30,318] RotatePoint:  PRE
+[2016-07-16 14:50:30,318] RotatePoint: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,318] RotatePoint:  POST
+[2016-07-16 14:50:30,318] RotatePoint: [25.0, -50.0, 1.0]
+[2016-07-16 14:50:30,318] RotatePoint:  PRE
+[2016-07-16 14:50:30,318] RotatePoint: [1.0, 1.0, 0.0]
+[2016-07-16 14:50:30,318] RotatePoint:  POST
+[2016-07-16 14:50:30,318] RotatePoint: [26.0, -49.0, 1.0]
+[2016-07-16 14:50:30,319] RotatePoint:  PRE
+[2016-07-16 14:50:30,319] RotatePoint: [1.0, -1.0, 0.0]
+[2016-07-16 14:50:30,319] RotatePoint:  POST
+[2016-07-16 14:50:30,319] RotatePoint: [26.0, -51.0, 1.0]
+[2016-07-16 14:50:30,319] RotatePoint:  PRE
+[2016-07-16 14:50:30,319] RotatePoint: [-1.0, 1.0, 0.0]
+[2016-07-16 14:50:30,319] RotatePoint:  POST
+[2016-07-16 14:50:30,319] RotatePoint: [24.0, -49.0, 1.0]
+[2016-07-16 14:50:30,319] RotatePoint:  PRE
+[2016-07-16 14:50:30,319] RotatePoint: [-1.0, -1.0, 0.0]
+[2016-07-16 14:50:30,319] RotatePoint:  POST
+[2016-07-16 14:50:30,319] RotatePoint: [24.0, -51.0, 1.0]
+[2016-07-16 14:50:30,321] build: Added GCP17 to scene
+[2016-07-16 14:50:30,321] build: GCP17 isControl = 1
+[2016-07-16 14:50:30,321] build: GCP17 being used as marker
+[2016-07-16 14:50:30,321] build: MARKER
+[2016-07-16 14:50:30,321] build: C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\gcp.txt
+[2016-07-16 14:50:30,321] build: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,322] build: [25.0, -25.0, 1.0]
+[2016-07-16 14:50:30,322] build: [1.0, 1.0, 1.0]
+[2016-07-16 14:50:30,322] RotatePoint:  PRE
+[2016-07-16 14:50:30,322] RotatePoint: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,322] RotatePoint:  POST
+[2016-07-16 14:50:30,322] RotatePoint: [25.0, -25.0, 1.0]
+[2016-07-16 14:50:30,322] RotatePoint:  PRE
+[2016-07-16 14:50:30,322] RotatePoint: [1.0, 1.0, 0.0]
+[2016-07-16 14:50:30,322] RotatePoint:  POST
+[2016-07-16 14:50:30,322] RotatePoint: [26.0, -24.0, 1.0]
+[2016-07-16 14:50:30,322] RotatePoint:  PRE
+[2016-07-16 14:50:30,322] RotatePoint: [1.0, -1.0, 0.0]
+[2016-07-16 14:50:30,322] RotatePoint:  POST
+[2016-07-16 14:50:30,322] RotatePoint: [26.0, -26.0, 1.0]
+[2016-07-16 14:50:30,323] RotatePoint:  PRE
+[2016-07-16 14:50:30,323] RotatePoint: [-1.0, 1.0, 0.0]
+[2016-07-16 14:50:30,323] RotatePoint:  POST
+[2016-07-16 14:50:30,323] RotatePoint: [24.0, -24.0, 1.0]
+[2016-07-16 14:50:30,323] RotatePoint:  PRE
+[2016-07-16 14:50:30,323] RotatePoint: [-1.0, -1.0, 0.0]
+[2016-07-16 14:50:30,323] RotatePoint:  POST
+[2016-07-16 14:50:30,323] RotatePoint: [24.0, -26.0, 1.0]
+[2016-07-16 14:50:30,325] build: Added GCP18 to scene
+[2016-07-16 14:50:30,325] build: GCP18 isControl = 1
+[2016-07-16 14:50:30,325] build: GCP18 being used as marker
+[2016-07-16 14:50:30,325] build: MARKER
+[2016-07-16 14:50:30,325] build: C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\gcp.txt
+[2016-07-16 14:50:30,325] build: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,325] build: [25.0, 0.0, 1.0]
+[2016-07-16 14:50:30,326] build: [1.0, 1.0, 1.0]
+[2016-07-16 14:50:30,326] RotatePoint:  PRE
+[2016-07-16 14:50:30,326] RotatePoint: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,326] RotatePoint:  POST
+[2016-07-16 14:50:30,326] RotatePoint: [25.0, 0.0, 1.0]
+[2016-07-16 14:50:30,326] RotatePoint:  PRE
+[2016-07-16 14:50:30,326] RotatePoint: [1.0, 1.0, 0.0]
+[2016-07-16 14:50:30,326] RotatePoint:  POST
+[2016-07-16 14:50:30,326] RotatePoint: [26.0, 1.0, 1.0]
+[2016-07-16 14:50:30,326] RotatePoint:  PRE
+[2016-07-16 14:50:30,326] RotatePoint: [1.0, -1.0, 0.0]
+[2016-07-16 14:50:30,326] RotatePoint:  POST
+[2016-07-16 14:50:30,326] RotatePoint: [26.0, -1.0, 1.0]
+[2016-07-16 14:50:30,326] RotatePoint:  PRE
+[2016-07-16 14:50:30,327] RotatePoint: [-1.0, 1.0, 0.0]
+[2016-07-16 14:50:30,327] RotatePoint:  POST
+[2016-07-16 14:50:30,327] RotatePoint: [24.0, 1.0, 1.0]
+[2016-07-16 14:50:30,327] RotatePoint:  PRE
+[2016-07-16 14:50:30,327] RotatePoint: [-1.0, -1.0, 0.0]
+[2016-07-16 14:50:30,327] RotatePoint:  POST
+[2016-07-16 14:50:30,327] RotatePoint: [24.0, -1.0, 1.0]
+[2016-07-16 14:50:30,329] build: Added GCP19 to scene
+[2016-07-16 14:50:30,329] build: GCP19 isControl = 1
+[2016-07-16 14:50:30,329] build: GCP19 being used as marker
+[2016-07-16 14:50:30,329] build: MARKER
+[2016-07-16 14:50:30,329] build: C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\gcp.txt
+[2016-07-16 14:50:30,329] build: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,329] build: [25.0, 25.0, 1.0]
+[2016-07-16 14:50:30,330] build: [1.0, 1.0, 1.0]
+[2016-07-16 14:50:30,330] RotatePoint:  PRE
+[2016-07-16 14:50:30,330] RotatePoint: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,330] RotatePoint:  POST
+[2016-07-16 14:50:30,330] RotatePoint: [25.0, 25.0, 1.0]
+[2016-07-16 14:50:30,330] RotatePoint:  PRE
+[2016-07-16 14:50:30,330] RotatePoint: [1.0, 1.0, 0.0]
+[2016-07-16 14:50:30,330] RotatePoint:  POST
+[2016-07-16 14:50:30,330] RotatePoint: [26.0, 26.0, 1.0]
+[2016-07-16 14:50:30,330] RotatePoint:  PRE
+[2016-07-16 14:50:30,330] RotatePoint: [1.0, -1.0, 0.0]
+[2016-07-16 14:50:30,330] RotatePoint:  POST
+[2016-07-16 14:50:30,330] RotatePoint: [26.0, 24.0, 1.0]
+[2016-07-16 14:50:30,331] RotatePoint:  PRE
+[2016-07-16 14:50:30,331] RotatePoint: [-1.0, 1.0, 0.0]
+[2016-07-16 14:50:30,331] RotatePoint:  POST
+[2016-07-16 14:50:30,331] RotatePoint: [24.0, 26.0, 1.0]
+[2016-07-16 14:50:30,331] RotatePoint:  PRE
+[2016-07-16 14:50:30,331] RotatePoint: [-1.0, -1.0, 0.0]
+[2016-07-16 14:50:30,331] RotatePoint:  POST
+[2016-07-16 14:50:30,331] RotatePoint: [24.0, 24.0, 1.0]
+[2016-07-16 14:50:30,333] build: Added GCP20 to scene
+[2016-07-16 14:50:30,333] build: GCP20 isControl = 1
+[2016-07-16 14:50:30,333] build: GCP20 being used as marker
+[2016-07-16 14:50:30,334] build: MARKER
+[2016-07-16 14:50:30,334] build: C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\gcp.txt
+[2016-07-16 14:50:30,334] build: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,334] build: [25.0, 50.0, 1.0]
+[2016-07-16 14:50:30,334] build: [1.0, 1.0, 1.0]
+[2016-07-16 14:50:30,334] RotatePoint:  PRE
+[2016-07-16 14:50:30,334] RotatePoint: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,334] RotatePoint:  POST
+[2016-07-16 14:50:30,334] RotatePoint: [25.0, 50.0, 1.0]
+[2016-07-16 14:50:30,334] RotatePoint:  PRE
+[2016-07-16 14:50:30,334] RotatePoint: [1.0, 1.0, 0.0]
+[2016-07-16 14:50:30,334] RotatePoint:  POST
+[2016-07-16 14:50:30,334] RotatePoint: [26.0, 51.0, 1.0]
+[2016-07-16 14:50:30,335] RotatePoint:  PRE
+[2016-07-16 14:50:30,335] RotatePoint: [1.0, -1.0, 0.0]
+[2016-07-16 14:50:30,335] RotatePoint:  POST
+[2016-07-16 14:50:30,335] RotatePoint: [26.0, 49.0, 1.0]
+[2016-07-16 14:50:30,335] RotatePoint:  PRE
+[2016-07-16 14:50:30,335] RotatePoint: [-1.0, 1.0, 0.0]
+[2016-07-16 14:50:30,335] RotatePoint:  POST
+[2016-07-16 14:50:30,335] RotatePoint: [24.0, 51.0, 1.0]
+[2016-07-16 14:50:30,335] RotatePoint:  PRE
+[2016-07-16 14:50:30,335] RotatePoint: [-1.0, -1.0, 0.0]
+[2016-07-16 14:50:30,335] RotatePoint:  POST
+[2016-07-16 14:50:30,335] RotatePoint: [24.0, 49.0, 1.0]
+[2016-07-16 14:50:30,337] build: Added GCP21 to scene
+[2016-07-16 14:50:30,337] build: GCP21 isControl = 1
+[2016-07-16 14:50:30,338] build: GCP21 being used as marker
+[2016-07-16 14:50:30,338] build: MARKER
+[2016-07-16 14:50:30,338] build: C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\gcp.txt
+[2016-07-16 14:50:30,338] build: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,338] build: [50.0, -50.0, 1.0]
+[2016-07-16 14:50:30,338] build: [1.0, 1.0, 1.0]
+[2016-07-16 14:50:30,338] RotatePoint:  PRE
+[2016-07-16 14:50:30,338] RotatePoint: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,338] RotatePoint:  POST
+[2016-07-16 14:50:30,338] RotatePoint: [50.0, -50.0, 1.0]
+[2016-07-16 14:50:30,338] RotatePoint:  PRE
+[2016-07-16 14:50:30,339] RotatePoint: [1.0, 1.0, 0.0]
+[2016-07-16 14:50:30,339] RotatePoint:  POST
+[2016-07-16 14:50:30,339] RotatePoint: [51.0, -49.0, 1.0]
+[2016-07-16 14:50:30,339] RotatePoint:  PRE
+[2016-07-16 14:50:30,339] RotatePoint: [1.0, -1.0, 0.0]
+[2016-07-16 14:50:30,339] RotatePoint:  POST
+[2016-07-16 14:50:30,339] RotatePoint: [51.0, -51.0, 1.0]
+[2016-07-16 14:50:30,339] RotatePoint:  PRE
+[2016-07-16 14:50:30,339] RotatePoint: [-1.0, 1.0, 0.0]
+[2016-07-16 14:50:30,339] RotatePoint:  POST
+[2016-07-16 14:50:30,339] RotatePoint: [49.0, -49.0, 1.0]
+[2016-07-16 14:50:30,339] RotatePoint:  PRE
+[2016-07-16 14:50:30,339] RotatePoint: [-1.0, -1.0, 0.0]
+[2016-07-16 14:50:30,339] RotatePoint:  POST
+[2016-07-16 14:50:30,339] RotatePoint: [49.0, -51.0, 1.0]
+[2016-07-16 14:50:30,341] build: Added GCP22 to scene
+[2016-07-16 14:50:30,342] build: GCP22 isControl = 1
+[2016-07-16 14:50:30,342] build: GCP22 being used as marker
+[2016-07-16 14:50:30,342] build: MARKER
+[2016-07-16 14:50:30,342] build: C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\gcp.txt
+[2016-07-16 14:50:30,342] build: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,342] build: [50.0, -25.0, 1.0]
+[2016-07-16 14:50:30,342] build: [1.0, 1.0, 1.0]
+[2016-07-16 14:50:30,342] RotatePoint:  PRE
+[2016-07-16 14:50:30,342] RotatePoint: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,342] RotatePoint:  POST
+[2016-07-16 14:50:30,343] RotatePoint: [50.0, -25.0, 1.0]
+[2016-07-16 14:50:30,343] RotatePoint:  PRE
+[2016-07-16 14:50:30,343] RotatePoint: [1.0, 1.0, 0.0]
+[2016-07-16 14:50:30,343] RotatePoint:  POST
+[2016-07-16 14:50:30,343] RotatePoint: [51.0, -24.0, 1.0]
+[2016-07-16 14:50:30,343] RotatePoint:  PRE
+[2016-07-16 14:50:30,343] RotatePoint: [1.0, -1.0, 0.0]
+[2016-07-16 14:50:30,343] RotatePoint:  POST
+[2016-07-16 14:50:30,343] RotatePoint: [51.0, -26.0, 1.0]
+[2016-07-16 14:50:30,343] RotatePoint:  PRE
+[2016-07-16 14:50:30,343] RotatePoint: [-1.0, 1.0, 0.0]
+[2016-07-16 14:50:30,343] RotatePoint:  POST
+[2016-07-16 14:50:30,343] RotatePoint: [49.0, -24.0, 1.0]
+[2016-07-16 14:50:30,343] RotatePoint:  PRE
+[2016-07-16 14:50:30,343] RotatePoint: [-1.0, -1.0, 0.0]
+[2016-07-16 14:50:30,343] RotatePoint:  POST
+[2016-07-16 14:50:30,344] RotatePoint: [49.0, -26.0, 1.0]
+[2016-07-16 14:50:30,346] build: Added GCP23 to scene
+[2016-07-16 14:50:30,346] build: GCP23 isControl = 1
+[2016-07-16 14:50:30,346] build: GCP23 being used as marker
+[2016-07-16 14:50:30,346] build: MARKER
+[2016-07-16 14:50:30,346] build: C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\gcp.txt
+[2016-07-16 14:50:30,346] build: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,346] build: [50.0, 0.0, 1.0]
+[2016-07-16 14:50:30,346] build: [1.0, 1.0, 1.0]
+[2016-07-16 14:50:30,347] RotatePoint:  PRE
+[2016-07-16 14:50:30,347] RotatePoint: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,347] RotatePoint:  POST
+[2016-07-16 14:50:30,347] RotatePoint: [50.0, 0.0, 1.0]
+[2016-07-16 14:50:30,347] RotatePoint:  PRE
+[2016-07-16 14:50:30,347] RotatePoint: [1.0, 1.0, 0.0]
+[2016-07-16 14:50:30,347] RotatePoint:  POST
+[2016-07-16 14:50:30,347] RotatePoint: [51.0, 1.0, 1.0]
+[2016-07-16 14:50:30,347] RotatePoint:  PRE
+[2016-07-16 14:50:30,347] RotatePoint: [1.0, -1.0, 0.0]
+[2016-07-16 14:50:30,347] RotatePoint:  POST
+[2016-07-16 14:50:30,347] RotatePoint: [51.0, -1.0, 1.0]
+[2016-07-16 14:50:30,347] RotatePoint:  PRE
+[2016-07-16 14:50:30,347] RotatePoint: [-1.0, 1.0, 0.0]
+[2016-07-16 14:50:30,347] RotatePoint:  POST
+[2016-07-16 14:50:30,348] RotatePoint: [49.0, 1.0, 1.0]
+[2016-07-16 14:50:30,348] RotatePoint:  PRE
+[2016-07-16 14:50:30,348] RotatePoint: [-1.0, -1.0, 0.0]
+[2016-07-16 14:50:30,348] RotatePoint:  POST
+[2016-07-16 14:50:30,348] RotatePoint: [49.0, -1.0, 1.0]
+[2016-07-16 14:50:30,350] build: Added GCP24 to scene
+[2016-07-16 14:50:30,350] build: GCP24 isControl = 1
+[2016-07-16 14:50:30,350] build: GCP24 being used as marker
+[2016-07-16 14:50:30,350] build: MARKER
+[2016-07-16 14:50:30,350] build: C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\gcp.txt
+[2016-07-16 14:50:30,350] build: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,351] build: [50.0, 25.0, 1.0]
+[2016-07-16 14:50:30,351] build: [1.0, 1.0, 1.0]
+[2016-07-16 14:50:30,351] RotatePoint:  PRE
+[2016-07-16 14:50:30,351] RotatePoint: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,351] RotatePoint:  POST
+[2016-07-16 14:50:30,351] RotatePoint: [50.0, 25.0, 1.0]
+[2016-07-16 14:50:30,351] RotatePoint:  PRE
+[2016-07-16 14:50:30,351] RotatePoint: [1.0, 1.0, 0.0]
+[2016-07-16 14:50:30,351] RotatePoint:  POST
+[2016-07-16 14:50:30,351] RotatePoint: [51.0, 26.0, 1.0]
+[2016-07-16 14:50:30,351] RotatePoint:  PRE
+[2016-07-16 14:50:30,351] RotatePoint: [1.0, -1.0, 0.0]
+[2016-07-16 14:50:30,351] RotatePoint:  POST
+[2016-07-16 14:50:30,351] RotatePoint: [51.0, 24.0, 1.0]
+[2016-07-16 14:50:30,352] RotatePoint:  PRE
+[2016-07-16 14:50:30,352] RotatePoint: [-1.0, 1.0, 0.0]
+[2016-07-16 14:50:30,352] RotatePoint:  POST
+[2016-07-16 14:50:30,352] RotatePoint: [49.0, 26.0, 1.0]
+[2016-07-16 14:50:30,352] RotatePoint:  PRE
+[2016-07-16 14:50:30,352] RotatePoint: [-1.0, -1.0, 0.0]
+[2016-07-16 14:50:30,352] RotatePoint:  POST
+[2016-07-16 14:50:30,352] RotatePoint: [49.0, 24.0, 1.0]
+[2016-07-16 14:50:30,354] build: Added GCP25 to scene
+[2016-07-16 14:50:30,354] build: GCP25 isControl = 1
+[2016-07-16 14:50:30,354] build: GCP25 being used as marker
+[2016-07-16 14:50:30,354] build: MARKER
+[2016-07-16 14:50:30,354] build: C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\gcp.txt
+[2016-07-16 14:50:30,355] build: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,355] build: [50.0, 50.0, 1.0]
+[2016-07-16 14:50:30,355] build: [1.0, 1.0, 1.0]
+[2016-07-16 14:50:30,355] RotatePoint:  PRE
+[2016-07-16 14:50:30,355] RotatePoint: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,355] RotatePoint:  POST
+[2016-07-16 14:50:30,355] RotatePoint: [50.0, 50.0, 1.0]
+[2016-07-16 14:50:30,355] RotatePoint:  PRE
+[2016-07-16 14:50:30,355] RotatePoint: [1.0, 1.0, 0.0]
+[2016-07-16 14:50:30,355] RotatePoint:  POST
+[2016-07-16 14:50:30,355] RotatePoint: [51.0, 51.0, 1.0]
+[2016-07-16 14:50:30,355] RotatePoint:  PRE
+[2016-07-16 14:50:30,355] RotatePoint: [1.0, -1.0, 0.0]
+[2016-07-16 14:50:30,355] RotatePoint:  POST
+[2016-07-16 14:50:30,356] RotatePoint: [51.0, 49.0, 1.0]
+[2016-07-16 14:50:30,356] RotatePoint:  PRE
+[2016-07-16 14:50:30,356] RotatePoint: [-1.0, 1.0, 0.0]
+[2016-07-16 14:50:30,356] RotatePoint:  POST
+[2016-07-16 14:50:30,356] RotatePoint: [49.0, 51.0, 1.0]
+[2016-07-16 14:50:30,356] RotatePoint:  PRE
+[2016-07-16 14:50:30,356] RotatePoint: [-1.0, -1.0, 0.0]
+[2016-07-16 14:50:30,356] RotatePoint:  POST
+[2016-07-16 14:50:30,356] RotatePoint: [49.0, 49.0, 1.0]
+[2016-07-16 14:50:30,358] build: Added dummy1 to scene
+[2016-07-16 14:50:30,358] build: dummy1 isControl = 0
+[2016-07-16 14:50:30,358] build: dummy1 being used as marker
+[2016-07-16 14:50:30,359] build: MARKER
+[2016-07-16 14:50:30,359] build: C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\dummy.txt
+[2016-07-16 14:50:30,359] build: [3.141592653589793, 0.03490658503988659, 0.05235987755982988]
+[2016-07-16 14:50:30,359] build: [-10.0, 0.0, 1.0]
+[2016-07-16 14:50:30,359] build: [3.0, 3.0, 3.0]
+[2016-07-16 14:50:30,360] RotatePoint:  PRE
+[2016-07-16 14:50:30,360] RotatePoint: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,360] RotatePoint:  POST
+[2016-07-16 14:50:30,360] RotatePoint: [-10.0, 0.0, 1.0]
+[2016-07-16 14:50:30,360] RotatePoint:  PRE
+[2016-07-16 14:50:30,360] RotatePoint: [0.0, 0.1, 0.0]
+[2016-07-16 14:50:30,360] RotatePoint:  POST
+[2016-07-16 14:50:30,360] RotatePoint: [-10.015691222377741, -0.29958886042637217, 0.99945205044030316]
+[2016-07-16 14:50:30,360] RotatePoint:  PRE
+[2016-07-16 14:50:30,360] RotatePoint: [0.0, 0.2, 0.0]
+[2016-07-16 14:50:30,360] RotatePoint:  POST
+[2016-07-16 14:50:30,360] RotatePoint: [-10.031382444755483, -0.59917772085274434, 0.99890410088060633]
+[2016-07-16 14:50:30,360] RotatePoint:  PRE
+[2016-07-16 14:50:30,361] RotatePoint: [0.0, 0.3, 0.0]
+[2016-07-16 14:50:30,361] RotatePoint:  POST
+[2016-07-16 14:50:30,361] RotatePoint: [-10.047073667133224, -0.89876658127911635, 0.99835615132090949]
+[2016-07-16 14:50:30,361] RotatePoint:  PRE
+[2016-07-16 14:50:30,361] RotatePoint: [0.0, 0.4, 0.0]
+[2016-07-16 14:50:30,361] RotatePoint:  POST
+[2016-07-16 14:50:30,361] RotatePoint: [-10.062764889510966, -1.1983554417054887, 0.99780820176121277]
+[2016-07-16 14:50:30,361] RotatePoint:  PRE
+[2016-07-16 14:50:30,361] RotatePoint: [0.0, 0.5, 0.0]
+[2016-07-16 14:50:30,361] RotatePoint:  POST
+[2016-07-16 14:50:30,361] RotatePoint: [-10.078456111888705, -1.4979443021318608, 0.99726025220151593]
+[2016-07-16 14:50:30,361] RotatePoint:  PRE
+[2016-07-16 14:50:30,361] RotatePoint: [0.0, 0.6, 0.0]
+[2016-07-16 14:50:30,361] RotatePoint:  POST
+[2016-07-16 14:50:30,361] RotatePoint: [-10.094147334266447, -1.7975331625582327, 0.99671230264181909]
+[2016-07-16 14:50:30,361] RotatePoint:  PRE
+[2016-07-16 14:50:30,362] RotatePoint: [0.0, 0.7, 0.0]
+[2016-07-16 14:50:30,362] RotatePoint:  POST
+[2016-07-16 14:50:30,362] RotatePoint: [-10.109838556644188, -2.0971220229846046, 0.99616435308212226]
+[2016-07-16 14:50:30,362] RotatePoint:  PRE
+[2016-07-16 14:50:30,362] RotatePoint: [0.0, 0.8, 0.0]
+[2016-07-16 14:50:30,362] RotatePoint:  POST
+[2016-07-16 14:50:30,362] RotatePoint: [-10.12552977902193, -2.3967108834109774, 0.99561640352242542]
+[2016-07-16 14:50:30,362] RotatePoint:  PRE
+[2016-07-16 14:50:30,362] RotatePoint: [0.0, 0.9, 0.0]
+[2016-07-16 14:50:30,362] RotatePoint:  POST
+[2016-07-16 14:50:30,362] RotatePoint: [-10.141221001399671, -2.6962997438373497, 0.99506845396272858]
+[2016-07-16 14:50:30,362] RotatePoint:  PRE
+[2016-07-16 14:50:30,362] RotatePoint: [0.0, 1.0, 0.0]
+[2016-07-16 14:50:30,362] RotatePoint:  POST
+[2016-07-16 14:50:30,362] RotatePoint: [-10.156912223777413, -2.9958886042637216, 0.99452050440303186]
+[2016-07-16 14:50:30,362] RotatePoint:  PRE
+[2016-07-16 14:50:30,363] RotatePoint: [0.1, 0.0, 0.0]
+[2016-07-16 14:50:30,363] RotatePoint:  POST
+[2016-07-16 14:50:30,363] RotatePoint: [-9.7005936410127802, -0.015700786872883149, 1.0104555004465563]
+[2016-07-16 14:50:30,363] RotatePoint:  PRE
+[2016-07-16 14:50:30,363] RotatePoint: [0.1, 0.1, 0.0]
+[2016-07-16 14:50:30,363] RotatePoint:  POST
+[2016-07-16 14:50:30,363] RotatePoint: [-9.7162848633905199, -0.31528964729925535, 1.0099075508868594]
+[2016-07-16 14:50:30,363] RotatePoint:  PRE
+[2016-07-16 14:50:30,363] RotatePoint: [0.1, 0.2, 0.0]
+[2016-07-16 14:50:30,363] RotatePoint:  POST
+[2016-07-16 14:50:30,363] RotatePoint: [-9.7319760857682613, -0.61487850772562747, 1.0093596013271626]
+[2016-07-16 14:50:30,363] RotatePoint:  PRE
+[2016-07-16 14:50:30,363] RotatePoint: [0.1, 0.3, 0.0]
+[2016-07-16 14:50:30,363] RotatePoint:  POST
+[2016-07-16 14:50:30,363] RotatePoint: [-9.7476673081460028, -0.91446736815199947, 1.0088116517674657]
+[2016-07-16 14:50:30,363] RotatePoint:  PRE
+[2016-07-16 14:50:30,363] RotatePoint: [0.1, 0.4, 0.0]
+[2016-07-16 14:50:30,364] RotatePoint:  POST
+[2016-07-16 14:50:30,364] RotatePoint: [-9.7633585305237442, -1.2140562285783718, 1.008263702207769]
+[2016-07-16 14:50:30,364] RotatePoint:  PRE
+[2016-07-16 14:50:30,364] RotatePoint: [0.1, 0.5, 0.0]
+[2016-07-16 14:50:30,364] RotatePoint:  POST
+[2016-07-16 14:50:30,364] RotatePoint: [-9.7790497529014857, -1.5136450890047439, 1.007715752648072]
+[2016-07-16 14:50:30,364] RotatePoint:  PRE
+[2016-07-16 14:50:30,364] RotatePoint: [0.1, 0.6, 0.0]
+[2016-07-16 14:50:30,364] RotatePoint:  POST
+[2016-07-16 14:50:30,364] RotatePoint: [-9.7947409752792272, -1.8132339494311158, 1.0071678030883753]
+[2016-07-16 14:50:30,364] RotatePoint:  PRE
+[2016-07-16 14:50:30,364] RotatePoint: [0.1, 0.7, 0.0]
+[2016-07-16 14:50:30,364] RotatePoint:  POST
+[2016-07-16 14:50:30,364] RotatePoint: [-9.8104321976569686, -2.1128228098574877, 1.0066198535286786]
+[2016-07-16 14:50:30,364] RotatePoint:  PRE
+[2016-07-16 14:50:30,364] RotatePoint: [0.1, 0.8, 0.0]
+[2016-07-16 14:50:30,365] RotatePoint:  POST
+[2016-07-16 14:50:30,365] RotatePoint: [-9.8261234200347101, -2.4124116702838605, 1.0060719039689816]
+[2016-07-16 14:50:30,365] RotatePoint:  PRE
+[2016-07-16 14:50:30,365] RotatePoint: [0.1, 0.9, 0.0]
+[2016-07-16 14:50:30,365] RotatePoint:  POST
+[2016-07-16 14:50:30,365] RotatePoint: [-9.8418146424124515, -2.7120005307102328, 1.0055239544092849]
+[2016-07-16 14:50:30,365] RotatePoint:  PRE
+[2016-07-16 14:50:30,365] RotatePoint: [0.1, 1.0, 0.0]
+[2016-07-16 14:50:30,365] RotatePoint:  POST
+[2016-07-16 14:50:30,365] RotatePoint: [-9.8575058647901912, -3.0115893911366047, 1.0049760048495879]
+[2016-07-16 14:50:30,365] RotatePoint:  PRE
+[2016-07-16 14:50:30,365] RotatePoint: [0.2, 0.0, 0.0]
+[2016-07-16 14:50:30,365] RotatePoint:  POST
+[2016-07-16 14:50:30,365] RotatePoint: [-9.4011872820255586, -0.031401573745766298, 1.0209110008931124]
+[2016-07-16 14:50:30,365] RotatePoint:  PRE
+[2016-07-16 14:50:30,365] RotatePoint: [0.2, 0.1, 0.0]
+[2016-07-16 14:50:30,365] RotatePoint:  POST
+[2016-07-16 14:50:30,366] RotatePoint: [-9.4168785044033001, -0.33099043417213847, 1.0203630513334156]
+[2016-07-16 14:50:30,366] RotatePoint:  PRE
+[2016-07-16 14:50:30,366] RotatePoint: [0.2, 0.2, 0.0]
+[2016-07-16 14:50:30,366] RotatePoint:  POST
+[2016-07-16 14:50:30,366] RotatePoint: [-9.4325697267810416, -0.6305792945985107, 1.0198151017737187]
+[2016-07-16 14:50:30,366] RotatePoint:  PRE
+[2016-07-16 14:50:30,366] RotatePoint: [0.2, 0.3, 0.0]
+[2016-07-16 14:50:30,366] RotatePoint:  POST
+[2016-07-16 14:50:30,366] RotatePoint: [-9.448260949158783, -0.93016815502488259, 1.019267152214022]
+[2016-07-16 14:50:30,366] RotatePoint:  PRE
+[2016-07-16 14:50:30,366] RotatePoint: [0.2, 0.4, 0.0]
+[2016-07-16 14:50:30,366] RotatePoint:  POST
+[2016-07-16 14:50:30,366] RotatePoint: [-9.4639521715365245, -1.2297570154512549, 1.018719202654325]
+[2016-07-16 14:50:30,366] RotatePoint:  PRE
+[2016-07-16 14:50:30,366] RotatePoint: [0.2, 0.5, 0.0]
+[2016-07-16 14:50:30,367] RotatePoint:  POST
+[2016-07-16 14:50:30,367] RotatePoint: [-9.4796433939142659, -1.529345875877627, 1.0181712530946283]
+[2016-07-16 14:50:30,367] RotatePoint:  PRE
+[2016-07-16 14:50:30,367] RotatePoint: [0.2, 0.6, 0.0]
+[2016-07-16 14:50:30,367] RotatePoint:  POST
+[2016-07-16 14:50:30,367] RotatePoint: [-9.4953346162920056, -1.8289347363039989, 1.0176233035349316]
+[2016-07-16 14:50:30,367] RotatePoint:  PRE
+[2016-07-16 14:50:30,367] RotatePoint: [0.2, 0.7, 0.0]
+[2016-07-16 14:50:30,367] RotatePoint:  POST
+[2016-07-16 14:50:30,367] RotatePoint: [-9.511025838669747, -2.1285235967303708, 1.0170753539752346]
+[2016-07-16 14:50:30,367] RotatePoint:  PRE
+[2016-07-16 14:50:30,367] RotatePoint: [0.2, 0.8, 0.0]
+[2016-07-16 14:50:30,367] RotatePoint:  POST
+[2016-07-16 14:50:30,367] RotatePoint: [-9.5267170610474885, -2.4281124571567436, 1.0165274044155379]
+[2016-07-16 14:50:30,367] RotatePoint:  PRE
+[2016-07-16 14:50:30,367] RotatePoint: [0.2, 0.9, 0.0]
+[2016-07-16 14:50:30,367] RotatePoint:  POST
+[2016-07-16 14:50:30,368] RotatePoint: [-9.54240828342523, -2.727701317583116, 1.015979454855841]
+[2016-07-16 14:50:30,368] RotatePoint:  PRE
+[2016-07-16 14:50:30,368] RotatePoint: [0.2, 1.0, 0.0]
+[2016-07-16 14:50:30,368] RotatePoint:  POST
+[2016-07-16 14:50:30,368] RotatePoint: [-9.5580995058029714, -3.0272901780094879, 1.0154315052961442]
+[2016-07-16 14:50:30,368] RotatePoint:  PRE
+[2016-07-16 14:50:30,368] RotatePoint: [0.3, 0.0, 0.0]
+[2016-07-16 14:50:30,368] RotatePoint:  POST
+[2016-07-16 14:50:30,368] RotatePoint: [-9.1017809230383389, -0.047102360618649433, 1.0313665013396687]
+[2016-07-16 14:50:30,368] RotatePoint:  PRE
+[2016-07-16 14:50:30,368] RotatePoint: [0.3, 0.1, 0.0]
+[2016-07-16 14:50:30,368] RotatePoint:  POST
+[2016-07-16 14:50:30,368] RotatePoint: [-9.1174721454160803, -0.34669122104502159, 1.0308185517799717]
+[2016-07-16 14:50:30,368] RotatePoint:  PRE
+[2016-07-16 14:50:30,368] RotatePoint: [0.3, 0.2, 0.0]
+[2016-07-16 14:50:30,368] RotatePoint:  POST
+[2016-07-16 14:50:30,369] RotatePoint: [-9.1331633677938218, -0.64628008147139382, 1.030270602220275]
+[2016-07-16 14:50:30,369] RotatePoint:  PRE
+[2016-07-16 14:50:30,369] RotatePoint: [0.3, 0.3, 0.0]
+[2016-07-16 14:50:30,369] RotatePoint:  POST
+[2016-07-16 14:50:30,369] RotatePoint: [-9.1488545901715632, -0.94586894189776582, 1.0297226526605781]
+[2016-07-16 14:50:30,369] RotatePoint:  PRE
+[2016-07-16 14:50:30,369] RotatePoint: [0.3, 0.4, 0.0]
+[2016-07-16 14:50:30,369] RotatePoint:  POST
+[2016-07-16 14:50:30,369] RotatePoint: [-9.1645458125493029, -1.2454578023241381, 1.0291747031008813]
+[2016-07-16 14:50:30,369] RotatePoint:  PRE
+[2016-07-16 14:50:30,369] RotatePoint: [0.3, 0.5, 0.0]
+[2016-07-16 14:50:30,369] RotatePoint:  POST
+[2016-07-16 14:50:30,369] RotatePoint: [-9.1802370349270443, -1.5450466627505102, 1.0286267535411846]
+[2016-07-16 14:50:30,369] RotatePoint:  PRE
+[2016-07-16 14:50:30,369] RotatePoint: [0.3, 0.6, 0.0]
+[2016-07-16 14:50:30,370] RotatePoint:  POST
+[2016-07-16 14:50:30,370] RotatePoint: [-9.1959282573047858, -1.8446355231768821, 1.0280788039814877]
+[2016-07-16 14:50:30,370] RotatePoint:  PRE
+[2016-07-16 14:50:30,370] RotatePoint: [0.3, 0.7, 0.0]
+[2016-07-16 14:50:30,370] RotatePoint:  POST
+[2016-07-16 14:50:30,370] RotatePoint: [-9.2116194796825273, -2.144224383603254, 1.0275308544217909]
+[2016-07-16 14:50:30,370] RotatePoint:  PRE
+[2016-07-16 14:50:30,370] RotatePoint: [0.3, 0.8, 0.0]
+[2016-07-16 14:50:30,370] RotatePoint:  POST
+[2016-07-16 14:50:30,370] RotatePoint: [-9.2273107020602687, -2.4438132440296267, 1.026982904862094]
+[2016-07-16 14:50:30,370] RotatePoint:  PRE
+[2016-07-16 14:50:30,370] RotatePoint: [0.3, 0.9, 0.0]
+[2016-07-16 14:50:30,370] RotatePoint:  POST
+[2016-07-16 14:50:30,370] RotatePoint: [-9.2430019244380102, -2.7434021044559991, 1.0264349553023973]
+[2016-07-16 14:50:30,370] RotatePoint:  PRE
+[2016-07-16 14:50:30,370] RotatePoint: [0.3, 1.0, 0.0]
+[2016-07-16 14:50:30,371] RotatePoint:  POST
+[2016-07-16 14:50:30,371] RotatePoint: [-9.2586931468157516, -3.042990964882371, 1.0258870057427003]
+[2016-07-16 14:50:30,371] RotatePoint:  PRE
+[2016-07-16 14:50:30,371] RotatePoint: [0.4, 0.0, 0.0]
+[2016-07-16 14:50:30,371] RotatePoint:  POST
+[2016-07-16 14:50:30,371] RotatePoint: [-8.8023745640511173, -0.062803147491532596, 1.0418220017862247]
+[2016-07-16 14:50:30,371] RotatePoint:  PRE
+[2016-07-16 14:50:30,371] RotatePoint: [0.4, 0.1, 0.0]
+[2016-07-16 14:50:30,371] RotatePoint:  POST
+[2016-07-16 14:50:30,371] RotatePoint: [-8.8180657864288587, -0.36239200791790477, 1.041274052226528]
+[2016-07-16 14:50:30,371] RotatePoint:  PRE
+[2016-07-16 14:50:30,371] RotatePoint: [0.4, 0.2, 0.0]
+[2016-07-16 14:50:30,371] RotatePoint:  POST
+[2016-07-16 14:50:30,371] RotatePoint: [-8.8337570088066002, -0.66198086834427694, 1.0407261026668311]
+[2016-07-16 14:50:30,371] RotatePoint:  PRE
+[2016-07-16 14:50:30,371] RotatePoint: [0.4, 0.3, 0.0]
+[2016-07-16 14:50:30,372] RotatePoint:  POST
+[2016-07-16 14:50:30,372] RotatePoint: [-8.8494482311843417, -0.96156972877064895, 1.0401781531071344]
+[2016-07-16 14:50:30,372] RotatePoint:  PRE
+[2016-07-16 14:50:30,372] RotatePoint: [0.4, 0.4, 0.0]
+[2016-07-16 14:50:30,372] RotatePoint:  POST
+[2016-07-16 14:50:30,372] RotatePoint: [-8.8651394535620831, -1.2611585891970214, 1.0396302035474376]
+[2016-07-16 14:50:30,372] RotatePoint:  PRE
+[2016-07-16 14:50:30,372] RotatePoint: [0.4, 0.5, 0.0]
+[2016-07-16 14:50:30,372] RotatePoint:  POST
+[2016-07-16 14:50:30,372] RotatePoint: [-8.8808306759398246, -1.5607474496233933, 1.0390822539877407]
+[2016-07-16 14:50:30,372] RotatePoint:  PRE
+[2016-07-16 14:50:30,372] RotatePoint: [0.4, 0.6, 0.0]
+[2016-07-16 14:50:30,372] RotatePoint:  POST
+[2016-07-16 14:50:30,372] RotatePoint: [-8.896521898317566, -1.8603363100497652, 1.038534304428044]
+[2016-07-16 14:50:30,372] RotatePoint:  PRE
+[2016-07-16 14:50:30,372] RotatePoint: [0.4, 0.7, 0.0]
+[2016-07-16 14:50:30,372] RotatePoint:  POST
+[2016-07-16 14:50:30,373] RotatePoint: [-8.9122131206953057, -2.1599251704761371, 1.037986354868347]
+[2016-07-16 14:50:30,373] RotatePoint:  PRE
+[2016-07-16 14:50:30,373] RotatePoint: [0.4, 0.8, 0.0]
+[2016-07-16 14:50:30,373] RotatePoint:  POST
+[2016-07-16 14:50:30,373] RotatePoint: [-8.9279043430730471, -2.4595140309025099, 1.0374384053086503]
+[2016-07-16 14:50:30,373] RotatePoint:  PRE
+[2016-07-16 14:50:30,373] RotatePoint: [0.4, 0.9, 0.0]
+[2016-07-16 14:50:30,373] RotatePoint:  POST
+[2016-07-16 14:50:30,373] RotatePoint: [-8.9435955654507886, -2.7591028913288822, 1.0368904557489533]
+[2016-07-16 14:50:30,373] RotatePoint:  PRE
+[2016-07-16 14:50:30,373] RotatePoint: [0.4, 1.0, 0.0]
+[2016-07-16 14:50:30,373] RotatePoint:  POST
+[2016-07-16 14:50:30,373] RotatePoint: [-8.9592867878285301, -3.0586917517552541, 1.0363425061892566]
+[2016-07-16 14:50:30,373] RotatePoint:  PRE
+[2016-07-16 14:50:30,373] RotatePoint: [0.5, 0.0, 0.0]
+[2016-07-16 14:50:30,373] RotatePoint:  POST
+[2016-07-16 14:50:30,374] RotatePoint: [-8.5029682050638975, -0.078503934364415731, 1.052277502232781]
+[2016-07-16 14:50:30,374] RotatePoint:  PRE
+[2016-07-16 14:50:30,374] RotatePoint: [0.5, 0.1, 0.0]
+[2016-07-16 14:50:30,374] RotatePoint:  POST
+[2016-07-16 14:50:30,374] RotatePoint: [-8.518659427441639, -0.37809279479078789, 1.0517295526730841]
+[2016-07-16 14:50:30,374] RotatePoint:  PRE
+[2016-07-16 14:50:30,374] RotatePoint: [0.5, 0.2, 0.0]
+[2016-07-16 14:50:30,374] RotatePoint:  POST
+[2016-07-16 14:50:30,374] RotatePoint: [-8.5343506498193804, -0.67768165521716006, 1.0511816031133874]
+[2016-07-16 14:50:30,374] RotatePoint:  PRE
+[2016-07-16 14:50:30,374] RotatePoint: [0.5, 0.3, 0.0]
+[2016-07-16 14:50:30,374] RotatePoint:  POST
+[2016-07-16 14:50:30,374] RotatePoint: [-8.5500418721971219, -0.97727051564353207, 1.0506336535536904]
+[2016-07-16 14:50:30,374] RotatePoint:  PRE
+[2016-07-16 14:50:30,374] RotatePoint: [0.5, 0.4, 0.0]
+[2016-07-16 14:50:30,375] RotatePoint:  POST
+[2016-07-16 14:50:30,375] RotatePoint: [-8.5657330945748633, -1.2768593760699045, 1.0500857039939937]
+[2016-07-16 14:50:30,375] RotatePoint:  PRE
+[2016-07-16 14:50:30,375] RotatePoint: [0.5, 0.5, 0.0]
+[2016-07-16 14:50:30,375] RotatePoint:  POST
+[2016-07-16 14:50:30,375] RotatePoint: [-8.581424316952603, -1.5764482364962766, 1.049537754434297]
+[2016-07-16 14:50:30,375] RotatePoint:  PRE
+[2016-07-16 14:50:30,375] RotatePoint: [0.5, 0.6, 0.0]
+[2016-07-16 14:50:30,375] RotatePoint:  POST
+[2016-07-16 14:50:30,375] RotatePoint: [-8.5971155393303444, -1.8760370969226485, 1.0489898048746]
+[2016-07-16 14:50:30,375] RotatePoint:  PRE
+[2016-07-16 14:50:30,375] RotatePoint: [0.5, 0.7, 0.0]
+[2016-07-16 14:50:30,375] RotatePoint:  POST
+[2016-07-16 14:50:30,375] RotatePoint: [-8.6128067617080859, -2.1756259573490202, 1.0484418553149033]
+[2016-07-16 14:50:30,375] RotatePoint:  PRE
+[2016-07-16 14:50:30,375] RotatePoint: [0.5, 0.8, 0.0]
+[2016-07-16 14:50:30,376] RotatePoint:  POST
+[2016-07-16 14:50:30,376] RotatePoint: [-8.6284979840858274, -2.475214817775393, 1.0478939057552064]
+[2016-07-16 14:50:30,376] RotatePoint:  PRE
+[2016-07-16 14:50:30,376] RotatePoint: [0.5, 0.9, 0.0]
+[2016-07-16 14:50:30,376] RotatePoint:  POST
+[2016-07-16 14:50:30,376] RotatePoint: [-8.6441892064635688, -2.7748036782017653, 1.0473459561955096]
+[2016-07-16 14:50:30,376] RotatePoint:  PRE
+[2016-07-16 14:50:30,376] RotatePoint: [0.5, 1.0, 0.0]
+[2016-07-16 14:50:30,376] RotatePoint:  POST
+[2016-07-16 14:50:30,376] RotatePoint: [-8.6598804288413103, -3.0743925386281372, 1.0467980066358129]
+[2016-07-16 14:50:30,376] RotatePoint:  PRE
+[2016-07-16 14:50:30,376] RotatePoint: [0.6, 0.0, 0.0]
+[2016-07-16 14:50:30,376] RotatePoint:  POST
+[2016-07-16 14:50:30,376] RotatePoint: [-8.2035618460766777, -0.094204721237298866, 1.0627330026793371]
+[2016-07-16 14:50:30,376] RotatePoint:  PRE
+[2016-07-16 14:50:30,376] RotatePoint: [0.6, 0.1, 0.0]
+[2016-07-16 14:50:30,377] RotatePoint:  POST
+[2016-07-16 14:50:30,377] RotatePoint: [-8.2192530684544174, -0.39379358166367107, 1.0621850531196404]
+[2016-07-16 14:50:30,377] RotatePoint:  PRE
+[2016-07-16 14:50:30,377] RotatePoint: [0.6, 0.2, 0.0]
+[2016-07-16 14:50:30,377] RotatePoint:  POST
+[2016-07-16 14:50:30,377] RotatePoint: [-8.2349442908321588, -0.69338244209004318, 1.0616371035599435]
+[2016-07-16 14:50:30,377] RotatePoint:  PRE
+[2016-07-16 14:50:30,377] RotatePoint: [0.6, 0.3, 0.0]
+[2016-07-16 14:50:30,377] RotatePoint:  POST
+[2016-07-16 14:50:30,377] RotatePoint: [-8.2506355132099003, -0.99297130251641519, 1.0610891540002467]
+[2016-07-16 14:50:30,377] RotatePoint:  PRE
+[2016-07-16 14:50:30,377] RotatePoint: [0.6, 0.4, 0.0]
+[2016-07-16 14:50:30,377] RotatePoint:  POST
+[2016-07-16 14:50:30,377] RotatePoint: [-8.2663267355876417, -1.2925601629427876, 1.06054120444055]
+[2016-07-16 14:50:30,377] RotatePoint:  PRE
+[2016-07-16 14:50:30,377] RotatePoint: [0.6, 0.5, 0.0]
+[2016-07-16 14:50:30,378] RotatePoint:  POST
+[2016-07-16 14:50:30,378] RotatePoint: [-8.2820179579653832, -1.5921490233691598, 1.0599932548808531]
+[2016-07-16 14:50:30,378] RotatePoint:  PRE
+[2016-07-16 14:50:30,378] RotatePoint: [0.6, 0.6, 0.0]
+[2016-07-16 14:50:30,378] RotatePoint:  POST
+[2016-07-16 14:50:30,378] RotatePoint: [-8.2977091803431247, -1.8917378837955316, 1.0594453053211563]
+[2016-07-16 14:50:30,378] RotatePoint:  PRE
+[2016-07-16 14:50:30,378] RotatePoint: [0.6, 0.7, 0.0]
+[2016-07-16 14:50:30,378] RotatePoint:  POST
+[2016-07-16 14:50:30,378] RotatePoint: [-8.3134004027208661, -2.1913267442219033, 1.0588973557614594]
+[2016-07-16 14:50:30,378] RotatePoint:  PRE
+[2016-07-16 14:50:30,378] RotatePoint: [0.6, 0.8, 0.0]
+[2016-07-16 14:50:30,378] RotatePoint:  POST
+[2016-07-16 14:50:30,378] RotatePoint: [-8.3290916250986076, -2.4909156046482761, 1.0583494062017627]
+[2016-07-16 14:50:30,378] RotatePoint:  PRE
+[2016-07-16 14:50:30,378] RotatePoint: [0.6, 0.9, 0.0]
+[2016-07-16 14:50:30,378] RotatePoint:  POST
+[2016-07-16 14:50:30,379] RotatePoint: [-8.344782847476349, -2.7905044650746484, 1.0578014566420659]
+[2016-07-16 14:50:30,379] RotatePoint:  PRE
+[2016-07-16 14:50:30,379] RotatePoint: [0.6, 1.0, 0.0]
+[2016-07-16 14:50:30,379] RotatePoint:  POST
+[2016-07-16 14:50:30,379] RotatePoint: [-8.3604740698540887, -3.0900933255010203, 1.057253507082369]
+[2016-07-16 14:50:30,379] RotatePoint:  PRE
+[2016-07-16 14:50:30,379] RotatePoint: [0.7, 0.0, 0.0]
+[2016-07-16 14:50:30,379] RotatePoint:  POST
+[2016-07-16 14:50:30,379] RotatePoint: [-7.9041554870894561, -0.109905508110182, 1.0731885031258934]
+[2016-07-16 14:50:30,379] RotatePoint:  PRE
+[2016-07-16 14:50:30,379] RotatePoint: [0.7, 0.1, 0.0]
+[2016-07-16 14:50:30,379] RotatePoint:  POST
+[2016-07-16 14:50:30,379] RotatePoint: [-7.9198467094671976, -0.40949436853655419, 1.0726405535661965]
+[2016-07-16 14:50:30,379] RotatePoint:  PRE
+[2016-07-16 14:50:30,379] RotatePoint: [0.7, 0.2, 0.0]
+[2016-07-16 14:50:30,379] RotatePoint:  POST
+[2016-07-16 14:50:30,380] RotatePoint: [-7.9355379318449391, -0.7090832289629263, 1.0720926040064997]
+[2016-07-16 14:50:30,380] RotatePoint:  PRE
+[2016-07-16 14:50:30,380] RotatePoint: [0.7, 0.3, 0.0]
+[2016-07-16 14:50:30,380] RotatePoint:  POST
+[2016-07-16 14:50:30,380] RotatePoint: [-7.9512291542226805, -1.0086720893892984, 1.071544654446803]
+[2016-07-16 14:50:30,380] RotatePoint:  PRE
+[2016-07-16 14:50:30,380] RotatePoint: [0.7, 0.4, 0.0]
+[2016-07-16 14:50:30,380] RotatePoint:  POST
+[2016-07-16 14:50:30,380] RotatePoint: [-7.966920376600422, -1.3082609498156708, 1.0709967048871061]
+[2016-07-16 14:50:30,380] RotatePoint:  PRE
+[2016-07-16 14:50:30,380] RotatePoint: [0.7, 0.5, 0.0]
+[2016-07-16 14:50:30,380] RotatePoint:  POST
+[2016-07-16 14:50:30,380] RotatePoint: [-7.9826115989781634, -1.6078498102420429, 1.0704487553274094]
+[2016-07-16 14:50:30,380] RotatePoint:  PRE
+[2016-07-16 14:50:30,380] RotatePoint: [0.7, 0.6, 0.0]
+[2016-07-16 14:50:30,380] RotatePoint:  POST
+[2016-07-16 14:50:30,380] RotatePoint: [-7.998302821355904, -1.9074386706684148, 1.0699008057677124]
+[2016-07-16 14:50:30,381] RotatePoint:  PRE
+[2016-07-16 14:50:30,381] RotatePoint: [0.7, 0.7, 0.0]
+[2016-07-16 14:50:30,381] RotatePoint:  POST
+[2016-07-16 14:50:30,381] RotatePoint: [-8.0139940437336463, -2.2070275310947864, 1.0693528562080157]
+[2016-07-16 14:50:30,381] RotatePoint:  PRE
+[2016-07-16 14:50:30,381] RotatePoint: [0.7, 0.8, 0.0]
+[2016-07-16 14:50:30,381] RotatePoint:  POST
+[2016-07-16 14:50:30,381] RotatePoint: [-8.029685266111386, -2.5066163915211592, 1.0688049066483187]
+[2016-07-16 14:50:30,381] RotatePoint:  PRE
+[2016-07-16 14:50:30,381] RotatePoint: [0.7, 0.9, 0.0]
+[2016-07-16 14:50:30,381] RotatePoint:  POST
+[2016-07-16 14:50:30,381] RotatePoint: [-8.0453764884891275, -2.8062052519475316, 1.068256957088622]
+[2016-07-16 14:50:30,381] RotatePoint:  PRE
+[2016-07-16 14:50:30,381] RotatePoint: [0.7, 1.0, 0.0]
+[2016-07-16 14:50:30,381] RotatePoint:  POST
+[2016-07-16 14:50:30,381] RotatePoint: [-8.0610677108668689, -3.1057941123739035, 1.0677090075289253]
+[2016-07-16 14:50:30,382] RotatePoint:  PRE
+[2016-07-16 14:50:30,382] RotatePoint: [0.8, 0.0, 0.0]
+[2016-07-16 14:50:30,382] RotatePoint:  POST
+[2016-07-16 14:50:30,382] RotatePoint: [-7.6047491281022355, -0.12560629498306519, 1.0836440035724495]
+[2016-07-16 14:50:30,382] RotatePoint:  PRE
+[2016-07-16 14:50:30,382] RotatePoint: [0.8, 0.1, 0.0]
+[2016-07-16 14:50:30,382] RotatePoint:  POST
+[2016-07-16 14:50:30,382] RotatePoint: [-7.6204403504799769, -0.42519515540943736, 1.0830960540127528]
+[2016-07-16 14:50:30,382] RotatePoint:  PRE
+[2016-07-16 14:50:30,382] RotatePoint: [0.8, 0.2, 0.0]
+[2016-07-16 14:50:30,382] RotatePoint:  POST
+[2016-07-16 14:50:30,382] RotatePoint: [-7.6361315728577175, -0.72478401583580954, 1.082548104453056]
+[2016-07-16 14:50:30,382] RotatePoint:  PRE
+[2016-07-16 14:50:30,382] RotatePoint: [0.8, 0.3, 0.0]
+[2016-07-16 14:50:30,382] RotatePoint:  POST
+[2016-07-16 14:50:30,382] RotatePoint: [-7.6518227952354589, -1.0243728762621815, 1.0820001548933591]
+[2016-07-16 14:50:30,382] RotatePoint:  PRE
+[2016-07-16 14:50:30,383] RotatePoint: [0.8, 0.4, 0.0]
+[2016-07-16 14:50:30,383] RotatePoint:  POST
+[2016-07-16 14:50:30,383] RotatePoint: [-7.6675140176132004, -1.3239617366885539, 1.0814522053336624]
+[2016-07-16 14:50:30,383] RotatePoint:  PRE
+[2016-07-16 14:50:30,383] RotatePoint: [0.8, 0.5, 0.0]
+[2016-07-16 14:50:30,383] RotatePoint:  POST
+[2016-07-16 14:50:30,383] RotatePoint: [-7.6832052399909418, -1.623550597114926, 1.0809042557739654]
+[2016-07-16 14:50:30,383] RotatePoint:  PRE
+[2016-07-16 14:50:30,383] RotatePoint: [0.8, 0.6, 0.0]
+[2016-07-16 14:50:30,383] RotatePoint:  POST
+[2016-07-16 14:50:30,383] RotatePoint: [-7.6988964623686833, -1.9231394575412979, 1.0803563062142687]
+[2016-07-16 14:50:30,383] RotatePoint:  PRE
+[2016-07-16 14:50:30,383] RotatePoint: [0.8, 0.7, 0.0]
+[2016-07-16 14:50:30,383] RotatePoint:  POST
+[2016-07-16 14:50:30,383] RotatePoint: [-7.7145876847464248, -2.22272831796767, 1.079808356654572]
+[2016-07-16 14:50:30,383] RotatePoint:  PRE
+[2016-07-16 14:50:30,384] RotatePoint: [0.8, 0.8, 0.0]
+[2016-07-16 14:50:30,384] RotatePoint:  POST
+[2016-07-16 14:50:30,384] RotatePoint: [-7.7302789071241653, -2.5223171783940428, 1.079260407094875]
+[2016-07-16 14:50:30,384] RotatePoint:  PRE
+[2016-07-16 14:50:30,384] RotatePoint: [0.8, 0.9, 0.0]
+[2016-07-16 14:50:30,384] RotatePoint:  POST
+[2016-07-16 14:50:30,384] RotatePoint: [-7.7459701295019068, -2.8219060388204147, 1.0787124575351783]
+[2016-07-16 14:50:30,384] RotatePoint:  PRE
+[2016-07-16 14:50:30,384] RotatePoint: [0.8, 1.0, 0.0]
+[2016-07-16 14:50:30,384] RotatePoint:  POST
+[2016-07-16 14:50:30,384] RotatePoint: [-7.7616613518796482, -3.1214948992467866, 1.0781645079754814]
+[2016-07-16 14:50:30,384] RotatePoint:  PRE
+[2016-07-16 14:50:30,384] RotatePoint: [0.9, 0.0, 0.0]
+[2016-07-16 14:50:30,384] RotatePoint:  POST
+[2016-07-16 14:50:30,384] RotatePoint: [-7.3053427691150148, -0.14130708185594831, 1.0940995040190058]
+[2016-07-16 14:50:30,384] RotatePoint:  PRE
+[2016-07-16 14:50:30,384] RotatePoint: [0.9, 0.1, 0.0]
+[2016-07-16 14:50:30,385] RotatePoint:  POST
+[2016-07-16 14:50:30,385] RotatePoint: [-7.3210339914927562, -0.44089594228232049, 1.0935515544593091]
+[2016-07-16 14:50:30,385] RotatePoint:  PRE
+[2016-07-16 14:50:30,385] RotatePoint: [0.9, 0.2, 0.0]
+[2016-07-16 14:50:30,385] RotatePoint:  POST
+[2016-07-16 14:50:30,385] RotatePoint: [-7.3367252138704977, -0.74048480270869266, 1.0930036048996121]
+[2016-07-16 14:50:30,385] RotatePoint:  PRE
+[2016-07-16 14:50:30,385] RotatePoint: [0.9, 0.3, 0.0]
+[2016-07-16 14:50:30,385] RotatePoint:  POST
+[2016-07-16 14:50:30,385] RotatePoint: [-7.3524164362482392, -1.0400736631350647, 1.0924556553399154]
+[2016-07-16 14:50:30,385] RotatePoint:  PRE
+[2016-07-16 14:50:30,385] RotatePoint: [0.9, 0.4, 0.0]
+[2016-07-16 14:50:30,385] RotatePoint:  POST
+[2016-07-16 14:50:30,385] RotatePoint: [-7.3681076586259806, -1.339662523561437, 1.0919077057802185]
+[2016-07-16 14:50:30,385] RotatePoint:  PRE
+[2016-07-16 14:50:30,385] RotatePoint: [0.9, 0.5, 0.0]
+[2016-07-16 14:50:30,386] RotatePoint:  POST
+[2016-07-16 14:50:30,386] RotatePoint: [-7.3837988810037221, -1.6392513839878091, 1.0913597562205217]
+[2016-07-16 14:50:30,386] RotatePoint:  PRE
+[2016-07-16 14:50:30,386] RotatePoint: [0.9, 0.6, 0.0]
+[2016-07-16 14:50:30,386] RotatePoint:  POST
+[2016-07-16 14:50:30,386] RotatePoint: [-7.3994901033814626, -1.938840244414181, 1.0908118066608248]
+[2016-07-16 14:50:30,386] RotatePoint:  PRE
+[2016-07-16 14:50:30,386] RotatePoint: [0.9, 0.7, 0.0]
+[2016-07-16 14:50:30,386] RotatePoint:  POST
+[2016-07-16 14:50:30,386] RotatePoint: [-7.4151813257592041, -2.2384291048405531, 1.0902638571011281]
+[2016-07-16 14:50:30,386] RotatePoint:  PRE
+[2016-07-16 14:50:30,386] RotatePoint: [0.9, 0.8, 0.0]
+[2016-07-16 14:50:30,386] RotatePoint:  POST
+[2016-07-16 14:50:30,386] RotatePoint: [-7.4308725481369446, -2.5380179652669259, 1.0897159075414313]
+[2016-07-16 14:50:30,386] RotatePoint:  PRE
+[2016-07-16 14:50:30,387] RotatePoint: [0.9, 0.9, 0.0]
+[2016-07-16 14:50:30,387] RotatePoint:  POST
+[2016-07-16 14:50:30,387] RotatePoint: [-7.4465637705146861, -2.8376068256932978, 1.0891679579817344]
+[2016-07-16 14:50:30,387] RotatePoint:  PRE
+[2016-07-16 14:50:30,387] RotatePoint: [0.9, 1.0, 0.0]
+[2016-07-16 14:50:30,387] RotatePoint:  POST
+[2016-07-16 14:50:30,387] RotatePoint: [-7.4622549928924276, -3.1371956861196697, 1.0886200084220377]
+[2016-07-16 14:50:30,387] RotatePoint:  PRE
+[2016-07-16 14:50:30,387] RotatePoint: [1.0, 0.0, 0.0]
+[2016-07-16 14:50:30,387] RotatePoint:  POST
+[2016-07-16 14:50:30,387] RotatePoint: [-7.005936410127795, -0.15700786872883146, 1.1045550044655621]
+[2016-07-16 14:50:30,387] RotatePoint:  PRE
+[2016-07-16 14:50:30,387] RotatePoint: [1.0, 0.1, 0.0]
+[2016-07-16 14:50:30,387] RotatePoint:  POST
+[2016-07-16 14:50:30,387] RotatePoint: [-7.0216276325055365, -0.45659672915520366, 1.1040070549058651]
+[2016-07-16 14:50:30,387] RotatePoint:  PRE
+[2016-07-16 14:50:30,388] RotatePoint: [1.0, 0.2, 0.0]
+[2016-07-16 14:50:30,388] RotatePoint:  POST
+[2016-07-16 14:50:30,388] RotatePoint: [-7.0373188548832779, -0.75618558958157578, 1.1034591053461684]
+[2016-07-16 14:50:30,388] RotatePoint:  PRE
+[2016-07-16 14:50:30,388] RotatePoint: [1.0, 0.3, 0.0]
+[2016-07-16 14:50:30,388] RotatePoint:  POST
+[2016-07-16 14:50:30,388] RotatePoint: [-7.0530100772610194, -1.0557744500079478, 1.1029111557864715]
+[2016-07-16 14:50:30,388] RotatePoint:  PRE
+[2016-07-16 14:50:30,388] RotatePoint: [1.0, 0.4, 0.0]
+[2016-07-16 14:50:30,388] RotatePoint:  POST
+[2016-07-16 14:50:30,388] RotatePoint: [-7.0687012996387599, -1.3553633104343201, 1.1023632062267748]
+[2016-07-16 14:50:30,388] RotatePoint:  PRE
+[2016-07-16 14:50:30,388] RotatePoint: [1.0, 0.5, 0.0]
+[2016-07-16 14:50:30,388] RotatePoint:  POST
+[2016-07-16 14:50:30,388] RotatePoint: [-7.0843925220165014, -1.6549521708606922, 1.1018152566670778]
+[2016-07-16 14:50:30,388] RotatePoint:  PRE
+[2016-07-16 14:50:30,388] RotatePoint: [1.0, 0.6, 0.0]
+[2016-07-16 14:50:30,389] RotatePoint:  POST
+[2016-07-16 14:50:30,389] RotatePoint: [-7.1000837443942419, -1.9545410312870641, 1.1012673071073811]
+[2016-07-16 14:50:30,389] RotatePoint:  PRE
+[2016-07-16 14:50:30,389] RotatePoint: [1.0, 0.7, 0.0]
+[2016-07-16 14:50:30,389] RotatePoint:  POST
+[2016-07-16 14:50:30,389] RotatePoint: [-7.1157749667719834, -2.2541298917134363, 1.1007193575476844]
+[2016-07-16 14:50:30,389] RotatePoint:  PRE
+[2016-07-16 14:50:30,389] RotatePoint: [1.0, 0.8, 0.0]
+[2016-07-16 14:50:30,389] RotatePoint:  POST
+[2016-07-16 14:50:30,389] RotatePoint: [-7.1314661891497249, -2.553718752139809, 1.1001714079879874]
+[2016-07-16 14:50:30,389] RotatePoint:  PRE
+[2016-07-16 14:50:30,389] RotatePoint: [1.0, 0.9, 0.0]
+[2016-07-16 14:50:30,389] RotatePoint:  POST
+[2016-07-16 14:50:30,389] RotatePoint: [-7.1471574115274663, -2.8533076125661814, 1.0996234584282907]
+[2016-07-16 14:50:30,389] RotatePoint:  PRE
+[2016-07-16 14:50:30,389] RotatePoint: [1.0, 1.0, 0.0]
+[2016-07-16 14:50:30,390] RotatePoint:  POST
+[2016-07-16 14:50:30,390] RotatePoint: [-7.1628486339052078, -3.1528964729925533, 1.0990755088685937]
+[2016-07-16 14:50:30,393] build: Added trichecker3 to scene
+[2016-07-16 14:50:30,393] build: trichecker3 isControl = 0
+[2016-07-16 14:50:30,393] build: trichecker3 being used as marker
+[2016-07-16 14:50:30,394] build: MARKER
+[2016-07-16 14:50:30,394] build: C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\trichecker.txt
+[2016-07-16 14:50:30,394] build: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,394] build: [10.0, 10.0, 1.0]
+[2016-07-16 14:50:30,394] build: [4.0, 4.0, 4.0]
+[2016-07-16 14:50:30,397] RotatePoint:  PRE
+[2016-07-16 14:50:30,397] RotatePoint: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,397] RotatePoint:  POST
+[2016-07-16 14:50:30,397] RotatePoint: [10.0, 10.0, 1.0]
+[2016-07-16 14:50:30,397] RotatePoint:  PRE
+[2016-07-16 14:50:30,397] RotatePoint: [0.0, 0.1, 0.0]
+[2016-07-16 14:50:30,397] RotatePoint:  POST
+[2016-07-16 14:50:30,397] RotatePoint: [10.0, 10.4, 1.0]
+[2016-07-16 14:50:30,397] RotatePoint:  PRE
+[2016-07-16 14:50:30,397] RotatePoint: [0.0, 0.2, 0.0]
+[2016-07-16 14:50:30,397] RotatePoint:  POST
+[2016-07-16 14:50:30,397] RotatePoint: [10.0, 10.800000000000001, 1.0]
+[2016-07-16 14:50:30,398] RotatePoint:  PRE
+[2016-07-16 14:50:30,398] RotatePoint: [0.0, 0.3, 0.0]
+[2016-07-16 14:50:30,398] RotatePoint:  POST
+[2016-07-16 14:50:30,398] RotatePoint: [10.0, 11.199999999999999, 1.0]
+[2016-07-16 14:50:30,398] RotatePoint:  PRE
+[2016-07-16 14:50:30,398] RotatePoint: [0.0, 0.4, 0.0]
+[2016-07-16 14:50:30,398] RotatePoint:  POST
+[2016-07-16 14:50:30,398] RotatePoint: [10.0, 11.6, 1.0]
+[2016-07-16 14:50:30,398] RotatePoint:  PRE
+[2016-07-16 14:50:30,398] RotatePoint: [0.0, 0.5, 0.0]
+[2016-07-16 14:50:30,398] RotatePoint:  POST
+[2016-07-16 14:50:30,398] RotatePoint: [10.0, 12.0, 1.0]
+[2016-07-16 14:50:30,398] RotatePoint:  PRE
+[2016-07-16 14:50:30,398] RotatePoint: [0.0, 0.6, 0.0]
+[2016-07-16 14:50:30,398] RotatePoint:  POST
+[2016-07-16 14:50:30,398] RotatePoint: [10.0, 12.4, 1.0]
+[2016-07-16 14:50:30,398] RotatePoint:  PRE
+[2016-07-16 14:50:30,399] RotatePoint: [0.0, 0.7, 0.0]
+[2016-07-16 14:50:30,399] RotatePoint:  POST
+[2016-07-16 14:50:30,399] RotatePoint: [10.0, 12.800000000000001, 1.0]
+[2016-07-16 14:50:30,399] RotatePoint:  PRE
+[2016-07-16 14:50:30,399] RotatePoint: [0.0, 0.8, 0.0]
+[2016-07-16 14:50:30,399] RotatePoint:  POST
+[2016-07-16 14:50:30,399] RotatePoint: [10.0, 13.199999999999999, 1.0]
+[2016-07-16 14:50:30,399] RotatePoint:  PRE
+[2016-07-16 14:50:30,399] RotatePoint: [0.0, 0.9, 0.0]
+[2016-07-16 14:50:30,399] RotatePoint:  POST
+[2016-07-16 14:50:30,399] RotatePoint: [10.0, 13.6, 1.0]
+[2016-07-16 14:50:30,399] RotatePoint:  PRE
+[2016-07-16 14:50:30,399] RotatePoint: [0.0, 1.0, 0.0]
+[2016-07-16 14:50:30,399] RotatePoint:  POST
+[2016-07-16 14:50:30,399] RotatePoint: [10.0, 14.0, 1.0]
+[2016-07-16 14:50:30,399] RotatePoint:  PRE
+[2016-07-16 14:50:30,400] RotatePoint: [0.1, 0.0, 0.0]
+[2016-07-16 14:50:30,400] RotatePoint:  POST
+[2016-07-16 14:50:30,400] RotatePoint: [10.4, 10.0, 1.0]
+[2016-07-16 14:50:30,400] RotatePoint:  PRE
+[2016-07-16 14:50:30,400] RotatePoint: [0.1, 0.1, 0.0]
+[2016-07-16 14:50:30,400] RotatePoint:  POST
+[2016-07-16 14:50:30,400] RotatePoint: [10.4, 10.4, 1.0]
+[2016-07-16 14:50:30,400] RotatePoint:  PRE
+[2016-07-16 14:50:30,400] RotatePoint: [0.1, 0.2, 0.0]
+[2016-07-16 14:50:30,400] RotatePoint:  POST
+[2016-07-16 14:50:30,400] RotatePoint: [10.4, 10.800000000000001, 1.0]
+[2016-07-16 14:50:30,400] RotatePoint:  PRE
+[2016-07-16 14:50:30,400] RotatePoint: [0.1, 0.3, 0.0]
+[2016-07-16 14:50:30,400] RotatePoint:  POST
+[2016-07-16 14:50:30,400] RotatePoint: [10.4, 11.199999999999999, 1.0]
+[2016-07-16 14:50:30,400] RotatePoint:  PRE
+[2016-07-16 14:50:30,401] RotatePoint: [0.1, 0.4, 0.0]
+[2016-07-16 14:50:30,401] RotatePoint:  POST
+[2016-07-16 14:50:30,401] RotatePoint: [10.4, 11.6, 1.0]
+[2016-07-16 14:50:30,401] RotatePoint:  PRE
+[2016-07-16 14:50:30,401] RotatePoint: [0.1, 0.5, 0.0]
+[2016-07-16 14:50:30,401] RotatePoint:  POST
+[2016-07-16 14:50:30,401] RotatePoint: [10.4, 12.0, 1.0]
+[2016-07-16 14:50:30,401] RotatePoint:  PRE
+[2016-07-16 14:50:30,401] RotatePoint: [0.1, 0.6, 0.0]
+[2016-07-16 14:50:30,401] RotatePoint:  POST
+[2016-07-16 14:50:30,401] RotatePoint: [10.4, 12.4, 1.0]
+[2016-07-16 14:50:30,401] RotatePoint:  PRE
+[2016-07-16 14:50:30,401] RotatePoint: [0.1, 0.7, 0.0]
+[2016-07-16 14:50:30,401] RotatePoint:  POST
+[2016-07-16 14:50:30,401] RotatePoint: [10.4, 12.800000000000001, 1.0]
+[2016-07-16 14:50:30,401] RotatePoint:  PRE
+[2016-07-16 14:50:30,401] RotatePoint: [0.1, 0.8, 0.0]
+[2016-07-16 14:50:30,402] RotatePoint:  POST
+[2016-07-16 14:50:30,402] RotatePoint: [10.4, 13.199999999999999, 1.0]
+[2016-07-16 14:50:30,402] RotatePoint:  PRE
+[2016-07-16 14:50:30,402] RotatePoint: [0.1, 0.9, 0.0]
+[2016-07-16 14:50:30,402] RotatePoint:  POST
+[2016-07-16 14:50:30,402] RotatePoint: [10.4, 13.6, 1.0]
+[2016-07-16 14:50:30,402] RotatePoint:  PRE
+[2016-07-16 14:50:30,402] RotatePoint: [0.1, 1.0, 0.0]
+[2016-07-16 14:50:30,402] RotatePoint:  POST
+[2016-07-16 14:50:30,402] RotatePoint: [10.4, 14.0, 1.0]
+[2016-07-16 14:50:30,402] RotatePoint:  PRE
+[2016-07-16 14:50:30,402] RotatePoint: [0.2, 0.0, 0.0]
+[2016-07-16 14:50:30,402] RotatePoint:  POST
+[2016-07-16 14:50:30,402] RotatePoint: [10.800000000000001, 10.0, 1.0]
+[2016-07-16 14:50:30,402] RotatePoint:  PRE
+[2016-07-16 14:50:30,402] RotatePoint: [0.2, 0.1, 0.0]
+[2016-07-16 14:50:30,403] RotatePoint:  POST
+[2016-07-16 14:50:30,403] RotatePoint: [10.800000000000001, 10.4, 1.0]
+[2016-07-16 14:50:30,403] RotatePoint:  PRE
+[2016-07-16 14:50:30,403] RotatePoint: [0.2, 0.2, 0.0]
+[2016-07-16 14:50:30,403] RotatePoint:  POST
+[2016-07-16 14:50:30,403] RotatePoint: [10.800000000000001, 10.800000000000001, 1.0]
+[2016-07-16 14:50:30,403] RotatePoint:  PRE
+[2016-07-16 14:50:30,403] RotatePoint: [0.2, 0.3, 0.0]
+[2016-07-16 14:50:30,403] RotatePoint:  POST
+[2016-07-16 14:50:30,403] RotatePoint: [10.800000000000001, 11.199999999999999, 1.0]
+[2016-07-16 14:50:30,403] RotatePoint:  PRE
+[2016-07-16 14:50:30,403] RotatePoint: [0.2, 0.4, 0.0]
+[2016-07-16 14:50:30,403] RotatePoint:  POST
+[2016-07-16 14:50:30,403] RotatePoint: [10.800000000000001, 11.6, 1.0]
+[2016-07-16 14:50:30,403] RotatePoint:  PRE
+[2016-07-16 14:50:30,403] RotatePoint: [0.2, 0.5, 0.0]
+[2016-07-16 14:50:30,403] RotatePoint:  POST
+[2016-07-16 14:50:30,404] RotatePoint: [10.800000000000001, 12.0, 1.0]
+[2016-07-16 14:50:30,404] RotatePoint:  PRE
+[2016-07-16 14:50:30,404] RotatePoint: [0.2, 0.6, 0.0]
+[2016-07-16 14:50:30,404] RotatePoint:  POST
+[2016-07-16 14:50:30,404] RotatePoint: [10.800000000000001, 12.4, 1.0]
+[2016-07-16 14:50:30,404] RotatePoint:  PRE
+[2016-07-16 14:50:30,404] RotatePoint: [0.2, 0.7, 0.0]
+[2016-07-16 14:50:30,404] RotatePoint:  POST
+[2016-07-16 14:50:30,404] RotatePoint: [10.800000000000001, 12.800000000000001, 1.0]
+[2016-07-16 14:50:30,404] RotatePoint:  PRE
+[2016-07-16 14:50:30,404] RotatePoint: [0.2, 0.8, 0.0]
+[2016-07-16 14:50:30,404] RotatePoint:  POST
+[2016-07-16 14:50:30,404] RotatePoint: [10.800000000000001, 13.199999999999999, 1.0]
+[2016-07-16 14:50:30,404] RotatePoint:  PRE
+[2016-07-16 14:50:30,404] RotatePoint: [0.2, 0.9, 0.0]
+[2016-07-16 14:50:30,404] RotatePoint:  POST
+[2016-07-16 14:50:30,405] RotatePoint: [10.800000000000001, 13.6, 1.0]
+[2016-07-16 14:50:30,405] RotatePoint:  PRE
+[2016-07-16 14:50:30,405] RotatePoint: [0.2, 1.0, 0.0]
+[2016-07-16 14:50:30,405] RotatePoint:  POST
+[2016-07-16 14:50:30,405] RotatePoint: [10.800000000000001, 14.0, 1.0]
+[2016-07-16 14:50:30,405] RotatePoint:  PRE
+[2016-07-16 14:50:30,405] RotatePoint: [0.3, 0.0, 0.0]
+[2016-07-16 14:50:30,405] RotatePoint:  POST
+[2016-07-16 14:50:30,405] RotatePoint: [11.199999999999999, 10.0, 1.0]
+[2016-07-16 14:50:30,405] RotatePoint:  PRE
+[2016-07-16 14:50:30,405] RotatePoint: [0.3, 0.1, 0.0]
+[2016-07-16 14:50:30,405] RotatePoint:  POST
+[2016-07-16 14:50:30,405] RotatePoint: [11.199999999999999, 10.4, 1.0]
+[2016-07-16 14:50:30,405] RotatePoint:  PRE
+[2016-07-16 14:50:30,405] RotatePoint: [0.3, 0.2, 0.0]
+[2016-07-16 14:50:30,405] RotatePoint:  POST
+[2016-07-16 14:50:30,406] RotatePoint: [11.199999999999999, 10.800000000000001, 1.0]
+[2016-07-16 14:50:30,406] RotatePoint:  PRE
+[2016-07-16 14:50:30,406] RotatePoint: [0.3, 0.3, 0.0]
+[2016-07-16 14:50:30,406] RotatePoint:  POST
+[2016-07-16 14:50:30,406] RotatePoint: [11.199999999999999, 11.199999999999999, 1.0]
+[2016-07-16 14:50:30,406] RotatePoint:  PRE
+[2016-07-16 14:50:30,406] RotatePoint: [0.3, 0.4, 0.0]
+[2016-07-16 14:50:30,406] RotatePoint:  POST
+[2016-07-16 14:50:30,406] RotatePoint: [11.199999999999999, 11.6, 1.0]
+[2016-07-16 14:50:30,406] RotatePoint:  PRE
+[2016-07-16 14:50:30,406] RotatePoint: [0.3, 0.5, 0.0]
+[2016-07-16 14:50:30,406] RotatePoint:  POST
+[2016-07-16 14:50:30,406] RotatePoint: [11.199999999999999, 12.0, 1.0]
+[2016-07-16 14:50:30,406] RotatePoint:  PRE
+[2016-07-16 14:50:30,406] RotatePoint: [0.3, 0.6, 0.0]
+[2016-07-16 14:50:30,406] RotatePoint:  POST
+[2016-07-16 14:50:30,407] RotatePoint: [11.199999999999999, 12.4, 1.0]
+[2016-07-16 14:50:30,407] RotatePoint:  PRE
+[2016-07-16 14:50:30,407] RotatePoint: [0.3, 0.7, 0.0]
+[2016-07-16 14:50:30,407] RotatePoint:  POST
+[2016-07-16 14:50:30,407] RotatePoint: [11.199999999999999, 12.800000000000001, 1.0]
+[2016-07-16 14:50:30,407] RotatePoint:  PRE
+[2016-07-16 14:50:30,407] RotatePoint: [0.3, 0.8, 0.0]
+[2016-07-16 14:50:30,407] RotatePoint:  POST
+[2016-07-16 14:50:30,407] RotatePoint: [11.199999999999999, 13.199999999999999, 1.0]
+[2016-07-16 14:50:30,407] RotatePoint:  PRE
+[2016-07-16 14:50:30,407] RotatePoint: [0.3, 0.9, 0.0]
+[2016-07-16 14:50:30,407] RotatePoint:  POST
+[2016-07-16 14:50:30,407] RotatePoint: [11.199999999999999, 13.6, 1.0]
+[2016-07-16 14:50:30,407] RotatePoint:  PRE
+[2016-07-16 14:50:30,407] RotatePoint: [0.3, 1.0, 0.0]
+[2016-07-16 14:50:30,407] RotatePoint:  POST
+[2016-07-16 14:50:30,408] RotatePoint: [11.199999999999999, 14.0, 1.0]
+[2016-07-16 14:50:30,408] RotatePoint:  PRE
+[2016-07-16 14:50:30,408] RotatePoint: [0.4, 0.0, 0.0]
+[2016-07-16 14:50:30,408] RotatePoint:  POST
+[2016-07-16 14:50:30,408] RotatePoint: [11.6, 10.0, 1.0]
+[2016-07-16 14:50:30,408] RotatePoint:  PRE
+[2016-07-16 14:50:30,408] RotatePoint: [0.4, 0.1, 0.0]
+[2016-07-16 14:50:30,408] RotatePoint:  POST
+[2016-07-16 14:50:30,408] RotatePoint: [11.6, 10.4, 1.0]
+[2016-07-16 14:50:30,408] RotatePoint:  PRE
+[2016-07-16 14:50:30,408] RotatePoint: [0.4, 0.2, 0.0]
+[2016-07-16 14:50:30,408] RotatePoint:  POST
+[2016-07-16 14:50:30,408] RotatePoint: [11.6, 10.800000000000001, 1.0]
+[2016-07-16 14:50:30,408] RotatePoint:  PRE
+[2016-07-16 14:50:30,408] RotatePoint: [0.4, 0.3, 0.0]
+[2016-07-16 14:50:30,408] RotatePoint:  POST
+[2016-07-16 14:50:30,409] RotatePoint: [11.6, 11.199999999999999, 1.0]
+[2016-07-16 14:50:30,409] RotatePoint:  PRE
+[2016-07-16 14:50:30,409] RotatePoint: [0.4, 0.4, 0.0]
+[2016-07-16 14:50:30,409] RotatePoint:  POST
+[2016-07-16 14:50:30,409] RotatePoint: [11.6, 11.6, 1.0]
+[2016-07-16 14:50:30,409] RotatePoint:  PRE
+[2016-07-16 14:50:30,409] RotatePoint: [0.4, 0.5, 0.0]
+[2016-07-16 14:50:30,409] RotatePoint:  POST
+[2016-07-16 14:50:30,409] RotatePoint: [11.6, 12.0, 1.0]
+[2016-07-16 14:50:30,409] RotatePoint:  PRE
+[2016-07-16 14:50:30,409] RotatePoint: [0.4, 0.6, 0.0]
+[2016-07-16 14:50:30,409] RotatePoint:  POST
+[2016-07-16 14:50:30,409] RotatePoint: [11.6, 12.4, 1.0]
+[2016-07-16 14:50:30,409] RotatePoint:  PRE
+[2016-07-16 14:50:30,409] RotatePoint: [0.4, 0.7, 0.0]
+[2016-07-16 14:50:30,409] RotatePoint:  POST
+[2016-07-16 14:50:30,410] RotatePoint: [11.6, 12.800000000000001, 1.0]
+[2016-07-16 14:50:30,410] RotatePoint:  PRE
+[2016-07-16 14:50:30,410] RotatePoint: [0.4, 0.8, 0.0]
+[2016-07-16 14:50:30,410] RotatePoint:  POST
+[2016-07-16 14:50:30,410] RotatePoint: [11.6, 13.199999999999999, 1.0]
+[2016-07-16 14:50:30,410] RotatePoint:  PRE
+[2016-07-16 14:50:30,410] RotatePoint: [0.4, 0.9, 0.0]
+[2016-07-16 14:50:30,410] RotatePoint:  POST
+[2016-07-16 14:50:30,410] RotatePoint: [11.6, 13.6, 1.0]
+[2016-07-16 14:50:30,410] RotatePoint:  PRE
+[2016-07-16 14:50:30,410] RotatePoint: [0.4, 1.0, 0.0]
+[2016-07-16 14:50:30,410] RotatePoint:  POST
+[2016-07-16 14:50:30,410] RotatePoint: [11.6, 14.0, 1.0]
+[2016-07-16 14:50:30,410] RotatePoint:  PRE
+[2016-07-16 14:50:30,410] RotatePoint: [0.5, 0.0, 0.0]
+[2016-07-16 14:50:30,410] RotatePoint:  POST
+[2016-07-16 14:50:30,410] RotatePoint: [12.0, 10.0, 1.0]
+[2016-07-16 14:50:30,411] RotatePoint:  PRE
+[2016-07-16 14:50:30,411] RotatePoint: [0.5, 0.1, 0.0]
+[2016-07-16 14:50:30,411] RotatePoint:  POST
+[2016-07-16 14:50:30,411] RotatePoint: [12.0, 10.4, 1.0]
+[2016-07-16 14:50:30,411] RotatePoint:  PRE
+[2016-07-16 14:50:30,411] RotatePoint: [0.5, 0.2, 0.0]
+[2016-07-16 14:50:30,411] RotatePoint:  POST
+[2016-07-16 14:50:30,411] RotatePoint: [12.0, 10.800000000000001, 1.0]
+[2016-07-16 14:50:30,411] RotatePoint:  PRE
+[2016-07-16 14:50:30,411] RotatePoint: [0.5, 0.3, 0.0]
+[2016-07-16 14:50:30,411] RotatePoint:  POST
+[2016-07-16 14:50:30,411] RotatePoint: [12.0, 11.199999999999999, 1.0]
+[2016-07-16 14:50:30,411] RotatePoint:  PRE
+[2016-07-16 14:50:30,411] RotatePoint: [0.5, 0.4, 0.0]
+[2016-07-16 14:50:30,411] RotatePoint:  POST
+[2016-07-16 14:50:30,411] RotatePoint: [12.0, 11.6, 1.0]
+[2016-07-16 14:50:30,412] RotatePoint:  PRE
+[2016-07-16 14:50:30,412] RotatePoint: [0.5, 0.5, 0.0]
+[2016-07-16 14:50:30,412] RotatePoint:  POST
+[2016-07-16 14:50:30,412] RotatePoint: [12.0, 12.0, 1.0]
+[2016-07-16 14:50:30,412] RotatePoint:  PRE
+[2016-07-16 14:50:30,412] RotatePoint: [0.5, 0.6, 0.0]
+[2016-07-16 14:50:30,412] RotatePoint:  POST
+[2016-07-16 14:50:30,412] RotatePoint: [12.0, 12.4, 1.0]
+[2016-07-16 14:50:30,412] RotatePoint:  PRE
+[2016-07-16 14:50:30,412] RotatePoint: [0.5, 0.7, 0.0]
+[2016-07-16 14:50:30,412] RotatePoint:  POST
+[2016-07-16 14:50:30,412] RotatePoint: [12.0, 12.800000000000001, 1.0]
+[2016-07-16 14:50:30,412] RotatePoint:  PRE
+[2016-07-16 14:50:30,412] RotatePoint: [0.5, 0.8, 0.0]
+[2016-07-16 14:50:30,412] RotatePoint:  POST
+[2016-07-16 14:50:30,412] RotatePoint: [12.0, 13.199999999999999, 1.0]
+[2016-07-16 14:50:30,413] RotatePoint:  PRE
+[2016-07-16 14:50:30,413] RotatePoint: [0.5, 0.9, 0.0]
+[2016-07-16 14:50:30,413] RotatePoint:  POST
+[2016-07-16 14:50:30,413] RotatePoint: [12.0, 13.6, 1.0]
+[2016-07-16 14:50:30,413] RotatePoint:  PRE
+[2016-07-16 14:50:30,413] RotatePoint: [0.5, 1.0, 0.0]
+[2016-07-16 14:50:30,413] RotatePoint:  POST
+[2016-07-16 14:50:30,413] RotatePoint: [12.0, 14.0, 1.0]
+[2016-07-16 14:50:30,413] RotatePoint:  PRE
+[2016-07-16 14:50:30,413] RotatePoint: [0.6, 0.0, 0.0]
+[2016-07-16 14:50:30,413] RotatePoint:  POST
+[2016-07-16 14:50:30,413] RotatePoint: [12.4, 10.0, 1.0]
+[2016-07-16 14:50:30,413] RotatePoint:  PRE
+[2016-07-16 14:50:30,413] RotatePoint: [0.6, 0.1, 0.0]
+[2016-07-16 14:50:30,413] RotatePoint:  POST
+[2016-07-16 14:50:30,413] RotatePoint: [12.4, 10.4, 1.0]
+[2016-07-16 14:50:30,413] RotatePoint:  PRE
+[2016-07-16 14:50:30,414] RotatePoint: [0.6, 0.2, 0.0]
+[2016-07-16 14:50:30,414] RotatePoint:  POST
+[2016-07-16 14:50:30,414] RotatePoint: [12.4, 10.800000000000001, 1.0]
+[2016-07-16 14:50:30,414] RotatePoint:  PRE
+[2016-07-16 14:50:30,414] RotatePoint: [0.6, 0.3, 0.0]
+[2016-07-16 14:50:30,414] RotatePoint:  POST
+[2016-07-16 14:50:30,414] RotatePoint: [12.4, 11.199999999999999, 1.0]
+[2016-07-16 14:50:30,414] RotatePoint:  PRE
+[2016-07-16 14:50:30,414] RotatePoint: [0.6, 0.4, 0.0]
+[2016-07-16 14:50:30,414] RotatePoint:  POST
+[2016-07-16 14:50:30,414] RotatePoint: [12.4, 11.6, 1.0]
+[2016-07-16 14:50:30,414] RotatePoint:  PRE
+[2016-07-16 14:50:30,414] RotatePoint: [0.6, 0.5, 0.0]
+[2016-07-16 14:50:30,414] RotatePoint:  POST
+[2016-07-16 14:50:30,414] RotatePoint: [12.4, 12.0, 1.0]
+[2016-07-16 14:50:30,414] RotatePoint:  PRE
+[2016-07-16 14:50:30,414] RotatePoint: [0.6, 0.6, 0.0]
+[2016-07-16 14:50:30,415] RotatePoint:  POST
+[2016-07-16 14:50:30,415] RotatePoint: [12.4, 12.4, 1.0]
+[2016-07-16 14:50:30,415] RotatePoint:  PRE
+[2016-07-16 14:50:30,415] RotatePoint: [0.6, 0.7, 0.0]
+[2016-07-16 14:50:30,415] RotatePoint:  POST
+[2016-07-16 14:50:30,415] RotatePoint: [12.4, 12.800000000000001, 1.0]
+[2016-07-16 14:50:30,415] RotatePoint:  PRE
+[2016-07-16 14:50:30,415] RotatePoint: [0.6, 0.8, 0.0]
+[2016-07-16 14:50:30,415] RotatePoint:  POST
+[2016-07-16 14:50:30,415] RotatePoint: [12.4, 13.199999999999999, 1.0]
+[2016-07-16 14:50:30,415] RotatePoint:  PRE
+[2016-07-16 14:50:30,415] RotatePoint: [0.6, 0.9, 0.0]
+[2016-07-16 14:50:30,415] RotatePoint:  POST
+[2016-07-16 14:50:30,415] RotatePoint: [12.4, 13.6, 1.0]
+[2016-07-16 14:50:30,415] RotatePoint:  PRE
+[2016-07-16 14:50:30,415] RotatePoint: [0.6, 1.0, 0.0]
+[2016-07-16 14:50:30,416] RotatePoint:  POST
+[2016-07-16 14:50:30,416] RotatePoint: [12.4, 14.0, 1.0]
+[2016-07-16 14:50:30,416] RotatePoint:  PRE
+[2016-07-16 14:50:30,416] RotatePoint: [0.7, 0.0, 0.0]
+[2016-07-16 14:50:30,416] RotatePoint:  POST
+[2016-07-16 14:50:30,416] RotatePoint: [12.800000000000001, 10.0, 1.0]
+[2016-07-16 14:50:30,416] RotatePoint:  PRE
+[2016-07-16 14:50:30,416] RotatePoint: [0.7, 0.1, 0.0]
+[2016-07-16 14:50:30,416] RotatePoint:  POST
+[2016-07-16 14:50:30,416] RotatePoint: [12.800000000000001, 10.4, 1.0]
+[2016-07-16 14:50:30,416] RotatePoint:  PRE
+[2016-07-16 14:50:30,416] RotatePoint: [0.7, 0.2, 0.0]
+[2016-07-16 14:50:30,416] RotatePoint:  POST
+[2016-07-16 14:50:30,416] RotatePoint: [12.800000000000001, 10.800000000000001, 1.0]
+[2016-07-16 14:50:30,416] RotatePoint:  PRE
+[2016-07-16 14:50:30,416] RotatePoint: [0.7, 0.3, 0.0]
+[2016-07-16 14:50:30,417] RotatePoint:  POST
+[2016-07-16 14:50:30,417] RotatePoint: [12.800000000000001, 11.199999999999999, 1.0]
+[2016-07-16 14:50:30,417] RotatePoint:  PRE
+[2016-07-16 14:50:30,417] RotatePoint: [0.7, 0.4, 0.0]
+[2016-07-16 14:50:30,417] RotatePoint:  POST
+[2016-07-16 14:50:30,417] RotatePoint: [12.800000000000001, 11.6, 1.0]
+[2016-07-16 14:50:30,417] RotatePoint:  PRE
+[2016-07-16 14:50:30,417] RotatePoint: [0.7, 0.5, 0.0]
+[2016-07-16 14:50:30,417] RotatePoint:  POST
+[2016-07-16 14:50:30,417] RotatePoint: [12.800000000000001, 12.0, 1.0]
+[2016-07-16 14:50:30,417] RotatePoint:  PRE
+[2016-07-16 14:50:30,417] RotatePoint: [0.7, 0.6, 0.0]
+[2016-07-16 14:50:30,417] RotatePoint:  POST
+[2016-07-16 14:50:30,417] RotatePoint: [12.800000000000001, 12.4, 1.0]
+[2016-07-16 14:50:30,417] RotatePoint:  PRE
+[2016-07-16 14:50:30,417] RotatePoint: [0.7, 0.7, 0.0]
+[2016-07-16 14:50:30,418] RotatePoint:  POST
+[2016-07-16 14:50:30,418] RotatePoint: [12.800000000000001, 12.800000000000001, 1.0]
+[2016-07-16 14:50:30,418] RotatePoint:  PRE
+[2016-07-16 14:50:30,418] RotatePoint: [0.7, 0.8, 0.0]
+[2016-07-16 14:50:30,418] RotatePoint:  POST
+[2016-07-16 14:50:30,418] RotatePoint: [12.800000000000001, 13.199999999999999, 1.0]
+[2016-07-16 14:50:30,418] RotatePoint:  PRE
+[2016-07-16 14:50:30,418] RotatePoint: [0.7, 0.9, 0.0]
+[2016-07-16 14:50:30,418] RotatePoint:  POST
+[2016-07-16 14:50:30,418] RotatePoint: [12.800000000000001, 13.6, 1.0]
+[2016-07-16 14:50:30,418] RotatePoint:  PRE
+[2016-07-16 14:50:30,418] RotatePoint: [0.7, 1.0, 0.0]
+[2016-07-16 14:50:30,418] RotatePoint:  POST
+[2016-07-16 14:50:30,418] RotatePoint: [12.800000000000001, 14.0, 1.0]
+[2016-07-16 14:50:30,418] RotatePoint:  PRE
+[2016-07-16 14:50:30,418] RotatePoint: [0.8, 0.0, 0.0]
+[2016-07-16 14:50:30,418] RotatePoint:  POST
+[2016-07-16 14:50:30,419] RotatePoint: [13.199999999999999, 10.0, 1.0]
+[2016-07-16 14:50:30,419] RotatePoint:  PRE
+[2016-07-16 14:50:30,419] RotatePoint: [0.8, 0.1, 0.0]
+[2016-07-16 14:50:30,419] RotatePoint:  POST
+[2016-07-16 14:50:30,419] RotatePoint: [13.199999999999999, 10.4, 1.0]
+[2016-07-16 14:50:30,419] RotatePoint:  PRE
+[2016-07-16 14:50:30,419] RotatePoint: [0.8, 0.2, 0.0]
+[2016-07-16 14:50:30,419] RotatePoint:  POST
+[2016-07-16 14:50:30,419] RotatePoint: [13.199999999999999, 10.800000000000001, 1.0]
+[2016-07-16 14:50:30,419] RotatePoint:  PRE
+[2016-07-16 14:50:30,419] RotatePoint: [0.8, 0.3, 0.0]
+[2016-07-16 14:50:30,419] RotatePoint:  POST
+[2016-07-16 14:50:30,419] RotatePoint: [13.199999999999999, 11.199999999999999, 1.0]
+[2016-07-16 14:50:30,419] RotatePoint:  PRE
+[2016-07-16 14:50:30,419] RotatePoint: [0.8, 0.4, 0.0]
+[2016-07-16 14:50:30,419] RotatePoint:  POST
+[2016-07-16 14:50:30,420] RotatePoint: [13.199999999999999, 11.6, 1.0]
+[2016-07-16 14:50:30,420] RotatePoint:  PRE
+[2016-07-16 14:50:30,420] RotatePoint: [0.8, 0.5, 0.0]
+[2016-07-16 14:50:30,420] RotatePoint:  POST
+[2016-07-16 14:50:30,420] RotatePoint: [13.199999999999999, 12.0, 1.0]
+[2016-07-16 14:50:30,420] RotatePoint:  PRE
+[2016-07-16 14:50:30,420] RotatePoint: [0.8, 0.6, 0.0]
+[2016-07-16 14:50:30,420] RotatePoint:  POST
+[2016-07-16 14:50:30,420] RotatePoint: [13.199999999999999, 12.4, 1.0]
+[2016-07-16 14:50:30,420] RotatePoint:  PRE
+[2016-07-16 14:50:30,420] RotatePoint: [0.8, 0.7, 0.0]
+[2016-07-16 14:50:30,420] RotatePoint:  POST
+[2016-07-16 14:50:30,420] RotatePoint: [13.199999999999999, 12.800000000000001, 1.0]
+[2016-07-16 14:50:30,420] RotatePoint:  PRE
+[2016-07-16 14:50:30,420] RotatePoint: [0.8, 0.8, 0.0]
+[2016-07-16 14:50:30,420] RotatePoint:  POST
+[2016-07-16 14:50:30,420] RotatePoint: [13.199999999999999, 13.199999999999999, 1.0]
+[2016-07-16 14:50:30,421] RotatePoint:  PRE
+[2016-07-16 14:50:30,421] RotatePoint: [0.8, 0.9, 0.0]
+[2016-07-16 14:50:30,421] RotatePoint:  POST
+[2016-07-16 14:50:30,421] RotatePoint: [13.199999999999999, 13.6, 1.0]
+[2016-07-16 14:50:30,421] RotatePoint:  PRE
+[2016-07-16 14:50:30,421] RotatePoint: [0.8, 1.0, 0.0]
+[2016-07-16 14:50:30,421] RotatePoint:  POST
+[2016-07-16 14:50:30,421] RotatePoint: [13.199999999999999, 14.0, 1.0]
+[2016-07-16 14:50:30,421] RotatePoint:  PRE
+[2016-07-16 14:50:30,421] RotatePoint: [0.9, 0.0, 0.0]
+[2016-07-16 14:50:30,421] RotatePoint:  POST
+[2016-07-16 14:50:30,421] RotatePoint: [13.6, 10.0, 1.0]
+[2016-07-16 14:50:30,421] RotatePoint:  PRE
+[2016-07-16 14:50:30,421] RotatePoint: [0.9, 0.1, 0.0]
+[2016-07-16 14:50:30,421] RotatePoint:  POST
+[2016-07-16 14:50:30,421] RotatePoint: [13.6, 10.4, 1.0]
+[2016-07-16 14:50:30,422] RotatePoint:  PRE
+[2016-07-16 14:50:30,422] RotatePoint: [0.9, 0.2, 0.0]
+[2016-07-16 14:50:30,422] RotatePoint:  POST
+[2016-07-16 14:50:30,422] RotatePoint: [13.6, 10.800000000000001, 1.0]
+[2016-07-16 14:50:30,422] RotatePoint:  PRE
+[2016-07-16 14:50:30,422] RotatePoint: [0.9, 0.3, 0.0]
+[2016-07-16 14:50:30,422] RotatePoint:  POST
+[2016-07-16 14:50:30,422] RotatePoint: [13.6, 11.199999999999999, 1.0]
+[2016-07-16 14:50:30,422] RotatePoint:  PRE
+[2016-07-16 14:50:30,422] RotatePoint: [0.9, 0.4, 0.0]
+[2016-07-16 14:50:30,422] RotatePoint:  POST
+[2016-07-16 14:50:30,422] RotatePoint: [13.6, 11.6, 1.0]
+[2016-07-16 14:50:30,422] RotatePoint:  PRE
+[2016-07-16 14:50:30,422] RotatePoint: [0.9, 0.5, 0.0]
+[2016-07-16 14:50:30,422] RotatePoint:  POST
+[2016-07-16 14:50:30,422] RotatePoint: [13.6, 12.0, 1.0]
+[2016-07-16 14:50:30,422] RotatePoint:  PRE
+[2016-07-16 14:50:30,423] RotatePoint: [0.9, 0.6, 0.0]
+[2016-07-16 14:50:30,423] RotatePoint:  POST
+[2016-07-16 14:50:30,423] RotatePoint: [13.6, 12.4, 1.0]
+[2016-07-16 14:50:30,423] RotatePoint:  PRE
+[2016-07-16 14:50:30,423] RotatePoint: [0.9, 0.7, 0.0]
+[2016-07-16 14:50:30,423] RotatePoint:  POST
+[2016-07-16 14:50:30,423] RotatePoint: [13.6, 12.800000000000001, 1.0]
+[2016-07-16 14:50:30,423] RotatePoint:  PRE
+[2016-07-16 14:50:30,423] RotatePoint: [0.9, 0.8, 0.0]
+[2016-07-16 14:50:30,423] RotatePoint:  POST
+[2016-07-16 14:50:30,423] RotatePoint: [13.6, 13.199999999999999, 1.0]
+[2016-07-16 14:50:30,423] RotatePoint:  PRE
+[2016-07-16 14:50:30,423] RotatePoint: [0.9, 0.9, 0.0]
+[2016-07-16 14:50:30,423] RotatePoint:  POST
+[2016-07-16 14:50:30,423] RotatePoint: [13.6, 13.6, 1.0]
+[2016-07-16 14:50:30,423] RotatePoint:  PRE
+[2016-07-16 14:50:30,424] RotatePoint: [0.9, 1.0, 0.0]
+[2016-07-16 14:50:30,424] RotatePoint:  POST
+[2016-07-16 14:50:30,424] RotatePoint: [13.6, 14.0, 1.0]
+[2016-07-16 14:50:30,424] RotatePoint:  PRE
+[2016-07-16 14:50:30,424] RotatePoint: [1.0, 0.0, 0.0]
+[2016-07-16 14:50:30,424] RotatePoint:  POST
+[2016-07-16 14:50:30,424] RotatePoint: [14.0, 10.0, 1.0]
+[2016-07-16 14:50:30,424] RotatePoint:  PRE
+[2016-07-16 14:50:30,424] RotatePoint: [1.0, 0.1, 0.0]
+[2016-07-16 14:50:30,424] RotatePoint:  POST
+[2016-07-16 14:50:30,424] RotatePoint: [14.0, 10.4, 1.0]
+[2016-07-16 14:50:30,424] RotatePoint:  PRE
+[2016-07-16 14:50:30,424] RotatePoint: [1.0, 0.2, 0.0]
+[2016-07-16 14:50:30,424] RotatePoint:  POST
+[2016-07-16 14:50:30,424] RotatePoint: [14.0, 10.800000000000001, 1.0]
+[2016-07-16 14:50:30,424] RotatePoint:  PRE
+[2016-07-16 14:50:30,425] RotatePoint: [1.0, 0.3, 0.0]
+[2016-07-16 14:50:30,425] RotatePoint:  POST
+[2016-07-16 14:50:30,425] RotatePoint: [14.0, 11.199999999999999, 1.0]
+[2016-07-16 14:50:30,425] RotatePoint:  PRE
+[2016-07-16 14:50:30,425] RotatePoint: [1.0, 0.4, 0.0]
+[2016-07-16 14:50:30,425] RotatePoint:  POST
+[2016-07-16 14:50:30,425] RotatePoint: [14.0, 11.6, 1.0]
+[2016-07-16 14:50:30,425] RotatePoint:  PRE
+[2016-07-16 14:50:30,425] RotatePoint: [1.0, 0.5, 0.0]
+[2016-07-16 14:50:30,425] RotatePoint:  POST
+[2016-07-16 14:50:30,425] RotatePoint: [14.0, 12.0, 1.0]
+[2016-07-16 14:50:30,425] RotatePoint:  PRE
+[2016-07-16 14:50:30,425] RotatePoint: [1.0, 0.6, 0.0]
+[2016-07-16 14:50:30,425] RotatePoint:  POST
+[2016-07-16 14:50:30,425] RotatePoint: [14.0, 12.4, 1.0]
+[2016-07-16 14:50:30,425] RotatePoint:  PRE
+[2016-07-16 14:50:30,426] RotatePoint: [1.0, 0.7, 0.0]
+[2016-07-16 14:50:30,426] RotatePoint:  POST
+[2016-07-16 14:50:30,426] RotatePoint: [14.0, 12.800000000000001, 1.0]
+[2016-07-16 14:50:30,426] RotatePoint:  PRE
+[2016-07-16 14:50:30,426] RotatePoint: [1.0, 0.8, 0.0]
+[2016-07-16 14:50:30,426] RotatePoint:  POST
+[2016-07-16 14:50:30,426] RotatePoint: [14.0, 13.199999999999999, 1.0]
+[2016-07-16 14:50:30,426] RotatePoint:  PRE
+[2016-07-16 14:50:30,426] RotatePoint: [1.0, 0.9, 0.0]
+[2016-07-16 14:50:30,426] RotatePoint:  POST
+[2016-07-16 14:50:30,426] RotatePoint: [14.0, 13.6, 1.0]
+[2016-07-16 14:50:30,426] RotatePoint:  PRE
+[2016-07-16 14:50:30,426] RotatePoint: [1.0, 1.0, 0.0]
+[2016-07-16 14:50:30,426] RotatePoint:  POST
+[2016-07-16 14:50:30,426] RotatePoint: [14.0, 14.0, 1.0]
+[2016-07-16 14:50:30,426] RotatePoint:  PRE
+[2016-07-16 14:50:30,426] RotatePoint: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,427] RotatePoint:  POST
+[2016-07-16 14:50:30,427] RotatePoint: [10.0, 10.0, 1.0]
+[2016-07-16 14:50:30,427] RotatePoint:  PRE
+[2016-07-16 14:50:30,427] RotatePoint: [0.0, 0.0, 0.1]
+[2016-07-16 14:50:30,427] RotatePoint:  POST
+[2016-07-16 14:50:30,427] RotatePoint: [10.0, 10.0, 1.3999999999999999]
+[2016-07-16 14:50:30,427] RotatePoint:  PRE
+[2016-07-16 14:50:30,427] RotatePoint: [0.0, 0.0, 0.2]
+[2016-07-16 14:50:30,427] RotatePoint:  POST
+[2016-07-16 14:50:30,427] RotatePoint: [10.0, 10.0, 1.8]
+[2016-07-16 14:50:30,427] RotatePoint:  PRE
+[2016-07-16 14:50:30,427] RotatePoint: [0.0, 0.0, 0.3]
+[2016-07-16 14:50:30,427] RotatePoint:  POST
+[2016-07-16 14:50:30,427] RotatePoint: [10.0, 10.0, 2.2000000000000002]
+[2016-07-16 14:50:30,427] RotatePoint:  PRE
+[2016-07-16 14:50:30,427] RotatePoint: [0.0, 0.0, 0.4]
+[2016-07-16 14:50:30,428] RotatePoint:  POST
+[2016-07-16 14:50:30,428] RotatePoint: [10.0, 10.0, 2.6000000000000001]
+[2016-07-16 14:50:30,428] RotatePoint:  PRE
+[2016-07-16 14:50:30,428] RotatePoint: [0.0, 0.0, 0.5]
+[2016-07-16 14:50:30,428] RotatePoint:  POST
+[2016-07-16 14:50:30,428] RotatePoint: [10.0, 10.0, 3.0]
+[2016-07-16 14:50:30,428] RotatePoint:  PRE
+[2016-07-16 14:50:30,428] RotatePoint: [0.0, 0.0, 0.6]
+[2016-07-16 14:50:30,428] RotatePoint:  POST
+[2016-07-16 14:50:30,428] RotatePoint: [10.0, 10.0, 3.3999999999999999]
+[2016-07-16 14:50:30,428] RotatePoint:  PRE
+[2016-07-16 14:50:30,428] RotatePoint: [0.0, 0.0, 0.7]
+[2016-07-16 14:50:30,428] RotatePoint:  POST
+[2016-07-16 14:50:30,428] RotatePoint: [10.0, 10.0, 3.7999999999999998]
+[2016-07-16 14:50:30,428] RotatePoint:  PRE
+[2016-07-16 14:50:30,428] RotatePoint: [0.0, 0.0, 0.8]
+[2016-07-16 14:50:30,428] RotatePoint:  POST
+[2016-07-16 14:50:30,429] RotatePoint: [10.0, 10.0, 4.2000000000000002]
+[2016-07-16 14:50:30,429] RotatePoint:  PRE
+[2016-07-16 14:50:30,429] RotatePoint: [0.0, 0.0, 0.9]
+[2016-07-16 14:50:30,429] RotatePoint:  POST
+[2016-07-16 14:50:30,429] RotatePoint: [10.0, 10.0, 4.5999999999999996]
+[2016-07-16 14:50:30,429] RotatePoint:  PRE
+[2016-07-16 14:50:30,429] RotatePoint: [0.0, 0.0, 1.0]
+[2016-07-16 14:50:30,429] RotatePoint:  POST
+[2016-07-16 14:50:30,429] RotatePoint: [10.0, 10.0, 5.0]
+[2016-07-16 14:50:30,429] RotatePoint:  PRE
+[2016-07-16 14:50:30,429] RotatePoint: [0.1, 0.0, 0.0]
+[2016-07-16 14:50:30,429] RotatePoint:  POST
+[2016-07-16 14:50:30,429] RotatePoint: [10.4, 10.0, 1.0]
+[2016-07-16 14:50:30,429] RotatePoint:  PRE
+[2016-07-16 14:50:30,429] RotatePoint: [0.1, 0.0, 0.1]
+[2016-07-16 14:50:30,429] RotatePoint:  POST
+[2016-07-16 14:50:30,430] RotatePoint: [10.4, 10.0, 1.3999999999999999]
+[2016-07-16 14:50:30,430] RotatePoint:  PRE
+[2016-07-16 14:50:30,430] RotatePoint: [0.1, 0.0, 0.2]
+[2016-07-16 14:50:30,430] RotatePoint:  POST
+[2016-07-16 14:50:30,430] RotatePoint: [10.4, 10.0, 1.8]
+[2016-07-16 14:50:30,430] RotatePoint:  PRE
+[2016-07-16 14:50:30,430] RotatePoint: [0.1, 0.0, 0.3]
+[2016-07-16 14:50:30,430] RotatePoint:  POST
+[2016-07-16 14:50:30,430] RotatePoint: [10.4, 10.0, 2.2000000000000002]
+[2016-07-16 14:50:30,430] RotatePoint:  PRE
+[2016-07-16 14:50:30,430] RotatePoint: [0.1, 0.0, 0.4]
+[2016-07-16 14:50:30,430] RotatePoint:  POST
+[2016-07-16 14:50:30,430] RotatePoint: [10.4, 10.0, 2.6000000000000001]
+[2016-07-16 14:50:30,430] RotatePoint:  PRE
+[2016-07-16 14:50:30,430] RotatePoint: [0.1, 0.0, 0.5]
+[2016-07-16 14:50:30,430] RotatePoint:  POST
+[2016-07-16 14:50:30,430] RotatePoint: [10.4, 10.0, 3.0]
+[2016-07-16 14:50:30,431] RotatePoint:  PRE
+[2016-07-16 14:50:30,431] RotatePoint: [0.1, 0.0, 0.6]
+[2016-07-16 14:50:30,431] RotatePoint:  POST
+[2016-07-16 14:50:30,431] RotatePoint: [10.4, 10.0, 3.3999999999999999]
+[2016-07-16 14:50:30,431] RotatePoint:  PRE
+[2016-07-16 14:50:30,431] RotatePoint: [0.1, 0.0, 0.7]
+[2016-07-16 14:50:30,431] RotatePoint:  POST
+[2016-07-16 14:50:30,431] RotatePoint: [10.4, 10.0, 3.7999999999999998]
+[2016-07-16 14:50:30,431] RotatePoint:  PRE
+[2016-07-16 14:50:30,431] RotatePoint: [0.1, 0.0, 0.8]
+[2016-07-16 14:50:30,431] RotatePoint:  POST
+[2016-07-16 14:50:30,431] RotatePoint: [10.4, 10.0, 4.2000000000000002]
+[2016-07-16 14:50:30,431] RotatePoint:  PRE
+[2016-07-16 14:50:30,431] RotatePoint: [0.1, 0.0, 0.9]
+[2016-07-16 14:50:30,431] RotatePoint:  POST
+[2016-07-16 14:50:30,431] RotatePoint: [10.4, 10.0, 4.5999999999999996]
+[2016-07-16 14:50:30,432] RotatePoint:  PRE
+[2016-07-16 14:50:30,432] RotatePoint: [0.1, 0.0, 1.0]
+[2016-07-16 14:50:30,432] RotatePoint:  POST
+[2016-07-16 14:50:30,432] RotatePoint: [10.4, 10.0, 5.0]
+[2016-07-16 14:50:30,432] RotatePoint:  PRE
+[2016-07-16 14:50:30,432] RotatePoint: [0.2, 0.0, 0.0]
+[2016-07-16 14:50:30,432] RotatePoint:  POST
+[2016-07-16 14:50:30,432] RotatePoint: [10.800000000000001, 10.0, 1.0]
+[2016-07-16 14:50:30,432] RotatePoint:  PRE
+[2016-07-16 14:50:30,432] RotatePoint: [0.2, 0.0, 0.1]
+[2016-07-16 14:50:30,432] RotatePoint:  POST
+[2016-07-16 14:50:30,432] RotatePoint: [10.800000000000001, 10.0, 1.3999999999999999]
+[2016-07-16 14:50:30,432] RotatePoint:  PRE
+[2016-07-16 14:50:30,432] RotatePoint: [0.2, 0.0, 0.2]
+[2016-07-16 14:50:30,432] RotatePoint:  POST
+[2016-07-16 14:50:30,432] RotatePoint: [10.800000000000001, 10.0, 1.8]
+[2016-07-16 14:50:30,432] RotatePoint:  PRE
+[2016-07-16 14:50:30,433] RotatePoint: [0.2, 0.0, 0.3]
+[2016-07-16 14:50:30,433] RotatePoint:  POST
+[2016-07-16 14:50:30,433] RotatePoint: [10.800000000000001, 10.0, 2.2000000000000002]
+[2016-07-16 14:50:30,433] RotatePoint:  PRE
+[2016-07-16 14:50:30,433] RotatePoint: [0.2, 0.0, 0.4]
+[2016-07-16 14:50:30,433] RotatePoint:  POST
+[2016-07-16 14:50:30,433] RotatePoint: [10.800000000000001, 10.0, 2.6000000000000001]
+[2016-07-16 14:50:30,433] RotatePoint:  PRE
+[2016-07-16 14:50:30,433] RotatePoint: [0.2, 0.0, 0.5]
+[2016-07-16 14:50:30,433] RotatePoint:  POST
+[2016-07-16 14:50:30,433] RotatePoint: [10.800000000000001, 10.0, 3.0]
+[2016-07-16 14:50:30,433] RotatePoint:  PRE
+[2016-07-16 14:50:30,433] RotatePoint: [0.2, 0.0, 0.6]
+[2016-07-16 14:50:30,433] RotatePoint:  POST
+[2016-07-16 14:50:30,433] RotatePoint: [10.800000000000001, 10.0, 3.3999999999999999]
+[2016-07-16 14:50:30,434] RotatePoint:  PRE
+[2016-07-16 14:50:30,434] RotatePoint: [0.2, 0.0, 0.7]
+[2016-07-16 14:50:30,434] RotatePoint:  POST
+[2016-07-16 14:50:30,434] RotatePoint: [10.800000000000001, 10.0, 3.7999999999999998]
+[2016-07-16 14:50:30,434] RotatePoint:  PRE
+[2016-07-16 14:50:30,434] RotatePoint: [0.2, 0.0, 0.8]
+[2016-07-16 14:50:30,434] RotatePoint:  POST
+[2016-07-16 14:50:30,434] RotatePoint: [10.800000000000001, 10.0, 4.2000000000000002]
+[2016-07-16 14:50:30,434] RotatePoint:  PRE
+[2016-07-16 14:50:30,434] RotatePoint: [0.2, 0.0, 0.9]
+[2016-07-16 14:50:30,434] RotatePoint:  POST
+[2016-07-16 14:50:30,434] RotatePoint: [10.800000000000001, 10.0, 4.5999999999999996]
+[2016-07-16 14:50:30,434] RotatePoint:  PRE
+[2016-07-16 14:50:30,434] RotatePoint: [0.2, 0.0, 1.0]
+[2016-07-16 14:50:30,434] RotatePoint:  POST
+[2016-07-16 14:50:30,434] RotatePoint: [10.800000000000001, 10.0, 5.0]
+[2016-07-16 14:50:30,435] RotatePoint:  PRE
+[2016-07-16 14:50:30,435] RotatePoint: [0.3, 0.0, 0.0]
+[2016-07-16 14:50:30,435] RotatePoint:  POST
+[2016-07-16 14:50:30,435] RotatePoint: [11.199999999999999, 10.0, 1.0]
+[2016-07-16 14:50:30,435] RotatePoint:  PRE
+[2016-07-16 14:50:30,435] RotatePoint: [0.3, 0.0, 0.1]
+[2016-07-16 14:50:30,435] RotatePoint:  POST
+[2016-07-16 14:50:30,435] RotatePoint: [11.199999999999999, 10.0, 1.3999999999999999]
+[2016-07-16 14:50:30,435] RotatePoint:  PRE
+[2016-07-16 14:50:30,435] RotatePoint: [0.3, 0.0, 0.2]
+[2016-07-16 14:50:30,435] RotatePoint:  POST
+[2016-07-16 14:50:30,435] RotatePoint: [11.199999999999999, 10.0, 1.8]
+[2016-07-16 14:50:30,435] RotatePoint:  PRE
+[2016-07-16 14:50:30,435] RotatePoint: [0.3, 0.0, 0.3]
+[2016-07-16 14:50:30,435] RotatePoint:  POST
+[2016-07-16 14:50:30,435] RotatePoint: [11.199999999999999, 10.0, 2.2000000000000002]
+[2016-07-16 14:50:30,436] RotatePoint:  PRE
+[2016-07-16 14:50:30,436] RotatePoint: [0.3, 0.0, 0.4]
+[2016-07-16 14:50:30,436] RotatePoint:  POST
+[2016-07-16 14:50:30,436] RotatePoint: [11.199999999999999, 10.0, 2.6000000000000001]
+[2016-07-16 14:50:30,436] RotatePoint:  PRE
+[2016-07-16 14:50:30,436] RotatePoint: [0.3, 0.0, 0.5]
+[2016-07-16 14:50:30,436] RotatePoint:  POST
+[2016-07-16 14:50:30,436] RotatePoint: [11.199999999999999, 10.0, 3.0]
+[2016-07-16 14:50:30,436] RotatePoint:  PRE
+[2016-07-16 14:50:30,436] RotatePoint: [0.3, 0.0, 0.6]
+[2016-07-16 14:50:30,436] RotatePoint:  POST
+[2016-07-16 14:50:30,436] RotatePoint: [11.199999999999999, 10.0, 3.3999999999999999]
+[2016-07-16 14:50:30,436] RotatePoint:  PRE
+[2016-07-16 14:50:30,436] RotatePoint: [0.3, 0.0, 0.7]
+[2016-07-16 14:50:30,436] RotatePoint:  POST
+[2016-07-16 14:50:30,436] RotatePoint: [11.199999999999999, 10.0, 3.7999999999999998]
+[2016-07-16 14:50:30,437] RotatePoint:  PRE
+[2016-07-16 14:50:30,437] RotatePoint: [0.3, 0.0, 0.8]
+[2016-07-16 14:50:30,437] RotatePoint:  POST
+[2016-07-16 14:50:30,437] RotatePoint: [11.199999999999999, 10.0, 4.2000000000000002]
+[2016-07-16 14:50:30,437] RotatePoint:  PRE
+[2016-07-16 14:50:30,437] RotatePoint: [0.3, 0.0, 0.9]
+[2016-07-16 14:50:30,437] RotatePoint:  POST
+[2016-07-16 14:50:30,437] RotatePoint: [11.199999999999999, 10.0, 4.5999999999999996]
+[2016-07-16 14:50:30,437] RotatePoint:  PRE
+[2016-07-16 14:50:30,437] RotatePoint: [0.3, 0.0, 1.0]
+[2016-07-16 14:50:30,437] RotatePoint:  POST
+[2016-07-16 14:50:30,437] RotatePoint: [11.199999999999999, 10.0, 5.0]
+[2016-07-16 14:50:30,437] RotatePoint:  PRE
+[2016-07-16 14:50:30,437] RotatePoint: [0.4, 0.0, 0.0]
+[2016-07-16 14:50:30,437] RotatePoint:  POST
+[2016-07-16 14:50:30,437] RotatePoint: [11.6, 10.0, 1.0]
+[2016-07-16 14:50:30,437] RotatePoint:  PRE
+[2016-07-16 14:50:30,438] RotatePoint: [0.4, 0.0, 0.1]
+[2016-07-16 14:50:30,438] RotatePoint:  POST
+[2016-07-16 14:50:30,438] RotatePoint: [11.6, 10.0, 1.3999999999999999]
+[2016-07-16 14:50:30,438] RotatePoint:  PRE
+[2016-07-16 14:50:30,438] RotatePoint: [0.4, 0.0, 0.2]
+[2016-07-16 14:50:30,438] RotatePoint:  POST
+[2016-07-16 14:50:30,438] RotatePoint: [11.6, 10.0, 1.8]
+[2016-07-16 14:50:30,438] RotatePoint:  PRE
+[2016-07-16 14:50:30,438] RotatePoint: [0.4, 0.0, 0.3]
+[2016-07-16 14:50:30,438] RotatePoint:  POST
+[2016-07-16 14:50:30,438] RotatePoint: [11.6, 10.0, 2.2000000000000002]
+[2016-07-16 14:50:30,438] RotatePoint:  PRE
+[2016-07-16 14:50:30,438] RotatePoint: [0.4, 0.0, 0.4]
+[2016-07-16 14:50:30,438] RotatePoint:  POST
+[2016-07-16 14:50:30,438] RotatePoint: [11.6, 10.0, 2.6000000000000001]
+[2016-07-16 14:50:30,438] RotatePoint:  PRE
+[2016-07-16 14:50:30,438] RotatePoint: [0.4, 0.0, 0.5]
+[2016-07-16 14:50:30,439] RotatePoint:  POST
+[2016-07-16 14:50:30,439] RotatePoint: [11.6, 10.0, 3.0]
+[2016-07-16 14:50:30,439] RotatePoint:  PRE
+[2016-07-16 14:50:30,439] RotatePoint: [0.4, 0.0, 0.6]
+[2016-07-16 14:50:30,439] RotatePoint:  POST
+[2016-07-16 14:50:30,439] RotatePoint: [11.6, 10.0, 3.3999999999999999]
+[2016-07-16 14:50:30,439] RotatePoint:  PRE
+[2016-07-16 14:50:30,439] RotatePoint: [0.4, 0.0, 0.7]
+[2016-07-16 14:50:30,439] RotatePoint:  POST
+[2016-07-16 14:50:30,439] RotatePoint: [11.6, 10.0, 3.7999999999999998]
+[2016-07-16 14:50:30,439] RotatePoint:  PRE
+[2016-07-16 14:50:30,439] RotatePoint: [0.4, 0.0, 0.8]
+[2016-07-16 14:50:30,439] RotatePoint:  POST
+[2016-07-16 14:50:30,439] RotatePoint: [11.6, 10.0, 4.2000000000000002]
+[2016-07-16 14:50:30,439] RotatePoint:  PRE
+[2016-07-16 14:50:30,439] RotatePoint: [0.4, 0.0, 0.9]
+[2016-07-16 14:50:30,440] RotatePoint:  POST
+[2016-07-16 14:50:30,440] RotatePoint: [11.6, 10.0, 4.5999999999999996]
+[2016-07-16 14:50:30,440] RotatePoint:  PRE
+[2016-07-16 14:50:30,440] RotatePoint: [0.4, 0.0, 1.0]
+[2016-07-16 14:50:30,440] RotatePoint:  POST
+[2016-07-16 14:50:30,440] RotatePoint: [11.6, 10.0, 5.0]
+[2016-07-16 14:50:30,440] RotatePoint:  PRE
+[2016-07-16 14:50:30,440] RotatePoint: [0.5, 0.0, 0.0]
+[2016-07-16 14:50:30,440] RotatePoint:  POST
+[2016-07-16 14:50:30,440] RotatePoint: [12.0, 10.0, 1.0]
+[2016-07-16 14:50:30,440] RotatePoint:  PRE
+[2016-07-16 14:50:30,440] RotatePoint: [0.5, 0.0, 0.1]
+[2016-07-16 14:50:30,440] RotatePoint:  POST
+[2016-07-16 14:50:30,440] RotatePoint: [12.0, 10.0, 1.3999999999999999]
+[2016-07-16 14:50:30,440] RotatePoint:  PRE
+[2016-07-16 14:50:30,440] RotatePoint: [0.5, 0.0, 0.2]
+[2016-07-16 14:50:30,441] RotatePoint:  POST
+[2016-07-16 14:50:30,441] RotatePoint: [12.0, 10.0, 1.8]
+[2016-07-16 14:50:30,441] RotatePoint:  PRE
+[2016-07-16 14:50:30,441] RotatePoint: [0.5, 0.0, 0.3]
+[2016-07-16 14:50:30,441] RotatePoint:  POST
+[2016-07-16 14:50:30,441] RotatePoint: [12.0, 10.0, 2.2000000000000002]
+[2016-07-16 14:50:30,441] RotatePoint:  PRE
+[2016-07-16 14:50:30,441] RotatePoint: [0.5, 0.0, 0.4]
+[2016-07-16 14:50:30,441] RotatePoint:  POST
+[2016-07-16 14:50:30,441] RotatePoint: [12.0, 10.0, 2.6000000000000001]
+[2016-07-16 14:50:30,441] RotatePoint:  PRE
+[2016-07-16 14:50:30,441] RotatePoint: [0.5, 0.0, 0.5]
+[2016-07-16 14:50:30,441] RotatePoint:  POST
+[2016-07-16 14:50:30,441] RotatePoint: [12.0, 10.0, 3.0]
+[2016-07-16 14:50:30,441] RotatePoint:  PRE
+[2016-07-16 14:50:30,441] RotatePoint: [0.5, 0.0, 0.6]
+[2016-07-16 14:50:30,441] RotatePoint:  POST
+[2016-07-16 14:50:30,442] RotatePoint: [12.0, 10.0, 3.3999999999999999]
+[2016-07-16 14:50:30,442] RotatePoint:  PRE
+[2016-07-16 14:50:30,442] RotatePoint: [0.5, 0.0, 0.7]
+[2016-07-16 14:50:30,442] RotatePoint:  POST
+[2016-07-16 14:50:30,442] RotatePoint: [12.0, 10.0, 3.7999999999999998]
+[2016-07-16 14:50:30,442] RotatePoint:  PRE
+[2016-07-16 14:50:30,442] RotatePoint: [0.5, 0.0, 0.8]
+[2016-07-16 14:50:30,442] RotatePoint:  POST
+[2016-07-16 14:50:30,442] RotatePoint: [12.0, 10.0, 4.2000000000000002]
+[2016-07-16 14:50:30,442] RotatePoint:  PRE
+[2016-07-16 14:50:30,442] RotatePoint: [0.5, 0.0, 0.9]
+[2016-07-16 14:50:30,442] RotatePoint:  POST
+[2016-07-16 14:50:30,442] RotatePoint: [12.0, 10.0, 4.5999999999999996]
+[2016-07-16 14:50:30,442] RotatePoint:  PRE
+[2016-07-16 14:50:30,442] RotatePoint: [0.5, 0.0, 1.0]
+[2016-07-16 14:50:30,442] RotatePoint:  POST
+[2016-07-16 14:50:30,443] RotatePoint: [12.0, 10.0, 5.0]
+[2016-07-16 14:50:30,443] RotatePoint:  PRE
+[2016-07-16 14:50:30,443] RotatePoint: [0.6, 0.0, 0.0]
+[2016-07-16 14:50:30,443] RotatePoint:  POST
+[2016-07-16 14:50:30,443] RotatePoint: [12.4, 10.0, 1.0]
+[2016-07-16 14:50:30,443] RotatePoint:  PRE
+[2016-07-16 14:50:30,443] RotatePoint: [0.6, 0.0, 0.1]
+[2016-07-16 14:50:30,443] RotatePoint:  POST
+[2016-07-16 14:50:30,443] RotatePoint: [12.4, 10.0, 1.3999999999999999]
+[2016-07-16 14:50:30,443] RotatePoint:  PRE
+[2016-07-16 14:50:30,443] RotatePoint: [0.6, 0.0, 0.2]
+[2016-07-16 14:50:30,443] RotatePoint:  POST
+[2016-07-16 14:50:30,443] RotatePoint: [12.4, 10.0, 1.8]
+[2016-07-16 14:50:30,443] RotatePoint:  PRE
+[2016-07-16 14:50:30,443] RotatePoint: [0.6, 0.0, 0.3]
+[2016-07-16 14:50:30,443] RotatePoint:  POST
+[2016-07-16 14:50:30,444] RotatePoint: [12.4, 10.0, 2.2000000000000002]
+[2016-07-16 14:50:30,444] RotatePoint:  PRE
+[2016-07-16 14:50:30,444] RotatePoint: [0.6, 0.0, 0.4]
+[2016-07-16 14:50:30,444] RotatePoint:  POST
+[2016-07-16 14:50:30,444] RotatePoint: [12.4, 10.0, 2.6000000000000001]
+[2016-07-16 14:50:30,444] RotatePoint:  PRE
+[2016-07-16 14:50:30,444] RotatePoint: [0.6, 0.0, 0.5]
+[2016-07-16 14:50:30,444] RotatePoint:  POST
+[2016-07-16 14:50:30,444] RotatePoint: [12.4, 10.0, 3.0]
+[2016-07-16 14:50:30,444] RotatePoint:  PRE
+[2016-07-16 14:50:30,444] RotatePoint: [0.6, 0.0, 0.6]
+[2016-07-16 14:50:30,444] RotatePoint:  POST
+[2016-07-16 14:50:30,444] RotatePoint: [12.4, 10.0, 3.3999999999999999]
+[2016-07-16 14:50:30,444] RotatePoint:  PRE
+[2016-07-16 14:50:30,444] RotatePoint: [0.6, 0.0, 0.7]
+[2016-07-16 14:50:30,444] RotatePoint:  POST
+[2016-07-16 14:50:30,444] RotatePoint: [12.4, 10.0, 3.7999999999999998]
+[2016-07-16 14:50:30,445] RotatePoint:  PRE
+[2016-07-16 14:50:30,445] RotatePoint: [0.6, 0.0, 0.8]
+[2016-07-16 14:50:30,445] RotatePoint:  POST
+[2016-07-16 14:50:30,445] RotatePoint: [12.4, 10.0, 4.2000000000000002]
+[2016-07-16 14:50:30,445] RotatePoint:  PRE
+[2016-07-16 14:50:30,445] RotatePoint: [0.6, 0.0, 0.9]
+[2016-07-16 14:50:30,445] RotatePoint:  POST
+[2016-07-16 14:50:30,445] RotatePoint: [12.4, 10.0, 4.5999999999999996]
+[2016-07-16 14:50:30,445] RotatePoint:  PRE
+[2016-07-16 14:50:30,445] RotatePoint: [0.6, 0.0, 1.0]
+[2016-07-16 14:50:30,445] RotatePoint:  POST
+[2016-07-16 14:50:30,445] RotatePoint: [12.4, 10.0, 5.0]
+[2016-07-16 14:50:30,445] RotatePoint:  PRE
+[2016-07-16 14:50:30,445] RotatePoint: [0.7, 0.0, 0.0]
+[2016-07-16 14:50:30,445] RotatePoint:  POST
+[2016-07-16 14:50:30,446] RotatePoint: [12.800000000000001, 10.0, 1.0]
+[2016-07-16 14:50:30,446] RotatePoint:  PRE
+[2016-07-16 14:50:30,446] RotatePoint: [0.7, 0.0, 0.1]
+[2016-07-16 14:50:30,446] RotatePoint:  POST
+[2016-07-16 14:50:30,446] RotatePoint: [12.800000000000001, 10.0, 1.3999999999999999]
+[2016-07-16 14:50:30,446] RotatePoint:  PRE
+[2016-07-16 14:50:30,446] RotatePoint: [0.7, 0.0, 0.2]
+[2016-07-16 14:50:30,446] RotatePoint:  POST
+[2016-07-16 14:50:30,446] RotatePoint: [12.800000000000001, 10.0, 1.8]
+[2016-07-16 14:50:30,446] RotatePoint:  PRE
+[2016-07-16 14:50:30,446] RotatePoint: [0.7, 0.0, 0.3]
+[2016-07-16 14:50:30,446] RotatePoint:  POST
+[2016-07-16 14:50:30,446] RotatePoint: [12.800000000000001, 10.0, 2.2000000000000002]
+[2016-07-16 14:50:30,446] RotatePoint:  PRE
+[2016-07-16 14:50:30,446] RotatePoint: [0.7, 0.0, 0.4]
+[2016-07-16 14:50:30,446] RotatePoint:  POST
+[2016-07-16 14:50:30,446] RotatePoint: [12.800000000000001, 10.0, 2.6000000000000001]
+[2016-07-16 14:50:30,447] RotatePoint:  PRE
+[2016-07-16 14:50:30,447] RotatePoint: [0.7, 0.0, 0.5]
+[2016-07-16 14:50:30,447] RotatePoint:  POST
+[2016-07-16 14:50:30,447] RotatePoint: [12.800000000000001, 10.0, 3.0]
+[2016-07-16 14:50:30,447] RotatePoint:  PRE
+[2016-07-16 14:50:30,447] RotatePoint: [0.7, 0.0, 0.6]
+[2016-07-16 14:50:30,447] RotatePoint:  POST
+[2016-07-16 14:50:30,447] RotatePoint: [12.800000000000001, 10.0, 3.3999999999999999]
+[2016-07-16 14:50:30,447] RotatePoint:  PRE
+[2016-07-16 14:50:30,447] RotatePoint: [0.7, 0.0, 0.7]
+[2016-07-16 14:50:30,447] RotatePoint:  POST
+[2016-07-16 14:50:30,447] RotatePoint: [12.800000000000001, 10.0, 3.7999999999999998]
+[2016-07-16 14:50:30,447] RotatePoint:  PRE
+[2016-07-16 14:50:30,447] RotatePoint: [0.7, 0.0, 0.8]
+[2016-07-16 14:50:30,447] RotatePoint:  POST
+[2016-07-16 14:50:30,447] RotatePoint: [12.800000000000001, 10.0, 4.2000000000000002]
+[2016-07-16 14:50:30,448] RotatePoint:  PRE
+[2016-07-16 14:50:30,448] RotatePoint: [0.7, 0.0, 0.9]
+[2016-07-16 14:50:30,448] RotatePoint:  POST
+[2016-07-16 14:50:30,448] RotatePoint: [12.800000000000001, 10.0, 4.5999999999999996]
+[2016-07-16 14:50:30,448] RotatePoint:  PRE
+[2016-07-16 14:50:30,448] RotatePoint: [0.7, 0.0, 1.0]
+[2016-07-16 14:50:30,448] RotatePoint:  POST
+[2016-07-16 14:50:30,448] RotatePoint: [12.800000000000001, 10.0, 5.0]
+[2016-07-16 14:50:30,448] RotatePoint:  PRE
+[2016-07-16 14:50:30,448] RotatePoint: [0.8, 0.0, 0.0]
+[2016-07-16 14:50:30,448] RotatePoint:  POST
+[2016-07-16 14:50:30,448] RotatePoint: [13.199999999999999, 10.0, 1.0]
+[2016-07-16 14:50:30,448] RotatePoint:  PRE
+[2016-07-16 14:50:30,448] RotatePoint: [0.8, 0.0, 0.1]
+[2016-07-16 14:50:30,448] RotatePoint:  POST
+[2016-07-16 14:50:30,448] RotatePoint: [13.199999999999999, 10.0, 1.3999999999999999]
+[2016-07-16 14:50:30,448] RotatePoint:  PRE
+[2016-07-16 14:50:30,449] RotatePoint: [0.8, 0.0, 0.2]
+[2016-07-16 14:50:30,449] RotatePoint:  POST
+[2016-07-16 14:50:30,449] RotatePoint: [13.199999999999999, 10.0, 1.8]
+[2016-07-16 14:50:30,449] RotatePoint:  PRE
+[2016-07-16 14:50:30,449] RotatePoint: [0.8, 0.0, 0.3]
+[2016-07-16 14:50:30,449] RotatePoint:  POST
+[2016-07-16 14:50:30,449] RotatePoint: [13.199999999999999, 10.0, 2.2000000000000002]
+[2016-07-16 14:50:30,449] RotatePoint:  PRE
+[2016-07-16 14:50:30,449] RotatePoint: [0.8, 0.0, 0.4]
+[2016-07-16 14:50:30,449] RotatePoint:  POST
+[2016-07-16 14:50:30,449] RotatePoint: [13.199999999999999, 10.0, 2.6000000000000001]
+[2016-07-16 14:50:30,449] RotatePoint:  PRE
+[2016-07-16 14:50:30,449] RotatePoint: [0.8, 0.0, 0.5]
+[2016-07-16 14:50:30,449] RotatePoint:  POST
+[2016-07-16 14:50:30,449] RotatePoint: [13.199999999999999, 10.0, 3.0]
+[2016-07-16 14:50:30,450] RotatePoint:  PRE
+[2016-07-16 14:50:30,450] RotatePoint: [0.8, 0.0, 0.6]
+[2016-07-16 14:50:30,450] RotatePoint:  POST
+[2016-07-16 14:50:30,450] RotatePoint: [13.199999999999999, 10.0, 3.3999999999999999]
+[2016-07-16 14:50:30,450] RotatePoint:  PRE
+[2016-07-16 14:50:30,450] RotatePoint: [0.8, 0.0, 0.7]
+[2016-07-16 14:50:30,450] RotatePoint:  POST
+[2016-07-16 14:50:30,450] RotatePoint: [13.199999999999999, 10.0, 3.7999999999999998]
+[2016-07-16 14:50:30,450] RotatePoint:  PRE
+[2016-07-16 14:50:30,450] RotatePoint: [0.8, 0.0, 0.8]
+[2016-07-16 14:50:30,450] RotatePoint:  POST
+[2016-07-16 14:50:30,450] RotatePoint: [13.199999999999999, 10.0, 4.2000000000000002]
+[2016-07-16 14:50:30,450] RotatePoint:  PRE
+[2016-07-16 14:50:30,450] RotatePoint: [0.8, 0.0, 0.9]
+[2016-07-16 14:50:30,450] RotatePoint:  POST
+[2016-07-16 14:50:30,450] RotatePoint: [13.199999999999999, 10.0, 4.5999999999999996]
+[2016-07-16 14:50:30,450] RotatePoint:  PRE
+[2016-07-16 14:50:30,451] RotatePoint: [0.8, 0.0, 1.0]
+[2016-07-16 14:50:30,451] RotatePoint:  POST
+[2016-07-16 14:50:30,451] RotatePoint: [13.199999999999999, 10.0, 5.0]
+[2016-07-16 14:50:30,451] RotatePoint:  PRE
+[2016-07-16 14:50:30,451] RotatePoint: [0.9, 0.0, 0.0]
+[2016-07-16 14:50:30,451] RotatePoint:  POST
+[2016-07-16 14:50:30,451] RotatePoint: [13.6, 10.0, 1.0]
+[2016-07-16 14:50:30,451] RotatePoint:  PRE
+[2016-07-16 14:50:30,451] RotatePoint: [0.9, 0.0, 0.1]
+[2016-07-16 14:50:30,451] RotatePoint:  POST
+[2016-07-16 14:50:30,451] RotatePoint: [13.6, 10.0, 1.3999999999999999]
+[2016-07-16 14:50:30,451] RotatePoint:  PRE
+[2016-07-16 14:50:30,451] RotatePoint: [0.9, 0.0, 0.2]
+[2016-07-16 14:50:30,451] RotatePoint:  POST
+[2016-07-16 14:50:30,451] RotatePoint: [13.6, 10.0, 1.8]
+[2016-07-16 14:50:30,451] RotatePoint:  PRE
+[2016-07-16 14:50:30,451] RotatePoint: [0.9, 0.0, 0.3]
+[2016-07-16 14:50:30,452] RotatePoint:  POST
+[2016-07-16 14:50:30,452] RotatePoint: [13.6, 10.0, 2.2000000000000002]
+[2016-07-16 14:50:30,452] RotatePoint:  PRE
+[2016-07-16 14:50:30,452] RotatePoint: [0.9, 0.0, 0.4]
+[2016-07-16 14:50:30,452] RotatePoint:  POST
+[2016-07-16 14:50:30,452] RotatePoint: [13.6, 10.0, 2.6000000000000001]
+[2016-07-16 14:50:30,452] RotatePoint:  PRE
+[2016-07-16 14:50:30,452] RotatePoint: [0.9, 0.0, 0.5]
+[2016-07-16 14:50:30,452] RotatePoint:  POST
+[2016-07-16 14:50:30,452] RotatePoint: [13.6, 10.0, 3.0]
+[2016-07-16 14:50:30,452] RotatePoint:  PRE
+[2016-07-16 14:50:30,452] RotatePoint: [0.9, 0.0, 0.6]
+[2016-07-16 14:50:30,452] RotatePoint:  POST
+[2016-07-16 14:50:30,452] RotatePoint: [13.6, 10.0, 3.3999999999999999]
+[2016-07-16 14:50:30,452] RotatePoint:  PRE
+[2016-07-16 14:50:30,452] RotatePoint: [0.9, 0.0, 0.7]
+[2016-07-16 14:50:30,453] RotatePoint:  POST
+[2016-07-16 14:50:30,453] RotatePoint: [13.6, 10.0, 3.7999999999999998]
+[2016-07-16 14:50:30,453] RotatePoint:  PRE
+[2016-07-16 14:50:30,453] RotatePoint: [0.9, 0.0, 0.8]
+[2016-07-16 14:50:30,453] RotatePoint:  POST
+[2016-07-16 14:50:30,453] RotatePoint: [13.6, 10.0, 4.2000000000000002]
+[2016-07-16 14:50:30,453] RotatePoint:  PRE
+[2016-07-16 14:50:30,453] RotatePoint: [0.9, 0.0, 0.9]
+[2016-07-16 14:50:30,453] RotatePoint:  POST
+[2016-07-16 14:50:30,453] RotatePoint: [13.6, 10.0, 4.5999999999999996]
+[2016-07-16 14:50:30,453] RotatePoint:  PRE
+[2016-07-16 14:50:30,453] RotatePoint: [0.9, 0.0, 1.0]
+[2016-07-16 14:50:30,453] RotatePoint:  POST
+[2016-07-16 14:50:30,453] RotatePoint: [13.6, 10.0, 5.0]
+[2016-07-16 14:50:30,453] RotatePoint:  PRE
+[2016-07-16 14:50:30,453] RotatePoint: [1.0, 0.0, 0.0]
+[2016-07-16 14:50:30,453] RotatePoint:  POST
+[2016-07-16 14:50:30,454] RotatePoint: [14.0, 10.0, 1.0]
+[2016-07-16 14:50:30,454] RotatePoint:  PRE
+[2016-07-16 14:50:30,454] RotatePoint: [1.0, 0.0, 0.1]
+[2016-07-16 14:50:30,454] RotatePoint:  POST
+[2016-07-16 14:50:30,454] RotatePoint: [14.0, 10.0, 1.3999999999999999]
+[2016-07-16 14:50:30,454] RotatePoint:  PRE
+[2016-07-16 14:50:30,454] RotatePoint: [1.0, 0.0, 0.2]
+[2016-07-16 14:50:30,454] RotatePoint:  POST
+[2016-07-16 14:50:30,454] RotatePoint: [14.0, 10.0, 1.8]
+[2016-07-16 14:50:30,454] RotatePoint:  PRE
+[2016-07-16 14:50:30,454] RotatePoint: [1.0, 0.0, 0.3]
+[2016-07-16 14:50:30,454] RotatePoint:  POST
+[2016-07-16 14:50:30,454] RotatePoint: [14.0, 10.0, 2.2000000000000002]
+[2016-07-16 14:50:30,454] RotatePoint:  PRE
+[2016-07-16 14:50:30,454] RotatePoint: [1.0, 0.0, 0.4]
+[2016-07-16 14:50:30,454] RotatePoint:  POST
+[2016-07-16 14:50:30,455] RotatePoint: [14.0, 10.0, 2.6000000000000001]
+[2016-07-16 14:50:30,455] RotatePoint:  PRE
+[2016-07-16 14:50:30,455] RotatePoint: [1.0, 0.0, 0.5]
+[2016-07-16 14:50:30,455] RotatePoint:  POST
+[2016-07-16 14:50:30,455] RotatePoint: [14.0, 10.0, 3.0]
+[2016-07-16 14:50:30,455] RotatePoint:  PRE
+[2016-07-16 14:50:30,455] RotatePoint: [1.0, 0.0, 0.6]
+[2016-07-16 14:50:30,455] RotatePoint:  POST
+[2016-07-16 14:50:30,455] RotatePoint: [14.0, 10.0, 3.3999999999999999]
+[2016-07-16 14:50:30,455] RotatePoint:  PRE
+[2016-07-16 14:50:30,455] RotatePoint: [1.0, 0.0, 0.7]
+[2016-07-16 14:50:30,455] RotatePoint:  POST
+[2016-07-16 14:50:30,455] RotatePoint: [14.0, 10.0, 3.7999999999999998]
+[2016-07-16 14:50:30,455] RotatePoint:  PRE
+[2016-07-16 14:50:30,455] RotatePoint: [1.0, 0.0, 0.8]
+[2016-07-16 14:50:30,455] RotatePoint:  POST
+[2016-07-16 14:50:30,455] RotatePoint: [14.0, 10.0, 4.2000000000000002]
+[2016-07-16 14:50:30,456] RotatePoint:  PRE
+[2016-07-16 14:50:30,456] RotatePoint: [1.0, 0.0, 0.9]
+[2016-07-16 14:50:30,456] RotatePoint:  POST
+[2016-07-16 14:50:30,456] RotatePoint: [14.0, 10.0, 4.5999999999999996]
+[2016-07-16 14:50:30,456] RotatePoint:  PRE
+[2016-07-16 14:50:30,456] RotatePoint: [1.0, 0.0, 1.0]
+[2016-07-16 14:50:30,456] RotatePoint:  POST
+[2016-07-16 14:50:30,456] RotatePoint: [14.0, 10.0, 5.0]
+[2016-07-16 14:50:30,456] RotatePoint:  PRE
+[2016-07-16 14:50:30,456] RotatePoint: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,456] RotatePoint:  POST
+[2016-07-16 14:50:30,456] RotatePoint: [10.0, 10.0, 1.0]
+[2016-07-16 14:50:30,456] RotatePoint:  PRE
+[2016-07-16 14:50:30,456] RotatePoint: [0.0, 0.0, 0.1]
+[2016-07-16 14:50:30,456] RotatePoint:  POST
+[2016-07-16 14:50:30,457] RotatePoint: [10.0, 10.0, 1.3999999999999999]
+[2016-07-16 14:50:30,457] RotatePoint:  PRE
+[2016-07-16 14:50:30,457] RotatePoint: [0.0, 0.0, 0.2]
+[2016-07-16 14:50:30,457] RotatePoint:  POST
+[2016-07-16 14:50:30,457] RotatePoint: [10.0, 10.0, 1.8]
+[2016-07-16 14:50:30,457] RotatePoint:  PRE
+[2016-07-16 14:50:30,457] RotatePoint: [0.0, 0.0, 0.3]
+[2016-07-16 14:50:30,457] RotatePoint:  POST
+[2016-07-16 14:50:30,457] RotatePoint: [10.0, 10.0, 2.2000000000000002]
+[2016-07-16 14:50:30,457] RotatePoint:  PRE
+[2016-07-16 14:50:30,457] RotatePoint: [0.0, 0.0, 0.4]
+[2016-07-16 14:50:30,457] RotatePoint:  POST
+[2016-07-16 14:50:30,457] RotatePoint: [10.0, 10.0, 2.6000000000000001]
+[2016-07-16 14:50:30,457] RotatePoint:  PRE
+[2016-07-16 14:50:30,457] RotatePoint: [0.0, 0.0, 0.5]
+[2016-07-16 14:50:30,457] RotatePoint:  POST
+[2016-07-16 14:50:30,458] RotatePoint: [10.0, 10.0, 3.0]
+[2016-07-16 14:50:30,458] RotatePoint:  PRE
+[2016-07-16 14:50:30,458] RotatePoint: [0.0, 0.0, 0.6]
+[2016-07-16 14:50:30,458] RotatePoint:  POST
+[2016-07-16 14:50:30,458] RotatePoint: [10.0, 10.0, 3.3999999999999999]
+[2016-07-16 14:50:30,458] RotatePoint:  PRE
+[2016-07-16 14:50:30,458] RotatePoint: [0.0, 0.0, 0.7]
+[2016-07-16 14:50:30,458] RotatePoint:  POST
+[2016-07-16 14:50:30,458] RotatePoint: [10.0, 10.0, 3.7999999999999998]
+[2016-07-16 14:50:30,458] RotatePoint:  PRE
+[2016-07-16 14:50:30,458] RotatePoint: [0.0, 0.0, 0.8]
+[2016-07-16 14:50:30,458] RotatePoint:  POST
+[2016-07-16 14:50:30,458] RotatePoint: [10.0, 10.0, 4.2000000000000002]
+[2016-07-16 14:50:30,458] RotatePoint:  PRE
+[2016-07-16 14:50:30,458] RotatePoint: [0.0, 0.0, 0.9]
+[2016-07-16 14:50:30,458] RotatePoint:  POST
+[2016-07-16 14:50:30,458] RotatePoint: [10.0, 10.0, 4.5999999999999996]
+[2016-07-16 14:50:30,459] RotatePoint:  PRE
+[2016-07-16 14:50:30,459] RotatePoint: [0.0, 0.0, 1.0]
+[2016-07-16 14:50:30,459] RotatePoint:  POST
+[2016-07-16 14:50:30,459] RotatePoint: [10.0, 10.0, 5.0]
+[2016-07-16 14:50:30,459] RotatePoint:  PRE
+[2016-07-16 14:50:30,459] RotatePoint: [0.0, 0.1, 0.0]
+[2016-07-16 14:50:30,459] RotatePoint:  POST
+[2016-07-16 14:50:30,459] RotatePoint: [10.0, 10.4, 1.0]
+[2016-07-16 14:50:30,459] RotatePoint:  PRE
+[2016-07-16 14:50:30,459] RotatePoint: [0.0, 0.1, 0.1]
+[2016-07-16 14:50:30,459] RotatePoint:  POST
+[2016-07-16 14:50:30,459] RotatePoint: [10.0, 10.4, 1.3999999999999999]
+[2016-07-16 14:50:30,459] RotatePoint:  PRE
+[2016-07-16 14:50:30,459] RotatePoint: [0.0, 0.1, 0.2]
+[2016-07-16 14:50:30,459] RotatePoint:  POST
+[2016-07-16 14:50:30,459] RotatePoint: [10.0, 10.4, 1.8]
+[2016-07-16 14:50:30,460] RotatePoint:  PRE
+[2016-07-16 14:50:30,460] RotatePoint: [0.0, 0.1, 0.3]
+[2016-07-16 14:50:30,460] RotatePoint:  POST
+[2016-07-16 14:50:30,460] RotatePoint: [10.0, 10.4, 2.2000000000000002]
+[2016-07-16 14:50:30,460] RotatePoint:  PRE
+[2016-07-16 14:50:30,460] RotatePoint: [0.0, 0.1, 0.4]
+[2016-07-16 14:50:30,460] RotatePoint:  POST
+[2016-07-16 14:50:30,460] RotatePoint: [10.0, 10.4, 2.6000000000000001]
+[2016-07-16 14:50:30,460] RotatePoint:  PRE
+[2016-07-16 14:50:30,460] RotatePoint: [0.0, 0.1, 0.5]
+[2016-07-16 14:50:30,460] RotatePoint:  POST
+[2016-07-16 14:50:30,460] RotatePoint: [10.0, 10.4, 3.0]
+[2016-07-16 14:50:30,460] RotatePoint:  PRE
+[2016-07-16 14:50:30,460] RotatePoint: [0.0, 0.1, 0.6]
+[2016-07-16 14:50:30,460] RotatePoint:  POST
+[2016-07-16 14:50:30,460] RotatePoint: [10.0, 10.4, 3.3999999999999999]
+[2016-07-16 14:50:30,460] RotatePoint:  PRE
+[2016-07-16 14:50:30,461] RotatePoint: [0.0, 0.1, 0.7]
+[2016-07-16 14:50:30,461] RotatePoint:  POST
+[2016-07-16 14:50:30,461] RotatePoint: [10.0, 10.4, 3.7999999999999998]
+[2016-07-16 14:50:30,461] RotatePoint:  PRE
+[2016-07-16 14:50:30,461] RotatePoint: [0.0, 0.1, 0.8]
+[2016-07-16 14:50:30,461] RotatePoint:  POST
+[2016-07-16 14:50:30,461] RotatePoint: [10.0, 10.4, 4.2000000000000002]
+[2016-07-16 14:50:30,461] RotatePoint:  PRE
+[2016-07-16 14:50:30,461] RotatePoint: [0.0, 0.1, 0.9]
+[2016-07-16 14:50:30,461] RotatePoint:  POST
+[2016-07-16 14:50:30,461] RotatePoint: [10.0, 10.4, 4.5999999999999996]
+[2016-07-16 14:50:30,461] RotatePoint:  PRE
+[2016-07-16 14:50:30,461] RotatePoint: [0.0, 0.1, 1.0]
+[2016-07-16 14:50:30,461] RotatePoint:  POST
+[2016-07-16 14:50:30,461] RotatePoint: [10.0, 10.4, 5.0]
+[2016-07-16 14:50:30,461] RotatePoint:  PRE
+[2016-07-16 14:50:30,462] RotatePoint: [0.0, 0.2, 0.0]
+[2016-07-16 14:50:30,462] RotatePoint:  POST
+[2016-07-16 14:50:30,462] RotatePoint: [10.0, 10.800000000000001, 1.0]
+[2016-07-16 14:50:30,462] RotatePoint:  PRE
+[2016-07-16 14:50:30,462] RotatePoint: [0.0, 0.2, 0.1]
+[2016-07-16 14:50:30,462] RotatePoint:  POST
+[2016-07-16 14:50:30,462] RotatePoint: [10.0, 10.800000000000001, 1.3999999999999999]
+[2016-07-16 14:50:30,462] RotatePoint:  PRE
+[2016-07-16 14:50:30,462] RotatePoint: [0.0, 0.2, 0.2]
+[2016-07-16 14:50:30,462] RotatePoint:  POST
+[2016-07-16 14:50:30,462] RotatePoint: [10.0, 10.800000000000001, 1.8]
+[2016-07-16 14:50:30,462] RotatePoint:  PRE
+[2016-07-16 14:50:30,462] RotatePoint: [0.0, 0.2, 0.3]
+[2016-07-16 14:50:30,462] RotatePoint:  POST
+[2016-07-16 14:50:30,462] RotatePoint: [10.0, 10.800000000000001, 2.2000000000000002]
+[2016-07-16 14:50:30,462] RotatePoint:  PRE
+[2016-07-16 14:50:30,462] RotatePoint: [0.0, 0.2, 0.4]
+[2016-07-16 14:50:30,463] RotatePoint:  POST
+[2016-07-16 14:50:30,463] RotatePoint: [10.0, 10.800000000000001, 2.6000000000000001]
+[2016-07-16 14:50:30,463] RotatePoint:  PRE
+[2016-07-16 14:50:30,463] RotatePoint: [0.0, 0.2, 0.5]
+[2016-07-16 14:50:30,463] RotatePoint:  POST
+[2016-07-16 14:50:30,463] RotatePoint: [10.0, 10.800000000000001, 3.0]
+[2016-07-16 14:50:30,463] RotatePoint:  PRE
+[2016-07-16 14:50:30,463] RotatePoint: [0.0, 0.2, 0.6]
+[2016-07-16 14:50:30,463] RotatePoint:  POST
+[2016-07-16 14:50:30,463] RotatePoint: [10.0, 10.800000000000001, 3.3999999999999999]
+[2016-07-16 14:50:30,463] RotatePoint:  PRE
+[2016-07-16 14:50:30,463] RotatePoint: [0.0, 0.2, 0.7]
+[2016-07-16 14:50:30,463] RotatePoint:  POST
+[2016-07-16 14:50:30,463] RotatePoint: [10.0, 10.800000000000001, 3.7999999999999998]
+[2016-07-16 14:50:30,463] RotatePoint:  PRE
+[2016-07-16 14:50:30,463] RotatePoint: [0.0, 0.2, 0.8]
+[2016-07-16 14:50:30,464] RotatePoint:  POST
+[2016-07-16 14:50:30,464] RotatePoint: [10.0, 10.800000000000001, 4.2000000000000002]
+[2016-07-16 14:50:30,464] RotatePoint:  PRE
+[2016-07-16 14:50:30,464] RotatePoint: [0.0, 0.2, 0.9]
+[2016-07-16 14:50:30,464] RotatePoint:  POST
+[2016-07-16 14:50:30,464] RotatePoint: [10.0, 10.800000000000001, 4.5999999999999996]
+[2016-07-16 14:50:30,464] RotatePoint:  PRE
+[2016-07-16 14:50:30,464] RotatePoint: [0.0, 0.2, 1.0]
+[2016-07-16 14:50:30,464] RotatePoint:  POST
+[2016-07-16 14:50:30,464] RotatePoint: [10.0, 10.800000000000001, 5.0]
+[2016-07-16 14:50:30,464] RotatePoint:  PRE
+[2016-07-16 14:50:30,464] RotatePoint: [0.0, 0.3, 0.0]
+[2016-07-16 14:50:30,464] RotatePoint:  POST
+[2016-07-16 14:50:30,464] RotatePoint: [10.0, 11.199999999999999, 1.0]
+[2016-07-16 14:50:30,464] RotatePoint:  PRE
+[2016-07-16 14:50:30,464] RotatePoint: [0.0, 0.3, 0.1]
+[2016-07-16 14:50:30,465] RotatePoint:  POST
+[2016-07-16 14:50:30,465] RotatePoint: [10.0, 11.199999999999999, 1.3999999999999999]
+[2016-07-16 14:50:30,465] RotatePoint:  PRE
+[2016-07-16 14:50:30,465] RotatePoint: [0.0, 0.3, 0.2]
+[2016-07-16 14:50:30,465] RotatePoint:  POST
+[2016-07-16 14:50:30,465] RotatePoint: [10.0, 11.199999999999999, 1.8]
+[2016-07-16 14:50:30,465] RotatePoint:  PRE
+[2016-07-16 14:50:30,465] RotatePoint: [0.0, 0.3, 0.3]
+[2016-07-16 14:50:30,465] RotatePoint:  POST
+[2016-07-16 14:50:30,465] RotatePoint: [10.0, 11.199999999999999, 2.2000000000000002]
+[2016-07-16 14:50:30,465] RotatePoint:  PRE
+[2016-07-16 14:50:30,465] RotatePoint: [0.0, 0.3, 0.4]
+[2016-07-16 14:50:30,465] RotatePoint:  POST
+[2016-07-16 14:50:30,465] RotatePoint: [10.0, 11.199999999999999, 2.6000000000000001]
+[2016-07-16 14:50:30,465] RotatePoint:  PRE
+[2016-07-16 14:50:30,465] RotatePoint: [0.0, 0.3, 0.5]
+[2016-07-16 14:50:30,465] RotatePoint:  POST
+[2016-07-16 14:50:30,466] RotatePoint: [10.0, 11.199999999999999, 3.0]
+[2016-07-16 14:50:30,466] RotatePoint:  PRE
+[2016-07-16 14:50:30,466] RotatePoint: [0.0, 0.3, 0.6]
+[2016-07-16 14:50:30,466] RotatePoint:  POST
+[2016-07-16 14:50:30,466] RotatePoint: [10.0, 11.199999999999999, 3.3999999999999999]
+[2016-07-16 14:50:30,466] RotatePoint:  PRE
+[2016-07-16 14:50:30,466] RotatePoint: [0.0, 0.3, 0.7]
+[2016-07-16 14:50:30,466] RotatePoint:  POST
+[2016-07-16 14:50:30,466] RotatePoint: [10.0, 11.199999999999999, 3.7999999999999998]
+[2016-07-16 14:50:30,466] RotatePoint:  PRE
+[2016-07-16 14:50:30,466] RotatePoint: [0.0, 0.3, 0.8]
+[2016-07-16 14:50:30,466] RotatePoint:  POST
+[2016-07-16 14:50:30,466] RotatePoint: [10.0, 11.199999999999999, 4.2000000000000002]
+[2016-07-16 14:50:30,466] RotatePoint:  PRE
+[2016-07-16 14:50:30,467] RotatePoint: [0.0, 0.3, 0.9]
+[2016-07-16 14:50:30,467] RotatePoint:  POST
+[2016-07-16 14:50:30,467] RotatePoint: [10.0, 11.199999999999999, 4.5999999999999996]
+[2016-07-16 14:50:30,467] RotatePoint:  PRE
+[2016-07-16 14:50:30,467] RotatePoint: [0.0, 0.3, 1.0]
+[2016-07-16 14:50:30,467] RotatePoint:  POST
+[2016-07-16 14:50:30,467] RotatePoint: [10.0, 11.199999999999999, 5.0]
+[2016-07-16 14:50:30,467] RotatePoint:  PRE
+[2016-07-16 14:50:30,467] RotatePoint: [0.0, 0.4, 0.0]
+[2016-07-16 14:50:30,467] RotatePoint:  POST
+[2016-07-16 14:50:30,467] RotatePoint: [10.0, 11.6, 1.0]
+[2016-07-16 14:50:30,467] RotatePoint:  PRE
+[2016-07-16 14:50:30,467] RotatePoint: [0.0, 0.4, 0.1]
+[2016-07-16 14:50:30,467] RotatePoint:  POST
+[2016-07-16 14:50:30,467] RotatePoint: [10.0, 11.6, 1.3999999999999999]
+[2016-07-16 14:50:30,467] RotatePoint:  PRE
+[2016-07-16 14:50:30,468] RotatePoint: [0.0, 0.4, 0.2]
+[2016-07-16 14:50:30,468] RotatePoint:  POST
+[2016-07-16 14:50:30,468] RotatePoint: [10.0, 11.6, 1.8]
+[2016-07-16 14:50:30,468] RotatePoint:  PRE
+[2016-07-16 14:50:30,468] RotatePoint: [0.0, 0.4, 0.3]
+[2016-07-16 14:50:30,468] RotatePoint:  POST
+[2016-07-16 14:50:30,468] RotatePoint: [10.0, 11.6, 2.2000000000000002]
+[2016-07-16 14:50:30,468] RotatePoint:  PRE
+[2016-07-16 14:50:30,468] RotatePoint: [0.0, 0.4, 0.4]
+[2016-07-16 14:50:30,468] RotatePoint:  POST
+[2016-07-16 14:50:30,468] RotatePoint: [10.0, 11.6, 2.6000000000000001]
+[2016-07-16 14:50:30,468] RotatePoint:  PRE
+[2016-07-16 14:50:30,468] RotatePoint: [0.0, 0.4, 0.5]
+[2016-07-16 14:50:30,468] RotatePoint:  POST
+[2016-07-16 14:50:30,468] RotatePoint: [10.0, 11.6, 3.0]
+[2016-07-16 14:50:30,468] RotatePoint:  PRE
+[2016-07-16 14:50:30,468] RotatePoint: [0.0, 0.4, 0.6]
+[2016-07-16 14:50:30,469] RotatePoint:  POST
+[2016-07-16 14:50:30,469] RotatePoint: [10.0, 11.6, 3.3999999999999999]
+[2016-07-16 14:50:30,469] RotatePoint:  PRE
+[2016-07-16 14:50:30,469] RotatePoint: [0.0, 0.4, 0.7]
+[2016-07-16 14:50:30,469] RotatePoint:  POST
+[2016-07-16 14:50:30,469] RotatePoint: [10.0, 11.6, 3.7999999999999998]
+[2016-07-16 14:50:30,469] RotatePoint:  PRE
+[2016-07-16 14:50:30,469] RotatePoint: [0.0, 0.4, 0.8]
+[2016-07-16 14:50:30,469] RotatePoint:  POST
+[2016-07-16 14:50:30,469] RotatePoint: [10.0, 11.6, 4.2000000000000002]
+[2016-07-16 14:50:30,469] RotatePoint:  PRE
+[2016-07-16 14:50:30,469] RotatePoint: [0.0, 0.4, 0.9]
+[2016-07-16 14:50:30,469] RotatePoint:  POST
+[2016-07-16 14:50:30,469] RotatePoint: [10.0, 11.6, 4.5999999999999996]
+[2016-07-16 14:50:30,469] RotatePoint:  PRE
+[2016-07-16 14:50:30,469] RotatePoint: [0.0, 0.4, 1.0]
+[2016-07-16 14:50:30,470] RotatePoint:  POST
+[2016-07-16 14:50:30,470] RotatePoint: [10.0, 11.6, 5.0]
+[2016-07-16 14:50:30,470] RotatePoint:  PRE
+[2016-07-16 14:50:30,470] RotatePoint: [0.0, 0.5, 0.0]
+[2016-07-16 14:50:30,470] RotatePoint:  POST
+[2016-07-16 14:50:30,470] RotatePoint: [10.0, 12.0, 1.0]
+[2016-07-16 14:50:30,470] RotatePoint:  PRE
+[2016-07-16 14:50:30,470] RotatePoint: [0.0, 0.5, 0.1]
+[2016-07-16 14:50:30,470] RotatePoint:  POST
+[2016-07-16 14:50:30,470] RotatePoint: [10.0, 12.0, 1.3999999999999999]
+[2016-07-16 14:50:30,470] RotatePoint:  PRE
+[2016-07-16 14:50:30,470] RotatePoint: [0.0, 0.5, 0.2]
+[2016-07-16 14:50:30,470] RotatePoint:  POST
+[2016-07-16 14:50:30,470] RotatePoint: [10.0, 12.0, 1.8]
+[2016-07-16 14:50:30,470] RotatePoint:  PRE
+[2016-07-16 14:50:30,470] RotatePoint: [0.0, 0.5, 0.3]
+[2016-07-16 14:50:30,471] RotatePoint:  POST
+[2016-07-16 14:50:30,471] RotatePoint: [10.0, 12.0, 2.2000000000000002]
+[2016-07-16 14:50:30,471] RotatePoint:  PRE
+[2016-07-16 14:50:30,471] RotatePoint: [0.0, 0.5, 0.4]
+[2016-07-16 14:50:30,471] RotatePoint:  POST
+[2016-07-16 14:50:30,471] RotatePoint: [10.0, 12.0, 2.6000000000000001]
+[2016-07-16 14:50:30,471] RotatePoint:  PRE
+[2016-07-16 14:50:30,471] RotatePoint: [0.0, 0.5, 0.5]
+[2016-07-16 14:50:30,471] RotatePoint:  POST
+[2016-07-16 14:50:30,471] RotatePoint: [10.0, 12.0, 3.0]
+[2016-07-16 14:50:30,471] RotatePoint:  PRE
+[2016-07-16 14:50:30,471] RotatePoint: [0.0, 0.5, 0.6]
+[2016-07-16 14:50:30,471] RotatePoint:  POST
+[2016-07-16 14:50:30,471] RotatePoint: [10.0, 12.0, 3.3999999999999999]
+[2016-07-16 14:50:30,471] RotatePoint:  PRE
+[2016-07-16 14:50:30,471] RotatePoint: [0.0, 0.5, 0.7]
+[2016-07-16 14:50:30,471] RotatePoint:  POST
+[2016-07-16 14:50:30,472] RotatePoint: [10.0, 12.0, 3.7999999999999998]
+[2016-07-16 14:50:30,472] RotatePoint:  PRE
+[2016-07-16 14:50:30,472] RotatePoint: [0.0, 0.5, 0.8]
+[2016-07-16 14:50:30,472] RotatePoint:  POST
+[2016-07-16 14:50:30,472] RotatePoint: [10.0, 12.0, 4.2000000000000002]
+[2016-07-16 14:50:30,472] RotatePoint:  PRE
+[2016-07-16 14:50:30,472] RotatePoint: [0.0, 0.5, 0.9]
+[2016-07-16 14:50:30,472] RotatePoint:  POST
+[2016-07-16 14:50:30,472] RotatePoint: [10.0, 12.0, 4.5999999999999996]
+[2016-07-16 14:50:30,472] RotatePoint:  PRE
+[2016-07-16 14:50:30,472] RotatePoint: [0.0, 0.5, 1.0]
+[2016-07-16 14:50:30,472] RotatePoint:  POST
+[2016-07-16 14:50:30,472] RotatePoint: [10.0, 12.0, 5.0]
+[2016-07-16 14:50:30,472] RotatePoint:  PRE
+[2016-07-16 14:50:30,472] RotatePoint: [0.0, 0.6, 0.0]
+[2016-07-16 14:50:30,472] RotatePoint:  POST
+[2016-07-16 14:50:30,472] RotatePoint: [10.0, 12.4, 1.0]
+[2016-07-16 14:50:30,473] RotatePoint:  PRE
+[2016-07-16 14:50:30,473] RotatePoint: [0.0, 0.6, 0.1]
+[2016-07-16 14:50:30,473] RotatePoint:  POST
+[2016-07-16 14:50:30,473] RotatePoint: [10.0, 12.4, 1.3999999999999999]
+[2016-07-16 14:50:30,473] RotatePoint:  PRE
+[2016-07-16 14:50:30,473] RotatePoint: [0.0, 0.6, 0.2]
+[2016-07-16 14:50:30,473] RotatePoint:  POST
+[2016-07-16 14:50:30,473] RotatePoint: [10.0, 12.4, 1.8]
+[2016-07-16 14:50:30,473] RotatePoint:  PRE
+[2016-07-16 14:50:30,473] RotatePoint: [0.0, 0.6, 0.3]
+[2016-07-16 14:50:30,473] RotatePoint:  POST
+[2016-07-16 14:50:30,473] RotatePoint: [10.0, 12.4, 2.2000000000000002]
+[2016-07-16 14:50:30,473] RotatePoint:  PRE
+[2016-07-16 14:50:30,473] RotatePoint: [0.0, 0.6, 0.4]
+[2016-07-16 14:50:30,473] RotatePoint:  POST
+[2016-07-16 14:50:30,473] RotatePoint: [10.0, 12.4, 2.6000000000000001]
+[2016-07-16 14:50:30,474] RotatePoint:  PRE
+[2016-07-16 14:50:30,474] RotatePoint: [0.0, 0.6, 0.5]
+[2016-07-16 14:50:30,474] RotatePoint:  POST
+[2016-07-16 14:50:30,474] RotatePoint: [10.0, 12.4, 3.0]
+[2016-07-16 14:50:30,474] RotatePoint:  PRE
+[2016-07-16 14:50:30,474] RotatePoint: [0.0, 0.6, 0.6]
+[2016-07-16 14:50:30,474] RotatePoint:  POST
+[2016-07-16 14:50:30,474] RotatePoint: [10.0, 12.4, 3.3999999999999999]
+[2016-07-16 14:50:30,474] RotatePoint:  PRE
+[2016-07-16 14:50:30,474] RotatePoint: [0.0, 0.6, 0.7]
+[2016-07-16 14:50:30,474] RotatePoint:  POST
+[2016-07-16 14:50:30,474] RotatePoint: [10.0, 12.4, 3.7999999999999998]
+[2016-07-16 14:50:30,474] RotatePoint:  PRE
+[2016-07-16 14:50:30,474] RotatePoint: [0.0, 0.6, 0.8]
+[2016-07-16 14:50:30,474] RotatePoint:  POST
+[2016-07-16 14:50:30,474] RotatePoint: [10.0, 12.4, 4.2000000000000002]
+[2016-07-16 14:50:30,475] RotatePoint:  PRE
+[2016-07-16 14:50:30,475] RotatePoint: [0.0, 0.6, 0.9]
+[2016-07-16 14:50:30,475] RotatePoint:  POST
+[2016-07-16 14:50:30,475] RotatePoint: [10.0, 12.4, 4.5999999999999996]
+[2016-07-16 14:50:30,475] RotatePoint:  PRE
+[2016-07-16 14:50:30,475] RotatePoint: [0.0, 0.6, 1.0]
+[2016-07-16 14:50:30,475] RotatePoint:  POST
+[2016-07-16 14:50:30,475] RotatePoint: [10.0, 12.4, 5.0]
+[2016-07-16 14:50:30,475] RotatePoint:  PRE
+[2016-07-16 14:50:30,475] RotatePoint: [0.0, 0.7, 0.0]
+[2016-07-16 14:50:30,475] RotatePoint:  POST
+[2016-07-16 14:50:30,475] RotatePoint: [10.0, 12.800000000000001, 1.0]
+[2016-07-16 14:50:30,475] RotatePoint:  PRE
+[2016-07-16 14:50:30,475] RotatePoint: [0.0, 0.7, 0.1]
+[2016-07-16 14:50:30,475] RotatePoint:  POST
+[2016-07-16 14:50:30,475] RotatePoint: [10.0, 12.800000000000001, 1.3999999999999999]
+[2016-07-16 14:50:30,475] RotatePoint:  PRE
+[2016-07-16 14:50:30,476] RotatePoint: [0.0, 0.7, 0.2]
+[2016-07-16 14:50:30,476] RotatePoint:  POST
+[2016-07-16 14:50:30,476] RotatePoint: [10.0, 12.800000000000001, 1.8]
+[2016-07-16 14:50:30,476] RotatePoint:  PRE
+[2016-07-16 14:50:30,476] RotatePoint: [0.0, 0.7, 0.3]
+[2016-07-16 14:50:30,476] RotatePoint:  POST
+[2016-07-16 14:50:30,476] RotatePoint: [10.0, 12.800000000000001, 2.2000000000000002]
+[2016-07-16 14:50:30,476] RotatePoint:  PRE
+[2016-07-16 14:50:30,476] RotatePoint: [0.0, 0.7, 0.4]
+[2016-07-16 14:50:30,476] RotatePoint:  POST
+[2016-07-16 14:50:30,476] RotatePoint: [10.0, 12.800000000000001, 2.6000000000000001]
+[2016-07-16 14:50:30,476] RotatePoint:  PRE
+[2016-07-16 14:50:30,476] RotatePoint: [0.0, 0.7, 0.5]
+[2016-07-16 14:50:30,476] RotatePoint:  POST
+[2016-07-16 14:50:30,476] RotatePoint: [10.0, 12.800000000000001, 3.0]
+[2016-07-16 14:50:30,476] RotatePoint:  PRE
+[2016-07-16 14:50:30,477] RotatePoint: [0.0, 0.7, 0.6]
+[2016-07-16 14:50:30,477] RotatePoint:  POST
+[2016-07-16 14:50:30,477] RotatePoint: [10.0, 12.800000000000001, 3.3999999999999999]
+[2016-07-16 14:50:30,477] RotatePoint:  PRE
+[2016-07-16 14:50:30,477] RotatePoint: [0.0, 0.7, 0.7]
+[2016-07-16 14:50:30,477] RotatePoint:  POST
+[2016-07-16 14:50:30,477] RotatePoint: [10.0, 12.800000000000001, 3.7999999999999998]
+[2016-07-16 14:50:30,477] RotatePoint:  PRE
+[2016-07-16 14:50:30,477] RotatePoint: [0.0, 0.7, 0.8]
+[2016-07-16 14:50:30,477] RotatePoint:  POST
+[2016-07-16 14:50:30,477] RotatePoint: [10.0, 12.800000000000001, 4.2000000000000002]
+[2016-07-16 14:50:30,477] RotatePoint:  PRE
+[2016-07-16 14:50:30,477] RotatePoint: [0.0, 0.7, 0.9]
+[2016-07-16 14:50:30,477] RotatePoint:  POST
+[2016-07-16 14:50:30,477] RotatePoint: [10.0, 12.800000000000001, 4.5999999999999996]
+[2016-07-16 14:50:30,477] RotatePoint:  PRE
+[2016-07-16 14:50:30,478] RotatePoint: [0.0, 0.7, 1.0]
+[2016-07-16 14:50:30,478] RotatePoint:  POST
+[2016-07-16 14:50:30,478] RotatePoint: [10.0, 12.800000000000001, 5.0]
+[2016-07-16 14:50:30,478] RotatePoint:  PRE
+[2016-07-16 14:50:30,478] RotatePoint: [0.0, 0.8, 0.0]
+[2016-07-16 14:50:30,478] RotatePoint:  POST
+[2016-07-16 14:50:30,478] RotatePoint: [10.0, 13.199999999999999, 1.0]
+[2016-07-16 14:50:30,478] RotatePoint:  PRE
+[2016-07-16 14:50:30,478] RotatePoint: [0.0, 0.8, 0.1]
+[2016-07-16 14:50:30,478] RotatePoint:  POST
+[2016-07-16 14:50:30,478] RotatePoint: [10.0, 13.199999999999999, 1.3999999999999999]
+[2016-07-16 14:50:30,478] RotatePoint:  PRE
+[2016-07-16 14:50:30,478] RotatePoint: [0.0, 0.8, 0.2]
+[2016-07-16 14:50:30,478] RotatePoint:  POST
+[2016-07-16 14:50:30,478] RotatePoint: [10.0, 13.199999999999999, 1.8]
+[2016-07-16 14:50:30,478] RotatePoint:  PRE
+[2016-07-16 14:50:30,478] RotatePoint: [0.0, 0.8, 0.3]
+[2016-07-16 14:50:30,479] RotatePoint:  POST
+[2016-07-16 14:50:30,479] RotatePoint: [10.0, 13.199999999999999, 2.2000000000000002]
+[2016-07-16 14:50:30,479] RotatePoint:  PRE
+[2016-07-16 14:50:30,479] RotatePoint: [0.0, 0.8, 0.4]
+[2016-07-16 14:50:30,479] RotatePoint:  POST
+[2016-07-16 14:50:30,479] RotatePoint: [10.0, 13.199999999999999, 2.6000000000000001]
+[2016-07-16 14:50:30,479] RotatePoint:  PRE
+[2016-07-16 14:50:30,479] RotatePoint: [0.0, 0.8, 0.5]
+[2016-07-16 14:50:30,479] RotatePoint:  POST
+[2016-07-16 14:50:30,479] RotatePoint: [10.0, 13.199999999999999, 3.0]
+[2016-07-16 14:50:30,479] RotatePoint:  PRE
+[2016-07-16 14:50:30,479] RotatePoint: [0.0, 0.8, 0.6]
+[2016-07-16 14:50:30,479] RotatePoint:  POST
+[2016-07-16 14:50:30,479] RotatePoint: [10.0, 13.199999999999999, 3.3999999999999999]
+[2016-07-16 14:50:30,479] RotatePoint:  PRE
+[2016-07-16 14:50:30,479] RotatePoint: [0.0, 0.8, 0.7]
+[2016-07-16 14:50:30,480] RotatePoint:  POST
+[2016-07-16 14:50:30,480] RotatePoint: [10.0, 13.199999999999999, 3.7999999999999998]
+[2016-07-16 14:50:30,480] RotatePoint:  PRE
+[2016-07-16 14:50:30,480] RotatePoint: [0.0, 0.8, 0.8]
+[2016-07-16 14:50:30,480] RotatePoint:  POST
+[2016-07-16 14:50:30,480] RotatePoint: [10.0, 13.199999999999999, 4.2000000000000002]
+[2016-07-16 14:50:30,480] RotatePoint:  PRE
+[2016-07-16 14:50:30,480] RotatePoint: [0.0, 0.8, 0.9]
+[2016-07-16 14:50:30,480] RotatePoint:  POST
+[2016-07-16 14:50:30,480] RotatePoint: [10.0, 13.199999999999999, 4.5999999999999996]
+[2016-07-16 14:50:30,480] RotatePoint:  PRE
+[2016-07-16 14:50:30,480] RotatePoint: [0.0, 0.8, 1.0]
+[2016-07-16 14:50:30,480] RotatePoint:  POST
+[2016-07-16 14:50:30,480] RotatePoint: [10.0, 13.199999999999999, 5.0]
+[2016-07-16 14:50:30,480] RotatePoint:  PRE
+[2016-07-16 14:50:30,480] RotatePoint: [0.0, 0.9, 0.0]
+[2016-07-16 14:50:30,481] RotatePoint:  POST
+[2016-07-16 14:50:30,481] RotatePoint: [10.0, 13.6, 1.0]
+[2016-07-16 14:50:30,481] RotatePoint:  PRE
+[2016-07-16 14:50:30,481] RotatePoint: [0.0, 0.9, 0.1]
+[2016-07-16 14:50:30,481] RotatePoint:  POST
+[2016-07-16 14:50:30,481] RotatePoint: [10.0, 13.6, 1.3999999999999999]
+[2016-07-16 14:50:30,481] RotatePoint:  PRE
+[2016-07-16 14:50:30,481] RotatePoint: [0.0, 0.9, 0.2]
+[2016-07-16 14:50:30,481] RotatePoint:  POST
+[2016-07-16 14:50:30,481] RotatePoint: [10.0, 13.6, 1.8]
+[2016-07-16 14:50:30,481] RotatePoint:  PRE
+[2016-07-16 14:50:30,481] RotatePoint: [0.0, 0.9, 0.3]
+[2016-07-16 14:50:30,481] RotatePoint:  POST
+[2016-07-16 14:50:30,481] RotatePoint: [10.0, 13.6, 2.2000000000000002]
+[2016-07-16 14:50:30,481] RotatePoint:  PRE
+[2016-07-16 14:50:30,481] RotatePoint: [0.0, 0.9, 0.4]
+[2016-07-16 14:50:30,481] RotatePoint:  POST
+[2016-07-16 14:50:30,482] RotatePoint: [10.0, 13.6, 2.6000000000000001]
+[2016-07-16 14:50:30,482] RotatePoint:  PRE
+[2016-07-16 14:50:30,482] RotatePoint: [0.0, 0.9, 0.5]
+[2016-07-16 14:50:30,482] RotatePoint:  POST
+[2016-07-16 14:50:30,482] RotatePoint: [10.0, 13.6, 3.0]
+[2016-07-16 14:50:30,482] RotatePoint:  PRE
+[2016-07-16 14:50:30,482] RotatePoint: [0.0, 0.9, 0.6]
+[2016-07-16 14:50:30,482] RotatePoint:  POST
+[2016-07-16 14:50:30,482] RotatePoint: [10.0, 13.6, 3.3999999999999999]
+[2016-07-16 14:50:30,482] RotatePoint:  PRE
+[2016-07-16 14:50:30,482] RotatePoint: [0.0, 0.9, 0.7]
+[2016-07-16 14:50:30,482] RotatePoint:  POST
+[2016-07-16 14:50:30,482] RotatePoint: [10.0, 13.6, 3.7999999999999998]
+[2016-07-16 14:50:30,482] RotatePoint:  PRE
+[2016-07-16 14:50:30,482] RotatePoint: [0.0, 0.9, 0.8]
+[2016-07-16 14:50:30,482] RotatePoint:  POST
+[2016-07-16 14:50:30,483] RotatePoint: [10.0, 13.6, 4.2000000000000002]
+[2016-07-16 14:50:30,483] RotatePoint:  PRE
+[2016-07-16 14:50:30,483] RotatePoint: [0.0, 0.9, 0.9]
+[2016-07-16 14:50:30,483] RotatePoint:  POST
+[2016-07-16 14:50:30,483] RotatePoint: [10.0, 13.6, 4.5999999999999996]
+[2016-07-16 14:50:30,483] RotatePoint:  PRE
+[2016-07-16 14:50:30,483] RotatePoint: [0.0, 0.9, 1.0]
+[2016-07-16 14:50:30,483] RotatePoint:  POST
+[2016-07-16 14:50:30,483] RotatePoint: [10.0, 13.6, 5.0]
+[2016-07-16 14:50:30,483] RotatePoint:  PRE
+[2016-07-16 14:50:30,483] RotatePoint: [0.0, 1.0, 0.0]
+[2016-07-16 14:50:30,483] RotatePoint:  POST
+[2016-07-16 14:50:30,483] RotatePoint: [10.0, 14.0, 1.0]
+[2016-07-16 14:50:30,483] RotatePoint:  PRE
+[2016-07-16 14:50:30,483] RotatePoint: [0.0, 1.0, 0.1]
+[2016-07-16 14:50:30,483] RotatePoint:  POST
+[2016-07-16 14:50:30,484] RotatePoint: [10.0, 14.0, 1.3999999999999999]
+[2016-07-16 14:50:30,484] RotatePoint:  PRE
+[2016-07-16 14:50:30,484] RotatePoint: [0.0, 1.0, 0.2]
+[2016-07-16 14:50:30,484] RotatePoint:  POST
+[2016-07-16 14:50:30,484] RotatePoint: [10.0, 14.0, 1.8]
+[2016-07-16 14:50:30,484] RotatePoint:  PRE
+[2016-07-16 14:50:30,484] RotatePoint: [0.0, 1.0, 0.3]
+[2016-07-16 14:50:30,484] RotatePoint:  POST
+[2016-07-16 14:50:30,484] RotatePoint: [10.0, 14.0, 2.2000000000000002]
+[2016-07-16 14:50:30,484] RotatePoint:  PRE
+[2016-07-16 14:50:30,484] RotatePoint: [0.0, 1.0, 0.4]
+[2016-07-16 14:50:30,484] RotatePoint:  POST
+[2016-07-16 14:50:30,484] RotatePoint: [10.0, 14.0, 2.6000000000000001]
+[2016-07-16 14:50:30,484] RotatePoint:  PRE
+[2016-07-16 14:50:30,484] RotatePoint: [0.0, 1.0, 0.5]
+[2016-07-16 14:50:30,484] RotatePoint:  POST
+[2016-07-16 14:50:30,484] RotatePoint: [10.0, 14.0, 3.0]
+[2016-07-16 14:50:30,485] RotatePoint:  PRE
+[2016-07-16 14:50:30,485] RotatePoint: [0.0, 1.0, 0.6]
+[2016-07-16 14:50:30,485] RotatePoint:  POST
+[2016-07-16 14:50:30,485] RotatePoint: [10.0, 14.0, 3.3999999999999999]
+[2016-07-16 14:50:30,485] RotatePoint:  PRE
+[2016-07-16 14:50:30,485] RotatePoint: [0.0, 1.0, 0.7]
+[2016-07-16 14:50:30,485] RotatePoint:  POST
+[2016-07-16 14:50:30,485] RotatePoint: [10.0, 14.0, 3.7999999999999998]
+[2016-07-16 14:50:30,485] RotatePoint:  PRE
+[2016-07-16 14:50:30,485] RotatePoint: [0.0, 1.0, 0.8]
+[2016-07-16 14:50:30,485] RotatePoint:  POST
+[2016-07-16 14:50:30,485] RotatePoint: [10.0, 14.0, 4.2000000000000002]
+[2016-07-16 14:50:30,485] RotatePoint:  PRE
+[2016-07-16 14:50:30,485] RotatePoint: [0.0, 1.0, 0.9]
+[2016-07-16 14:50:30,485] RotatePoint:  POST
+[2016-07-16 14:50:30,485] RotatePoint: [10.0, 14.0, 4.5999999999999996]
+[2016-07-16 14:50:30,485] RotatePoint:  PRE
+[2016-07-16 14:50:30,486] RotatePoint: [0.0, 1.0, 1.0]
+[2016-07-16 14:50:30,486] RotatePoint:  POST
+[2016-07-16 14:50:30,486] RotatePoint: [10.0, 14.0, 5.0]
+[2016-07-16 14:50:30,491] build: Added noiseCube to scene
+[2016-07-16 14:50:30,491] build: noiseCube isControl = 0
+[2016-07-16 14:50:30,491] build: noiseCube being used as marker
+[2016-07-16 14:50:30,491] build: MARKER
+[2016-07-16 14:50:30,491] build: C:\Users\Richie\Documents\GitHub\BlenderPythonTest\objects\noiseCube.txt
+[2016-07-16 14:50:30,491] build: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,491] build: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,492] build: [10.0, 10.0, 1.0]
+[2016-07-16 14:50:30,492] RotatePoint:  PRE
+[2016-07-16 14:50:30,492] RotatePoint: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,492] RotatePoint:  POST
+[2016-07-16 14:50:30,492] RotatePoint: [0.0, 0.0, 0.0]
+[2016-07-16 14:50:30,492] RotatePoint:  PRE
+[2016-07-16 14:50:30,492] RotatePoint: [10.0, 10.0, 0.0]
+[2016-07-16 14:50:30,492] RotatePoint:  POST
+[2016-07-16 14:50:30,492] RotatePoint: [100.0, 100.0, 0.0]
+[2016-07-16 14:50:30,492] RotatePoint:  PRE
+[2016-07-16 14:50:30,492] RotatePoint: [10.0, -10.0, 0.0]
+[2016-07-16 14:50:30,492] RotatePoint:  POST
+[2016-07-16 14:50:30,492] RotatePoint: [100.0, -100.0, 0.0]
+[2016-07-16 14:50:30,493] RotatePoint:  PRE
+[2016-07-16 14:50:30,493] RotatePoint: [-10.0, 10.0, 0.0]
+[2016-07-16 14:50:30,493] RotatePoint:  POST
+[2016-07-16 14:50:30,493] RotatePoint: [-100.0, 100.0, 0.0]
+[2016-07-16 14:50:30,493] RotatePoint:  PRE
+[2016-07-16 14:50:30,493] RotatePoint: [-10.0, -10.0, 0.0]
+[2016-07-16 14:50:30,493] RotatePoint:  POST
+[2016-07-16 14:50:30,493] RotatePoint: [-100.0, -100.0, 0.0]
+[2016-07-16 14:50:30,493] RotatePoint:  PRE
+[2016-07-16 14:50:30,493] RotatePoint: [10.0, 10.0, -1.0]
+[2016-07-16 14:50:30,493] RotatePoint:  POST
+[2016-07-16 14:50:30,493] RotatePoint: [100.0, 100.0, -1.0]
+[2016-07-16 14:50:30,493] RotatePoint:  PRE
+[2016-07-16 14:50:30,493] RotatePoint: [10.0, -10.0, -1.0]
+[2016-07-16 14:50:30,493] RotatePoint:  POST
+[2016-07-16 14:50:30,493] RotatePoint: [100.0, -100.0, -1.0]
+[2016-07-16 14:50:30,493] RotatePoint:  PRE
+[2016-07-16 14:50:30,494] RotatePoint: [-10.0, 10.0, -1.0]
+[2016-07-16 14:50:30,494] RotatePoint:  POST
+[2016-07-16 14:50:30,494] RotatePoint: [-100.0, 100.0, -1.0]
+[2016-07-16 14:50:30,494] RotatePoint:  PRE
+[2016-07-16 14:50:30,494] RotatePoint: [-10.0, -10.0, -1.0]
+[2016-07-16 14:50:30,494] RotatePoint:  POST
+[2016-07-16 14:50:30,494] RotatePoint: [-100.0, -100.0, -1.0]
+[2016-07-16 14:50:30,554] apply: applying settings
+[2016-07-16 14:50:30,557] add: ADDING POSE: ImTest0001
+[2016-07-16 14:50:30,557] link: running as background
+[2016-07-16 14:50:30,557] main: Rendering [ImTest0001] started
+[2016-07-16 14:50:31,743] main: Rendered Finished
+[2016-07-16 14:50:31,744] add: ADDING POSE: ImTest0002
+[2016-07-16 14:50:31,744] link: running as background
+[2016-07-16 14:50:31,744] main: Rendering [ImTest0002] started
+[2016-07-16 14:50:33,227] main: Rendered Finished
+[2016-07-16 14:50:33,228] add: ADDING POSE: ImTest0003
+[2016-07-16 14:50:33,228] link: running as background
+[2016-07-16 14:50:33,228] main: Rendering [ImTest0003] started
+[2016-07-16 14:50:34,696] main: Rendered Finished
+[2016-07-16 14:50:34,697] add: ADDING POSE: ImTest0004
+[2016-07-16 14:50:34,697] link: running as background
+[2016-07-16 14:50:34,697] main: Rendering [ImTest0004] started
+[2016-07-16 14:50:36,253] main: Rendered Finished
+[2016-07-16 14:50:36,254] add: ADDING POSE: ImTest0005
+[2016-07-16 14:50:36,254] link: running as background
+[2016-07-16 14:50:36,254] main: Rendering [ImTest0005] started
+[2016-07-16 14:50:37,287] main: Rendered Finished
+[2016-07-16 14:50:37,287] add: ADDING POSE: ImTest0006
+[2016-07-16 14:50:37,288] link: running as background
+[2016-07-16 14:50:37,288] main: Rendering [ImTest0006] started
+[2016-07-16 14:50:38,906] main: Rendered Finished
+[2016-07-16 14:50:38,907] add: ADDING POSE: ImTest0007
+[2016-07-16 14:50:38,907] link: running as background
+[2016-07-16 14:50:38,907] main: Rendering [ImTest0007] started
+[2016-07-16 14:50:41,266] main: Rendered Finished
+[2016-07-16 14:50:41,266] add: ADDING POSE: ImTest0008
+[2016-07-16 14:50:41,266] link: running as background
+[2016-07-16 14:50:41,266] main: Rendering [ImTest0008] started
+[2016-07-16 14:50:43,615] main: Rendered Finished
+[2016-07-16 14:50:43,616] add: ADDING POSE: ImTest0009
+[2016-07-16 14:50:43,616] link: running as background
+[2016-07-16 14:50:43,616] main: Rendering [ImTest0009] started
+[2016-07-16 14:50:45,950] main: Rendered Finished
+[2016-07-16 14:50:45,950] add: ADDING POSE: ImTest0010
+[2016-07-16 14:50:45,951] link: running as background
+[2016-07-16 14:50:45,951] main: Rendering [ImTest0010] started
+[2016-07-16 14:50:47,532] main: Rendered Finished
+[2016-07-16 14:50:47,533] add: ADDING POSE: ImTest0011
+[2016-07-16 14:50:47,533] link: running as background
+[2016-07-16 14:50:47,533] main: Rendering [ImTest0011] started
+[2016-07-16 14:50:49,504] main: Rendered Finished
+[2016-07-16 14:50:49,504] add: ADDING POSE: ImTest0012
+[2016-07-16 14:50:49,504] link: running as background
+[2016-07-16 14:50:49,504] main: Rendering [ImTest0012] started
+[2016-07-16 14:50:52,425] main: Rendered Finished
+[2016-07-16 14:50:52,426] add: ADDING POSE: ImTest0013
+[2016-07-16 14:50:52,426] link: running as background
+[2016-07-16 14:50:52,426] main: Rendering [ImTest0013] started
+[2016-07-16 14:50:55,341] main: Rendered Finished
+[2016-07-16 14:50:55,341] add: ADDING POSE: ImTest0014
+[2016-07-16 14:50:55,342] link: running as background
+[2016-07-16 14:50:55,342] main: Rendering [ImTest0014] started
+[2016-07-16 14:50:58,250] main: Rendered Finished
+[2016-07-16 14:50:58,250] add: ADDING POSE: ImTest0015
+[2016-07-16 14:50:58,250] link: running as background
+[2016-07-16 14:50:58,251] main: Rendering [ImTest0015] started
+[2016-07-16 14:51:00,229] main: Rendered Finished
+[2016-07-16 14:51:00,230] add: ADDING POSE: ImTest0016
+[2016-07-16 14:51:00,230] link: running as background
+[2016-07-16 14:51:00,230] main: Rendering [ImTest0016] started
+[2016-07-16 14:51:01,857] main: Rendered Finished
+[2016-07-16 14:51:01,858] add: ADDING POSE: ImTest0017
+[2016-07-16 14:51:01,858] link: running as background
+[2016-07-16 14:51:01,858] main: Rendering [ImTest0017] started
+[2016-07-16 14:51:04,277] main: Rendered Finished
+[2016-07-16 14:51:04,277] add: ADDING POSE: ImTest0018
+[2016-07-16 14:51:04,278] link: running as background
+[2016-07-16 14:51:04,278] main: Rendering [ImTest0018] started
+[2016-07-16 14:51:06,735] main: Rendered Finished
+[2016-07-16 14:51:06,736] add: ADDING POSE: ImTest0019
+[2016-07-16 14:51:06,736] link: running as background
+[2016-07-16 14:51:06,736] main: Rendering [ImTest0019] started
+[2016-07-16 14:51:09,111] main: Rendered Finished
+[2016-07-16 14:51:09,111] add: ADDING POSE: ImTest0020
+[2016-07-16 14:51:09,112] link: running as background
+[2016-07-16 14:51:09,112] main: Rendering [ImTest0020] started
+[2016-07-16 14:51:10,693] main: Rendered Finished
+[2016-07-16 14:51:10,694] add: ADDING POSE: ImTest0021
+[2016-07-16 14:51:10,694] link: running as background
+[2016-07-16 14:51:10,694] main: Rendering [ImTest0021] started
+[2016-07-16 14:51:11,731] main: Rendered Finished
+[2016-07-16 14:51:11,732] add: ADDING POSE: ImTest0022
+[2016-07-16 14:51:11,732] link: running as background
+[2016-07-16 14:51:11,732] main: Rendering [ImTest0022] started
+[2016-07-16 14:51:13,240] main: Rendered Finished
+[2016-07-16 14:51:13,241] add: ADDING POSE: ImTest0023
+[2016-07-16 14:51:13,241] link: running as background
+[2016-07-16 14:51:13,241] main: Rendering [ImTest0023] started
+[2016-07-16 14:51:14,737] main: Rendered Finished
+[2016-07-16 14:51:14,737] add: ADDING POSE: ImTest0024
+[2016-07-16 14:51:14,737] link: running as background
+[2016-07-16 14:51:14,738] main: Rendering [ImTest0024] started
+[2016-07-16 14:51:16,234] main: Rendered Finished
+[2016-07-16 14:51:16,235] add: ADDING POSE: ImTest0025
+[2016-07-16 14:51:16,235] link: running as background
+[2016-07-16 14:51:16,235] main: Rendering [ImTest0025] started
+[2016-07-16 14:51:17,310] main: Rendered Finished
