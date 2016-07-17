@@ -51,8 +51,8 @@ class Sensor:
         intrinsicsFileHandle.write("\t<height>" + str(self.resolution[1]) + "</height>\r\n")
         intrinsicsFileHandle.write("\t<fx>" + str(f) + "</fx>\r\n")
         intrinsicsFileHandle.write("\t<fy>" + str(f) + "</fy>\r\n")
-        # intrinsicsFileHandle.write("\t<cx>" + str(self.principalPoint[0]) + "</cx>\r\n")
-        # intrinsicsFileHandle.write("\t<cy>" + str(self.principalPoint[1]) + "</cy>\r\n")
+        intrinsicsFileHandle.write("\t<cx>" + str(self.principalPoint[0]) + "</cx>\r\n")
+        intrinsicsFileHandle.write("\t<cy>" + str(self.principalPoint[1]) + "</cy>\r\n")
         intrinsicsFileHandle.write("\t<skew>0</skew>\r\n")
         intrinsicsFileHandle.write("\t<k1>0</k1>\r\n")
         intrinsicsFileHandle.write("\t<k2>0</k2>\r\n")
@@ -215,8 +215,8 @@ class Pose:
 
         #assume square pixels
         pixPerMm = camSensor.sensorWidth / camSensor.resolution[0]
-        bpy.context.object.data.shift_x = (camSensor.principalPoint[0] - camSensor.resolution[0]/2) * pixPerMm
-        bpy.context.object.data.shift_y = (camSensor.principalPoint[1] - camSensor.resolution[1]/2) * pixPerMm
+        #bpy.context.object.data.shift_x = (camSensor.principalPoint[0] - camSensor.resolution[0]/2) * pixPerMm
+        #bpy.context.object.data.shift_y = (camSensor.principalPoint[1] - camSensor.resolution[1]/2) * pixPerMm
 
         bpy.context.object.name = self.name
         bpy.context.object.data.name = self.name
