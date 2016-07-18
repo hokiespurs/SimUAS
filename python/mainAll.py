@@ -47,12 +47,12 @@ class Sensor:
         intrinsicsFileHandle.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n")
         intrinsicsFileHandle.write("<calibration>\r\n")
         intrinsicsFileHandle.write("\t<projection>frame</projection>\r\n")
-        intrinsicsFileHandle.write("\t<width>" + str(self.resolution[0]) + "</width>\r\n")
-        intrinsicsFileHandle.write("\t<height>" + str(self.resolution[1]) + "</height>\r\n")
-        intrinsicsFileHandle.write("\t<fx>" + str(f) + "</fx>\r\n")
-        intrinsicsFileHandle.write("\t<fy>" + str(f) + "</fy>\r\n")
-        intrinsicsFileHandle.write("\t<cx>" + str(self.principalPoint[0]) + "</cx>\r\n")
-        intrinsicsFileHandle.write("\t<cy>" + str(self.principalPoint[1]) + "</cy>\r\n")
+        intrinsicsFileHandle.write("\t<width>" + str(self.resolution[0]*self.percentage/100) + "</width>\r\n")
+        intrinsicsFileHandle.write("\t<height>" + str(self.resolution[1]*self.percentage/100) + "</height>\r\n")
+        intrinsicsFileHandle.write("\t<fx>" + str(f*self.percentage/100) + "</fx>\r\n")
+        intrinsicsFileHandle.write("\t<fy>" + str(f*self.percentage/100) + "</fy>\r\n")
+        intrinsicsFileHandle.write("\t<cx>" + str(self.principalPoint[0]*self.percentage/100) + "</cx>\r\n")
+        intrinsicsFileHandle.write("\t<cy>" + str(self.principalPoint[1]*self.percentage/100) + "</cy>\r\n")
         intrinsicsFileHandle.write("\t<skew>0</skew>\r\n")
         intrinsicsFileHandle.write("\t<k1>0</k1>\r\n")
         intrinsicsFileHandle.write("\t<k2>0</k2>\r\n")
@@ -194,6 +194,7 @@ class Scene:
 
         bpy.ops.export_scene.obj(filepath=outputOBJ, axis_forward='Y', axis_up='Z')
 
+
 class Pose:
     def __init__(self, name, tx, ty, tz, rx, ry, rz):
         self.Translation = Triplet(tx, ty, tz)
@@ -206,9 +207,18 @@ class Pose:
         bpy.ops.object.camera_add(view_align=True, enter_editmode=True, location=T, rotation=(0, 0, 0))
         # bpy.context.object.rotation_mode = 'ZYX'
         bpy.context.object.rotation_euler = R
-        bpy.context.object.data.lens = camSensor.focalLength
         bpy.context.object.data.sensor_width = camSensor.sensorWidth
+        xyRatio = camSensor.resolution[1]/camSensor.resolution[0]
+        bpy.context.object.data.sensor_height = camSensor.sensorWidth * xyRatio
+        #calculate lens angle in degrees, because focal length is broken
+        f = camSensor.focalLength
+        x = camSensor.sensorWidth/2
 
+        fov = math.atan(x/f)*2
+
+        bpy.context.object.data.lens_unit = 'FOV'
+        bpy.context.object.data.angle = fov
+        logging.debug(["Set FOV to: " + str(fov)])
         #clipping constants
         bpy.context.object.data.clip_end = camSensor.clipEnd
         bpy.context.object.data.clip_start = camSensor.clipStart

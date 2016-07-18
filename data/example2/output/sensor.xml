@@ -3,8 +3,8 @@
 	<projection>frame</projection>
 	<width>4000.0</width>
 	<height>3000.0</height>
-	<fx>2000.0</fx>
-	<fy>2000.0</fy>
+	<fx>1880.064829821718</fx>
+	<fy>1880.064829821718</fy>
 	<cx>2000.0</cx>
 	<cy>1500.0</cy>
 	<skew>0</skew>
@@ -14,5 +14,5 @@
 	<k4>0</k4>
 	<p1>0</p1>
 	<p2>0</p2>
-	<date>2016-07-16T23:27:43Z</date>
+	<date>2016-07-17T14:37:14Z</date>
 </calibration>
