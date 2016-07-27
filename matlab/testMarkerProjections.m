@@ -4,7 +4,7 @@ clc
 
 %% Test Marker locations 
 
-dataDirectory = 'C:\Users\Richie\Documents\GitHub\BlenderPythonTest\data\example3';
+dataDirectory = 'C:\Users\Richie\Documents\GitHub\BlenderPythonTest\data\validateChecker1';
 imDir = [dataDirectory '/output/images/'];
 trajectoryFilename = [dataDirectory '/output/trajectory.txt'];
 markerFilename = [dataDirectory '/output/marker.txt'];

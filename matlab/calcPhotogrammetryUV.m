@@ -6,9 +6,18 @@ fy = str2double(calibration.fy.Text);
 cx = str2double(calibration.cx.Text);
 cy = str2double(calibration.cy.Text);
 
-RT = [1 0 0 -camT(1);
-      0 -1 0 camT(2);
-      0 0  -1 camT(3);];
+camR = camR*pi/180;
+
+Rblender = makehgtform('xrotate',camR(1),...
+                'yrotate',camR(2),...
+                'zrotate',camR(3));
+Rblender2photogrammetry = diag([1 -1 -1 1]);
+
+R = Rblender * Rblender2photogrammetry;
+R = R(1:3,1:3);
+
+RT = inv([inv(R) camT';0 0 0 1]);
+RT = RT(1:3,:);
 
 O = RT * [0 0 0 1]';
 Z = RT * [0 0 1 1]';
