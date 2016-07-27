@@ -1942,3 +1942,24 @@
 [2016-07-18 01:19:46,977] add: ADDING POSE: ImTest20096
 [2016-07-18 01:19:46,977] link: running as background
 [2016-07-18 01:19:46,977] main: Rendering [ImTest20096] started
+[2016-07-18 01:19:50,073] main: Rendered Finished
+[2016-07-18 01:19:50,074] add: ['Set FOV to: 1.2668517659382892']
+[2016-07-18 01:19:50,074] add: ADDING POSE: ImTest20097
+[2016-07-18 01:19:50,074] link: running as background
+[2016-07-18 01:19:50,074] main: Rendering [ImTest20097] started
+[2016-07-18 01:19:53,006] main: Rendered Finished
+[2016-07-18 01:19:53,007] add: ['Set FOV to: 1.2668517659382892']
+[2016-07-18 01:19:53,007] add: ADDING POSE: ImTest20098
+[2016-07-18 01:19:53,007] link: running as background
+[2016-07-18 01:19:53,007] main: Rendering [ImTest20098] started
+[2016-07-18 01:19:55,802] main: Rendered Finished
+[2016-07-18 01:19:55,803] add: ['Set FOV to: 1.2668517659382892']
+[2016-07-18 01:19:55,804] add: ADDING POSE: ImTest20099
+[2016-07-18 01:19:55,804] link: running as background
+[2016-07-18 01:19:55,804] main: Rendering [ImTest20099] started
+[2016-07-18 01:19:58,296] main: Rendered Finished
+[2016-07-18 01:19:58,297] add: ['Set FOV to: 1.2668517659382892']
+[2016-07-18 01:19:58,297] add: ADDING POSE: ImTest20100
+[2016-07-18 01:19:58,297] link: running as background
+[2016-07-18 01:19:58,297] main: Rendering [ImTest20100] started
+[2016-07-18 01:20:00,767] main: Rendered Finished
