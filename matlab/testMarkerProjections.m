@@ -4,7 +4,7 @@ clc
 
 %% Test Marker locations 
 
-dataDirectory = 'C:\Users\Richie\Documents\GitHub\BlenderPythonTest\data\validateChecker1';
+dataDirectory = 'C:\Users\Richie\Documents\GitHub\BlenderPythonTest\data\validateCheckerCube4';
 imDir = [dataDirectory '/output/images/'];
 trajectoryFilename = [dataDirectory '/output/trajectory.txt'];
 markerFilename = [dataDirectory '/output/marker.txt'];
@@ -40,7 +40,8 @@ camIntrinsics = xml2struct(intrinsicFilename);
 calibration = camIntrinsics.calibration;
 
 %% For each Image
-
+mkdir([dataDirectory '/proc']);
+f = figure('units','normalized','position',[0 0 1 1]);
 for iImage = 1:numel(Traj.names)
    I = imread([imDir Traj.names{iImage}]);
    
@@ -48,18 +49,20 @@ for iImage = 1:numel(Traj.names)
        Traj.R(iImage,:), Traj.T(iImage,:), Mark.T);
    [uCont,vCont] = calcPhotogrammetryUV(calibration, ...
        Traj.R(iImage,:), Traj.T(iImage,:), Cont.T);
-   figure(1)
+   figure(f);
    image(I)
+   axis equal
+   ax = axis;
    hold on
    plot(uMark,vMark,'m.')
    plot(uCont,vCont,'g.')
    hold off
-   
 %    xlim([min(uMark(:)) max(uMark(:))])
 %    ylim([min(vMark(:)) max(vMark(:))])
-    axis equal 
+    axis(ax)
     title(Traj.names{iImage})
-    
-   pause(1)
+    drawnow
+    saveas(f,[dataDirectory '/proc/' Traj.names{iImage}])
+ 
 end
 
