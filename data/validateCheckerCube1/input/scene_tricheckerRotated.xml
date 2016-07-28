@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scene name="testRange" version="0.1" lib="C:\\Users\\Richie\\Documents\\GitHub\\BlenderPythonTest\\objects/objectLibrary.xml">
+	<object libname="checkercube" name="checkercube1" isControl = "0" isMarker = "1">
+        <translation x="0" y="0" z="0"/>
+        <rotation x="0" y="0" z="0"/>
+        <scale x="3" y="3" z="3"/>
+    </object>
+</scene>

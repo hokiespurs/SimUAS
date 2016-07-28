@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sensor name = "CanonElph115" fileformat = "PNG">
+  <physical focallength="4.11" sensorWidth = "6.17"/>
+  <resolution x = "4608" y = "3456"/>
+  <principalPoint x = "2304" y="1728"/>
+  <image compression = "100" percentage = "100" antialiasing = "0"/>
+  <clipping start = "0" end = "100"/>
+</sensor>
