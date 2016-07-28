@@ -1,2 +1,0 @@
-ControlPointName,Tx,Ty,Tz,Rx,Ry,Rz
-trichecker5,0.0,0.0,0.0,0.0,0.0,0.0
