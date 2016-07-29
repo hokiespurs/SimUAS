@@ -11,6 +11,7 @@ import numpy as np
 import math
 import time
 
+
 class Sensor:
     def __init__(self, xmlsensor):
         tree = ET.parse(xmlsensor)
@@ -210,7 +211,7 @@ class Pose:
         bpy.context.object.data.sensor_width = camSensor.sensorWidth
         xyRatio = camSensor.resolution[1]/camSensor.resolution[0]
         bpy.context.object.data.sensor_height = camSensor.sensorWidth * xyRatio
-        #calculate lens angle in degrees, because focal length is broken
+        #calculate lens angle in degrees
         f = camSensor.focalLength
         x = camSensor.sensorWidth/2
 
@@ -223,10 +224,10 @@ class Pose:
         bpy.context.object.data.clip_end = camSensor.clipEnd
         bpy.context.object.data.clip_start = camSensor.clipStart
 
-
-        bpy.context.object.data.shift_x = (camSensor.principalPoint[0] - camSensor.resolution[0]/2)\
+        # move principal point by 0.5 pixels because it appears as though blender uses the center of the pixel??
+        bpy.context.object.data.shift_x = -0.5+(camSensor.principalPoint[0] - camSensor.resolution[0]/2)\
                                           / -camSensor.resolution[0]
-        bpy.context.object.data.shift_y = (camSensor.principalPoint[1] - camSensor.resolution[1]/2)\
+        bpy.context.object.data.shift_y = -0.5+(camSensor.principalPoint[1] - camSensor.resolution[1]/2)\
                                           / -camSensor.resolution[0]
 
         logging.debug(bpy.context.object.data.shift_x)
