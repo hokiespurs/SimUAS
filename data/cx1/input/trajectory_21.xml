@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extrinsics name = "Test">
+	<pose name = "ImTestCX1">
+		<translation x = "-40.000000" y = "-40.000000" z = "60.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+</extrinsics>
