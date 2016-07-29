@@ -3,15 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="fdb15085-f695-4c71-8e63-4b6b6aee15c9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/20160711_testMarkers/output/log.txt" afterPath="$PROJECT_DIR$/data/20160711_testMarkers/output/log.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/20160711_testMarkers/output/sensor.xml" afterPath="$PROJECT_DIR$/data/20160711_testMarkers/output/sensor.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/example/output/log.txt" afterPath="$PROJECT_DIR$/data/example/output/log.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/example/output/marker.txt" afterPath="$PROJECT_DIR$/data/example/output/marker.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/example/output/sensor.xml" afterPath="$PROJECT_DIR$/data/example/output/sensor.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/example/output/trajectory.txt" afterPath="$PROJECT_DIR$/data/example/output/trajectory.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/objects/gcp.txt" afterPath="$PROJECT_DIR$/objects/gcp.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python/mainAll.py" afterPath="$PROJECT_DIR$/python/mainAll.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python/testRun.bat" afterPath="$PROJECT_DIR$/python/testRun.bat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/example2/input/trajectory_21.xml" afterPath="$PROJECT_DIR$/data/example2/input/trajectory_21.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/example2/output/sensor.xml" afterPath="$PROJECT_DIR$/data/example2/output/sensor.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/example2/output/trajectory.txt" afterPath="$PROJECT_DIR$/data/example2/output/trajectory.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/matlab/testMarkerProjections.m" afterPath="$PROJECT_DIR$/matlab/testMarkerProjections.m" />
     </list>
     <ignored path="BlenderPythonTest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,18 +30,18 @@
       <file leaf-file-name="mainAll.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/python/mainAll.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.36739132">
-              <caret line="213" column="33" selection-start-line="213" selection-start-column="33" selection-end-line="213" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.31378937">
+              <caret line="229" column="62" selection-start-line="229" selection-start-column="62" selection-end-line="229" selection-end-column="62" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
                 <element signature="e#3266#3702#0" expanded="false" />
                 <element signature="e#3723#3951#0" expanded="false" />
                 <element signature="e#3971#8885#0" expanded="false" />
-                <element signature="e#11117#11818#0" expanded="false" />
-                <element signature="e#12233#13767#0" expanded="false" />
-                <element signature="e#13803#14285#0" expanded="false" />
-                <element signature="e#14304#14770#0" expanded="false" />
-                <element signature="e#14801#14865#0" expanded="false" />
+                <element signature="e#11135#11836#0" expanded="false" />
+                <element signature="e#12251#13785#0" expanded="false" />
+                <element signature="e#13821#14303#0" expanded="false" />
+                <element signature="e#14322#14788#0" expanded="false" />
+                <element signature="e#14819#14883#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -69,7 +64,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="861" />
+    <option name="width" value="1369" />
     <option name="height" value="1080" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -97,8 +92,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -187,6 +180,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -373,10 +368,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="861" height="1080" extended-state="1" />
+    <frame x="0" y="0" width="1369" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18833536" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1164538" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32953367" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -422,11 +417,11 @@
             <element signature="e#3266#3702#0" expanded="false" />
             <element signature="e#3723#3951#0" expanded="false" />
             <element signature="e#3971#8885#0" expanded="false" />
-            <element signature="e#11117#11818#0" expanded="false" />
-            <element signature="e#12233#13767#0" expanded="false" />
-            <element signature="e#13803#14285#0" expanded="false" />
-            <element signature="e#14304#14770#0" expanded="false" />
-            <element signature="e#14801#14865#0" expanded="false" />
+            <element signature="e#11135#11836#0" expanded="false" />
+            <element signature="e#12251#13785#0" expanded="false" />
+            <element signature="e#13821#14303#0" expanded="false" />
+            <element signature="e#14322#14788#0" expanded="false" />
+            <element signature="e#14819#14883#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -440,29 +435,65 @@
             <element signature="e#3266#3702#0" expanded="false" />
             <element signature="e#3723#3951#0" expanded="false" />
             <element signature="e#3971#8885#0" expanded="false" />
-            <element signature="e#11117#11818#0" expanded="false" />
-            <element signature="e#12233#13767#0" expanded="false" />
-            <element signature="e#13803#14285#0" expanded="false" />
-            <element signature="e#14304#14770#0" expanded="false" />
-            <element signature="e#14801#14865#0" expanded="false" />
+            <element signature="e#11135#11836#0" expanded="false" />
+            <element signature="e#12251#13785#0" expanded="false" />
+            <element signature="e#13821#14303#0" expanded="false" />
+            <element signature="e#14322#14788#0" expanded="false" />
+            <element signature="e#14819#14883#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/python/mainAll.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36739132">
-          <caret line="213" column="33" selection-start-line="213" selection-start-column="33" selection-end-line="213" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
             <element signature="e#3266#3702#0" expanded="false" />
             <element signature="e#3723#3951#0" expanded="false" />
             <element signature="e#3971#8885#0" expanded="false" />
-            <element signature="e#11117#11818#0" expanded="false" />
-            <element signature="e#12233#13767#0" expanded="false" />
-            <element signature="e#13803#14285#0" expanded="false" />
-            <element signature="e#14304#14770#0" expanded="false" />
-            <element signature="e#14801#14865#0" expanded="false" />
+            <element signature="e#11135#11836#0" expanded="false" />
+            <element signature="e#12251#13785#0" expanded="false" />
+            <element signature="e#13821#14303#0" expanded="false" />
+            <element signature="e#14322#14788#0" expanded="false" />
+            <element signature="e#14819#14883#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/mainAll.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#3266#3702#0" expanded="false" />
+            <element signature="e#3723#3951#0" expanded="false" />
+            <element signature="e#3971#8885#0" expanded="false" />
+            <element signature="e#11135#11836#0" expanded="false" />
+            <element signature="e#12251#13785#0" expanded="false" />
+            <element signature="e#13821#14303#0" expanded="false" />
+            <element signature="e#14322#14788#0" expanded="false" />
+            <element signature="e#14819#14883#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/mainAll.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31378937">
+          <caret line="229" column="62" selection-start-line="229" selection-start-column="62" selection-end-line="229" selection-end-column="62" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#3266#3702#0" expanded="false" />
+            <element signature="e#3723#3951#0" expanded="false" />
+            <element signature="e#3971#8885#0" expanded="false" />
+            <element signature="e#11135#11836#0" expanded="false" />
+            <element signature="e#12251#13785#0" expanded="false" />
+            <element signature="e#13821#14303#0" expanded="false" />
+            <element signature="e#14322#14788#0" expanded="false" />
+            <element signature="e#14819#14883#0" expanded="false" />
           </folding>
         </state>
       </provider>
