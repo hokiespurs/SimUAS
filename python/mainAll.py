@@ -223,10 +223,11 @@ class Pose:
         bpy.context.object.data.clip_end = camSensor.clipEnd
         bpy.context.object.data.clip_start = camSensor.clipStart
 
-        #assume square pixels
-        pixPerMm = camSensor.sensorWidth / camSensor.resolution[0]
-        #bpy.context.object.data.shift_x = (camSensor.principalPoint[0] - camSensor.resolution[0]/2) * pixPerMm
-        #bpy.context.object.data.shift_y = (camSensor.principalPoint[1] - camSensor.resolution[1]/2) * pixPerMm
+
+        bpy.context.object.data.shift_x = (camSensor.principalPoint[0] - camSensor.resolution[0]/2)\
+                                          / camSensor.resolution[0]
+        bpy.context.object.data.shift_y = (camSensor.principalPoint[1] - camSensor.resolution[1]/2)\
+                                          / camSensor.resolution[1]
 
         bpy.context.object.name = self.name
         bpy.context.object.data.name = self.name
