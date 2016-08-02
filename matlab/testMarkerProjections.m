@@ -55,6 +55,11 @@ for iImage = 1:numel(Traj.names)
    [uCont,vCont] = calcPhotogrammetryUV(calibration, ...
        Traj.R(iImage,:), Traj.T(iImage,:), Cont.T);
    [uCheck,vCheck] = myDetectCorner(I);
+   
+   [xy,~]=detectCheckerboardPoints(I);
+   uCheck = xy(:,1);
+   vCheck = xy(:,2);
+   
    figure(f);
    image(I)
    axis equal

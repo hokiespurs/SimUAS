@@ -225,9 +225,10 @@ class Pose:
         bpy.context.object.data.clip_start = camSensor.clipStart
 
         # move principal point by 0.5 pixels because it appears as though blender uses the center of the pixel??
-        bpy.context.object.data.shift_x = -0.5+(camSensor.principalPoint[0] - camSensor.resolution[0]/2)\
+        halfpixel = 0.5/ camSensor.resolution[0]
+        bpy.context.object.data.shift_x = halfpixel + (camSensor.principalPoint[0] - camSensor.resolution[0]/2)\
                                           / -camSensor.resolution[0]
-        bpy.context.object.data.shift_y = -0.5+(camSensor.principalPoint[1] - camSensor.resolution[1]/2)\
+        bpy.context.object.data.shift_y = -halfpixel + (camSensor.principalPoint[1] - camSensor.resolution[1]/2)\
                                           / -camSensor.resolution[0]
 
         logging.debug(bpy.context.object.data.shift_x)

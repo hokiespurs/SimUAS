@@ -1,1 +1,1 @@
-blender --background --python mainAll.py -- C:\\Users\\Richie\\Documents\\GitHub\\BlenderPythonTest\\data\\cx2
+blender --background --python mainAll.py -- C:\\Users\\Richie\\Documents\\GitHub\\BlenderPythonTest\\data\\validateCheckerCube4
