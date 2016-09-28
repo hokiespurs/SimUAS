@@ -78,3 +78,10 @@ proc/
 #matlab
 *.asv
 *.blend1
+
+#ppt autosave file
+~$*
+
+#Dont ignore doc folders
+!doc/**/*.png
+!doc/**/*.jpg
