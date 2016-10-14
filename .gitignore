@@ -85,3 +85,6 @@ proc/
 #Dont ignore doc folders
 !doc/**/*.png
 !doc/**/*.jpg
+
+#ignore .idea pycharm stuff
+.idea/
