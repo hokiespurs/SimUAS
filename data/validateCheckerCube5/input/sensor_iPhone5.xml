@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<sensor name = "iPhone5" fileformat = "PNG">
-  <physical focallength="4.10" sensorWidth = "4.54"/>
-  <resolution x = "3264" y = "2448"/>
-  <principalPoint x = "1632" y="1224"/>
-  <image compression = "100" percentage = "100" antialiasing = "0"/>
-  <clipping start = "0" end = "100"/>
-</sensor>

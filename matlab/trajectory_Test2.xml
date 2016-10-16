@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <extrinsics name = "Test">
 	<pose name = "CenterPoint001">
-		<translation x = "2.393712" y = "-0.883402" z = "-4.299970" />
-		<rotation x = "0.000000" y = "149.315908" z = "339.743355" />
+		<translation x = "-0.703664" y = "0.947574" z = "4.858699" />
+		<rotation x = "0.000000" y = "13.653772" z = "126.597423" />
 	</pose>
 	<pose name = "CenterPoint002">
-		<translation x = "-2.174718" y = "-0.693912" z = "-4.448493" />
-		<rotation x = "0.000000" y = "152.835386" z = "197.696911" />
+		<translation x = "0.410151" y = "-0.736947" z = "4.928355" />
+		<rotation x = "0.000000" y = "9.711021" z = "299.098306" />
 	</pose>
 	<pose name = "CenterPoint003">
-		<translation x = "-0.623361" y = "-4.562046" z = "1.949143" />
-		<rotation x = "0.000000" y = "67.056163" z = "262.219257" />
+		<translation x = "-4.279372" y = "-2.540408" z = "-0.483012" />
+		<rotation x = "0.000000" y = "95.543560" z = "210.695073" />
 	</pose>
 	<pose name = "CenterPoint004">
-		<translation x = "-4.241220" y = "-2.220366" z = "-1.442922" />
-		<rotation x = "0.000000" y = "106.773224" z = "207.632987" />
+		<translation x = "-3.042418" y = "-0.982703" z = "-3.844215" />
+		<rotation x = "0.000000" y = "140.250101" z = "197.900499" />
 	</pose>
 	<pose name = "CenterPoint005">
-		<translation x = "1.923214" y = "0.315238" z = "-4.604549" />
-		<rotation x = "0.000000" y = "157.059462" z = "9.308690" />
+		<translation x = "0.892968" y = "-0.511620" z = "-4.892939" />
+		<rotation x = "0.000000" y = "168.121923" z = "330.189719" />
 	</pose>
 	<pose name = "CenterPoint006">
-		<translation x = "-0.979002" y = "0.341861" z = "-4.891287" />
-		<rotation x = "0.000000" y = "168.030290" z = "160.751152" />
+		<translation x = "-0.443084" y = "1.934288" z = "4.589358" />
+		<rotation x = "0.000000" y = "23.383118" z = "102.902047" />
 	</pose>
 	<pose name = "CenterPoint007">
-		<translation x = "-2.617284" y = "-3.431786" z = "-2.524414" />
-		<rotation x = "0.000000" y = "120.323569" z = "232.668705" />
+		<translation x = "0.220860" y = "-4.878585" z = "-1.072676" />
+		<rotation x = "0.000000" y = "102.388259" z = "272.592082" />
 	</pose>
 	<pose name = "CenterPoint008">
-		<translation x = "-2.997570" y = "-0.401722" z = "3.981607" />
-		<rotation x = "0.000000" y = "37.219762" z = "187.633063" />
+		<translation x = "0.116601" y = "-4.975534" z = "0.480070" />
+		<rotation x = "0.000000" y = "84.490315" z = "271.342474" />
 	</pose>
 	<pose name = "CenterPoint009">
-		<translation x = "-3.077234" y = "3.182947" z = "-2.323678" />
-		<rotation x = "0.000000" y = "117.693107" z = "134.032558" />
+		<translation x = "-0.136612" y = "0.127569" z = "4.996505" />
+		<rotation x = "0.000000" y = "2.142373" z = "136.960505" />
 	</pose>
 	<pose name = "CenterPoint010">
-		<translation x = "1.035736" y = "-0.431804" z = "4.872453" />
-		<rotation x = "0.000000" y = "12.969279" z = "337.368480" />
+		<translation x = "-3.969702" y = "-1.802056" z = "2.448276" />
+		<rotation x = "0.000000" y = "60.682076" z = "204.415791" />
 	</pose>
 </extrinsics>

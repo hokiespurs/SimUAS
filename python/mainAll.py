@@ -162,6 +162,8 @@ class Scene:
             bpy.data.objects[iName].rotation_euler = (iObj.Rotation.x, iObj.Rotation.y, iObj.Rotation.z)
             bpy.data.objects[iName].scale = (iObj.Scale.x, iObj.Scale.y, iObj.Scale.z)
             logging.debug('Added ' + iName + " to scene")
+            bpy.data.objects[iName].select = True
+            bpy.ops.export_scene.obj(filepath=outputOBJ+iName+".obj", use_selection=True, axis_forward='Y', axis_up='Z', path_mode='COPY')			
             print(iObj.name, iObj.isControl)
 
             logging.debug(iObj.name + " isControl = " + iObj.isControl)
@@ -192,10 +194,9 @@ class Scene:
 
         controlFileHandle.close()
         markerFileHandle.close()
+        bpy.ops.export_scene.obj(filepath=outputOBJ+"allmodel.obj", use_selection=False, axis_forward='Y', axis_up='Z', path_mode='COPY')			
 
-        bpy.ops.export_scene.obj(filepath=outputOBJ, axis_forward='Y', axis_up='Z')
-
-
+        
 class Pose:
     def __init__(self, name, tx, ty, tz, rx, ry, rz):
         self.Translation = Triplet(tx, ty, tz)
@@ -320,7 +321,7 @@ def RotatePoint(Points, Rotate, Translate, Scale):
 
     for i in range(len(newPoints.x)):
         # Should make everything a numpy array rather than storing as an object
-        # so few computations that performance shouldnt be too bad
+        # ... but so few computations that performance shouldnt be too bad
         P = np.array([newPoints.x[i], newPoints.y[i], newPoints.z[i]])
         Pnew = np.dot(R,P)
         newPoints.x[i] = Pnew[0]
@@ -402,7 +403,7 @@ def main():
 
     makedir(experimentName + "/output/")
     makedir(experimentName + "/output/images/")
-
+    makedir(experimentName + "/output/model/")
     outputFolder = experimentName + "/output/"
     xmlScene = glob.glob(experimentName + '/input/scene*.xml')[0]
     xmlSensor = glob.glob(experimentName + '/input/sensor*.xml')[0]
@@ -416,7 +417,7 @@ def main():
     controlCSV = experimentName + "/output/control.txt"
     markerCSV = experimentName + "/output/marker.txt"
     IntrinsicsXML = experimentName + "/output/sensor.xml"
-    outputOBJ = experimentName + "/output/model.obj"
+    outputOBJ = experimentName + "/output/model/"
     # Populate Classes
     myScene = Scene(xmlScene)
     mySensor = Sensor(xmlSensor)

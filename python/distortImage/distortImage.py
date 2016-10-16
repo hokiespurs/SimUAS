@@ -5,6 +5,7 @@ from scipy import ndimage
 import matplotlib.pyplot as plt
 from scipy.interpolate import griddata
 
+
 def saveBrownDistortedImage(filename, outputfilename, k, p, xc, yc):
     # load image
     img_array = misc.imread(filename)
@@ -16,18 +17,20 @@ def saveBrownDistortedImage(filename, outputfilename, k, p, xc, yc):
     # calculate distorted coordinates
     xd, yd = calcBrownDistortedCoords(xu, yu, xc, yc, k, p)
 
+    # do bilinear interpolation
+    image_array_distorted = calcBilinearInterpImage(xu, yu, xd, yd, img_array)
+
+    # save Image
+    saveImage(outputfilename, image_array_distorted)
+
+
+def makeQuiver(xd, yd, xu, yu):
     plt.figure()
     u = xd-xu
     v = yd-yu
     n = 15
     Q = plt.quiver(xu[::n, ::n], yu[::n, ::n], u[::n, ::n], v[::n, ::n])
     plt.show()
-
-    # do bilinear interpolation
-    image_array_distorted = calcBilinearInterpImage(xu, yu, xd, yd, img_array)
-
-    # save Image
-    saveImage(outputfilename, image_array_distorted)
 
 
 def calcBrownDistortedCoords(xu, yu, xc, yc, k, p):
@@ -96,10 +99,10 @@ if __name__ == '__main__':
     # dummy data
     filename = 'C:/Users/Richie/Documents/GitHub/BlenderPythonTest/python/distortImage/face.png'
     outputname = 'C:/Users/Richie/Documents/GitHub/BlenderPythonTest/python/distortImage/face_dist.png'
-    k = np.array((-0.057964277585941942, 0.074910467879875708, -0.027975957030031758, 0))
-    p = np.array((-0.02, 0.02))
-    xc = 500
-    yc = 400
+    k = np.array((-0.057964277585941942, 0.074910467879875708, -0.027975957030031758, 0)) * 100
+    p = np.array((-0.02, 0.02)) * 100
+    xc = 250
+    yc = 250
     fx = 3683
     fy = 3683
 

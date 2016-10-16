@@ -1,2 +1,0 @@
-ImageName,Tx,Ty,Tz,Rx,Ry,Rz
-ImTest0001.png,-40.0,-40.0,60.0,0.0,0.0,0.0

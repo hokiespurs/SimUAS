@@ -1,16 +1,16 @@
-[xg,yg]=meshgrid(-50:25:50,-50:25:50);
+[xg,yg]=meshgrid(-25:10:25,-25:10:25);
 
 for i=1:numel(xg)
-    fprintf('<object libname="GCP" name = "GCP%.02f" isControl = "1" isMarker = "1">\n',i)
+    fprintf('<object objname="gcp" name = "GCP%02.0f" isControl = "1" isMarker = "1">\n',i)
     fprintf('\t<translation x="%.0f" y="%.0f" z="%.0f"/>\n',xg(i),yg(i),1)
     fprintf('\t<rotation x="0" y="0" z="0"/>\n');
     fprintf('\t<scale x="1" y="1" z="1"/>\n');
     fprintf('</object>\n')
 end
 
-xi = -40:20:40;
-yi = -40:20:40;
-alt = 60;
+xi = -20:5:20;
+yi = -20:5:20;
+alt = 40;
 
 [xg,yg]=meshgrid(xi,yi);
 

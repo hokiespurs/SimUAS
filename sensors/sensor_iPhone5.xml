@@ -3,6 +3,13 @@
   <physical focallength="4.10" sensorWidth = "4.54"/>
   <resolution x = "3264" y = "2448"/>
   <principalPoint x = "1632" y="1224"/>
-  <image compression = "100" percentage = "100" antialiasing = "0"/>
-  <clipping start = "0" end = "100"/>
+  <blender compression = "100" percentage = "100" antialiasing = "0"/>
+  <postprocessing>
+    <distortion k1 = "0" k2 = "0" k3 = "0" k4 = "0" p1 = "0" p2 = "0" isPhotoscanUnits = "1"/>
+    <vignetting v1 = "0" v2 = "0" />
+    <saltnoise prob = "0"/>
+    <peppernoise prob = "0"/>
+    <gaussiannoise mean = "0" variance = "0"/>
+    <gaussianblur sigma = "0"/>
+  </postprocessing>
 </sensor>
