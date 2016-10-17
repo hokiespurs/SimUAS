@@ -5,12 +5,14 @@ all_du = [];
 all_dv = [];
 %% Test Marker locations 
 
-dataDirectory = 'C:\Users\Richie\Documents\GitHub\BlenderPythonTest\data\validateCheckerCube4';
+dataDirectory = 'C:\Users\Richie\Documents\GitHub\BlenderPythonTest\data\foo';
 imDir = [dataDirectory '/output/images/'];
-trajectoryFilename = [dataDirectory '/output/trajectory.txt'];
-markerFilename = [dataDirectory '/output/marker.txt'];
-controlFilename = [dataDirectory '/output/control.txt'];
+trajectoryFilename = [dataDirectory '/output/trajectory.csv'];
+markerFilename = [dataDirectory '/output/xyzFiducial.csv'];
+controlFilename = [dataDirectory '/output/xyzControl.csv'];
 intrinsicFilename = [dataDirectory '/output/sensor.xml'];
+foo = dirname([dataDirectory '/output/sensor*.xml']);
+inputSensorFilename = foo{1};
 
 trajectory = importdata(trajectoryFilename);
 markers = importdata(markerFilename);

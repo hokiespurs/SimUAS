@@ -41,7 +41,8 @@ class Sensor:
                            float(root.find('postprocessing').find('distortion').get('p1')),
                            float(root.find('postprocessing').find('distortion').get('p2')))
         self.vignetting = (float(root.find('postprocessing').find('vignetting').get('v1')),
-                           float(root.find('postprocessing').find('vignetting').get('v2')))
+                           float(root.find('postprocessing').find('vignetting').get('v2')),
+                           float(root.find('postprocessing').find('vignetting').get('v3')))
         self.saltnoise = float(root.find('postprocessing').find('saltnoise').get("prob"))
         self.peppernoise = float(root.find('postprocessing').find('peppernoise').get("prob"))
         self.gaussnoise = (float(root.find('postprocessing').find('gaussiannoise').get('mean')),
@@ -60,7 +61,7 @@ class Sensor:
 
     def writeXML(self, xmlname):
         # output sensor.xml
-        intrinsicsFileHandle = open(xmlname, 'w', newline='')
+        intrinsicsFileHandle = open(xmlname + ".xml", 'w', newline='')
 
         f = self.resolution[0] / self.sensorWidth * self.focalLength
 
@@ -83,24 +84,50 @@ class Sensor:
         intrinsicsFileHandle.write("</calibration>\r\n")
 
         intrinsicsFileHandle.close()
+        # output sensor_photoscanCXCYdefinition.xml
+        intrinsicsFileHandle = open(xmlname + "_photoscan.xml", 'w', newline='')
 
+        f = self.resolution[0] / self.sensorWidth * self.focalLength
+        photoscan_cx_offset = (self.principalPoint[0] - self.resolution[0]/2) * self.percentage / 100
+        photoscan_cy_offset = (self.principalPoint[1] - self.resolution[1]/2) * self.percentage / 100
+
+        intrinsicsFileHandle.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n")
+        intrinsicsFileHandle.write("<calibration>\r\n")
+        intrinsicsFileHandle.write("\t<projection>frame</projection>\r\n")
+        intrinsicsFileHandle.write("\t<width>" + str(self.resolution[0] * self.percentage / 100) + "</width>\r\n")
+        intrinsicsFileHandle.write("\t<height>" + str(self.resolution[1] * self.percentage / 100) + "</height>\r\n")
+        intrinsicsFileHandle.write("\t<f>" + str(f * self.percentage / 100) + "</f>\r\n")
+        intrinsicsFileHandle.write("\t<cx>" + str(photoscan_cx_offset) + "</cx>\r\n")
+        intrinsicsFileHandle.write("\t<cy>" + str(photoscan_cy_offset) + "</cy>\r\n")
+        intrinsicsFileHandle.write("\t<skew>0</skew>\r\n")
+        intrinsicsFileHandle.write("\t<k1>" + str(self.distortion[0]) + "</k1>\r\n")
+        intrinsicsFileHandle.write("\t<k2>" + str(self.distortion[1]) + "</k2>\r\n")
+        intrinsicsFileHandle.write("\t<k3>" + str(self.distortion[2]) + "</k3>\r\n")
+        intrinsicsFileHandle.write("\t<k4>" + str(self.distortion[3]) + "</k4>\r\n")
+        intrinsicsFileHandle.write("\t<p1>" + str(self.distortion[4]) + "</p1>\r\n")
+        intrinsicsFileHandle.write("\t<p2>" + str(self.distortion[5]) + "</p2>\r\n")
+        intrinsicsFileHandle.write("\t<date>" + time.strftime('%Y-%m-%dT%H:%M:%SZ') + "</date>\r\n")
+        intrinsicsFileHandle.write("</calibration>\r\n")
+
+        intrinsicsFileHandle.close()
 class Scene:
     class BlenderMaterial:
-        def __init__(self, tex, rgb, alpha, ior):
+        def __init__(self, tex, rgb, alpha, ior, dointerptex):
             self.texture = tex
             self.diffuse = rgb
             self.alpha = alpha
             self.ior = ior
+            self.dointerptex = dointerptex
 
     class BObject:
-        def __init__(self, objname, iName, T, R, S, isControl, isMarker, Material):
+        def __init__(self, objname, iName, T, R, S, isControl, isFiducial, Material):
             self.dbname = objname
             self.name = iName
             self.Translation = T
             self.Rotation = R
             self.Scale = S
             self.isControl = isControl
-            self.isMarker = isMarker
+            self.isFiducial = isFiducial
             self.Material = Material
 
     def __init__(self, xmlScene):
@@ -114,8 +141,8 @@ class Scene:
         for iObj in root.findall('object'):
             iobjname = iObj.get('objname')
             iname = iObj.get('name')
-            isControl = iObj.get('iscontrol')
-            isMarker = iObj.get('ismarker')
+            isControl = iObj.get('isControl')
+            isFiducial = iObj.get('isFiducial')
             Tx = float(iObj.find('translation').get('x'))
             Ty = float(iObj.find('translation').get('y'))
             Tz = float(iObj.find('translation').get('z'))
@@ -133,17 +160,18 @@ class Scene:
             material = iObj.find('material')
 
             if material == None:
-                iMaterial = self.BlenderMaterial(None,None,None,None)
+                iMaterial = self.BlenderMaterial(None,None,None,None,None)
             else:
                 itex = material.find('texture').get('img')
+                dointerptex = float(material.find('texture').get('interp'))
                 iDiffuseRGB = (float(material.find('diffuse').get('red')),
                                float(material.find('diffuse').get('green')),
                                float(material.find('diffuse').get('blue')))
                 iTransparencyAlpha = float(material.find('transparency').get('alpha'))
                 iTransparencyIOR = float(material.find('transparency').get('ior'))
 
-                iMaterial = self.BlenderMaterial(itex,iDiffuseRGB, iTransparencyAlpha, iTransparencyIOR)
-            iBObject = self.BObject(iobjname, iname, iT, iR, iS, isControl, isMarker, iMaterial)
+                iMaterial = self.BlenderMaterial(itex,iDiffuseRGB, iTransparencyAlpha, iTransparencyIOR, dointerptex)
+            iBObject = self.BObject(iobjname, iname, iT, iR, iS, isControl, isFiducial, iMaterial)
             self.BObjects.append(iBObject)
 
     def applyMaterial(self, activematerial, material):
@@ -151,8 +179,15 @@ class Scene:
         diffuse = material.diffuse
         alpha = material.alpha
         ior = material.ior
+        dointerptex = material.dointerptex
 
         activematerial.use_shadeless = True
+
+        if not activematerial.active_texture == None:
+            if dointerptex == 0:
+                activematerial.active_texture.filter_type = 'BOX'
+                activematerial.active_texture.use_interpolation = False
+                activematerial.active_texture.filter_size = 0.1
 
         if not (tex==None):
 
@@ -191,6 +226,7 @@ class Scene:
         for iMat in bpy.data.materials:
             iMat.use_shadeless = True
 
+
     def saveOBJ(self, outputOBJfolder):
         #deselect all
         for iObj in self.BObjects:
@@ -222,27 +258,30 @@ class Scene:
 
         controlFileHandle.close()
 
-    def writeMarkerXYZ(self, markerCSV):
-        markerFileHandle = open(markerCSV, 'w', newline='')
-        markerwriter = csv.writer(markerFileHandle)
-        markerHeader = ["objectName_markerName", "X", "Y", "Z", "localX", "localY", "localZ"]
-        markerwriter.writerow(markerHeader)
+    def writeFiducialXYZ(self, fiducialCSV):
+        fiducialFileHandle = open(fiducialCSV, 'w', newline='')
+        fiducialwriter = csv.writer(fiducialFileHandle)
+        fiducialHeader = ["objectName_fiducialName", "X", "Y", "Z", "localX", "localY", "localZ"]
+        fiducialwriter.writerow(fiducialHeader)
 
         for iObj in self.BObjects:
-            if iObj.isMarker == "1":
-                logging.debug(iObj.name + " being used as marker")
-                # load marker points from csv
-                rawMarkerPts = readXyzCsv(iObj.markerPath)
-                # rotate, translate, and scale marker points
-                newMarkerPts = RotatePoint(rawMarkerPts, iObj.Rotation, iObj.Translation, iObj.Scale)
+            if iObj.isFiducial == "1":
+                logging.debug(iObj.name + " being used as fiducial")
+                # load fiducial points from csv
+                iPath = self.dbfolder + "\\" + iObj.dbname + "\\"
+                iPath.replace("\\", "\\\\")
+                fiducialtxtname = glob.glob(iPath + '/*.txt')[0]
+                rawFiducialPts = readXyzCsv(fiducialtxtname)
+                # rotate, translate, and scale fiducial points
+                newFiducialPts = RotatePoint(rawFiducialPts, iObj.Rotation, iObj.Translation, iObj.Scale)
                 # print to csv file
-                for i in range(len(newMarkerPts.x)):
-                    markerwriter.writerow([iObj.name + '_' + rawMarkerPts.names[i],
-                                           newMarkerPts.x[i], newMarkerPts.y[i], newMarkerPts.z[i],
-                                           rawMarkerPts.x[i], rawMarkerPts.y[i], rawMarkerPts.z[i]])
-                markerFileHandle.flush()
+                for i in range(len(newFiducialPts.x)):
+                    fiducialwriter.writerow([iObj.name + '_' + rawFiducialPts.names[i],
+                                           newFiducialPts.x[i], newFiducialPts.y[i], newFiducialPts.z[i],
+                                           rawFiducialPts.x[i], rawFiducialPts.y[i], rawFiducialPts.z[i]])
+                fiducialFileHandle.flush()
 
-        markerFileHandle.close()
+        fiducialFileHandle.close()
 
 
 class Pose:
@@ -341,7 +380,6 @@ class Trajectory:
             rawrow = [iPose.name + '.png', iPose.Translation.x, iPose.Translation.y, iPose.Translation.z,
                       iPose.Rotation.x * 180 / pi, iPose.Rotation.y * 180 / pi, iPose.Rotation.z * 180 / pi]
             writer.writerow(rawrow)
-            trajectoryFile.flush()
 
         trajectoryFile.close()
 
@@ -464,6 +502,14 @@ def makedir(directory):
         os.makedirs(directory)
 
 
+def writePixelControl(myScene, myTrajectory, mySensor, xmlsavename):
+    print("DUMMY FOR NOW")
+
+
+def writePixelFiducial(myScene, myTrajectory, mySensor, xmlsavename):
+    print("DUMMY FOR NOW")
+
+
 def run():
     # Parse Arguments
     argv = sys.argv
@@ -475,14 +521,18 @@ def run():
 
     # Make Folder Structure
     outputFolder = experimentName + "/output/"
-    imageFolder = experimentName + "/output/images/"
+    procFolder = experimentName + "/proc/"
+    imageFolder = experimentName + "/output/images/pre/"
+    imageFolderPre = experimentName + "/output/images/pre/"
     modelFolder = experimentName + "/output/model/"
     logFolder = experimentName + "/output/log/"
     logfilename = "renderblender.log"
     makedir(outputFolder)
     makedir(imageFolder)
+    makedir(imageFolderPre)
     makedir(modelFolder)
     makedir(logFolder)
+    makedir(procFolder)
 
     # Set up logfile
     LOGFORMAT = "[%(asctime)s] %(funcName)s: %(message)s"
@@ -506,14 +556,24 @@ def run():
     mySensor.apply()
 
     # Output Files
-    myTrajectory.writecsv(outputFolder + "Trajectory.csv")     # Trajectory CSV
-    mySensor.writeXML(outputFolder + "Sensor.xml")             # Sensor XML
-    myScene.saveOBJ(modelFolder)                               # OBJ files
-    myScene.writeControlXYZ(outputFolder + "xyzControl.csv")   # xyzcontrol.csv
-    myScene.writeMarkerXYZ(outputFolder + "xyzMarker.csv")     # xyzmarker.csv
+    myTrajectory.writecsv(outputFolder + "Trajectory.csv")                                    # Trajectory CSV
+    mySensor.writeXML(outputFolder + "Sensor")                                            # Sensor XML
+    myScene.saveOBJ(modelFolder)                                                              # OBJ files
+    myScene.writeControlXYZ(outputFolder + "xyzcontrol.csv")                                  # xyzcontrol.csv
+    myScene.writeFiducialXYZ(outputFolder + "xyzfiducial.csv")                                    # xyzmfiducial.csv
+    #writePixelControl(myScene, myTrajectory, mySensor, outputFolder + "pixelFiducial.csv")      # pixelControl.csv
+    #writePixelFiducial(myScene, myTrajectory, mySensor, outputFolder + "pixelFiducial.csv")       # pixelFiducial.csv
+
 
     # Place Cameras and Render Images
-    myTrajectory.render(mySensor, imageFolder)              # Render images
+    myTrajectory.render(mySensor, imageFolderPre)              # Render images
+
+    # postprocess images
+    # add distortion
+    # add gaussian noise
+    # add salt/pepper noise
+    # add blur
+    # add vignetting
 
 if __name__ == '__main__':
     run()

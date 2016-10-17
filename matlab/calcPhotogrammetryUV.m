@@ -1,8 +1,8 @@
 function [u,v,s] = calcPhotogrammetryUV(calibration, camR, camT, xyz)
 
 
-fx = str2double(calibration.fx.Text);
-fy = str2double(calibration.fy.Text);
+fx = str2double(calibration.f.Text);
+fy = str2double(calibration.f.Text);
 cx = str2double(calibration.cx.Text);
 cy = str2double(calibration.cy.Text);
 

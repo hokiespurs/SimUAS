@@ -1,1 +1,1 @@
-blender --background --python mainAll.py -- C:\\Users\\Richie\\Documents\\GitHub\\BlenderPythonTest\\data\\experiment01
+blender --background --python main.py -- C:\\Users\\Richie\\Documents\\GitHub\\BlenderPythonTest\\data\\foo
