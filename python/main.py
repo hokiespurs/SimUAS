@@ -118,7 +118,7 @@ class Scene:
             self.alpha = alpha
             self.ior = ior
             self.dointerptex = dointerptex
-
+			
     class BObject:
         def __init__(self, objname, iName, T, R, S, isControl, isFiducial, Material):
             self.dbname = objname
@@ -130,13 +130,13 @@ class Scene:
             self.isFiducial = isFiducial
             self.Material = Material
 
-    def __init__(self, xmlScene):
+    def __init__(self, xmlScene, rootname):
         tree = ET.parse(xmlScene)
         root = tree.getroot()
 
         self.name = root.get('name')
         self.dbfolder = root.get('objectdb')
-
+        self.rootname = rootname
         self.BObjects = list()
         for iObj in root.findall('object'):
             iobjname = iObj.get('objname')
@@ -190,10 +190,13 @@ class Scene:
                 activematerial.active_texture.filter_size = 0.1
 
         if not (tex==None):
-
-            if not (tex == "default" or tex == ""):
-                activematerial.active_texture.image.filepath = tex
-                print("texture")
+            try:
+                if not (tex == "default" or tex == ""):
+                    activematerial.active_texture.image.filepath = tex
+                if tex == "":
+                    activematerial.texture_slots[0].use_map_color_diffuse = False
+            except AttributeError:
+                logging.info('error with texture')
 
             activematerial.diffuse_color = diffuse
 
@@ -209,7 +212,7 @@ class Scene:
             iName = iObj.name
             iPath = self.dbfolder + "\\" + iObj.dbname + "\\"
             iPath.replace("\\", "\\\\")
-            iObjFilepath = glob.glob(iPath + '/*.obj')[0]
+            iObjFilepath = glob.glob(self.rootname + "\\" + iPath + '/*.obj')[0]
 
             bpy.ops.import_scene.obj(filepath=iObjFilepath, axis_forward="Y", axis_up="Z")
             bpy.data.objects[iObj.dbname].name = iName
@@ -270,7 +273,7 @@ class Scene:
                 # load fiducial points from csv
                 iPath = self.dbfolder + "\\" + iObj.dbname + "\\"
                 iPath.replace("\\", "\\\\")
-                fiducialtxtname = glob.glob(iPath + '/*.txt')[0]
+                fiducialtxtname = glob.glob(self.rootname + "/" + iPath + '/*.txt')[0]
                 rawFiducialPts = readXyzCsv(fiducialtxtname)
                 # rotate, translate, and scale fiducial points
                 newFiducialPts = RotatePoint(rawFiducialPts, iObj.Rotation, iObj.Translation, iObj.Scale)
@@ -514,12 +517,16 @@ def writePixelFiducial(myScene, myTrajectory, mySensor, xmlsavename):
 def run():
     # Parse Arguments
     argv = sys.argv
-    rootname = os.path.dirname(os.path.dirname(__file__))
+    
     try:
         argv = argv[argv.index("--") + 1:]
         experimentName = rootname + '/' + argv[0]
+        rootname = os.path.dirname(os.path.dirname(__file__))
+        dorender = True
     except ValueError:
-        experimentName = rootname + '/' + 'data/foo'
+        experimentName = 'C:\\Users\\Richie\\Documents\\GitHub\\BlenderPythonTest\\data\\foo'
+        rootname = 'C:\\Users\\Richie\\Documents\\GitHub\\BlenderPythonTest'
+        dorender = False
 
     # Make Folder Structure
     outputFolder = experimentName + "/output/"
@@ -546,7 +553,7 @@ def run():
     xmlScene = glob.glob(experimentName + '/input/scene*.xml')[0]
     xmlSensor = glob.glob(experimentName + '/input/sensor*.xml')[0]
     xmlTrajectory = glob.glob(experimentName + '/input/trajectory*.xml')[0]
-    myScene = Scene(xmlScene)
+    myScene = Scene(xmlScene, rootname)
     mySensor = Sensor(xmlSensor)
     myTrajectory = Trajectory(xmlTrajectory)
 
@@ -568,7 +575,8 @@ def run():
 
 
     # Place Cameras and Render Images
-    myTrajectory.render(mySensor, imageFolderPre)              # Render images
+    if dorender:
+        myTrajectory.render(mySensor, imageFolderPre)              # Render images
 
     # postprocess images
     # add distortion

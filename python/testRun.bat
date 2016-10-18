@@ -1,1 +1,1 @@
-blender --background --python main.py -- data/river
+blender --background --python main.py -- data/foo
