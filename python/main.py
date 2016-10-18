@@ -192,7 +192,7 @@ class Scene:
         if not (tex==None):
             try:
                 if not (tex == "default" or tex == ""):
-                    activematerial.active_texture.image.filepath = tex
+                    activematerial.active_texture.image.filepath = self.rootname + "\\" + tex
                 if tex == "":
                     activematerial.texture_slots[0].use_map_color_diffuse = False
             except AttributeError:
@@ -520,8 +520,8 @@ def run():
     
     try:
         argv = argv[argv.index("--") + 1:]
-        experimentName = rootname + '/' + argv[0]
         rootname = os.path.dirname(os.path.dirname(__file__))
+        experimentName = rootname + '/' + argv[0]
         dorender = True
     except ValueError:
         experimentName = 'C:\\Users\\Richie\\Documents\\GitHub\\BlenderPythonTest\\data\\foo'

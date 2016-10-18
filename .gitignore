@@ -92,3 +92,6 @@ proc/
 #dont ignore anythin in object database folder
 !objects/**/**/*.jpg
 !objects/**/**/*.png
+
+#ignore huge texture files
+objects/textures/*
