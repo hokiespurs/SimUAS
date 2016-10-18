@@ -88,3 +88,7 @@ proc/
 
 #ignore .idea pycharm stuff
 .idea/
+
+#dont ignore anythin in object database folder
+!objects/**/**/*.jpg
+!objects/**/**/*.png
