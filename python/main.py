@@ -368,6 +368,7 @@ class Trajectory:
             logging.debug("Rendering [" + iPose.name + "] started")
             bpy.context.scene.camera = bpy.data.objects[iPose.name]
             bpy.context.scene.render.filepath = outputFolder + "/" + iPose.name
+            logging.debug("Writing to: " + outputFolder + "/" + iPose.name)
             bpy.ops.render.render(write_still=True)
             logging.debug("Rendered Finished")
 
@@ -513,11 +514,12 @@ def writePixelFiducial(myScene, myTrajectory, mySensor, xmlsavename):
 def run():
     # Parse Arguments
     argv = sys.argv
+    rootname = os.path.dirname(os.path.dirname(__file__))
     try:
         argv = argv[argv.index("--") + 1:]
-        experimentName = argv[0]
+        experimentName = rootname + '/' + argv[0]
     except ValueError:
-        experimentName = 'C:\\Users\\Richie\\Documents\\GitHub\\BlenderPythonTest\\data\\foo'
+        experimentName = rootname + '/' + 'data/foo'
 
     # Make Folder Structure
     outputFolder = experimentName + "/output/"
