@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<scene name="testRange" objectdb="C:\\Users\\Richie\\Documents\\GitHub\\BlenderPythonTest\\objects\\firstdb\\">
+<scene name="testRange" objectdb="..\\objects\\firstdb\\">
 <object objname="gcp" name = "GCP01" isControl = "1" isFiducial = "1">
 	<translation x="-25" y="-25" z="8"/>
 	<rotation x="0" y="0" z="88"/>

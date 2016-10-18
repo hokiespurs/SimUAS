@@ -1,1 +1,1 @@
-blender --background --python main.py -- C:\\Users\\Richie\\Documents\\GitHub\\BlenderPythonTest\\data\\river
+blender --background --python main.py -- ..\\data\\river
