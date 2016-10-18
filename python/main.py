@@ -316,7 +316,7 @@ class Pose:
         halfpixel = 0.5 / camSensor.resolution[0]
         bpy.context.object.data.shift_x = halfpixel + (camSensor.principalPoint[0] - camSensor.resolution[0] / 2) \
                                                       / -camSensor.resolution[0]
-        bpy.context.object.data.shift_y = -halfpixel + (camSensor.principalPoint[1] - camSensor.resolution[1] / 2) \
+        bpy.context.object.data.shift_y = -halfpixel - (camSensor.principalPoint[1] - camSensor.resolution[1] / 2) \
                                                        / -camSensor.resolution[0]
 
         logging.debug(bpy.context.object.data.shift_x)

@@ -1,20 +1,22 @@
 [xg,yg]=meshgrid(-25:10:25,-25:10:25);
 
 for i=1:numel(xg)
-    fprintf('<object objname="gcp" name = "GCP%02.0f" isControl = "1" isMarker = "1">\n',i)
-    fprintf('\t<translation x="%.0f" y="%.0f" z="%.0f"/>\n',xg(i),yg(i),1)
-    fprintf('\t<rotation x="0" y="0" z="0"/>\n');
+    fprintf('<object objname="gcp" name = "GCP%02.0f" isControl = "1" isFiducial = "1">\n',i)
+    fprintf('\t<translation x="%.0f" y="%.0f" z="%.0f"/>\n',xg(i),yg(i),0.01+rand(1)*10)
+    fprintf('\t<rotation x="0" y="0" z="%.0f"/>\n',rand(1)*360);
     fprintf('\t<scale x="1" y="1" z="1"/>\n');
     fprintf('</object>\n')
 end
 
-xi = -20:5:20;
-yi = -20:5:20;
+xi = -20:10:20;
+yi = -20:10:20;
 alt = 40;
 
 [xg,yg]=meshgrid(xi,yi);
 
-zg = alt*ones(size(xg));
+xg = xg + randn(size(xg))*1;
+yg = yg + randn(size(xg))*1;
+zg = alt*ones(size(xg))+randn(size(xg))*1;
 rx = zeros(size(xg));
 ry = zeros(size(xg));
 rz = zeros(size(xg));

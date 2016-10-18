@@ -6,10 +6,10 @@
   <blender compression = "100" percentage = "100" antialiasing = "1"/>
   <postprocessing>
     <distortion k1 = "0" k2 = "0" k3 = "0" k4 = "0" p1 = "0" p2 = "0" isPhotoscanUnits = "1"/>
-    <vignetting v1 = "10" v2 = "0.1" v3 = "0"/>
-    <saltnoise prob = "0.005"/>
-    <peppernoise prob = "0.005"/>
-    <gaussiannoise mean = "0" variance = "0.01"/>
-    <gaussianblur sigma = "2"/>
+    <vignetting v1 = "10" v2 = "0.2" v3 = "0"/>
+    <saltnoise prob = "0.001"/>
+    <peppernoise prob = "0.001"/>
+    <gaussiannoise mean = "0" variance = "0.005"/>
+    <gaussianblur sigma = "1"/>
   </postprocessing>
   </sensor>

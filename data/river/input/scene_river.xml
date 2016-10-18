@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scene name="riverbed" objectdb="C:\\Users\\Richie\\Documents\\GitHub\\BlenderPythonTest\\objects\\firstdb\\">
+<object objname="cube" name="water" isControl = "0" isFiducial = "0">
+	<translation x="0" y="0" z="0"/>
+	<rotation x="0" y="0" z="0"/>
+	<scale x="100" y="100" z="5"/>
+	<material>
+		<texture interp="0" img=""/>
+		<diffuse red="0" green="1" blue="1"/>
+		<transparency alpha="0.1" ior="1.33"/>
+	</material>
+</object>
+<object objname="halfpipe" name="terrain" isControl = "0" isFiducial = "1">
+	<translation x="0" y="0" z="4"/>
+	<rotation x="0" y="0" z="0"/>
+	<scale x="25" y="25" z="8"/>
+	<material>
+		<texture interp="1" img=""/>
+		<diffuse red="1" green="1" blue="1"/>
+		<transparency alpha="1" ior="1"/>
+	</material>
+</object>
+<object objname="gcp" name = "GCP01" isControl = "1" isFiducial = "1">
+	<translation x="-40" y="-40" z="4"/>
+	<rotation x="0" y="0" z="0"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object objname="gcp" name = "GCP02" isControl = "1" isFiducial = "1">
+	<translation x="-35" y="0" z="2"/>
+	<rotation x="0" y="0" z="0"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object objname="gcp" name = "GCP03" isControl = "1" isFiducial = "1">
+	<translation x="-40" y="20" z="5"/>
+	<rotation x="0" y="0" z="0"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object objname="gcp" name = "GCP04" isControl = "1" isFiducial = "1">
+	<translation x="40" y="-25" z="5"/>
+	<rotation x="0" y="0" z="0"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object objname="gcp" name = "GCP05" isControl = "1" isFiducial = "1">
+	<translation x="35" y="-10" z="2"/>
+	<rotation x="0" y="0" z="0"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object objname="gcp" name = "GCP06" isControl = "1" isFiducial = "1">
+	<translation x="45" y="15" z="4"/>
+	<rotation x="0" y="0" z="0"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+</scene>

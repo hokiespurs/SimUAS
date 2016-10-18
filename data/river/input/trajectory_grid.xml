@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <extrinsics name = "Test">
+	<pose name = "ImTestOblique">
+		<translation x = "0.000000" y = "-70.000000" z = "50.000000" />
+		<rotation x = "50.000000" y = "0.000000" z = "0.000000" />
+	</pose>	
 	<pose name = "ImTest0001">
 		<translation x = "-21.295685" y = "-20.775666" z = "40.303869" />
 		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />

@@ -113,7 +113,7 @@ function [xy, inframe] = calcXYZtoPixel(markT, camT, camR, Calibration)
     cy = Calibration.cy;
     k = Calibration.k;
     p = Calibration.p;
-    
+
     camR = camR*pi/180;
 
     Rblender = makehgtform('zrotate',camR(3),...
@@ -158,6 +158,10 @@ imNames = dirname([dname '/*.png']);
         Iraw = I; % for debugging
         [m,n,p]=size(I);
         
+        % Add Gaussian Blur
+        sigma = Calibration.postproc.gaussblur;
+        I = imgaussfilt(I,sigma);
+        
         % Add Gaussian Noise
         gaussmean = Calibration.postproc.gaussnoise.mean;
         gaussvar = Calibration.postproc.gaussnoise.var;
@@ -178,10 +182,6 @@ imNames = dirname([dname '/*.png']);
         noise = repmat(noise,[1,1,p]);
         I(noise<pepperprob)=0;        
         
-        % Add Gaussian Blur
-        sigma = Calibration.postproc.gaussblur;
-        I = imgaussfilt(I,sigma);
-        
         % Add Vignetting
         [xu,yu]=meshgrid(1:n,1:m);
         xc = Calibration.cx;
@@ -195,10 +195,10 @@ imNames = dirname([dname '/*.png']);
         dI = repmat(dI,[1,1,p]);
         
         I = double(I)-dI;
-        cast(I,class(Iraw)); %ensure I is same type
+        I = cast(I,class(Iraw)); %ensure I is same type
                 
         %write out new image
-        imwrite(I,Iname);
+        imwrite(I,iName);
     end
 
 end
@@ -235,14 +235,18 @@ function distortImage(iName, newName, Calibration)
         [xd, yd] = calcDistortedCoords(xu, yu, xc, yc, k, p);
 
         Idistorted = I;
-        for i=1:depth
+        for i=1:depth %there has got to be a way to speed this up
             Ipts = double(I(:,:,i));
+            tic
             if i==1
                 F = scatteredInterpolant(xd(:),yd(:),Ipts(:));
             else
                 F.Values = Ipts(:);
             end
+            toc
+            tic
             Idistorted(:,:,i) = F(xu,yu);
+            toc
         end
     end
     imwrite(Idistorted,newName);
