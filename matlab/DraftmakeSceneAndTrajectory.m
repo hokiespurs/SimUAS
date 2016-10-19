@@ -24,7 +24,7 @@ rz = zeros(size(xg));
 makeTrajectory('test.xml', 'Test', xg, yg, zg, rx, ry, rz, 'ImTest', 4)
 
 %%
-NCAMS = 10;
+NCAMS = 100;
 
 iTheta = rand(NCAMS,1)*360;
 iPhi = rand(NCAMS,1)*180;
@@ -40,3 +40,20 @@ ry = iPhi;
 rz = iTheta;
 
 makeTrajectory('trajectory_Test2.xml', 'Test', x, y, z, rx, ry, rz, 'CenterPoint', 3)
+
+%%
+NCAMS = 100;
+
+iTheta = rand(NCAMS,1)*360;
+iPhi = rand(NCAMS,1)*180;
+iRoll = rand(NCAMS,1)*360;
+
+x = (rand(NCAMS,1)*8)-4;
+y = (rand(NCAMS,1)*8)-4;
+z = (rand(NCAMS,1)*8)-4;
+
+rx = iRoll;
+ry = iPhi;
+rz = iTheta;
+
+makeTrajectory('trajectory_Test2.xml', 'TestCalRoom', x, y, z, rx, ry, rz, 'CenterPoint', 3)
