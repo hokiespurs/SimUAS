@@ -205,7 +205,7 @@
 	<rotation x="0" y="0" z="0"/>
 	<scale x="10" y="10" z="1"/>
 	<material>
-		<texture interp="1" img="objects/textures/cloud.E.2001210.21600x21600_a.png"/>
+		<texture interp="1" img="default"/>
 		<diffuse red="1" green="1" blue="1"/>
 		<transparency alpha="1" ior="1"/>
 	</material>
