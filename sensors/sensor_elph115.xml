@@ -4,7 +4,7 @@
   <resolution x = "4608" y = "3456"/>
   <principalPoint x = "2304" y="1728"/>
   <blender compression = "100" percentage = "100" antialiasing = "0"/>
-  <postprocessing>
+  <postprocessing seed="1">
     <distortion k1 = "0" k2 = "0" k3 = "0" k4 = "0" p1 = "0" p2 = "0" isPhotoscanUnits = "1"/>
     <vignetting v1 = "0" v2 = "0" />
     <saltnoise prob = "0"/>
