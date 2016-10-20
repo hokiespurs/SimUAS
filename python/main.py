@@ -18,7 +18,7 @@ sys.path.append(os.path.dirname(__file__))
 class Sensor:
     def __init__(self, xmlsensor):
         # Default Clip for Z Buffer
-        self.clipStart = 1
+        self.clipStart = 0.01
         self.clipEnd = 1000
 
         tree = ET.parse(xmlsensor)
