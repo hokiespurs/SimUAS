@@ -579,6 +579,7 @@ def run():
     if dorender:
         myTrajectory.render(mySensor, imageFolderPre)              # Render images
         print("----------------------------------")
+        print("POSTPROCESSING IMAGES WITH MATLAB")
         print("----------------------------------")
         call("matlab -r postProcFolder('" + experimentName + "')")
 
