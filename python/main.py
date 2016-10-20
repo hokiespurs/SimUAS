@@ -10,6 +10,7 @@ import copy
 import numpy as np
 import math
 import time
+from subprocess import call
 
 sys.path.append(os.path.dirname(__file__))
 
@@ -577,6 +578,9 @@ def run():
     # Place Cameras and Render Images
     if dorender:
         myTrajectory.render(mySensor, imageFolderPre)              # Render images
+        print("----------------------------------")
+        print("----------------------------------")
+        call("matlab -r postProcFolder('" + experimentName + "')")
 
     # postprocess images
     # add distortion

@@ -161,7 +161,7 @@ imNames = dirname([dname '/*.png']);
     for i = 1:numel(imNames)
         iName = imNames{i};
         I = imread(iName);
-        fprintf('Adding Noise/Blur/etc to Image %i...%s',i,datestr(now));
+        fprintf('Adding Noise/Blur/etc to Image %i...%s\n',i,datestr(now));
         Iraw = I; % for debugging
         [m,n,p]=size(I);
         
@@ -366,5 +366,33 @@ for i=1:numel(fnames)
     end
 end
 
+
+end
+
+function Y = interpNan(X)
+
+[r,c]=size(X);
+Xa = nan(size(X));
+for i=1:r
+    val = X(i,:);
+    ind = find(~isnan(val));
+    if numel(ind)>2
+        Xa(i,:) = interp1(ind,val(ind),1:numel(val),'linear','extrap');
+    end
+end
+
+Xb = nan(size(X));
+for i=1:c
+    val = X(:,i);
+    ind = find(~isnan(val));
+    if numel(ind)>2
+        Xb(:,i) = interp1(ind,val(ind),1:numel(val),'linear','extrap');
+    end
+end
+
+T = ~isnan(Xa)+~isnan(Xb);
+Xa(isnan(Xa))=0;
+Xb(isnan(Xb))=0;
+Y = (Xa + Xb) ./ T;
 
 end
