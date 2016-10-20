@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scene name="testRange" objectdb="objects\\firstdb\\">
+<object objname="gcp" name = "GCP01" isControl = "1" isFiducial = "1">
+	<translation x="-25" y="-25" z="8"/>
+	<rotation x="0" y="0" z="88"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object objname="gcp" name = "GCP02" isControl = "1" isFiducial = "1">
+	<translation x="-25" y="-15" z="9"/>
+	<rotation x="0" y="0" z="126"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object objname="gcp" name = "GCP03" isControl = "1" isFiducial = "1">
+	<translation x="-25" y="-5" z="2"/>
+	<rotation x="0" y="0" z="90"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object objname="gcp" name = "GCP04" isControl = "1" isFiducial = "1">
+	<translation x="-25" y="5" z="6"/>
+	<rotation x="0" y="0" z="170"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object objname="gcp" name = "GCP05" isControl = "1" isFiducial = "1">
+	<translation x="-25" y="15" z="4"/>
+	<rotation x="0" y="0" z="299"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object objname="gcp" name = "GCP06" isControl = "1" isFiducial = "1">
+	<translation x="-25" y="25" z="6"/>
+	<rotation x="0" y="0" z="198"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object objname="gcp" name = "GCP07" isControl = "1" isFiducial = "1">
+	<translation x="-15" y="-25" z="9"/>
+	<rotation x="0" y="0" z="103"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object objname="gcp" name = "GCP08" isControl = "1" isFiducial = "1">
+	<translation x="-15" y="-15" z="8"/>
+	<rotation x="0" y="0" z="271"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object objname="gcp" name = "GCP09" isControl = "1" isFiducial = "1">
+	<translation x="-15" y="-5" z="4"/>
+	<rotation x="0" y="0" z="204"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object objname="gcp" name = "GCP10" isControl = "1" isFiducial = "1">
+	<translation x="-15" y="5" z="1"/>
+	<rotation x="0" y="0" z="19"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object objname="gcp" name = "GCP11" isControl = "1" isFiducial = "1">
+	<translation x="-15" y="15" z="5"/>
+	<rotation x="0" y="0" z="281"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object objname="gcp" name = "GCP12" isControl = "1" isFiducial = "1">
+	<translation x="-15" y="25" z="9"/>
+	<rotation x="0" y="0" z="47"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object objname="gcp" name = "GCP13" isControl = "1" isFiducial = "1">
+	<translation x="-5" y="-25" z="6"/>
+	<rotation x="0" y="0" z="169"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object objname="gcp" name = "GCP14" isControl = "1" isFiducial = "1">
+	<translation x="-5" y="-15" z="15"/>
+	<rotation x="0" y="0" z="121"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object objname="gcp" name = "GCP15" isControl = "1" isFiducial = "1">
+	<translation x="-5" y="-5" z="2"/>
+	<rotation x="0" y="0" z="286"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object objname="gcp" name = "GCP16" isControl = "1" isFiducial = "1">
+	<translation x="-5" y="5" z="3"/>
+	<rotation x="0" y="0" z="190"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object objname="gcp" name = "GCP17" isControl = "1" isFiducial = "1">
+	<translation x="-5" y="15" z="2"/>
+	<rotation x="0" y="0" z="217"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object objname="gcp" name = "GCP18" isControl = "1" isFiducial = "1">
+	<translation x="-5" y="25" z="3"/>
+	<rotation x="0" y="0" z="235"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object objname="gcp" name = "GCP19" isControl = "1" isFiducial = "1">
+	<translation x="5" y="-25" z="7"/>
+	<rotation x="0" y="0" z="269"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object objname="gcp" name = "GCP20" isControl = "1" isFiducial = "1">
+	<translation x="5" y="-15" z="5"/>
+	<rotation x="0" y="0" z="30"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object objname="gcp" name = "GCP21" isControl = "1" isFiducial = "1">
+	<translation x="5" y="-5" z="2"/>
+	<rotation x="0" y="0" z="329"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object objname="gcp" name = "GCP22" isControl = "1" isFiducial = "1">
+	<translation x="5" y="5" z="2"/>
+	<rotation x="0" y="0" z="297"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object objname="gcp" name = "GCP23" isControl = "1" isFiducial = "1">
+	<translation x="5" y="15" z="5"/>
+	<rotation x="0" y="0" z="359"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object objname="gcp" name = "GCP24" isControl = "1" isFiducial = "1">
+	<translation x="5" y="25" z="1"/>
+	<rotation x="0" y="0" z="159"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object objname="gcp" name = "GCP25" isControl = "1" isFiducial = "1">
+	<translation x="15" y="-25" z="1"/>
+	<rotation x="0" y="0" z="346"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object objname="gcp" name = "GCP26" isControl = "1" isFiducial = "1">
+	<translation x="15" y="-15" z="4.10"/>
+	<rotation x="0" y="0" z="279"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object objname="gcp" name = "GCP27" isControl = "1" isFiducial = "1">
+	<translation x="15" y="-5" z="8"/>
+	<rotation x="0" y="0" z="313"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object objname="gcp" name = "GCP28" isControl = "1" isFiducial = "1">
+	<translation x="15" y="5" z="1"/>
+	<rotation x="0" y="0" z="144"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object objname="gcp" name = "GCP29" isControl = "1" isFiducial = "1">
+	<translation x="15" y="15" z="3"/>
+	<rotation x="0" y="0" z="288"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object objname="gcp" name = "GCP30" isControl = "1" isFiducial = "1">
+	<translation x="15" y="25" z="4"/>
+	<rotation x="0" y="0" z="328"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object objname="gcp" name = "GCP31" isControl = "1" isFiducial = "1">
+	<translation x="25" y="-25" z="2"/>
+	<rotation x="0" y="0" z="95"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object objname="gcp" name = "GCP32" isControl = "1" isFiducial = "1">
+	<translation x="25" y="-15" z="1"/>
+	<rotation x="0" y="0" z="49"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object objname="gcp" name = "GCP33" isControl = "1" isFiducial = "1">
+	<translation x="25" y="-5" z="9"/>
+	<rotation x="0" y="0" z="209"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object objname="gcp" name = "GCP34" isControl = "1" isFiducial = "1">
+	<translation x="25" y="5" z="6"/>
+	<rotation x="0" y="0" z="52"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object objname="gcp" name = "GCP35" isControl = "1" isFiducial = "1">
+	<translation x="25" y="15" z="9"/>
+	<rotation x="0" y="0" z="224"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object objname="gcp" name = "GCP36" isControl = "1" isFiducial = "1">
+	<translation x="25" y="25" z="4"/>
+	<rotation x="0" y="0" z="185"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object objname="monkey" name="monkey1" isControl = "0" isFiducial = "1">
+	<translation x="-30" y="0" z=".1"/>
+	<rotation x="0" y="-90" z="0"/>
+	<scale x="2" y="2" z="2"/>
+	<material>
+		<texture interp="0" img="default"/>
+		<diffuse red="0" green="0" blue="1"/>
+		<transparency alpha="1" ior="1"/>
+	</material>
+</object>
+<object objname="cube" name="water" isControl = "0" isFiducial = "0">
+	<translation x="0" y="0" z="4"/>
+	<rotation x="0" y="0" z="0"/>
+	<scale x="20" y="20" z="15"/>
+	<material>
+		<texture interp="0" img=""/>
+		<diffuse red="0" green="1" blue="1"/>
+		<transparency alpha="0.2" ior="1.33"/>
+	</material>
+</object>
+<object objname="noiseCube" name="noiseCube1" isControl = "0" isFiducial = "1">
+	<translation x="0" y="0" z="0"/>
+	<rotation x="0" y="0" z="0"/>
+	<scale x="10" y="10" z="1"/>
+	<material>
+		<texture interp="1" img="objects/textures/cloud.E.2001210.21600x21600_a.png"/>
+		<diffuse red="1" green="1" blue="1"/>
+		<transparency alpha="1" ior="1"/>
+	</material>
+</object>
+<object objname="noiseCube" name="noiseCube2" isControl = "0" isFiducial = "1">
+	<translation x="-20" y="-20" z="0.5"/>
+	<rotation x="0" y="0" z="30"/>
+	<scale x="1" y="3" z="1"/>
+	<material>
+		<texture interp="0" img="default"/>
+		<diffuse red="1" green="1" blue="1"/>
+		<transparency alpha="1" ior="1"/>
+	</material>
+</object>
+<object objname="house" name="house" isControl = "0" isFiducial = "0">
+	<translation x="0" y="0" z="0"/>
+	<rotation x="0" y="0" z="0"/>
+	<scale x="2" y="2" z="2"/>
+	<material>
+		<texture interp="1" img="default"/>
+		<diffuse red="1" green="1" blue="1"/>
+		<transparency alpha="1" ior="1"/>
+	</material>
+</object>	
+</scene>
