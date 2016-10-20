@@ -95,3 +95,4 @@ proc/
 
 #ignore huge texture files
 objects/textures/*
+*.mat

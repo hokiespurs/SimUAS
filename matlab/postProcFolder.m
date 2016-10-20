@@ -65,7 +65,7 @@ function savePixelXML(fname, Trajectory, Markers, Calibration)
     for iCamera = 1:numel(Trajectory.names)
         id = sprintf('%i',iCamera-1);
         lbl = Trajectory.names{iCamera};
-        fprintf(fid,['      <camera id="' id '" label="' lbl '" sensor_id="0"/>\n'])
+        fprintf(fid,['      <camera id="' id '" label="' lbl '" sensor_id="0"/>\n']);
     end
     fprintf(fid,'    </cameras>\n');
     fprintf(fid,'    <markers>\n');
@@ -113,7 +113,10 @@ function [xy, inframe] = calcXYZtoPixel(markT, camT, camR, Calibration)
     cy = Calibration.cy;
     k = Calibration.k;
     p = Calibration.p;
-
+    f = Calibration.fx;
+    k = k./([f^2 f^4 f^6 f^8]);
+    p = Calibration.p./f^2;
+    
     camR = camR*pi/180;
 
     Rblender = makehgtform('zrotate',camR(3),...
@@ -139,7 +142,9 @@ function [xy, inframe] = calcXYZtoPixel(markT, camT, camR, Calibration)
 
     [x, y] = calcDistortedCoords(u, v, cx, cy, k, p);
     
-    inframe = s>0 & x>0 & y>0 & x<Calibration.width & y<Calibration.height;
+    inframePre = u>0 & v>0 & u<Calibration.width & v<Calibration.height;
+    inframePost = s>0 & x>0 & y>0 & x<Calibration.width & y<Calibration.height;
+    inframe = inframePre & inframePost;
     
     if inframe
         xy = [x y];
@@ -151,10 +156,12 @@ end
 
 function addNoiseAndBlurFolder(dname, Calibration)
 imNames = dirname([dname '/*.png']);
-
+    rng('default');
+    rng(Calibration.seed)
     for i = 1:numel(imNames)
         iName = imNames{i};
         I = imread(iName);
+        fprintf('Adding Noise/Blur/etc to Image %i...%s',i,datestr(now));
         Iraw = I; % for debugging
         [m,n,p]=size(I);
         
@@ -205,23 +212,25 @@ end
 
 function distortImagesInFolder(imDir, outDir, Calibration)
 imNames = dirname([imDir '/*.png']);
+fprintf('Generating Image Map...%s\n',datestr(now));
+newMap = calcImageMap(Calibration);
 
 for i = 1:numel(imNames)
     iName = imNames{i};
     [~,fname,ext] = fileparts(iName);
-    
     fprintf(['Distorting : ' fname ext '...' datestr(now) '\n']) 
-
     newName = [outDir '/' fname ext];
-    distortImage(iName, newName, Calibration);
+    
+    distortImage(iName, newName, newMap);
 end
 
 end
 
-function distortImage(iName, newName, Calibration)
-    I = imread(iName);
-    [m,n,depth]=size(I);
-
+function newMap = calcImageMap(Calibration)
+    
+    m = Calibration.height;
+    n = Calibration.width;
+    
     [xu, yu] = meshgrid(1:n,1:m);
     xc = Calibration.cx;
     yc = Calibration.cy;
@@ -229,26 +238,33 @@ function distortImage(iName, newName, Calibration)
     f = Calibration.fx;
     k = k./([f^2 f^4 f^6 f^8]);
     p = Calibration.p./f^2;
-    if (k(1)==0 && k(2)==0 && k(3)==0 && k(4)==0 && p(1)==0 && p(2)==0)
-        Idistorted = I;
-    else
-        [xd, yd] = calcDistortedCoords(xu, yu, xc, yc, k, p);
+    % Distort Coordinates
+    [xd, yd] = calcDistortedCoords(xu, yu, xc, yc, k, p);
+    
+    dx = xd-xu;
+    dy = yd-yu;
 
-        Idistorted = I;
-        for i=1:depth %there has got to be a way to speed this up
-            Ipts = double(I(:,:,i));
-            tic
-            if i==1
-                F = scatteredInterpolant(xd(:),yd(:),Ipts(:));
-            else
-                F.Values = Ipts(:);
-            end
-            toc
-            tic
-            Idistorted(:,:,i) = F(xu,yu);
-            toc
-        end
-    end
+    dx_backwards = roundgridfun(xd,yd,dx,xu,yu,@mean);
+    dx_backwardsInterp = interpNan(dx_backwards);
+    dy_backwards = roundgridfun(xd,yd,dy,xu,yu,@mean);
+    dy_backwardsInterp = interpNan(dy_backwards);
+
+    x_pixmap = xu - dx_backwardsInterp;
+    x_pixmap(isnan(x_pixmap)) = -1;
+    y_pixmap = yu - dy_backwardsInterp;
+    y_pixmap(isnan(y_pixmap)) = -1;
+
+    % Do Image Mapping
+    newMap = cat(3,x_pixmap,y_pixmap);
+    
+end
+
+function distortImage(iName, newName, newMap)
+    I = imread(iName);
+    resamp = makeresampler('linear','fill');
+
+    Idistorted = tformarray(I,[],resamp,[2 1],[1 2],[],newMap,[]);
+    
     imwrite(Idistorted,newName);
 end
 
@@ -325,5 +341,5 @@ function Cal = readsensor(outsensor, insensor)
     Cal.postproc.gaussnoise.var = ...
         str2double(isp.gaussiannoise.Attributes.variance);
     Cal.postproc.gaussblur = str2double(isp.gaussianblur.Attributes.sigma); 
-    
+    Cal.seed = str2double(isp.Attributes.seed);
 end

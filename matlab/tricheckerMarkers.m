@@ -17,27 +17,27 @@ fclose(fid);
 %% checkercube
 fid = fopen('checkercube.txt','w+t');
 
-[x,y]=meshgrid(-0.5:0.025:0.5,-0.5:0.025:0.5);
+[x,y]=meshgrid(-0.4:0.1:0.4,-0.4:0.1:0.4);
 z = ones(size(x))*-0.5;
 fprintf(fid,'%.3f,%.3f,%.3f\n',[x(:) y(:) z(:)]');
 
-[x,z]=meshgrid(-0.5:0.025:0.5,-0.5:0.025:0.5);
+[x,z]=meshgrid(-0.4:0.1:0.4,-0.4:0.1:0.4);
 y = ones(size(x))*-0.5;
 fprintf(fid,'%.3f,%.3f,%.3f\n',[x(:) y(:) z(:)]');
 
-[y,z]=meshgrid(-0.5:0.025:0.5,-0.5:0.025:0.5);
+[y,z]=meshgrid(-0.4:0.1:0.4,-0.4:0.1:0.4);
 x = ones(size(x))*-0.5;
 fprintf(fid,'%.3f,%.3f,%.3f\n',[x(:) y(:) z(:)]');
 
-[x,y]=meshgrid(-0.5:0.025:0.5,-0.5:0.025:0.5);
+[x,y]=meshgrid(-0.4:0.1:0.4,-0.4:0.1:0.4);
 z = ones(size(x))*0.5;
 fprintf(fid,'%.3f,%.3f,%.3f\n',[x(:) y(:) z(:)]');
 
-[x,z]=meshgrid(-0.5:0.025:0.5,-0.5:0.025:0.5);
+[x,z]=meshgrid(-0.4:0.1:0.4,-0.4:0.1:0.4);
 y = ones(size(x))*0.5;
 fprintf(fid,'%.3f,%.3f,%.3f\n',[x(:) y(:) z(:)]');
 
-[y,z]=meshgrid(-0.5:0.025:0.5,-0.5:0.025:0.5);
+[y,z]=meshgrid(-0.4:0.1:0.4,-0.4:0.1:0.4);
 x = ones(size(x))*0.5;
 fprintf(fid,'%.3f,%.3f,%.3f\n',[x(:) y(:) z(:)]');
 
