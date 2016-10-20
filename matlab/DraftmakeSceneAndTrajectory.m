@@ -8,20 +8,20 @@ for i=1:numel(xg)
     fprintf('</object>\n')
 end
 
-xi = -20:10:20;
-yi = -20:10:20;
+xi = -25:5:25;
+yi = -25:5:25;
 alt = 40;
 
 [xg,yg]=meshgrid(xi,yi);
 
 xg = xg + randn(size(xg))*1;
 yg = yg + randn(size(xg))*1;
-zg = alt*ones(size(xg))+randn(size(xg))*1;
-rx = zeros(size(xg));
-ry = zeros(size(xg));
-rz = zeros(size(xg));
+zg = alt*ones(size(xg))-randn(size(xg))*15;
+rx = randn(size(xg))*50;
+ry = randn(size(xg))*50;
+rz = randn(size(xg))*360;
 
-makeTrajectory('test.xml', 'Test', xg, yg, zg, rx, ry, rz, 'ImTest', 4)
+makeTrajectory('test.xml', 'Test', xg, yg, zg, rx, ry, rz, 'A', 4)
 
 %%
 NCAMS = 100;
