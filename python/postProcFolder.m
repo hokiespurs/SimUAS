@@ -1,4 +1,6 @@
 function postProcFolder(foldername)
+dbstop if error
+
 %% paths to folders
 imDir = [foldername '/output/images/pre'];
 outImDir = [foldername '/output/images'];
@@ -20,6 +22,9 @@ Calibration = readsensor(intrinsicFilename, inputSensorFilename);
 %% Add Distortion to all Images
 distortImagesInFolder(imDir, outImDir, Calibration)
 
+%% Crop image if need be
+cropImagesInFolder(outImDir, Calibration);
+
 %% Add Noise and Blur to Images
 addNoiseAndBlurFolder(outImDir, Calibration)
 
@@ -29,6 +34,36 @@ savePixelXML(controlSavename, Trajectory, Control, Calibration);
 %% Calculate Pixel Coords for Fiducial + Save pixelFiducial.xml
 savePixelXML(fiducialSavename, Trajectory, Fiducials, Calibration);
 
+end
+
+function cropImagesInFolder(dname, Calibration)
+imNames = dirname([dname '/*.png']);
+I = imread(imNames{1});
+[height,width,~]=size(I);
+
+if height ~= Calibration.height || width ~= Calibration.width
+    for i=1:numel(imNames)
+       I = imread(imNames{i});
+       Itrim = trimimage(I, Calibration.width, Calibration.height);
+       imwrite(Itrim, imNames{i})
+    end
+else
+    fprintf('No Cropping Needed... pincushion or no distortion\n');
+end
+
+
+end
+
+function Itrim = trimimage(I,x,y)
+    [m,n,~]=size(I);
+    padx = (n-x)/2;
+    pady = (m-y)/2;
+    
+    Itrim = I;
+    Itrim(1:pady,:,:)=[];
+    Itrim(end-pady+1:end,:,:)=[];
+    Itrim(:,1:padx,:)=[];
+    Itrim(:,end-padx+1:end,:)=[];
 end
 
 function savePixelXML(fname, Trajectory, Markers, Calibration)
@@ -213,7 +248,9 @@ end
 function distortImagesInFolder(imDir, outDir, Calibration)
 imNames = dirname([imDir '/*.png']);
 fprintf('Generating Image Map...%s\n',datestr(now));
-newMap = calcImageMap(Calibration);
+I = imread(imNames{1});
+[height,width,~]=size(I);
+newMap = calcImageMap(Calibration, height, width);
 
 for i = 1:numel(imNames)
     iName = imNames{i};
@@ -226,14 +263,14 @@ end
 
 end
 
-function newMap = calcImageMap(Calibration)
+function newMap = calcImageMap(Calibration, height, width)
     
-    m = Calibration.height;
-    n = Calibration.width;
+    m = height;
+    n = width;
     
     [xu, yu] = meshgrid(1:n,1:m);
-    xc = Calibration.cx;
-    yc = Calibration.cy;
+    xc = Calibration.cx + (n - Calibration.width)/2;
+    yc = Calibration.cy + (m - Calibration.height)/2;
     k = Calibration.k;
     f = Calibration.fx;
     k = k./([f^2 f^4 f^6 f^8]);
@@ -377,7 +414,7 @@ for i=1:r
     val = X(i,:);
     ind = find(~isnan(val));
     if numel(ind)>2
-        Xa(i,:) = interp1(ind,val(ind),1:numel(val),'linear','extrap');
+        Xa(i,:) = interp1(ind,val(ind),1:numel(val),'linear');
     end
 end
 
@@ -386,7 +423,7 @@ for i=1:c
     val = X(:,i);
     ind = find(~isnan(val));
     if numel(ind)>2
-        Xb(:,i) = interp1(ind,val(ind),1:numel(val),'linear','extrap');
+        Xb(:,i) = interp1(ind,val(ind),1:numel(val),'linear');
     end
 end
 

@@ -50,12 +50,27 @@ class Sensor:
                            float(root.find('postprocessing').find('gaussiannoise').get('variance')))
         self.gaussianblur = float(root.find('postprocessing').find('gaussianblur').get("sigma"))
 
+        f = self.resolution[0] / self.sensorWidth * self.focalLength
+        self.psdistortion = (self.distortion[0] / (f ** 2),
+                             self.distortion[1] / (f ** 4),
+                             self.distortion[2] / (f ** 6),
+                             self.distortion[3] / (f ** 8),
+                             self.distortion[4] / (f ** 2),
+                             self.distortion[5] / (f ** 2))
+
+        sx, sy = calcdistortionpadding(self.resolution, self.principalPoint, self.psdistortion)
+
+        self.renderresolution = (self.resolution[0] * sx, self.resolution[1] * sy)
+        print(self.renderresolution)
+        self.rendersensorwidth = self.sensorWidth * sx
+
+
     def apply(self):
         logging.debug("applying settings")
         bpy.context.scene.render.resolution_percentage = self.percentage
         bpy.context.scene.render.use_stamp_lens = True #Lens in Metadata
-        bpy.context.scene.render.resolution_x = self.resolution[0]
-        bpy.context.scene.render.resolution_y = self.resolution[1]
+        bpy.context.scene.render.resolution_x = self.renderresolution[0]
+        bpy.context.scene.render.resolution_y = self.renderresolution[1]
         bpy.context.scene.render.use_antialiasing = self.antialiasing
         bpy.context.scene.render.image_settings.compression = self.compression
         bpy.context.scene.render.image_settings.file_format = self.fileformat
@@ -111,6 +126,8 @@ class Sensor:
         intrinsicsFileHandle.write("</calibration>\r\n")
 
         intrinsicsFileHandle.close()
+
+
 class Scene:
     class BlenderMaterial:
         def __init__(self, tex, rgb, alpha, ior, dointerptex):
@@ -119,7 +136,7 @@ class Scene:
             self.alpha = alpha
             self.ior = ior
             self.dointerptex = dointerptex
-			
+
     class BObject:
         def __init__(self, objname, iName, T, R, S, isControl, isFiducial, Material):
             self.dbname = objname
@@ -300,28 +317,25 @@ class Pose:
         bpy.ops.object.camera_add(view_align=True, enter_editmode=True, location=T, rotation=(0, 0, 0))
         # bpy.context.object.rotation_mode = 'ZYX'
         bpy.context.object.rotation_euler = R
-        bpy.context.object.data.sensor_width = camSensor.sensorWidth
-        xyRatio = camSensor.resolution[1] / camSensor.resolution[0]
-        bpy.context.object.data.sensor_height = camSensor.sensorWidth * xyRatio
+        bpy.context.object.data.sensor_width = camSensor.rendersensorwidth
+        xyRatio = camSensor.renderresolution[1] / camSensor.renderresolution[0]
+        bpy.context.object.data.sensor_height = camSensor.rendersensorwidth * xyRatio
         # calculate lens angle in degrees
         f = camSensor.focalLength
-        x = camSensor.sensorWidth / 2
 
-        fov = math.atan(x / f) * 2
-
-        bpy.context.object.data.lens_unit = 'FOV'
-        bpy.context.object.data.angle = fov
-        logging.debug(["Set FOV to: " + str(fov)])
+        bpy.context.object.data.lens_unit = 'MILLIMETERS'
+        bpy.context.object.data.lens = f
+        logging.debug(["Set focal length to: " + str(f)])
         # clipping constants
         bpy.context.object.data.clip_end = camSensor.clipEnd
         bpy.context.object.data.clip_start = camSensor.clipStart
 
         # move principal point by 0.5 pixels because it appears as though blender uses the center of the pixel??
-        halfpixel = 0.5 / camSensor.resolution[0]
-        bpy.context.object.data.shift_x = halfpixel + (camSensor.principalPoint[0] - camSensor.resolution[0] / 2) \
-                                                      / -camSensor.resolution[0]
-        bpy.context.object.data.shift_y = -halfpixel - (camSensor.principalPoint[1] - camSensor.resolution[1] / 2) \
-                                                       / -camSensor.resolution[0]
+        halfpixel = 0.5 / camSensor.renderresolution[0]
+        bpy.context.object.data.shift_x = halfpixel + (camSensor.principalPoint[0] - camSensor.renderresolution[0] / 2) \
+                                                      / -camSensor.renderresolution[0]
+        bpy.context.object.data.shift_y = -halfpixel - (camSensor.principalPoint[1] - camSensor.renderresolution[1] / 2) \
+                                                       / -camSensor.renderresolution[0]
 
         logging.debug(bpy.context.object.data.shift_x)
         logging.debug(bpy.context.object.data.shift_y)
@@ -363,7 +377,7 @@ class Trajectory:
             iPose = Pose(iName, tx, ty, tz, rx, ry, rz)
             self.Pose.append(iPose)
 
-    def render(self, mySensor, outputFolder):
+    def render(self, mySensor, outputFolder, dorender):
         iCount =0
         for iPose in self.Pose:
             iCount += 1
@@ -373,8 +387,11 @@ class Trajectory:
             bpy.context.scene.camera = bpy.data.objects[iPose.name]
             bpy.context.scene.render.filepath = outputFolder + "/" + iPose.name
             logging.debug("Writing to: " + outputFolder + "/" + iPose.name)
-            bpy.ops.render.render(write_still=True)
-            logging.debug("Rendered Finished")
+            if dorender:
+                bpy.ops.render.render(write_still=True)
+                logging.debug("Rendered Finished")
+            else:
+                logging.debug("NO RENDER MODE")
 
     def writecsv(self, csvname):
         trajectoryFile = open(csvname, 'w', newline='')
@@ -456,6 +473,79 @@ def RotatePoint(Points, Rotate, Translate, Scale):
     return newPoints
 
 
+def calcdistortionpadding(res, cxcy, distortion):
+    topleft = calcDistortedCorner(0, 0, -1, -1, res, cxcy, distortion)
+    topright = calcDistortedCorner(res[0], 0, 1, -1, res, cxcy, distortion)
+    botleft = calcDistortedCorner(0, res[1], -1, 1, res, cxcy, distortion)
+    botright = calcDistortedCorner(res[0], res[1], 1, 1, res, cxcy, distortion)
+
+    padx = np.max((1 - topleft[0], 1 - botleft[0], topright[0] - res[0], botright[0] - res[0]))
+    pady = np.max((1 - topleft[1], 1 - topright[1], botleft[1] - res[1], botright[1] - res[1]))
+
+    newresolution = (res[0] + 2 * padx, res[1] + 2 * pady)
+
+    sx = newresolution[0] / res[0]
+    sy = newresolution[1] / res[1]
+
+    return sx, sy
+
+
+def calcDistortedCorner(x, y, dx, dy, res, cxcy, distortion):
+    xgood = False
+    ygood = False
+    count = 0
+    while not xgood and not ygood and count<1000:
+        count += 1
+        newx, newy = calcBrownDistortedCoords(x, y, cxcy[0], cxcy[1], distortion[0:4], distortion[4:6])
+        inx, iny = inimage(newx, newy, res)
+
+        print((x,y))
+
+        if inx:
+            x += dx
+            xgood = False
+        else:
+            xgood = True
+
+        if iny:
+            y += dy
+            ygood = False
+        else:
+            ygood = True
+
+        print((newx, newy))
+        print((inx, iny))
+        print(xgood, ygood)
+    return x, y
+
+def inimage(x, y, resolution):
+    inx = True
+    iny = True
+
+    if x < 1 or x > resolution[0]:
+        inx = False
+
+    if y<1 or y>resolution[1]:
+        iny = False
+
+    return inx, iny
+
+def calcBrownDistortedCoords(xu, yu, xc, yc, k, p):
+    # radial distortion
+    r = np.sqrt((xu - xc) ** 2 + (yu - yc) ** 2)
+    dx_radial = (xu - xc) * (1 + (k[0] * r ** 2) + (k[1] * r ** 4) + (k[2] * r ** 6) + (k[3] * r ** 8))
+    dy_radial = (yu - yc) * (1 + (k[0] * r ** 2) + (k[1] * r ** 4) + (k[2] * r ** 6) + (k[3] * r ** 8))
+
+    # tangential distortion
+    dx_tangential = (p[0] * (r ** 2 + 2 * (xu - xc) ** 2) + 2 * p[1] * (xu - xc) * (yu - yc))
+    dy_tangential = (p[1] * (r ** 2 + 2 * (yu - yc) ** 2) + 2 * p[0] * (xu - xc) * (yu - yc))
+
+    # calculate distorted coordinate
+    xd = np.array(xc + dx_radial + dx_tangential)
+    yd = np.array(yc + dy_radial + dy_tangential)
+
+    return xd, yd
+
 def readXyzCsv(csvfilename):
     csvfile = open(csvfilename)
     allrows = csv.reader(csvfile)
@@ -525,7 +615,7 @@ def run():
         experimentName = rootname + '/' + argv[0]
         dorender = True
     except ValueError:
-        experimentName = 'C:\\Users\\Richie\\Documents\\GitHub\\BlenderPythonTest\\data\\foo'
+        experimentName = 'C:\\Users\\Richie\\Documents\\GitHub\\BlenderPythonTest\\data\\calroom'
         rootname = 'C:\\Users\\Richie\\Documents\\GitHub\\BlenderPythonTest'
         dorender = False
 
@@ -576,8 +666,8 @@ def run():
 
 
     # Place Cameras and Render Images
+    myTrajectory.render(mySensor, imageFolderPre, dorender)              # Render images
     if dorender:
-        myTrajectory.render(mySensor, imageFolderPre)              # Render images
         print("----------------------------------")
         print("POSTPROCESSING IMAGES WITH MATLAB")
         print("----------------------------------")
