@@ -180,15 +180,30 @@
 	<rotation x="0" y="0" z="185"/>
 	<scale x="1" y="1" z="1"/>
 </object>
-<object objname="monkey" name="monkey1" isControl = "0" isFiducial = "1">
-	<translation x="-30" y="0" z=".1"/>
+<object objname="seimens" name = "seimens1" isControl = "1" isFiducial = "1">
+	<translation x="-20" y="-10" z="1"/>
+	<rotation x="0" y="0" z="0"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object objname="seimens" name = "seimens2" isControl = "1" isFiducial = "1">
+	<translation x="-20" y="10" z="1"/>
+	<rotation x="0" y="0" z="0"/>
+	<scale x="5" y="5" z="5"/>
+</object>
+<object objname="tribar" name = "tribar1" isControl = "1" isFiducial = "1">
+	<translation x="20" y="0" z="1"/>
+	<rotation x="0" y="0" z="0"/>
+	<scale x="1" y="1" z="1"/>
+</object>
+<object objname="tribar" name = "tribar2" isControl = "1" isFiducial = "1">
+	<translation x="-20" y="-20" z="1"/>
+	<rotation x="0" y="0" z="0"/>
+	<scale x="0.025" y="0.025" z="1"/>
+</object>
+<object objname="checkercube" name="checkercube" isControl = "0" isFiducial = "1">
+	<translation x="-30" y="0" z="1"/>
 	<rotation x="0" y="-90" z="0"/>
 	<scale x="2" y="2" z="2"/>
-	<material>
-		<texture interp="0" img="default"/>
-		<diffuse red="0" green="0" blue="1"/>
-		<transparency alpha="1" ior="1"/>
-	</material>
 </object>
 <object objname="cube" name="water" isControl = "0" isFiducial = "0">
 	<translation x="0" y="0" z="4"/>
