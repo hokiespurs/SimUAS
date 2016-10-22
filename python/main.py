@@ -332,10 +332,10 @@ class Pose:
 
         # move principal point by 0.5 pixels because it appears as though blender uses the center of the pixel??
         halfpixel = 0.5 / camSensor.renderresolution[0]
-        bpy.context.object.data.shift_x = halfpixel + (camSensor.principalPoint[0] - camSensor.renderresolution[0] / 2) \
-                                                      / -camSensor.renderresolution[0]
-        bpy.context.object.data.shift_y = -halfpixel - (camSensor.principalPoint[1] - camSensor.renderresolution[1] / 2) \
-                                                       / -camSensor.renderresolution[0]
+        bpy.context.object.data.shift_x = halfpixel + (camSensor.principalPoint[0] - camSensor.resolution[0] / 2) \
+                                                      / -camSensor.resolution[0]
+        bpy.context.object.data.shift_y = -halfpixel - (camSensor.principalPoint[1] - camSensor.resolution[1] / 2) \
+                                                       / -camSensor.resolution[0]
 
         logging.debug(bpy.context.object.data.shift_x)
         logging.debug(bpy.context.object.data.shift_y)
@@ -518,6 +518,7 @@ def calcDistortedCorner(x, y, dx, dy, res, cxcy, distortion):
         print(xgood, ygood)
     return x, y
 
+
 def inimage(x, y, resolution):
     inx = True
     iny = True
@@ -529,6 +530,7 @@ def inimage(x, y, resolution):
         iny = False
 
     return inx, iny
+
 
 def calcBrownDistortedCoords(xu, yu, xc, yc, k, p):
     # radial distortion
@@ -545,6 +547,7 @@ def calcBrownDistortedCoords(xu, yu, xc, yc, k, p):
     yd = np.array(yc + dy_radial + dy_tangential)
 
     return xd, yd
+
 
 def readXyzCsv(csvfilename):
     csvfile = open(csvfilename)
