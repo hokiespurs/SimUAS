@@ -202,8 +202,9 @@ imNames = dirname([dname '/*.png']);
         
         % Add Gaussian Blur
         sigma = Calibration.postproc.gaussblur;
-        I = imgaussfilt(I,sigma);
-        
+        if sigma>0
+            I = imgaussfilt(I,sigma);
+        end
         % Add Gaussian Noise
         gaussmean = Calibration.postproc.gaussnoise.mean;
         gaussvar = Calibration.postproc.gaussnoise.var;
