@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <extrinsics name = "TestCalRoom">
 	<pose name = "CenterPoint001">
-		<translation x = "-0.182872" y = "-3.093265" z = "-3.740589" />
-		<rotation x = "338.438694" y = "96.989592" z = "322.058399" />
+		<translation x = "0" y = "0" z = "0" />
+		<rotation x = "0" y = "0" z = "0" />
 	</pose>
 	<pose name = "CenterPoint002">
 		<translation x = "-2.778627" y = "-3.777733" z = "-3.251383" />
