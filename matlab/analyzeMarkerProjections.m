@@ -23,7 +23,10 @@ Calibration = readsensor(intrinsicFilename, inputSensorFilename);
 
 %% 
 [proj_x,proj_y,image_x,image_y,dx,dy]=calcFiducial(outImDir,Trajectory,Fiducials,Calibration);
+
 %% Delta Plots
+close all
+
 figure(1)
 plot(dx,dy,'b.','markersize',1)
 xlim([-1 1]);
@@ -106,6 +109,51 @@ ylabel('Projected Y Coordinates (pixels)');
 colormap(jet(256));
 title('delta radius plotted at projected points')
 
+%% Image with plots overlaid
+iNames = dirname([outImDir '/*.png']);
+[~,ind]=max(sum(~isnan(dx)));
+I = imread(iNames{ind});
+figure(4)
+clf
+image(I)
+hold on
+plot(image_x(:,ind),image_y(:,ind),'g.','markersize',30);
+plot(proj_x(:,ind),proj_y(:,ind),'r.','markersize',15);
+legend('Image Points','Projected Points')
+xlabel('Image X Coordinate (pixels)');
+ylabel('Image Y Coordinate (pixels)');
+title('All Points Detected for example Image');
+
+figure(5)
+clf
+[dmax,imax] = nanmax(sqrt(dx(:,ind).^2 + dx(:,ind).^2));
+[dmin,imin] = nanmin(sqrt(dx(:,ind).^2 + dx(:,ind).^2));
+
+subplot 121
+image(I)
+hold on
+plot(image_x(imin,ind),image_y(imin,ind),'g.','markersize',30);
+plot(proj_x(imin,ind),proj_y(imin,ind),'r.','markersize',15);
+axis equal
+xlim([proj_x(imin,ind)-10 proj_x(imin,ind)+10]);
+ylim([proj_y(imin,ind)-10 proj_y(imin,ind)+10]);
+legend('Image Points','Projected Points')
+xlabel('Image X Coordinate (pixels)');
+ylabel('Image Y Coordinate (pixels)');
+title(sprintf('Most Accurate Image Detection(delta %.3f pixels)',dmin));
+
+subplot 122
+image(I)
+hold on
+plot(image_x(imax,ind),image_y(imax,ind),'g.','markersize',30);
+plot(proj_x(imax,ind),proj_y(imax,ind),'r.','markersize',15);
+axis equal
+xlim([proj_x(imax,ind)-10 proj_x(imax,ind)+10]);
+ylim([proj_y(imax,ind)-10 proj_y(imax,ind)+10]);
+legend('Image Points','Projected Points')
+xlabel('Image X Coordinate (pixels)');
+ylabel('Image Y Coordinate (pixels)');
+title(sprintf('Least Accurate Image Detection(delta %.3f pixels)',dmax));
 end
 function [proj_x,proj_y,image_x,image_y,dx,dy]=calcFiducial(outImDir,Trajectory,Fiducials,Calibration)
 iNames = dirname([outImDir '/*.png']);
