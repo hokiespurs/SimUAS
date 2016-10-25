@@ -1,1 +1,1 @@
-blender --background --python main.py -- data/foo
+blender --background --python main.py -- data/calroom

@@ -2,8 +2,8 @@ function analyzeMarkerProjections(foldername)
 dbstop if error
 
 %% paths to folders
-foldername = 'C:\Users\Richie\Documents\GitHub\BlenderPythonTest\data\calroom';
-
+%foldername = 'C:\Users\Richie\Documents\GitHub\BlenderPythonTest\data\calroom';
+foldername = 'C:\Users\slocumr.ONID\github\BlenderPythonTest\data\calroom';
 imDir = [foldername '/output/images/pre'];
 outImDir = [foldername '/output/images'];
 trajectoryFilename = [foldername '/output/trajectory.csv'];
