@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sensor name = "A5000" fileformat = "PNG">
+<sensor name = "A5000" fileformat = "PNG" version="1.0">
   <physical focallength="16" sensorWidth = "23.5"/>
   <resolution x = "5456" y = "3632"/>
   <principalPoint x = "2768" y="1766"/>
