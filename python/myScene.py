@@ -116,7 +116,6 @@ class Scene:
             self.zenith = [(1, 1, 1)]
             self.t_zenith = 0
 
-
     class myObject:
         class myMaterial:
             class rgbi:
@@ -254,6 +253,7 @@ class Scene:
             self.Shadow = self.myShadow(shadow)
 
     def __init__(self, xmlName):
+        logging.debug('Initializing Scene')
         try:
             tree = ET.parse(xmlName)
         except ET.ParseError:  # could not parse the xml file
@@ -277,6 +277,7 @@ class Scene:
         self.Object = list()
 
         # Parse Environment Structure
+        logging.debug('Parsing Environment Structure')
         try:
             environmentroot = sceneroot.find('environment')
             self.Environment = self.myEnvironment(environmentroot)
@@ -287,8 +288,10 @@ class Scene:
             raise
 
         # Parse Array of Object Structures
+        logging.debug('Parsing Objects')
         try:
             for objroot in sceneroot.findall('object'):
+                logging.debug('Parsing Object: ' + objroot.get('name'))
                 self.Object.append(self.myObject(objroot))
 
             if len(self.Object) == 0:
@@ -303,8 +306,10 @@ class Scene:
             raise
 
         # Parse Array of Light Structures
+        logging.debug('Parsing Lights')
         try:
             for lightroot in sceneroot.findall('light'):
+                logging.debug('Parsing Light Type: ' + lightroot.get('type'))
                 self.Light.append(self.myLight(lightroot))
 
         except:
