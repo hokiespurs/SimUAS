@@ -21,7 +21,7 @@ except ValueError:
 from myScene import *
 from mySensor import *
 from myTrajectory import *
-
+from pyblender import *
 
 def makedir(directory):
     if not os.path.exists(directory):
@@ -62,18 +62,18 @@ def run():
     xmlScene = glob.glob(experimentName + '/input/scene*.xml')[0]
     xmlSensor = glob.glob(experimentName + '/input/sensor*.xml')[0]
     xmlTrajectory = glob.glob(experimentName + '/input/trajectory*.xml')[0]
-    myScene = Scene(xmlScene)
-    mySensor = Sensor(xmlSensor)
-    myTrajectory = Trajectory(xmlTrajectory)
+    BlenderScene = Scene(xmlScene)
+    BlenderSensor = Sensor(xmlSensor)
+    BlenderTrajectory = Trajectory(xmlTrajectory)
 
     # Output Control/Fiducial/Trajectory Files
-    myScene.writeControlXYZ(outputFolder + "xyzcontrol.csv")
-    myScene.writeFiducialXYZ(outputFolder + "xyzfiducial.csv", rootname)
-    mySensor.writeXML(outputFolder + "Sensor")
-    myTrajectory.writecsv(outputFolder + "Trajectory.csv")
+    BlenderScene.writeControlXYZ(outputFolder + "xyzcontrol.csv")
+    BlenderScene.writeFiducialXYZ(outputFolder + "xyzfiducial.csv", rootname)
+    BlenderSensor.writeXML(outputFolder + "Sensor")
+    BlenderTrajectory.writecsv(outputFolder + "Trajectory.csv")
 
     # Generate Scene
-
+    buildScene(BlenderScene, rootname)
 
     # Output OBJ File
 

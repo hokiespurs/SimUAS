@@ -114,37 +114,35 @@ def rotatePoint(Points, Rotate, Translate, Scale):
 
 class myPosition:
     class Xyzt:
-        def __init__(self, x, y, z, t):
+        def __init__(self, x, y, z, t, const=1):
             X = 0
             Y = 0
             Z = 0
             T = 0
-            self.x = val_default(x, X)
-            self.y = val_default(y, Y)
-            self.z = val_default(z, Z)
+            self.x = val_default(x, X) * const
+            self.y = val_default(y, Y) * const
+            self.z = val_default(z, Z) * const
             self.t = val_default(t, T)
 
     def __init__(self, root):
-        self.interp = root.get('interpolation')
-        if self.interp is None:
-            self.interp = 'linear'
 
         # Translation, Rotation, Scale
-        self.T = self.calcXyzt(root.findall('translation'))
-        self.R = self.calcXyzt(root.findall('rotation'))
-        self.S = self.calcXyzt(root.findall('scale'))
+        self.T = self.calcXyzt(root.findall('translation'), 1)
+        self.R = self.calcXyzt(root.findall('rotation'), math.pi/180)
+        self.S = self.calcXyzt(root.findall('scale'), 1)
 
-    def calcXyzt(self, allroot):
+    def calcXyzt(self, allroot, const):
         X = list()
         for root in allroot:
             iT = self.Xyzt(root.get('x'),
-                                      root.get('y'),
-                                      root.get('z'),
-                                      root.get('t'))
+                           root.get('y'),
+                           root.get('z'),
+                           root.get('t'),
+                           const)
             X.append(iT)
 
         if len(X) == 0:
-            X.append(self.Xyzt(0,0,0,0))
+            X.append(self.Xyzt(0,0,0,0,1))
         return X
 
 
@@ -176,12 +174,10 @@ class Scene:
                 alightroot = None
                 ahorizonroot = None
                 azenithroot = None
-                self.interpolate = 'linear'
             else:
                 alightroot = root.findall('light')
                 ahorizonroot = root.findall('horizon')
                 azenithroot = root.findall('zenith')
-                self.interpolate = val_default_str(root.get('interpolation'), 'linear')
 
             if alightroot is not None:
                 for lightroot in alightroot:
@@ -333,8 +329,8 @@ class Scene:
             def __init__(self, shadow):
                 ENABLED = 1
                 QMC = 'Constant'
-                SAMPLES = '1'
-                SOFTSIZE = '0.1'
+                SAMPLES = 1
+                SOFTSIZE = 0.1
                 if shadow is None:
                     self.enabled = ENABLED
                     self.qmc = QMC
