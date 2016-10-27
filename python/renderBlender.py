@@ -77,13 +77,16 @@ def run():
 
     # Output OBJ File
 
-
-    # Apply Sensor Parameters and Place Cameras
-
-
-    # Render Images
+    # Apply Render Parameters
+    applyRenderSettings(BlenderSensor)
 
 
+    # Place Cameras
+    addCameras(BlenderTrajectory, BlenderSensor)
+
+    if dorender:
+        # Render images
+        render(BlenderTrajectory, BlenderSensor, imageFolderPre)
 
 if __name__ == '__main__':
     run()

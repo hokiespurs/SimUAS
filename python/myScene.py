@@ -291,15 +291,11 @@ class Scene:
                     repx = root.get('repeatx')
                     repy = root.get('repeaty')
                     color = root.get('infcolor')
-                    alpha = root.get('infalpha')
-                    normal = root.get('infnormal')
                     self.interpolate = val_default(interp, INTERP)
                     self.filename = fname
                     self.repx = val_default(repx, REPX)
                     self.repy = val_default(repy, REPY)
                     self.color = val_default(color, COLOR)
-                    self.alpha = val_default(alpha, ALPHA)
-                    self.normal = val_default(normal, NORMAL)
 
             def __init__(self, root):
                 if root is None:

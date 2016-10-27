@@ -64,7 +64,6 @@ def addObjects(blenderScene, Scene, rootname):
             bpy.data.objects[iName].keyframe_insert(data_path='location')
 
         for R in iObj.Position.R:
-            print('x')
             blenderScene.frame_current = R.t
             bpy.data.objects[iName].rotation_mode = 'ZYX'
             bpy.data.objects[iName].rotation_euler = (R.x, R.y, R.z)
@@ -109,16 +108,36 @@ def addObjects(blenderScene, Scene, rootname):
             else:
                 iMaterial.use_transparency = False
 
-        if iObj.Texture.nslots > 0:
+        if iObj.Texture.nSlots > 0:
+            # remove previous textures
+            for i in range(0,10):
+                bpy.data.objects[iName].active_material.texture_slots.clear(i)
+
+            slotNum = 0
             for Slot in iObj.Texture.Slot:
+
+                realpath = rootname + "\\" + Slot.filename
+                try:
+                    img = bpy.data.images.load(realpath)
+                except:
+                    raise NameError("Cannot load image %s" % realpath)
+
+                cTex = bpy.data.textures.new(iObj.name + str(slotNum), type='IMAGE')
+                cTex.image = img
+                cTex.repeat_x = Slot.repx
+                cTex.repeat_y = Slot.repy
                 activematerial = bpy.data.objects[iName].active_material
-
+                mtex = activematerial.texture_slots.add()
+                mtex.texture = cTex
+                mtex.texture_coords = 'UV'
                 if Slot.interpolate == 0:
-                    activematerial.active_texture.filter_type = 'BOX'
-                    activematerial.active_texture.use_interpolation = False
-                    activematerial.active_texture.filter_size = 0.1
-                activematerial.active_texture.image.filepath = rootname + "\\" + Slot.filename
+                    mtex.filter_type = 'BOX'
+                    mtex.use_interpolation = False
+                    mtex.filter_size = 0.1
 
+                mtex.use_map_color_diffuse = True
+                mtex.diffuse_color_factor = Slot.color
+                slotNum += 1
 
 def addLighting(blenderScene, Scene):
     for Light in Scene.Light:
@@ -165,7 +184,6 @@ def setLinear(obj):
         for kf in fcurve.keyframe_points:
             kf.interpolation = 'LINEAR'
 
-
 def setEnvironment(blenderScene, Scene):
 
     for Horizon in Scene.Environment.Horizon:
@@ -192,9 +210,65 @@ def outputOBJ(foldername,t):
     print('output OBJ')
 
 # Apply Sensor Parameters and Place Cameras
-def addCameras(Sensor, Trajectory):
-    print('add cameras')
+def addCameras(Trajectory, Sensor):
+    logging.debug('Adding Cameras to Scene')
+    BlenderScene = bpy.data.scenes.values()[0]
+    for iPose in Trajectory.Pose:
+        T = (iPose.Translation.x, iPose.Translation.y, iPose.Translation.z)
+        R = (iPose.Rotation.x, iPose.Rotation.y, iPose.Rotation.z)
+        bpy.ops.object.camera_add(view_align=True, enter_editmode=True, location=T, rotation=(0, 0, 0))
+        bpy.context.object.rotation_euler = R
+        bpy.context.object.data.sensor_width = Sensor.rendersensorwidth
+        xyRatio = Sensor.renderresolution[1] / Sensor.renderresolution[0]
+        bpy.context.object.data.sensor_height = Sensor.rendersensorwidth * xyRatio
+        # calculate lens angle in degrees
+        f = Sensor.focalLength
+
+        bpy.context.object.data.lens_unit = 'MILLIMETERS'
+        bpy.context.object.data.lens = f
+        logging.debug(["Set focal length to: " + str(f)])
+        # clipping constants
+        bpy.context.object.data.clip_end = Sensor.clipEnd
+        bpy.context.object.data.clip_start = Sensor.clipStart
+
+        bpy.context.object.data.shift_x = (Sensor.principalPoint[0] - Sensor.resolution[0] / 2) \
+                                            / -Sensor.renderresolution[0]
+        bpy.context.object.data.shift_y = - (Sensor.principalPoint[1] - Sensor.resolution[1] / 2) \
+                                            / -Sensor.renderresolution[0]
+
+        logging.debug(bpy.context.object.data.shift_x)
+        logging.debug(bpy.context.object.data.shift_y)
+
+        bpy.context.object.name = iPose.name
+        bpy.context.object.data.name = iPose.name
+        logging.debug("Added Pose: " + iPose.name)
+        curType = bpy.context.area.type
+        bpy.context.area.type = 'TIMELINE'
+        bpy.context.scene.camera = bpy.data.objects[iPose.name]
+        BlenderScene.frame_current = iPose.t
+        bpy.ops.marker.add()
+        bpy.ops.marker.camera_bind()
+        logging.debug("Linking: " + iPose.name)
+        bpy.context.area.type = curType
 
 # Render Imagery
-def render():
+def render(Trajectory, outputFolder):
     print('render images')
+    BlenderScene = bpy.data.scenes.values()[0]
+    for iPose in Trajectory.Pose:
+        BlenderScene.frame_current = iPose.t
+        logging.debug("Rendering [" + iPose.name + "] started")
+        bpy.context.scene.render.filepath = outputFolder + "/" + iPose.name
+        logging.debug("Writing to: " + outputFolder + "/" + iPose.name)
+        bpy.ops.render.render(write_still=True)
+        logging.debug("Rendered Finished")
+
+def applyRenderSettings(Sensor):
+    logging.debug('Applying render settings')
+    bpy.context.scene.render.resolution_percentage = Sensor.percentage
+    bpy.context.scene.render.use_stamp_lens = True  # Lens in Metadata
+    bpy.context.scene.render.resolution_x = Sensor.renderresolution[0]
+    bpy.context.scene.render.resolution_y = Sensor.renderresolution[1]
+    bpy.context.scene.render.use_antialiasing = Sensor.antialiasing
+    bpy.context.scene.render.image_settings.compression = Sensor.compression
+    bpy.context.scene.render.image_settings.file_format = Sensor.fileformat

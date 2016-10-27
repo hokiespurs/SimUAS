@@ -36,7 +36,8 @@
 		<transparency alpha="0.2" ior="1.33"/>
 	</material>
 	<texture>
-		<slot interpolate="1" filename="" repeatx="1" repeaty="1" infcolor="1" infalpha="0" infnormal="0"/>
+		<slot interpolate="1" filename="objects\textures\highaltitude.jpg" repeatx="1" repeaty="1" infcolor="0.5"/>
+		<slot interpolate="1" filename="objects\textures\grass.jpg" repeatx="5" repeaty="5" infcolor="0.5"/>
 	</texture>
 </object>
 <object objname="noiseCube" name="noiseCube1" isControl = "0" isFiducial = "1">
@@ -46,7 +47,6 @@
 		<scale x="1" y="1" z="1"/>
 	</position>
 	<material>
-		<texture interp="1" img="default"/>
 		<diffuse red="1" green="1" blue="1"/>
 		<transparency alpha="1" ior="1"/>
 	</material>
