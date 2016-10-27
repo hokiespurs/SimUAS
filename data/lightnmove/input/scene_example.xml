@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<scene name="testRange" objectdb="objects\\firstdb\\" version = "1.0">
-<environment>
+<scene name="testRange" objectdb="objects/firstdb" version = "1.0">
+<environment interpolatoin='linear'>
 	<light environmentlight="0.1" color="sky" t="0"/>
 	<horizon red="1" green="1" blue="1" t="0"/>
 	<zenith red="1" green="1" blue="1" t="0"/>
@@ -21,8 +21,8 @@
 		<scale x="1" y="1" z="1"/>
 	</position>
 </object>
-<object objname="cube" name = "MyCube" isControl="1" isFiducial="1">
-	<position interpolation='linear'>
+<object objname="noiseCube" name = "MyCube" isControl="1" isFiducial="1">
+	<position>
 		<translation x="0" y="0" z="0" t="0"/>
 		<rotation x="0" y="0" z="0" t="0"/>
 		<scale x="1" y="1" z="1" t="0"/>
@@ -36,7 +36,7 @@
 		<transparency alpha="0.2" ior="1.33"/>
 	</material>
 	<texture>
-		<slot interpolate="1" filename="c:\\foo.png" repeatx="1" repeaty="1" infcolor="1" infalpha="0" infnormal="0"/>
+		<slot interpolate="1" filename="" repeatx="1" repeaty="1" infcolor="1" infalpha="0" infnormal="0"/>
 	</texture>
 </object>
 <object objname="noiseCube" name="noiseCube1" isControl = "0" isFiducial = "1">
@@ -51,11 +51,15 @@
 		<transparency alpha="1" ior="1"/>
 	</material>
 </object>
-<light type="lamp" intensity="1">
-	<position interpolation="linear">
+<light type="lamp">
+	<position>
 		<translation x="5" y="5" z="5" t="0"/>
 		<translation x="-5" y="-5" z="5" t="100"/>
 	</position>
+	<emission>
+		<color intensity="1" red="1" green="1" blue="1" t="1"/>
+		<color intensity="0.1" red="1" green="1" blue="1" t="100"/>
+	</emission>
 	<shadow enabled="1" QMC="Constant" Samples="1" SoftSize="0.1"/>
 </light>
 </scene>
