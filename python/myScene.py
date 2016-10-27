@@ -1,5 +1,10 @@
 import xml.etree.ElementTree as ET
 import logging
+import csv
+import glob
+import copy
+import numpy as np
+import math
 
 
 def val_default(x, defaultx):
@@ -14,6 +19,98 @@ def val_default_str(x, defaultx):
         return defaultx
     else:
         return x
+
+
+def readXyzCsv(csvfilename):
+    csvfile = open(csvfilename)
+    allrows = csv.reader(csvfile)
+
+    x = []
+    y = []
+    z = []
+    names = []
+
+    for row in allrows:
+        if len(row) == 4:
+            names.append(row[0])
+            x.append(float(row[1]))
+            y.append(float(row[2]))
+            z.append(float(row[3]))
+        else:
+            x.append(float(row[0]))
+            y.append(float(row[1]))
+            z.append(float(row[2]))
+            names.append('')
+
+    return Triplet(x, y, z)
+
+
+class Triplet:
+    def __init__(self, x, y, z, names=''):
+        self.x = x
+        self.y = y
+        self.z = z
+        if isinstance(x, list):
+            if len(names) < len(x):
+                names = []
+                for i in range(len(x)):
+                    buf = "%03.0d" % i
+                    names.append(buf)
+
+        self.names = names
+
+
+def rotatePoint(Points, Rotate, Translate, Scale):
+    newPoints = copy.deepcopy(Points)
+    # Apply Scale
+    for i in range(len(newPoints.x)):
+        newPoints.x[i] = newPoints.x[i] * Scale.x
+        newPoints.y[i] = newPoints.y[i] * Scale.y
+        newPoints.z[i] = newPoints.z[i] * Scale.z
+
+    # Apply Rotation
+    cosx = math.cos(Rotate.x)
+    sinx = math.sin(Rotate.x)
+    cosy = math.cos(Rotate.y)
+    siny = math.sin(Rotate.y)
+    cosz = math.cos(Rotate.z)
+    sinz = math.sin(Rotate.z)
+
+    Rz = [[cosz, -sinz, 0],
+          [sinz, cosz, 0],
+          [0, 0, 1]]
+
+    Ry = [[cosy, 0, siny],
+          [0, 1, 0],
+          [-siny, 0, cosy]]
+
+    Rx = [[1, 0, 0],
+          [0, cosx, -sinx],
+          [0, sinx, cosx]]
+
+    R = np.dot(Rx, np.dot(Ry, Rz))
+
+    for i in range(len(newPoints.x)):
+        # Should make everything a numpy array rather than storing as an object
+        # ... but so few computations that performance shouldnt be too bad
+        P = np.array([newPoints.x[i], newPoints.y[i], newPoints.z[i]])
+        Pnew = np.dot(R,P)
+        newPoints.x[i] = Pnew[0]
+        newPoints.y[i] = Pnew[1]
+        newPoints.z[i] = Pnew[2]
+
+    # Apply Translation
+    for i in range(len(newPoints.x)):
+        newPoints.x[i] = newPoints.x[i] + Translate.x
+        newPoints.y[i] = newPoints.y[i] + Translate.y
+        newPoints.z[i] = newPoints.z[i] + Translate.z
+        logging.debug(" PRE Rotation")
+        logging.debug([Points.x[i], Points.y[i], Points.z[i]])
+        logging.debug(" POST Rotation")
+        logging.debug([newPoints.x[i], newPoints.y[i], newPoints.z[i]])
+
+    return newPoints
+
 
 class myPosition:
     class Xyzt:
@@ -71,20 +168,26 @@ class Scene:
 
                 self.t = val_default(t, T)
 
-
         def __init__(self, root):
             self.Light = list()
             self.Horizon = list()
             self.Zenith = list()
+            if root is None:
+                alightroot = None
+                ahorizonroot = None
+                azenithroot = None
+                self.interpolate = 'linear'
+            else:
+                alightroot = root.findall('light')
+                ahorizonroot = root.findall('horizon')
+                azenithroot = root.findall('zenith')
+                self.interpolate = val_default_str(root.get('interpolation'), 'linear')
 
-            alightroot = root.findall('light')
-            ahorizonroot = root.findall('horizon')
-            azenithroot = root.findall('zenith')
             if alightroot is not None:
                 for lightroot in alightroot:
                     ilight = lightroot.get('environmentlight')
                     it = lightroot.get('t')
-                    self.Light.append(self.ELight(ilight,it))
+                    self.Light.append(self.ELight(ilight, it))
             else:
                 self.Light.append(self.ELight(None, None))
 
@@ -94,7 +197,7 @@ class Scene:
                             horizonroot.get('green'),
                             horizonroot.get('blue'))
                     it = horizonroot.get('t')
-                    self.Horizon.append(self.Ergbt(irgb,it))
+                    self.Horizon.append(self.Ergbt(irgb, it))
             else:
                 self.Horizon.append(self.Ergbt((None, None, None), None))
 
@@ -242,11 +345,44 @@ class Scene:
                     self.qmc = val_default_str(shadow.get('QMC'), QMC)
                     self.samples = val_default(shadow.get('samples'), SAMPLES)
                     self.softsize = val_default(shadow.get('softsize'), SOFTSIZE)
+        class myEmission:
+            class myColor:
+                def __init__(self, root):
+                    R = 1
+                    G = 1
+                    B = 1
+                    I = 1
+                    T = 0
+                    if root is None:
+                        self.rgb = (R, G, B)
+                        self.i = I
+                        self.t = T
+                    else:
+                        r = root.get('red')
+                        g = root.get('green')
+                        b = root.get('blue')
+                        i = root.get('intensity')
+                        t = root.get('t')
+                        self.rgb = (val_default(r,R), val_default(g,G), val_default(b,B))
+                        self.i = val_default(i,I)
+                        self.t = val_default(t,T)
+
+            def __init__(self, root):
+                self.Color = list()
+                if root is None:
+                    self.Color.append(self.myColor(None))
+                else:
+                    allcolors = root.findall('color')
+                    if allcolors is None:
+                        self.Color.append(self.myColor(None))
+                    else:
+                        for color in allcolors:
+                            self.Color.append(self.myColor(color))
 
         def __init__(self, root):
             self.type = root.get('type')
-            self.intensity = root.get('intensity')
-
+            emissionroot = root.find('emission')
+            self.Emission = self.myEmission(emissionroot)
             positionroot = root.find('position')
             self.Position = myPosition(positionroot)
             shadow = root.find('shadow')
@@ -318,8 +454,56 @@ class Scene:
             print('ERROR: Unable to read Scene XML: Lights')
             raise
 
+    def writeControlXYZ(self, fname):
+        logging.debug('Writing Control to File: ' + fname)
+        controlFileHandle = open(fname, 'w', newline='')
+        controlwriter = csv.writer(controlFileHandle)
+        controlHeader = ["ControlPointName", "Tx", "Ty", "Tz"]
+        controlwriter.writerow(controlHeader)
+
+        for iObj in self.Object:
+            if iObj.iscontrol == 1:
+                logging.debug('writing Control for : ' + iObj.name)
+                controlwriter.writerow([iObj.name, iObj.Position.T[0].x, iObj.Position.T[0].y, iObj.Position.T[0].z])
+                controlFileHandle.flush()
+
+        controlFileHandle.close()
+        logging.debug('Finished Writing Control')
+
+    def writeFiducialXYZ(self, fname, rootname):
+        logging.debug('Writing Fiducial to File: ' + fname)
+        fiducialFileHandle = open(fname, 'w', newline='')
+        fiducialwriter = csv.writer(fiducialFileHandle)
+        fiducialHeader = ["objectName_fiducialName", "X", "Y", "Z"]
+        fiducialwriter.writerow(fiducialHeader)
+
+        for iObj in self.Object:
+            if iObj.isfiducial == 1:
+                logging.debug(iObj.name + " being used as fiducial")
+                # load fiducial points from csv
+                iPath = self.objectdb + '/' +  iObj.objname + "/"
+                iPath.replace("\\", "/")
+                try:
+                    txtsearch = rootname + '/' + iPath + '*.txt'
+                    fiducialtxtname = glob.glob(txtsearch)[0]
+                except IndexError:
+                    logging.error('Cant find Object Fiducial Txt file in : ' + rootname + "/" + iPath + '*.txt')
+                    raise
+                rawFiducialPts = readXyzCsv(fiducialtxtname)
+                # rotate, translate, and scale fiducial points
+                newFiducialPts = rotatePoint(rawFiducialPts, iObj.Position.R[0], iObj.Position.T[0], iObj.Position.S[0])
+                # print to csv file
+                for i in range(len(newFiducialPts.x)):
+                    fiducialwriter.writerow([iObj.name + '_' + rawFiducialPts.names[i],
+                                           newFiducialPts.x[i], newFiducialPts.y[i], newFiducialPts.z[i]])
+                fiducialFileHandle.flush()
+
+        fiducialFileHandle.close()
+        logging.debug('finished writing fiducials')
+
 if __name__ == '__main__':
     logging.basicConfig(filename='test.log', level=logging.DEBUG)
     xmlName = "C:\\Users\\Richie\\Documents\\GitHub\\BlenderPythonTest\\data\\lightnmove\\input\\scene_example.xml"
     Test = Scene(xmlName)
-    print(Test)
+    Test.writeControlXYZ('C:/tmp/testControl.csv')
+    Test.writeFiducialXYZ('C:/tmp/testFiducial.csv', 'C:/Users/Richie/Documents/GitHub/BlenderPythonTest')
