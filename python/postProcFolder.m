@@ -340,11 +340,9 @@ rawdata = importdata(fname);
 if isstruct(rawdata)
     Control.names = rawdata.textdata(2:end,1);
     Control.T = rawdata.data(:,1:3);
-    Control.R = rawdata.data(:,4:6);
 else
     Control.names{1} = '';
     Control.T = [0 0 0];
-    Control.R = [0 0 0];
     error('why did this happen?')
 end
 end

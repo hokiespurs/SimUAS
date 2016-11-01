@@ -231,10 +231,9 @@ class Scene:
                         g = root.get('green')
                         b = root.get('blue')
                         i = root.get('intensity')
-
+                        angle = root.get('angle')
                         self.rgb = (val_default(r, R), val_default(g, G), val_default(b, B))
                         self.i = val_default(i, I)
-
             class MaterialShading:
                 def __init__(self, root):
                     SHADELESS = 0
@@ -265,17 +264,25 @@ class Scene:
                         self.alpha = val_default(alpha, ALPHA)
                         self.ior = val_default(ior, IOR)
 
+            def getAmbient(self, root):
+                if root is None:
+                    return 1
+                else:
+                    return val_default(root.get('intensity'), 1)
+
             def __init__(self, root):
                 if root is None:
                     self.Diffuse = self.rgbi(None)
                     self.Specular = self.rgbi(None)
                     self.Shading = self.MaterialShading(None)
                     self.Transparency = self.MaterialTransparency(None)
+                    self.Ambient = self.getAmbient(None)
                 else:
                     self.Diffuse = self.rgbi(root.find('diffuse'))
                     self.Specular = self.rgbi(root.find('specular'))
                     self.Shading = self.MaterialShading(root.find('shading'))
                     self.Transparency = self.MaterialTransparency(root.find('transparency'))
+                    self.Ambient = self.getAmbient(root.find('ambient'))
 
         class myTexture:
             class mySlot:
@@ -344,20 +351,24 @@ class Scene:
                     G = 1
                     B = 1
                     I = 1
+                    ANGLE = 45
                     T = 0
                     if root is None:
                         self.rgb = (R, G, B)
                         self.i = I
                         self.t = T
+                        self.angle = ANGLE
                     else:
                         r = root.get('red')
                         g = root.get('green')
                         b = root.get('blue')
                         i = root.get('intensity')
                         t = root.get('t')
+                        angle = root.get('angle')
                         self.rgb = (val_default(r,R), val_default(g,G), val_default(b,B))
                         self.i = val_default(i,I)
                         self.t = val_default(t,T)
+                        self.angle = val_default(angle, ANGLE)
 
             def __init__(self, root):
                 self.Color = list()
@@ -479,7 +490,7 @@ class Scene:
                     txtsearch = rootname + '/' + iPath + '*.txt'
                     fiducialtxtname = glob.glob(txtsearch)[0]
                 except IndexError:
-                    logging.error('Cant find Object Fiducial Txt file in : ' + rootname + "/" + iPath + '*.txt')
+                    logging.error('Cant find Object Fiducial txt file in : ' + rootname + "/" + iPath + '*.txt')
                     raise
                 rawFiducialPts = readXyzCsv(fiducialtxtname)
                 # rotate, translate, and scale fiducial points

@@ -49,9 +49,9 @@ class Sensor:
                              self.distortion[4] / (f ** 2),
                              self.distortion[5] / (f ** 2))
 
-        sx, sy = calcdistortionpadding(self.resolution, self.principalPoint, self.padistortion)
+        sx, sy = calcdistortionpadding(self.resolution, self.principalPoint, self.padistortion, self.percentage)
 
-        self.renderresolution = (self.resolution[0] * sx, self.resolution[1] * sy)
+        self.renderresolution = (np.round(self.resolution[0]) * sx, np.round(self.resolution[1] * sy))
         self.rendersensorwidth = self.sensorWidth * sx
         logging.debug('Resolution Pre: (' + str(self.resolution[0]) + ' , ' + str(self.resolution[1]) + ')')
         logging.debug('Resolution Post: (' + str(self.renderresolution[0]) + ' , ' + str(self.renderresolution[1]) + ')')
@@ -112,7 +112,7 @@ class Sensor:
         intrinsicsFileHandle.close()
 
 
-def calcdistortionpadding(res, cxcy, distortion):
+def calcdistortionpadding(res, cxcy, distortion, percentage):
     topleft = calcDistortedCorner(0, 0, -1, -1, res, cxcy, distortion)
     topright = calcDistortedCorner(res[0], 0, 1, -1, res, cxcy, distortion)
     botleft = calcDistortedCorner(0, res[1], -1, 1, res, cxcy, distortion)
@@ -125,10 +125,17 @@ def calcdistortionpadding(res, cxcy, distortion):
     padx = np.max((1 - topleft[0], 1 - botleft[0], topright[0] - res[0], botright[0] - res[0]))
     pady = np.max((1 - topleft[1], 1 - topright[1], botleft[1] - res[1], botright[1] - res[1]))
 
+    # pad to largest number that is an integer when multiplied by percentage
+    # add 10 pixels no matter what for blurring in postproc
+    padx = np.ceil(10+padx * (percentage / 100)) / (percentage / 100)
+    pady = np.ceil(10+pady * (percentage / 100)) / (percentage / 100)
+
+    logging.debug('pad x = ' + str(padx) + '\t pad y = ' + str(pady))
     newresolution = (res[0] + 2 * padx, res[1] + 2 * pady)
 
     sx = newresolution[0] / res[0]
     sy = newresolution[1] / res[1]
+    logging.debug('scale x = ' + str(sx) + '\t scale y = ' + str(sy))
 
     return sx, sy
 

@@ -1,6 +1,7 @@
 import logging
 import bpy
 import glob
+import math
 
 def wipe():
     logging.info("Clearing all existing blender objects")
@@ -82,6 +83,7 @@ def addObjects(blenderScene, Scene, rootname):
             bpy.data.objects[iName].active_material.diffuse_intensity = iObj.Material.Diffuse.i
             bpy.data.objects[iName].active_material.specular_color = iObj.Material.Specular.rgb
             bpy.data.objects[iName].active_material.specular_intensity = iObj.Material.Specular.i
+            bpy.data.objects[iName].active_material.ambient = iObj.Material.Ambient
 
         for matIndex in range(0, nmaterials):
             iMaterial = bpy.data.objects[iName].material_slots[matIndex].material
@@ -139,12 +141,20 @@ def addObjects(blenderScene, Scene, rootname):
                 mtex.diffuse_color_factor = Slot.color
                 slotNum += 1
 
+
 def addLighting(blenderScene, Scene):
     for Light in Scene.Light:
         if Light.type == 'sun' or Light.type == 'SUN':
             bpy.ops.object.lamp_add(type='SUN')
         elif Light.type == 'point' or Light.type == 'POINT':
             bpy.ops.object.lamp_add(type='POINT')
+        elif Light.type == 'spot' or Light.type == 'SPOT':
+            bpy.ops.object.lamp_add(type='SPOT')
+        else:
+            logging.error('Unknown Lamp type')
+            print('Unknown Lamp Type')
+            raise SyntaxError
+
         obj = bpy.data.objects.values()[-1]  # last object added
 
         for T in Light.Position.T:
@@ -160,6 +170,10 @@ def addLighting(blenderScene, Scene):
             blenderScene.frame_current = color.t
             obj.data.color = color.rgb
             obj.data.energy = color.i
+            if Light.type == 'spot':
+                obj.data.spot_size = color.angle * math.pi / 180
+                obj.data.keyframe_insert(data_path='spot_size')
+
             obj.data.keyframe_insert(data_path='color')
             obj.data.keyframe_insert(data_path='energy')
 
@@ -206,8 +220,24 @@ def setEnvironment(blenderScene, Scene):
     setLinear(blenderScene.world)
 
 # Output OBJ File
-def outputOBJ(foldername,t):
+def outputOBJ(Scene, foldername, t):
     print('output OBJ')
+    # deselect all
+    bpy.data.scenes.values()[0].frame_current = t
+    for iObj in Scene.Object:
+        iName = iObj.name
+        bpy.data.objects[iName].select = False
+
+    for iObj in Scene.Object:
+        iName = iObj.name
+        bpy.data.objects[iName].select = True
+        bpy.ops.export_scene.obj(filepath=foldername + iName + ".obj", use_selection=True, axis_forward='Y',
+                                 axis_up='Z', path_mode='COPY')
+        bpy.data.objects[iName].select = False
+
+    # write all as one big obj file
+    bpy.ops.export_scene.obj(filepath=foldername + "allmodel.obj", use_selection=False, axis_forward='Y',
+                             axis_up='Z', path_mode='COPY')
 
 # Apply Sensor Parameters and Place Cameras
 def addCameras(Trajectory, Sensor):
@@ -242,14 +272,17 @@ def addCameras(Trajectory, Sensor):
         bpy.context.object.name = iPose.name
         bpy.context.object.data.name = iPose.name
         logging.debug("Added Pose: " + iPose.name)
-        curType = bpy.context.area.type
-        bpy.context.area.type = 'TIMELINE'
-        bpy.context.scene.camera = bpy.data.objects[iPose.name]
-        BlenderScene.frame_current = iPose.t
-        bpy.ops.marker.add()
-        bpy.ops.marker.camera_bind()
-        logging.debug("Linking: " + iPose.name)
-        bpy.context.area.type = curType
+        try:
+            curType = bpy.context.area.type
+            bpy.context.area.type = 'TIMELINE'
+            bpy.context.scene.camera = bpy.data.objects[iPose.name]
+            BlenderScene.frame_current = iPose.t
+            bpy.ops.marker.add()
+            bpy.ops.marker.camera_bind()
+            logging.debug("Linking: " + iPose.name)
+            bpy.context.area.type = curType
+        except AttributeError:
+            logging.info('Running As Background App')
 
 # Render Imagery
 def render(Trajectory, outputFolder):
@@ -257,6 +290,7 @@ def render(Trajectory, outputFolder):
     BlenderScene = bpy.data.scenes.values()[0]
     for iPose in Trajectory.Pose:
         BlenderScene.frame_current = iPose.t
+        bpy.context.scene.camera = bpy.data.objects[iPose.name]
         logging.debug("Rendering [" + iPose.name + "] started")
         bpy.context.scene.render.filepath = outputFolder + "/" + iPose.name
         logging.debug("Writing to: " + outputFolder + "/" + iPose.name)
@@ -272,3 +306,49 @@ def applyRenderSettings(Sensor):
     bpy.context.scene.render.use_antialiasing = Sensor.antialiasing
     bpy.context.scene.render.image_settings.compression = Sensor.compression
     bpy.context.scene.render.image_settings.file_format = Sensor.fileformat
+
+def outputOrthos(BlenderTrajectory, outputFolder):
+    logging.debug('Saving Ortho Photos')
+    for iOrtho in BlenderTrajectory.Orthos:
+        bpy.context.scene.render.resolution_percentage = 100
+        bpy.context.scene.render.resolution_x = iOrtho.resolution[0]
+        bpy.context.scene.render.resolution_y = iOrtho.resolution[1]
+        if iOrtho.antialiasing == 1:
+            bpy.context.scene.render.use_antialiasing = True
+        else:
+            bpy.context.scene.render.use_antialiasing = False
+        bpy.context.scene.render.image_settings.compression = iOrtho.compression
+        bpy.context.scene.render.image_settings.file_format = iOrtho.format
+
+        T = (iOrtho.Translation.x, iOrtho.Translation.y, iOrtho.Translation.z)
+        R = (iOrtho.Rotation.x, iOrtho.Rotation.y, iOrtho.Rotation.z)
+        bpy.ops.object.camera_add(view_align=True, enter_editmode=True, location=T, rotation=(0, 0, 0))
+        bpy.context.object.rotation_euler = R
+        bpy.context.object.data.sensor_width = 30 # doesnt matter
+
+        bpy.context.object.data.type = 'ORTHO'
+        bpy.context.object.data.shift_x = 0
+        bpy.context.object.data.shift_y = 0
+        bpy.context.object.data.clip_start = 0.01
+        bpy.context.object.data.clip_end = 1000
+        bpy.context.object.data.sensor_width = 10
+        bpy.context.object.data.ortho_scale = iOrtho.scale
+
+        bpy.context.object.name = iOrtho.name
+        bpy.context.object.data.name = iOrtho.name
+        logging.debug("Added Pose: " + iOrtho.name)
+
+        BlenderScene = bpy.data.scenes.values()[0]
+        BlenderScene.frame_current = iOrtho.t
+
+        bpy.context.scene.camera = bpy.data.objects[iOrtho.name]
+
+        logging.debug("Rendering Ortho: [" + iOrtho.name + "] started")
+        bpy.context.scene.render.filepath = outputFolder + "/" + iOrtho.name
+        logging.debug("Writing to: " + outputFolder + "/" + iOrtho.name)
+        bpy.ops.render.render(write_still=True)
+        logging.debug("Rendered Finished")
+
+
+
+

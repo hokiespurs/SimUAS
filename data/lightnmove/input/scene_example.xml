@@ -21,13 +21,14 @@
 		<scale x="1" y="1" z="1"/>
 	</position>
 </object>
-<object objname="noiseCube" name = "MyCube" isControl="1" isFiducial="1">
+<object objname="noiseCube" name = "MyCube">
 	<position>
 		<translation x="0" y="0" z="0" t="0"/>
 		<rotation x="0" y="0" z="0" t="0"/>
 		<scale x="1" y="1" z="1" t="0"/>
 		<translation x="0" y="0" z="15" t="100"/>
 		<rotation x="0" y="0" z="180" t="100"/>
+		<scale x="0.1" y="0.1" z="0.1" t="100"/>
 	</position>
 	<material>
 		<diffuse red="1" green="1" blue="1" intensity="1"/>
@@ -51,14 +52,14 @@
 		<transparency alpha="1" ior="1"/>
 	</material>
 </object>
-<light type="sun">
+<light type="spot">
 	<position>
 		<translation x="5" y="5" z="5" t="0"/>
 		<translation x="-5" y="-5" z="5" t="100"/>
 	</position>
 	<emission>
 		<color intensity="1" red="1" green="1" blue="1" t="1"/>
-		<color intensity="0.1" red="1" green="1" blue="1" t="100"/>
+		<color intensity="0.1" angle="90" red="1" green="1" blue="1" t="100"/>
 	</emission>
 	<shadow enabled="1" QMC="Constant" Samples="1" SoftSize="0.1"/>
 </light>
