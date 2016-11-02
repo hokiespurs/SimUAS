@@ -220,7 +220,7 @@
 		<transparency alpha="1" ior="1"/>
 	</material>
 	<texture>
-		<slot interpolate="1" filename="objects\textures\highaltitude.jpg" repeatx="1" repeaty="1" infcolor="0.8"/>
+		<slot interpolate="1" filename="objects\textures\randomNoise.png" repeatx="1" repeaty="1" infcolor="0.8"/>
 		<slot interpolate="1" filename="objects\textures\grass2_seamless.jpg" repeatx="5" repeaty="5" infcolor="0.6"/>
 	</texture>
 </object>

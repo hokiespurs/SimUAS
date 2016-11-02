@@ -126,9 +126,8 @@ def calcdistortionpadding(res, cxcy, distortion, percentage):
     pady = np.max((1 - topleft[1], 1 - topright[1], botleft[1] - res[1], botright[1] - res[1]))
 
     # pad to largest number that is an integer when multiplied by percentage
-    # add 10 pixels no matter what for blurring in postproc
-    padx = np.ceil(10+padx * (percentage / 100)) / (percentage / 100)
-    pady = np.ceil(10+pady * (percentage / 100)) / (percentage / 100)
+    padx = np.ceil(padx * (percentage / 100)) / (percentage / 100)
+    pady = np.ceil(pady * (percentage / 100)) / (percentage / 100)
 
     logging.debug('pad x = ' + str(padx) + '\t pad y = ' + str(pady))
     newresolution = (res[0] + 2 * padx, res[1] + 2 * pady)
@@ -144,7 +143,7 @@ def calcDistortedCorner(x, y, dx, dy, res, cxcy, distortion):
     xgood = False
     ygood = False
     count = 0
-    while not xgood and not ygood and count<1000:
+    while (not xgood or not ygood) and count < 1000:
         count += 1
         newx, newy = calcBrownDistortedCoords(x, y, cxcy[0], cxcy[1], distortion[0:4], distortion[4:6])
         inx, iny = inimage(newx, newy, res)
@@ -160,7 +159,7 @@ def calcDistortedCorner(x, y, dx, dy, res, cxcy, distortion):
             ygood = False
         else:
             ygood = True
-
+    logging.debug("Finding Corner Count: " + str(count))
     return x, y
 
 
