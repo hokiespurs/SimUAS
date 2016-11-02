@@ -46,8 +46,8 @@ class Sensor:
                              self.distortion[1] / (f ** 4),
                              self.distortion[2] / (f ** 6),
                              self.distortion[3] / (f ** 8),
-                             self.distortion[4] / (f ** 2),
-                             self.distortion[5] / (f ** 2))
+                             self.distortion[4] / (f ** 1),
+                             self.distortion[5] / (f ** 1))
 
         sx, sy = calcdistortionpadding(self.resolution, self.principalPoint, self.padistortion, self.percentage)
 

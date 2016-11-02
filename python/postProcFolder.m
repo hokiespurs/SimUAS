@@ -275,7 +275,7 @@ function newMap = calcImageMap(Calibration, height, width)
     k = Calibration.k;
     f = Calibration.fx;
     k = k./([f^2 f^4 f^6 f^8]);
-    p = Calibration.p./f^2;
+    p = Calibration.p./f;
     % Distort Coordinates
     [xd, yd] = calcDistortedCoords(xu, yu, xc, yc, k, p);
     
