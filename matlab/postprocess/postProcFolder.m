@@ -1,9 +1,11 @@
-function postProcFolder(foldername)
+function postProcFolder(foldername, doexit)
 dbstop if error
 addHomePath('BlenderPythonTest')
 hpath = getHomePath('BlenderPythonTest');
 foldername = [hpath '/' foldername];
-
+if nargin==1
+   doexit = 0; 
+end
 %% paths to folders
 imDir = [foldername '/output/images/pre'];
 outImDir = [foldername '/output/images'];
@@ -37,6 +39,10 @@ savePixelXML(controlSavename, Trajectory, Control, Calibration);
 %% Calculate Pixel Coords for Fiducial + Save pixelFiducial.xml
 savePixelXML(fiducialSavename, Trajectory, Fiducials, Calibration);
 
+%% Quit program
+if doexit
+   exit 
+end
 end
 
 function cropImagesInFolder(dname, Calibration)

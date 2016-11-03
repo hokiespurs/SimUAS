@@ -1,9 +1,18 @@
-function analyzeMarkerProjections(foldername)
+function analyzeMarkerProjections(foldername, whichtype, doexit)
 dbstop if error
 addpath(genpath('../'))
-
 if nargin==0
-   foldername = '../../data\calroom'; 
+    homePath = getHomePath('BlenderPythonTest');
+    foldername = [homePath '/data\validateAccuracy2'];
+    whichtype=1;
+    doexit = 0;
+elseif nargin==1
+    homePath = getHomePath('BlenderPythonTest');
+    foldername = [homePath '/' foldername];
+    doexit = 0;
+else
+    homePath = getHomePath('BlenderPythonTest');
+    foldername = [homePath '/' foldername];
 end
 %% paths to folders
 imDir = [foldername '/output/images/pre'];
@@ -14,6 +23,7 @@ fiducialSavename = [foldername '/output/pixelfiducial.xml'];
 controlFilename = [foldername '/output/xyzcontrol.csv'];
 controlSavename = [foldername '/output/pixelcontrol.xml'];
 intrinsicFilename = [foldername '/output/sensor.xml'];
+procFolder = [foldername '/proc/'];
 foo = dirname([foldername '/input/sensor*.xml']);
 inputSensorFilename = foo{1};
 
@@ -24,25 +34,27 @@ Control = readcontrol(controlFilename);
 Calibration = readsensor(intrinsicFilename, inputSensorFilename);
 
 %% 
-[proj_x,proj_y,image_x,image_y,dx,dy]=calcFiducial(outImDir,Trajectory,Fiducials,Calibration);
+[proj_x,proj_y,image_x,image_y,dx,dy]=calcFiducial(outImDir,Trajectory,Fiducials,Calibration,whichtype);
 
 %% Delta Plots
 close all
 
-figure(1)
-plot(dx,dy,'b.','markersize',1)
+f1 = figure(1);
+set(f1,'units','normalize','position',[0 0 1 1])
+plot(dx,dy,'b.','markersize',10)
 xlim([-1 1]);
 ylim([-1 1]);
 xlabel('Image X minus Projected X (pixels)');
 ylabel('Image Y minus Projected Y (pixels)');
 title('Image Points Minus Projected Points (pixels)');
 
-figure(2)
-xgi = -1:0.05:1;
-ygi = -1:0.05:1;
+f2 = figure(2);
+set(f2,'units','normalize','position',[0 0 1 1])
+xgi = -1:0.05:1;dxgi = mean(diff(xgi));
+ygi = -1:0.05:1;dygi = mean(diff(xgi));
 H = heatmapscat(dx,dy,xgi,ygi);
 npts = sum(~isnan(dx(:)));
-pcolor(xgi,ygi,H/npts*100);shading flat
+pcolor(xgi-dxgi/2, ygi-dygi/2, H/npts*100);shading flat
 h = colorbar;
 ylabel(h,'Percentage of Points in Bin','fontsize',20);
 xlabel('Image X minus Projected X (pixels)');
@@ -52,7 +64,8 @@ title('Heatmap of Image Points Minus Projected Points (pixels)');
 %% correlation plots
 r = sqrt((Calibration.cx-proj_x).^2+(Calibration.cy-proj_y).^2);
 dr = sqrt(dx.^2+dy.^2);
-figure(3)
+f3 = figure(3);
+set(f3,'units','normalize','position',[0 0 1 1])
 
 subplot 421
 plot(proj_x,dx,'b.');grid on
@@ -115,7 +128,8 @@ title('delta radius plotted at projected points')
 iNames = dirname([outImDir '/*.png']);
 [~,ind]=max(sum(~isnan(dx)));
 I = imread(iNames{ind});
-figure(4)
+f4 = figure(4);
+set(f4,'units','normalize','position',[0 0 1 1])
 clf
 image(I)
 hold on
@@ -126,7 +140,8 @@ xlabel('Image X Coordinate (pixels)');
 ylabel('Image Y Coordinate (pixels)');
 title('All Points Detected for example Image');
 
-figure(5)
+f5 = figure(5);
+set(f5,'units','normalize','position',[0 0 1 1])
 clf
 [dmax,imax] = nanmax(sqrt(dx(:,ind).^2 + dx(:,ind).^2));
 [dmin,imin] = nanmin(sqrt(dx(:,ind).^2 + dx(:,ind).^2));
@@ -156,9 +171,21 @@ legend('Image Points','Projected Points')
 xlabel('Image X Coordinate (pixels)');
 ylabel('Image Y Coordinate (pixels)');
 title(sprintf('Least Accurate Image Detection(delta %.3f pixels)',dmax));
+%% Save Images
+mkdir(procFolder);
+mkdir([procFolder 'validatePhotogrammetry']);
+saveas(f1,[procFolder 'validatePhotogrammetry/alldeltas' num2str(whichtype) '.png'])
+saveas(f2,[procFolder 'validatePhotogrammetry/heatmapdeltas' num2str(whichtype) '.png'])
+saveas(f3,[procFolder 'validatePhotogrammetry/correlation' num2str(whichtype) '.png'])
+saveas(f4,[procFolder 'validatePhotogrammetry/examplePoints' num2str(whichtype) '.png'])
+saveas(f5,[procFolder 'validatePhotogrammetry/examplePointsZoom' num2str(whichtype) '.png'])
+%% Quit program
+if doexit
+   exit 
+end
 end
 
-function [proj_x,proj_y,image_x,image_y,dx,dy]=calcFiducial(outImDir,Trajectory,Fiducials,Calibration)
+function [proj_x,proj_y,image_x,image_y,dx,dy]=calcFiducial(outImDir,Trajectory,Fiducials,Calibration,whichtype)
 iNames = dirname([outImDir '/*.png']);
 NLOOPS = numel(Trajectory.names);
 NSKIPS = 1;
@@ -172,7 +199,7 @@ image_y = nan(Npts,NLOOPS);
 dx = nan(Npts,NLOOPS);
 dy = nan(Npts,NLOOPS);
 for iImage = 1:numel(Trajectory.names)
-    [image_xy] = detectFiducials(iNames{iImage},1);
+    [image_xy] = detectFiducials(iNames{iImage},whichtype);
     [projected_xy] = projectFiducials(Fiducials, ...
         Trajectory.T(iImage,:), Trajectory.R(iImage,:), Calibration);
     proj_x(:,iImage) = projected_xy(:,1);
@@ -254,4 +281,25 @@ else
 end
 xy = xy - 0.5;
 
+end
+function addHomePath(flag)
+homePath = getHomePath(flag);
+addpath(genpath([homePath '/matlab']))
+end
+
+function homePath = getHomePath(flag)
+
+curpath = pwd;
+foldername = 1;
+while ~isempty(foldername)
+   [dirname, foldername, ~] = fileparts(curpath);
+   if strcmp(foldername, flag)
+      homePath = [dirname '/' foldername];
+      break
+   end
+   curpath = dirname;
+end
+if isempty(foldername)
+   error('cant find home path'); 
+end
 end

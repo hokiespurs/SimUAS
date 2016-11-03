@@ -37,9 +37,8 @@ function [xy, inframe] = calcXYZtoPixel(markT, camT, camR, Calibration)
     inframePost = s>0 & x>0 & y>0 & x<Calibration.width & y<Calibration.height;
     inframe = inframePre & inframePost;
     
-    if sum(inframe)>0
-        x(:) = nan;
-        y(:) = nan;
-    end
+    x(~inframe)=nan;
+    y(~inframe)=nan;
+    
     xy = [x y];
 end
