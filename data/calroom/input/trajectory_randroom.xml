@@ -1,403 +1,403 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<extrinsics name = "TestCalRoom">
-	<pose name = "CenterPoint001">
-		<translation x = "-0.182872" y = "-3.093265" z = "-3.740589" />
-		<rotation x = "338.438694" y = "96.989592" z = "322.058399" />
-	</pose>
-	<pose name = "CenterPoint002">
-		<translation x = "-2.778627" y = "-3.777733" z = "-3.251383" />
-		<rotation x = "209.525105" y = "99.507956" z = "30.615916" />
-	</pose>
-	<pose name = "CenterPoint003">
-		<translation x = "0.974450" y = "2.038892" z = "-3.477026" />
-		<rotation x = "316.379514" y = "151.565561" z = "14.059722" />
-	</pose>
-	<pose name = "CenterPoint004">
-		<translation x = "0.352081" y = "-0.841196" z = "-0.386135" />
-		<rotation x = "304.104400" y = "22.351197" z = "61.138951" />
-	</pose>
-	<pose name = "CenterPoint005">
-		<translation x = "1.233099" y = "1.975508" z = "-0.996521" />
-		<rotation x = "325.941235" y = "50.253062" z = "316.131301" />
-	</pose>
-	<pose name = "CenterPoint006">
-		<translation x = "-2.843636" y = "-0.380761" z = "3.802800" />
-		<rotation x = "165.556896" y = "105.436669" z = "35.404860" />
-	</pose>
-	<pose name = "CenterPoint007">
-		<translation x = "2.012223" y = "-0.399306" z = "-2.656134" />
-		<rotation x = "196.684854" y = "174.527235" z = "151.598745" />
-	</pose>
-	<pose name = "CenterPoint008">
-		<translation x = "-2.223607" y = "-0.175420" z = "3.782301" />
-		<rotation x = "287.497293" y = "100.985439" z = "344.840231" />
-	</pose>
-	<pose name = "CenterPoint009">
-		<translation x = "0.154815" y = "-0.207969" z = "2.139799" />
-		<rotation x = "102.858787" y = "3.356512" z = "191.939503" />
-	</pose>
-	<pose name = "CenterPoint010">
-		<translation x = "2.282368" y = "2.425307" z = "2.593903" />
-		<rotation x = "176.491268" y = "144.113881" z = "249.075761" />
-	</pose>
-	<pose name = "CenterPoint011">
-		<translation x = "-3.821357" y = "-0.780860" z = "1.060927" />
-		<rotation x = "215.679711" y = "41.935369" z = "113.585627" />
-	</pose>
-	<pose name = "CenterPoint012">
-		<translation x = "-1.405100" y = "3.237489" z = "1.349862" />
-		<rotation x = "5.591979" y = "145.278935" z = "247.140334" />
-	</pose>
-	<pose name = "CenterPoint013">
-		<translation x = "2.983379" y = "-3.703512" z = "-0.184941" />
-		<rotation x = "213.653307" y = "69.814916" z = "300.465242" />
-	</pose>
-	<pose name = "CenterPoint014">
-		<translation x = "2.757677" y = "2.190995" z = "-3.894909" />
-		<rotation x = "156.123486" y = "155.437534" z = "6.583780" />
-	</pose>
-	<pose name = "CenterPoint015">
-		<translation x = "0.307525" y = "-2.994869" z = "-1.175951" />
-		<rotation x = "290.649790" y = "134.481896" z = "270.051953" />
-	</pose>
-	<pose name = "CenterPoint016">
-		<translation x = "2.932866" y = "0.948109" z = "-0.063426" />
-		<rotation x = "113.488129" y = "100.123242" z = "355.989992" />
-	</pose>
-	<pose name = "CenterPoint017">
-		<translation x = "3.598448" y = "-3.917086" z = "1.840730" />
-		<rotation x = "321.439935" y = "24.561941" z = "269.339636" />
-	</pose>
-	<pose name = "CenterPoint018">
-		<translation x = "2.611256" y = "0.309018" z = "-0.250973" />
-		<rotation x = "208.028598" y = "10.785184" z = "100.959837" />
-	</pose>
-	<pose name = "CenterPoint019">
-		<translation x = "2.832924" y = "-3.975856" z = "-0.340761" />
-		<rotation x = "66.243673" y = "21.841822" z = "284.140558" />
-	</pose>
-	<pose name = "CenterPoint020">
-		<translation x = "-3.210053" y = "3.609550" z = "-2.898698" />
-		<rotation x = "283.654524" y = "8.019338" z = "37.161362" />
-	</pose>
-	<pose name = "CenterPoint021">
-		<translation x = "1.210435" y = "3.243216" z = "-3.912890" />
-		<rotation x = "220.331224" y = "19.348943" z = "161.241669" />
-	</pose>
-	<pose name = "CenterPoint022">
-		<translation x = "1.628136" y = "2.367736" z = "2.066226" />
-		<rotation x = "19.407338" y = "40.627681" z = "327.094381" />
-	</pose>
-	<pose name = "CenterPoint023">
-		<translation x = "0.881927" y = "3.322195" z = "-1.440377" />
-		<rotation x = "151.269725" y = "128.338016" z = "105.701093" />
-	</pose>
-	<pose name = "CenterPoint024">
-		<translation x = "2.396922" y = "-2.835534" z = "3.875068" />
-		<rotation x = "244.464781" y = "100.749057" z = "103.599122" />
-	</pose>
-	<pose name = "CenterPoint025">
-		<translation x = "-3.723430" y = "-2.738159" z = "-2.238126" />
-		<rotation x = "330.696640" y = "2.260076" z = "46.810286" />
-	</pose>
-	<pose name = "CenterPoint026">
-		<translation x = "2.161910" y = "-2.498947" z = "-1.290336" />
-		<rotation x = "0.144729" y = "12.955370" z = "6.972105" />
+<trajectory name = "TestCalRoom">
+	<pose name = "CenterPoint001" t = "1">
+		<translation x = "-1.284601" y = "3.106753" z = "1.425754" />
+		<rotation x = "143.763536" y = "60.500989" z = "29.253193" />
+	</pose>
+	<pose name = "CenterPoint002" t = "2">
+		<translation x = "3.302895" y = "3.585638" z = "-2.272729" />
+		<rotation x = "178.430921" y = "108.353588" z = "165.969369" />
+	</pose>
+	<pose name = "CenterPoint003" t = "3">
+		<translation x = "-2.358881" y = "3.181960" z = "0.969351" />
+		<rotation x = "351.349573" y = "172.436155" z = "271.077074" />
+	</pose>
+	<pose name = "CenterPoint004" t = "4">
+		<translation x = "1.852113" y = "1.237026" z = "2.209425" />
+		<rotation x = "192.230307" y = "138.516364" z = "239.461830" />
+	</pose>
+	<pose name = "CenterPoint005" t = "5">
+		<translation x = "2.672022" y = "-0.402006" z = "-3.957548" />
+		<rotation x = "41.138167" y = "149.222297" z = "11.696763" />
+	</pose>
+	<pose name = "CenterPoint006" t = "6">
+		<translation x = "-2.188932" y = "-1.109539" z = "0.838671" />
+		<rotation x = "145.752882" y = "43.689330" z = "93.693572" />
+	</pose>
+	<pose name = "CenterPoint007" t = "7">
+		<translation x = "-2.731568" y = "-1.439943" z = "-3.469101" />
+		<rotation x = "59.973592" y = "108.708185" z = "11.154162" />
+	</pose>
+	<pose name = "CenterPoint008" t = "8">
+		<translation x = "3.088632" y = "3.071352" z = "-2.209002" />
+		<rotation x = "170.953467" y = "23.853577" z = "111.280984" />
+	</pose>
+	<pose name = "CenterPoint009" t = "9">
+		<translation x = "1.472228" y = "-0.942429" z = "-1.987967" />
+		<rotation x = "149.488694" y = "12.023646" z = "181.394489" />
+	</pose>
+	<pose name = "CenterPoint010" t = "10">
+		<translation x = "0.658951" y = "2.400160" z = "2.620548" />
+		<rotation x = "17.375540" y = "151.073890" z = "170.901263" />
+	</pose>
+	<pose name = "CenterPoint011" t = "11">
+		<translation x = "1.124003" y = "-1.627241" z = "2.050078" />
+		<rotation x = "257.554430" y = "129.085055" z = "191.804477" />
+	</pose>
+	<pose name = "CenterPoint012" t = "12">
+		<translation x = "-3.773193" y = "2.685496" z = "-3.247810" />
+		<rotation x = "30.976161" y = "113.324640" z = "294.825778" />
+	</pose>
+	<pose name = "CenterPoint013" t = "13">
+		<translation x = "3.129809" y = "2.466853" z = "-0.918382" />
+		<rotation x = "267.755734" y = "37.350353" z = "191.982373" />
+	</pose>
+	<pose name = "CenterPoint014" t = "14">
+		<translation x = "-1.815599" y = "3.182431" z = "3.988477" />
+		<rotation x = "68.504466" y = "104.055564" z = "164.916965" />
+	</pose>
+	<pose name = "CenterPoint015" t = "15">
+		<translation x = "-1.381143" y = "-3.247125" z = "0.496854" />
+		<rotation x = "342.774869" y = "84.786420" z = "270.801960" />
+	</pose>
+	<pose name = "CenterPoint016" t = "16">
+		<translation x = "0.691137" y = "0.163725" z = "-0.194485" />
+		<rotation x = "164.691445" y = "12.526819" z = "58.008342" />
+	</pose>
+	<pose name = "CenterPoint017" t = "17">
+		<translation x = "-2.663856" y = "1.928908" z = "3.515216" />
+		<rotation x = "77.339888" y = "86.527084" z = "289.968725" />
+	</pose>
+	<pose name = "CenterPoint018" t = "18">
+		<translation x = "-1.168023" y = "1.576791" z = "2.996630" />
+		<rotation x = "196.261649" y = "16.952824" z = "268.196091" />
+	</pose>
+	<pose name = "CenterPoint019" t = "19">
+		<translation x = "3.767752" y = "1.684038" z = "-2.968796" />
+		<rotation x = "221.034961" y = "42.150584" z = "229.655229" />
+	</pose>
+	<pose name = "CenterPoint020" t = "20">
+		<translation x = "1.659493" y = "-3.446876" z = "-1.361049" />
+		<rotation x = "307.764092" y = "137.510077" z = "252.863368" />
+	</pose>
+	<pose name = "CenterPoint021" t = "21">
+		<translation x = "1.253088" y = "0.959221" z = "-0.121653" />
+		<rotation x = "288.521198" y = "35.291436" z = "60.841398" />
+	</pose>
+	<pose name = "CenterPoint022" t = "22">
+		<translation x = "1.034944" y = "2.662995" z = "-3.446890" />
+		<rotation x = "185.908218" y = "54.531408" z = "297.925272" />
+	</pose>
+	<pose name = "CenterPoint023" t = "23">
+		<translation x = "-1.670463" y = "1.799084" z = "1.175665" />
+		<rotation x = "138.903180" y = "79.130316" z = "80.304218" />
+	</pose>
+	<pose name = "CenterPoint024" t = "24">
+		<translation x = "-1.831110" y = "2.593078" z = "-2.949099" />
+		<rotation x = "6.469923" y = "133.593590" z = "131.737665" />
+	</pose>
+	<pose name = "CenterPoint025" t = "25">
+		<translation x = "0.668338" y = "-3.999656" z = "-3.919368" />
+		<rotation x = "120.976267" y = "32.048768" z = "111.166747" />
+	</pose>
+	<pose name = "CenterPoint026" t = "26">
+		<translation x = "1.079275" y = "0.224263" z = "1.288124" />
+		<rotation x = "258.325355" y = "98.349554" z = "113.901700" />
 	</pose>
-	<pose name = "CenterPoint027">
-		<translation x = "1.853829" y = "0.979967" z = "0.191169" />
-		<rotation x = "351.633294" y = "174.109739" z = "244.380792" />
+	<pose name = "CenterPoint027" t = "27">
+		<translation x = "-0.607156" y = "3.997629" z = "0.617249" />
+		<rotation x = "247.510991" y = "105.149110" z = "63.154647" />
 	</pose>
-	<pose name = "CenterPoint028">
-		<translation x = "-1.922413" y = "3.246476" z = "2.039132" />
-		<rotation x = "135.568913" y = "102.258083" z = "76.186122" />
+	<pose name = "CenterPoint028" t = "28">
+		<translation x = "2.257444" y = "2.373436" z = "0.496530" />
+		<rotation x = "16.578818" y = "100.510181" z = "53.702571" />
 	</pose>
-	<pose name = "CenterPoint029">
-		<translation x = "-1.943446" y = "3.919641" z = "-0.289138" />
-		<rotation x = "350.562074" y = "36.592782" z = "95.596797" />
+	<pose name = "CenterPoint029" t = "29">
+		<translation x = "1.116398" y = "-3.246552" z = "1.830139" />
+		<rotation x = "312.594930" y = "139.608404" z = "41.398452" />
 	</pose>
-	<pose name = "CenterPoint030">
-		<translation x = "1.058427" y = "1.688980" z = "-3.001420" />
-		<rotation x = "217.697796" y = "45.418634" z = "176.966337" />
+	<pose name = "CenterPoint030" t = "30">
+		<translation x = "2.634656" y = "3.096431" z = "-0.546435" />
+		<rotation x = "217.022653" y = "145.740102" z = "180.159557" />
 	</pose>
-	<pose name = "CenterPoint031">
-		<translation x = "-1.237620" y = "1.854403" z = "-1.499989" />
-		<rotation x = "298.384491" y = "133.888654" z = "19.210516" />
+	<pose name = "CenterPoint031" t = "31">
+		<translation x = "1.042895" y = "-0.742758" z = "2.153654" />
+		<rotation x = "210.431180" y = "164.234976" z = "166.564246" />
 	</pose>
-	<pose name = "CenterPoint032">
-		<translation x = "2.372709" y = "3.274346" z = "0.036153" />
-		<rotation x = "206.896142" y = "35.177307" z = "206.682338" />
+	<pose name = "CenterPoint032" t = "32">
+		<translation x = "-0.882057" y = "-0.794881" z = "-2.556977" />
+		<rotation x = "206.597236" y = "175.244412" z = "67.542813" />
 	</pose>
-	<pose name = "CenterPoint033">
-		<translation x = "-0.430830" y = "-0.793010" z = "1.390792" />
-		<rotation x = "226.107431" y = "104.644607" z = "52.822287" />
+	<pose name = "CenterPoint033" t = "33">
+		<translation x = "-2.094798" y = "0.271223" z = "2.594403" />
+		<rotation x = "4.736334" y = "33.380458" z = "288.172226" />
 	</pose>
-	<pose name = "CenterPoint034">
-		<translation x = "2.261995" y = "-2.001195" z = "2.161200" />
-		<rotation x = "102.807461" y = "174.603598" z = "212.149993" />
+	<pose name = "CenterPoint034" t = "34">
+		<translation x = "1.511518" y = "1.321428" z = "-2.343311" />
+		<rotation x = "1.488616" y = "108.636712" z = "22.292329" />
 	</pose>
-	<pose name = "CenterPoint035">
-		<translation x = "3.923774" y = "-2.612559" z = "-2.957314" />
-		<rotation x = "211.260003" y = "152.429184" z = "251.913010" />
+	<pose name = "CenterPoint035" t = "35">
+		<translation x = "1.389527" y = "3.777764" z = "1.308982" />
+		<rotation x = "295.002900" y = "147.337795" z = "328.262289" />
 	</pose>
-	<pose name = "CenterPoint036">
-		<translation x = "-1.598013" y = "-3.044344" z = "-3.816679" />
-		<rotation x = "270.007835" y = "43.172597" z = "36.840394" />
+	<pose name = "CenterPoint036" t = "36">
+		<translation x = "-1.695836" y = "-1.730014" z = "-1.690051" />
+		<rotation x = "133.305369" y = "139.110172" z = "150.607956" />
 	</pose>
-	<pose name = "CenterPoint037">
-		<translation x = "-2.855953" y = "2.500885" z = "0.152659" />
-		<rotation x = "308.992981" y = "88.878549" z = "149.060156" />
+	<pose name = "CenterPoint037" t = "37">
+		<translation x = "-1.679076" y = "-2.370495" z = "-2.178823" />
+		<rotation x = "34.292378" y = "25.716019" z = "220.434285" />
 	</pose>
-	<pose name = "CenterPoint038">
-		<translation x = "3.210467" y = "-2.825661" z = "2.479910" />
-		<rotation x = "271.829588" y = "111.592029" z = "249.984057" />
+	<pose name = "CenterPoint038" t = "38">
+		<translation x = "1.502934" y = "2.789569" z = "-3.710839" />
+		<rotation x = "290.099883" y = "124.071601" z = "326.289277" />
 	</pose>
-	<pose name = "CenterPoint039">
-		<translation x = "0.332475" y = "-1.885620" z = "-3.899170" />
-		<rotation x = "251.300609" y = "149.216562" z = "149.104537" />
+	<pose name = "CenterPoint039" t = "39">
+		<translation x = "2.601926" y = "0.277954" z = "-1.197745" />
+		<rotation x = "331.459580" y = "133.807556" z = "242.180607" />
 	</pose>
-	<pose name = "CenterPoint040">
-		<translation x = "3.797923" y = "2.552713" z = "1.379759" />
-		<rotation x = "311.212595" y = "28.222451" z = "17.983245" />
+	<pose name = "CenterPoint040" t = "40">
+		<translation x = "-1.218260" y = "-0.705095" z = "2.883015" />
+		<rotation x = "79.866073" y = "151.780322" z = "174.108511" />
 	</pose>
-	<pose name = "CenterPoint041">
-		<translation x = "1.092835" y = "-1.515302" z = "1.494466" />
-		<rotation x = "116.165159" y = "3.343716" z = "192.922706" />
+	<pose name = "CenterPoint041" t = "41">
+		<translation x = "0.238654" y = "-2.192060" z = "2.841847" />
+		<rotation x = "309.927087" y = "157.369818" z = "179.145919" />
 	</pose>
-	<pose name = "CenterPoint042">
-		<translation x = "3.951304" y = "3.859340" z = "-0.406026" />
-		<rotation x = "241.483965" y = "12.603986" z = "238.966072" />
+	<pose name = "CenterPoint042" t = "42">
+		<translation x = "2.344527" y = "-3.338912" z = "2.369909" />
+		<rotation x = "173.692319" y = "68.599269" z = "233.985664" />
 	</pose>
-	<pose name = "CenterPoint043">
-		<translation x = "0.368566" y = "-1.866890" z = "3.318309" />
-		<rotation x = "162.314617" y = "87.542120" z = "185.360080" />
+	<pose name = "CenterPoint043" t = "43">
+		<translation x = "1.286459" y = "1.710724" z = "3.514232" />
+		<rotation x = "3.210360" y = "97.376006" z = "167.070499" />
 	</pose>
-	<pose name = "CenterPoint044">
-		<translation x = "0.211407" y = "0.269227" z = "1.154889" />
-		<rotation x = "137.556991" y = "109.139303" z = "340.054112" />
+	<pose name = "CenterPoint044" t = "44">
+		<translation x = "-1.708757" y = "1.580379" z = "-3.923528" />
+		<rotation x = "11.438915" y = "6.684017" z = "340.880803" />
 	</pose>
-	<pose name = "CenterPoint045">
-		<translation x = "-2.916577" y = "-1.484264" z = "-3.958081" />
-		<rotation x = "147.892086" y = "102.393259" z = "211.159815" />
+	<pose name = "CenterPoint045" t = "45">
+		<translation x = "-3.036951" y = "-1.436305" z = "3.807894" />
+		<rotation x = "99.570213" y = "32.611424" z = "17.756174" />
 	</pose>
-	<pose name = "CenterPoint046">
-		<translation x = "-1.154359" y = "3.286183" z = "-0.124572" />
-		<rotation x = "144.532650" y = "57.125234" z = "325.224690" />
+	<pose name = "CenterPoint046" t = "46">
+		<translation x = "-1.312112" y = "1.808044" z = "-3.545171" />
+		<rotation x = "70.834862" y = "154.299099" z = "222.294415" />
 	</pose>
-	<pose name = "CenterPoint047">
-		<translation x = "-3.790251" y = "-1.067547" z = "2.874542" />
-		<rotation x = "114.258221" y = "177.950908" z = "49.490893" />
+	<pose name = "CenterPoint047" t = "47">
+		<translation x = "2.539026" y = "0.259536" z = "2.569095" />
+		<rotation x = "19.613642" y = "121.064219" z = "2.548899" />
 	</pose>
-	<pose name = "CenterPoint048">
-		<translation x = "-2.716839" y = "-0.531261" z = "2.643197" />
-		<rotation x = "223.890972" y = "104.354139" z = "50.139485" />
+	<pose name = "CenterPoint048" t = "48">
+		<translation x = "-0.055433" y = "-3.023165" z = "0.208550" />
+		<rotation x = "138.432069" y = "54.209470" z = "219.812819" />
 	</pose>
-	<pose name = "CenterPoint049">
-		<translation x = "1.965098" y = "0.098342" z = "1.193234" />
-		<rotation x = "154.889017" y = "68.425411" z = "290.660864" />
+	<pose name = "CenterPoint049" t = "49">
+		<translation x = "-3.635548" y = "2.342880" z = "-1.570946" />
+		<rotation x = "260.400655" y = "119.588430" z = "252.530308" />
 	</pose>
-	<pose name = "CenterPoint050">
-		<translation x = "-3.756802" y = "3.511092" z = "1.389587" />
-		<rotation x = "350.568748" y = "99.170679" z = "143.163661" />
+	<pose name = "CenterPoint050" t = "50">
+		<translation x = "0.504298" y = "-2.613327" z = "-2.773856" />
+		<rotation x = "226.028824" y = "127.600318" z = "120.143622" />
 	</pose>
-	<pose name = "CenterPoint051">
-		<translation x = "-1.067655" y = "-3.752408" z = "0.627997" />
-		<rotation x = "244.008321" y = "134.160198" z = "59.527511" />
+	<pose name = "CenterPoint051" t = "51">
+		<translation x = "-1.716963" y = "1.132236" z = "0.662103" />
+		<rotation x = "318.351696" y = "43.377184" z = "47.976612" />
 	</pose>
-	<pose name = "CenterPoint052">
-		<translation x = "2.898770" y = "1.735029" z = "-1.807042" />
-		<rotation x = "71.485160" y = "120.461921" z = "333.903089" />
+	<pose name = "CenterPoint052" t = "52">
+		<translation x = "-0.984519" y = "3.446908" z = "-3.207167" />
+		<rotation x = "259.542086" y = "133.541732" z = "4.352579" />
 	</pose>
-	<pose name = "CenterPoint053">
-		<translation x = "1.541422" y = "3.128152" z = "0.484240" />
-		<rotation x = "153.612363" y = "47.685520" z = "125.195710" />
+	<pose name = "CenterPoint053" t = "53">
+		<translation x = "0.301710" y = "3.149659" z = "2.131464" />
+		<rotation x = "281.898215" y = "151.165194" z = "319.597507" />
 	</pose>
-	<pose name = "CenterPoint054">
-		<translation x = "1.527537" y = "-3.781702" z = "1.373838" />
-		<rotation x = "123.604646" y = "11.940270" z = "270.292357" />
+	<pose name = "CenterPoint054" t = "54">
+		<translation x = "-2.278779" y = "-2.985582" z = "0.961793" />
+		<rotation x = "6.419435" y = "75.674863" z = "68.857857" />
 	</pose>
-	<pose name = "CenterPoint055">
-		<translation x = "-2.490906" y = "0.176410" z = "-1.180563" />
-		<rotation x = "287.149969" y = "66.615156" z = "261.359275" />
+	<pose name = "CenterPoint055" t = "55">
+		<translation x = "-2.098099" y = "-3.726221" z = "0.783908" />
+		<rotation x = "40.256473" y = "24.286063" z = "333.742503" />
 	</pose>
-	<pose name = "CenterPoint056">
-		<translation x = "-0.464766" y = "-1.392082" z = "2.846627" />
-		<rotation x = "316.799384" y = "113.349151" z = "317.990193" />
+	<pose name = "CenterPoint056" t = "56">
+		<translation x = "-1.263548" y = "2.243327" z = "-1.747423" />
+		<rotation x = "210.647974" y = "148.103251" z = "291.435839" />
 	</pose>
-	<pose name = "CenterPoint057">
-		<translation x = "0.652619" y = "2.875915" z = "-2.439700" />
-		<rotation x = "325.383104" y = "37.831322" z = "224.521995" />
+	<pose name = "CenterPoint057" t = "57">
+		<translation x = "-0.701030" y = "2.174066" z = "-0.217154" />
+		<rotation x = "344.830069" y = "149.191091" z = "121.309427" />
 	</pose>
-	<pose name = "CenterPoint058">
-		<translation x = "3.918014" y = "0.468132" z = "1.978566" />
-		<rotation x = "238.579132" y = "135.496000" z = "270.339276" />
+	<pose name = "CenterPoint058" t = "58">
+		<translation x = "-0.765057" y = "-3.635634" z = "-0.146412" />
+		<rotation x = "174.611778" y = "98.727710" z = "34.153673" />
 	</pose>
-	<pose name = "CenterPoint059">
-		<translation x = "-2.368750" y = "1.521823" z = "-1.683178" />
-		<rotation x = "97.274974" y = "11.976567" z = "125.603403" />
+	<pose name = "CenterPoint059" t = "59">
+		<translation x = "-3.224172" y = "-0.586775" z = "-2.248035" />
+		<rotation x = "112.974731" y = "146.885161" z = "265.785864" />
 	</pose>
-	<pose name = "CenterPoint060">
-		<translation x = "-2.018137" y = "-0.377172" z = "2.190394" />
-		<rotation x = "90.852013" y = "46.856718" z = "97.174041" />
+	<pose name = "CenterPoint060" t = "60">
+		<translation x = "3.855970" y = "2.433572" z = "1.921548" />
+		<rotation x = "321.530819" y = "100.519924" z = "62.302397" />
 	</pose>
-	<pose name = "CenterPoint061">
-		<translation x = "-1.902615" y = "1.026472" z = "-0.578101" />
-		<rotation x = "307.763259" y = "144.855821" z = "322.519039" />
+	<pose name = "CenterPoint061" t = "61">
+		<translation x = "2.982634" y = "0.959728" z = "2.311831" />
+		<rotation x = "255.157535" y = "142.903987" z = "182.616797" />
 	</pose>
-	<pose name = "CenterPoint062">
-		<translation x = "2.001379" y = "-1.679225" z = "2.461587" />
-		<rotation x = "189.977273" y = "34.818171" z = "154.112828" />
+	<pose name = "CenterPoint062" t = "62">
+		<translation x = "-2.902473" y = "3.127972" z = "-2.613289" />
+		<rotation x = "252.896666" y = "31.018191" z = "44.610337" />
 	</pose>
-	<pose name = "CenterPoint063">
-		<translation x = "-0.344197" y = "-3.925211" z = "-1.171721" />
-		<rotation x = "288.777990" y = "115.102959" z = "347.342417" />
+	<pose name = "CenterPoint063" t = "63">
+		<translation x = "-0.505678" y = "-3.716284" z = "-3.143923" />
+		<rotation x = "55.348698" y = "52.650853" z = "284.929985" />
 	</pose>
-	<pose name = "CenterPoint064">
-		<translation x = "-3.544564" y = "0.614047" z = "-2.290454" />
-		<rotation x = "206.095866" y = "94.440656" z = "238.838939" />
+	<pose name = "CenterPoint064" t = "64">
+		<translation x = "1.698390" y = "-1.092475" z = "-2.816680" />
+		<rotation x = "329.150867" y = "151.442802" z = "228.188961" />
 	</pose>
-	<pose name = "CenterPoint065">
-		<translation x = "0.068130" y = "-1.508446" z = "2.138276" />
-		<rotation x = "263.931309" y = "166.465435" z = "223.810459" />
+	<pose name = "CenterPoint065" t = "65">
+		<translation x = "-0.382737" y = "-3.021399" z = "-3.575388" />
+		<rotation x = "10.945901" y = "172.798768" z = "233.440156" />
 	</pose>
-	<pose name = "CenterPoint066">
-		<translation x = "-2.304319" y = "0.138141" z = "-1.530864" />
-		<rotation x = "186.844186" y = "47.393419" z = "41.308550" />
+	<pose name = "CenterPoint066" t = "66">
+		<translation x = "-1.151221" y = "0.685877" z = "1.371581" />
+		<rotation x = "296.095407" y = "64.479218" z = "44.950964" />
 	</pose>
-	<pose name = "CenterPoint067">
-		<translation x = "2.388834" y = "3.331247" z = "1.865961" />
-		<rotation x = "277.518208" y = "11.872996" z = "341.816133" />
+	<pose name = "CenterPoint067" t = "67">
+		<translation x = "2.080044" y = "2.733106" z = "2.067924" />
+		<rotation x = "229.185801" y = "34.828094" z = "172.480967" />
 	</pose>
-	<pose name = "CenterPoint068">
-		<translation x = "-1.621349" y = "-0.588202" z = "1.955785" />
-		<rotation x = "204.788877" y = "132.311873" z = "161.968368" />
+	<pose name = "CenterPoint068" t = "68">
+		<translation x = "-2.659277" y = "-1.072261" z = "-2.225605" />
+		<rotation x = "24.349645" y = "173.837594" z = "318.087174" />
 	</pose>
-	<pose name = "CenterPoint069">
-		<translation x = "-3.779152" y = "-2.020832" z = "-2.228826" />
-		<rotation x = "167.655556" y = "138.992045" z = "208.220261" />
+	<pose name = "CenterPoint069" t = "69">
+		<translation x = "-2.935859" y = "3.625712" z = "-1.793192" />
+		<rotation x = "315.710735" y = "143.419794" z = "304.368116" />
 	</pose>
-	<pose name = "CenterPoint070">
-		<translation x = "0.747460" y = "-1.029650" z = "-2.287103" />
-		<rotation x = "123.368007" y = "163.406853" z = "146.929249" />
+	<pose name = "CenterPoint070" t = "70">
+		<translation x = "-0.768117" y = "1.432535" z = "-1.428720" />
+		<rotation x = "97.356135" y = "15.284098" z = "292.864019" />
 	</pose>
-	<pose name = "CenterPoint071">
-		<translation x = "2.750723" y = "3.454889" z = "-2.408417" />
-		<rotation x = "24.555365" y = "167.754972" z = "85.329713" />
+	<pose name = "CenterPoint071" t = "71">
+		<translation x = "-0.064111" y = "-3.024419" z = "3.457626" />
+		<rotation x = "355.603346" y = "74.109570" z = "296.713076" />
 	</pose>
-	<pose name = "CenterPoint072">
-		<translation x = "-0.951871" y = "3.494947" z = "-2.859853" />
-		<rotation x = "136.052705" y = "2.511283" z = "325.216627" />
+	<pose name = "CenterPoint072" t = "72">
+		<translation x = "1.047002" y = "-1.463058" z = "1.548897" />
+		<rotation x = "206.422800" y = "37.146205" z = "174.609228" />
 	</pose>
-	<pose name = "CenterPoint073">
-		<translation x = "1.998866" y = "2.754640" z = "-0.983339" />
-		<rotation x = "28.665388" y = "42.185176" z = "206.524615" />
+	<pose name = "CenterPoint073" t = "73">
+		<translation x = "-2.060817" y = "1.681769" z = "-3.871472" />
+		<rotation x = "337.232414" y = "168.948831" z = "355.400820" />
 	</pose>
-	<pose name = "CenterPoint074">
-		<translation x = "0.089132" y = "3.361652" z = "-3.786977" />
-		<rotation x = "353.814161" y = "111.020104" z = "1.033318" />
+	<pose name = "CenterPoint074" t = "74">
+		<translation x = "2.529173" y = "3.741978" z = "0.184938" />
+		<rotation x = "18.331743" y = "94.465794" z = "152.869974" />
 	</pose>
-	<pose name = "CenterPoint075">
-		<translation x = "0.327614" y = "-2.176798" z = "-3.112637" />
-		<rotation x = "65.380626" y = "170.822938" z = "222.172169" />
+	<pose name = "CenterPoint075" t = "75">
+		<translation x = "-1.199687" y = "2.751273" z = "-1.948498" />
+		<rotation x = "341.167328" y = "142.007155" z = "156.846680" />
 	</pose>
-	<pose name = "CenterPoint076">
-		<translation x = "3.675475" y = "-3.300142" z = "1.396512" />
-		<rotation x = "292.269131" y = "171.031701" z = "117.592165" />
+	<pose name = "CenterPoint076" t = "76">
+		<translation x = "-0.878877" y = "3.536175" z = "2.309524" />
+		<rotation x = "266.083675" y = "25.326906" z = "150.821668" />
 	</pose>
-	<pose name = "CenterPoint077">
-		<translation x = "2.431687" y = "-2.181522" z = "2.398212" />
-		<rotation x = "314.986192" y = "100.197574" z = "189.740917" />
+	<pose name = "CenterPoint077" t = "77">
+		<translation x = "2.390655" y = "0.868856" z = "1.687782" />
+		<rotation x = "236.209467" y = "168.753582" z = "215.579198" />
 	</pose>
-	<pose name = "CenterPoint078">
-		<translation x = "-3.741415" y = "-1.484987" z = "-3.355764" />
-		<rotation x = "247.828771" y = "164.809143" z = "318.939156" />
+	<pose name = "CenterPoint078" t = "78">
+		<translation x = "-1.629246" y = "3.870122" z = "-1.869638" />
+		<rotation x = "171.502006" y = "27.150216" z = "353.323683" />
 	</pose>
-	<pose name = "CenterPoint079">
-		<translation x = "1.675098" y = "-2.601873" z = "-2.146382" />
-		<rotation x = "205.017989" y = "115.481918" z = "128.617114" />
+	<pose name = "CenterPoint079" t = "79">
+		<translation x = "-1.230315" y = "-1.667671" z = "-0.956205" />
+		<rotation x = "101.320759" y = "151.726964" z = "275.612083" />
 	</pose>
-	<pose name = "CenterPoint080">
-		<translation x = "-0.279988" y = "0.856753" z = "-2.338995" />
-		<rotation x = "57.949717" y = "70.201389" z = "327.072654" />
+	<pose name = "CenterPoint080" t = "80">
+		<translation x = "2.179273" y = "-3.990647" z = "-3.754584" />
+		<rotation x = "245.332691" y = "71.501847" z = "32.788245" />
 	</pose>
-	<pose name = "CenterPoint081">
-		<translation x = "3.580392" y = "-0.691309" z = "3.338669" />
-		<rotation x = "168.076808" y = "87.478320" z = "224.409642" />
+	<pose name = "CenterPoint081" t = "81">
+		<translation x = "-2.721300" y = "1.880996" z = "-0.587033" />
+		<rotation x = "191.587741" y = "76.560595" z = "163.914008" />
 	</pose>
-	<pose name = "CenterPoint082">
-		<translation x = "-2.228538" y = "2.530812" z = "1.690516" />
-		<rotation x = "124.261938" y = "108.775887" z = "5.695647" />
+	<pose name = "CenterPoint082" t = "82">
+		<translation x = "2.562948" y = "-1.660527" z = "-0.018450" />
+		<rotation x = "299.537076" y = "172.445022" z = "52.877005" />
 	</pose>
-	<pose name = "CenterPoint083">
-		<translation x = "-1.863424" y = "-2.518957" z = "0.431077" />
-		<rotation x = "81.014385" y = "98.918626" z = "334.597404" />
+	<pose name = "CenterPoint083" t = "83">
+		<translation x = "-3.368710" y = "-2.979270" z = "3.419698" />
+		<rotation x = "105.094109" y = "72.846987" z = "281.197389" />
 	</pose>
-	<pose name = "CenterPoint084">
-		<translation x = "-3.348208" y = "1.615012" z = "-1.563856" />
-		<rotation x = "213.304273" y = "166.712657" z = "248.722890" />
+	<pose name = "CenterPoint084" t = "84">
+		<translation x = "-0.111323" y = "2.384326" z = "0.926623" />
+		<rotation x = "43.565000" y = "79.510673" z = "46.683039" />
 	</pose>
-	<pose name = "CenterPoint085">
-		<translation x = "-0.571049" y = "-2.077155" z = "2.678832" />
-		<rotation x = "112.417142" y = "165.372018" z = "359.036226" />
+	<pose name = "CenterPoint085" t = "85">
+		<translation x = "-1.814033" y = "-2.502827" z = "-3.812573" />
+		<rotation x = "309.541685" y = "147.057764" z = "312.498790" />
 	</pose>
-	<pose name = "CenterPoint086">
-		<translation x = "-3.127850" y = "0.593753" z = "-0.517552" />
-		<rotation x = "329.869999" y = "71.077610" z = "62.042583" />
+	<pose name = "CenterPoint086" t = "86">
+		<translation x = "2.960328" y = "-3.293395" z = "0.240975" />
+		<rotation x = "17.553933" y = "173.941742" z = "133.736883" />
 	</pose>
-	<pose name = "CenterPoint087">
-		<translation x = "1.070294" y = "-1.208099" z = "3.387650" />
-		<rotation x = "327.468789" y = "173.387255" z = "49.368870" />
+	<pose name = "CenterPoint087" t = "87">
+		<translation x = "-3.797661" y = "-1.363249" z = "-0.930714" />
+		<rotation x = "204.966221" y = "68.506343" z = "167.703744" />
 	</pose>
-	<pose name = "CenterPoint088">
-		<translation x = "2.423706" y = "-3.544285" z = "1.648414" />
-		<rotation x = "92.562586" y = "31.312020" z = "335.734367" />
+	<pose name = "CenterPoint088" t = "88">
+		<translation x = "2.884026" y = "-3.361697" z = "-0.353179" />
+		<rotation x = "333.744266" y = "102.339123" z = "116.427772" />
 	</pose>
-	<pose name = "CenterPoint089">
-		<translation x = "1.574404" y = "-2.169491" z = "-0.175750" />
-		<rotation x = "39.920868" y = "22.739313" z = "250.854538" />
+	<pose name = "CenterPoint089" t = "89">
+		<translation x = "3.935630" y = "0.128170" z = "0.386230" />
+		<rotation x = "31.530661" y = "116.391541" z = "86.694687" />
 	</pose>
-	<pose name = "CenterPoint090">
-		<translation x = "2.129691" y = "1.312820" z = "-2.990319" />
-		<rotation x = "69.466584" y = "24.314248" z = "23.760062" />
+	<pose name = "CenterPoint090" t = "90">
+		<translation x = "1.884628" y = "1.873276" z = "1.297546" />
+		<rotation x = "315.858648" y = "87.663769" z = "70.245388" />
 	</pose>
-	<pose name = "CenterPoint091">
-		<translation x = "-1.260367" y = "-0.021999" z = "3.808348" />
-		<rotation x = "179.850301" y = "91.019190" z = "271.966699" />
+	<pose name = "CenterPoint091" t = "91">
+		<translation x = "2.638262" y = "-0.526184" z = "3.177663" />
+		<rotation x = "66.006910" y = "57.923759" z = "70.301884" />
 	</pose>
-	<pose name = "CenterPoint092">
-		<translation x = "2.766812" y = "0.152128" z = "-2.721331" />
-		<rotation x = "262.290840" y = "3.874465" z = "271.395428" />
+	<pose name = "CenterPoint092" t = "92">
+		<translation x = "2.398569" y = "-0.404037" z = "1.665482" />
+		<rotation x = "249.589637" y = "61.991019" z = "160.886908" />
 	</pose>
-	<pose name = "CenterPoint093">
-		<translation x = "-0.569850" y = "-2.602239" z = "-2.379183" />
-		<rotation x = "74.949998" y = "170.634638" z = "332.288833" />
+	<pose name = "CenterPoint093" t = "93">
+		<translation x = "3.652906" y = "-3.821543" z = "-2.742585" />
+		<rotation x = "154.972374" y = "108.501459" z = "332.494535" />
 	</pose>
-	<pose name = "CenterPoint094">
-		<translation x = "2.592079" y = "0.565727" z = "-0.550546" />
-		<rotation x = "89.292081" y = "148.880785" z = "256.148913" />
+	<pose name = "CenterPoint094" t = "94">
+		<translation x = "-3.004368" y = "0.304532" z = "3.120773" />
+		<rotation x = "173.483596" y = "83.040347" z = "103.022546" />
 	</pose>
-	<pose name = "CenterPoint095">
-		<translation x = "1.011969" y = "3.974027" z = "-0.766385" />
-		<rotation x = "306.601875" y = "2.703417" z = "44.737546" />
+	<pose name = "CenterPoint095" t = "95">
+		<translation x = "-0.055040" y = "3.183290" z = "1.636262" />
+		<rotation x = "315.894342" y = "87.393352" z = "144.851057" />
 	</pose>
-	<pose name = "CenterPoint096">
-		<translation x = "-2.852616" y = "2.534681" z = "-2.825988" />
-		<rotation x = "149.705539" y = "31.715326" z = "7.156848" />
+	<pose name = "CenterPoint096" t = "96">
+		<translation x = "-1.210643" y = "-0.128229" z = "-2.118311" />
+		<rotation x = "253.205428" y = "42.713012" z = "80.019624" />
 	</pose>
-	<pose name = "CenterPoint097">
-		<translation x = "-3.372905" y = "0.754981" z = "1.834551" />
-		<rotation x = "222.006624" y = "59.771443" z = "9.435955" />
+	<pose name = "CenterPoint097" t = "97">
+		<translation x = "-3.792573" y = "-1.690829" z = "-3.483876" />
+		<rotation x = "54.577108" y = "74.897520" z = "3.113767" />
 	</pose>
-	<pose name = "CenterPoint098">
-		<translation x = "-3.853339" y = "3.807913" z = "-2.490039" />
-		<rotation x = "84.119810" y = "23.579432" z = "10.190336" />
+	<pose name = "CenterPoint098" t = "98">
+		<translation x = "-3.334852" y = "0.869195" z = "-0.682924" />
+		<rotation x = "133.451176" y = "156.688407" z = "184.355654" />
 	</pose>
-	<pose name = "CenterPoint099">
-		<translation x = "-3.466200" y = "3.212501" z = "1.151165" />
-		<rotation x = "36.708213" y = "145.708325" z = "88.635984" />
+	<pose name = "CenterPoint099" t = "99">
+		<translation x = "1.198336" y = "3.255126" z = "-2.978858" />
+		<rotation x = "138.742399" y = "42.051884" z = "188.601929" />
 	</pose>
-	<pose name = "CenterPoint100">
-		<translation x = "-0.331329" y = "0.764863" z = "2.034448" />
-		<rotation x = "185.708526" y = "62.052597" z = "309.610062" />
+	<pose name = "CenterPoint100" t = "100">
+		<translation x = "-1.914683" y = "-0.403566" z = "2.101623" />
+		<rotation x = "6.527284" y = "111.255104" z = "44.760278" />
 	</pose>
-</extrinsics>
+</trajectory>

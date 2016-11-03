@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scene name="testRange" objectdb="objects/firstdb" version = "1.0">
+<environment interpolatoin='linear'>
+	<light environmentlight="0.1" color="sky" t="0"/>
+	<horizon red="1" green="1" blue="1" t="0"/>
+	<zenith red="1" green="1" blue="1" t="0"/>
+	<light environmentlight="0.1" color="sky" t="100"/>
+	<horizon red="1" green="0" blue="0" t="100"/>
+</environment>
+<object objname="gcp" name = "GCP01" isControl = "1" isFiducial = "1">
+	<position>
+		<translation x="5" y="-5" z="1"/>
+		<rotation x="0" y="0" z="0"/>
+		<scale x="1" y="1" z="1"/>
+	</position>
+</object>
+<object objname="gcp" name = "GCP02" isControl = "1" isFiducial = "1">
+	<position>
+		<translation x="5" y="5" z="1"/>
+		<rotation x="0" y="0" z="0"/>
+		<scale x="1" y="1" z="1"/>
+	</position>
+</object>
+<object objname="noiseCube" name = "MyCube">
+	<position>
+		<translation x="0" y="0" z="0" t="0"/>
+		<rotation x="0" y="0" z="0" t="0"/>
+		<scale x="1" y="1" z="1" t="0"/>
+		<translation x="0" y="0" z="15" t="100"/>
+		<rotation x="0" y="0" z="180" t="100"/>
+		<scale x="0.1" y="0.1" z="0.1" t="100"/>
+	</position>
+	<material>
+		<diffuse red="1" green="1" blue="1" intensity="1"/>
+		<specular red="1" green="0" blue="0" intensity="1"/>
+		<shading shadeless="0" receiveshadow="1" castshadow="0"/>
+		<transparency alpha="0.2" ior="1.33"/>
+	</material>
+	<texture>
+		<slot interpolate="1" filename="objects\textures\highaltitude.jpg" repeatx="1" repeaty="1" infcolor="0.5"/>
+		<slot interpolate="1" filename="objects\textures\grass.jpg" repeatx="5" repeaty="5" infcolor="0.5"/>
+	</texture>
+</object>
+<object objname="noiseCube" name="noiseCube1" isControl = "0" isFiducial = "1">
+	<position>
+		<translation x="0" y="0" z="0"/>
+		<rotation x="0" y="0" z="0"/>
+		<scale x="1" y="1" z="1"/>
+	</position>
+	<material>
+		<diffuse red="1" green="1" blue="1"/>
+		<transparency alpha="1" ior="1"/>
+	</material>
+</object>
+<light type="spot">
+	<position>
+		<translation x="5" y="5" z="5" t="0"/>
+		<translation x="-5" y="-5" z="5" t="100"/>
+	</position>
+	<emission>
+		<color intensity="1" red="1" green="1" blue="1" t="1"/>
+		<color intensity="0.1" angle="90" red="1" green="1" blue="1" t="100"/>
+	</emission>
+	<shadow enabled="1" QMC="Constant" Samples="1" SoftSize="0.1"/>
+</light>
+</scene>

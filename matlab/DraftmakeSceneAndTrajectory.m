@@ -8,20 +8,21 @@ for i=1:numel(xg)
     fprintf('</object>\n')
 end
 
-xi = -25:5:25;
-yi = -25:5:25;
-alt = 40;
+xi = -22.5:7.5:22.5;
+yi = -22.5:7.5:22.5;
+alt = 30;
 
 [xg,yg]=meshgrid(xi,yi);
 
 xg = xg + randn(size(xg))*1;
 yg = yg + randn(size(xg))*1;
-zg = alt*ones(size(xg))-randn(size(xg))*15;
-rx = randn(size(xg))*50;
-ry = randn(size(xg))*50;
-rz = randn(size(xg))*360;
+zg = alt*ones(size(xg))-randn(size(xg))*1;
+rx = randn(size(xg))*5;
+ry = randn(size(xg))*5;
+rz = randn(size(xg))*5;
+t = 1:numel(xg);
 
-makeTrajectory('test.xml', 'Test', xg, yg, zg, rx, ry, rz, 'A', 4)
+makeTrajectory('test.xml', 'Test', xg, yg, zg, rx, ry, rz, t, 'A', 4)
 
 %%
 NCAMS = 100;
@@ -55,5 +56,5 @@ z = (rand(NCAMS,1)*8)-4;
 rx = iRoll;
 ry = iPhi;
 rz = iTheta;
-
-makeTrajectory('trajectory_Test2.xml', 'TestCalRoom', x, y, z, rx, ry, rz, 'CenterPoint', 3)
+t = 1:NCAMS;
+makeTrajectory('trajectory_Test2.xml', 'TestCalRoom', x, y, z, rx, ry, rz, t, 'CenterPoint', 3)

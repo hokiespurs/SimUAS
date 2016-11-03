@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scene name="testRange" objectdb="objects/beaverdb" version = "1.0">
+<environment interpolatoin='linear'>
+	<light environmentlight="0.3" color="sky" t="0"/>
+	<horizon red="1" green="1" blue="1" t="0"/>
+	<zenith red="1" green="1" blue="1" t="0"/>
+	<light environmentlight="0.05" color="sky" t="100"/>
+	<horizon red="1" green="1" blue="0" t="100"/>
+</environment>
+<object objname="control_checker" name = "GCP01" isControl = "1" isFiducial = "1">
+	<position>
+		<translation x="0" y="20" z="1"/>
+		<rotation x="0" y="0" z="0"/>
+		<scale x="0.5" y="0.5" z="0.5"/>
+	</position>
+	<material>
+		<shading shadeless="1"/>
+	</material>
+</object>
+<object objname="control_checker" name = "GCP02" isControl = "1" isFiducial = "1">
+	<position>
+		<translation x="20" y="20" z="1"/>
+		<rotation x="0" y="0" z="0"/>
+		<scale x="0.5" y="0.5" z="0.5"/>
+	</position>
+</object>
+<object objname="control_checker" name = "GCP03" isControl = "1" isFiducial = "1">
+	<position>
+		<translation x="20" y="0" z="1"/>
+		<rotation x="0" y="0" z="0"/>
+		<scale x="0.5" y="0.5" z="0.5"/>
+	</position>
+</object>
+<object objname="control_checker" name = "GCP04" isControl = "1" isFiducial = "1">
+	<position>
+		<translation x="20" y="-20" z="1"/>
+		<rotation x="0" y="0" z="0"/>
+		<scale x="0.5" y="0.5" z="0.5"/>
+	</position>
+</object>
+<object objname="control_checker" name = "GCP05" isControl = "1" isFiducial = "1">
+	<position>
+		<translation x="0" y="-20" z="1"/>
+		<rotation x="0" y="0" z="0"/>
+		<scale x="1" y="1" z="1"/>
+	</position>
+</object>
+<object objname="control_checker" name = "GCP06" isControl = "1" isFiducial = "1">
+	<position>
+		<translation x="-20" y="-20" z="1"/>
+		<rotation x="0" y="0" z="0"/>
+		<scale x="1" y="1" z="1"/>
+	</position>
+</object>
+<object objname="control_checker" name = "GCP07" isControl = "1" isFiducial = "1">
+	<position>
+		<translation x="-20" y="0" z="1"/>
+		<rotation x="0" y="0" z="0"/>
+		<scale x="1" y="1" z="1"/>
+	</position>
+</object>
+<object objname="control_checker" name = "GCP08" isControl = "1" isFiducial = "1">
+	<position>
+		<translation x="-20" y="20" z="1"/>
+		<rotation x="0" y="0" z="0"/>
+		<scale x="1" y="1" z="1"/>
+	</position>
+</object>
+<object objname="calibration_seimens" name = "Seimens" isControl = "1">
+	<position>
+		<translation x="0" y="0" z="0.01"/>
+		<rotation x="0" y="0" z="0"/>
+		<scale x="1" y="1" z="1"/>
+	</position>
+	<material>
+		<shading shadeless="1"/>
+	</material>
+</object>
+<object objname="basic_cube" name = "Cube" isControl = "1" isFiducial = "1">
+	<position>
+		<translation x="0" y="5" z="0"/>
+		<rotation x="0" y="0" z="0"/>
+		<scale x="1" y="1" z="1"/>
+	</position>
+	<material>
+		<diffuse red="1" green="0.69" blue="0" intensity="1"/>
+		<specular red="0" green="0" blue="0" intensity="0"/>
+		<ambient intensity="1"/>
+		<shading shadeless="0" receiveshadow="1" castshadow="0"/>
+		<transparency alpha="1" ior="1"/>
+	</material>
+</object>
+<object objname="basic_cylinder" name = "Cylinder">
+	<position>
+		<translation x="5" y="5" z="0"/>
+		<rotation x="0" y="0" z="0"/>
+		<scale x="1" y="1" z="1"/>
+	</position>
+</object>
+<object objname="basic_sphere" name = "Sphere">
+	<position>
+		<translation x="5" y="0" z="0"/>
+		<rotation x="0" y="0" z="0"/>
+		<scale x="1" y="1" z="1"/>
+	</position>
+</object>
+<object objname="basic_pyramid" name = "Pyramid" isFiducial = "1">
+	<position>
+		<translation x="5" y="-5" z="0"/>
+		<rotation x="0" y="0" z="0"/>
+		<scale x="1" y="1" z="1"/>
+	</position>
+</object>
+<object objname="basic_icosphere" name = "Icosphere">
+	<position>
+		<translation x="0" y="-5" z="0"/>
+		<rotation x="0" y="0" z="0"/>
+		<scale x="1" y="1" z="1"/>
+	</position>
+</object>
+<object objname="basic_cone" name = "Cone" isFiducial = "1">
+	<position>
+		<translation x="-5" y="-5" z="0"/>
+		<rotation x="0" y="0" z="0"/>
+		<scale x="1" y="1" z="1"/>
+	</position>
+</object>
+<object objname="basic_torus" name = "Torus">
+	<position>
+		<translation x="-5" y="0" z="0"/>
+		<rotation x="0" y="0" z="0"/>
+		<scale x="1" y="1" z="1"/>
+	</position>
+</object>
+<object objname="basic_plane" name = "Plane" isFiducial = "1">
+	<position>
+		<translation x="-5" y="5" z="0.5"/>
+		<rotation x="0" y="0" z="0"/>
+		<scale x="1" y="1" z="1"/>
+	</position>
+</object>
+<object objname="calibration_tribar2" name = "Tribar2_1" isFiducial = "1">
+	<position>
+		<translation x="0" y="10" z="0.01"/>
+		<rotation x="0" y="0" z="0"/>
+		<scale x="0.2" y="0.2" z="0.2"/>
+	</position>
+	<material>
+		<shading shadeless="1"/>
+	</material>
+</object>
+<object objname="calibration_tribar2" name = "Tribar2_2" isFiducial = "1">
+	<position>
+		<translation x="10" y="0" z="0.01"/>
+		<rotation x="0" y="0" z="0"/>
+		<scale x="0.1" y="0.1" z="0.1"/>
+	</position>
+	<material>
+		<shading shadeless="1"/>
+	</material>
+</object>
+<object objname="calibration_tribar2" name = "Tribar2_3" isFiducial = "1">
+	<position>
+		<translation x="0" y="-10" z="0.01"/>
+		<rotation x="0" y="0" z="0"/>
+		<scale x="0.05" y="0.05" z="0.05"/>
+	</position>
+	<material>
+		<shading shadeless="1"/>
+	</material>
+</object>
+<object objname="calibration_tribar2" name = "Tribar2_4" isFiducial = "1">
+	<position>
+		<translation x="-10" y="0" z="0.01"/>
+		<rotation x="0" y="0" z="0"/>
+		<scale x="0.025" y="0.025" z="0.025"/>
+	</position>
+	<material>
+		<shading shadeless="1"/>
+	</material>
+</object>
+<object objname="calibration_tribar" name = "Tribar_1" isFiducial = "1">
+	<position>
+		<translation x="-10" y="10" z="0.01"/>
+		<rotation x="0" y="0" z="0"/>
+		<scale x="0.5" y="0.5" z="0.5"/>
+	</position>
+</object>
+<object objname="calibration_tribar" name = "Tribar_2" isFiducial = "1">
+	<position>
+		<translation x="10" y="-10" z="0.01"/>
+		<rotation x="0" y="0" z="0"/>
+		<scale x="0.25" y="0.25" z="0.25"/>
+	</position>
+</object>
+<object objname="calibration_checkerRoom" name = "CheckerRoom" isFiducial = "1">
+	<position>
+		<translation x="10" y="10" z="0.5"/>
+		<rotation x="0" y="0" z="0"/>
+		<scale x="3" y="3" z="3"/>
+	</position>
+</object>
+<object objname="calibration_checkerboard" name = "checkerboard" isFiducial = "1">
+	<position>
+		<translation x="-10" y="-10" z="0.5"/>
+		<rotation x="0" y="0" z="0"/>
+		<scale x="2" y="2" z="2"/>
+	</position>
+</object>
+<object objname="basic_plane" name = "PlaneBase">
+	<position>
+		<translation x="0" y="0" z="0" t="0"/>
+		<rotation x="0" y="0" z="0" t="0"/>
+		<scale x="50" y="50" z="50" t="0"/>
+	</position>
+	<material>
+		<diffuse red="1" green="1" blue="1" intensity="1"/>
+		<specular red="1" green="0" blue="0" intensity="0"/>
+		<shading shadeless="0" receiveshadow="1" castshadow="0"/>
+		<transparency alpha="1" ior="1"/>
+	</material>
+	<texture>
+		<slot interpolate="1" filename="objects\textures\randomNoise.png" repeatx="1" repeaty="1" infcolor="0.8"/>
+		<slot interpolate="1" filename="objects\textures\grass2_seamless.jpg" repeatx="5" repeaty="5" infcolor="0.6"/>
+	</texture>
+</object>
+<light type="sun">
+	<position>
+		<rotation x="20" y="0" z="0" t="0"/>
+		<rotation x="70" y="0" z="360" t="100"/>
+	</position>
+	<emission>
+		<color intensity="0.4" red="1" green="1" blue="1" t="1"/>
+		<color intensity="0.1" red="1" green="1" blue="1" t="100"/>
+	</emission>
+	<shadow enabled="1" QMC="Constant" Samples="1" SoftSize="0.1"/>
+</light>
+</scene>

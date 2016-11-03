@@ -5,7 +5,7 @@ all_du = [];
 all_dv = [];
 %% Test Marker locations 
 
-dataDirectory = 'C:\Users\Richie\Documents\GitHub\BlenderPythonTest\data\foo';
+dataDirectory = 'C:\Users\Richie\Documents\GitHub\BlenderPythonTest\data\calroom';
 imDir = [dataDirectory '/output/images/'];
 trajectoryFilename = [dataDirectory '/output/trajectory.csv'];
 markerFilename = [dataDirectory '/output/xyzFiducial.csv'];
@@ -32,11 +32,9 @@ Mark.T = markers.data(:,1:3);
 if isstruct(control)
     Cont.names = control.textdata(2:end,1);
     Cont.T = control.data(:,1:3);
-    Cont.R = control.data(:,4:6);
 else
     Cont.names{1} = '';
     Cont.T = [0 0 0];
-    Cont.R = [0 0 0];
 end
 % Intrinsics
 camIntrinsics = xml2struct(intrinsicFilename);
@@ -47,20 +45,26 @@ mkdir([dataDirectory '/proc']);
 mkdir([dataDirectory '/proc/points']);
 mkdir([dataDirectory '/proc/deltas']);
 
-f = figure('units','normalized','position',[0 0 1 1]);
-f2 = figure('units','normalized','position',[0 0 1 1]);
+% f = figure('units','normalized','position',[0 0 1 1]);
+% f2 = figure('units','normalized','position',[0 0 1 1]);
+f = figure;
+f2 = figure;
 for iImage = 1:numel(Traj.names)
    I = imread([imDir Traj.names{iImage}]);
    
-   [uMark,vMark] = calcPhotogrammetryUV(calibration, ...
-       Traj.R(iImage,:), Traj.T(iImage,:), Mark.T);
-   [uCont,vCont] = calcPhotogrammetryUV(calibration, ...
-       Traj.R(iImage,:), Traj.T(iImage,:), Cont.T);
+   [xy, ~] = calcXYZtoPixel(Mark.T, Traj.T(iImage,:), Traj.R(iImage,:), calibration);
+   uMark = xy(:,1);
+   vMark = xy(:,2);
+      
+   [xy, ~] = calcXYZtoPixel(Cont.T, Traj.T(iImage,:), Traj.R(iImage,:), calibration);
+   uCont = xy(:,1);
+   vCont = xy(:,2);
+   
    [uCheck,vCheck] = myDetectCorner(I);
    
-   [xy,~]=detectCheckerboardPoints(I);
-   uCheck = xy(:,1);
-   vCheck = xy(:,2);
+%    [xy,~]=detectCheckerboardPoints(I);
+%    uCheck = xy(:,1);
+%    vCheck = xy(:,2);
    
    figure(f);
    image(I)

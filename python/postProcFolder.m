@@ -150,7 +150,7 @@ function [xy, inframe] = calcXYZtoPixel(markT, camT, camR, Calibration)
     p = Calibration.p;
     f = Calibration.fx;
     k = k./([f^2 f^4 f^6 f^8]);
-    p = Calibration.p./f^2;
+    p = Calibration.p./f;
     
     camR = camR*pi/180;
 
@@ -208,9 +208,9 @@ imNames = dirname([dname '/*.png']);
         % Add Gaussian Noise
         gaussmean = Calibration.postproc.gaussnoise.mean;
         gaussvar = Calibration.postproc.gaussnoise.var;
-        
-        I = imnoise(I, 'gauss',gaussmean,gaussvar);
-        
+        if gaussmean ~=0 && gaussvar ~= 0
+            I = imnoise(I, 'gauss',gaussmean,gaussvar);
+        end
         % Add Salt Noise
         saltprob = Calibration.postproc.saltnoise;
         
@@ -275,7 +275,7 @@ function newMap = calcImageMap(Calibration, height, width)
     k = Calibration.k;
     f = Calibration.fx;
     k = k./([f^2 f^4 f^6 f^8]);
-    p = Calibration.p./f^2;
+    p = Calibration.p./f;
     % Distort Coordinates
     [xd, yd] = calcDistortedCoords(xu, yu, xc, yc, k, p);
     
@@ -341,11 +341,9 @@ rawdata = importdata(fname);
 if isstruct(rawdata)
     Control.names = rawdata.textdata(2:end,1);
     Control.T = rawdata.data(:,1:3);
-    Control.R = rawdata.data(:,4:6);
 else
     Control.names{1} = '';
     Control.T = [0 0 0];
-    Control.R = [0 0 0];
     error('why did this happen?')
 end
 end

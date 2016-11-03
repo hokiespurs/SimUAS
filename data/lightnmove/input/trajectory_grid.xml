@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<trajectory name = "Test" version="1.0">
+	<pose name = "ImTestOblique" t="1">
+		<translation x = "-5.000000" y = "-10" z = "10.000000" />
+		<rotation x = "50.000000" y = "0.000000" z = "0.000000" />
+	</pose>	
+	<pose name = "ImTest0001" t="2">
+		<translation x = "0" y = "0" z = "20.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImTest0002" t="100">
+		<translation x = "0" y = "0" z = "20.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+</trajectory>
