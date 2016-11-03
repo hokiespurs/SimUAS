@@ -6,7 +6,7 @@ for i=1:r
     val = X(i,:);
     ind = find(~isnan(val));
     if numel(ind)>2
-        Xa(i,:) = interp1(ind,val(ind),1:numel(val),'linear','extrap');
+        Xa(i,:) = interp1(ind,val(ind),1:numel(val),'linear');
     end
 end
 
@@ -15,7 +15,7 @@ for i=1:c
     val = X(:,i);
     ind = find(~isnan(val));
     if numel(ind)>2
-        Xb(:,i) = interp1(ind,val(ind),1:numel(val),'linear','extrap');
+        Xb(:,i) = interp1(ind,val(ind),1:numel(val),'linear');
     end
 end
 

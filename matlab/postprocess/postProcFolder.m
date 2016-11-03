@@ -1,6 +1,6 @@
 function postProcFolder(foldername)
 dbstop if error
-
+addHomePath('BlenderPythonTest')
 %% paths to folders
 imDir = [foldername '/output/images/pre'];
 outImDir = [foldername '/output/images'];
@@ -43,6 +43,7 @@ I = imread(imNames{1});
 
 if height ~= Calibration.height || width ~= Calibration.width
     for i=1:numel(imNames)
+       fprintf('Cropping: %s\n',imNames{i});
        I = imread(imNames{i});
        Itrim = trimimage(I, Calibration.width, Calibration.height);
        imwrite(Itrim, imNames{i})
@@ -139,54 +140,6 @@ function savePixelXML(fname, Trajectory, Markers, Calibration)
     fprintf(fid,'</document>');
     
     fclose(fid);
-end
-
-function [xy, inframe] = calcXYZtoPixel(markT, camT, camR, Calibration)
-    fx = Calibration.fx;
-    fy = Calibration.fy;
-    cx = Calibration.cx;
-    cy = Calibration.cy;
-    k = Calibration.k;
-    p = Calibration.p;
-    f = Calibration.fx;
-    k = k./([f^2 f^4 f^6 f^8]);
-    p = Calibration.p./f;
-    
-    camR = camR*pi/180;
-
-    Rblender = makehgtform('zrotate',camR(3),...
-                'yrotate',camR(2),...
-                'xrotate',camR(1));
-    Rblender2photogrammetry = diag([1 -1 -1 1]);
-
-    R = Rblender * Rblender2photogrammetry;
-    R = R(1:3,1:3);
-
-    RT = inv([(R) camT';0 0 0 1]);
-    RT = RT(1:3,:);
-    
-    K = [fx 0 cx; 0 fy cy; 0 0 1];
-
-    xyz1 = [markT'; ones(1,size(markT,1))];
-
-    uvs = K * RT * xyz1;
-
-    s = uvs(3,:);
-    u = uvs(1,:)./s;
-    v = uvs(2,:)./s;
-
-    [x, y] = calcDistortedCoords(u, v, cx, cy, k, p);
-    
-    inframePre = u>0 & v>0 & u<Calibration.width & v<Calibration.height;
-    inframePost = s>0 & x>0 & y>0 & x<Calibration.width & y<Calibration.height;
-    inframe = inframePre & inframePost;
-    
-    if inframe
-        xy = [x y];
-    else
-        xy = [nan, nan];        
-    end
-    
 end
 
 function addNoiseAndBlurFolder(dname, Calibration)
@@ -305,130 +258,24 @@ function distortImage(iName, newName, newMap)
     
     imwrite(Idistorted,newName);
 end
-
-function [xd, yd] = calcDistortedCoords(xu, yu, xc, yc, k, p)
-    % radial distortion
-    r = sqrt((xu - xc) .^ 2 + (yu - yc) .^ 2);
-    dx_radial = (xu - xc) .* (1 + (k(1) .* r .^ 2) + (k(2) .* r .^ 4) + (k(3) .* r .^ 6) + (k(4) .* r .^ 8));
-    dy_radial = (yu - yc) .* (1 + (k(1) .* r .^ 2) + (k(2) .* r .^ 4) + (k(3) .* r .^ 6) + (k(4) .* r .^ 8));
-
-    % tangential distortion
-    dx_tangential = (p(1) .* (r.^2 + 2*(xu - xc).^2) + 2 .* p(2) .* (xu - xc) .* (yu - yc));
-    dy_tangential = (p(2) .* (r.^2 + 2*(yu - yc).^2) + 2 .* p(1) .* (xu - xc) .* (yu - yc));
-
-    % calculate distorted coordinate
-    xd = xc + dx_radial + dx_tangential;
-    yd = yc + dy_radial + dy_tangential;
-
+function addHomePath(flag)
+homePath = getHomePath(flag);
+addpath(genpath([homePath '/matlab']))
 end
 
-function Trajectory = readtrajectory(fname)
-rawdata = importdata(fname);
-Trajectory.names = rawdata.textdata(2:end,1);
-Trajectory.T = rawdata.data(:,1:3);
-Trajectory.R = rawdata.data(:,4:6);
+function homePath = getHomePath(flag)
 
+curpath = pwd;
+foldername = 1;
+while ~isempty(foldername)
+   [dirname, foldername, ~] = fileparts(curpath);
+   if strcmp(foldername, flag)
+      homePath = [dirname '/' foldername];
+      break
+   end
+   curpath = dirname;
 end
-
-function Fiducials = readfiducials(fname)
-rawdata = importdata(fname);
-Fiducials.names = rawdata.textdata(2:end,1);
-Fiducials.T = rawdata.data(:,1:3);
+if isempty(foldername)
+   error('cant find home path'); 
 end
-
-function Control = readcontrol(fname)
-rawdata = importdata(fname);
-if isstruct(rawdata)
-    Control.names = rawdata.textdata(2:end,1);
-    Control.T = rawdata.data(:,1:3);
-else
-    Control.names{1} = '';
-    Control.T = [0 0 0];
-    error('why did this happen?')
-end
-end
-
-function Cal = readsensor(outsensor, insensor)
-    indata = xml2struct(insensor);
-    outdata = xml2struct(outsensor);
-    oc = outdata.calibration;
-    isp = indata.sensor.postprocessing;
-    
-    Cal.width = str2double(oc.width.Text);
-    Cal.height = str2double(oc.height.Text);
-    Cal.fx = str2double(oc.f.Text);
-    Cal.fy = str2double(oc.f.Text);
-    Cal.cx = str2double(oc.cx.Text);
-    Cal.cy = str2double(oc.cy.Text);
-    Cal.k = [str2double(oc.k1.Text),...
-                     str2double(oc.k2.Text),...
-                     str2double(oc.k3.Text),...
-                     str2double(oc.k4.Text)];
-    Cal.p = [str2double(oc.p1.Text),...
-                     str2double(oc.p2.Text)];
-    
-    Cal.postproc.vignetting = [str2double(isp.vignetting.Attributes.v1),...
-                             str2double(isp.vignetting.Attributes.v2),...
-                             str2double(isp.vignetting.Attributes.v3)];
-    Cal.postproc.saltnoise = str2double(isp.saltnoise.Attributes.prob);
-    Cal.postproc.peppernoise = str2double(isp.peppernoise.Attributes.prob);
-    Cal.postproc.gaussnoise.mean = ...
-        str2double(isp.gaussiannoise.Attributes.mean);
-    Cal.postproc.gaussnoise.var = ...
-        str2double(isp.gaussiannoise.Attributes.variance);
-    Cal.postproc.gaussblur = str2double(isp.gaussianblur.Attributes.sigma); 
-    Cal.seed = str2double(isp.Attributes.seed);
-end
-
-function imnames=dirname(foldername,returnFolders)
-%% This function returns a cell array of files using the dir command
-% This just makes it easier so you dont have to write a for loop to extract
-% the filenames into a cell array
-if nargin==1
-    returnFolders=0;
-end
-
-fnames=dir(foldername);
-[directortName,~,~]=fileparts(foldername);
-imnames=[];
-numgoodfiles=0;
-for i=1:numel(fnames)
-    if isdir([directortName '/' fnames(i).name]) && returnFolders && ~strcmp(fnames(i).name,'.') && ~strcmp(fnames(i).name,'..')
-        numgoodfiles=numgoodfiles+1;
-        imnames{numgoodfiles}=[directortName '/' fnames(i).name];
-    elseif ~isdir([directortName '/' fnames(i).name]) && ~returnFolders
-        numgoodfiles=numgoodfiles+1;
-        imnames{numgoodfiles}=[directortName '/' fnames(i).name];
-    end
-end
-
-
-end
-
-function Y = interpNan(X)
-
-[r,c]=size(X);
-Xa = nan(size(X));
-for i=1:r
-    val = X(i,:);
-    ind = find(~isnan(val));
-    if numel(ind)>2
-        Xa(i,:) = interp1(ind,val(ind),1:numel(val),'linear');
-    end
-end
-
-Xb = nan(size(X));
-for i=1:c
-    val = X(:,i);
-    ind = find(~isnan(val));
-    if numel(ind)>2
-        Xb(:,i) = interp1(ind,val(ind),1:numel(val),'linear');
-    end
-end
-
-T = ~isnan(Xa)+~isnan(Xb);
-Xa(isnan(Xa))=0;
-Xb(isnan(Xb))=0;
-Y = (Xa + Xb) ./ T;
-
 end

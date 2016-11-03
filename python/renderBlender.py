@@ -107,10 +107,6 @@ def run():
     if dorender:
         # Render images
         render(BlenderTrajectory, imageFolderPre)
-        print("----------------------------------")
-        print("POSTPROCESSING IMAGES WITH MATLAB")
-        print("----------------------------------")
-        call("matlab -r postProcFolder('" + experimentName + "')")
 
 
 if __name__ == '__main__':
