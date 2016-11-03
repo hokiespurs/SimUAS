@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scene name="testRange" objectdb="objects/beaverdb" version = "1.0">
+<object objname="calibration_checkerRoom" name = "checkerRoom" isControl = "1" isFiducial = "1">
+	<position>
+		<translation x="0" y="0" z="-5"/>
+		<rotation x="0" y="0" z="0"/>
+		<scale x="10" y="10" z="10"/>
+	</position>
+	<material>
+		<shading shadeless = "1"/>
+	</material>
+</object>
+</scene>

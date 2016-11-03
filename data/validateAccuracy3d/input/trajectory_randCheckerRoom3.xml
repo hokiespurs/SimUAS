@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<trajectory name = "randomcalroom">
+	<pose name = "CheckerRoomImage001" t = "1">
+		<translation x = "-2.854482" y = "-3.991737" z = "-1.936856" />
+		<rotation x = "186.491722" y = "96.661281" z = "295.865775" />
+	</pose>
+	<pose name = "CheckerRoomImage002" t = "2">
+		<translation x = "1.058639" y = "-0.191287" z = "3.475564" />
+		<rotation x = "134.189569" y = "65.877002" z = "226.166255" />
+	</pose>
+	<pose name = "CheckerRoomImage003" t = "3">
+		<translation x = "1.295107" y = "1.256323" z = "0.952957" />
+		<rotation x = "255.727648" y = "108.775232" z = "344.268544" />
+	</pose>
+	<pose name = "CheckerRoomImage004" t = "4">
+		<translation x = "-0.529281" y = "2.746586" z = "3.883559" />
+		<rotation x = "164.031633" y = "172.584453" z = "212.372326" />
+	</pose>
+	<pose name = "CheckerRoomImage005" t = "5">
+		<translation x = "-3.525142" y = "-2.530085" z = "-3.738849" />
+		<rotation x = "217.876642" y = "70.708130" z = "71.219802" />
+	</pose>
+	<pose name = "CheckerRoomImage006" t = "6">
+		<translation x = "-0.058219" y = "2.849274" z = "1.801333" />
+		<rotation x = "356.546231" y = "70.735140" z = "154.559060" />
+	</pose>
+	<pose name = "CheckerRoomImage007" t = "7">
+		<translation x = "-0.278928" y = "-1.085076" z = "0.524434" />
+		<rotation x = "278.609850" y = "142.314659" z = "121.228560" />
+	</pose>
+	<pose name = "CheckerRoomImage008" t = "8">
+		<translation x = "2.453974" y = "3.138191" z = "-0.060608" />
+		<rotation x = "120.339506" y = "116.114112" z = "357.100204" />
+	</pose>
+	<pose name = "CheckerRoomImage009" t = "9">
+		<translation x = "-1.946712" y = "-3.778306" z = "-1.926255" />
+		<rotation x = "32.039359" y = "70.899121" z = "136.885139" />
+	</pose>
+	<pose name = "CheckerRoomImage010" t = "10">
+		<translation x = "-0.868557" y = "-3.316879" z = "-1.385355" />
+		<rotation x = "66.566013" y = "124.011909" z = "357.372315" />
+	</pose>
+	<pose name = "CheckerRoomImage011" t = "11">
+		<translation x = "-2.078622" y = "3.851284" z = "-2.004302" />
+		<rotation x = "189.666675" y = "72.720290" z = "186.769530" />
+	</pose>
+	<pose name = "CheckerRoomImage012" t = "12">
+		<translation x = "1.491547" y = "0.876015" z = "-2.245857" />
+		<rotation x = "150.156871" y = "24.500368" z = "62.020693" />
+	</pose>
+	<pose name = "CheckerRoomImage013" t = "13">
+		<translation x = "3.919068" y = "-0.658941" z = "2.397287" />
+		<rotation x = "288.237477" y = "81.115788" z = "26.846666" />
+	</pose>
+	<pose name = "CheckerRoomImage014" t = "14">
+		<translation x = "-2.580564" y = "-2.646287" z = "0.019160" />
+		<rotation x = "335.952842" y = "60.195491" z = "133.310050" />
+	</pose>
+	<pose name = "CheckerRoomImage015" t = "15">
+		<translation x = "2.571574" y = "1.199209" z = "-3.334481" />
+		<rotation x = "64.031309" y = "39.234407" z = "44.430790" />
+	</pose>
+	<pose name = "CheckerRoomImage016" t = "16">
+		<translation x = "-2.152092" y = "-3.704199" z = "2.215874" />
+		<rotation x = "309.624038" y = "166.639464" z = "228.426738" />
+	</pose>
+	<pose name = "CheckerRoomImage017" t = "17">
+		<translation x = "-3.536193" y = "-1.507089" z = "0.269193" />
+		<rotation x = "344.662173" y = "124.135092" z = "149.011144" />
+	</pose>
+	<pose name = "CheckerRoomImage018" t = "18">
+		<translation x = "-2.889468" y = "-1.412166" z = "1.915102" />
+		<rotation x = "345.409418" y = "107.787760" z = "356.729628" />
+	</pose>
+	<pose name = "CheckerRoomImage019" t = "19">
+		<translation x = "3.481225" y = "0.859535" z = "0.123150" />
+		<rotation x = "13.630532" y = "134.398345" z = "334.784025" />
+	</pose>
+	<pose name = "CheckerRoomImage020" t = "20">
+		<translation x = "3.108337" y = "1.206650" z = "-0.800433" />
+		<rotation x = "20.730062" y = "97.554791" z = "53.724972" />
+	</pose>
+	<pose name = "CheckerRoomImage021" t = "21">
+		<translation x = "-1.685916" y = "2.768437" z = "3.889974" />
+		<rotation x = "2.087061" y = "126.095953" z = "142.157615" />
+	</pose>
+	<pose name = "CheckerRoomImage022" t = "22">
+		<translation x = "3.582113" y = "3.420648" z = "-3.774059" />
+		<rotation x = "112.565216" y = "167.500767" z = "166.168696" />
+	</pose>
+	<pose name = "CheckerRoomImage023" t = "23">
+		<translation x = "2.799444" y = "1.283662" z = "3.462111" />
+		<rotation x = "20.051429" y = "155.271005" z = "201.941552" />
+	</pose>
+	<pose name = "CheckerRoomImage024" t = "24">
+		<translation x = "-0.522762" y = "0.625391" z = "3.446840" />
+		<rotation x = "105.790495" y = "30.139534" z = "280.930868" />
+	</pose>
+	<pose name = "CheckerRoomImage025" t = "25">
+		<translation x = "-0.255604" y = "-0.810276" z = "-0.872650" />
+		<rotation x = "128.165935" y = "47.365024" z = "175.389807" />
+	</pose>
+	<pose name = "CheckerRoomImage026" t = "26">
+		<translation x = "1.038824" y = "3.732900" z = "-2.284281" />
+		<rotation x = "343.323727" y = "12.889850" z = "151.197679" />
+	</pose>
+	<pose name = "CheckerRoomImage027" t = "27">
+		<translation x = "-2.735745" y = "-2.767367" z = "0.953706" />
+		<rotation x = "171.702332" y = "176.161105" z = "94.319894" />
+	</pose>
+	<pose name = "CheckerRoomImage028" t = "28">
+		<translation x = "-3.881743" y = "3.160694" z = "-2.576221" />
+		<rotation x = "100.165839" y = "42.549138" z = "327.890210" />
+	</pose>
+	<pose name = "CheckerRoomImage029" t = "29">
+		<translation x = "-1.875904" y = "-1.511895" z = "2.425666" />
+		<rotation x = "181.081870" y = "118.907704" z = "8.017744" />
+	</pose>
+	<pose name = "CheckerRoomImage030" t = "30">
+		<translation x = "-3.876451" y = "0.387913" z = "-1.968529" />
+		<rotation x = "231.608853" y = "16.133526" z = "295.603883" />
+	</pose>
+	<pose name = "CheckerRoomImage031" t = "31">
+		<translation x = "1.395991" y = "1.456530" z = "-1.673551" />
+		<rotation x = "40.048442" y = "37.938770" z = "67.848624" />
+	</pose>
+	<pose name = "CheckerRoomImage032" t = "32">
+		<translation x = "0.411751" y = "-2.108243" z = "3.327326" />
+		<rotation x = "272.902197" y = "90.508389" z = "246.872484" />
+	</pose>
+	<pose name = "CheckerRoomImage033" t = "33">
+		<translation x = "-1.426815" y = "-2.658107" z = "3.223335" />
+		<rotation x = "306.700478" y = "18.891660" z = "127.875380" />
+	</pose>
+	<pose name = "CheckerRoomImage034" t = "34">
+		<translation x = "2.241619" y = "0.067856" z = "0.283047" />
+		<rotation x = "303.929949" y = "69.997212" z = "350.716546" />
+	</pose>
+	<pose name = "CheckerRoomImage035" t = "35">
+		<translation x = "-2.833717" y = "2.334911" z = "2.902712" />
+		<rotation x = "320.582460" y = "96.837790" z = "44.197967" />
+	</pose>
+	<pose name = "CheckerRoomImage036" t = "36">
+		<translation x = "-2.040955" y = "1.539316" z = "-1.179739" />
+		<rotation x = "137.463263" y = "61.056753" z = "67.525161" />
+	</pose>
+	<pose name = "CheckerRoomImage037" t = "37">
+		<translation x = "-1.661490" y = "-3.048213" z = "3.983074" />
+		<rotation x = "159.769871" y = "100.062038" z = "320.199291" />
+	</pose>
+	<pose name = "CheckerRoomImage038" t = "38">
+		<translation x = "-2.432544" y = "3.205938" z = "-0.530482" />
+		<rotation x = "36.569331" y = "96.618298" z = "210.026273" />
+	</pose>
+	<pose name = "CheckerRoomImage039" t = "39">
+		<translation x = "-3.296491" y = "-0.162099" z = "-1.641504" />
+		<rotation x = "81.290492" y = "70.309890" z = "111.328698" />
+	</pose>
+	<pose name = "CheckerRoomImage040" t = "40">
+		<translation x = "2.959809" y = "3.573413" z = "-3.667406" />
+		<rotation x = "349.675369" y = "125.328615" z = "0.275179" />
+	</pose>
+	<pose name = "CheckerRoomImage041" t = "41">
+		<translation x = "-3.294491" y = "0.427470" z = "3.917656" />
+		<rotation x = "102.464629" y = "122.126842" z = "81.935186" />
+	</pose>
+	<pose name = "CheckerRoomImage042" t = "42">
+		<translation x = "1.469683" y = "-3.321585" z = "-0.280899" />
+		<rotation x = "326.662611" y = "123.714567" z = "52.345308" />
+	</pose>
+	<pose name = "CheckerRoomImage043" t = "43">
+		<translation x = "-3.036793" y = "-2.380296" z = "1.876680" />
+		<rotation x = "320.598823" y = "101.068427" z = "73.236177" />
+	</pose>
+	<pose name = "CheckerRoomImage044" t = "44">
+		<translation x = "-3.914408" y = "2.833904" z = "1.126461" />
+		<rotation x = "332.101619" y = "64.454385" z = "322.676120" />
+	</pose>
+	<pose name = "CheckerRoomImage045" t = "45">
+		<translation x = "0.458146" y = "1.647419" z = "1.784747" />
+		<rotation x = "56.213843" y = "110.360220" z = "314.313976" />
+	</pose>
+	<pose name = "CheckerRoomImage046" t = "46">
+		<translation x = "3.256872" y = "3.159516" z = "-3.591113" />
+		<rotation x = "316.699972" y = "168.432528" z = "252.104198" />
+	</pose>
+	<pose name = "CheckerRoomImage047" t = "47">
+		<translation x = "2.883653" y = "-1.366832" z = "3.360363" />
+		<rotation x = "227.518182" y = "107.439934" z = "169.379163" />
+	</pose>
+	<pose name = "CheckerRoomImage048" t = "48">
+		<translation x = "-1.292389" y = "0.224011" z = "3.414730" />
+		<rotation x = "75.826144" y = "176.326231" z = "297.768961" />
+	</pose>
+	<pose name = "CheckerRoomImage049" t = "49">
+		<translation x = "-3.782729" y = "1.203185" z = "0.415960" />
+		<rotation x = "124.241729" y = "79.381192" z = "178.497503" />
+	</pose>
+	<pose name = "CheckerRoomImage050" t = "50">
+		<translation x = "2.406875" y = "0.754327" z = "3.711327" />
+		<rotation x = "57.570764" y = "133.130153" z = "130.855926" />
+	</pose>
+	<pose name = "CheckerRoomImage051" t = "51">
+		<translation x = "2.447879" y = "-2.148297" z = "-1.752356" />
+		<rotation x = "159.965337" y = "6.768698" z = "99.217117" />
+	</pose>
+	<pose name = "CheckerRoomImage052" t = "52">
+		<translation x = "2.947905" y = "-0.585429" z = "0.817173" />
+		<rotation x = "30.158983" y = "137.650795" z = "332.906693" />
+	</pose>
+	<pose name = "CheckerRoomImage053" t = "53">
+		<translation x = "1.357173" y = "-2.015108" z = "-0.828298" />
+		<rotation x = "59.514657" y = "93.290684" z = "139.316124" />
+	</pose>
+	<pose name = "CheckerRoomImage054" t = "54">
+		<translation x = "2.462231" y = "2.764920" z = "1.024186" />
+		<rotation x = "70.990685" y = "0.956976" z = "177.437114" />
+	</pose>
+	<pose name = "CheckerRoomImage055" t = "55">
+		<translation x = "3.179986" y = "3.893420" z = "-1.594942" />
+		<rotation x = "248.769843" y = "49.896019" z = "91.597717" />
+	</pose>
+	<pose name = "CheckerRoomImage056" t = "56">
+		<translation x = "-0.369360" y = "-3.467434" z = "2.554867" />
+		<rotation x = "206.569033" y = "96.269802" z = "318.587947" />
+	</pose>
+	<pose name = "CheckerRoomImage057" t = "57">
+		<translation x = "0.462602" y = "1.711424" z = "-3.441712" />
+		<rotation x = "314.396328" y = "138.233318" z = "137.974844" />
+	</pose>
+	<pose name = "CheckerRoomImage058" t = "58">
+		<translation x = "0.049049" y = "-1.359076" z = "-3.664979" />
+		<rotation x = "88.068264" y = "9.556667" z = "107.126898" />
+	</pose>
+	<pose name = "CheckerRoomImage059" t = "59">
+		<translation x = "1.535871" y = "1.003483" z = "-3.604829" />
+		<rotation x = "226.658864" y = "98.829620" z = "258.334186" />
+	</pose>
+	<pose name = "CheckerRoomImage060" t = "60">
+		<translation x = "1.463255" y = "-1.934963" z = "-2.796360" />
+		<rotation x = "12.395256" y = "144.179020" z = "68.713180" />
+	</pose>
+	<pose name = "CheckerRoomImage061" t = "61">
+		<translation x = "0.162509" y = "1.208061" z = "-0.837196" />
+		<rotation x = "185.831446" y = "116.924950" z = "42.549347" />
+	</pose>
+	<pose name = "CheckerRoomImage062" t = "62">
+		<translation x = "2.627745" y = "-1.030823" z = "3.643120" />
+		<rotation x = "310.761533" y = "167.660463" z = "301.319202" />
+	</pose>
+	<pose name = "CheckerRoomImage063" t = "63">
+		<translation x = "0.046235" y = "-1.641433" z = "-3.113636" />
+		<rotation x = "354.285556" y = "13.451660" z = "267.888932" />
+	</pose>
+	<pose name = "CheckerRoomImage064" t = "64">
+		<translation x = "2.598868" y = "3.294105" z = "1.180424" />
+		<rotation x = "3.554271" y = "49.825163" z = "212.587397" />
+	</pose>
+	<pose name = "CheckerRoomImage065" t = "65">
+		<translation x = "-1.745239" y = "3.539991" z = "0.220972" />
+		<rotation x = "91.022934" y = "165.462751" z = "87.440967" />
+	</pose>
+	<pose name = "CheckerRoomImage066" t = "66">
+		<translation x = "-2.572041" y = "0.908400" z = "-1.174061" />
+		<rotation x = "80.585881" y = "137.700927" z = "224.368972" />
+	</pose>
+	<pose name = "CheckerRoomImage067" t = "67">
+		<translation x = "3.758965" y = "-2.284258" z = "-2.414406" />
+		<rotation x = "17.113534" y = "107.953262" z = "229.807915" />
+	</pose>
+	<pose name = "CheckerRoomImage068" t = "68">
+		<translation x = "1.935516" y = "3.515351" z = "-2.235247" />
+		<rotation x = "3.662084" y = "149.934266" z = "117.925000" />
+	</pose>
+	<pose name = "CheckerRoomImage069" t = "69">
+		<translation x = "-1.921666" y = "2.003628" z = "-3.649428" />
+		<rotation x = "176.470312" y = "161.287828" z = "24.296164" />
+	</pose>
+	<pose name = "CheckerRoomImage070" t = "70">
+		<translation x = "0.649883" y = "2.008718" z = "1.705312" />
+		<rotation x = "16.373572" y = "175.089664" z = "316.993895" />
+	</pose>
+	<pose name = "CheckerRoomImage071" t = "71">
+		<translation x = "3.642098" y = "-2.306229" z = "1.230722" />
+		<rotation x = "100.198127" y = "179.733691" z = "165.584423" />
+	</pose>
+	<pose name = "CheckerRoomImage072" t = "72">
+		<translation x = "-3.353969" y = "2.641252" z = "-0.449842" />
+		<rotation x = "230.390845" y = "25.136880" z = "274.994179" />
+	</pose>
+	<pose name = "CheckerRoomImage073" t = "73">
+		<translation x = "-3.331726" y = "-2.079239" z = "1.751516" />
+		<rotation x = "106.089135" y = "12.697568" z = "91.399904" />
+	</pose>
+	<pose name = "CheckerRoomImage074" t = "74">
+		<translation x = "0.953079" y = "1.052966" z = "-3.120192" />
+		<rotation x = "97.075692" y = "13.223998" z = "212.899386" />
+	</pose>
+	<pose name = "CheckerRoomImage075" t = "75">
+		<translation x = "-2.204052" y = "1.685917" z = "3.509753" />
+		<rotation x = "212.596748" y = "2.653882" z = "154.366258" />
+	</pose>
+	<pose name = "CheckerRoomImage076" t = "76">
+		<translation x = "2.121472" y = "1.939067" z = "2.781014" />
+		<rotation x = "136.992268" y = "174.927613" z = "137.556231" />
+	</pose>
+	<pose name = "CheckerRoomImage077" t = "77">
+		<translation x = "0.545220" y = "-0.877882" z = "1.272285" />
+		<rotation x = "252.908292" y = "17.058045" z = "45.616818" />
+	</pose>
+	<pose name = "CheckerRoomImage078" t = "78">
+		<translation x = "1.329505" y = "2.078603" z = "-0.969351" />
+		<rotation x = "178.604622" y = "151.512629" z = "87.935999" />
+	</pose>
+	<pose name = "CheckerRoomImage079" t = "79">
+		<translation x = "-3.137489" y = "3.223487" z = "-0.667466" />
+		<rotation x = "227.955336" y = "123.331139" z = "28.562970" />
+	</pose>
+	<pose name = "CheckerRoomImage080" t = "80">
+		<translation x = "-3.325736" y = "0.699360" z = "-0.142769" />
+		<rotation x = "127.221965" y = "87.760290" z = "109.028990" />
+	</pose>
+	<pose name = "CheckerRoomImage081" t = "81">
+		<translation x = "1.000969" y = "-3.276722" z = "3.482270" />
+		<rotation x = "103.335821" y = "62.405079" z = "267.013728" />
+	</pose>
+	<pose name = "CheckerRoomImage082" t = "82">
+		<translation x = "-0.722150" y = "-2.968192" z = "2.908744" />
+		<rotation x = "47.954561" y = "63.656602" z = "221.405661" />
+	</pose>
+	<pose name = "CheckerRoomImage083" t = "83">
+		<translation x = "-3.301980" y = "-3.157900" z = "-0.176609" />
+		<rotation x = "337.348939" y = "45.690999" z = "242.067996" />
+	</pose>
+	<pose name = "CheckerRoomImage084" t = "84">
+		<translation x = "-1.031488" y = "-2.618180" z = "0.436148" />
+		<rotation x = "289.740905" y = "163.983235" z = "3.017909" />
+	</pose>
+	<pose name = "CheckerRoomImage085" t = "85">
+		<translation x = "1.377155" y = "-2.988553" z = "3.003231" />
+		<rotation x = "337.690276" y = "130.615658" z = "244.215710" />
+	</pose>
+	<pose name = "CheckerRoomImage086" t = "86">
+		<translation x = "-2.483301" y = "2.226407" z = "3.594115" />
+		<rotation x = "66.736989" y = "4.666643" z = "181.145049" />
+	</pose>
+	<pose name = "CheckerRoomImage087" t = "87">
+		<translation x = "3.165833" y = "-3.684708" z = "1.113478" />
+		<rotation x = "335.936075" y = "83.073826" z = "83.127042" />
+	</pose>
+	<pose name = "CheckerRoomImage088" t = "88">
+		<translation x = "3.598771" y = "-2.067533" z = "1.988163" />
+		<rotation x = "336.871155" y = "50.634229" z = "62.962743" />
+	</pose>
+	<pose name = "CheckerRoomImage089" t = "89">
+		<translation x = "3.692580" y = "3.032531" z = "-1.187001" />
+		<rotation x = "102.076025" y = "5.213914" z = "66.593868" />
+	</pose>
+	<pose name = "CheckerRoomImage090" t = "90">
+		<translation x = "1.840660" y = "3.788151" z = "3.344227" />
+		<rotation x = "98.868329" y = "159.242741" z = "303.933602" />
+	</pose>
+	<pose name = "CheckerRoomImage091" t = "91">
+		<translation x = "-0.749693" y = "0.843376" z = "2.694016" />
+		<rotation x = "198.515367" y = "138.780964" z = "353.732324" />
+	</pose>
+	<pose name = "CheckerRoomImage092" t = "92">
+		<translation x = "1.949994" y = "3.809906" z = "0.416447" />
+		<rotation x = "66.704126" y = "59.352314" z = "328.946265" />
+	</pose>
+	<pose name = "CheckerRoomImage093" t = "93">
+		<translation x = "-1.696105" y = "-3.652388" z = "2.941018" />
+		<rotation x = "159.156400" y = "143.380546" z = "125.052991" />
+	</pose>
+	<pose name = "CheckerRoomImage094" t = "94">
+		<translation x = "-1.484662" y = "3.588582" z = "2.798975" />
+		<rotation x = "66.714353" y = "58.434898" z = "280.880849" />
+	</pose>
+	<pose name = "CheckerRoomImage095" t = "95">
+		<translation x = "0.847171" y = "-1.509631" z = "2.467291" />
+		<rotation x = "341.055330" y = "55.418840" z = "196.723653" />
+	</pose>
+	<pose name = "CheckerRoomImage096" t = "96">
+		<translation x = "0.758777" y = "2.391783" z = "-2.954457" />
+		<rotation x = "177.776877" y = "167.059634" z = "293.919263" />
+	</pose>
+	<pose name = "CheckerRoomImage097" t = "97">
+		<translation x = "3.029288" y = "2.485033" z = "0.288021" />
+		<rotation x = "347.010396" y = "175.844909" z = "174.141702" />
+	</pose>
+	<pose name = "CheckerRoomImage098" t = "98">
+		<translation x = "-1.963194" y = "2.879989" z = "3.206265" />
+		<rotation x = "232.179002" y = "94.239955" z = "212.382467" />
+	</pose>
+	<pose name = "CheckerRoomImage099" t = "99">
+		<translation x = "2.129507" y = "-0.331594" z = "2.166655" />
+		<rotation x = "174.353678" y = "171.348330" z = "283.414841" />
+	</pose>
+	<pose name = "CheckerRoomImage100" t = "100">
+		<translation x = "3.528106" y = "3.445155" z = "-0.634294" />
+		<rotation x = "348.370289" y = "159.839369" z = "36.084472" />
+	</pose>
+</trajectory>

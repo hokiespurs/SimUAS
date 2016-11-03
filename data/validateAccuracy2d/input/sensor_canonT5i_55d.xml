@@ -5,7 +5,7 @@
   <principalPoint x = "2592" y="1728"/>
   <blender compression = "100" percentage = "100" antialiasing = "0"/>
     <postprocessing seed="1">
-    <distortion k1 = "0" k2 = "0" k3 = "0" k4 = "0" p1 = "0" p2 = "0" isPhotoscanUnits = "1"/>
+    <distortion k1 = "0.02" k2 = "-0.01" k3 = "0.005" k4 = "0" p1 = "0.001" p2 = "0" isPhotoscanUnits = "1"/>
     <vignetting v1 = "0" v2 = "0" v3 = "0"/>
     <saltnoise prob = "0"/>
     <peppernoise prob = "0"/>
