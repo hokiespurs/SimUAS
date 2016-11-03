@@ -56,5 +56,5 @@ z = (rand(NCAMS,1)*8)-4;
 rx = iRoll;
 ry = iPhi;
 rz = iTheta;
-
-makeTrajectory('trajectory_Test2.xml', 'TestCalRoom', x, y, z, rx, ry, rz, 'CenterPoint', 3)
+t = 1:NCAMS;
+makeTrajectory('trajectory_Test2.xml', 'TestCalRoom', x, y, z, rx, ry, rz, t, 'CenterPoint', 3)

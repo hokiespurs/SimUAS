@@ -1,1 +1,1 @@
-blender --background --python renderblender.py -- data\\demobeaver
+blender --background --python renderblender.py -- data\\calroom

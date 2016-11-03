@@ -150,7 +150,7 @@ function [xy, inframe] = calcXYZtoPixel(markT, camT, camR, Calibration)
     p = Calibration.p;
     f = Calibration.fx;
     k = k./([f^2 f^4 f^6 f^8]);
-    p = Calibration.p./f^2;
+    p = Calibration.p./f;
     
     camR = camR*pi/180;
 

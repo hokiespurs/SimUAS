@@ -104,10 +104,10 @@ def rotatePoint(Points, Rotate, Translate, Scale):
         newPoints.x[i] = newPoints.x[i] + Translate.x
         newPoints.y[i] = newPoints.y[i] + Translate.y
         newPoints.z[i] = newPoints.z[i] + Translate.z
-        logging.debug(" PRE Rotation")
-        logging.debug([Points.x[i], Points.y[i], Points.z[i]])
-        logging.debug(" POST Rotation")
-        logging.debug([newPoints.x[i], newPoints.y[i], newPoints.z[i]])
+        #logging.debug(" PRE Rotation")
+        #logging.debug([Points.x[i], Points.y[i], Points.z[i]])
+        #logging.debug(" POST Rotation")
+        #logging.debug([newPoints.x[i], newPoints.y[i], newPoints.z[i]])
 
     return newPoints
 

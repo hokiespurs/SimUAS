@@ -216,7 +216,7 @@
 	<material>
 		<diffuse red="1" green="1" blue="1" intensity="1"/>
 		<specular red="1" green="0" blue="0" intensity="0"/>
-		<shading shadeless="1" receiveshadow="1" castshadow="0"/>
+		<shading shadeless="0" receiveshadow="1" castshadow="0"/>
 		<transparency alpha="1" ior="1"/>
 	</material>
 	<texture>
