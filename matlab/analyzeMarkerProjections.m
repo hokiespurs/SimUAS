@@ -3,7 +3,7 @@ dbstop if error
 
 %% paths to folders
 %foldername = 'C:\Users\Richie\Documents\GitHub\BlenderPythonTest\data\calroom';
-foldername = 'C:\Users\slocumr.ONID\github\BlenderPythonTest\data\calroom';
+foldername = 'C:\Users\Richie\Documents\GitHub\BlenderPythonTest\data\calroom';
 imDir = [foldername '/output/images/pre'];
 outImDir = [foldername '/output/images'];
 trajectoryFilename = [foldername '/output/trajectory.csv'];
@@ -169,7 +169,7 @@ image_y = nan(Npts,NLOOPS);
 dx = nan(Npts,NLOOPS);
 dy = nan(Npts,NLOOPS);
 for iImage = 1:numel(Trajectory.names)
-    [image_xy] = detectFiducials(iNames{iImage},2);
+    [image_xy] = detectFiducials(iNames{iImage},1);
     [projected_xy] = projectFiducials(Fiducials, ...
         Trajectory.T(iImage,:), Trajectory.R(iImage,:), Calibration);
     proj_x(:,iImage) = projected_xy(:,1);
@@ -184,8 +184,8 @@ for iImage = 1:numel(Trajectory.names)
         dx(:,iImage) = image_xy(IDX,1) - projected_xy(:,1) + badvals;
         dy(:,iImage) = image_xy(IDX,2) - projected_xy(:,2) + badvals;
     else
-        image_x(:,iImage) = Nan;
-        image_y(:,iImage) = Nan;
+        image_x(:,iImage) = nan;
+        image_y(:,iImage) = nan;
         dx(:,iImage)=nan;
         dy(:,iImage)=nan;
     end
@@ -427,7 +427,7 @@ function [xy, inframe] = calcXYZtoPixel(markT, camT, camR, Calibration)
     p = Calibration.p;
     f = Calibration.fx;
     k = k./([f^2 f^4 f^6 f^8]);
-    p = Calibration.p./f^2;
+    p = Calibration.p./f;
     
     camR = camR*pi/180;
 
@@ -552,7 +552,7 @@ function newMap = calcImageMap(Calibration, height, width)
     k = Calibration.k;
     f = Calibration.fx;
     k = k./([f^2 f^4 f^6 f^8]);
-    p = Calibration.p./f^2;
+    p = Calibration.p./f;
     % Distort Coordinates
     [xd, yd] = calcDistortedCoords(xu, yu, xc, yc, k, p);
     
@@ -618,11 +618,9 @@ rawdata = importdata(fname);
 if isstruct(rawdata)
     Control.names = rawdata.textdata(2:end,1);
     Control.T = rawdata.data(:,1:3);
-    Control.R = rawdata.data(:,4:6);
 else
     Control.names{1} = '';
     Control.T = [0 0 0];
-    Control.R = [0 0 0];
     error('why did this happen?')
 end
 end
