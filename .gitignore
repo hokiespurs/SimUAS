@@ -96,3 +96,4 @@ proc/
 #ignore huge texture files
 objects/textures/*
 *.mat
+objects/firstdb/topo1/grass.jpg
