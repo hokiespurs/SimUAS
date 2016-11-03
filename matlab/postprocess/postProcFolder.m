@@ -1,6 +1,9 @@
 function postProcFolder(foldername)
 dbstop if error
 addHomePath('BlenderPythonTest')
+hpath = getHomePath('BlenderPythonTest');
+foldername = [hpath '/' foldername];
+
 %% paths to folders
 imDir = [foldername '/output/images/pre'];
 outImDir = [foldername '/output/images'];
