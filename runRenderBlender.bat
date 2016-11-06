@@ -1,4 +1,4 @@
-SET EXPERIMENTNAME=calroom
+SET EXPERIMENTNAME=validateSharpnessTribar
 cd python
 blender --background --python renderblender.py -- data\\%EXPERIMENTNAME%
 cd ../matlab/postprocess

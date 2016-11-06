@@ -97,3 +97,6 @@ proc/
 objects/textures/*
 *.mat
 objects/firstdb/topo1/grass.jpg
+
+# ignore warp images folder
+matlab/validatePhotogrammetry/warpImages/*.txt

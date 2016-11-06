@@ -3,7 +3,7 @@
   <physical focallength="4.10" sensorWidth = "4.54"/>
   <resolution x = "3264" y = "2448"/>
   <principalPoint x = "1632" y="1224"/>
-  <blender compression = "100" percentage = "100" antialiasing = "0"/>
+  <blender compression = "100" percentage = "100" antialiasing = "1"/>
   <postprocessing seed="1">
     <distortion k1 = "-0.03" k2 = "0.01" k3 = "0.015" k4 = "0" p1 = "-0.003" p2 = "0.002" isPhotoscanUnits = "1"/>
     <vignetting v1 = "0" v2 = "0" v3 = "0"/>

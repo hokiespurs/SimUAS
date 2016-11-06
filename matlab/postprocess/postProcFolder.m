@@ -77,7 +77,7 @@ function Itrim = trimimage(I,x,y)
 end
 
 function savePixelXML(fname, Trajectory, Markers, Calibration)
-
+    MarkerStruct=[];
     for iMarker=1:numel(Markers.names)
         MarkerStruct{iMarker}.id = sprintf('%i',iMarker-1);
         MarkerStruct{iMarker}.name = Markers.names{iMarker};

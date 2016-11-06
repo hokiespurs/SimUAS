@@ -179,6 +179,7 @@ saveas(f2,[procFolder 'validatePhotogrammetry/heatmapdeltas' num2str(whichtype) 
 saveas(f3,[procFolder 'validatePhotogrammetry/correlation' num2str(whichtype) '.png'])
 saveas(f4,[procFolder 'validatePhotogrammetry/examplePoints' num2str(whichtype) '.png'])
 saveas(f5,[procFolder 'validatePhotogrammetry/examplePointsZoom' num2str(whichtype) '.png'])
+save([procFolder 'validatePhotogrammetry/rawdat' num2str(whichtype) '.mat']);
 %% Quit program
 if doexit
    exit 
@@ -224,45 +225,6 @@ end
 
 end
 
-function xy=myDetectCorner(I)
-MINCHECKERPIXSIZE = 10;
-METRICTHRESH = 0.00;
-GAUSSFILT = 1;
-
-I = imgaussfilt(I,GAUSSFILT);
-
-corners = detectHarrisFeatures(rgb2gray(I));
-xy = corners.Location;
-xy(corners.Metric<METRICTHRESH,:)=[];
-indClose = rangesearch(xy,xy,MINCHECKERPIXSIZE);
-
-for i=1:numel(indClose)
-   if ~isnan(indClose{i})
-       indpts = indClose{i};
-       xy(i,:)=mean(xy(indpts,:),1);
-       indClose(indpts)={nan};
-   else
-       xy(i,:)=[nan nan];
-   end
-%    figure(1)
-%    plot(xy(:,1),xy(:,2),'k.');
-%    hold on
-%    plot(xy(indpts,1),xy(indpts,2),'c*')
-%    plot(corners.Location(:,1),corners.Location(:,2),'ro')
-%    plot(xy(i,1),xy(i,2),'mo','markersize',20)
-%    hold off
-end
-badind = isnan(xy(:,1));
-xy(badind,:)=[];
-
-% figure
-% image(I);
-% hold on
-% plot(corners.Location(:,1),corners.Location(:,2),'mo')
-% plot(xy(:,1),xy(:,2),'g.')
-% drawnow
-end
-
 function xy=projectFiducials(Fiducials, T, R, Calibration)
 
 for i=1:numel(Fiducials.names)
@@ -271,17 +233,7 @@ end
 
 end
 
-function xy = detectFiducials(imname, method)
-I = imread(imname);
 
-if method==1
-    [xy,~] = detectCheckerboardPoints(I);
-else
-    xy=myDetectCorner(I);    
-end
-xy = xy - 0.5;
-
-end
 function addHomePath(flag)
 homePath = getHomePath(flag);
 addpath(genpath([homePath '/matlab']))

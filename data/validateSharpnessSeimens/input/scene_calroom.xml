@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scene name="testRange" objectdb="objects/beaverdb" version = "1.0">
+<object objname="calibration_seimens" name = "seimens" isControl = "1" isFiducial = "0">
+	<position>
+		<translation x="0" y="0" z="0"/>
+		<rotation x="0" y="0" z="0"/>
+		<scale x="2" y="2" z="2"/>
+	</position>
+	<material>
+		<shading shadeless = "1"/>
+	</material>
+</object>
+</scene>
