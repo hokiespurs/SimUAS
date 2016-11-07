@@ -8,7 +8,7 @@ for i=1:NIMAGES
     %% Generate Random Checkerboard Pattern
     x = round(10+rand(1)*10);        %random int between 10 and 20
     y = round(10+rand(1)*10);        %random int between 10 and 20
-    npix = round(20 + rand(1) * 80);  %random int between 10  and 100
+    npix = round(20 + rand(1) * 80);  %random int between 20  and 100
     whichDistort = floor(rand(1)*3.9999); %0,1,2,3
     
     switch whichDistort

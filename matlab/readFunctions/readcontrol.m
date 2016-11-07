@@ -6,6 +6,6 @@ if isstruct(rawdata)
 else
     Control.names{1} = '';
     Control.T = [0 0 0];
-    error('added this at some point... not sure...  why did this happen?')
+    warning('No Control Data Found')
 end
 end

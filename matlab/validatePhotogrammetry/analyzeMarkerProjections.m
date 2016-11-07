@@ -113,7 +113,7 @@ subplot 427
 plot(r,dr,'b.');grid on
 ylim([0 1])
 xlabel('Projected Radius to Principal Point (pixels)');
-ylabel('Image total pixel error \sqrt(dx^2+dy^2)');
+ylabel('Image total pixel error $\sqrt{dx^2+dy^2}$','interpreter','latex');
 title('radius to principal point vs delta radius')
 
 subplot 428

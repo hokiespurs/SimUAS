@@ -34,7 +34,7 @@ title('Heatmap of Image Points Minus Projected Points (pixels)');
 mkdir([outImDir '\proc'])
 saveas(f1,[outImDir '\proc\Points' num2str(whichtype) '.png']);
 saveas(f2,[outImDir '\proc\Heatmap' num2str(whichtype) '.png']);
-
+save([outImDir '\proc\data' num2str(whichtype) '.mat']);
 end
 
 function [proj_x,proj_y,image_x,image_y,dx,dy]=calcFiducial(outImDir,whichtype, dodebug)
