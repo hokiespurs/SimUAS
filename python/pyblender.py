@@ -133,9 +133,9 @@ def addObjects(blenderScene, Scene, rootname):
                 mtex.texture = cTex
                 mtex.texture_coords = 'UV'
                 if Slot.interpolate == 0:
-                    mtex.filter_type = 'BOX'
-                    mtex.use_interpolation = False
-                    mtex.filter_size = 0.1
+                    cTex.filter_type = 'BOX'
+                    cTex.use_interpolation = False
+                    cTex.filter_size = 0
 
                 mtex.use_map_color_diffuse = True
                 mtex.diffuse_color_factor = Slot.color
