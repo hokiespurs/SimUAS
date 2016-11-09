@@ -25,8 +25,11 @@ Control = readcontrol(controlFilename);
 Calibration = readsensor(intrinsicFilename, inputSensorFilename);
 
 %% Add Distortion to all Images
-distortImagesInFolder(imDir, outImDir, Calibration)
-
+if isDistortion(Calibration)
+    distortImagesInFolder(imDir, outImDir, Calibration)
+else
+    copyImages(imDir,outImDir);
+end
 %% Crop image if need be
 cropImagesInFolder(outImDir, Calibration);
 
@@ -43,6 +46,24 @@ savePixelXML(fiducialSavename, Trajectory, Fiducials, Calibration);
 if doexit
    exit 
 end
+end
+
+function copyImages(imDir, outImDir)
+fprintf('No Distortion... Copying Files\n');
+imNames = dirname([imDir '/*.png']);
+for i = 1:numel(imNames)
+    iName = imNames{i};
+    [~,fname,ext] = fileparts(iName);
+    fprintf('Copying: %s\n',[fname ext])
+    newName = [outImDir '/' fname ext];
+    copyfile(iName,newName);
+end
+end
+
+function flag = isDistortion(Calibration)
+    isRadial = sum(Calibration.k == [0 0 0 0])<4;
+    isTangential = sum(Calibration.p == [0 0])<2;
+    flag = isRadial | isTangential;
 end
 
 function cropImagesInFolder(dname, Calibration)
@@ -210,7 +231,7 @@ end
 
 function distortImagesInFolder(imDir, outDir, Calibration)
 imNames = dirname([imDir '/*.png']);
-fprintf('Generating Image Map...%s\n',datestr(now));
+fprintf('Generating Image Map for Distortion...%s\n',datestr(now));
 I = imread(imNames{1});
 [height,width,~]=size(I);
 newMap = calcImageMap(Calibration, height, width);

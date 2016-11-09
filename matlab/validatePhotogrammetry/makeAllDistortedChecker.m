@@ -1,5 +1,5 @@
 function makeAllDistortedChecker
-NIMAGES = 500;
+NIMAGES = 2000;
 rng('default');
 rng(5);
 mkdir('warpImages');
@@ -17,21 +17,20 @@ for i=1:NIMAGES
             t = [cos(rz) -sin(rz) 0;sin(rz) cos(rz) 0; 0 0 1];
             fprintf('Rotate: %.0f\n',rz*180/pi);
         case 1 % affine skew
-            disp b
-            xshear = 0.25 + rand(1)*0.5;
-            yshear = 0.25 + rand(1)*0.5;
+            xshear = 0 + rand(1)*0.5;
+            yshear = 0 + rand(1)*0.5;
             t = [1 xshear 0;yshear 1 0; 0 0 1];
-            fprintf('Skew X: %.1f \t Skew Y: %.1f',xshear, yshear);
+            fprintf('Skew X: %.1f \t Skew Y: %.1\n',xshear, yshear);
         case 2 % translate
             sx = 0.5+rand(1)*2.5;
             sy = 0.5+rand(1)*2.5;
             t = [sx 0 0;0 sy 0;0 0 1];
-            fprintf('Scale X: %.1f \t Scale Y: %.01f\n',sx, sy);
+            fprintf('Scale X: %.1f \t Scale Y: %.1f\n',sx, sy);
         case 3 % scale
             tx = -50 + rand(1)*100;
             ty = -50 + rand(1)*100;
             t = [tx, ty];
-            fprintf('Translate X: %.10f \t Translate Y: %.1f',tx,ty);
+            fprintf('Translate X: %.10f \t Translate Y: %.1f\n',tx,ty);
     end
     
     [Id,xy]=makeCheckerDist(x,y,npix,t, whichDistort);
@@ -50,7 +49,7 @@ for i=1:NIMAGES
     imwrite(Id,[filename '.png']);
     %% save xyz points
     fid = fopen([filename '.txt'],'w+t');
-    fprintf(fid,'%.3f,%.3f\n',xy')
+    fprintf(fid,'%.3f,%.3f\n',xy');
     fclose(fid);
     
 end
