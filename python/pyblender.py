@@ -66,7 +66,7 @@ def addObjects(blenderScene, Scene, rootname):
 
         for R in iObj.Position.R:
             blenderScene.frame_current = R.t
-            bpy.data.objects[iName].rotation_mode = 'ZYX'
+            bpy.data.objects[iName].rotation_mode = 'XYZ'
             bpy.data.objects[iName].rotation_euler = (R.x, R.y, R.z)
             bpy.data.objects[iName].keyframe_insert(data_path='rotation_euler')
 
@@ -247,6 +247,7 @@ def addCameras(Trajectory, Sensor):
         T = (iPose.Translation.x, iPose.Translation.y, iPose.Translation.z)
         R = (iPose.Rotation.x, iPose.Rotation.y, iPose.Rotation.z)
         bpy.ops.object.camera_add(view_align=True, enter_editmode=True, location=T, rotation=(0, 0, 0))
+        bpy.context.object.rotation_mode = 'XYZ'
         bpy.context.object.rotation_euler = R
         bpy.context.object.data.sensor_width = Sensor.rendersensorwidth
         xyRatio = Sensor.renderresolution[1] / Sensor.renderresolution[0]
@@ -304,6 +305,8 @@ def applyRenderSettings(Sensor):
     bpy.context.scene.render.resolution_x = Sensor.renderresolution[0]
     bpy.context.scene.render.resolution_y = Sensor.renderresolution[1]
     bpy.context.scene.render.use_antialiasing = Sensor.antialiasing
+    if Sensor.antialiasing != 0:
+        bpy.context.scene.render.pixel_filter_type = 'BOX'
     bpy.context.scene.render.image_settings.compression = Sensor.compression
     bpy.context.scene.render.image_settings.file_format = Sensor.fileformat
 
