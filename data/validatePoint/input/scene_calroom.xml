@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scene name="testRange" objectdb="objects/beaverdb" version = "1.0">
+<environment interpolatoin='linear'>
+	<horizon red="0" green="0" blue="0" t="0"/>
+	<zenith red="0" green="0" blue="0" t="0"/>
+</environment>
+<object objname="basic_sphere" name = "sphere" isControl = "0" isFiducial = "0">
+	<position>
+		<translation x="0" y="0" z="-0.005"/>
+		<rotation x="0" y="0" z="0"/>
+		<scale x="0.01" y="0.01" z="0.01"/>
+	</position>
+	<material>
+		<shading shadeless = "1"/>
+		<diffuse red="1" green="1" blue="1" intensity="1"/>
+	</material>
+</object>
+</scene>

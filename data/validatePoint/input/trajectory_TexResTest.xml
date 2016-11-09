@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<trajectory name = "sharpnessTest">
+	<pose name = "ImageFar800" t = "1">
+		<translation x = "0.000000" y = "0.000000" z = "800" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImageFar400" t = "1">
+		<translation x = "0.000000" y = "0.000000" z = "400" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImageFar200" t = "1">
+		<translation x = "0.000000" y = "0.000000" z = "200" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImageFar100" t = "1">
+		<translation x = "0.000000" y = "0.000000" z = "100" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImageFar50" t = "1">
+		<translation x = "0.000000" y = "0.000000" z = "50" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImageFar10" t = "1">
+		<translation x = "0.000000" y = "0.000000" z = "10" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImageFar5" t = "1">
+		<translation x = "0.000000" y = "0.000000" z = "5" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+</trajectory>
