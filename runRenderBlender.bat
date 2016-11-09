@@ -1,4 +1,4 @@
-SET EXPERIMENTNAME=validateTextureRes
+SET EXPERIMENTNAME=validatePoint
 cd python
 blender --background --python renderblender.py -- data\\%EXPERIMENTNAME%
 cd ../matlab/postprocess
