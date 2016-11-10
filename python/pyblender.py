@@ -133,7 +133,7 @@ def addObjects(blenderScene, Scene, rootname):
                 mtex.texture = cTex
                 mtex.texture_coords = 'UV'
                 if Slot.interpolate == 0:
-                    cTex.filter_type = 'MITCHELL'
+                    cTex.filter_type = 'BOX'
                     cTex.use_interpolation = False
                     cTex.filter_size = 0
 
@@ -305,8 +305,8 @@ def applyRenderSettings(Sensor):
     bpy.context.scene.render.resolution_x = Sensor.renderresolution[0]
     bpy.context.scene.render.resolution_y = Sensor.renderresolution[1]
     bpy.context.scene.render.use_antialiasing = Sensor.antialiasing
-    if Sensor.antialiasing != 0:
-        bpy.context.scene.render.pixel_filter_type = 'BOX'
+    # if Sensor.antialiasing != 0: # BOX Filter actually biased results
+    #     # bpy.context.scene.render.pixel_filter_type = 'BOX'
     bpy.context.scene.render.image_settings.compression = Sensor.compression
     bpy.context.scene.render.image_settings.file_format = Sensor.fileformat
 
