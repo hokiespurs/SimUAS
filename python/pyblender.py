@@ -133,7 +133,7 @@ def addObjects(blenderScene, Scene, rootname):
                 mtex.texture = cTex
                 mtex.texture_coords = 'UV'
                 if Slot.interpolate == 0:
-                    cTex.filter_type = 'BOX'
+                    cTex.filter_type = 'MITCHELL'
                     cTex.use_interpolation = False
                     cTex.filter_size = 0
 
