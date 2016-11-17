@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<trajectory name = "TestTopoField">
+	<ortho name = "Ortho1" t = "1">
+		<translation x = "0" y = "0" z = "100" />
+		<rotation x = "0" y = "0" z = "0" />
+		<resolution x="5000" y = "5000" scale = "100"/>
+		<render antialiasing = "1" compression = "1" format = "TIFF"/> 
+	</ortho>
+	<pose name = "IMG0001" t = "1">
+		<translation x = "-39.480271" y = "-40.710735" z = "40.700620" />
+		<rotation x = "0.540633" y = "0.180664" z = "-1.053102" />
+	</pose>
+	<pose name = "IMG0002" t = "2">
+		<translation x = "-40.014160" y = "-29.222996" z = "41.630543" />
+		<rotation x = "0.975841" y = "1.266528" z = "0.647755" />
+	</pose>
+	<pose name = "IMG0003" t = "3">
+		<translation x = "-41.155529" y = "-19.377606" z = "38.539987" />
+		<rotation x = "-0.156870" y = "-0.251169" z = "-0.317628" />
+	</pose>
+	<pose name = "IMG0004" t = "4">
+		<translation x = "-40.009525" y = "-9.352619" z = "37.949957" />
+		<rotation x = "0.277799" y = "-0.204570" z = "1.768992" />
+	</pose>
+	<pose name = "IMG0005" t = "5">
+		<translation x = "-40.689811" y = "-0.425632" z = "39.879499" />
+		<rotation x = "0.639517" y = "-2.201522" z = "1.510582" />
+	</pose>
+	<pose name = "IMG0006" t = "6">
+		<translation x = "-40.666699" y = "11.048581" z = "40.989902" />
+		<rotation x = "-0.080978" y = "-0.774513" z = "0.164010" />
+	</pose>
+	<pose name = "IMG0007" t = "7">
+		<translation x = "-39.135851" y = "20.660707" z = "38.802229" />
+		<rotation x = "0.540870" y = "-1.393273" z = "-0.282764" />
+	</pose>
+	<pose name = "IMG0008" t = "8">
+		<translation x = "-39.886581" y = "32.508772" z = "40.592656" />
+		<rotation x = "-1.262565" y = "-0.386235" z = "1.152166" />
+	</pose>
+	<pose name = "IMG0009" t = "9">
+		<translation x = "-39.601637" y = "41.063460" z = "40.469809" />
+		<rotation x = "1.110424" y = "0.525586" z = "-1.146508" />
+	</pose>
+	<pose name = "IMG0010" t = "10">
+		<translation x = "-29.116030" y = "-38.843078" z = "39.113623" />
+		<rotation x = "-0.989563" y = "1.523269" z = "0.673699" />
+	</pose>
+	<pose name = "IMG0011" t = "11">
+		<translation x = "-29.819742" y = "-29.947021" z = "41.385220" />
+		<rotation x = "-1.828836" y = "1.798494" z = "-0.669113" />
+	</pose>
+	<pose name = "IMG0012" t = "12">
+		<translation x = "-29.449145" y = "-21.288386" z = "41.956754" />
+		<rotation x = "1.384499" y = "-0.116884" z = "-0.400323" />
+	</pose>
+	<pose name = "IMG0013" t = "13">
+		<translation x = "-29.317036" y = "-10.371221" z = "39.579316" />
+		<rotation x = "-0.062727" y = "-0.320196" z = "-0.671802" />
+	</pose>
+	<pose name = "IMG0014" t = "14">
+		<translation x = "-28.829391" y = "-0.757792" z = "39.599262" />
+		<rotation x = "0.448921" y = "0.817516" z = "0.575629" />
+	</pose>
+	<pose name = "IMG0015" t = "15">
+		<translation x = "-29.524139" y = "9.436031" z = "39.904858" />
+		<rotation x = "-0.363258" y = "0.490159" z = "-0.778094" />
+	</pose>
+	<pose name = "IMG0016" t = "16">
+		<translation x = "-28.587767" y = "20.555139" z = "39.503316" />
+		<rotation x = "-1.020583" y = "0.765251" z = "-1.063561" />
+	</pose>
+	<pose name = "IMG0017" t = "17">
+		<translation x = "-29.977392" y = "29.443222" z = "38.917759" />
+		<rotation x = "-3.072989" y = "0.778279" z = "0.552978" />
+	</pose>
+	<pose name = "IMG0018" t = "18">
+		<translation x = "-30.047869" y = "39.104887" z = "39.029552" />
+		<rotation x = "0.626279" y = "-1.480305" z = "-0.423429" />
+	</pose>
+	<pose name = "IMG0019" t = "19">
+		<translation x = "-18.298665" y = "-40.409328" z = "40.568570" />
+		<rotation x = "-0.286685" y = "0.540364" z = "0.361587" />
+	</pose>
+	<pose name = "IMG0020" t = "20">
+		<translation x = "-20.509712" y = "-30.160887" z = "39.190028" />
+		<rotation x = "-0.197343" y = "-0.091539" z = "-0.351889" />
+	</pose>
+	<pose name = "IMG0021" t = "21">
+		<translation x = "-20.002855" y = "-19.590666" z = "39.826753" />
+		<rotation x = "0.405605" y = "-0.760252" z = "0.269541" />
+	</pose>
+	<pose name = "IMG0022" t = "22">
+		<translation x = "-19.080133" y = "-10.952636" z = "40.505543" />
+		<rotation x = "-1.419348" y = "-0.693595" z = "-2.564449" />
+	</pose>
+	<pose name = "IMG0023" t = "23">
+		<translation x = "-19.850191" y = "0.317317" z = "41.193306" />
+		<rotation x = "-0.729445" y = "1.281458" z = "0.465864" />
+	</pose>
+	<pose name = "IMG0024" t = "24">
+		<translation x = "-18.595067" y = "10.078020" z = "39.353029" />
+		<rotation x = "1.147328" y = "-0.809738" z = "1.853561" />
+	</pose>
+	<pose name = "IMG0025" t = "25">
+		<translation x = "-18.965878" y = "21.324385" z = "40.353623" />
+		<rotation x = "0.597865" y = "-1.236818" z = "1.039289" />
+	</pose>
+	<pose name = "IMG0026" t = "26">
+		<translation x = "-19.708430" y = "29.786830" z = "39.953565" />
+		<rotation x = "-1.281281" y = "0.214686" z = "0.910897" />
+	</pose>
+	<pose name = "IMG0027" t = "27">
+		<translation x = "-20.777699" y = "39.865521" z = "40.792948" />
+		<rotation x = "-2.203264" y = "2.010772" z = "-0.239731" />
+	</pose>
+	<pose name = "IMG0028" t = "28">
+		<translation x = "-9.433304" y = "-41.171356" z = "41.550514" />
+		<rotation x = "-0.571246" y = "0.025554" z = "0.180998" />
+	</pose>
+	<pose name = "IMG0029" t = "29">
+		<translation x = "-11.382621" y = "-31.385263" z = "39.828414" />
+		<rotation x = "0.213996" y = "0.308299" z = "0.244250" />
+	</pose>
+	<pose name = "IMG0030" t = "30">
+		<translation x = "-9.755525" y = "-19.689492" z = "40.062139" />
+		<rotation x = "0.942377" y = "-0.938247" z = "0.096393" />
+	</pose>
+	<pose name = "IMG0031" t = "31">
+		<translation x = "-9.191561" y = "-10.249489" z = "38.800972" />
+		<rotation x = "0.093725" y = "1.674216" z = "-0.830468" />
+	</pose>
+	<pose name = "IMG0032" t = "32">
+		<translation x = "-9.786958" y = "0.503744" z = "39.198296" />
+		<rotation x = "-1.122312" y = "0.124988" z = "-0.352252" />
+	</pose>
+	<pose name = "IMG0033" t = "33">
+		<translation x = "-9.120323" y = "9.107339" z = "38.946695" />
+		<rotation x = "0.306158" y = "0.530101" z = "-0.174775" />
+	</pose>
+	<pose name = "IMG0034" t = "34">
+		<translation x = "-7.961124" y = "21.908512" z = "40.748877" />
+		<rotation x = "-1.172335" y = "-0.952068" z = "-0.480653" />
+	</pose>
+	<pose name = "IMG0035" t = "35">
+		<translation x = "-9.076068" y = "30.122231" z = "40.936326" />
+		<rotation x = "-0.960967" y = "0.854043" z = "0.836837" />
+	</pose>
+	<pose name = "IMG0036" t = "36">
+		<translation x = "-9.733083" y = "41.047033" z = "41.269087" />
+		<rotation x = "-0.653735" y = "0.389146" z = "2.538349" />
+	</pose>
+	<pose name = "IMG0037" t = "37">
+		<translation x = "0.641662" y = "-40.226920" z = "39.502019" />
+		<rotation x = "-1.229394" y = "-1.156001" z = "-1.323334" />
+	</pose>
+	<pose name = "IMG0038" t = "38">
+		<translation x = "0.425485" y = "-30.162502" z = "37.210919" />
+		<rotation x = "-0.270965" y = "0.039740" z = "0.128340" />
+	</pose>
+	<pose name = "IMG0039" t = "39">
+		<translation x = "-1.314724" y = "-19.309948" z = "39.272428" />
+		<rotation x = "-0.899950" y = "-0.450599" z = "-1.442379" />
+	</pose>
+	<pose name = "IMG0040" t = "40">
+		<translation x = "-0.416411" y = "-9.444243" z = "40.773064" />
+		<rotation x = "-0.285686" y = "0.109248" z = "1.302508" />
+	</pose>
+	<pose name = "IMG0041" t = "41">
+		<translation x = "1.224688" y = "-1.120255" z = "39.163366" />
+		<rotation x = "-0.462422" y = "-0.250553" z = "1.409912" />
+	</pose>
+	<pose name = "IMG0042" t = "42">
+		<translation x = "-0.043584" y = "8.467307" z = "41.128330" />
+		<rotation x = "-0.409785" y = "-0.189902" z = "-1.662543" />
+	</pose>
+	<pose name = "IMG0043" t = "43">
+		<translation x = "0.582423" y = "18.902132" z = "41.424470" />
+		<rotation x = "-0.503539" y = "-1.032914" z = "1.943684" />
+	</pose>
+	<pose name = "IMG0044" t = "44">
+		<translation x = "-1.006500" y = "28.584227" z = "39.282558" />
+		<rotation x = "1.233297" y = "-0.323292" z = "-1.084698" />
+	</pose>
+	<pose name = "IMG0045" t = "45">
+		<translation x = "0.064517" y = "40.059571" z = "40.777906" />
+		<rotation x = "0.610305" y = "0.766527" z = "0.226819" />
+	</pose>
+	<pose name = "IMG0046" t = "46">
+		<translation x = "10.600292" y = "-40.411251" z = "39.684014" />
+		<rotation x = "0.059072" y = "1.744673" z = "1.098929" />
+	</pose>
+	<pose name = "IMG0047" t = "47">
+		<translation x = "8.638485" y = "-30.368011" z = "38.593465" />
+		<rotation x = "-1.466947" y = "-1.160520" z = "0.147189" />
+	</pose>
+	<pose name = "IMG0048" t = "48">
+		<translation x = "10.347593" y = "-21.360963" z = "39.598875" />
+		<rotation x = "-1.625803" y = "2.377412" z = "2.295666" />
+	</pose>
+	<pose name = "IMG0049" t = "49">
+		<translation x = "9.818157" y = "-9.220433" z = "39.070340" />
+		<rotation x = "-1.964752" y = "1.526078" z = "2.752558" />
+	</pose>
+	<pose name = "IMG0050" t = "50">
+		<translation x = "9.060465" y = "0.439411" z = "41.605802" />
+		<rotation x = "2.605196" y = "0.168508" z = "0.138318" />
+	</pose>
+	<pose name = "IMG0051" t = "51">
+		<translation x = "9.962467" y = "9.910378" z = "39.338464" />
+		<rotation x = "0.972375" y = "-0.301207" z = "-1.907066" />
+	</pose>
+	<pose name = "IMG0052" t = "52">
+		<translation x = "8.103696" y = "21.021180" z = "37.861498" />
+		<rotation x = "0.256981" y = "-0.698654" z = "-0.364993" />
+	</pose>
+	<pose name = "IMG0053" t = "53">
+		<translation x = "7.872023" y = "29.126021" z = "39.458861" />
+		<rotation x = "-0.974240" y = "0.832771" z = "-0.848110" />
+	</pose>
+	<pose name = "IMG0054" t = "54">
+		<translation x = "8.823077" y = "40.414700" z = "41.540877" />
+		<rotation x = "-1.146364" y = "-0.694605" z = "-0.764753" />
+	</pose>
+	<pose name = "IMG0055" t = "55">
+		<translation x = "19.009468" y = "-39.651559" z = "40.203143" />
+		<rotation x = "0.547640" y = "-0.461883" z = "-1.127695" />
+	</pose>
+	<pose name = "IMG0056" t = "56">
+		<translation x = "18.826968" y = "-29.650746" z = "40.499965" />
+		<rotation x = "1.565084" y = "0.883617" z = "0.078189" />
+	</pose>
+	<pose name = "IMG0057" t = "57">
+		<translation x = "18.274572" y = "-20.729247" z = "39.616976" />
+		<rotation x = "-1.693344" y = "0.435944" z = "2.106630" />
+	</pose>
+	<pose name = "IMG0058" t = "58">
+		<translation x = "20.288228" y = "-9.673160" z = "39.587965" />
+		<rotation x = "-0.449397" y = "0.896747" z = "-0.715847" />
+	</pose>
+	<pose name = "IMG0059" t = "59">
+		<translation x = "18.405816" y = "-0.514882" z = "39.594507" />
+		<rotation x = "-0.084292" y = "0.504732" z = "-0.280516" />
+	</pose>
+	<pose name = "IMG0060" t = "60">
+		<translation x = "20.110219" y = "9.103554" z = "40.363781" />
+		<rotation x = "-1.991997" y = "-0.400897" z = "1.166475" />
+	</pose>
+	<pose name = "IMG0061" t = "61">
+		<translation x = "20.787067" y = "18.796732" z = "40.599272" />
+		<rotation x = "0.841246" y = "-0.513848" z = "1.212821" />
+	</pose>
+	<pose name = "IMG0062" t = "62">
+		<translation x = "19.997773" y = "31.037816" z = "40.589589" />
+		<rotation x = "-0.414659" y = "0.796368" z = "0.485541" />
+	</pose>
+	<pose name = "IMG0063" t = "63">
+		<translation x = "20.093109" y = "39.154056" z = "39.146459" />
+		<rotation x = "1.912181" y = "-0.671190" z = "1.026016" />
+	</pose>
+	<pose name = "IMG0064" t = "64">
+		<translation x = "29.621843" y = "-40.172914" z = "41.853008" />
+		<rotation x = "-0.390899" y = "1.186659" z = "0.870726" />
+	</pose>
+	<pose name = "IMG0065" t = "65">
+		<translation x = "28.517324" y = "-31.208652" z = "40.207303" />
+		<rotation x = "0.409182" y = "0.790702" z = "-0.381758" />
+	</pose>
+	<pose name = "IMG0066" t = "66">
+		<translation x = "29.956181" y = "-20.297127" z = "39.729622" />
+		<rotation x = "-1.142428" y = "0.287721" z = "0.428893" />
+	</pose>
+	<pose name = "IMG0067" t = "67">
+		<translation x = "30.960825" y = "-13.232038" z = "40.652771" />
+		<rotation x = "-0.624864" y = "0.003226" z = "-0.299131" />
+	</pose>
+	<pose name = "IMG0068" t = "68">
+		<translation x = "31.738245" y = "-1.086959" z = "39.522773" />
+		<rotation x = "-1.168723" y = "0.365617" z = "-0.899869" />
+	</pose>
+	<pose name = "IMG0069" t = "69">
+		<translation x = "29.569794" y = "8.573564" z = "40.071320" />
+		<rotation x = "0.392575" y = "3.526678" z = "0.634745" />
+	</pose>
+	<pose name = "IMG0070" t = "70">
+		<translation x = "28.372677" y = "18.985549" z = "40.938301" />
+		<rotation x = "1.301840" y = "-0.112437" z = "0.067454" />
+	</pose>
+	<pose name = "IMG0071" t = "71">
+		<translation x = "30.166347" y = "29.786733" z = "39.838636" />
+		<rotation x = "-0.593642" y = "-1.556594" z = "-0.187121" />
+	</pose>
+	<pose name = "IMG0072" t = "72">
+		<translation x = "30.376266" y = "39.674652" z = "40.268183" />
+		<rotation x = "0.436375" y = "1.915102" z = "0.291727" />
+	</pose>
+	<pose name = "IMG0073" t = "73">
+		<translation x = "39.773050" y = "-38.055602" z = "40.409873" />
+		<rotation x = "-0.504362" y = "0.609846" z = "0.987695" />
+	</pose>
+	<pose name = "IMG0074" t = "74">
+		<translation x = "38.851088" y = "-30.571773" z = "40.711323" />
+		<rotation x = "0.102108" y = "-0.647912" z = "0.392935" />
+	</pose>
+	<pose name = "IMG0075" t = "75">
+		<translation x = "42.024333" y = "-20.250032" z = "39.938555" />
+		<rotation x = "1.196251" y = "2.617335" z = "0.194551" />
+	</pose>
+	<pose name = "IMG0076" t = "76">
+		<translation x = "37.640476" y = "-11.569315" z = "41.846129" />
+		<rotation x = "0.120283" y = "0.550950" z = "0.279785" />
+	</pose>
+	<pose name = "IMG0077" t = "77">
+		<translation x = "39.490028" y = "-0.477383" z = "40.398333" />
+		<rotation x = "-1.036843" y = "0.294204" z = "0.051220" />
+	</pose>
+	<pose name = "IMG0078" t = "78">
+		<translation x = "38.678374" y = "8.662023" z = "40.543548" />
+		<rotation x = "-0.857103" y = "-0.777844" z = "-0.774466" />
+	</pose>
+	<pose name = "IMG0079" t = "79">
+		<translation x = "39.363872" y = "20.030299" z = "40.911899" />
+		<rotation x = "-0.169874" y = "-1.064930" z = "0.786782" />
+	</pose>
+	<pose name = "IMG0080" t = "80">
+		<translation x = "40.317851" y = "30.853087" z = "39.347301" />
+		<rotation x = "-0.191668" y = "-1.768414" z = "1.408907" />
+	</pose>
+	<pose name = "IMG0081" t = "81">
+		<translation x = "40.138048" y = "40.404253" z = "40.734271" />
+		<rotation x = "-0.865815" y = "-0.422920" z = "-0.534099" />
+	</pose>
+</trajectory>
