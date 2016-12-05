@@ -7,14 +7,10 @@ The 3D reconstruction methods used in most commercial software consist of an SFM
 Numerous studies have been performed to quantify the accuracy of the SFM-MVS algorithms in a variety of environments\todocite{cite lidar accuracy studies}.  The most common and robust method has been to compare the SFM-MVS derived pointcloud to a groundtruth terrestrial lidar survey \todocite{cite: sfm vs lidar}.  Independent GPS control points have also been used, but result in fewer correspondences to compare with \todocite{cite: sfm vs independent gcps}.  The use of independent control points also can exhibit a bias when the points used are easily photo identifiable targets (eg. checkerboards).  The highly textured independent control points will demonstrate a much better accuracy than a homogeneous surface, due to the lack of matching features, and therefore are not necessarily representative of the accuracy of the entire scene.  The accuracy of SFM is adversely affected by: homogeneous scene texture, poor image overlapping, lens distortion not modeled by the nonlinear lens distortion equation, poor GCP distribution, inaccurate GCP or Camera positions, poor image resolution, blurry imagery, noisy imagery, varying sun shadows, moving objects in the scene, user error in manually selecting image coordinates of GCPs, low number of images, or a low number of GCPs.  With a computer graphics workflow, each of these variables can be constrained and varied in order to assess the effect on the overall accuracy of the scene.  The accuracy of the resultant SFM-MVS pointcloud is also assessed by comparing it to a scene with no uncertainty because it is simulated.  
 
 \section{Computer Graphics for Remote Sensing Analysis}
-The field of computer graphics has been developed predominantly for video games and movies.  There are numerous settings when rendering a scene which will drastically alter the resultant rendering.
-\todolong{Need to go into depth on each of these bullets.  Really need to expand this section.}
-\begin{itemize}
-	\item Ray-Tracing vs Radiosity and global vs local illumination.
-	\item Antialiasing methodology.
-	\item Texturing Objects.
-\end{itemize}
+The field of computer graphics has been developed through the years, with many advances coming predominantly for more realistic video games and movies.  There are numerous settings when rendering a scene which can drastically alter the resultant rendering.  Camera parameters are input with interior and exterior orientations, but the determination of the intensity for each color value can be calculated a a few ways.  The discussion below will encompass the settings used by the Blender Internal Renderer.  More detailed discussion of the Rendering settings can be found in citation \todocite{cite: detailed rendering overview paper}.
+\todo[inline, size=]{Need to expand these thoughts}
+Development of the scene.  Adding objects, declaring diffuse (perfectly lambertian), specular, alpha, color, texture, adding light sources, shading/shadeless.
 
-More detailed information on the computer graphics pipeline is described in detail by someone \todocite{cite: computer graphics pipeline}.  
+Raytracing rendering of scene, anitaliasing, issue with blender antialiasing.  
 
 Utilizing computer generated imagery as a methodology to test theoretical concepts has been used to test someone and something. \todocite{cite dirsig}.  \todocite{cite other CGI for remote sensing}

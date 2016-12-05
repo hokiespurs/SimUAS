@@ -1,2 +1,9 @@
 \BOOKMARK [1][-]{section.1}{Introduction}{}% 1
 \BOOKMARK [1][-]{section.2}{Computer Graphics for Remote Sensing Analysis}{}% 2
+\BOOKMARK [1][-]{section.3}{Renderer Accuracy Validation}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{Photogrammetric Projection Accuracy}{section.3}% 4
+\BOOKMARK [2][-]{subsection.3.2}{Point Spread Function}{section.3}% 5
+\BOOKMARK [2][-]{subsection.3.3}{Texture Resolution}{section.3}% 6
+\BOOKMARK [1][-]{section.4}{Proof of Concept}{}% 7
+\BOOKMARK [1][-]{section.5}{Discussion}{}% 8
+\BOOKMARK [1][-]{section.6}{Conclusion}{}% 9
