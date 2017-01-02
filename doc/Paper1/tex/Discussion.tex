@@ -1,3 +1,18 @@
 \section{Discussion}
 
-Discuss the implications of the methodology.  Discuss potential issues.
+\subsection{Proof Of Concept Discussion}
+\begin{itemize}
+	\item The GCP accuracy is much better than the accuracy of the resultant surface... gcp accuracy is not necessarily indicative of pointcloud accuracy
+	\item the accuracy in this experiment is closely coupled to the texture of the scene
+	\item Cube has rounded edges in dense pointcloud
+	\item Accuracy in shadows?
+	\item Accuracy outside GCPs?
+	\item Sparse accuracy as a function of number of images, reprojection error, etc
+	\item Here I just want to give a taste of some preliminary results from this simple experiment to really spell out capabilities
+\end{itemize}
+
+\subsection{Methodology Discussion and Implications}
+\begin{itemize}
+	\item methodology allows for robust experimentation and testing of numerous independent variables
+	\item radiometric accuracy is not currently accounted for, as SfM only cares about texture... could incorporate later
+\end{itemize}
