@@ -1,0 +1,1 @@
+[xg,yg,zg]=generateHillDSM('test.stl',-100:100,-100:100,10,0,[20 10 5],1);

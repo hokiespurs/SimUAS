@@ -10,3 +10,11 @@ The postprocessed imagery was loaded into Agisoft Photoscan (version XX), and pr
 
 Cloud Compare is used to compare the points to the mesh using the points to plane tool.  The resultant accuracies of the sparse and dense pointcloud are exported to Matlab, and gridded using an IDW .  The variance of the accuracy is also visualized by binning the accuracy values into the nearest grid node and calculating the variance of the values in each node.  These data are visualized in Figure X and summarized in Table X.  
 
+\begin{itemize}
+	\item mesh vertices -50:1:50m defined by rand number generator conv2 20,10,5 square averaging windows and finall scaled to 0-10m.
+	\item faces are quads
+	\item texture 1 is 7200x7200 from New Zealand for GSD of 13.89mm
+	\item texture 2 is 3456x3456 from DSLR image of grass, filtered in GIMP to make a seamless texture, GSD = 5.78mm
+	\item Sourced from Orthophoto AT25. Crown Copyright Reserved. http://www.linz.govt.nz/topography/aerial-images/nztm-geo/bj36
+	
+\end{itemize}
