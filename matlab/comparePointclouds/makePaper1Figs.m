@@ -11,9 +11,11 @@ las_dense_low_agg_clip = lasdata([dname 'dense_low_aggressive_clip.las']);
 las_dense_med_agg_clip = lasdata([dname 'dense_medium_aggressive_clip.las']);
 las_dense_high_agg_clip = lasdata([dname 'dense_high_aggressive_clip.las']);
 las_dense_highest_agg_clip = lasdata([dname 'dense_ultrahigh_aggressive_clip.las']);
-
+%% Make Colormap
+cmap = lines(6);
+cmap = cmap(2:end,:);
 %% Read in Obj File
-obj = loadawobj('C:\Users\Richie\Documents\GitHub\BlenderPythonTest\data\topofield2\output\model\obj\allmodel.obj');
+obj = loadawobj('C:\Users\Richie\Documents\GitHub\BlenderPythonTest\data\topofield2\output\model\obj\clipobj.obj');
 
 %% Compare Cube Edges
 XLIM = [-0.25 0.25];
@@ -26,8 +28,7 @@ f1 = figure;
 hold on
 
 % plot points
-cmap = jet(5);
-p5 = plotlas3trim(las_dense_highest_agg_clip,XLIM,YLIM,ZLIM,'r',5);
+p5 = plotlas3trim(las_dense_highest_agg_clip,XLIM,YLIM,ZLIM,cmap(1,:),10);
 p4 = plotlas3trim(las_dense_high_agg_clip,XLIM,YLIM,ZLIM,cmap(2,:),10);
 p3 = plotlas3trim(las_dense_med_agg_clip,XLIM,YLIM,ZLIM,cmap(3,:),10);
 p2 = plotlas3trim(las_dense_low_agg_clip,XLIM,YLIM,ZLIM,cmap(4,:),10);
@@ -39,9 +40,10 @@ cubeV = [0 0 0 0 -1.5 -1.5 1.5 1.5;-1.5 -1.5 1.5 1.5 0 0 0 0;2 5 5 2 2 5 5 2];
 cubeF = [1 2 3 4; 5 6 7 8];
 
 % plot object faces
-patch('Vertices',obj.v','Faces',obj.f4','FaceColor','k','FaceAlpha',0.2,'edgecolor','k','linewidth',3);
+patch('Vertices',obj.v','Faces',obj.f4','FaceColor','k','FaceAlpha',0.2,'edgecolor','k','linewidth',2);
 hold on
-patch('Vertices',cubeV','Faces',cubeF,'FaceColor','k','FaceAlpha',0.3,'edgecolor','k','linewidth',3);
+patch('Vertices',obj.v','Faces',obj.f3','FaceColor','k','FaceAlpha',0.05,'edgecolor','none');
+% patch('Vertices',cubeV','Faces',cubeF,'FaceColor','k','FaceAlpha',0.3,'edgecolor','k','linewidth',3);
 
 % axis
 view(VIEWAZ,VIEWELE)
@@ -51,12 +53,22 @@ ylim(YLIM)
 zlim(ZLIM)
 
 % labels
-ylabel('Y Coordinate (m)','fontsize',20);
-zlabel('Z Coordinate (m)','fontsize',20);
-
+set(gca,'fontsize',16)
+ylabel('Y Coordinate (m)','fontsize',20,'interpreter','latex');
+zlabel('Z Coordinate (m)','fontsize',20,'interpreter','latex');
+title({'50cm Wide Profile of Pointcloud Data from Different'...
+       'Dense Reconstruction Settings Across a 3m Cube'},'fontsize',24,...
+       'interpreter','latex');
 %legend
-
-
+[h1,icons]= legend('lowest','low','medium','high','ultrahigh');
+set(h1,'fontsize',16)
+for i=1:5
+   icons(i).FontSize = 16; 
+end
+for i=7:2:15
+   icons(i).MarkerSize = 25; 
+end
+set(h1,'location','best')
 %% Make Dense Pcolor Plots
 dnamecc = 'C:\Users\Richie\Documents\GitHub\BlenderPythonTest\data\topofield2\proc\20160103_basicTest\CloudCompare\';
 
@@ -80,7 +92,7 @@ for i = 1:numel(ccnames)
     z = rawdat.data(:,3);
     dz = rawdat.data(:,10);
     % grid data
-    fprintf('\tgridding...\n',ccnames{i});
+    fprintf('\tgridding...\n');
     [zg,ng] = roundgridfun(x,y,z,xg,yg,@mean);
     ng(ng==0)=nan;
     dzg = roundgridfun(x,y,dz,xg,yg,@mean);
@@ -90,46 +102,117 @@ for i = 1:numel(ccnames)
     subplot 221
     pcolor(xg,yg,zg);shading flat
     caxis([-5 5])
-    colorbar
-    title({makeTitleStr(ccnames{i}),'zg'});
+    c = colorbar;
+    title('Elevation');
+    axis equal
+    xlim([-100 100]);
+    ylim([-100 100]);
+    set(gca,'fontsize',14)
+    xlabel('X (m)','fontsize',16);
+    ylabel('Y (m)','fontsize',16);
+    ylabel(c,'Z (m)','fontsize',16);
     
     subplot 222
-    pcolor(xg,yg,dzg);shading flat
-    caxis([-0.05 0.05])
-    colorbar
-    title('dzg');
+    pcolor(xg,yg,dzg*100);shading flat
+    caxis([-5 5])
+    c = colorbar;
+    title('Error');
+    axis equal
+    xlim([-100 100]);
+    ylim([-100 100]);
+    set(gca,'fontsize',14)
+    xlabel('X (m)','fontsize',16);
+    ylabel('Y (m)','fontsize',16);
+    ylabel(c,'Error (cm)','fontsize',16);
     
     subplot 223
-    pcolor(xg,yg,1./ng);shading flat
-    stdcaxis(1./ng,2);
-    colorbar
-    title('numel');
+    pcolor(xg,yg,ng);shading flat
+    stdcaxis(ng,2);
+    c = colorbar;
+    title('Points Per Grid Cell');
+    axis equal
+    xlim([-100 100]);
+    ylim([-100 100]);
+    set(gca,'fontsize',14)
+    xlabel('X (m)','fontsize',16);
+    ylabel('Y (m)','fontsize',16);
+    ylabel(c,'Points Per Grid Cell','fontsize',16);
     
     subplot 224
-    pcolor(xg,yg,dzstd);shading flat
-    caxis([0 0.02]);
-    colorbar
-    title('std of dz');
+    pcolor(xg,yg,dzstd*100);shading flat
+    caxis([0 2]);
+    c = colorbar;
+    title('Standard Deviation of Error');
+    axis equal
+    xlim([-100 100]);
+    ylim([-100 100]);
+    set(gca,'fontsize',14)
+    xlabel('X (m)','fontsize',16);
+    ylabel('Y (m)','fontsize',16);
+    ylabel(c,'Standard Deviation of Error (cm)','fontsize',16);
     
     %% make histogram
     figure
-    h=histogram(dz(:),-0.1:0.001:0.1,'Normalization','probability');
+    h=histogram(dz(:),-0.1:0.0005:0.1,'Normalization','probability');
     xh = h.BinEdges(1:end-1)+h.BinWidth/2;
-    hvals(i,:)=h.Values;
-    xlim([-std(dz(:))*3 std(dz(:))*3]);
+    hvals=h.Values;
     title({makeTitleStr(ccnames{i}),sprintf('Mean: %.3f\t std: %.3f',mean(dz(:)),std(dz(:)))});
     %%
     figure(100)
-    plot(xh,hvals(i,:));
+    plot(xh,hvals,'color',cmap(i,:),'linewidth',3);
     hold on
     h1 = legend('lowest','low','medium','high','ultrahigh');
     xlabel('Pointcloud Signed Error (m)','fontsize',18)
     ylabel('Probability (%)','fontsize',18)
     title({'Pointcloud to Mesh Signed Error Probability', 'using different Dense Reconstruction Settings'},'fontsize',18);
     set(h1,'fontsize',16)   
+    XH{i} = xh;
+    H{i} = hvals;
+    %% Combo histogram
+    figure(200)
+    plot(xh,hvals,'--','color',cmap(i,:));
+    hold on
+    xlabel('Pointcloud Signed Error (m)','fontsize',18)
+    ylabel('Probability (%)','fontsize',18)
+    %% Cropped Histogram
+    ind = isinrange(x,[-50 50]) & isinrange(y,[-50 50]);
+    figure
+    h=histogram(dz(ind),-0.1:0.0005:0.1,'Normalization','probability');
+    title({[makeTitleStr(ccnames{i}) '(AOI)'],sprintf('Mean: %.3f\t std: %.3f',mean(dz(ind)),std(dz(ind)))});
+
+    figure(101);
+    xh = h.BinEdges(1:end-1)+h.BinWidth/2;
+    hvals2=h.Values;
+    plot(xh,hvals2,'color',cmap(i,:));
+    hold on
+    h1 = legend('lowest','low','medium','high','ultrahigh');
+    xlabel('Pointcloud Signed Error (m)','fontsize',18)
+    ylabel('Probability','fontsize',18)
+    title({'Pointcloud to Mesh Signed Error Probability (Only AOI)', 'using different Dense Reconstruction Settings'},'fontsize',18);
+    set(h1,'fontsize',16)
+    %% combo2
+    figure(200)
+    plot(xh,hvals2,'color',cmap(i,:));
     
+    %% Grid histogram
+    ind = isinrange(xg(:),[-50 50]) & isinrange(yg(:),[-50 50]);
+    figure
+    h=histogram(dzg(ind),-0.1:0.001:0.1,'Normalization','probability');
+    title({[makeTitleStr(ccnames{i}) '(AOI ZG)'],sprintf('Mean: %.3f\t std: %.3f',mean(dzg(ind)),std(dzg(ind)))});
+
+    figure(102);
+    xh = h.BinEdges(1:end-1)+h.BinWidth/2;
+    hvals2=h.Values;
+    plot(xh,hvals2,'color',cmap(i,:));
+    hold on
+    h1 = legend('lowest','low','medium','high','ultrahigh');
+    xlabel('Pointcloud Signed Error (m)','fontsize',18)
+    ylabel('Probability','fontsize',18)
+    title({'Pointcloud to Mesh Signed Error Probability (Only ZG AOI)', 'using different Dense Reconstruction Settings'},'fontsize',18);
+    set(h1,'fontsize',16)
+
+
     drawnow
-   
 end
 
 
