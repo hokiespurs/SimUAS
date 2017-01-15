@@ -1,5 +1,5 @@
 \section{Conclusion}
 
-\begin{itemize}
-	\item recap. potential future work.
-\end{itemize}
+The methodology presented where a UAS based image acquisition is simulated using the Blender Internal Render Engine enables research into the performance of SfM and MVS algorithms without the need for costly field experiments.  The accuracy of the simulated groundtruth data enhances the confidence in sensitivity analyses and allows for numerous repeat experiments.  An example use case is presented to explore the effect of the Agisoft Photoscan dense reconstruction setting on the accuracy of the output pointcloud.  Results suggest that the errors decrease as the dense reconstruction setting is increased.  Secondary results suggest that the data points outside of the AOI should be either discarded or used with caution, as the accuracy of those points is higher than that of the pointcloud within the AOI.
+
+As the application of SfM-MVS algorithms continue to expand into new fields, it is important to first test the accuracy of the pointcloud when performing new experiments.  This methodology could also be used from alternative sources of imagery, such as handheld or vehicle based imagery.  Future work will focus on various sensitivity analyses to assess the accuracy of new algorithms and applications.  

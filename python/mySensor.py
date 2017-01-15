@@ -41,6 +41,14 @@ class Sensor:
                            float(root.find('postprocessing').find('gaussiannoise').get('variance')))
         self.gaussianblur = float(root.find('postprocessing').find('gaussianblur').get("sigma"))
 
+        correctionroot = root.find('correction')
+        if correctionroot is None:
+            self.exposure = None
+            self.gamma = None
+        else:
+            self.exposure = float(correctionroot.get('exposure'))
+            self.gamma = float(correctionroot.get('gamma'))
+
         f = self.resolution[0] / self.sensorWidth * self.focalLength
         self.padistortion = (self.distortion[0] / (f ** 2),
                              self.distortion[1] / (f ** 4),
@@ -194,6 +202,6 @@ def calcBrownDistortedCoords(xu, yu, xc, yc, k, p):
 
 if __name__ == '__main__':
     logging.basicConfig(filename='test.log', level=logging.DEBUG)
-    xmlName = "C:\\Users\\Richie\\Documents\\GitHub\\BlenderPythonTest\\data\\lightnmove\\input\\sensor_A5000.xml"
+    xmlName = "C:\\Users\\Richie\\Documents\\GitHub\\BlenderPythonTest\\data\\validatePoint\\input\\sensor_A5000.xml"
     Test = Sensor(xmlName)
     Test.writeXML('C:/tmp/testSensor')

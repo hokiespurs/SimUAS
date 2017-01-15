@@ -2,16 +2,16 @@
 \begin{table}[htbp]
   \centering
   \caption{Add caption}
-    \begin{tabular}{lcr}
+    \begin{tabular}{lcrrr}
    	\toprule
-    Pointcloud Name & Time (Hours:Minutes) & Number of Points \\
+    Pointcloud Name & Time (Hours:Minutes) & Number of Points & RMSE Mean (m) & RMSE std (m)\\
     \midrule
-    sparse          & 0:36 & 22,214 \\
-    dense lowest    & 0:03 & 716,331 \\
-    dense low       & 0:09 & 2,886,971 \\
-    dense medium    & 0:30 & 11,587,504 \\
-    dense high      & 2:19 & 46,465,218 \\
-    dense ultrahigh & 11:54 & 186,313,448 \\
+    sparse          & 00:36 & 22,214       & -0.0001  & 0.0028 \\
+    dense lowest    & 00:03 & 716,331      & -0.0066  & 0.0323 \\
+    dense low       & 00:09 & 2,886,971    & -0.0020  & 0.0154 \\
+    dense medium    & 00:30 & 11,587,504   & -0.0005  & 0.0077 \\
+    dense high      & 02:19 & 46,465,218   & -0.0002  & 0.0044 \\
+    dense ultrahigh & 11:54 & 186,313,448 & -0.0002  & 0.0026 \\
     \bottomrule
     \end{tabular}%
   \label{tab:pctime}%

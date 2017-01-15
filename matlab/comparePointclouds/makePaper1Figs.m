@@ -91,6 +91,9 @@ for i = 1:numel(ccnames)
     y = rawdat.data(:,2);
     z = rawdat.data(:,3);
     dz = rawdat.data(:,10);
+    udz = nanmean(dz(:));
+    stddz = nanstd(dz(:));
+    fprintf('Mean: %.4f\t STD: %.4f\n',udz,stddz);
     % grid data
     fprintf('\tgridding...\n');
     [zg,ng] = roundgridfun(x,y,z,xg,yg,@mean);

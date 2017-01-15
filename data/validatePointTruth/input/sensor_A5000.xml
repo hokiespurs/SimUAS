@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sensor name = "A5000" fileformat = "PNG">
+  <physical focallength="10" sensorWidth = "5"/>
+  <resolution x = "5000" y = "5000"/>
+  <principalPoint x = "2500" y="2500"/>
+  <blender compression = "100" percentage = "100" antialiasing = "0"/>
+  <correction exposure="0" gamma="1"/>
+  <postprocessing seed="1">
+    <distortion k1 = "0" k2 = "0" k3 = "0" k4 = "0" p1 = "0" p2 = "0" isPhotoscanUnits = "1"/>
+    <vignetting v1 = "0" v2 = "0" v3 = "0"/>
+    <saltnoise prob = "0"/>
+    <peppernoise prob = "0"/>
+    <gaussiannoise mean = "0" variance = "0"/>
+    <gaussianblur sigma = "0"/>
+  </postprocessing>
+  </sensor>

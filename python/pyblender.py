@@ -310,6 +310,15 @@ def applyRenderSettings(Sensor):
     bpy.context.scene.render.image_settings.compression = Sensor.compression
     bpy.context.scene.render.image_settings.file_format = Sensor.fileformat
 
+    logging.debug('Testing Add Sensor Exposure: ' + str(Sensor.exposure))
+    if Sensor.exposure is not None:
+        bpy.context.scene.view_settings.view_transform = 'Raw'
+        bpy.context.scene.view_settings.exposure = Sensor.exposure
+    logging.debug('Testing Add Sensor Gamma'+ str(Sensor.gamma))
+    if Sensor.gamma is not None:
+        bpy.context.scene.view_settings.view_transform = 'Raw'
+        bpy.context.scene.view_settings.gamma = Sensor.gamma
+
 def outputOrthos(BlenderTrajectory, outputFolder):
     logging.debug('Saving Ortho Photos')
     for iOrtho in BlenderTrajectory.Orthos:

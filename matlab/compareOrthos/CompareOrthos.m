@@ -1,7 +1,7 @@
 %compare orthos
 %% Load Data
-I1 = imread('C:\Users\Richie\Documents\GitHub\BlenderPythonTest\data\demobeaver\proc\Ortho1.tif');
-I2 = imread('C:\Users\Richie\Documents\GitHub\BlenderPythonTest\data\demobeaver\proc\dummy_bad.tif');
+I1 = imread('C:\Users\Richie\Documents\GitHub\BlenderPythonTest\data\topofield\proc\Ortho1.tif');
+I2 = imread('C:\Users\Richie\Documents\GitHub\BlenderPythonTest\data\topofield\proc\pscan.tif');
 I1 = I1(:,:,1:3);
 I2 = I2(:,:,1:3);
 I1 = gpuArray(I1);

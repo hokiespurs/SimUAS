@@ -1,19 +1,19 @@
 
-xi = -22.5:7.5:22.5;
-yi = -22.5:7.5:22.5;
-alt = 30;
+xi = -40:10:40;
+yi = -40:10:40;
+alt = 40;
 
 [xg,yg]=meshgrid(xi,yi);
 
 xg = xg + randn(size(xg))*1;
 yg = yg + randn(size(xg))*1;
 zg = alt*ones(size(xg))-randn(size(xg))*1;
-rx = randn(size(xg))*5;
-ry = randn(size(xg))*5;
-rz = randn(size(xg))*5;
+rx = randn(size(xg))*1;
+ry = randn(size(xg))*1;
+rz = randn(size(xg))*1;
 t = 1:numel(xg);
 
-makeTrajectory('test.xml', 'Test', xg, yg, zg, rx, ry, rz, t, 'A', 4)
+makeTrajectory('grid40.xml', 'TestTopoField', xg, yg, zg, rx, ry, rz, t, 'IMG', 4)
 
 %%
 NCAMS = 100;

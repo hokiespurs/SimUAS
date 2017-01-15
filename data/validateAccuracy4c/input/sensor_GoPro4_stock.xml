@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sensor name = "GoProHero4_2.9mm" fileformat = "PNG">
+  <physical focallength="2.9" sensorWidth = "6.17"/>
+  <resolution x = "4000" y = "3000"/>
+  <principalPoint x = "2000" y="1500"/>
+  <blender compression = "100" percentage = "100" antialiasing = "0"/>
+  <postprocessing seed="1">
+    <distortion k1 = "0" k2 = "0" k3 = "0" k4 = "0" p1 = "0" p2 = "0" isPhotoscanUnits = "1"/>
+    <vignetting v1 = "0" v2 = "0" v3 = "0"/>
+    <saltnoise prob = "0"/>
+    <peppernoise prob = "0"/>
+    <gaussiannoise mean = "0" variance = "0"/>
+    <gaussianblur sigma = "0"/>
+  </postprocessing>
+  </sensor>

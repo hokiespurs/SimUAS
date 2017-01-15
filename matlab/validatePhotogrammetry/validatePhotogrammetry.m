@@ -24,6 +24,18 @@ for i=1:numel(dnames)
     experiment.true_y = [experiment.dy idat.dy(:)'];
     iInd = ones(size(idat.dy(:)')) * i;
     experiment.experimentIndex = [experiment.experimentIndex iInd];
+    
+    [~,fname,~]=fileparts(dnames{i});
+    fprintf([fname '\n']);
+    fprintf('mean dX: \t %.4f\n',nanmean(idat.dx(:)));
+    fprintf('var dX: \t %.4f\n',nanvar(idat.dx(:)));
+    fprintf('mean dY: \t %.4f\n',nanmean(idat.dy(:)));
+    fprintf('var dY: \t %.4f\n',nanvar(idat.dy(:)));
+    fprintf('mean dR: \t %.4f\n',nanmean(idat.dr(:)));
+    fprintf('var dR: \t %.4f\n',nanvar(idat.dr(:)));  
+    fprintf('%i \t %.4f \t %.4f \t %.4f \t %.4f \n',sum(~isnan(idat.dx(:))),nanmean(idat.dx(:)),nanmean(idat.dy(:)),nanvar(idat.dx(:)),nanvar(idat.dy(:)))
+    fprintf('=============\n\n');
+    
 end
 
 % %% Scatter plot All dx,dy 
@@ -40,6 +52,15 @@ idat = load([homepath '/matlab/validatePhotogrammetry/warpImages/proc/data2.mat'
 close all
 warp.dx = idat.dx;
 warp.dy = idat.dy;
+
+    fprintf(['MyWarped\n']);
+    fprintf('mean dX: \t %.4f\n',nanmean(idat.dx(:)));
+    fprintf('var dX: \t %.4f\n',nanvar(idat.dx(:)));
+    fprintf('mean dY: \t %.4f\n',nanmean(idat.dy(:)));
+    fprintf('var dY: \t %.4f\n',nanvar(idat.dy(:)));
+    fprintf('%i \t %.4f \t %.4f \t %.4f \t %.4f \n',sum(~isnan(idat.dx(:))),nanmean(idat.dx(:)),nanmean(idat.dy(:)),nanvar(idat.dx(:)),nanvar(idat.dy(:)))
+    fprintf('=============\n\n');
+
 
 %%
 figure(10)
