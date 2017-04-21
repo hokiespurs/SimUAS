@@ -14,7 +14,7 @@ else
     homePath = getHomePath('BlenderPythonTest');
     foldername = [homePath '/' foldername];
 end
-%% paths to folders
+%% paths to folders 
 imDir = [foldername '/output/images/pre'];
 outImDir = [foldername '/output/images'];
 trajectoryFilename = [foldername '/output/trajectory.csv'];
@@ -27,7 +27,7 @@ procFolder = [foldername '/proc/'];
 foo = dirname([foldername '/input/sensor*.xml']);
 inputSensorFilename = foo{1};
 
-%% read input data
+%% read input data 
 Trajectory = readtrajectory(trajectoryFilename);
 Fiducials = readfiducials(fiducialFilename);
 Control = readcontrol(controlFilename);
@@ -36,7 +36,7 @@ Calibration = readsensor(intrinsicFilename, inputSensorFilename);
 %% 
 [proj_x,proj_y,image_x,image_y,dx,dy]=calcFiducial(outImDir,Trajectory,Fiducials,Calibration,whichtype);
 
-%% Delta Plots
+%% Delta Plots 
 close all
 
 f1 = figure(1);
@@ -61,7 +61,7 @@ xlabel('Image X minus Projected X (pixels)');
 ylabel('Image Y minus Projected Y (pixels)');
 title('Heatmap of Image Points Minus Projected Points (pixels)');
 
-%% correlation plots
+%% correlation plots 
 r = sqrt((Calibration.cx-proj_x).^2+(Calibration.cy-proj_y).^2);
 dr = sqrt(dx.^2+dy.^2);
 f3 = figure(3);

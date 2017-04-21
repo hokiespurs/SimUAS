@@ -2,7 +2,8 @@
 <scene name="testRange" objectdb="objects/beaverdb" version = "1.0">
 <object objname="basic_plane" name = "plane" isControl = "0" isFiducial = "0">
 	<position>
-		<translation x="0" y="0" z="0"/>
+		<translation x="0" y="0" z="0" t="1"/>
+		<translation x="110" y="110" z="110" t="2"/>
 		<rotation x="0" y="0" z="0"/>
 		<scale x="10.24" y="10.24" z="10.24"/>
 	</position>
@@ -11,6 +12,20 @@
 	</material>
 	<texture>
         <slot interpolate="0" filename="objects\textures\pixelchecker.png" repeatx="1" repeaty="1" infcolor="1"/>
+    </texture>
+</object>
+<object objname="basic_plane" name = "plane2" isControl = "0" isFiducial = "0">
+	<position>
+		<translation x="100" y="100" z="100" t="1"/>
+		<translation x="0" y="0" z="0" t="2"/>
+		<rotation x="0" y="0" z="0"/>
+		<scale x="10.24" y="10.24" z="10.24"/>
+	</position>
+	<material>
+		<shading shadeless = "1"/>
+	</material>
+	<texture>
+        <slot interpolate="1" filename="objects\textures\pixelchecker.png" repeatx="1" repeaty="1" infcolor="1"/>
     </texture>
 </object>
 </scene>

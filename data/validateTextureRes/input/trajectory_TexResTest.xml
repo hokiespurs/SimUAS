@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <trajectory name = "sharpnessTest">
-	<pose name = "ImagesRising" t = "1">
+	<pose name = "ImagesNoInterpolation" t = "1">
+		<translation x = "0.000000" y = "0.000000" z = "1.000000" />
+		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
+	</pose>
+	<pose name = "ImagesInterpolated" t = "2">
 		<translation x = "0.000000" y = "0.000000" z = "1.000000" />
 		<rotation x = "0.000000" y = "0.000000" z = "0.000000" />
 	</pose>

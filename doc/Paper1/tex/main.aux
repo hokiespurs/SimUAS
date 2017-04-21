@@ -71,7 +71,7 @@
 \pgfsyspdfmark {pgfid65}{40470117}{23109723}
 \@writefile{toc}{\contentsline {section}{\numberline {2}Computer Graphics for Remote Sensing Analysis}{3}{section.2}}
 \@writefile{tdo}{\contentsline {todo}{\color@fb@x {}{blue}{}{blue!25}{\leavevmode {\color  {blue!25}o}}\ origin of CGI date}{3}{section*.15}}
-\pgfsyspdfmark {pgfid66}{23313249}{14474355}
+\pgfsyspdfmark {pgfid66}{23402709}{14474355}
 \pgfsyspdfmark {pgfid69}{38356582}{14488462}
 \pgfsyspdfmark {pgfid70}{40470117}{14262732}
 \@writefile{tdo}{\contentsline {todo}{\color@fb@x {}{blue}{}{blue!25}{\leavevmode {\color  {blue!25}o}}\ cite: computer graphics origins}{3}{section*.16}}
@@ -88,86 +88,98 @@
 \pgfsyspdfmark {pgfid85}{40470117}{10916370}
 \@writefile{toc}{\contentsline {section}{\numberline {3}Renderer Accuracy Validation}{4}{section.3}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Photogrammetric Projection Accuracy}{5}{subsection.3.1}}
+\@writefile{tdo}{\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color  {orange}o}}\ is correlation necessary???}{5}{section*.19}}
+\pgfsyspdfmark {pgfid86}{11710396}{19140589}
+\pgfsyspdfmark {pgfid89}{38356582}{19154696}
+\pgfsyspdfmark {pgfid90}{40470117}{18928966}
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces A cube with a 10x10 checkerboard pattern on each wall is used to validate the photogrammetric accuracy of the Blender Internal Render Engine.}}{5}{figure.1}}
 \newlabel{fig:checker}{{1}{5}{A cube with a 10x10 checkerboard pattern on each wall is used to validate the photogrammetric accuracy of the Blender Internal Render Engine}{figure.1}{}}
+\@writefile{tdo}{\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color  {orange}o}}\ again, correlation needed??}{6}{section*.20}}
+\pgfsyspdfmark {pgfid91}{22938522}{36431226}
+\pgfsyspdfmark {pgfid94}{38356582}{36445333}
+\pgfsyspdfmark {pgfid95}{40470117}{36219603}
 \@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces The position of the cameras used to render the imagery were uniformly distributed using parameters to full encompass every position and look angle within the box. Note that the translation was kept 1 meter away from the edge of the box on all sides.}}{6}{table.1}}
 \newlabel{tab:paramdist}{{1}{6}{The position of the cameras used to render the imagery were uniformly distributed using parameters to full encompass every position and look angle within the box. Note that the translation was kept 1 meter away from the edge of the box on all sides}{table.1}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces The difference between the Harris Corner detected corners and the expected position of the corners from the photogrammetry equations is assessed to ensure that the rendering algorithm are working correctly. Note that the mean and variance of the difference between expected and detected are sub-pixel for each simulated camera, which suggests that the Blender Internal Renderer is accurate.}}{6}{table.2}}
 \newlabel{tab:deltas}{{2}{6}{The difference between the Harris Corner detected corners and the expected position of the corners from the photogrammetry equations is assessed to ensure that the rendering algorithm are working correctly. Note that the mean and variance of the difference between expected and detected are sub-pixel for each simulated camera, which suggests that the Blender Internal Renderer is accurate}{table.2}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces The correlation between the errors and the location in the frame of the image is also calculated to ensure there is no systematic offset introduced due to the rendering. The Blender Internal Renderer shows no systematic biasing of the rendered image.}}{6}{table.3}}
-\newlabel{tab:correlations}{{3}{6}{The correlation between the errors and the location in the frame of the image is also calculated to ensure there is no systematic offset introduced due to the rendering. The Blender Internal Renderer shows no systematic biasing of the rendered image}{table.3}{}}
+\@writefile{tdo}{\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color  {orange}o}}\ reword??}{6}{section*.21}}
+\pgfsyspdfmark {pgfid96}{15589122}{8252534}
+\pgfsyspdfmark {pgfid99}{38356582}{8266641}
+\pgfsyspdfmark {pgfid100}{40470117}{8040911}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces The correlation between the errors and the location in the frame of the image is also calculated to ensure there is no systematic offset introduced due to the rendering. The Blender Internal Renderer shows no systematic biasing of the rendered image.}}{7}{table.3}}
+\newlabel{tab:correlations}{{3}{7}{The correlation between the errors and the location in the frame of the image is also calculated to ensure there is no systematic offset introduced due to the rendering. The Blender Internal Renderer shows no systematic biasing of the rendered image}{table.3}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces A checkerboard pattern is generated and then warped in Matlab before extracting the Harris Corner Features. The difference between the known checkerboard corners and the Harris corner features are on the same order of magnitude as the differences in the rendered imagery simulation. This suggests that the variance and mean offsets in the simulation are due to the uncertainty in the Harris Corner extraction, and not the renderer.}}{7}{table.4}}
 \newlabel{tab:harrisdeltas}{{4}{7}{A checkerboard pattern is generated and then warped in Matlab before extracting the Harris Corner Features. The difference between the known checkerboard corners and the Harris corner features are on the same order of magnitude as the differences in the rendered imagery simulation. This suggests that the variance and mean offsets in the simulation are due to the uncertainty in the Harris Corner extraction, and not the renderer}{table.4}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Point Spread Function}{7}{subsection.3.2}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces A circular plane placed so it is encompassed by the viewing volume of only the central pixel (right) is rendered with the no antialiasing (middle) and with 8 sample antialiasing (right). }}{8}{figure.2}}
 \newlabel{fig:aliasing}{{2}{8}{A circular plane placed so it is encompassed by the viewing volume of only the central pixel (right) is rendered with the no antialiasing (middle) and with 8 sample antialiasing (right)}{figure.2}{}}
-\@writefile{tdo}{\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color  {orange}o}}\ Need to word this better... I contradict myself by saying antialiasing is bad}{8}{section*.19}}
-\pgfsyspdfmark {pgfid86}{33714081}{24960073}
-\pgfsyspdfmark {pgfid89}{38356582}{24974180}
-\pgfsyspdfmark {pgfid90}{40470117}{24748450}
+\@writefile{tdo}{\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color  {orange}o}}\ Need to word this better... I contradict myself by saying antialiasing is bad}{8}{section*.22}}
+\pgfsyspdfmark {pgfid101}{13299659}{23649085}
+\pgfsyspdfmark {pgfid104}{38356582}{23663192}
+\pgfsyspdfmark {pgfid105}{40470117}{23437462}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Texture Resolution}{8}{subsection.3.3}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Each black and white square in this checkerboard represent one texel in the texture applied to the image. This rendered image demonstrates that the final texture that is rendered contains the full resolution of the desired texture, and that the Blender Internal Renderer is not artificially downsampling the texture.}}{9}{figure.3}}
 \newlabel{fig:texres}{{3}{9}{Each black and white square in this checkerboard represent one texel in the texture applied to the image. This rendered image demonstrates that the final texture that is rendered contains the full resolution of the desired texture, and that the Blender Internal Renderer is not artificially downsampling the texture}{figure.3}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {4}Use Case Demonstration}{9}{section.4}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Experiment Design}{9}{subsection.4.1}}
-\@writefile{tdo}{\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color  {orange}o}}\ cite NZ}{9}{section*.20}}
-\pgfsyspdfmark {pgfid91}{29786131}{14124825}
-\pgfsyspdfmark {pgfid94}{38356582}{14138932}
-\pgfsyspdfmark {pgfid95}{40470117}{13913202}
-\@writefile{tdo}{\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color  {orange}o}}\ make this figure better. break into 2 figures. one shows layout of cameras and GCPs, one shows close up of gcp and box}{10}{section*.21}}
-\pgfsyspdfmark {pgfid96}{10357803}{45608142}
-\pgfsyspdfmark {pgfid99}{38356582}{45622249}
-\pgfsyspdfmark {pgfid100}{40470117}{45396519}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces The scene was generated in Blender to represent a hilly topography with 10 Ground Control Points distributed throughout the scene and a 3m cube placed in the center.}}{10}{figure.4}}
-\newlabel{fig:scene}{{4}{10}{The scene was generated in Blender to represent a hilly topography with 10 Ground Control Points distributed throughout the scene and a 3m cube placed in the center}{figure.4}{}}
-\@writefile{tdo}{\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color  {orange}o}}\ how long did this take?}{10}{section*.22}}
-\pgfsyspdfmark {pgfid101}{10874814}{14717408}
-\pgfsyspdfmark {pgfid104}{38356582}{14731515}
-\pgfsyspdfmark {pgfid105}{40470117}{14505785}
+\@writefile{tdo}{\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color  {orange}o}}\ cite NZ}{9}{section*.23}}
+\pgfsyspdfmark {pgfid106}{8373068}{12813837}
+\pgfsyspdfmark {pgfid109}{38356582}{12827944}
+\pgfsyspdfmark {pgfid110}{40470117}{12602214}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces The scene was generated in Blender to represent a hilly topography(left) with 10 Ground Control Points (center) distributed throughout the scene and a 3m cube placed in the center(right).}}{10}{figure.4}}
+\newlabel{fig:scene}{{4}{10}{The scene was generated in Blender to represent a hilly topography(left) with 10 Ground Control Points (center) distributed throughout the scene and a 3m cube placed in the center(right)}{figure.4}{}}
+\@writefile{tdo}{\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color  {orange}o}}\ how long did this take?}{10}{section*.24}}
+\pgfsyspdfmark {pgfid111}{10874814}{14680998}
+\pgfsyspdfmark {pgfid114}{38356582}{14695105}
+\pgfsyspdfmark {pgfid115}{40470117}{14469375}
 \@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces }}{11}{figure.5}}
 \newlabel{fig:experimentDesign}{{5}{11}{}{figure.5}{}}
-\@writefile{tdo}{\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color  {orange}o}}\ cite brown distortion}{11}{section*.23}}
-\pgfsyspdfmark {pgfid106}{6999982}{23651714}
-\pgfsyspdfmark {pgfid109}{38356582}{23665821}
-\pgfsyspdfmark {pgfid110}{40470117}{23440091}
-\@writefile{tdo}{\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color  {orange}o}}\ need to add equations for brown distortion, vignetting, add distortion eqn units, etc... this could get cumbersome...}{11}{section*.24}}
-\pgfsyspdfmark {pgfid111}{4736286}{19718750}
-\pgfsyspdfmark {pgfid114}{38356582}{19732857}
-\pgfsyspdfmark {pgfid115}{40470117}{19507127}
+\@writefile{tdo}{\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color  {orange}o}}\ cite brown distortion}{11}{section*.25}}
+\pgfsyspdfmark {pgfid116}{6999982}{23651714}
+\pgfsyspdfmark {pgfid119}{38356582}{23665821}
+\pgfsyspdfmark {pgfid120}{40470117}{23440091}
+\@writefile{tdo}{\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color  {orange}o}}\ need to add equations for brown distortion, vignetting, add distortion eqn units, etc... and fill in table}{11}{section*.26}}
+\pgfsyspdfmark {pgfid121}{4736286}{19718750}
+\pgfsyspdfmark {pgfid124}{38356582}{19732857}
+\pgfsyspdfmark {pgfid125}{40470117}{19507127}
 \@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces .}}{11}{table.5}}
 \newlabel{tab:postproc}{{5}{11}{}{table.5}{}}
+\newlabel{eq:distortionr}{{1}{12}{Experiment Design}{equation.4.1}{}}
+\newlabel{eq:distortionx}{{2}{12}{Experiment Design}{equation.4.2}{}}
+\newlabel{eq:distortiony}{{3}{12}{Experiment Design}{equation.4.3}{}}
+\newlabel{eq:vignetting}{{4}{12}{Experiment Design}{equation.4.4}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Processing Methodology}{12}{subsection.4.2}}
-\@writefile{tdo}{\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color  {orange}o}}\ cite table}{12}{section*.25}}
-\pgfsyspdfmark {pgfid116}{7523600}{43873907}
-\pgfsyspdfmark {pgfid119}{38356582}{43888014}
-\pgfsyspdfmark {pgfid120}{40470117}{43662284}
-\@writefile{tdo}{\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color  {orange}o}}\ better describe quality and cite photoscan manual}{12}{section*.26}}
-\pgfsyspdfmark {pgfid121}{33762950}{30764027}
-\pgfsyspdfmark {pgfid124}{38356582}{30778134}
-\pgfsyspdfmark {pgfid125}{40470117}{30552404}
-\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Add caption}}{12}{table.6}}
-\newlabel{tab:pctime}{{6}{12}{Add caption}{table.6}{}}
-\@writefile{tdo}{\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color  {orange}o}}\ cite}{12}{section*.27}}
-\pgfsyspdfmark {pgfid126}{23800186}{16412403}
-\pgfsyspdfmark {pgfid129}{38356582}{16426510}
-\pgfsyspdfmark {pgfid130}{40470117}{16200780}
-\@writefile{tdo}{\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color  {orange}o}}\ cite}{12}{section*.28}}
-\pgfsyspdfmark {pgfid131}{14884725}{15101415}
-\pgfsyspdfmark {pgfid134}{38356582}{15115522}
-\pgfsyspdfmark {pgfid135}{40470117}{14889792}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Results}{12}{subsection.4.3}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces The elevation, error, number of points, and standard deviation of error are gridded to 0.5 meter grid cells using a nearest neighbor gridding algorithm and visualized.}}{13}{figure.6}}
-\newlabel{fig:spatial}{{6}{13}{The elevation, error, number of points, and standard deviation of error are gridded to 0.5 meter grid cells using a nearest neighbor gridding algorithm and visualized}{figure.6}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces A half meter wide section of the scene containing a box is shown with the dense reconstruction pointclouds overlaid to demonstrate the effect of pointcloud dense reconstruction quality on accuracy near sharp edges.}}{14}{figure.7}}
-\newlabel{fig:boxplot}{{7}{14}{A half meter wide section of the scene containing a box is shown with the dense reconstruction pointclouds overlaid to demonstrate the effect of pointcloud dense reconstruction quality on accuracy near sharp edges}{figure.7}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces The signed error probability distribution for each of the calculated dense pointclouds suggests that the higher that dense reconstruction quality, the better the accuracy of the pointcloud.}}{15}{figure.8}}
-\newlabel{fig:hist}{{8}{15}{The signed error probability distribution for each of the calculated dense pointclouds suggests that the higher that dense reconstruction quality, the better the accuracy of the pointcloud}{figure.8}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Discussion}{15}{section.5}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Methodology Implications}{16}{subsection.5.1}}
-\@writefile{tdo}{\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color  {orange}o}}\ fix}{17}{section*.29}}
-\pgfsyspdfmark {pgfid136}{17875928}{37742214}
-\pgfsyspdfmark {pgfid139}{38356582}{37756321}
-\pgfsyspdfmark {pgfid140}{40470117}{37530591}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusion}{17}{section.6}}
+\@writefile{tdo}{\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color  {orange}o}}\ cite table}{12}{section*.27}}
+\pgfsyspdfmark {pgfid126}{7523600}{30283987}
+\pgfsyspdfmark {pgfid129}{38356582}{30298094}
+\pgfsyspdfmark {pgfid130}{40470117}{30072364}
+\@writefile{tdo}{\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color  {orange}o}}\ better describe quality and cite photoscan manual}{12}{section*.28}}
+\pgfsyspdfmark {pgfid131}{33762950}{17174107}
+\pgfsyspdfmark {pgfid134}{38356582}{17188214}
+\pgfsyspdfmark {pgfid135}{40470117}{16962484}
+\@writefile{tdo}{\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color  {orange}o}}\ cite}{12}{section*.29}}
+\pgfsyspdfmark {pgfid136}{23800186}{11930155}
+\pgfsyspdfmark {pgfid139}{38356582}{11944262}
+\pgfsyspdfmark {pgfid140}{40470117}{11718532}
+\@writefile{tdo}{\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color  {orange}o}}\ cite}{12}{section*.30}}
+\pgfsyspdfmark {pgfid141}{14884725}{10619167}
+\pgfsyspdfmark {pgfid144}{38356582}{10633274}
+\pgfsyspdfmark {pgfid145}{40470117}{10407544}
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Add caption}}{13}{table.6}}
+\newlabel{tab:pctime}{{6}{13}{Add caption}{table.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Results}{13}{subsection.4.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces The elevation, error, number of points, and standard deviation of error are gridded to 0.5 meter grid cells using a nearest neighbor gridding algorithm and visualized.}}{14}{figure.6}}
+\newlabel{fig:spatial}{{6}{14}{The elevation, error, number of points, and standard deviation of error are gridded to 0.5 meter grid cells using a nearest neighbor gridding algorithm and visualized}{figure.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces A half meter wide section of the scene containing a box is shown with the dense reconstruction pointclouds overlaid to demonstrate the effect of pointcloud dense reconstruction quality on accuracy near sharp edges.}}{15}{figure.7}}
+\newlabel{fig:boxplot}{{7}{15}{A half meter wide section of the scene containing a box is shown with the dense reconstruction pointclouds overlaid to demonstrate the effect of pointcloud dense reconstruction quality on accuracy near sharp edges}{figure.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces The signed error probability distribution for each of the calculated dense pointclouds suggests that the higher that dense reconstruction quality, the better the accuracy of the pointcloud.}}{16}{figure.8}}
+\newlabel{fig:hist}{{8}{16}{The signed error probability distribution for each of the calculated dense pointclouds suggests that the higher that dense reconstruction quality, the better the accuracy of the pointcloud}{figure.8}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Discussion}{16}{section.5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Methodology Implications}{17}{subsection.5.1}}
+\@writefile{tdo}{\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color  {orange}o}}\ fix}{18}{section*.31}}
+\pgfsyspdfmark {pgfid146}{17875928}{37742214}
+\pgfsyspdfmark {pgfid149}{38356582}{37756321}
+\pgfsyspdfmark {pgfid150}{40470117}{37530591}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusion}{18}{section.6}}
 \bibstyle{apalike}
 \bibdata{biblio}

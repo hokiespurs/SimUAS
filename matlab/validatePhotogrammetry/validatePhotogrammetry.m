@@ -27,15 +27,21 @@ for i=1:numel(dnames)
     
     [~,fname,~]=fileparts(dnames{i});
     fprintf([fname '\n']);
-    fprintf('mean dX: \t %.4f\n',nanmean(idat.dx(:)));
-    fprintf('var dX: \t %.4f\n',nanvar(idat.dx(:)));
-    fprintf('mean dY: \t %.4f\n',nanmean(idat.dy(:)));
-    fprintf('var dY: \t %.4f\n',nanvar(idat.dy(:)));
-    fprintf('mean dR: \t %.4f\n',nanmean(idat.dr(:)));
-    fprintf('var dR: \t %.4f\n',nanvar(idat.dr(:)));  
-    fprintf('%i \t %.4f \t %.4f \t %.4f \t %.4f \n',sum(~isnan(idat.dx(:))),nanmean(idat.dx(:)),nanmean(idat.dy(:)),nanvar(idat.dx(:)),nanvar(idat.dy(:)))
+%     fprintf('mean dX: \t %.4f\n',nanmean(idat.dx(:)));
+%     fprintf('mean dY: \t %.4f\n',nanmean(idat.dy(:)));
+%     fprintf('std dX: \t %.4f\n',nanstd(idat.dx(:)));
+%     fprintf('std dY: \t %.4f\n',nanstd(idat.dy(:)));
+%     fprintf('RMSE dX: \t %.4f\n',calcRmse(idat.dx));
+%     fprintf('RMSE dY: \t %.4f\n',calcRmse(idat.dy));
+%     fprintf('mean dR: \t %.4f\n',nanmean(idat.dr(:)));
+%     fprintf('std dR: \t %.4f\n',nanstd(idat.dr(:)));  
+%     fprintf('RMSE dR: \t %.4f\n',calcRmse(idat.dr));
+    fprintf('%i \t %.4f \t %.4f \t %.4f \t %.4f \t %.4f \t %.4f \t %.4f \t %.4f \t %.4f \n',sum(~isnan(idat.dx(:))),...
+        nanmean(idat.dx(:)),nanmean(idat.dy(:)),nanmean(idat.dr(:)),...
+        nanstd(idat.dx(:)),nanstd(idat.dy(:)),nanstd(idat.dr(:)),...
+        calcRmse(idat.dx(:)),calcRmse(idat.dy(:)),calcRmse(idat.dr(:)))
     fprintf('=============\n\n');
-    
+    DR{i} = idat.dr(:);
 end
 
 % %% Scatter plot All dx,dy 
@@ -52,16 +58,28 @@ idat = load([homepath '/matlab/validatePhotogrammetry/warpImages/proc/data2.mat'
 close all
 warp.dx = idat.dx;
 warp.dy = idat.dy;
-
+idat.dr = pythag(idat.dx,idat.dy);
     fprintf(['MyWarped\n']);
-    fprintf('mean dX: \t %.4f\n',nanmean(idat.dx(:)));
-    fprintf('var dX: \t %.4f\n',nanvar(idat.dx(:)));
-    fprintf('mean dY: \t %.4f\n',nanmean(idat.dy(:)));
-    fprintf('var dY: \t %.4f\n',nanvar(idat.dy(:)));
-    fprintf('%i \t %.4f \t %.4f \t %.4f \t %.4f \n',sum(~isnan(idat.dx(:))),nanmean(idat.dx(:)),nanmean(idat.dy(:)),nanvar(idat.dx(:)),nanvar(idat.dy(:)))
+%     fprintf('mean dX: \t %.4f\n',nanmean(idat.dx(:)));
+%     fprintf('mean dY: \t %.4f\n',nanmean(idat.dy(:)));
+%     fprintf('std dX: \t %.4f\n',nanstd(idat.dx(:)));
+%     fprintf('std dY: \t %.4f\n',nanstd(idat.dy(:)));
+%     fprintf('RMSE dX: \t %.4f\n',calcRmse(idat.dx));
+%     fprintf('RMSE dY: \t %.4f\n',calcRmse(idat.dy));
+%     fprintf('mean dR: \t %.4f\n',nanmean(idat.dr(:)));
+%     fprintf('std dR: \t %.4f\n',nanstd(idat.dr(:)));  
+%     fprintf('RMSE dR: \t %.4f\n',calcRmse(idat.dr));
+    fprintf('%i \t %.4f \t %.4f \t %.4f \t %.4f \t %.4f \t %.4f \t %.4f \t %.4f \t %.4f \n',sum(~isnan(idat.dx(:))),...
+        nanmean(idat.dx(:)),nanmean(idat.dy(:)),nanmean(idat.dr(:)),...
+        nanstd(idat.dx(:)),nanstd(idat.dy(:)),nanstd(idat.dr(:)),...
+        calcRmse(idat.dx(:)),calcRmse(idat.dy(:)),calcRmse(idat.dr(:)))
     fprintf('=============\n\n');
+    DRw = idat.dr(:);
 
-
+%% KS Test
+drall = [DR{1}; DR{3}; DR{5}; DR{7}; DR{10}];
+[h,p] = kstest2(drall(~isnan(drall)),DRw(~isnan(DRw)),'Alpha',0.45);
+    
 %%
 figure(10)
 plot(experiment.dx,experiment.dy,'b.');

@@ -1,0 +1,31 @@
+\begin{equation}
+r = \sqrt{(x-cx)+(y-cy)}
+\label{eq:distortionr}
+\end{equation}
+
+\begin{equation}
+x' = x(1 + 
+\dfrac{K_1}{f^2}r^2 + 
+\dfrac{K_2}{f^4}r^4 + 
+\dfrac{K_3}{f^6}r^6 + 
+\dfrac{K_4}{f^8}r^8) + 
+\dfrac{P_1}{f}(r^2+2x^2) +
+\dfrac{2P_2}{f}xy (1+\dfrac{P_3}{f^2}r^2 + \dfrac{P_4}{f^4}r^4)
+  \label{eq:distortionx}
+\end{equation}
+
+\begin{equation}
+y' = y(1 + 
+\dfrac{K_1}{f^2}r^2 + 
+\dfrac{K_2}{f^4}r^4 + 
+\dfrac{K_3}{f^6}r^6 + 
+\dfrac{K_4}{f^8}r^8) + 
+\dfrac{P_2}{f}(r^2+2y^2) +
+\dfrac{2P_1}{f}xy (1+\dfrac{P_3}{f^2}r^2 + \dfrac{P_4}{f^4}r^4)
+\label{eq:distortiony}
+\end{equation}
+
+\begin{equation}
+I_{corrected} = I_{raw} + v_1 + v_2r + v_3r^2
+\label{eq:vignetting}
+\end{equation}

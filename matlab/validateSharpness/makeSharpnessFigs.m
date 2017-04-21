@@ -59,37 +59,33 @@ maketruthplot(Itruthcircle,'Scene Imaged');
 set(gca,'fontsize',14)
 set(gca,'xtick',[1 2 3 4 5]);
 set(gca,'ytick',[1 2 3 4 5]);
-xlabel('Virtual X Coordinate (Pixels)','fontsize',16);
-ylabel('Virtual Y Coordinate (Pixels)','fontsize',16);
-title('Scene with Pixel Coordinates Overlaid','fontsize',18);
-c = colorbar;
-ylabel(c,'8 Bit Grayscale Digital Number','fontsize',14)
-set(c,'ytick',[0 50 100 150 200 255])
+xlabel('Virtual X Coordinate (Pixels)','fontsize',22,'interpreter','latex');
+ylabel('Virtual Y Coordinate (Pixels)','fontsize',22,'interpreter','latex');
+title('Scene with Pixel Coordinates Overlaid','fontsize',26,'interpreter','latex');
+colorbar off
 
 subplot 132
 makedataplot(Inoanticircle,'No Antialiasing Enabled');
 set(gca,'fontsize',14)
 set(gca,'xtick',[1 2 3 4 5]);
 set(gca,'ytick',[1 2 3 4 5]);
-xlabel('X Coordinate (Pixels)','fontsize',16);
-ylabel('Y Coordinate (Pixels)','fontsize',16);
-title('No Antialiasing Enabled','fontsize',18);
-c = colorbar;
-ylabel(c,'8 Bit Grayscale Digital Number','fontsize',14)
-set(c,'ytick',[0 50 100 150 200 255])
+xlabel('X Coordinate (Pixels)','fontsize',22,'interpreter','latex');
+ylabel('Y Coordinate (Pixels)','fontsize',22,'interpreter','latex');
+title('No Antialiasing Enabled','fontsize',26,'interpreter','latex');
+colorbar off
 
 subplot 133
 makedataplot(Ianticircle,'8 sample Antialiasing Enabled');
 set(gca,'fontsize',14)
 set(gca,'xtick',[1 2 3 4 5]);
 set(gca,'ytick',[1 2 3 4 5]);
-xlabel('X Coordinate (Pixels)','fontsize',16);
-ylabel('Y Coordinate (Pixels)','fontsize',16);
-title('8 sample Antialiasing Enabled','fontsize',18);
+xlabel('X Coordinate (Pixels)','fontsize',22,'interpreter','latex');
+ylabel('Y Coordinate (Pixels)','fontsize',22,'interpreter','latex');
+title('8 sample Antialiasing Enabled','fontsize',26,'interpreter','latex');
 c = colorbar;
-ylabel(c,'8 Bit Grayscale Digital Number','fontsize',14)
+ylabel(c,'8 Bit Grayscale Digital Number','fontsize',20)
 set(c,'ytick',[0 50 100 150 200 255])
-
+set(c,'Position',[0.92 0.315 0.02 0.4])
 end
 
 function plotjitter(x,y,symb,c,s)
