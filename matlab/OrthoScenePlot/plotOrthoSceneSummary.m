@@ -1,7 +1,7 @@
 %%
-ORTHO = 'C:\Users\Richie\Documents\GitHub\BlenderPythonTest\data\topofield2\output\model\ortho\whole.tif';
-TRAJECTORY = 'C:\Users\Richie\Documents\GitHub\BlenderPythonTest\data\topofield2\output\Trajectory.csv';
-GCP = 'C:\Users\Richie\Documents\GitHub\BlenderPythonTest\data\topofield2\output\xyzcontrol.csv';
+ORTHO = 'C:\Users\Richie\Documents\GitHub\SimUAS\data\topofield2\output\model\ortho\whole.tif';
+TRAJECTORY = 'C:\Users\Richie\Documents\GitHub\SimUAS\data\topofield2\output\Trajectory.csv';
+GCP = 'C:\Users\Richie\Documents\GitHub\SimUAS\data\topofield2\output\xyzcontrol.csv';
 %%
 I = imread(ORTHO);
 I(:,:,4)=[];

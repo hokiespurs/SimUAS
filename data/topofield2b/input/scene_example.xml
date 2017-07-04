@@ -88,7 +88,7 @@
 	</material>
 	<texture>
 		<slot interpolate="1" filename="objects\textures\highaltitude_square.jpg" repeatx="1" repeaty="1" infcolor="1"/>
-		<slot interpolate="1" filename="objects\textures\grasstile.jpg" repeatx="10" repeaty="10" infcolor="0.15"/>
+		<slot interpolate="1" filename="objects\textures\grass.jpg" repeatx="10" repeaty="10" infcolor="0.15"/>
 	</texture>
 </object>
 <object objname="basic_cube" name="rockCube" isControl = "0" isFiducial = "1">

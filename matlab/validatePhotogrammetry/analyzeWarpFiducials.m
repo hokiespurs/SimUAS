@@ -1,6 +1,6 @@
 function analyzeWarpFiducials(whichtype)
 
-homedir = getHomePath('BlenderPythonTest');
+homedir = getHomePath('SimUAS');
 outImDir = [homedir '/matlab/validatePhotogrammetry/warpImages'];
 
 [~,~,~,~,dx,dy]=calcFiducial(outImDir,whichtype,0);

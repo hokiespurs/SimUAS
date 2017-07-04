@@ -17,7 +17,7 @@ try:
             doallmodel = True
 except ValueError: # This is supposed to be if it is running from blender
     experimentName = 'data\\demobeaver'
-    rootname = 'C:\\Users\\Richie\\Documents\\GitHub\\BlenderPythonTest'
+    rootname = 'C:\\Users\\Richie\\Documents\\GitHub\\SimUAS'
     experimentName = rootname + '/' + experimentName
     addpathname = rootname + '\\python'
     sys.path.append(addpathname)

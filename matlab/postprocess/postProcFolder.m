@@ -1,10 +1,15 @@
 function postProcFolder(foldername, doexit)
+tic
 dbstop if error
-addHomePath('BlenderPythonTest')
-hpath = getHomePath('BlenderPythonTest');
+addHomePath('SimUAS')
+hpath = getHomePath('SimUAS');
 foldername = [hpath '/' foldername];
 if nargin==1
    doexit = 0; 
+end
+if ~exist([foldername '/output/'],'dir')
+    fprintf('%s\n',[foldername '/output']);
+    error( '''Output'' Folder does not exist')
 end
 %% paths to folders
 imDir = [foldername '/output/images/pre'];
@@ -15,6 +20,8 @@ fiducialSavename = [foldername '/output/pixelfiducial.xml'];
 controlFilename = [foldername '/output/xyzcontrol.csv'];
 controlSavename = [foldername '/output/pixelcontrol.xml'];
 intrinsicFilename = [foldername '/output/sensor.xml'];
+logFilename = [foldername '/output/log/renderblender.log'];
+proctimeFilename = [foldername '/output/log/processingTime.txt'];
 foo = dirname([foldername '/input/sensor*.xml']);
 inputSensorFilename = foo{1};
 
@@ -42,10 +49,61 @@ savePixelXML(controlSavename, Trajectory, Control, Calibration);
 %% Calculate Pixel Coords for Fiducial + Save pixelFiducial.xml
 savePixelXML(fiducialSavename, Trajectory, Fiducials, Calibration);
 
+%% Write processing time
+tblender = calcproctime(logFilename);
+tmatlab = toc;
+writeproctime(proctimeFilename,tblender,tmatlab);
+
+%% Make proc folder structure
+mkdir([foldername '/proc']);
+
+mkdir([foldername '/proc/parameters']);
+mkdir([foldername '/proc/parameters/sensor']);
+mkdir([foldername '/proc/parameters/control']);
+mkdir([foldername '/proc/parameters/pix']);
+mkdir([foldername '/proc/parameters/trajectory']);
+
+mkdir([foldername '/proc/settings']);
+
+mkdir([foldername '/proc/results']);
+
 %% Quit program
 if doexit
    exit 
 end
+end
+
+function writeproctime(fname,tblender,tmatlab)
+fid = fopen(fname,'w+t');
+[HH,MM,SS,dd] = calchms(tblender);
+fprintf(fid,'Blender Time : %5.0f days %2.0f hours %2.0f minutes %5.3f seconds\n',dd,HH,MM,SS);
+[HH,MM,SS,dd] = calchms(tmatlab);
+fprintf(fid,'Matlab Time  : %5.0f days %2.0f hours %2.0f minutes %5.3f seconds\n',dd,HH,MM,SS);
+fclose(fid);
+end
+
+function tblender = calcproctime(fname)
+strstart = '] run: logger opened';
+a = importdata(fname);
+t = cellfun(@(x) datenum(x(2:24),'yyyy-mm-dd HH:MM:SS,fff'),a);
+isstart = cellfun(@(x) strcmp(x(25:end),strstart),a);
+ind = find(isstart,1,'last');
+if isempty(ind)
+    tblender = nan;
+else
+    tblender = t(end)-t(ind);
+end
+tblender = tblender * 24*60*60; %convert to seconds
+end
+
+function [HH,MM,SS,dd] = calchms(tseconds)
+%% Calculate time in seconds to HMS and Days
+
+dd = mod(floor(tseconds/(24*60*60)),0);
+HH = mod(floor(tseconds/(60*60)),24);
+MM = mod(floor(tseconds/(60)),60);
+SS = mod(tseconds,60);
+
 end
 
 function copyImages(imDir, outImDir)
@@ -87,8 +145,8 @@ end
 
 function Itrim = trimimage(I,x,y)
     [m,n,~]=size(I);
-    padx = (n-x)/2;
-    pady = (m-y)/2;
+    padx = floor((n-x)/2); % best practice is to keep this whole numbers
+    pady = floor((m-y)/2);
     
     Itrim = I;
     Itrim(1:pady,:,:)=[];

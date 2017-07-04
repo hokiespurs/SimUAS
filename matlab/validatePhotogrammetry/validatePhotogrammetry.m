@@ -1,6 +1,6 @@
 function validatePhotogrammetry()
 % must have run analyzeWarp and analyze Markers for each folder
-homepath = getHomePath('BlenderPythonTest');
+homepath = getHomePath('SimUAS');
 %% Get ValidateAcc* data
 dnames = dirname([homepath '/data/validateAcc*'],1);
 

@@ -3,7 +3,7 @@ clear
 close all
 clc
 %% Read in las points
-dname = ['C:\Users\Richie\Documents\GitHub\BlenderPythonTest' ...
+dname = ['C:\Users\Richie\Documents\GitHub\SimUAS' ...
     '\data\topofield2\proc\20160103_basicTest\clippoints\clip\'];
 
 las_dense_lowest_agg_clip = lasdata([dname 'dense_lowest_aggressive_clip.las']);
@@ -15,7 +15,7 @@ las_dense_highest_agg_clip = lasdata([dname 'dense_ultrahigh_aggressive_clip.las
 cmap = lines(6);
 cmap = cmap(2:end,:);
 %% Read in Obj File
-obj = loadawobj('C:\Users\Richie\Documents\GitHub\BlenderPythonTest\data\topofield2\output\model\obj\clipobj.obj');
+obj = loadawobj('C:\Users\Richie\Documents\GitHub\SimUAS\data\topofield2\output\model\obj\clipobj.obj');
 
 %% Compare Cube Edges
 XLIM = [-0.25 0.25];
@@ -211,7 +211,7 @@ xlabel('Y Coordinate (m)','fontsize',20,'interpreter','latex');
 colormap('jet')
     
 %% Make Dense Pcolor Plots
-dnamecc = 'C:\Users\Richie\Documents\GitHub\BlenderPythonTest\data\topofield2\proc\20160103_basicTest\CloudCompare\';
+dnamecc = 'C:\Users\Richie\Documents\GitHub\SimUAS\data\topofield2\proc\20160103_basicTest\CloudCompare\';
 
 ccnames = {'dense_lowest_aggressive - Cloud.txt',...
            'dense_low_aggressive - Cloud.txt',...

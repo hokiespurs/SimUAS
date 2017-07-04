@@ -2,16 +2,16 @@ function analyzeMarkerProjections(foldername, whichtype, doexit)
 dbstop if error
 addpath(genpath('../'))
 if nargin==0
-    homePath = getHomePath('BlenderPythonTest');
+    homePath = getHomePath('SimUAS');
     foldername = [homePath '/data\validateAccuracy2'];
     whichtype=1;
     doexit = 0;
 elseif nargin==1
-    homePath = getHomePath('BlenderPythonTest');
+    homePath = getHomePath('SimUAS');
     foldername = [homePath '/' foldername];
     doexit = 0;
 else
-    homePath = getHomePath('BlenderPythonTest');
+    homePath = getHomePath('SimUAS');
     foldername = [homePath '/' foldername];
 end
 %% paths to folders 

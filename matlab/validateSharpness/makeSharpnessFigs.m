@@ -1,13 +1,13 @@
 function makeSharpnessFigs
 %% read images
-Itruthcircle = imread('C:\Users\Richie\Documents\GitHub\BlenderPythonTest\data\validatePointTruth\output\images\TestImage1.png');
-Itruthcirclehollow = imread('C:\Users\Richie\Documents\GitHub\BlenderPythonTest\data\validatePointTruth\output\images\TestImage2.png');
+Itruthcircle = imread('C:\Users\Richie\Documents\GitHub\SimUAS\data\validatePointTruth\output\images\TestImage1.png');
+Itruthcirclehollow = imread('C:\Users\Richie\Documents\GitHub\SimUAS\data\validatePointTruth\output\images\TestImage2.png');
 
-Inoanticircle = imread('C:\Users\Richie\Documents\GitHub\BlenderPythonTest\data\validatePointNoAnti\output\images\TestImage1.png');
-Inoanticirclehollow = imread('C:\Users\Richie\Documents\GitHub\BlenderPythonTest\data\validatePointNoAnti\output\images\TestImage2.png');
+Inoanticircle = imread('C:\Users\Richie\Documents\GitHub\SimUAS\data\validatePointNoAnti\output\images\TestImage1.png');
+Inoanticirclehollow = imread('C:\Users\Richie\Documents\GitHub\SimUAS\data\validatePointNoAnti\output\images\TestImage2.png');
 
-Ianticircle = imread('C:\Users\Richie\Documents\GitHub\BlenderPythonTest\data\validatePoint\output\images\TestImage1.png');
-Ianticirclehollow = imread('C:\Users\Richie\Documents\GitHub\BlenderPythonTest\data\validatePoint\output\images\TestImage2.png');
+Ianticircle = imread('C:\Users\Richie\Documents\GitHub\SimUAS\data\validatePoint\output\images\TestImage1.png');
+Ianticirclehollow = imread('C:\Users\Richie\Documents\GitHub\SimUAS\data\validatePoint\output\images\TestImage2.png');
 
 %% Calculate Area for Light and Dark Areas
 % Circle
