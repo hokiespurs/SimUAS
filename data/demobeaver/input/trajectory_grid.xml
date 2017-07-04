@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <trajectory name = "Test" version="1.0">
-	<ortho name = "Ortho1" t = "1">
-		<translation x = "0" y = "0" z = "100" />
-		<rotation x = "0" y = "0" z = "0" />
-		<resolution x="5000" y = "5000" scale = "50"/>
-		<render antialiasing = "1" compression = "1" format = "TIFF"/> 
-	</ortho>
 	<pose name = "A0001" t = "1">
 		<translation x = "-22.498838" y = "-21.752266" z = "30.570010" />
 		<rotation x = "2.727701" y = "-3.084330" z = "-0.701609" />
