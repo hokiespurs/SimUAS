@@ -101,8 +101,11 @@
 	<position>
 		<translation x="5" y="0" z="0"/>
 		<rotation x="0" y="0" z="0"/>
-		<scale x="1" y="1" z="1"/>
+		<scale x="10" y="10" z="10"/>
 	</position>
+	<material>
+		<shading smooth="1"/>
+	</material>
 </object>
 <object objname="basic_pyramid" name = "Pyramid" isFiducial = "1">
 	<position>
@@ -216,7 +219,7 @@
 	<material>
 		<diffuse red="1" green="1" blue="1" intensity="1"/>
 		<specular red="1" green="0" blue="0" intensity="0"/>
-		<shading shadeless="0" receiveshadow="1" castshadow="0"/>
+		<shading shadeless="0" receiveshadow="1" castshadow="0" smooth="1"/>
 		<transparency alpha="1" ior="1"/>
 	</material>
 	<texture>

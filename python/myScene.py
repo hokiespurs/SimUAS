@@ -239,17 +239,21 @@ class Scene:
                     SHADELESS = 0
                     RECEIVE = 1
                     CAST = 1
+                    SMOOTH = 0
                     if root is None:
                         self.shadeless = SHADELESS
                         self.receive = RECEIVE
                         self.cast = CAST
+                        self.smooth = SMOOTH
                     else:
                         shadeless = root.get('shadeless')
                         receive = root.get('receiveshadow')
                         cast = root.get('castshadow')
+                        smooth = root.get('smooth')
                         self.shadeless = val_default(shadeless, SHADELESS)
                         self.receive = val_default(receive, RECEIVE)
                         self.cast = val_default(cast, CAST)
+                        self.smooth = val_default(smooth, SMOOTH)
 
             class MaterialTransparency:
                 def __init__(self, root):

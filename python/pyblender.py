@@ -77,13 +77,27 @@ def addObjects(blenderScene, Scene, rootname):
         setLinear(bpy.data.objects[iName])
         logging.debug('Added ' + iName + " to scene")
         logging.debug('Applying Material and Textures')
+
         nmaterials = len(bpy.data.objects[iName].material_slots.values())
+
         if nmaterials == 1:
             bpy.data.objects[iName].active_material.diffuse_color = iObj.Material.Diffuse.rgb
             bpy.data.objects[iName].active_material.diffuse_intensity = iObj.Material.Diffuse.i
             bpy.data.objects[iName].active_material.specular_color = iObj.Material.Specular.rgb
             bpy.data.objects[iName].active_material.specular_intensity = iObj.Material.Specular.i
             bpy.data.objects[iName].active_material.ambient = iObj.Material.Ambient
+
+        # Doesnt really belong here, but its a patch
+        nPolygons = len(bpy.data.objects[iName].data.polygons)
+        logging.debug('nPolygons[' + iName + '] = (' + str(nPolygons) + ')')
+
+        bpy.data.objects[iName].data.use_auto_smooth = False
+        for i in range(1,nPolygons):
+            if iObj.Material.Shading.smooth == 1:
+                bpy.data.objects[iName].data.polygons[i].use_smooth = True
+                logging.debug('Smooth[' + iName + '] = (' + str(i) + ')')
+            else:
+                bpy.data.objects[iName].data.polygons[i].use_smooth = False
 
         for matIndex in range(0, nmaterials):
             iMaterial = bpy.data.objects[iName].material_slots[matIndex].material
@@ -101,7 +115,7 @@ def addObjects(blenderScene, Scene, rootname):
                 iMaterial.use_cast_shadows = True
             else:
                 iMaterial.use_cast_shadows = False
-
+            
             if iObj.Material.Transparency.alpha != 1:
                 iMaterial.use_transparency = True
                 iMaterial.alpha = iObj.Material.Transparency.alpha
