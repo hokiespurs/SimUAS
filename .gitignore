@@ -94,9 +94,7 @@ proc/
 !objects/**/**/*.png
 
 #ignore huge texture files
-objects/textures/*
 *.mat
-objects/firstdb/topo1/grass.jpg
 
 # ignore warp images folder
 matlab/validatePhotogrammetry/warpImages/*.txt
