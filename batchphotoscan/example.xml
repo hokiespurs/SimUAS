@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<procsettings projectname = "example" version = "1.0">
 
-<procsettings projectname = "testSettings" savedir = "" version = "1.0">
-
-<importfiles rootname = "">
-	<images     foldername = "" imagesToUse = "110101010111010101011"/>
-	<sensor     filename = ""/ lock = "1">
-	<trajectory filename = ""/>
-	<controlpix filename = ""/>
+<importfiles rootname = "C:\Users\Richie\Documents\GitHub\SimUAS\data\demobeaver">
+	<images     foldername = "output\images" imagesToUse = "1111111111111111111111111111111111111111111111111"/>
+	<sensor     filename = "proc\parameters\control\xyzcontrol_truth.csv" lock = "1">
+	<trajectory filename = "proc\parameters\trajectory\trajectory_truth.csv"/>
+	<controlpix filename = "proc\parameters\pixcontrol\pixControl_truth.xml"/>
+	<controlxyz filename = "proc\parameters\xyzcontrol\xyzcontrol_truth.csv"/>
 </importfiles>
 
 <photoscan>
@@ -42,23 +42,28 @@
 	</ortho>
 </photoscan>
 
-<export rootname="">
-	<logfile         filename=""/>
-	<PhotoscanReport filename=""/>
-	<sparsepoints    filename=""/>
-	<densepoints     filename=""/>
-	<model           filename=""/>
-	<tiledmodel      filename=""/>
-	<orthomosaic     filename=""/>
-	<dem             filename=""/>
+<export rootname="C:\Users\Richie\Documents\GitHub\SimUAS\data\demobeaver\proc\results">
+	<logfile         filename="log/photoscanlog.log"/>
+	<PhotoscanReport filename="report.pdf"/>
+	<sparsepoints    filename="las/sparse.las"/>
+	<densepoints     filename="las/dense.las"/>
+	<model           filename="model/model.obj"/>
+	<tiledmodel      filename="model/tiledmodel.obj"/>
+	<orthomosaic     filename="ortho.tif"/>
+	<dem             filename="dem.tif"/>
 	
-	<camcalibration  filename=""/>
-	<cameras         filename=""/>
+	<camcalibration  filename="camera/"/>
+	<cameras         filename="trajectory.csv"/>
 	<markers         filename=""/>
 	<matches         filename=""/>
 	<texture         filename=""/>
-	<orthophotos     filename=""/>
-	<undistortphotos filename=""/>
+	<orthophoto      filename="ortho"/>
+	<undistortphotos foldername="undist"/>
 
-	<reprocMVS       filename="" quality="" depthfilt=""/>
+	<reprocMVS       filename="las/dense" quality="lowest"  depthfilt="disabled"/>
+	<reprocMVS       filename="las/dense" quality="low"     depthfilt="disabled"/>
+	<reprocMVS       filename="las/dense" quality="medium"  depthfilt="disabled"/>
+	<reprocMVS       filename="las/dense" quality="high"    depthfilt="disabled"/>
+	<reprocMVS       filename="las/dense" quality="highest" depthfilt="disabled"/>
 </export>
+</procsettings>
