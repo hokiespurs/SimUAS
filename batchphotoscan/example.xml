@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <procsettings projectname = "example" version = "1.0">
 
-<importfiles rootname = "C:\Users\Richie\Documents\GitHub\SimUAS\data\demobeaver">
+<importfiles rootname = "C:\Users\slocumr.ONID\gitHub\SimUAS\data\demobeaver">
 	<images     foldername = "output\images" imagesToUse = "1111111111111111111111111111111111111111111111111"/>
-	<sensor     filename = "proc\parameters\control\xyzcontrol_truth.csv" lock = "1">
+	<sensor     filename = "proc\parameters\control\xyzcontrol_truth.csv" lock = "1"/>
 	<trajectory filename = "proc\parameters\trajectory\trajectory_truth.csv"/>
 	<controlpix filename = "proc\parameters\pixcontrol\pixControl_truth.xml"/>
 	<controlxyz filename = "proc\parameters\xyzcontrol\xyzcontrol_truth.csv"/>
 </importfiles>
 
 <photoscan>
-	<reference>
+	<referencesettings>
 		<measurementaccuracy camerapos = "10" camerarot = "2" marker = "0.005" scalebar = "0.001"/>
 		<imageaccuracy marker = "0.1" tiepoint = "1" />
 		<miscellaneous groundalt = "20"/>
-	</reference>
+	</referencesettings>
 	
-	<optimize fits = "1111111111111"/>
+	<optimize execute = "1" fits = "1111111111111"/>
 	
 	<aligngeneral accuracy="high" genericpre ="1" referencepre ="1"/>
 	<alignadvanced keypointlim = "40000" tiepointlim = "4000" maskconstrain="0" adaptivecam = "1"/>
