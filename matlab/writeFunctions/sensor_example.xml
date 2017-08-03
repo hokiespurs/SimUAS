@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sensor name = "%s" fileformat = "%s">
+  <physical focallength="%f" sensorWidth = "%f"/>
+  <resolution x = "%.0f" y = "%.0f"/>
+  <principalPoint x = "%f" y="%f"/>
+  <blender compression = "%.0f" percentage = "%.0f" antialiasing = "%.0f"/>
+  <postprocessing seed="%.0f">
+    <distortion k1 = "%f" k2 = "%f" k3 = "%f" k4 = "%f" p1 = "%f" p2 = "%f" isPhotoscanUnits = "%.0f"/>
+    <vignetting v1 = "%f" v2 = "%f" v3 = "%f"/>
+    <saltnoise prob = "%f"/>
+    <peppernoise prob = "%f"/>
+    <gaussiannoise mean = "%f" variance = "%f"/>
+    <gaussianblur sigma = "%f"/>
+  </postprocessing>
+  </sensor>

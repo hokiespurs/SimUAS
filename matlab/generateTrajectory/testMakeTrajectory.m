@@ -1,6 +1,6 @@
-xi = -40:20:40;
-yi = -40:20:40;
-alt = 60;
+xi = -100:20:100;
+yi = -100:15:100;
+alt = 80;
 
 [xg,yg]=meshgrid(xi,yi);
 
@@ -9,8 +9,7 @@ rx = zeros(size(xg));
 ry = zeros(size(xg));
 rz = zeros(size(xg));
 
-makeTrajectory('test.xml', 'Test', xg, yg, zg, rx, ry, rz, 'ImTest', 4)
-
+makeTrajectory('trajectory_test.xml', 'Test', xg, yg, zg, rx, ry, rz,1:numel(xg), 'ImTest', 4)
 %% Random Angles Pointing at 0,0,0 with constant Roll = 0
 NCAMS = 100;
 

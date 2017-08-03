@@ -17,7 +17,9 @@ try:
             doallmodel = True
 except ValueError: # This is supposed to be if it is running from blender
     experimentName = 'data\\demobeaver'
+    experimentName = 'data\\bathytest\\BATHY001'
     rootname = 'C:\\Users\\Richie\\Documents\\GitHub\\SimUAS'
+    rootname = 'C:\\Users\\slocumr.ONID\\github\\SimUAS'
     experimentName = rootname + '/' + experimentName
     addpathname = rootname + '\\python'
     sys.path.append(addpathname)
@@ -98,12 +100,13 @@ def run():
         # Render Ortho images
         outputOrthos(BlenderTrajectory, orthoFolder)
 
-    # Apply Render Parameters
-    applyRenderSettings(BlenderSensor)
-
     # Place Cameras
     addCameras(BlenderTrajectory, BlenderSensor)
 
+    # Apply Render Parameters
+    applyRenderSettings(BlenderSensor)
+
+	
     if dorender:
         # Render images
         render(BlenderTrajectory, imageFolderPre)

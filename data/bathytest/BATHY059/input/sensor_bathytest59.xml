@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sensor name = "bathyimg" fileformat = "PNG">
+  <physical focallength="14.657000" sensorWidth = "20.000000"/>
+  <resolution x = "2000" y = "2000"/>
+  <principalPoint x = "1000.000000" y="1000.000000"/>
+  <blender compression = "100" percentage = "100" antialiasing = "1"/>
+  <postprocessing seed="1">
+    <distortion k1 = "0.000000" k2 = "0.000000" k3 = "0.000000" k4 = "0.000000" p1 = "0.000000" p2 = "0.000000" isPhotoscanUnits = "1"/>
+    <vignetting v1 = "0.000000" v2 = "0.000000" v3 = "0.000000"/>
+    <saltnoise prob = "0.000000"/>
+    <peppernoise prob = "0.000000"/>
+    <gaussiannoise mean = "0.000000" variance = "0.000000"/>
+    <gaussianblur sigma = "0.000000"/>
+  </postprocessing>
+</sensor>

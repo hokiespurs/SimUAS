@@ -1,4 +1,4 @@
-SET EXPERIMENTNAME=demobeaver
+SET EXPERIMENTNAME=bathy0m
 cd ../python
 blender --background --python renderblender.py -- data\\%EXPERIMENTNAME%
 cd ../matlab/postprocess

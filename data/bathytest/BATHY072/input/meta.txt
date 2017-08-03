@@ -1,0 +1,10 @@
+BathyTest Experiment Parameters
+Experiment Number 72/100
+WaterDepth (0.01,15.00) : 0.009000
+Altitude   (1.00,100.00) : 0.660000
+HFOV       (5.00,160.00) : 44.140113
+Overlap     : 0.800000
+Sidelap     : 0.800000
+SensorWidth : 20.000000
+Resolution  : 2000x2000
+FocalLength : 24.664000

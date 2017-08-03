@@ -316,8 +316,21 @@ def applyRenderSettings(Sensor):
     logging.debug('Applying render settings')
     bpy.context.scene.render.resolution_percentage = Sensor.percentage
     bpy.context.scene.render.use_stamp_lens = True  # Lens in Metadata
-    bpy.context.scene.render.resolution_x = Sensor.renderresolution[0]
     bpy.context.scene.render.resolution_y = Sensor.renderresolution[1]
+    bpy.context.scene.render.resolution_x = Sensor.renderresolution[0]
+	# sometimes blender subtracts one from what you tell it?? 
+    logging.debug('Set Resolution X,Y: ' + str(Sensor.renderresolution[0]) + 'x' + str(Sensor.renderresolution[1]))
+    logging.debug('Actual Resolution X,Y: ' + str(bpy.context.scene.render.resolution_x) + 'x' + str(bpy.context.scene.render.resolution_y))
+    if (bpy.context.scene.render.resolution_x != Sensor.renderresolution[0]):
+        bpy.context.scene.render.resolution_x = Sensor.renderresolution[0]+1
+        logging.debug('X is messed up... fixing it')
+        logging.debug('Set Resolution X,Y: ' + str(Sensor.renderresolution[0]) + 'x' + str(Sensor.renderresolution[1]))
+        logging.debug('Actual Resolution X,Y: ' + str(bpy.context.scene.render.resolution_x) + 'x' + str(bpy.context.scene.render.resolution_y))
+    if (bpy.context.scene.render.resolution_y != Sensor.renderresolution[1]):
+        bpy.context.scene.render.resolution_y = Sensor.renderresolution[1]+1
+        logging.debug('Y is messed up... fixing it')
+        logging.debug('Set Resolution X,Y: ' + str(Sensor.renderresolution[1]) + 'x' + str(Sensor.renderresolution[1]))
+        logging.debug('Actual Resolution X,Y: ' + str(bpy.context.scene.render.resolution_x) + 'x' + str(bpy.context.scene.render.resolution_y))        
     bpy.context.scene.render.use_antialiasing = Sensor.antialiasing
     # if Sensor.antialiasing != 0: # BOX Filter actually biased results
     #     # bpy.context.scene.render.pixel_filter_type = 'BOX'
