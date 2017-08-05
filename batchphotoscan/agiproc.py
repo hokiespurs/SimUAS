@@ -1,12 +1,12 @@
 import xml.etree.ElementTree as ET
 import logging
 import sys
-#import Photoscan
+import PhotoScan
 from glob import glob
 import time
-import numpy as np
+#import numpy as np
 from os.path import join
-
+import os
 class ProcSettings:
     def __init__(self,xmlName):
         # Read Data from XML
@@ -28,28 +28,27 @@ class ProcSettings:
 
         self.projectname = procsettings.get('projectname')
         # Read Import Files
-        self.importfiles = self.ImportFiles(procsettings.find('importfiles'))
+        self.importfiles = self.__ImportFiles(procsettings.find('importfiles'))
 
         # Read Photoscan Processing Parameters
-        self.photoscan = self.PS(procsettings.find('photoscan'))
+        self.photoscan = self.__PS(procsettings.find('photoscan'))
         
         # Read Export Info
-        self.export = self.Export(procsettings.find('export'))
+        self.export = self.__Export(procsettings.find('export'))
  
 
-    class ImportFiles:
+    class __ImportFiles:
         def __init__(self,root):
             # Read Data
             self.imagesfoldername = root.find('images').get('foldername')
-            self.imagesimagesToUse = root.find('images').get('imagesToUse')
+            self.imagesToUse = root.find('images').get('imagesToUse')
             self.sensorfilename = root.find('sensor').get('filename')
             self.sensorlock = root.find('sensor').get('lock')
             self.trajectoryfilename = root.find('trajectory').get('filename')
-            self.controlpixfilename = root.find('controlpix').get('filename')
-            self.controlxyzfilename = root.find('controlxyz').get('filename')
+            self.controlfilename = root.find('controldata').get('filename')
             self.rootname = root.get('rootname')
 
-    class PS:
+    class __PS:
         def __init__(self,root):
             self.referencesettingsmeasurementaccuracycamerapos = root.find('referencesettings').find('measurementaccuracy').get('camerapos')
             self.referencesettingsmeasurementaccuracycamerarot = root.find('referencesettings').find('measurementaccuracy').get('camerarot')
@@ -105,10 +104,12 @@ class ProcSettings:
             self.orthoregionminy = root.find('ortho').find('region').get('miny')
             self.orthoregionresolution = root.find('ortho').find('region').get('resolution')
 
-    class Export:
+    class __Export:
         def __init__(self,root):
             # Read Data
-            self.reprocMVS = root.get('reprocMVS')
+            self.reprocMVSfoldername = root.find('reprocMVS').get('foldername')
+            self.reprocMVSquality = root.find('reprocMVS').get('quality')
+            self.reprocMVSdepthfilt = root.find('reprocMVS').get('depthfilt')
             self.logfilefilename = root.find('logfile').get('filename')
             self.PhotoscanReportfilename = root.find('PhotoscanReport').get('filename')
             self.sparsepointsfilename = root.find('sparsepoints').get('filename')
@@ -125,13 +126,29 @@ class ProcSettings:
             self.orthophotofilename = root.find('orthophoto').get('filename')
             self.undistortphotosfoldername = root.find('undistortphotos').get('foldername')
             self.rootname = root.get('rootname')
-                                  
-# Set up agiproc logfile
-LOGFORMAT = "[%(asctime)s] %(funcName)s: %(message)s"
-logging.basicConfig(filename="proc.log", level=logging.DEBUG, format=LOGFORMAT)
-logging.debug('logger opened')
-logging.info(sys.version)
 
+def procDense(qualityval, filterval):
+    if qualityval=='lowest':
+        densequal = PhotoScan.Quality.LowestQuality
+    elif qualityval=='low':
+        densequal = PhotoScan.Quality.LowQuality
+    elif qualityval=='medium':
+        densequal = PhotoScan.Quality.MediumQuality
+    elif qualityval=='high':
+        densequal = PhotoScan.Quality.HighQuality
+    elif qualityval=='ultrahigh':
+        densequal = PhotoScan.Quality.UltraQuality
+
+    if filterval=='disabled':
+        densefilt = PhotoScan.FilterMode.NoFiltering
+    elif filterval=='mild':
+        densefilt = PhotoScan.FilterMode.MildFiltering
+    elif filterval=='moderate':
+        densefilt = PhotoScan.FilterMode.ModerateFiltering
+    elif filterval=='aggressive':
+        densefilt = PhotoScan.FilterMode.AggressiveFiltering
+
+    chunk.buildDenseCloud(quality=densequal,filter=densefilt)
 
 ##argv = sys.argv
 ##if argv[0]=='xml':
@@ -139,20 +156,26 @@ logging.info(sys.version)
 ##else:
 ##    ProcParams = ProcSettings(argv[1])                              
 
-# HARDCODED DELETE THIS
+# TEMPORARY HARDCODED-DELETE THIS
 argv = 'C:\\Users\\slocumr.ONID\\github\\SimUAS\\batchphotoscan\\example.xml'
 ProcParams = ProcSettings(argv)
-                                  
-### PHOTOSCAN PROCESSING
-### get main app objects
-##doc = PhotoScan.app.document
-##app = PhotoScan.Application()
-##
-### create chunk
-##chunk = PhotoScan.Chunk()
-##chunk.label = "New_Chunk"
-##doc.chunks.add(chunk)
 
+doc = PhotoScan.app.document
+app = PhotoScan.Application()
+
+# clear project and console
+app.console.clear()
+doc.clear()
+			
+# Set up agiproc logfile (NEED TO FIX, PHOTOSCAN ALREADY USING LOGGING)
+LOGFORMAT = "[%(asctime)s] %(funcName)s: %(message)s"
+logname = ProcParams.export.rootname + "\\" + ProcParams.export.logfilefilename
+logging.basicConfig(filename=logname, level=logging.DEBUG, format=LOGFORMAT)
+logging.debug('logger opened')
+logging.info(sys.version)
+
+
+                                  
 # FIND ALL PHOTOS IN PATH
 ImageFiles = []
 ImagePath = join(ProcParams.importfiles.rootname,ProcParams.importfiles.imagesfoldername)
@@ -161,13 +184,136 @@ print(ImagePath)
 
 for ext in ('\*.tif', '\*.png', '\*.jpg'):
    ImageFiles.extend(glob(ImagePath + ext))
-   print(ImagePath)
-   print(ImagePath + ext)
-   print(join(ImagePath, ext))
 
-indexes = [2, 3, 5]
-for index in sorted(indexes, reverse=True):
-    del ImageFiles[index]
+if len(ProcParams.importfiles.imagesToUse)==len(ImageFiles):
+    print("Deleting Some Images")
+    indbad = []
+    for ind in range(1,len(ImageFiles)):
+        if ProcParams.importfiles.imagesToUse[ind]=='0':
+            indbad.append(ind)
+            print("Bad: " + str(ind))
+    for index in sorted(indbad, reverse=True):
+        del ImageFiles[index]
+else:
+    print("Using All Images:")
 
 for imagename in ImageFiles:
     print(imagename)
+
+
+# Add Photos
+chunk = PhotoScan.app.document.addChunk()
+chunk.label = 'simUASdata'
+chunk.addPhotos(ImageFiles)
+
+
+# Add Sensor (Camera Calibration)
+sensorname = ProcParams.importfiles.rootname + "\\" + ProcParams.importfiles.sensorfilename
+calib = PhotoScan.Calibration()
+calib.load(sensorname)
+sensor = chunk.sensors[0]
+sensor.label = 'simUASsensor'
+sensor.user_calib = calib
+if ProcParams.importfiles.sensorlock=='1':
+    sensor.fixed = True
+
+# Set Reference Settings (Do before loading stuff so accuracy isnt overwritten)
+camlocacc = float(ProcParams.photoscan.referencesettingsmeasurementaccuracycamerapos)
+chunk.camera_location_accuracy = [camlocacc,camlocacc,camlocacc]
+
+camrotacc = float(ProcParams.photoscan.referencesettingsmeasurementaccuracycamerarot)
+chunk.camera_rotation_accuracy = [camrotacc,camrotacc,camrotacc]
+
+markacc = float(ProcParams.photoscan.referencesettingsmeasurementaccuracymarker)
+chunk.marker_location_accuracy = [markacc,markacc,markacc]
+
+chunk.scalebar_accuracy = float(ProcParams.photoscan.referencesettingsmeasurementaccuracyscalebar)
+chunk.marker_projection_accuracy = float(ProcParams.photoscan.referencesettingsimageaccuracymarker)
+chunk.tiepoint_accuracy = float(ProcParams.photoscan.referencesettingsimageaccuracytiepoint)
+if ProcParams.photoscan.referencesettingsmiscellaneousgroundalt =="":
+    chunk.elevation = None
+else:
+    chunk.elevation = float(ProcParams.photoscan.referencesettingsmiscellaneousgroundalt)
+
+# Add Trajectory
+trajectoryname = ProcParams.importfiles.rootname + "\\" + ProcParams.importfiles.trajectoryfilename
+chunk.loadReference(trajectoryname)
+
+# Add Markers
+markername = ProcParams.importfiles.rootname + "\\" + ProcParams.importfiles.controlfilename
+chunk.importMarkers(markername)
+
+## Do Sparse Alignment
+# Match Photos
+if ProcParams.photoscan.aligngeneralaccuracy == 'lowest':
+    matchacc = PhotoScan.Accuracy.LowestAccuracy
+elif ProcParams.photoscan.aligngeneralaccuracy == 'low':
+    matchacc = PhotoScan.Accuracy.LowAccuracy
+elif ProcParams.photoscan.aligngeneralaccuracy == 'medium':
+    matchacc = PhotoScan.Accuracy.MediumAccuracy
+elif ProcParams.photoscan.aligngeneralaccuracy == 'high':
+    matchacc = PhotoScan.Accuracy.HighAccuracy
+elif ProcParams.photoscan.aligngeneralaccuracy == 'highest':
+    matchacc = PhotoScan.Accuracy.HighestAccuracy
+
+if ProcParams.photoscan.aligngeneralgenericpre=='1':
+    genpre = True
+else:
+    genpre = False
+	
+if ProcParams.photoscan.aligngeneralreferencepre=='1':
+    refpre = True
+else:
+    refpre = False
+
+nkeypoints = int(ProcParams.photoscan.alignadvancedkeypointlim)
+ntiepoints = int(ProcParams.photoscan.alignadvancedtiepointlim)
+
+chunk.matchPhotos(accuracy=matchacc,\
+    generic_preselection=genpre,\
+    reference_preselection=refpre,\
+    keypoint_limit = nkeypoints,\
+    tiepoint_limit = ntiepoints)
+	
+# align photos
+if ProcParams.photoscan.alignadvancedadaptivecam=='1':
+    adaptivecam = True
+else:
+    adaptivecam = False
+
+chunk.alignCameras(adaptive_fitting=adaptivecam)
+
+# optimize
+chunk.optimizeCameras()
+
+# dense pointcloud 
+procDense(ProcParams.photoscan.densequality, ProcParams.photoscan.densedepthfilt)
+
+## Save Data
+saverootname = ProcParams.export.rootname
+if not os.path.exists(saverootname):
+    os.makedirs(saverootname)
+if not os.path.exists(saverootname + "\\las"):
+    os.makedirs(saverootname + "\\las")
+if not os.path.exists(saverootname + "\\model"):
+    os.makedirs(saverootname + "\\model")	
+
+# Save Sparse
+sparsesavename = saverootname + "\\" + ProcParams.export.sparsepointsfilename
+chunk.exportPoints(sparsesavename,PhotoScan.DataSource.PointCloudData.PointCloudData)
+
+# Save Dense
+densesavename = saverootname + "\\" + ProcParams.export.densepointsfilename
+chunk.exportPoints(densesavename,PhotoScan.DataSource.PointCloudData.DenseCloudData)
+
+# Save Reproc Dense
+QualityType = ['lowest','low','medium','high','ultrahigh']
+FilterType = ['disabled','mild','moderate','aggressive']
+mvsfolder = saverootname + "\\"  + ProcParams.export.reprocMVSfoldername
+for indq,q in enumerate(ProcParams.export.reprocMVSquality):
+    for indf,f in enumerate(ProcParams.export.reprocMVSdepthfilt):
+        if f=='1' and q=='1':
+            procDense(QualityType[indq],FilterType[indf])
+            mvssavename = mvsfolder + "\\dense_" + QualityType[indq] + "_" + FilterType[indf] + ".las"
+            print("Saving Dense MVS: " + mvssavename)
+            chunk.exportPoints(mvssavename,PhotoScan.DataSource.PointCloudData.DenseCloudData)

@@ -16,8 +16,8 @@ SENSORWIDTH = 20;
 PIXX = 2000;
 PIXY = 2000;
 
-EXPSCALE = 1/100;
-
+EXPSCALE = 1;
+SCALEPAD = 1.05;
 %%
 randbetween = @(nreturn,lim) rand(nreturn,1)*(lim(2)-lim(1))+lim(1);
 %%
@@ -42,7 +42,7 @@ for iExperimentNum = 1:NEXPERIMENTS
     [xg,yg] = meshgrid((-lineinds(1):lineinds(1))*d(1),(-lineinds(2):lineinds(2))*d(2));
     
     %how big to make the plane with texture
-    scale = 1.1 * repmat(max(2*([max(xg(:)) max(yg(:))]+footprint/2)),1,2);
+    scale = SCALEPAD * repmat(max(2*([max(xg(:)) max(yg(:))]+footprint/2)),1,2);
 
 %     % Figure
 %     clf
@@ -66,7 +66,7 @@ for iExperimentNum = 1:NEXPERIMENTS
     DNAME = sprintf('%s/BATHY%03.0f/input/',EXPDIRNAME,iExperimentNum);
     [status,message,messageid] =mkdir(DNAME);
     if strcmp(messageid, 'MATLAB:MKDIR:DirectoryExists')
-        warning('going to be overwriting things: Change to error...'); 
+        error('going to be overwriting things: delete yoself...'); 
     end
     FNAME = sprintf('bathytest%.0f.xml',iExperimentNum);
     %% Make Scene.xml

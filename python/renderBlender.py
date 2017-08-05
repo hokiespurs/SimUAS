@@ -9,12 +9,15 @@ doallmodel = False
 try:
     argv = argv[argv.index("--") + 1:]
     rootname = os.path.dirname(os.path.dirname(__file__))
-    experimentName = rootname + '/' + argv[0]
+    filerootname = rootname
     dorender = True
     sys.path.append(os.path.dirname(__file__))
     if len(argv)>1:
         if argv[1]=='-allmodel':
             doallmodel = True
+        else:
+            filerootname = argv[1]
+    experimentName = filerootname + '/' + argv[0]
 except ValueError: # This is supposed to be if it is running from blender
     experimentName = 'data\\demobeaver'
     experimentName = 'data\\bathytest\\BATHY001'
@@ -69,6 +72,7 @@ def run():
         logging.debug('Render = False')
     logging.debug('experimentName = ' + experimentName)
     logging.debug('rootname = ' + rootname)
+    logging.debug('filerootname = ' + filerootname)
 
     # Read XML Files into Classes
     xmlScene = glob.glob(experimentName + '/input/scene*.xml')[0]

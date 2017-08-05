@@ -2,25 +2,24 @@
 <procsettings projectname = "example" version = "1.0">
 
 <importfiles rootname = "C:\Users\slocumr.ONID\gitHub\SimUAS\data\demobeaver">
-	<images     foldername = "output\images" imagesToUse = "1111111111111111111111111111111111111111111111111"/>
-	<sensor     filename = "proc\parameters\control\xyzcontrol_truth.csv" lock = "1"/>
-	<trajectory filename = "proc\parameters\trajectory\trajectory_truth.csv"/>
-	<controlpix filename = "proc\parameters\pixcontrol\pixControl_truth.xml"/>
-	<controlxyz filename = "proc\parameters\xyzcontrol\xyzcontrol_truth.csv"/>
+	<images     foldername = "output\images" imagesToUse = "1101111111111111111111111111111111111111111111111"/>
+	<sensor     filename = "output\Sensor_photoscan.xml" lock = "1"/>
+	<trajectory filename = "output\trajectory_norpy.xml"/>
+	<controldata filename = "output\pixelcontrol.xml"/>
 </importfiles>
 
 <photoscan>
 	<referencesettings>
 		<measurementaccuracy camerapos = "10" camerarot = "2" marker = "0.005" scalebar = "0.001"/>
-		<imageaccuracy marker = "0.1" tiepoint = "1" />
-		<miscellaneous groundalt = "20"/>
+		<imageaccuracy marker = "0.1" tiepoint = "2" />
+		<miscellaneous groundalt = ""/>
 	</referencesettings>
 	
 	<optimize execute = "1" fits = "1111111111111"/>
 	
 	<aligngeneral accuracy="high" genericpre ="1" referencepre ="1"/>
 	<alignadvanced keypointlim = "40000" tiepointlim = "4000" maskconstrain="0" adaptivecam = "1"/>
-	<dense quality="medium" depthfilt = "Aggressive"/>
+	<dense quality="low" depthfilt = "mild"/>
 	<meshgeneral surftype="arbitrary" sourcedata = "dense" facecount = "medium" />
 	<meshadvanced inteprolation="enabled" />
 	<texturegeneral mappingmode = "generic" blendingmode = "mosaic" texsize = "4096" texcount = "1"/>
@@ -42,8 +41,8 @@
 	</ortho>
 </photoscan>
 
-<export rootname="C:\Users\Richie\Documents\GitHub\SimUAS\data\demobeaver\proc\results">
-	<logfile         filename="log/photoscanlog.log"/>
+<export rootname="C:\Users\slocumr.ONID\gitHub\SimUAS\data\demobeaver\proc\results\test1">
+	<logfile         filename="photoscanlog.log"/>
 	<PhotoscanReport filename="report.pdf"/>
 	<sparsepoints    filename="las/sparse.las"/>
 	<densepoints     filename="las/dense.las"/>
@@ -60,10 +59,6 @@
 	<orthophoto      filename="ortho"/>
 	<undistortphotos foldername="undist"/>
 
-	<reprocMVS       filename="las/dense" quality="lowest"  depthfilt="disabled"/>
-	<reprocMVS       filename="las/dense" quality="low"     depthfilt="disabled"/>
-	<reprocMVS       filename="las/dense" quality="medium"  depthfilt="disabled"/>
-	<reprocMVS       filename="las/dense" quality="high"    depthfilt="disabled"/>
-	<reprocMVS       filename="las/dense" quality="highest" depthfilt="disabled"/>
+	<reprocMVS       foldername="las" quality="11111"  depthfilt="1000"/>
 </export>
 </procsettings>

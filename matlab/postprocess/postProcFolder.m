@@ -1,8 +1,10 @@
-function postProcFolder(foldername, doexit)
+function postProcFolder(foldername, doexit, hpath)
 tic
 dbstop if error
 addHomePath('SimUAS')
-hpath = getHomePath('SimUAS');
+if nargin<3
+    hpath = getHomePath('SimUAS');
+end
 foldername = [hpath '/' foldername];
 if nargin==1
    doexit = 0; 
@@ -15,6 +17,7 @@ end
 imDir = [foldername '/output/images/pre'];
 outImDir = [foldername '/output/images'];
 trajectoryFilename = [foldername '/output/trajectory.csv'];
+trajectoryXMLSavename = [foldername '/output/trajectory'];
 fiducialFilename = [foldername '/output/xyzfiducial.csv'];
 fiducialSavename = [foldername '/output/pixelfiducial.xml'];
 controlFilename = [foldername '/output/xyzcontrol.csv'];
@@ -49,6 +52,9 @@ savePixelXML(controlSavename, Trajectory, Control, Calibration);
 %% Calculate Pixel Coords for Fiducial + Save pixelFiducial.xml
 savePixelXML(fiducialSavename, Trajectory, Fiducials, Calibration);
 
+%% Convert Trajectory to an XML file
+writeTrajextoryXML(trajectoryXMLSavename,Trajectory)
+
 %% Write processing time
 tblender = calcproctime(logFilename);
 tmatlab = toc;
@@ -71,6 +77,64 @@ mkdir([foldername '/proc/results']);
 if doexit
    exit 
 end
+end
+
+function writeTrajextoryXML(trajectoryXMLSavename,Trajectory)
+%% Trajectory XML with RPY
+fid = fopen([trajectoryXMLSavename '.xml'],'w+t');
+fprintf(fid,'<?xml version="1.0" encoding="UTF-8"?>\n');
+fprintf(fid,'<reference version="1.2.0">\n');
+fprintf(fid,'  <cameras>\n');
+for i=1:numel(Trajectory.names)
+    fprintf(fid,'    <camera label="%s">\n',Trajectory.names{i});
+    fprintf(fid,'      <reference x="%.6f" y="%.6f" z="%.6f" yaw="%.6f" pitch="%.6f" roll="%.6f" enabled="true"/>\n',...
+        Trajectory.T(i,1),Trajectory.T(i,2),Trajectory.T(i,3),...
+        Trajectory.R(i,3),Trajectory.R(i,2),Trajectory.R(i,1));
+    fprintf(fid,'    </camera>\n');
+end
+fprintf(fid,'  </cameras>\n');
+
+% fprintf(fid,'  <reference>LOCAL_CS["Local Coordinates",LOCAL_DATUM["Local Datum",0],UNIT["metre",1,AUTHORITY["EPSG","9001"]]]</reference>\n');
+% fprintf(fid,'  <settings>\n');
+% fprintf(fid,'    <property name="accuracy_tiepoints" value="1"/>\n');
+% fprintf(fid,'    <property name="accuracy_cameras" value="10"/>\n');
+% fprintf(fid,'    <property name="accuracy_cameras_ypr" value="2"/>\n');
+% fprintf(fid,'    <property name="accuracy_cameras_ypr" value="2"/>\n');
+% fprintf(fid,'    <property name="accuracy_markers" value="0.0050000000000000001"/>\n');
+% fprintf(fid,'    <property name="accuracy_scalebars" value="0.001"/>\n');
+% fprintf(fid,'    <property name="accuracy_projections" value="0.10000000000000001"/>\n');
+% fprintf(fid,'  </settings>\n');
+fprintf(fid,'</reference>\n');
+
+fclose(fid);
+
+%% Trajectory XML With NO RPY
+fid = fopen([trajectoryXMLSavename '_norpy.xml'],'w+t');
+fprintf(fid,'<?xml version="1.0" encoding="UTF-8"?>\n');
+fprintf(fid,'<reference version="1.2.0">\n');
+fprintf(fid,'  <cameras>\n');
+for i=1:numel(Trajectory.names)
+    fprintf(fid,'    <camera label="%s">\n',Trajectory.names{i});
+    fprintf(fid,'      <reference x="%.6f" y="%.6f" z="%.6f" enabled="true"/>\n',...
+        Trajectory.T(i,1),Trajectory.T(i,2),Trajectory.T(i,3));
+    fprintf(fid,'    </camera>\n');
+end
+fprintf(fid,'  </cameras>\n');
+
+% fprintf(fid,'  <reference>LOCAL_CS["Local Coordinates",LOCAL_DATUM["Local Datum",0],UNIT["metre",1,AUTHORITY["EPSG","9001"]]]</reference>\n');
+% fprintf(fid,'  <settings>\n');
+% fprintf(fid,'    <property name="accuracy_tiepoints" value="1"/>\n');
+% fprintf(fid,'    <property name="accuracy_cameras" value="10"/>\n');
+% fprintf(fid,'    <property name="accuracy_cameras_ypr" value="2"/>\n');
+% fprintf(fid,'    <property name="accuracy_cameras_ypr" value="2"/>\n');
+% fprintf(fid,'    <property name="accuracy_markers" value="0.0050000000000000001"/>\n');
+% fprintf(fid,'    <property name="accuracy_scalebars" value="0.001"/>\n');
+% fprintf(fid,'    <property name="accuracy_projections" value="0.10000000000000001"/>\n');
+% fprintf(fid,'  </settings>\n');
+fprintf(fid,'</reference>\n');
+
+fclose(fid);
+
 end
 
 function writeproctime(fname,tblender,tmatlab)
