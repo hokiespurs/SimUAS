@@ -10,20 +10,20 @@ import os
 class ProcSettings:
     def __init__(self,xmlName):
         # Read Data from XML
-        logging.debug('Reading Processing Parameters ')
+        print('AGIPROC: Reading Processing Parameters ')
         try:
             tree = ET.parse(xmlName)
         except ET.ParseError:  # could not parse the xml file
             logging.error('Unable to Parse XML File')
             logging.error('XML Name= ' + xmlName)
-            print('ERROR: Unable to read XML... file is poorly formatted')
+            print('AGIPROC: ERROR: Unable to read XML... file is poorly formatted')
             raise
 
         procsettings = tree.getroot()
         if procsettings.tag != 'procsettings':
             logging.error('XML doesnt start with <procsettings> tag')
             logging.error('XML Name= ' + xmlName)
-            print('ERROR:  XML file doesnt start with a <procsettings> tag')
+            print('AGIPROC: ERROR:  XML file doesnt start with a <procsettings> tag')
             raise SyntaxError
 
         self.projectname = procsettings.get('projectname')
@@ -68,41 +68,6 @@ class ProcSettings:
             self.alignadvancedtiepointlim = root.find('alignadvanced').get('tiepointlim')
             self.densedepthfilt = root.find('dense').get('depthfilt')
             self.densequality = root.find('dense').get('quality')
-            self.meshgeneralfacecount = root.find('meshgeneral').get('facecount')
-            self.meshgeneralsourcedata = root.find('meshgeneral').get('sourcedata')
-            self.meshgeneralsurftype = root.find('meshgeneral').get('surftype')
-            self.meshadvancedinteprolation = root.find('meshadvanced').get('inteprolation')
-            self.texturegeneralblendingmode = root.find('texturegeneral').get('blendingmode')
-            self.texturegeneralmappingmode = root.find('texturegeneral').get('mappingmode')
-            self.texturegeneraltexcount = root.find('texturegeneral').get('texcount')
-            self.texturegeneraltexsize = root.find('texturegeneral').get('texsize')
-            self.textureadvancedcolorcorrection = root.find('textureadvanced').get('colorcorrection')
-            self.textureadvancedholefill = root.find('textureadvanced').get('holefill')
-            self.tiledmodelpixelsize = root.find('tiledmodel').get('pixelsize')
-            self.tiledmodelsource = root.find('tiledmodel').get('source')
-            self.tiledmodeltilesize = root.find('tiledmodel').get('tilesize')
-            self.demprojectioncoordinates = root.find('dem').find('projection').get('coordinates')
-            self.demprojectiontype = root.find('dem').find('projection').get('type')
-            self.demparamsinterpolation = root.find('dem').find('params').get('interpolation')
-            self.demparamssourcedata = root.find('dem').find('params').get('sourcedata')
-            self.dempixelsizeresolution = root.find('dem').find('pixelsize').get('resolution')
-            self.demregionmaxx = root.find('dem').find('region').get('maxx')
-            self.demregionmaxy = root.find('dem').find('region').get('maxy')
-            self.demregionminx = root.find('dem').find('region').get('minx')
-            self.demregionminy = root.find('dem').find('region').get('miny')
-            self.orthoprojectioncoordinates = root.find('ortho').find('projection').get('coordinates')
-            self.orthoprojectiontype = root.find('ortho').find('projection').get('type')
-            self.orthoparamsblending = root.find('ortho').find('params').get('blending')
-            self.orthoparamscolorcorr = root.find('ortho').find('params').get('colorcorr')
-            self.orthoparamsholefill = root.find('ortho').find('params').get('holefill')
-            self.orthoparamssurface = root.find('ortho').find('params').get('surface')
-            self.orthopixelsizex = root.find('ortho').find('pixelsize').get('x')
-            self.orthopixelsizey = root.find('ortho').find('pixelsize').get('y')
-            self.orthoregionmaxx = root.find('ortho').find('region').get('maxx')
-            self.orthoregionmaxy = root.find('ortho').find('region').get('maxy')
-            self.orthoregionminx = root.find('ortho').find('region').get('minx')
-            self.orthoregionminy = root.find('ortho').find('region').get('miny')
-            self.orthoregionresolution = root.find('ortho').find('region').get('resolution')
 
     class __Export:
         def __init__(self,root):
@@ -114,17 +79,10 @@ class ProcSettings:
             self.PhotoscanReportfilename = root.find('PhotoscanReport').get('filename')
             self.sparsepointsfilename = root.find('sparsepoints').get('filename')
             self.densepointsfilename = root.find('densepoints').get('filename')
-            self.modelfilename = root.find('model').get('filename')
-            self.tiledmodelfilename = root.find('tiledmodel').get('filename')
-            self.orthomosaicfilename = root.find('orthomosaic').get('filename')
-            self.demfilename = root.find('dem').get('filename')
             self.camcalibrationfilename = root.find('camcalibration').get('filename')
             self.camerasfilename = root.find('cameras').get('filename')
             self.markersfilename = root.find('markers').get('filename')
             self.matchesfilename = root.find('matches').get('filename')
-            self.texturefilename = root.find('texture').get('filename')
-            self.orthophotofilename = root.find('orthophoto').get('filename')
-            self.undistortphotosfoldername = root.find('undistortphotos').get('foldername')
             self.rootname = root.get('rootname')
 
 def procDense(qualityval, filterval):
@@ -157,9 +115,12 @@ def procDense(qualityval, filterval):
 ##    ProcParams = ProcSettings(argv[1])                              
 
 # TEMPORARY HARDCODED-DELETE THIS
-argv = 'C:\\Users\\slocumr.ONID\\github\\SimUAS\\batchphotoscan\\example.xml'
-ProcParams = ProcSettings(argv)
-
+if len(sys.argv)==1:
+    argv = 'C:\\Users\\slocumr.ONID\\github\\SimUAS\\batchphotoscan\\example.xml'
+    xmlname = argv
+else:
+    xmlname = sys.argv[1]
+ProcParams = ProcSettings(xmlname)
 doc = PhotoScan.app.document
 app = PhotoScan.Application()
 
@@ -167,15 +128,6 @@ app = PhotoScan.Application()
 app.console.clear()
 doc.clear()
 			
-# Set up agiproc logfile (NEED TO FIX, PHOTOSCAN ALREADY USING LOGGING)
-LOGFORMAT = "[%(asctime)s] %(funcName)s: %(message)s"
-logname = ProcParams.export.rootname + "\\" + ProcParams.export.logfilefilename
-logging.basicConfig(filename=logname, level=logging.DEBUG, format=LOGFORMAT)
-logging.debug('logger opened')
-logging.info(sys.version)
-
-
-                                  
 # FIND ALL PHOTOS IN PATH
 ImageFiles = []
 ImagePath = join(ProcParams.importfiles.rootname,ProcParams.importfiles.imagesfoldername)
@@ -284,7 +236,23 @@ else:
 chunk.alignCameras(adaptive_fitting=adaptivecam)
 
 # optimize
-chunk.optimizeCameras()
+if ProcParams.photoscan.optimizeexecute=='1':
+    fitf = ProcParams.photoscan.optimizefits[0]=='1'
+    fitcx = ProcParams.photoscan.optimizefits[1]=='1'
+    fitcy = ProcParams.photoscan.optimizefits[2]=='1'
+    fitb1 = ProcParams.photoscan.optimizefits[3]=='1'
+    fitb2 = ProcParams.photoscan.optimizefits[4]=='1'
+    fitk1 = ProcParams.photoscan.optimizefits[5]=='1'
+    fitk2 = ProcParams.photoscan.optimizefits[6]=='1'
+    fitk3 = ProcParams.photoscan.optimizefits[7]=='1'
+    fitk4 = ProcParams.photoscan.optimizefits[8]=='1'
+    fitp1 = ProcParams.photoscan.optimizefits[9]=='1'
+    fitp2 = ProcParams.photoscan.optimizefits[10]=='1'
+    fitp3 = ProcParams.photoscan.optimizefits[11]=='1'
+    fitp4 = ProcParams.photoscan.optimizefits[12]=='1'
+    fitshutter = ProcParams.photoscan.optimizefits[13]=='1'
+    chunk.optimizeCameras(fitf,fitcx,fitcy,fitb1,fitb2,\
+        fitk1,fitk2,fitk3,fitk4,fitp1,fitp2,fitp3,fitp4,fitshutter)
 
 # dense pointcloud 
 procDense(ProcParams.photoscan.densequality, ProcParams.photoscan.densedepthfilt)
@@ -295,8 +263,6 @@ if not os.path.exists(saverootname):
     os.makedirs(saverootname)
 if not os.path.exists(saverootname + "\\las"):
     os.makedirs(saverootname + "\\las")
-if not os.path.exists(saverootname + "\\model"):
-    os.makedirs(saverootname + "\\model")	
 
 # Save Sparse
 sparsesavename = saverootname + "\\" + ProcParams.export.sparsepointsfilename
@@ -305,6 +271,32 @@ chunk.exportPoints(sparsesavename,PhotoScan.DataSource.PointCloudData.PointCloud
 # Save Dense
 densesavename = saverootname + "\\" + ProcParams.export.densepointsfilename
 chunk.exportPoints(densesavename,PhotoScan.DataSource.PointCloudData.DenseCloudData)
+
+# Save Project
+projsavename = saverootname + "\\" + ProcParams.projectname + ".psz"
+doc.save(projsavename)
+
+# Export Report
+reportsavename = saverootname + "\\" + ProcParams.export.PhotoscanReportfilename
+chunk.exportReport(reportsavename,"simUAS:" + ProcParams.projectname,\
+    "Data was processed automatically using agiproc.py with: \n" + xmlname)
+
+# Export Camera Calibration File
+calibrationsavename = saverootname + "\\" + ProcParams.export.camcalibrationfilename
+camCal = chunk.sensors[0]
+camCal.calibration.save(calibrationsavename)
+
+# Export Trajectory (Cameras)
+trajectorysavename = saverootname + "\\" + ProcParams.export.camerasfilename
+chunk.exportCameras(trajectorysavename)
+
+# Export Markers
+markersavename = saverootname + "\\" + ProcParams.export.markersfilename
+chunk.exportMarkers(markersavename)
+
+# Export Matches
+matchessavename = saverootname + "\\" + ProcParams.export.matchesfilename
+chunk.exportMatches(matchessavename)
 
 # Save Reproc Dense
 QualityType = ['lowest','low','medium','high','ultrahigh']
@@ -317,3 +309,10 @@ for indq,q in enumerate(ProcParams.export.reprocMVSquality):
             mvssavename = mvsfolder + "\\dense_" + QualityType[indq] + "_" + FilterType[indf] + ".las"
             print("Saving Dense MVS: " + mvssavename)
             chunk.exportPoints(mvssavename,PhotoScan.DataSource.PointCloudData.DenseCloudData)
+			
+# Save Log File
+logsavename = saverootname + "\\" + ProcParams.export.logfilefilename
+file = open(logsavename,"wt")
+file.write(app.console.contents)
+file.flush()
+file.close()

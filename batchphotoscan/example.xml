@@ -3,7 +3,7 @@
 
 <importfiles rootname = "C:\Users\slocumr.ONID\gitHub\SimUAS\data\demobeaver">
 	<images     foldername = "output\images" imagesToUse = "1101111111111111111111111111111111111111111111111"/>
-	<sensor     filename = "output\Sensor_photoscan.xml" lock = "1"/>
+	<sensor     filename = "output\Sensor_photoscan.xml" lock = "0"/>
 	<trajectory filename = "output\trajectory_norpy.xml"/>
 	<controldata filename = "output\pixelcontrol.xml"/>
 </importfiles>
@@ -15,30 +15,11 @@
 		<miscellaneous groundalt = ""/>
 	</referencesettings>
 	
-	<optimize execute = "1" fits = "1111111111111"/>
+	<optimize execute = "1" fits = "11011011011111"/>
 	
 	<aligngeneral accuracy="high" genericpre ="1" referencepre ="1"/>
-	<alignadvanced keypointlim = "40000" tiepointlim = "4000" maskconstrain="0" adaptivecam = "1"/>
-	<dense quality="low" depthfilt = "mild"/>
-	<meshgeneral surftype="arbitrary" sourcedata = "dense" facecount = "medium" />
-	<meshadvanced inteprolation="enabled" />
-	<texturegeneral mappingmode = "generic" blendingmode = "mosaic" texsize = "4096" texcount = "1"/>
-	<textureadvanced colorcorrection="0" holefill="1"/>
-	<tiledmodel source="dense" pixelsize = "0.05" tilesize = "256"/>
-	
-	<dem>
-		<projection type = "geographic" coordinates="local"/>
-		<params sourcedata = "dense" interpolation = "enabled"/>
-		<pixelsize resolution="0.05"/>
-		<region minx="-50" maxx="50" miny="-50" maxy="50" />
-	</dem>
-	
-	<ortho>
-		<projection type = "geographic" coordinates = "local" />
-		<params surface = "mesh" blending = "mosaic" colorcorr = "0" holefill = "0"/>
-		<pixelsize x="0.05" y="0.05"/>
-		<region minx="-50" maxx="50" miny="-50" maxy="50" resolution = "0.05" />
-	</ortho>
+	<alignadvanced keypointlim = "40000" tiepointlim = "4000" adaptivecam = "1"/>
+	<dense quality="lowest" depthfilt = "mild"/>
 </photoscan>
 
 <export rootname="C:\Users\slocumr.ONID\gitHub\SimUAS\data\demobeaver\proc\results\test1">
@@ -46,19 +27,13 @@
 	<PhotoscanReport filename="report.pdf"/>
 	<sparsepoints    filename="las/sparse.las"/>
 	<densepoints     filename="las/dense.las"/>
-	<model           filename="model/model.obj"/>
-	<tiledmodel      filename="model/tiledmodel.obj"/>
-	<orthomosaic     filename="ortho.tif"/>
-	<dem             filename="dem.tif"/>
 	
-	<camcalibration  filename="camera/"/>
-	<cameras         filename="trajectory.csv"/>
-	<markers         filename=""/>
-	<matches         filename=""/>
-	<texture         filename=""/>
-	<orthophoto      filename="ortho"/>
-	<undistortphotos foldername="undist"/>
+	<camcalibration  filename="sensorcalib.xml"/>
+	<cameras         filename="trajectory.xml"/>
+	<markers         filename="markers.xml"/>
+	<matches         filename="matches.xml"/>
 
-	<reprocMVS       foldername="las" quality="11111"  depthfilt="1000"/>
+	<reprocMVS       foldername="las" quality="01010"  depthfilt="1100"/>
 </export>
+
 </procsettings>
