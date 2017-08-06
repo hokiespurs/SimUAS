@@ -23,7 +23,7 @@
 	<position>
 		<translation x="0" y="0" z="-0.050000" t="0"/>
 		<rotation x="0" y="0" z="0" t="0"/>
-		<scale x="2.250689" y="2.250689" z="1" t="0"/>
+		<scale x="315.000000" y="315.000000" z="1" t="0"/>
 	</position>
 	<material>
 		<diffuse red="1" green="1" blue="1" intensity="1"/>

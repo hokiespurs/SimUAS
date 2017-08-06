@@ -1,10 +1,10 @@
 BathyTest Experiment Parameters
-Experiment Number 47/100
-WaterDepth (0.01,15.00) : 0.095000
-Altitude   (1.00,100.00) : 0.340000
-HFOV       (5.00,160.00) : 121.328027
+Experiment Number 47/112
+WaterDepth : 5.000000
+Altitude   : 50.000000
+HFOV       : 99.999975
 Overlap     : 0.800000
 Sidelap     : 0.800000
 SensorWidth : 20.000000
 Resolution  : 2000x2000
-FocalLength : 5.620000
+FocalLength : 8.391000

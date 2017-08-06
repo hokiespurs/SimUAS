@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sensor name = "bathyimg" fileformat = "PNG">
-  <physical focallength="3.522000" sensorWidth = "20.000000"/>
+  <physical focallength="14.281000" sensorWidth = "20.000000"/>
   <resolution x = "2000" y = "2000"/>
   <principalPoint x = "1000.000000" y="1000.000000"/>
   <blender compression = "100" percentage = "100" antialiasing = "1"/>

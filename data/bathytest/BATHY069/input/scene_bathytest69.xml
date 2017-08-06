@@ -21,9 +21,9 @@
 </object>
 <object objname="basic_plane" name = "PlaneBase">
 	<position>
-		<translation x="0" y="0" z="-0.148000" t="0"/>
+		<translation x="0" y="0" z="-0.800000" t="0"/>
 		<rotation x="0" y="0" z="0" t="0"/>
-		<scale x="0.544706" y="0.544706" z="1" t="0"/>
+		<scale x="88.229116" y="88.229116" z="1" t="0"/>
 	</position>
 	<material>
 		<diffuse red="1" green="1" blue="1" intensity="1"/>
