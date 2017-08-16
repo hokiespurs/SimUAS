@@ -231,3 +231,31 @@ cd ../matlab/postprocess
 matlab -r postProcFolder('%EXPERIMENTNAME%',1,'%DNAME%')
 cd ../../runSimUAS
 
+SET EXPERIMENTNAME=BATHY101
+cd ../python
+blender --background --python renderblender.py -- %EXPERIMENTNAME% %DNAME%
+cd ../matlab/postprocess
+matlab -r postProcFolder('%EXPERIMENTNAME%',1,'%DNAME%')
+cd ../../runSimUAS
+
+SET EXPERIMENTNAME=BATHY104
+cd ../python
+blender --background --python renderblender.py -- %EXPERIMENTNAME% %DNAME%
+cd ../matlab/postprocess
+matlab -r postProcFolder('%EXPERIMENTNAME%',1,'%DNAME%')
+cd ../../runSimUAS
+
+SET EXPERIMENTNAME=BATHY107
+cd ../python
+blender --background --python renderblender.py -- %EXPERIMENTNAME% %DNAME%
+cd ../matlab/postprocess
+matlab -r postProcFolder('%EXPERIMENTNAME%',1,'%DNAME%')
+cd ../../runSimUAS
+
+SET EXPERIMENTNAME=BATHY110
+cd ../python
+blender --background --python renderblender.py -- %EXPERIMENTNAME% %DNAME%
+cd ../matlab/postprocess
+matlab -r postProcFolder('%EXPERIMENTNAME%',1,'%DNAME%')
+cd ../../runSimUAS
+

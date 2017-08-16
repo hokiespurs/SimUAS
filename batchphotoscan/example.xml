@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <procsettings projectname = "example" version = "1.0">
 
-<importfiles rootname = "C:\Users\slocumr.ONID\gitHub\SimUAS\data\demobeaver">
+<importfiles rootname = "../data/demobeaver">
 	<images     foldername = "output\images" imagesToUse = "1101111111111111111111111111111111111111111111111"/>
 	<sensor     filename = "output\Sensor_photoscan.xml" lock = "0"/>
 	<trajectory filename = "output\trajectory_norpy.xml"/>
@@ -15,14 +15,14 @@
 		<miscellaneous groundalt = ""/>
 	</referencesettings>
 	
-	<optimize execute = "1" fits = "11011011011111"/>
+	<optimize execute = "1" fits = "11100111011000"/>
 	
-	<aligngeneral accuracy="high" genericpre ="1" referencepre ="1"/>
+	<aligngeneral accuracy="medium" genericpre ="1" referencepre ="1"/>
 	<alignadvanced keypointlim = "40000" tiepointlim = "4000" adaptivecam = "1"/>
 	<dense quality="lowest" depthfilt = "mild"/>
 </photoscan>
 
-<export rootname="C:\Users\slocumr.ONID\gitHub\SimUAS\data\demobeaver\proc\results\test1">
+<export rootname="../data/demobeaver\proc\results\test1">
 	<logfile         filename="photoscanlog.log"/>
 	<PhotoscanReport filename="report.pdf"/>
 	<sparsepoints    filename="las/sparse.las"/>
@@ -33,7 +33,7 @@
 	<markers         filename="markers.xml"/>
 	<matches         filename="matches.xml"/>
 
-	<reprocMVS       foldername="las" quality="01010"  depthfilt="1100"/>
+	<reprocMVS       foldername="las" quality="11000"  depthfilt="1100"/>
 </export>
 
 </procsettings>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<procsettings projectname = "%s" version = "1.0">
+
+<importfiles rootname = "%s">
+	<images     foldername = "%s" imagesToUse = "%s"/>
+	<sensor     filename = "%s" lock = "%.0f"/>
+	<trajectory filename = "%s"/>
+	<controldata filename = "%s"/>
+</importfiles>
+
+<photoscan>
+	<referencesettings>
+		<measurementaccuracy camerapos = "%f" camerarot = "%f" marker = "%f" scalebar = "%f"/>
+		<imageaccuracy marker = "%f" tiepoint = "%f" />
+		<miscellaneous groundalt = "%f"/>
+	</referencesettings>
+	
+	<optimize execute = "%.0f" fits = "%s"/>
+	
+	<aligngeneral accuracy="%s" genericpre ="%.0f" referencepre ="%.0f"/>
+	<alignadvanced keypointlim = "%i" tiepointlim = "%i" adaptivecam = "%.0f"/>
+	<dense quality="%s" depthfilt = "%s"/>
+</photoscan>
+
+<export rootname="%s">
+	<logfile         filename="%s"/>
+	<PhotoscanReport filename="%s"/>
+	<sparsepoints    filename="%s"/>
+	<densepoints     filename="%s"/>
+	
+	<camcalibration  filename="%s"/>
+	<cameras         filename="%s"/>
+	<markers         filename="%s"/>
+	<matches         filename="%s"/>
+
+	<reprocMVS       foldername="%s" quality="%s"  depthfilt="%s"/>
+</export>
+
+</procsettings>

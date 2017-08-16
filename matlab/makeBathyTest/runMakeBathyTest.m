@@ -1,6 +1,6 @@
 function runMakeBathyTest
 %% CONSTANTS
-EXPDIRNAME = 'C:/Users/slocumr.ONID/github/SimUAS/data/bathytest';
+EXPDIRNAME = 'F:\bathytestdata';
 
 NEXPERIMENTS = 100;
 
@@ -104,10 +104,10 @@ waterdepth = EXPDATA(iExperimentNum,1);
 
     %% Make Experiment Folder
     DNAME = sprintf('%s/BATHY%03.0f/input/',EXPDIRNAME,iExperimentNum);
-    [status,message,messageid] =mkdir(DNAME);
-    if strcmp(messageid, 'MATLAB:MKDIR:DirectoryExists')
-        error('going to be overwriting things: delete yoself...'); 
-    end
+%     [status,message,messageid] =mkdir(DNAME);
+%     if strcmp(messageid, 'MATLAB:MKDIR:DirectoryExists')
+%         error('going to be overwriting things: delete yoself...'); 
+%     end
     FNAME = sprintf('bathytest%.0f.xml',iExperimentNum);
     %% Make Scene.xml
     writeBathyScene([DNAME 'scene_' FNAME],'bathytest',waterdepth,scale)
@@ -141,6 +141,58 @@ waterdepth = EXPDATA(iExperimentNum,1);
     altdepthratio(iExperimentNum)=(alt(1)+waterdepth)/waterdepth;
     allalt(iExperimentNum)=alt(1);
     alldepth(iExperimentNum)=waterdepth;
+    %% Make processing Settings
+  % 3 trajectory position accuracy [0.01,0.5,10]
+  % 3 camera calibration [loaded + lock, loaded + unlock, unloaded + unlock]
+  % 2 optimization [f,cx,cy,k1,k2,k3,p1,p2] , [f,cx,cy,k1,k2,k3,p1,p2,b1,b2]
+    
+    DNAME = sprintf('%s/BATHY%03.0f/proc/settings/',EXPDIRNAME,iExperimentNum);
+    mkdir(DNAME);
+    % make settings
+    camacc = [0.01 0.5 10];
+    camcalname = 'sensor_photoscan.xml';
+    trajname = 'trajectory_norpy.xml';
+
+    camcal = {camcalname,camcalname,''};
+    camlock = [true false false];
+    optim = [true,true];
+    optimset = {'11100111011000','11111111111110'};
+    iProcNum = 0;
+    settingnames=cell(numel(camacc)*numel(optim)*numel(camcal),1);
+    for iCamAcc=1:numel(camacc)
+        for jCamCal=1:numel(camcal)
+            for koptim=1:numel(optim)
+                if jCamCal~=1 || (jCamCal==1 && koptim==1)
+                iProcNum = iProcNum+1;
+                settingnames{iProcNum}=[DNAME sprintf('setting%02.0f.xml',iProcNum)];
+                writeprocsettings([DNAME sprintf('setting%02.0f.xml',iProcNum)],...
+                    'camposacc',camacc(iCamAcc),...
+                    'trajectory',trajname,...
+                    'sensorname',camcal{jCamCal},...
+                    'projectname',sprintf('setting%02.0f.xml',iProcNum),...
+                    'rootname',sprintf('%s/output','../..'),...
+                    'imagefoldername','images',...
+                    'sensorlock',camlock(jCamCal),...
+                    'optimize',optim(koptim),...
+                    'optimizefits',optimset{koptim},...
+                    'outputroot',sprintf('%s/proc/results/setting%02.0f','../..',iProcNum),...
+                    'reprocmvsqual','00000',...
+                    'reprocmvsfilt','0000');
+                fprintf('%i:posacc: %05.2f - camcal %i - optim %i\n',iProcNum,camacc(iCamAcc),jCamCal,koptim)
+                end
+            end
+        end
+    end
+    %% Make Batch Processing Script
+    batchname = [DNAME 'procallsettings.bat'];
+    fid = fopen(batchname,'w+t');
+    for iSettingNum = 1:iProcNum
+        fprintf(fid,'"%s" -r "%s" "%s"\n',...
+            'C:\\Program Files\\Agisoft\\PhotoScan Pro\\photoscan.exe',...
+            'C:\\Users\\slocumr.ONID\\github\\SimUAS\\batchphotoscan\\agiproc.py',...
+            settingnames{iSettingNum});
+    end
+    fclose(fid);
 end
 
 end

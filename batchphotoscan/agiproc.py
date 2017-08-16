@@ -4,6 +4,7 @@ import sys
 import PhotoScan
 from glob import glob
 import time
+from time import gmtime, strftime
 #import numpy as np
 from os.path import join
 import os
@@ -35,7 +36,6 @@ class ProcSettings:
         
         # Read Export Info
         self.export = self.__Export(procsettings.find('export'))
- 
 
     class __ImportFiles:
         def __init__(self,root):
@@ -108,19 +108,39 @@ def procDense(qualityval, filterval):
 
     chunk.buildDenseCloud(quality=densequal,filter=densefilt)
 
-##argv = sys.argv
-##if argv[0]=='xml':
-##    ProcParams = ProcSettings(argv[0])
-##else:
-##    ProcParams = ProcSettings(argv[1])                              
+def elaptime(starttime,endtime):
+    hours, rem = divmod(endtime-starttime, 3600)
+    minutes, seconds = divmod(rem, 60)
+    return("{:0>3}:{:0>2}:{:05.2f}".format(int(hours),int(minutes),seconds))
 
-# TEMPORARY HARDCODED-DELETE THIS
+## Read XML File
 if len(sys.argv)==1:
     argv = 'C:\\Users\\slocumr.ONID\\github\\SimUAS\\batchphotoscan\\example.xml'
     xmlname = argv
 else:
     xmlname = sys.argv[1]
 ProcParams = ProcSettings(xmlname)
+procstarttime = time.time()
+
+rootdir, name = os.path.split(xmlname)
+
+# Make output directories 
+# Make Directories
+saverootname = rootdir + "\\" + ProcParams.export.rootname
+if not os.path.exists(saverootname):
+    os.makedirs(saverootname)
+if not os.path.exists(saverootname + "\\las"):
+    os.makedirs(saverootname + "\\las")
+
+# Make Processing Time Logfile
+proctimelogname = rootdir + "\\" + ProcParams.export.rootname + "\\proctime.log"
+proctime = open(proctimelogname,"wt")
+msg = "Initialized"
+proctime.write(msg.ljust(40) + " , " + strftime("%Y-%m-%d %H:%M:%S", gmtime()) + " , HHH:MM:SS\n")
+lasttime = time.time()
+proctime.flush()
+
+# Photoscan Convenience Variables
 doc = PhotoScan.app.document
 app = PhotoScan.Application()
 
@@ -130,8 +150,7 @@ doc.clear()
 			
 # FIND ALL PHOTOS IN PATH
 ImageFiles = []
-ImagePath = join(ProcParams.importfiles.rootname,ProcParams.importfiles.imagesfoldername)
-
+ImagePath = join(rootdir + "\\" + ProcParams.importfiles.rootname,ProcParams.importfiles.imagesfoldername)
 print(ImagePath)
 
 for ext in ('\*.tif', '\*.png', '\*.jpg'):
@@ -152,22 +171,31 @@ else:
 for imagename in ImageFiles:
     print(imagename)
 
+msg = "Found Images"
+proctime.write(msg.ljust(40) + " , " + strftime("%Y-%m-%d %H:%M:%S", gmtime()) + " , " + elaptime(lasttime,time.time()) +"\n")
+lasttime = time.time()
+proctime.flush()
 
 # Add Photos
 chunk = PhotoScan.app.document.addChunk()
 chunk.label = 'simUASdata'
 chunk.addPhotos(ImageFiles)
 
+msg = "Added Photos"
+proctime.write(msg.ljust(40) + " , " + strftime("%Y-%m-%d %H:%M:%S", gmtime()) + " , " + elaptime(lasttime,time.time()) +"\n")
+lasttime = time.time()
+proctime.flush()
 
 # Add Sensor (Camera Calibration)
-sensorname = ProcParams.importfiles.rootname + "\\" + ProcParams.importfiles.sensorfilename
-calib = PhotoScan.Calibration()
-calib.load(sensorname)
-sensor = chunk.sensors[0]
-sensor.label = 'simUASsensor'
-sensor.user_calib = calib
-if ProcParams.importfiles.sensorlock=='1':
-    sensor.fixed = True
+if ProcParams.importfiles.sensorfilename!='':
+    sensorname = rootdir + "\\" + ProcParams.importfiles.rootname + "\\" + ProcParams.importfiles.sensorfilename
+    calib = PhotoScan.Calibration()
+    calib.load(sensorname)
+    sensor = chunk.sensors[0]
+    sensor.label = 'simUASsensor'
+    sensor.user_calib = calib
+    if ProcParams.importfiles.sensorlock=='1':
+        sensor.fixed = True
 
 # Set Reference Settings (Do before loading stuff so accuracy isnt overwritten)
 camlocacc = float(ProcParams.photoscan.referencesettingsmeasurementaccuracycamerapos)
@@ -188,12 +216,19 @@ else:
     chunk.elevation = float(ProcParams.photoscan.referencesettingsmiscellaneousgroundalt)
 
 # Add Trajectory
-trajectoryname = ProcParams.importfiles.rootname + "\\" + ProcParams.importfiles.trajectoryfilename
-chunk.loadReference(trajectoryname)
+if ProcParams.importfiles.trajectoryfilename!="":
+    trajectoryname = rootdir + "\\" + ProcParams.importfiles.rootname + "\\" + ProcParams.importfiles.trajectoryfilename
+    chunk.loadReference(trajectoryname)
 
 # Add Markers
-markername = ProcParams.importfiles.rootname + "\\" + ProcParams.importfiles.controlfilename
-chunk.importMarkers(markername)
+if ProcParams.importfiles.controlfilename!="":
+    markername = rootdir + "\\" + ProcParams.importfiles.rootname + "\\" + ProcParams.importfiles.controlfilename
+    chunk.importMarkers(markername)
+
+msg = "Added Trajectory/Reference Data"
+proctime.write(msg.ljust(40) + " , " + strftime("%Y-%m-%d %H:%M:%S", gmtime()) + " , " + elaptime(lasttime,time.time()) +"\n")
+lasttime = time.time()
+proctime.flush()
 
 ## Do Sparse Alignment
 # Match Photos
@@ -226,7 +261,12 @@ chunk.matchPhotos(accuracy=matchacc,\
     reference_preselection=refpre,\
     keypoint_limit = nkeypoints,\
     tiepoint_limit = ntiepoints)
-	
+
+msg = "Matched Photos"
+proctime.write(msg.ljust(40) + " , " + strftime("%Y-%m-%d %H:%M:%S", gmtime()) + " , " + elaptime(lasttime,time.time()) +"\n")
+lasttime = time.time()
+proctime.flush()
+
 # align photos
 if ProcParams.photoscan.alignadvancedadaptivecam=='1':
     adaptivecam = True
@@ -234,6 +274,11 @@ else:
     adaptivecam = False
 
 chunk.alignCameras(adaptive_fitting=adaptivecam)
+
+msg = "Aligned Photos"
+proctime.write(msg.ljust(40) + " , " + strftime("%Y-%m-%d %H:%M:%S", gmtime()) + " , " + elaptime(lasttime,time.time()) +"\n")
+lasttime = time.time()
+proctime.flush()
 
 # optimize
 if ProcParams.photoscan.optimizeexecute=='1':
@@ -253,50 +298,82 @@ if ProcParams.photoscan.optimizeexecute=='1':
     fitshutter = ProcParams.photoscan.optimizefits[13]=='1'
     chunk.optimizeCameras(fitf,fitcx,fitcy,fitb1,fitb2,\
         fitk1,fitk2,fitk3,fitk4,fitp1,fitp2,fitp3,fitp4,fitshutter)
+    msg = "Optimization Complete"
+    proctime.write(msg.ljust(40) + " , " + strftime("%Y-%m-%d %H:%M:%S", gmtime()) + " , " + elaptime(lasttime,time.time()) +"\n")
+    lasttime = time.time()
+    proctime.flush()
+
+# Reset Region
+chunk.resetRegion()
 
 # dense pointcloud 
 procDense(ProcParams.photoscan.densequality, ProcParams.photoscan.densedepthfilt)
+msg = "Dense Reconstruction Complete"
+proctime.write(msg.ljust(40) + " , " + strftime("%Y-%m-%d %H:%M:%S", gmtime()) + " , " + elaptime(lasttime,time.time()) +"\n")
+lasttime = time.time()
+proctime.flush()
 
 ## Save Data
-saverootname = ProcParams.export.rootname
-if not os.path.exists(saverootname):
-    os.makedirs(saverootname)
-if not os.path.exists(saverootname + "\\las"):
-    os.makedirs(saverootname + "\\las")
 
 # Save Sparse
 sparsesavename = saverootname + "\\" + ProcParams.export.sparsepointsfilename
 chunk.exportPoints(sparsesavename,PhotoScan.DataSource.PointCloudData.PointCloudData)
+msg = "Saved Sparse"
+proctime.write(msg.ljust(40) + " , " + strftime("%Y-%m-%d %H:%M:%S", gmtime()) + " , " + elaptime(lasttime,time.time()) +"\n")
+lasttime = time.time()
+proctime.flush()
 
 # Save Dense
 densesavename = saverootname + "\\" + ProcParams.export.densepointsfilename
 chunk.exportPoints(densesavename,PhotoScan.DataSource.PointCloudData.DenseCloudData)
+msg = "Saved Dense"
+proctime.write(msg.ljust(40) + " , " + strftime("%Y-%m-%d %H:%M:%S", gmtime()) + " , " + elaptime(lasttime,time.time()) +"\n")
+lasttime = time.time()
+proctime.flush()
 
 # Save Project
 projsavename = saverootname + "\\" + ProcParams.projectname + ".psz"
 doc.save(projsavename)
+msg = "Saved Project"
+proctime.write(msg.ljust(40) + " , " + strftime("%Y-%m-%d %H:%M:%S", gmtime()) + " , " + elaptime(lasttime,time.time()) +"\n")
+lasttime = time.time()
+proctime.flush()
 
 # Export Report
 reportsavename = saverootname + "\\" + ProcParams.export.PhotoscanReportfilename
 chunk.exportReport(reportsavename,"simUAS:" + ProcParams.projectname,\
     "Data was processed automatically using agiproc.py with: \n" + xmlname)
+msg = "Saved Report"
+proctime.write(msg.ljust(40) + " , " + strftime("%Y-%m-%d %H:%M:%S", gmtime()) + " , " + elaptime(lasttime,time.time()) +"\n")
+lasttime = time.time()
+proctime.flush()
 
 # Export Camera Calibration File
 calibrationsavename = saverootname + "\\" + ProcParams.export.camcalibrationfilename
 camCal = chunk.sensors[0]
 camCal.calibration.save(calibrationsavename)
+msg = "Saved Camera Calibration"
+proctime.write(msg.ljust(40) + " , " + strftime("%Y-%m-%d %H:%M:%S", gmtime()) + " , " + elaptime(lasttime,time.time()) +"\n")
+lasttime = time.time()
+proctime.flush()
 
 # Export Trajectory (Cameras)
 trajectorysavename = saverootname + "\\" + ProcParams.export.camerasfilename
 chunk.exportCameras(trajectorysavename)
+msg = "Saved Trajectory"
+proctime.write(msg.ljust(40) + " , " + strftime("%Y-%m-%d %H:%M:%S", gmtime()) + " , " + elaptime(lasttime,time.time()) +"\n")
+lasttime = time.time()
+proctime.flush()
 
 # Export Markers
-markersavename = saverootname + "\\" + ProcParams.export.markersfilename
-chunk.exportMarkers(markersavename)
+if ProcParams.export.markersfilename!='':
+    markersavename = saverootname + "\\" + ProcParams.export.markersfilename
+    chunk.exportMarkers(markersavename)
 
 # Export Matches
-matchessavename = saverootname + "\\" + ProcParams.export.matchesfilename
-chunk.exportMatches(matchessavename)
+if ProcParams.export.matchesfilename!='':
+    matchessavename = saverootname + "\\" + ProcParams.export.matchesfilename
+    chunk.exportMatches(matchessavename)
 
 # Save Reproc Dense
 QualityType = ['lowest','low','medium','high','ultrahigh']
@@ -306,9 +383,16 @@ for indq,q in enumerate(ProcParams.export.reprocMVSquality):
     for indf,f in enumerate(ProcParams.export.reprocMVSdepthfilt):
         if f=='1' and q=='1':
             procDense(QualityType[indq],FilterType[indf])
+            msg = "MVS Dense Processing (" + QualityType[indq] + "," + FilterType[indf] + ")"
+            proctime.write(msg.ljust(40) + " , " + strftime("%Y-%m-%d %H:%M:%S", gmtime()) + " , " + elaptime(lasttime,time.time()) +"\n")
+            lasttime = time.time()
             mvssavename = mvsfolder + "\\dense_" + QualityType[indq] + "_" + FilterType[indf] + ".las"
             print("Saving Dense MVS: " + mvssavename)
             chunk.exportPoints(mvssavename,PhotoScan.DataSource.PointCloudData.DenseCloudData)
+            msg = "MVS Dense Saving (" + QualityType[indq] + "," + FilterType[indf] + ")"
+            proctime.write(msg.ljust(40) + " , " + strftime("%Y-%m-%d %H:%M:%S", gmtime()) + " , " + elaptime(lasttime,time.time()) +"\n")
+            lasttime = time.time()
+            proctime.flush()
 			
 # Save Log File
 logsavename = saverootname + "\\" + ProcParams.export.logfilefilename
@@ -316,3 +400,12 @@ file = open(logsavename,"wt")
 file.write(app.console.contents)
 file.flush()
 file.close()
+msg = "Save Log File"
+proctime.write(msg.ljust(40) + " , " + strftime("%Y-%m-%d %H:%M:%S", gmtime()) + " , " + elaptime(lasttime,time.time()) +"\n")
+lasttime = time.time()
+
+# Close ProcTime Logfile
+msg = "Total"
+proctime.write(msg.ljust(40) + " , " + strftime("%Y-%m-%d %H:%M:%S", gmtime()) + " , " + elaptime(procstarttime,time.time()) +"\n")
+proctime.flush()
+proctime.close()
