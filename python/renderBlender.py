@@ -7,26 +7,34 @@ import glob
 argv = sys.argv
 doallmodel = False
 try:
-    argv = argv[argv.index("--") + 1:]
-    rootname = os.path.dirname(os.path.dirname(__file__))
-    filerootname = rootname
-    dorender = True
-    sys.path.append(os.path.dirname(__file__))
-    if len(argv)>1:
+    argv = argv[argv.index("--") + 1:] #throws ValueError if not from Blender
+    nargs = len(argv)
+    print(nargs)
+    print(argv)
+    if nargs==1: # default when run from blender
+        dorender = True
+        experimentName = argv[0]
+        rootname = os.path.dirname(os.path.dirname(__file__))
+    elif nargs==2:
+        dorender = True
+        experimentName = argv[0]
         if argv[1]=='-allmodel':
             doallmodel = True
+            rootname = os.path.dirname(os.path.dirname(__file__))			
         else:
-            filerootname = argv[1]
-    experimentName = filerootname + '/' + argv[0]
+            rootname = argv[1]
+    elif nargs==3:
+        dorender = True
+        experimentName = argv[0]
+        rootname = argv[1]
+        doallmodel = True
 except ValueError: # This is supposed to be if it is running from blender
-    experimentName = 'data\\demobeaver'
-    experimentName = 'data\\bathytest\\BATHY001'
-    rootname = 'C:\\Users\\Richie\\Documents\\GitHub\\SimUAS'
-    rootname = 'C:\\Users\\slocumr.ONID\\github\\SimUAS'
-    experimentName = rootname + '/' + experimentName
-    addpathname = rootname + '\\python'
-    sys.path.append(addpathname)
+    print('Running with Default Values')
     dorender = False
+    rootname = 'C:\\Users\\slocumr.ONID\\github\\SimUAS'
+    experimentName = rootname + '\\data\\demobeaver'
+	
+sys.path.append(rootname + '\\python') #add python functions
 
 from myScene import *
 from mySensor import *
@@ -72,7 +80,6 @@ def run():
         logging.debug('Render = False')
     logging.debug('experimentName = ' + experimentName)
     logging.debug('rootname = ' + rootname)
-    logging.debug('filerootname = ' + filerootname)
 
     # Read XML Files into Classes
     xmlScene = glob.glob(experimentName + '/input/scene*.xml')[0]
