@@ -46,7 +46,6 @@ try:
             nexist = nexist+1
     print('{:3d}/{:3d} ALREADY EXIST'.format(nexist,nfiles))
     proclog.write('{:3d}/{:3d} ALREADY EXIST'.format(nexist,nfiles) + '\n')
-    i=0    
     for fname,i,logfile in zip(xmlfiles,procind,logname):
         i = i+1
         if not os.path.exists(logfile):
@@ -67,9 +66,11 @@ try:
             while len(processes)>=nprocesses:
                 time.sleep(SLEEPTIME)
                 if DODEBUG:
-                    print(time.strftime("%b %d %Y %H:%M:%S", time.gmtime(time.time())) + ' CPU: {:5.1f}  RAM: {:5.1f}'.format(psutil.cpu_percent(),psutil.virtual_memory().percent))
-                    proclog.write(time.strftime("%b %d %Y %H:%M:%S", time.gmtime(time.time())) + ' CPU: {:5.1f}  RAM: {:5.1f}'.format(psutil.cpu_percent(),psutil.virtual_memory().percent) + '\n')
-                for p, ind, name, log in zip(processes, procind, procname, logname):
+                    cpu_percent = psutil.cpu_percent()
+                    ram_percent = psutil.virtual_memory().percent
+                    print(time.strftime("%b %d %Y %H:%M:%S", time.gmtime(time.time())) + ' CPU: {:5.1f}  RAM: {:5.1f}'.format(cpu_percent,ram_percent))
+                    proclog.write(time.strftime("%b %d %Y %H:%M:%S", time.gmtime(time.time())) + ' CPU: {:5.1f}  RAM: {:5.1f}'.format(cpu_percent,ram_percent) + '\n')
+                for p, ind, name, log in zip(processes, currentind, procname, logname):
                     if p.poll() is not None:
                         print(time.strftime("%b %d %Y %H:%M:%S", time.gmtime(time.time())) + " : DONE  : " + '{:3d}/{:3d}'.format(ind,nfiles) + " : " + fname)
                         proclog.write(time.strftime("%b %d %Y %H:%M:%S", time.gmtime(time.time())) + " : DONE  : " + '{:3d}/{:3d}'.format(ind,nfiles) + " : " + fname + '\n')
@@ -86,8 +87,10 @@ try:
     while len(processes)>0:
         time.sleep(SLEEPTIME)
         if DODEBUG:
-            print(time.strftime("%b %d %Y %H:%M:%S", time.gmtime(time.time())) + ' CPU: {:5.1f}  RAM: {:5.1f}'.format(psutil.cpu_percent(),psutil.virtual_memory().percent))
-            proclog.write(time.strftime("%b %d %Y %H:%M:%S", time.gmtime(time.time())) + ' CPU: {:5.1f}  RAM: {:5.1f}'.format(psutil.cpu_percent(),psutil.virtual_memory().percent) + '\n')
+            cpu_percent = psutil.cpu_percent()
+            ram_percent = psutil.virtual_memory().percent
+            print(time.strftime("%b %d %Y %H:%M:%S", time.gmtime(time.time())) + ' CPU: {:5.1f}  RAM: {:5.1f}'.format(cpu_percent,ram_percent))
+            proclog.write(time.strftime("%b %d %Y %H:%M:%S", time.gmtime(time.time())) + ' CPU: {:5.1f}  RAM: {:5.1f}'.format(cpu_percent,ram_percent) + '\n')
         for p, ind, name, log in zip(processes, procind, procname, logname):
             if p.poll() is not None:
                 print(time.strftime("%b %d %Y %H:%M:%S", time.gmtime(time.time())) + " : DONE  : " + '{:3d}/{:3d}'.format(ind,nfiles) + " : " + fname)
