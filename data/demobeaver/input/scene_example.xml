@@ -101,7 +101,7 @@
 	<position>
 		<translation x="5" y="0" z="0"/>
 		<rotation x="0" y="0" z="0"/>
-		<scale x="10" y="10" z="10"/>
+		<scale x="1" y="1" z="1"/>
 	</position>
 	<material>
 		<shading smooth="1"/>
@@ -113,6 +113,9 @@
 		<rotation x="0" y="0" z="0"/>
 		<scale x="1" y="1" z="1"/>
 	</position>
+	<texture>
+		<slot interpolate="1" filename="objects\textures\randomNoise.png" mirrorx = "1" mirrory = "1" repeatx="1" repeaty="1" infcolor="0.8"/>
+	</texture>
 </object>
 <object objname="basic_icosphere" name = "Icosphere">
 	<position>
@@ -224,7 +227,7 @@
 	</material>
 	<texture>
 		<slot interpolate="1" filename="objects\textures\randomNoise.png" repeatx="1" repeaty="1" infcolor="0.8"/>
-		<slot interpolate="1" filename="objects\textures\riverrocks.jpg" repeatx="5" repeaty="5" infcolor="0.6"/>
+		<slot interpolate="1" filename="objects\textures\riverrocks.jpg" mirrorx="1" mirrory="1" repeatx="5" repeaty="5" infcolor="0.6"/>
 	</texture>
 </object>
 <light type="sun">

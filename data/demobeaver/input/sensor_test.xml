@@ -4,6 +4,7 @@
 	<resolution x = "640" y = "480"/>
 	<principalPoint x = "320" y="240"/>
 	<blender compression = "100" percentage = "100" antialiasing = "1"/>
+	<correction exposure = "0" gamma = "1"/>
 	<postprocessing seed="1">
 		<distortion k1 = "-0.06" k2 = "0.03" k3 = "-0.002" k4 = "0" p1 = "-0.001" p2 = "-0.001" isPhotoscanUnits = "1"/>
 		<vignetting v1 = "0" v2 = "0" v3 = "0"/>
