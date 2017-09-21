@@ -10,7 +10,7 @@ import psutil
 if len(sys.argv)==1:
     photoscanname = r"C:\Program Files\Agisoft\PhotoScan Pro\photoscan.exe"
     scriptname    = r"C:\Users\slocumr.ONID\github\SimUAS\batchphotoscan\agiproc.py"
-    xmlnames      = r"F:\bathytestdata/BATHY*/proc/settings/*.xml"
+    xmlnames      = r"F:\bathytestdata2/BATHY*/proc/settings/*.xml"
     nprocesses    = 1
 else:
     photoscanname = sys.argv[1]
@@ -30,7 +30,7 @@ processes = []
 procname = []
 procind = []
 logname = []
-currentlognames = []
+currentloghandles = []
 currentind = []
 
 proclog = open("simUASagiproc_log.log",'at')
@@ -49,20 +49,20 @@ try:
     for fname,i,logfile in zip(xmlfiles,procind,logname):
         i = i+1
         if not os.path.exists(logfile):
-            processes.append(subprocess.Popen([photoscanname,"-r",scriptname,fname]))
-            procname.append(fname)
+
             currentind.append(i)
             print(time.strftime("%b %d %Y %H:%M:%S", time.gmtime(time.time())) + " : START : " + '{:3d}/{:3d}'.format(i,nfiles) + " : " + fname)
             proclog.write(time.strftime("%b %d %Y %H:%M:%S", time.gmtime(time.time())) + " : START : " + '{:3d}/{:3d}'.format(i,nfiles) + " : " + fname + '\n')
             foldername,foo = os.path.split(logfile)
             if not os.path.exists(foldername):
                 os.makedirs(foldername)
-            currentlognames.append(logfile)
             iloghandle = open(logfile,'wt')
             iloghandle.write(time.strftime("%b %d %Y %H:%M:%S", time.gmtime(time.time())) + "\n")
             iloghandle.write(getpass.getuser() + "\n")
             iloghandle.flush()
-            iloghandle.close()
+            currentloghandles.append(iloghandle)
+            processes.append(subprocess.Popen([photoscanname,"-r",scriptname,fname],stdin=iloghandle, stdout=iloghandle, stderr=iloghandle))
+            procname.append(fname)
             while len(processes)>=nprocesses:
                 time.sleep(SLEEPTIME)
                 if DODEBUG:
@@ -70,17 +70,16 @@ try:
                     ram_percent = psutil.virtual_memory().percent
                     print(time.strftime("%b %d %Y %H:%M:%S", time.gmtime(time.time())) + ' CPU: {:5.1f}  RAM: {:5.1f}'.format(cpu_percent,ram_percent))
                     proclog.write(time.strftime("%b %d %Y %H:%M:%S", time.gmtime(time.time())) + ' CPU: {:5.1f}  RAM: {:5.1f}'.format(cpu_percent,ram_percent) + '\n')
-                for p, ind, name, log in zip(processes, currentind, procname, logname):
+                for p, ind, name, log in zip(processes, currentind, procname, currentloghandles):
                     if p.poll() is not None:
                         print(time.strftime("%b %d %Y %H:%M:%S", time.gmtime(time.time())) + " : DONE  : " + '{:3d}/{:3d}'.format(ind,nfiles) + " : " + fname)
                         proclog.write(time.strftime("%b %d %Y %H:%M:%S", time.gmtime(time.time())) + " : DONE  : " + '{:3d}/{:3d}'.format(ind,nfiles) + " : " + fname + '\n')
-                        iloghandle= open(log,'wt')
                         iloghandle.write(time.strftime("%b %d %Y %H:%M:%S", time.gmtime(time.time())) + "\n")
                         iloghandle.flush()
                         iloghandle.close()
                 procname[:] = [n for n,p in zip(procname,processes) if p.poll() is None]
                 currentind[:] = [ind for ind,p in zip(currentind,processes) if p.poll() is None]
-                currentlognames[:] = [log for log,p in zip(currentlognames,processes) if p.poll() is None]
+                currentloghandles[:] = [log for log,p in zip(currentloghandles,processes) if p.poll() is None]
                 processes[:] = [p for p in processes if p.poll() is None]
             
     # Wait for everything to finish
@@ -91,26 +90,27 @@ try:
             ram_percent = psutil.virtual_memory().percent
             print(time.strftime("%b %d %Y %H:%M:%S", time.gmtime(time.time())) + ' CPU: {:5.1f}  RAM: {:5.1f}'.format(cpu_percent,ram_percent))
             proclog.write(time.strftime("%b %d %Y %H:%M:%S", time.gmtime(time.time())) + ' CPU: {:5.1f}  RAM: {:5.1f}'.format(cpu_percent,ram_percent) + '\n')
-        for p, ind, name, log in zip(processes, procind, procname, logname):
+        for p, ind, name, log in zip(processes, currentind, procname, currentloghandles):
             if p.poll() is not None:
                 print(time.strftime("%b %d %Y %H:%M:%S", time.gmtime(time.time())) + " : DONE  : " + '{:3d}/{:3d}'.format(ind,nfiles) + " : " + fname)
                 proclog.write(time.strftime("%b %d %Y %H:%M:%S", time.gmtime(time.time())) + " : DONE  : " + '{:3d}/{:3d}'.format(ind,nfiles) + " : " + fname + '\n')
-                iloghandle= open(log,'wt')
+                iloghandle= log
                 iloghandle.write(time.strftime("%b %d %Y %H:%M:%S", time.gmtime(time.time())) + "\n")
                 iloghandle.flush()
                 iloghandle.close()
         procname[:] = [n for n,p in zip(procname,processes) if p.poll() is None]
         currentind[:] = [ind for ind,p in zip(currentind,processes) if p.poll() is None]
-        currentlognames[:] = [log for log,p in zip(currentlognames,processes) if p.poll() is None]
+        currentloghandles[:] = [log for log,p in zip(currentloghandles,processes) if p.poll() is None]
         processes[:] = [p for p in processes if p.poll() is None]
 except KeyboardInterrupt:
-    for p, ind, name, logfile in zip(processes, currentind, procname, currentlognames):
+    for p, ind, name, iloghandle in zip(processes, currentind, procname, currentloghandles):
         print(time.strftime("%b %d %Y %H:%M:%S", time.gmtime(time.time())) + " : KILL  : " + '{:3d}/{:3d}'.format(ind,nfiles) + " : " + name)
         proclog.write(time.strftime("%b %d %Y %H:%M:%S", time.gmtime(time.time())) + " : KILL  : " + '{:3d}/{:3d}'.format(ind,nfiles) + " : " + name + '\n')
         p.kill()
+        iloghandle.flush()
         iloghandle.close()
-
-        os.remove(logfile)
+        time.sleep(0.1)
+        os.remove(logname[ind-1])
 proclog.flush()
 proclog.close()
 print("Done")
