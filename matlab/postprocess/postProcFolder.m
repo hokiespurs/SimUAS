@@ -3,9 +3,9 @@ tic
 dbstop if error
 addHomePath('SimUAS')
 if nargin<3
-    hpath = getHomePath('SimUAS');
+    hpath = [getHomePath('SimUAS') '/'];
 end
-foldername = [hpath '/' foldername];
+foldername = [hpath foldername];
 if nargin==1
    doexit = 0; 
 end

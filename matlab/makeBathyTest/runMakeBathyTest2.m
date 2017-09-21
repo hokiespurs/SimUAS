@@ -19,31 +19,10 @@ SCALEPAD = 1.05;
 %% Make Experiments
 EXPDATA = [];
 % sample across everything but altitude
-depthvals = [0.05 0.1 0.5 1 2 5 10 25];
+ratioval = [0.01 0.05:0.05:0.5];
 altvals = 50;
-hfovvals = [30 50 60 70 80 90 100 120];
-for i=1:numel(depthvals)
-    for j=1:numel(altvals)
-        for k = 1:numel(hfovvals)
-            EXPDATA = [EXPDATA;depthvals(i) altvals(j) hfovvals(k)];
-        end
-    end
-end
-% match ratio for 70 degree and 20 alt
-depthvals = [0.02 0.04 0.2 0.4 0.8 2 4 10];
-altvals = 20;
-hfovvals = 70;
-for i=1:numel(depthvals)
-    for j=1:numel(altvals)
-        for k = 1:numel(hfovvals)
-            EXPDATA = [EXPDATA;depthvals(i) altvals(j) hfovvals(k)];
-        end
-    end
-end
-% do fine resolution with 70 degree fov and 50m
-depthvals = 0.25:0.25:10;
-altvals = 50;
-hfovvals = 70;
+depthvals = ratioval*altvals;
+hfovvals = [30:10:120];
 for i=1:numel(depthvals)
     for j=1:numel(altvals)
         for k = 1:numel(hfovvals)
@@ -52,8 +31,6 @@ for i=1:numel(depthvals)
     end
 end
 
-%%
-randbetween = @(nreturn,lim) rand(nreturn,1)*(lim(2)-lim(1))+lim(1);
 %%
 NEXPERIMENTS = size(EXPDATA,1);
 for iExperimentNum = 1:NEXPERIMENTS
@@ -102,7 +79,8 @@ waterdepth = EXPDATA(iExperimentNum,1);
 
     %% Make Experiment Folder
     DNAME = sprintf('%s/BATHY%03.0f/input/',EXPDIRNAME,iExperimentNum);
-%     [status,message,messageid] =mkdir(DNAME);
+
+    [status,message,messageid] =mkdir(DNAME);
 %     if strcmp(messageid, 'MATLAB:MKDIR:DirectoryExists')
 %         error('going to be overwriting things: delete yoself...'); 
 %     end
@@ -151,16 +129,15 @@ waterdepth = EXPDATA(iExperimentNum,1);
     camcalname = 'sensor_photoscan.xml';
     trajname = 'trajectory_norpy.xml';
 
-    camcal = {camcalname,camcalname,''};
-    camlock = [true false false];
-    optim = [true,true];
-    optimset = {'11100111011000','11111111111110'};
+    camcal = {camcalname};
+    camlock = [true ];
+    optim = [true];
+    optimset = {'11100111011000'};
     iProcNum = 0;
     settingnames=cell(numel(camacc)*numel(optim)*numel(camcal),1);
     for iCamAcc=1:numel(camacc)
         for jCamCal=1:numel(camcal)
             for koptim=1:numel(optim)
-                if jCamCal~=1 || (jCamCal==1 && koptim==1)
                 iProcNum = iProcNum+1;
                 settingnames{iProcNum}=[DNAME sprintf('setting%02.0f.xml',iProcNum)];
                 writeprocsettings([DNAME sprintf('setting%02.0f.xml',iProcNum)],...
@@ -177,20 +154,9 @@ waterdepth = EXPDATA(iExperimentNum,1);
                     'reprocmvsqual','00000',...
                     'reprocmvsfilt','0000');
                 fprintf('%i:posacc: %05.2f - camcal %i - optim %i\n',iProcNum,camacc(iCamAcc),jCamCal,koptim)
-                end
             end
         end
     end
-    %% Make Batch Processing Script
-    batchname = [DNAME 'procallsettings.bat'];
-    fid = fopen(batchname,'w+t');
-    for iSettingNum = 1:iProcNum
-        fprintf(fid,'"%s" -r "%s" "%s"\n',...
-            'C:\\Program Files\\Agisoft\\PhotoScan Pro\\photoscan.exe',...
-            'C:\\Users\\slocumr.ONID\\github\\SimUAS\\batchphotoscan\\agiproc.py',...
-            settingnames{iSettingNum});
-    end
-    fclose(fid);
 end
 
 end
