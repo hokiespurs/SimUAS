@@ -79,7 +79,6 @@ def addObjects(blenderScene, Scene, rootname):
         logging.debug('Applying Material and Textures')
 
         nmaterials = len(bpy.data.objects[iName].material_slots.values())
-
         if nmaterials == 1:
             bpy.data.objects[iName].active_material.diffuse_color = iObj.Material.Diffuse.rgb
             bpy.data.objects[iName].active_material.diffuse_intensity = iObj.Material.Diffuse.i
@@ -142,6 +141,14 @@ def addObjects(blenderScene, Scene, rootname):
                 cTex.image = img
                 cTex.repeat_x = Slot.repx
                 cTex.repeat_y = Slot.repy
+                if Slot.mirrorx == 1:
+                    cTex.use_mirror_x = True
+                    logging.debug('mirror x = True')
+                if Slot.mirrory == 1:
+                    cTex.use_mirror_y = True
+                    logging.debug('mirror y = True')
+                if Slot.clip:
+                    cTex.extension = 'CLIP'
                 activematerial = bpy.data.objects[iName].active_material
                 mtex = activematerial.texture_slots.add()
                 mtex.texture = cTex

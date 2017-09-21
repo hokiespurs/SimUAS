@@ -297,17 +297,26 @@ class Scene:
                     COLOR = 1
                     ALPHA = 0
                     NORMAL = 0
+                    CLIP = 0
+                    MIRRORX = 1
+                    MIRRORY = 1
                     interp = root.get('interpolate')
                     fname = root.get('filename')
                     repx = root.get('repeatx')
                     repy = root.get('repeaty')
                     color = root.get('infcolor')
+                    clip = root.get('clip')
+                    mirrorx = root.get('mirrorx')
+                    mirrory = root.get('mirrory')
                     self.interpolate = val_default(interp, INTERP)
                     self.filename = fname
                     self.repx = val_default(repx, REPX)
                     self.repy = val_default(repy, REPY)
                     self.color = val_default(color, COLOR)
-
+                    self.clip = val_default(clip,CLIP)
+                    self.mirrorx = val_default(mirrorx,MIRRORX)
+                    self.mirrory = val_default(mirrory,MIRRORY)
+					
             def __init__(self, root):
                 if root is None:
                     self.nSlots = 0
