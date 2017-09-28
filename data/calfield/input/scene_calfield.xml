@@ -1,0 +1,873 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scene name="calfield" objectdb="objects/beaverdb" version = "1.0">
+<object objname="basic_plane" name = "Plane01">
+	<position>
+		<translation x="-10.000000" y="0.000000" z="0.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="60.000000" y="50.000000" z="50.000000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_cube" name = "Cube01">
+	<position>
+		<translation x="0.000000" y="-2.330000" z="0.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.020000" y="0.020000" z="0.020000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_cube" name = "Cube02">
+	<position>
+		<translation x="0.120000" y="-2.330000" z="0.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.050000" y="0.050000" z="0.050000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_cube" name = "Cube03">
+	<position>
+		<translation x="0.370000" y="-2.330000" z="0.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.100000" y="0.100000" z="0.100000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_cube" name = "Cube04">
+	<position>
+		<translation x="0.870000" y="-2.330000" z="0.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.200000" y="0.200000" z="0.200000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_cube" name = "Cube05">
+	<position>
+		<translation x="1.860000" y="-2.330000" z="0.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.400000" y="0.400000" z="0.400000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_cube" name = "Cube06">
+	<position>
+		<translation x="3.400000" y="-2.330000" z="0.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.600000" y="0.600000" z="0.600000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_cube" name = "Cube07">
+	<position>
+		<translation x="5.480000" y="-2.330000" z="0.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.800000" y="0.800000" z="0.800000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_cube" name = "Cube08">
+	<position>
+		<translation x="8.120000" y="-2.330000" z="0.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="1.000000" y="1.000000" z="1.000000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_cube" name = "Cube09">
+	<position>
+		<translation x="13.080000" y="-2.330000" z="0.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="2.000000" y="2.000000" z="2.000000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_cylinder" name = "Cylinder01">
+	<position>
+		<translation x="13.080000" y="2.330000" z="0.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.020000" y="0.020000" z="0.020000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_cylinder" name = "Cylinder02">
+	<position>
+		<translation x="12.960000" y="2.330000" z="0.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.050000" y="0.050000" z="0.050000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_cylinder" name = "Cylinder03">
+	<position>
+		<translation x="12.710000" y="2.330000" z="0.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.100000" y="0.100000" z="0.100000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_cylinder" name = "Cylinder04">
+	<position>
+		<translation x="12.210000" y="2.330000" z="0.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.200000" y="0.200000" z="0.200000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_cylinder" name = "Cylinder05">
+	<position>
+		<translation x="11.220000" y="2.330000" z="0.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.400000" y="0.400000" z="0.400000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_cylinder" name = "Cylinder06">
+	<position>
+		<translation x="9.680000" y="2.330000" z="0.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.600000" y="0.600000" z="0.600000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_cylinder" name = "Cylinder07">
+	<position>
+		<translation x="7.600000" y="2.330000" z="0.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.800000" y="0.800000" z="0.800000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_cylinder" name = "Cylinder08">
+	<position>
+		<translation x="4.960000" y="2.330000" z="0.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="1.000000" y="1.000000" z="1.000000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_cylinder" name = "Cylinder09">
+	<position>
+		<translation x="0.000000" y="2.330000" z="0.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="2.000000" y="2.000000" z="2.000000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_pyramid" name = "Pyramid01">
+	<position>
+		<translation x="0.000000" y="6.990000" z="0.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.020000" y="0.020000" z="0.020000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_pyramid" name = "Pyramid02">
+	<position>
+		<translation x="0.120000" y="6.990000" z="0.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.050000" y="0.050000" z="0.050000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_pyramid" name = "Pyramid03">
+	<position>
+		<translation x="0.370000" y="6.990000" z="0.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.100000" y="0.100000" z="0.100000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_pyramid" name = "Pyramid04">
+	<position>
+		<translation x="0.870000" y="6.990000" z="0.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.200000" y="0.200000" z="0.200000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_pyramid" name = "Pyramid05">
+	<position>
+		<translation x="1.860000" y="6.990000" z="0.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.400000" y="0.400000" z="0.400000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_pyramid" name = "Pyramid06">
+	<position>
+		<translation x="3.400000" y="6.990000" z="0.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.600000" y="0.600000" z="0.600000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_pyramid" name = "Pyramid07">
+	<position>
+		<translation x="5.480000" y="6.990000" z="0.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.800000" y="0.800000" z="0.800000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_pyramid" name = "Pyramid08">
+	<position>
+		<translation x="8.120000" y="6.990000" z="0.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="1.000000" y="1.000000" z="1.000000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_pyramid" name = "Pyramid09">
+	<position>
+		<translation x="13.080000" y="6.990000" z="0.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="2.000000" y="2.000000" z="2.000000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_cone" name = "Cone01">
+	<position>
+		<translation x="13.080000" y="-6.990000" z="0.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.020000" y="0.020000" z="0.020000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_cone" name = "Cone02">
+	<position>
+		<translation x="12.960000" y="-6.990000" z="0.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.050000" y="0.050000" z="0.050000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_cone" name = "Cone03">
+	<position>
+		<translation x="12.710000" y="-6.990000" z="0.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.100000" y="0.100000" z="0.100000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_cone" name = "Cone04">
+	<position>
+		<translation x="12.210000" y="-6.990000" z="0.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.200000" y="0.200000" z="0.200000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_cone" name = "Cone05">
+	<position>
+		<translation x="11.220000" y="-6.990000" z="0.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.400000" y="0.400000" z="0.400000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_cone" name = "Cone06">
+	<position>
+		<translation x="9.680000" y="-6.990000" z="0.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.600000" y="0.600000" z="0.600000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_cone" name = "Cone07">
+	<position>
+		<translation x="7.600000" y="-6.990000" z="0.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.800000" y="0.800000" z="0.800000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_cone" name = "Cone08">
+	<position>
+		<translation x="4.960000" y="-6.990000" z="0.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="1.000000" y="1.000000" z="1.000000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_cone" name = "Cone09">
+	<position>
+		<translation x="0.000000" y="-6.990000" z="0.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="2.000000" y="2.000000" z="2.000000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_sphere" name = "Sphere01">
+	<position>
+		<translation x="0.000000" y="-11.650000" z="-0.010000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.020000" y="0.020000" z="0.020000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_sphere" name = "Sphere02">
+	<position>
+		<translation x="0.120000" y="-11.650000" z="-0.025000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.050000" y="0.050000" z="0.050000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_sphere" name = "Sphere03">
+	<position>
+		<translation x="0.370000" y="-11.650000" z="-0.050000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.100000" y="0.100000" z="0.100000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_sphere" name = "Sphere04">
+	<position>
+		<translation x="0.870000" y="-11.650000" z="-0.100000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.200000" y="0.200000" z="0.200000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_sphere" name = "Sphere05">
+	<position>
+		<translation x="1.860000" y="-11.650000" z="-0.200000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.400000" y="0.400000" z="0.400000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_sphere" name = "Sphere06">
+	<position>
+		<translation x="3.400000" y="-11.650000" z="-0.300000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.600000" y="0.600000" z="0.600000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_sphere" name = "Sphere07">
+	<position>
+		<translation x="5.480000" y="-11.650000" z="-0.400000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.800000" y="0.800000" z="0.800000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_sphere" name = "Sphere08">
+	<position>
+		<translation x="8.120000" y="-11.650000" z="-0.500000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="1.000000" y="1.000000" z="1.000000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_sphere" name = "Sphere09">
+	<position>
+		<translation x="13.080000" y="-11.650000" z="-1.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="2.000000" y="2.000000" z="2.000000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_icosphere" name = "Icosphere01">
+	<position>
+		<translation x="13.080000" y="11.650000" z="-0.010000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.020000" y="0.020000" z="0.020000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_icosphere" name = "Icosphere02">
+	<position>
+		<translation x="12.960000" y="11.650000" z="-0.025000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.050000" y="0.050000" z="0.050000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_icosphere" name = "Icosphere03">
+	<position>
+		<translation x="12.710000" y="11.650000" z="-0.050000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.100000" y="0.100000" z="0.100000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_icosphere" name = "Icosphere04">
+	<position>
+		<translation x="12.210000" y="11.650000" z="-0.100000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.200000" y="0.200000" z="0.200000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_icosphere" name = "Icosphere05">
+	<position>
+		<translation x="11.220000" y="11.650000" z="-0.200000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.400000" y="0.400000" z="0.400000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_icosphere" name = "Icosphere06">
+	<position>
+		<translation x="9.680000" y="11.650000" z="-0.300000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.600000" y="0.600000" z="0.600000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_icosphere" name = "Icosphere07">
+	<position>
+		<translation x="7.600000" y="11.650000" z="-0.400000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.800000" y="0.800000" z="0.800000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_icosphere" name = "Icosphere08">
+	<position>
+		<translation x="4.960000" y="11.650000" z="-0.500000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="1.000000" y="1.000000" z="1.000000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_icosphere" name = "Icosphere09">
+	<position>
+		<translation x="0.000000" y="11.650000" z="-1.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="2.000000" y="2.000000" z="2.000000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_cylinder" name = "Pipe01">
+	<position>
+		<translation x="-4.660000" y="2.330000" z="0.025000"/>
+		<rotation x="0.000000" y="90.000000" z="90.000000"/>
+		<scale x="0.050000" y="0.050000" z="9.320000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_cylinder" name = "Pipe02">
+	<position>
+		<translation x="-4.908205" y="2.330000" z="0.050000"/>
+		<rotation x="0.000000" y="90.000000" z="90.000000"/>
+		<scale x="0.100000" y="0.100000" z="9.320000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_cylinder" name = "Pipe03">
+	<position>
+		<translation x="-5.404615" y="2.330000" z="0.100000"/>
+		<rotation x="0.000000" y="90.000000" z="90.000000"/>
+		<scale x="0.200000" y="0.200000" z="9.320000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_cylinder" name = "Pipe04">
+	<position>
+		<translation x="-6.397436" y="2.330000" z="0.200000"/>
+		<rotation x="0.000000" y="90.000000" z="90.000000"/>
+		<scale x="0.400000" y="0.400000" z="9.320000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_cylinder" name = "Pipe05">
+	<position>
+		<translation x="-7.936666" y="2.330000" z="0.300000"/>
+		<rotation x="0.000000" y="90.000000" z="90.000000"/>
+		<scale x="0.600000" y="0.600000" z="9.320000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_cylinder" name = "Pipe06">
+	<position>
+		<translation x="-10.022307" y="2.330000" z="0.400000"/>
+		<rotation x="0.000000" y="90.000000" z="90.000000"/>
+		<scale x="0.800000" y="0.800000" z="9.320000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_cylinder" name = "Pipe07">
+	<position>
+		<translation x="-12.654358" y="2.330000" z="0.500000"/>
+		<rotation x="0.000000" y="90.000000" z="90.000000"/>
+		<scale x="1.000000" y="1.000000" z="9.320000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_cylinder" name = "wire01">
+	<position>
+		<translation x="-14.654358" y="9.320000" z="-0.050000"/>
+		<rotation x="0.000000" y="60.000000" z="180.000000"/>
+		<scale x="0.005000" y="0.005000" z="10.000000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_cylinder" name = "wire02">
+	<position>
+		<translation x="-14.654358" y="8.320000" z="-0.050000"/>
+		<rotation x="0.000000" y="60.000000" z="180.000000"/>
+		<scale x="0.010000" y="0.010000" z="10.000000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_cylinder" name = "wire03">
+	<position>
+		<translation x="-14.654358" y="7.320000" z="-0.050000"/>
+		<rotation x="0.000000" y="60.000000" z="180.000000"/>
+		<scale x="0.015000" y="0.015000" z="10.000000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_cylinder" name = "wire04">
+	<position>
+		<translation x="-14.654358" y="6.320000" z="-0.050000"/>
+		<rotation x="0.000000" y="60.000000" z="180.000000"/>
+		<scale x="0.020000" y="0.020000" z="10.000000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_cylinder" name = "wire05">
+	<position>
+		<translation x="-14.654358" y="5.320000" z="-0.050000"/>
+		<rotation x="0.000000" y="60.000000" z="180.000000"/>
+		<scale x="0.025000" y="0.025000" z="10.000000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_cylinder" name = "wire06">
+	<position>
+		<translation x="-14.654358" y="4.320000" z="-0.050000"/>
+		<rotation x="0.000000" y="60.000000" z="180.000000"/>
+		<scale x="0.030000" y="0.030000" z="10.000000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_cylinder" name = "wire07">
+	<position>
+		<translation x="-14.654358" y="3.320000" z="-0.050000"/>
+		<rotation x="0.000000" y="60.000000" z="180.000000"/>
+		<scale x="0.035000" y="0.035000" z="10.000000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_cylinder" name = "wire08">
+	<position>
+		<translation x="-14.654358" y="2.320000" z="-0.050000"/>
+		<rotation x="0.000000" y="60.000000" z="180.000000"/>
+		<scale x="0.040000" y="0.040000" z="10.000000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_cylinder" name = "wire09">
+	<position>
+		<translation x="-14.654358" y="1.320000" z="-0.050000"/>
+		<rotation x="0.000000" y="60.000000" z="180.000000"/>
+		<scale x="0.045000" y="0.045000" z="10.000000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="basic_cylinder" name = "wire10">
+	<position>
+		<translation x="-14.654358" y="0.320000" z="-0.050000"/>
+		<rotation x="0.000000" y="60.000000" z="180.000000"/>
+		<scale x="0.050000" y="0.050000" z="10.000000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="control_checker" name = "GCP01">
+	<position>
+		<translation x="-9.710000" y="-1.500000" z="0.010000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.050000" y="0.050000" z="0.050000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="control_checker" name = "GCP02">
+	<position>
+		<translation x="-9.810000" y="-1.500000" z="0.010000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.100000" y="0.100000" z="0.100000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="control_checker" name = "GCP03">
+	<position>
+		<translation x="-10.060000" y="-1.500000" z="0.010000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.250000" y="0.250000" z="0.250000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="control_checker" name = "GCP04">
+	<position>
+		<translation x="-10.560000" y="-1.500000" z="0.010000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.500000" y="0.500000" z="0.500000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="control_checker" name = "GCP05">
+	<position>
+		<translation x="-11.560000" y="-1.500000" z="0.010000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="1.000000" y="1.000000" z="1.000000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="calibration_tribar2" name = "tribar01">
+	<position>
+		<translation x="-8.800000" y="0.000000" z="0.010000"/>
+		<rotation x="0.000000" y="0.000000" z="90.000000"/>
+		<scale x="0.200000" y="0.200000" z="0.200000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="calibration_tribar2" name = "tribar02">
+	<position>
+		<translation x="-10.200000" y="0.000000" z="0.010000"/>
+		<rotation x="0.000000" y="0.000000" z="90.000000"/>
+		<scale x="0.100000" y="0.100000" z="0.100000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="calibration_tribar2" name = "tribar03">
+	<position>
+		<translation x="-11.250000" y="0.000000" z="0.010000"/>
+		<rotation x="0.000000" y="0.000000" z="90.000000"/>
+		<scale x="0.075000" y="0.075000" z="0.075000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="calibration_tribar2" name = "tribar04">
+	<position>
+		<translation x="-11.950000" y="0.000000" z="0.010000"/>
+		<rotation x="0.000000" y="0.000000" z="90.000000"/>
+		<scale x="0.050000" y="0.050000" z="0.050000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="calibration_tribar2" name = "tribar05">
+	<position>
+		<translation x="-12.510000" y="0.000000" z="0.010000"/>
+		<rotation x="0.000000" y="0.000000" z="90.000000"/>
+		<scale x="0.040000" y="0.040000" z="0.040000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="calibration_tribar2" name = "tribar06">
+	<position>
+		<translation x="-12.930000" y="0.000000" z="0.010000"/>
+		<rotation x="0.000000" y="0.000000" z="90.000000"/>
+		<scale x="0.030000" y="0.030000" z="0.030000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="calibration_tribar2" name = "tribar07">
+	<position>
+		<translation x="-13.210000" y="0.000000" z="0.010000"/>
+		<rotation x="0.000000" y="0.000000" z="90.000000"/>
+		<scale x="0.020000" y="0.020000" z="0.020000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="calibration_tribar2" name = "tribar08">
+	<position>
+		<translation x="-13.350000" y="0.000000" z="0.010000"/>
+		<rotation x="0.000000" y="0.000000" z="90.000000"/>
+		<scale x="0.010000" y="0.010000" z="0.010000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="calibration_seimens" name = "seimens01">
+	<position>
+		<translation x="-6.000000" y="0.000000" z="0.010000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="3.000000" y="3.000000" z="3.000000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+<object objname="splash" name = "Splash01">
+	<position>
+		<translation x="-9.320000" y="-6.990000" z="0.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="9.320000" y="9.320000" z="9.320000"/>
+	</position>
+	<material>
+		<shading shadeless="1" smooth="1"/>
+	</material>
+</object>
+</scene>

@@ -36,6 +36,8 @@ except ValueError: # This is supposed to be if it is running from blender
 	
 sys.path.append(rootname + '\\python') #add python functions
 
+print(rootname)
+
 from myScene import *
 from mySensor import *
 from myTrajectory import *

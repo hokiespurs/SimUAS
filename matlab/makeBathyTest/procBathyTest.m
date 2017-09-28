@@ -285,7 +285,9 @@ end
 
 function s = zstat(z)
 if ~isnan(z)
-    HISTRANGE = -5:0.005:5;
+    HISTLOW = mean(z)-std(z)*5;
+    HISTHIGH = mean(z)+std(z)*5;
+    HISTRANGE = HISTLOW:0.001:HISTHIGH;
     s.u = mean(z);
     s.v = var(z);
     s.r = [min(z) max(z)];

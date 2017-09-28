@@ -11,7 +11,7 @@ if len(sys.argv)==1:
     blendername        = r"blender.exe"
     rendername         = r"C:\Users\slocumr.ONID\github\SimUAS\python\renderBlender.py"
     renderargs         = r""
-    foldernames        = r"F:\bathytestdata2\BATHY*"
+    foldernames        = r"U:\presentations\Farid\2017-09-20 DPQF\SIMULATION*"
     matlabname         = r"C:\Program Files\MATLAB\R2017a\bin\matlab.exe"
     matlabfunctionname = r"C:\Users\slocumr.ONID\github\SimUAS\matlab\postprocess\postProcFolder"
     nprocesses         = 3
@@ -71,7 +71,7 @@ try:
             dname,foo = os.path.split(rendername)
 
             experimentName = fname
-            blenderrendercmd = blendername + " --background --python " + rendername + " -- " + experimentName + " " + renderargs
+            blenderrendercmd = blendername + " --background --python \"" + rendername + "\" -- \"" + experimentName + "\" " + renderargs
             matdir, matfun = os.path.split(matlabfunctionname)
             matlabpostproccmd = '\"' + matlabname + "\" -wait -r \"cd(\'" + matdir + '\');' + matfun + '(\'' + experimentName + '\',1,\'\')\"'
             fullcmd = blenderrendercmd + "&" + matlabpostproccmd

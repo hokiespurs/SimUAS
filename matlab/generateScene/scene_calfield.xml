@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scene name="calfield" objectdb="objects/beaverdb" version = "1.0">
+<object objname="basic_cube" name = "Cube01">
+	<position>
+		<translation x="0.000000" y="0.000000" z="0.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.020000" y="0.020000" z="0.020000"/>
+	</position>
+</object>
+<object objname="basic_cube" name = "Cube02">
+	<position>
+		<translation x="0.120000" y="0.000000" z="0.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.050000" y="0.050000" z="0.050000"/>
+	</position>
+</object>
+<object objname="basic_cube" name = "Cube03">
+	<position>
+		<translation x="0.370000" y="0.000000" z="0.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.100000" y="0.100000" z="0.100000"/>
+	</position>
+</object>
+<object objname="basic_cube" name = "Cube04">
+	<position>
+		<translation x="0.870000" y="0.000000" z="0.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.200000" y="0.200000" z="0.200000"/>
+	</position>
+</object>
+<object objname="basic_cube" name = "Cube05">
+	<position>
+		<translation x="2.080000" y="0.000000" z="0.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.500000" y="0.500000" z="0.500000"/>
+	</position>
+</object>
+<object objname="basic_cube" name = "Cube06">
+	<position>
+		<translation x="4.560000" y="0.000000" z="0.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="1.000000" y="1.000000" z="1.000000"/>
+	</position>
+</object>
+<object objname="basic_cube" name = "Cube07">
+	<position>
+		<translation x="9.530000" y="0.000000" z="0.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="2.000000" y="2.000000" z="2.000000"/>
+	</position>
+</object>
+<object objname="basic_cube" name = "Cube08">
+	<position>
+		<translation x="17.220000" y="0.000000" z="0.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="3.000000" y="3.000000" z="3.000000"/>
+	</position>
+</object>
+<object objname="basic_cylinder" name = "Cylinder01">
+	<position>
+		<translation x="17.220000" y="6.950000" z="0.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.020000" y="0.020000" z="0.020000"/>
+	</position>
+</object>
+<object objname="basic_cylinder" name = "Cylinder02">
+	<position>
+		<translation x="17.100000" y="6.950000" z="0.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.050000" y="0.050000" z="0.050000"/>
+	</position>
+</object>
+<object objname="basic_cylinder" name = "Cylinder03">
+	<position>
+		<translation x="16.850000" y="6.950000" z="0.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.100000" y="0.100000" z="0.100000"/>
+	</position>
+</object>
+<object objname="basic_cylinder" name = "Cylinder04">
+	<position>
+		<translation x="16.350000" y="6.950000" z="0.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.200000" y="0.200000" z="0.200000"/>
+	</position>
+</object>
+<object objname="basic_cylinder" name = "Cylinder05">
+	<position>
+		<translation x="15.140000" y="6.950000" z="0.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="0.500000" y="0.500000" z="0.500000"/>
+	</position>
+</object>
+<object objname="basic_cylinder" name = "Cylinder06">
+	<position>
+		<translation x="12.660000" y="6.950000" z="0.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="1.000000" y="1.000000" z="1.000000"/>
+	</position>
+</object>
+<object objname="basic_cylinder" name = "Cylinder07">
+	<position>
+		<translation x="7.690000" y="6.950000" z="0.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="2.000000" y="2.000000" z="2.000000"/>
+	</position>
+</object>
+<object objname="basic_cylinder" name = "Cylinder08">
+	<position>
+		<translation x="0.000000" y="6.950000" z="0.000000"/>
+		<rotation x="0.000000" y="0.000000" z="0.000000"/>
+		<scale x="3.000000" y="3.000000" z="3.000000"/>
+	</position>
+</object>
+</scene>
