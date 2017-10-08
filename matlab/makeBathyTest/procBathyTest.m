@@ -1,4 +1,5 @@
 function procBathyTest
+MAKEPLOTS=false;
 close all
 foldername = 'F:\bathytestdata2';
 [~, dnames] = dirname([foldername '/BATHY*']);
@@ -54,39 +55,40 @@ for i=1:numel(dnames)
             save([outfolder '/matlab/results.mat'],...
                 'sparse','dense','cams','IOstats','testdata');
             
-            % make figures from sparse/dense
-            f = makeFigs(sparse,dense,camEO,camIO,seafloor,j);
-            saveas(f,[outfolder '/matlab/sparsedensepcolor.png']);
-            clf;
-            % make setting01/setting06/setting11 plots
-            accuracy = nanmean(sparse.grid.zgmean(:));
-            f2 = figure(100+j);
-            set(f2,'Units','Normalize','Position',[0.05 0.05 0.9 0.9]);
-            subplot 221
-            plot(seafloor,accuracy,'b.');
-            hold on
-            xlabel('seafloor');
-            ylabel('accuracy');
-            
-            subplot 222
-            plot(testdata.altitude,accuracy,'b.');
-            hold on
-            xlabel('altitude');
-            ylabel('accuracy');
-            
-            subplot 223
-            plot(testdata.hfov,accuracy,'b.');
-            hold on
-            xlabel('hfov');
-            ylabel('accuracy');
-            
-            subplot 224
-            scatter(seafloor,testdata.altitude,100,accuracy,'filled');
-            hold on
-            colorbar
-            xlabel('seafloor');
-            ylabel('altitude');
-        
+            if MAKEPLOTS
+                % make figures from sparse/dense
+                f = makeFigs(sparse,dense,camEO,camIO,seafloor,j);
+                saveas(f,[outfolder '/matlab/sparsedensepcolor.png']);
+                clf;
+                % make setting01/setting06/setting11 plots
+                accuracy = nanmean(sparse.grid.zgmean(:));
+                f2 = figure(100+j);
+                set(f2,'Units','Normalize','Position',[0.05 0.05 0.9 0.9]);
+                subplot 221
+                plot(seafloor,accuracy,'b.');
+                hold on
+                xlabel('seafloor');
+                ylabel('accuracy');
+                
+                subplot 222
+                plot(testdata.altitude,accuracy,'b.');
+                hold on
+                xlabel('altitude');
+                ylabel('accuracy');
+                
+                subplot 223
+                plot(testdata.hfov,accuracy,'b.');
+                hold on
+                xlabel('hfov');
+                ylabel('accuracy');
+                
+                subplot 224
+                scatter(seafloor,testdata.altitude,100,accuracy,'filled');
+                hold on
+                colorbar
+                xlabel('seafloor');
+                ylabel('altitude');
+            end
         else
             fprintf('Fail      : %s%02.0f\n',[dnames{i} '\setting'],j);
         end
@@ -287,7 +289,11 @@ function s = zstat(z)
 if ~isnan(z)
     HISTLOW = mean(z)-std(z)*5;
     HISTHIGH = mean(z)+std(z)*5;
-    HISTRANGE = HISTLOW:0.001:HISTHIGH;
+    if round(min(diff(sort(unique(z)))),3)==0.01
+        HISTRANGE = HISTLOW:0.01:HISTHIGH;
+    else
+        HISTRANGE = HISTLOW:0.001:HISTHIGH;
+    end
     s.u = mean(z);
     s.v = var(z);
     s.r = [min(z) max(z)];

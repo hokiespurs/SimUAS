@@ -54,23 +54,44 @@ depthratio = [S(:).truedepth]./[S(:).altitude];
 %% Make Plots
 % Constants
 CAMACC = 0.01;
-REGION = 1;
-SPARSEDENSE = 'dense';
+REGION = [1 2 3];
+SPARSEDENSE = 'sparse';
+ERRORPERCENT = true;
 %
+allfovs  = [30 40 50 60 70 80 90 100 110 120];
+allratio = [0.01 0.05 0.1 0.2 0.3 0.4 0.5];
+
 allfovs  = unique(hfov);
 allratio = unique(depthratio);
+
+
 nfov = numel(allfovs);
 nratio = numel(allratio);
 f = figure(100);clf
-axg = axgrid(nfov,nratio,0.01,0.01);
+axg = axgrid(nfov,nratio,0.03,0.01);
+
+cmap = lines(5);
+cmap(3:4,:)=[];
+
 for i=1:nfov
     for j=1:nratio
-        ind = hfov == allfovs(i) & depthratio == allratio(nratio) & poscamacc==CAMACC;
-        h = S(ind).error(REGION).(SPARSEDENSE).h;
-        hval = S(ind).error(REGION).(SPARSEDENSE).hval;
-        
-        figure(100);
-        plot(hval,h,'.')
-        drawnow
+        for k=1:numel(REGION)
+            ind = hfov == allfovs(i) & depthratio == allratio(j) & poscamacc==CAMACC;
+            h = S(ind).error(REGION(k)).(SPARSEDENSE).h;
+            hval = S(ind).error(REGION(k)).(SPARSEDENSE).hval;
+            
+            if ERRORPERCENT
+                hval = hval./S(ind).truedepth;
+                xlim([0 0.6]);
+                grid on
+                xticks([0:0.1:0.6]);
+            end
+            
+            axg(i,j);
+            plot(hval,h,'.-','color',cmap(k,:));hold on
+            set(gca,'ytick',[])
+            axis tight
+            drawnow
+        end
     end
 end

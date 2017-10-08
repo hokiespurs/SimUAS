@@ -154,17 +154,17 @@ ImagePath = join(rootdir + "\\" + ProcParams.importfiles.rootname,ProcParams.imp
 print(ImagePath)
 
 for ext in ('\*.tif', '\*.png', '\*.jpg'):
-   ImageFiles.extend(glob(ImagePath + ext))
+   ImageFiles.extend(sorted(glob(ImagePath + ext)))
 
 if len(ProcParams.importfiles.imagesToUse)==len(ImageFiles):
     print("Deleting Some Images")
     indbad = []
-    for ind in range(1,len(ImageFiles)):
+    for ind in range(0,len(ImageFiles)):
         if ProcParams.importfiles.imagesToUse[ind]=='0':
             indbad.append(ind)
             print("Bad: " + str(ind))
     for index in sorted(indbad, reverse=True):
-        del ImageFiles[index]
+        del ImageFiles[index-1]
 else:
     print("Using All Images:")
 

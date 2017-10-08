@@ -14,7 +14,7 @@ if len(sys.argv)==1:
     foldernames        = r"U:\presentations\Farid\2017-09-20 DPQF\SIMULATION*"
     matlabname         = r"C:\Program Files\MATLAB\R2017a\bin\matlab.exe"
     matlabfunctionname = r"C:\Users\slocumr.ONID\github\SimUAS\matlab\postprocess\postProcFolder"
-    nprocesses         = 3
+    nprocesses         = 1
 else:
     blendername        = sys.argv[1]
     rendername         = sys.argv[2]
@@ -23,7 +23,7 @@ else:
     matlabfunctionname = sys.argv[5]
     nprocesses         = sys.argv[6]
 
-SLEEPTIME = 10
+SLEEPTIME = 120
 DODEBUG = True
 
 # Get Folder Names
@@ -92,8 +92,8 @@ try:
                 for p, ind, name, iloghandle in zip(processes, currentind, procname, currentloghandles):
                     if p.poll() is not None:
                         # if its done print output saying so
-                        print(time.strftime("%b %d %Y %H:%M:%S", time.gmtime(time.time())) + " : DONE  : " + '{:3d}/{:3d}'.format(ind,nfolders) + " : " + fname)
-                        proclog.write(time.strftime("%b %d %Y %H:%M:%S", time.gmtime(time.time())) + " : DONE  : " + '{:3d}/{:3d}'.format(ind,nfolders) + " : " + fname + '\n')
+                        print(time.strftime("%b %d %Y %H:%M:%S", time.gmtime(time.time())) + " : DONE  : " + '{:3d}/{:3d}'.format(ind,nfolders) + " : " + name)
+                        proclog.write(time.strftime("%b %d %Y %H:%M:%S", time.gmtime(time.time())) + " : DONE  : " + '{:3d}/{:3d}'.format(ind,nfolders) + " : " + name + '\n')
                         iloghandle.write(time.strftime("%b %d %Y %H:%M:%S", time.gmtime(time.time())) + "\n")
                         iloghandle.flush()
                         iloghandle.close()
@@ -112,8 +112,8 @@ try:
             proclog.write(time.strftime("%b %d %Y %H:%M:%S", time.gmtime(time.time())) + ' CPU: {:5.1f}  RAM: {:5.1f}'.format(cpu_percent,ram_percent) + '\n')
         for p, ind, name, iloghandle in zip(processes, currentind, procname, currentloghandles):
             if p.poll() is not None:
-                print(time.strftime("%b %d %Y %H:%M:%S", time.gmtime(time.time())) + " : DONE  : " + '{:3d}/{:3d}'.format(ind,nfolders) + " : " + fname)
-                proclog.write(time.strftime("%b %d %Y %H:%M:%S", time.gmtime(time.time())) + " : DONE  : " + '{:3d}/{:3d}'.format(ind,nfolders) + " : " + fname + '\n')
+                print(time.strftime("%b %d %Y %H:%M:%S", time.gmtime(time.time())) + " : DONE  : " + '{:3d}/{:3d}'.format(ind,nfolders) + " : " + name)
+                proclog.write(time.strftime("%b %d %Y %H:%M:%S", time.gmtime(time.time())) + " : DONE  : " + '{:3d}/{:3d}'.format(ind,nfolders) + " : " + name + '\n')
                 iloghandle.write(time.strftime("%b %d %Y %H:%M:%S", time.gmtime(time.time())) + "\n")
                 iloghandle.flush()
                 iloghandle.close()
