@@ -53,45 +53,64 @@ poscamacc  = [S(:).poscamacc];
 depthratio = [S(:).truedepth]./[S(:).altitude];
 %% Make Plots
 % Constants
-CAMACC = 0.01;
 REGION = [1 2 3];
 SPARSEDENSE = 'sparse';
 ERRORPERCENT = true;
-%
-allfovs  = [30 40 50 60 70 80 90 100 110 120];
-allratio = [0.01 0.05 0.1 0.2 0.3 0.4 0.5];
+FIXXLIM = [-50 50];
 
+%
 allfovs  = unique(hfov);
 allratio = unique(depthratio);
+allcamacc = [0.01 0.5 10];
+allsparsedense = {'sparse','dense'};
 
+nfov    = numel(allfovs);
+nratio  = numel(allratio);
+ncamacc = numel(allcamacc);
 
-nfov = numel(allfovs);
-nratio = numel(allratio);
-f = figure(100);clf
-axg = axgrid(nfov,nratio,0.03,0.01);
+axg = axgrid(nfov,nratio,0.02/2,0.01/2);
 
 cmap = lines(5);
 cmap(3:4,:)=[];
-
-for i=1:nfov
-    for j=1:nratio
-        for k=1:numel(REGION)
-            ind = hfov == allfovs(i) & depthratio == allratio(j) & poscamacc==CAMACC;
-            h = S(ind).error(REGION(k)).(SPARSEDENSE).h;
-            hval = S(ind).error(REGION(k)).(SPARSEDENSE).hval;
-            
-            if ERRORPERCENT
-                hval = hval./S(ind).truedepth;
-                xlim([0 0.6]);
-                grid on
-                xticks([0:0.1:0.6]);
+for isparsedense = 1:2
+    SPARSEDENSE = allsparsedense{isparsedense};
+    for ifig = 1:ncamacc
+        f = figure(100+ifig);clf
+        CAMACC = allcamacc(ifig);
+        for i=1:nfov
+            for j=1:nratio
+                axg(nfov+1-i,nratio+1-j);
+                for k=1:numel(REGION)
+                    ind = hfov == allfovs(i) & depthratio == allratio(j) & poscamacc==CAMACC;
+                    h = S(ind).error(REGION(k)).(SPARSEDENSE).h;
+                    hval = S(ind).error(REGION(k)).(SPARSEDENSE).hval;
+                    
+                    if ERRORPERCENT
+                        hval = 100*hval./S(ind).truedepth;
+                        grid on
+                    end
+                    
+                    plot(hval,h,'.-','color',cmap(k,:));hold on
+                    set(gca,'ytick',[])
+                    axis tight
+                    if ~isempty(FIXXLIM)
+                        xlim(FIXXLIM);
+                        xticks(linspace(FIXXLIM(1),FIXXLIM(2),11))
+                        set(gca,'XTickLabel',cell(11,1));
+                        plot([0,0],[0,max(get(gca,'ylim'))],'k')
+                    end
+                    
+                    if j==nratio
+                        ylabel(sprintf('%.0f',allfovs(i)));
+                    end
+                    if i==1
+                        xlabel(sprintf('%.1f',1/allratio(j)));
+                    end
+                    drawnow
+                end
             end
-            
-            axg(i,j);
-            plot(hval,h,'.-','color',cmap(k,:));hold on
-            set(gca,'ytick',[])
-            axis tight
-            drawnow
         end
+        bigtitle(sprintf('%s Percent Error (EO Accuracy = %.2fm)',SPARSEDENSE, CAMACC),0.5,0.95,'fontsize',26,'interpreter','latex');
+        saveas(f,sprintf('%sPercentError_%.2f.png',SPARSEDENSE, CAMACC));
     end
 end
