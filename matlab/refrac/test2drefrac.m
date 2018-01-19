@@ -13,7 +13,7 @@ cmap = [lines(ceil(numel(P1ALLX)/2)); flipud(lines(floor(numel(P1ALLX)/2)))];
 % plot water
 f = figure(1);clf;hold on
 patch([AX(1) AX(1) AX(2) AX(2)],[AX(3) WATERLEVEL WATERLEVEL AX(3)],...
-    'k','FaceColor',[0 0 0],'FaceAlpha',0.1);
+    'k','FaceColor',[0 0 1],'FaceAlpha',0.05);
 % plot camera locations
 plot(P1ALLX,P1ALLY,'k^','markersize',15)
 for i=1:numel(P1ALLX)
@@ -25,9 +25,9 @@ for i=1:numel(P1ALLX)
     xval = fmincon(fermat,P1(1));
     
     % plot correct ray
-    plot([P1(1) xval],[P1(2) WATERLEVEL],'k-')
+    plot([P1(1) xval],[P1(2) WATERLEVEL],'k-','linewidth',3)
     hold on
-    plot([P2(1) xval],[P2(2) WATERLEVEL],'k-')
+    plot([P2(1) xval],[P2(2) WATERLEVEL],'k-','linewidth',3)
     axis equal
     
     % compute bad point
@@ -38,7 +38,7 @@ for i=1:numel(P1ALLX)
     P3 = [xval WATERLEVEL] + eigvec1*dfullvec;
     
     % plot bad vector
-    plot([xval P3(1)],[WATERLEVEL P3(2)],'color',cmap(i,:))
+    plot([xval P3(1)],[WATERLEVEL P3(2)],'color',cmap(i,:),'linewidth',3)
 end
 % Save Images
 grid on
