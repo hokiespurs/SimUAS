@@ -130,7 +130,7 @@ waterdepth = EXPDATA(iExperimentNum,1);
     trajname = 'trajectory_norpy.xml';
 
     camcal = {camcalname};
-    camlock = [true ];
+    camlock = [true];
     optim = [true];
     optimset = {'11100111011000'};
     iProcNum = 0;

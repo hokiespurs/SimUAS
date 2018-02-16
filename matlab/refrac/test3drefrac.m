@@ -30,13 +30,16 @@ patch([min(P1x) min(P1x) max(P1x) max(P1x)],...
       [Z Z Z Z],'k','facecolor',[0 0 0],'faceAlpha',0.1);
 axis([-2 2 -2 2 -6 2])
 %% Save Movie
-mov = VideoWriter('3drefrac.avi');
+mov = VideoWriter('3drefrac.gif');
 open(mov);
-for i=1:360
+for i=1:90
     view(i,30)
    writeVideo(mov,getframe(f)); 
+   saveas(f,sprintf('vid3d_%02.0f.png',i));
 end
 close(mov)
+fnames = dirname('vid3d*');
+makeMovie(fnames,'vid3d.gif',10,1);
 end
 
 function P2=numericalminfun(P1,P3,N1,N2,Z)

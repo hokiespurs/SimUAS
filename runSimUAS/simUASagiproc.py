@@ -9,8 +9,8 @@ import psutil
 
 if len(sys.argv)==1:
     photoscanname = r"C:\Program Files\Agisoft\PhotoScan Pro\photoscan.exe"
-    scriptname    = r"C:\Users\slocumr.ONID\github\SimUAS\batchphotoscan\agiproc.py"
-    xmlnames      = r"F:\bathytestdata2/BATHY*/proc/settings/*.xml"
+    scriptname    = r"C:\Users\slocumr\github\SimUAS\batchphotoscan\agiproc.py"
+    xmlnames      = r"O:\simUAS\EXPERIMENTS\OVERSIDEB\BATHYOVERSIDE*/proc/settings/*2.xml"
     nprocesses    = 1
 else:
     photoscanname = sys.argv[1]
@@ -18,7 +18,7 @@ else:
     xmlnames      = sys.argv[3]
     nprocesses    = 1
 
-SLEEPTIME = 30
+SLEEPTIME = 10
 DODEBUG = True
 
 # get xmlfiles

@@ -1,15 +1,15 @@
 %% Compute Line Between Two Points Using Snells Law
 % constants
-P1ALLX = -10:2:10;
-P1ALLY = 10*ones(size(P1ALLX));
+P1ALLX = -4:2:4;
+P1ALLY = 4*ones(size(P1ALLX));
 P2 = [0,-1];
 N1 = 1.00;
 N2 = 1.33;
 WATERLEVEL = 0;
 AX = [P1ALLX(1)-1 P1ALLX(end)+1 P2(2)-1 max(P1ALLX)+1];
 AX2 = [-0.7 0.7 -1.2 0.2];
-cmap = [lines(ceil(numel(P1ALLX)/2)); flipud(lines(floor(numel(P1ALLX)/2)))];
-
+% cmap = [lines(ceil(numel(P1ALLX)/2)); flipud(lines(floor(numel(P1ALLX)/2)))];
+cmap = ones(5,1) * [0.8500    0.3250    0.0980];
 % plot water
 f = figure(1);clf;hold on
 patch([AX(1) AX(1) AX(2) AX(2)],[AX(3) WATERLEVEL WATERLEVEL AX(3)],...
@@ -25,9 +25,9 @@ for i=1:numel(P1ALLX)
     xval = fmincon(fermat,P1(1));
     
     % plot correct ray
-    plot([P1(1) xval],[P1(2) WATERLEVEL],'k-','linewidth',3)
+    plot([P1(1) xval],[P1(2) WATERLEVEL],'k-','linewidth',2)
     hold on
-    plot([P2(1) xval],[P2(2) WATERLEVEL],'k-','linewidth',3)
+    plot([P2(1) xval],[P2(2) WATERLEVEL],'k-','linewidth',2)
     axis equal
     
     % compute bad point
@@ -38,7 +38,7 @@ for i=1:numel(P1ALLX)
     P3 = [xval WATERLEVEL] + eigvec1*dfullvec;
     
     % plot bad vector
-    plot([xval P3(1)],[WATERLEVEL P3(2)],'color',cmap(i,:),'linewidth',3)
+    plot([xval P3(1)],[WATERLEVEL P3(2)],'color',cmap(i,:),'linewidth',2)
 end
 % Save Images
 grid on

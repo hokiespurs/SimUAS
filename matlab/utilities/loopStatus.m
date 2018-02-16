@@ -45,7 +45,7 @@ function loopStatus(startTime,curLoopNum,nLoops,nskip)
 if nargin==3
     nskip = 1; %default to output every loop
 end
-
+ndigits = 1+floor(log10(nLoops));
 if mod(curLoopNum,nskip)==0
     t = now - startTime; %time it took for the first nLoops
     avgLoopTime = t/(curLoopNum); 
@@ -55,8 +55,8 @@ if mod(curLoopNum,nskip)==0
 
     estimDatenum = datestr(now +estimTime);
 
-    fprintf('%.0f/%.0f \t Now: %s \t Expected: %s\n',...
-        curLoopNum,nLoops,datestr(now),estimDatenum);
+    fprintf('%*.0f/%*.0f \t Now: %s \t Expected: %s\n',...
+        ndigits,curLoopNum,ndigits,nLoops,datestr(now),estimDatenum);
 end
 
 end
