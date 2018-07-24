@@ -1,3 +1,25 @@
+# AGIRPROC.PY
+#  This script is used to parse processing settings from an xml file and 
+#  apply them to process a data in agisoft photoscan. It is written to 
+#  follow the folder structure in simUAS.  
+#
+#  The settings.xml file dictates:
+#     - Folders for the input/output data
+#     - All processing settings
+#     - Additional Output Pointclouds
+#     
+#  This script automatically logs all messages from photoscan, and computes
+#  the processing time for each step.
+#
+#  Input Arguments:
+#    xmlsetting : full file path to the xml settings file
+#
+#  Author        : Richie Slocum
+#  Email         : richie.slocum@cormorantanalytics.com 
+#  Date Created  : Jul 06, 2017
+#  Date Modified : Jul 09, 2018
+#  Github        : 
+
 import xml.etree.ElementTree as ET
 import logging
 import sys
@@ -47,6 +69,10 @@ class ProcSettings:
             self.trajectoryfilename = root.find('trajectory').get('filename')
             self.controlfilename = root.find('controldata').get('filename')
             self.rootname = root.get('rootname')
+            try:
+                self.epsg = root.find('crs').get('epsg')
+            except:
+                self.epsg = ''
 
     class __PS:
         def __init__(self,root):
@@ -106,7 +132,12 @@ def procDense(qualityval, filterval):
     elif filterval=='aggressive':
         densefilt = PhotoScan.FilterMode.AggressiveFiltering
 
-    chunk.buildDenseCloud(quality=densequal,filter=densefilt)
+    #Noticed Change in API with 1.4.1
+    try:
+        chunk.buildDepthMaps(quality=densequal,filter=densefilt)
+        chunk.buildDenseCloud()
+    except:
+        chunk.buildDenseCloud(quality=densequal,filter=densefilt)
 
 def elaptime(starttime,endtime):
     hours, rem = divmod(endtime-starttime, 3600)
@@ -147,26 +178,30 @@ app = PhotoScan.Application()
 # clear project and console
 app.console.clear()
 doc.clear()
-			
+
 # FIND ALL PHOTOS IN PATH
 ImageFiles = []
 ImagePath = join(rootdir + "\\" + ProcParams.importfiles.rootname,ProcParams.importfiles.imagesfoldername)
 print(ImagePath)
 
-for ext in ('\*.tif', '\*.png', '\*.jpg'):
+for ext in ('\*.tif', '\*.png', '\*.jpg', '\*.dng'):
    ImageFiles.extend(sorted(glob(ImagePath + ext)))
 
-if len(ProcParams.importfiles.imagesToUse)==len(ImageFiles):
+
+if (len(ProcParams.importfiles.imagesToUse)!=0):
     print("Deleting Some Images")
     indbad = []
     for ind in range(0,len(ImageFiles)):
-        if ProcParams.importfiles.imagesToUse[ind]=='0':
+        if (len(ProcParams.importfiles.imagesToUse)-1 < ind):
             indbad.append(ind)
-            print("Bad: " + str(ind))
+            print("Dont Use: " + str(ind))
+        elif ProcParams.importfiles.imagesToUse[ind]=='0':
+            indbad.append(ind)
+            print("Done Use: " + str(ind))
     for index in sorted(indbad, reverse=True):
         del ImageFiles[index-1]
 else:
-    print("Using All Images:")
+    print("Using all images")
 
 for imagename in ImageFiles:
     print(imagename)
@@ -178,8 +213,8 @@ proctime.flush()
 
 # Add Photos
 chunk = PhotoScan.app.document.addChunk()
-chunk.label = 'simUASdata'
-chunk.addPhotos(ImageFiles)
+chunk.label = 'agiprocdata'
+chunk.addPhotos(ImageFiles,strip_extensions=False)
 
 msg = "Added Photos"
 proctime.write(msg.ljust(40) + " , " + strftime("%Y-%m-%d %H:%M:%S", gmtime()) + " , " + elaptime(lasttime,time.time()) +"\n")
@@ -224,6 +259,12 @@ if ProcParams.importfiles.trajectoryfilename!="":
 if ProcParams.importfiles.controlfilename!="":
     markername = rootdir + "\\" + ProcParams.importfiles.rootname + "\\" + ProcParams.importfiles.controlfilename
     chunk.importMarkers(markername)
+
+# DEFINE COORDINATE SYSTEM
+if not (ProcParams.importfiles.epsg==''):
+    doc.chunk.crs = PhotoScan.CoordinateSystem("EPSG::" + ProcParams.importfiles.epsg)
+else:
+    print("Using PhotoScan Default CRS")
 
 msg = "Added Trajectory/Reference Data"
 proctime.write(msg.ljust(40) + " , " + strftime("%Y-%m-%d %H:%M:%S", gmtime()) + " , " + elaptime(lasttime,time.time()) +"\n")
