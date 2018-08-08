@@ -358,7 +358,7 @@ proctime.flush()
 
 # Save Sparse
 sparsesavename = saverootname + "\\" + ProcParams.export.sparsepointsfilename
-chunk.exportPoints(sparsesavename,PhotoScan.DataSource.PointCloudData.PointCloudData)
+chunk.exportPoints(sparsesavename,PhotoScan.DataSource.PointCloudData.PointCloudData,projection=doc.chunk.crs)
 msg = "Saved Sparse"
 proctime.write(msg.ljust(40) + " , " + strftime("%Y-%m-%d %H:%M:%S", gmtime()) + " , " + elaptime(lasttime,time.time()) +"\n")
 lasttime = time.time()
@@ -366,7 +366,7 @@ proctime.flush()
 
 # Save Dense
 densesavename = saverootname + "\\" + ProcParams.export.densepointsfilename
-chunk.exportPoints(densesavename,PhotoScan.DataSource.PointCloudData.DenseCloudData)
+chunk.exportPoints(densesavename,PhotoScan.DataSource.PointCloudData.DenseCloudData,projection=doc.chunk.crs)
 msg = "Saved Dense"
 proctime.write(msg.ljust(40) + " , " + strftime("%Y-%m-%d %H:%M:%S", gmtime()) + " , " + elaptime(lasttime,time.time()) +"\n")
 lasttime = time.time()
@@ -429,7 +429,7 @@ for indq,q in enumerate(ProcParams.export.reprocMVSquality):
             lasttime = time.time()
             mvssavename = mvsfolder + "\\dense_" + QualityType[indq] + "_" + FilterType[indf] + ".las"
             print("Saving Dense MVS: " + mvssavename)
-            chunk.exportPoints(mvssavename,PhotoScan.DataSource.PointCloudData.DenseCloudData)
+            chunk.exportPoints(mvssavename,PhotoScan.DataSource.PointCloudData.DenseCloudData,projection=doc.chunk.crs)
             msg = "MVS Dense Saving (" + QualityType[indq] + "," + FilterType[indf] + ")"
             proctime.write(msg.ljust(40) + " , " + strftime("%Y-%m-%d %H:%M:%S", gmtime()) + " , " + elaptime(lasttime,time.time()) +"\n")
             lasttime = time.time()
