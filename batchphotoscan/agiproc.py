@@ -346,7 +346,7 @@ if ProcParams.photoscan.optimizeexecute=='1':
 
 # Reset Region Size, set to 10km x 10km x 2km
 chunk.resetRegion()
-chunk.region.size = Vector([10000, 10000, 2000])/chunk.transform.scale
+chunk.region.size = PhotoScan.Vector([10000, 10000, 2000])/chunk.transform.scale
 
 # dense pointcloud 
 procDense(ProcParams.photoscan.densequality, ProcParams.photoscan.densedepthfilt)
