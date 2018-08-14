@@ -344,8 +344,9 @@ if ProcParams.photoscan.optimizeexecute=='1':
     lasttime = time.time()
     proctime.flush()
 
-# Reset Region
+# Reset Region Size, set to 10km x 10km x 2km
 chunk.resetRegion()
+chunk.region.size = Vector([10000, 10000, 2000])/chunk.transform.scale
 
 # dense pointcloud 
 procDense(ProcParams.photoscan.densequality, ProcParams.photoscan.densedepthfilt)
