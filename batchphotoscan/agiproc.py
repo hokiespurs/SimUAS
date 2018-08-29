@@ -401,7 +401,7 @@ proctime.flush()
 
 # Export Trajectory (Cameras)
 trajectorysavename = saverootname + "\\" + ProcParams.export.camerasfilename
-chunk.exportCameras(trajectorysavename)
+chunk.exportCameras(trajectorysavename,projection=doc.chunk.crs,format=PhotoScan.CamerasFormatOPK)
 msg = "Saved Trajectory"
 proctime.write(msg.ljust(40) + " , " + strftime("%Y-%m-%d %H:%M:%S", gmtime()) + " , " + elaptime(lasttime,time.time()) +"\n")
 lasttime = time.time()
