@@ -337,8 +337,8 @@ if ProcParams.photoscan.optimizeexecute=='1':
     fitp3 = ProcParams.photoscan.optimizefits[11]=='1'
     fitp4 = ProcParams.photoscan.optimizefits[12]=='1'
     fitshutter = ProcParams.photoscan.optimizefits[13]=='1'
-    chunk.optimizeCameras(fitf,fitcx,fitcy,fitb1,fitb2,\
-        fitk1,fitk2,fitk3,fitk4,fitp1,fitp2,fitp3,fitp4,fitshutter)
+    chunk.optimizeCameras(fit_f=fitf,fit_cx=fitcx,fit_cy=fitcy,fit_b1=fitb1,fit_b2=fitb2,\
+        fit_k1=fitk1,fit_k2=fitk2,fit_k3=fitk3,fit_k4=fitk4,fit_p1=fitp1,fit_p2=fitp2,fit_p3=fitp3,fit_p4=fitp4,adaptive_fitting=fitshutter)
     msg = "Optimization Complete"
     proctime.write(msg.ljust(40) + " , " + strftime("%Y-%m-%d %H:%M:%S", gmtime()) + " , " + elaptime(lasttime,time.time()) +"\n")
     lasttime = time.time()
