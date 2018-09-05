@@ -374,7 +374,7 @@ lasttime = time.time()
 proctime.flush()
 
 # Save Project
-projsavename = saverootname + "\\" + ProcParams.projectname + ".psz"
+projsavename = saverootname + "\\" + ProcParams.projectname + ".psx"
 doc.save(projsavename)
 msg = "Saved Project"
 proctime.write(msg.ljust(40) + " , " + strftime("%Y-%m-%d %H:%M:%S", gmtime()) + " , " + elaptime(lasttime,time.time()) +"\n")
