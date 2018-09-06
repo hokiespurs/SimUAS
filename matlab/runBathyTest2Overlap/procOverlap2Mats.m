@@ -2,7 +2,7 @@ function procOverlap2Mats
 %% CONSTANTS
 EXPDIRNAME  = 'O:\simUAS\EXPERIMENTS\OVERSIDEB'; % Experiment Directory
 PREFIX      = 'BATHYOVERSIDE';                  % Experiment Prefix
-SETTING     = 'setting02';
+SETTING     = 'setting03';
 REPROC      = false;
 [~,dnames] = dirname([EXPDIRNAME '/' PREFIX '*'],0);
 nFolders = numel(dnames);

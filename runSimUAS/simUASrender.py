@@ -11,8 +11,8 @@ if len(sys.argv)==1:
     blendername        = r"C:\Program Files\Blender Foundation\Blender\blender.exe"
     rendername         = r"C:\Users\slocumr\github\SimUAS\python\renderBlender.py"
     renderargs         = r""
-    foldernames        = r"O:\simUAS\EXPERIMENTS\OVERSIDEB\BATHYOVERSIDE*"
-    #foldernames        = r"C:\Users\slocumr\github\SimUAS\data\topofield2b"
+    foldernames        = r"O:\simUAS\EXPERIMENTS\TOPOHOLE\TOPOFIELDHOLE"
+    #foldernames        = r"C:\Users\slocumr\github\SimUAS\data\demobeaver"
     matlabname         = r"C:\Program Files\MATLAB\R2017a\bin\matlab.exe"
     matlabfunctionname = r"C:\Users\slocumr\github\SimUAS\matlab\postprocess\postProcFolder"
     nprocesses         = 4

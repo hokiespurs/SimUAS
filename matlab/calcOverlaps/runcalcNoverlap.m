@@ -9,9 +9,11 @@ figure(2);clf
 
 for i=(OVERLAP)
 ind = ind+1;
-[ncum,Ntotal] = calcNoverlap(i);
+[Ntotal,ncum] = calcNoverlap(i,1);
 figure(2);
-plot(ncum,'color',cmap(ind,:),'linewidth',5);hold on
+
+plot((1:numel(ncum))-numel(ncum)/2-1,ncum,'color',cmap(ind,:),'linewidth',5);hold on
+pause(0.5)
 end
 
 legend({num2str(OVERLAP')},'fontsize',48)

@@ -26,8 +26,8 @@ if nargin>1
     ylim([-ceil(N)-1 ceil(N)+1]);
     set(gca,'xtick',[negativePercent:negativePercent:negativePercent*(Ntotal+N)])
     
-    title(sprintf('Number of Overlap = %.0f',Ntotal));
-    
+    title(sprintf('Number of Total Images = %.0f',Ntotal));
+    ylabel('Image Number');
     %plot noverlap
     h2 = subplot(10,1,9:10);
     plot(TOT);
@@ -37,6 +37,8 @@ if nargin>1
     % link axes
     linkaxes([h1 h2],'x');
     xlim([1 Ntotal*negativePercent+100+negativePercent])
+    xlabel('Image Location');
+    ylabel('Number of Overlaps');
 end
 %% Normalize TOT
 ncum = TOT;

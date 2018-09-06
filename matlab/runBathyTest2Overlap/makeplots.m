@@ -30,8 +30,8 @@ hfov = nan(numel(data),1);
 depth = nan(numel(data),1);
 overlap = nan(numel(data),1);
 for i=1:numel(data)
-%    Yvariable(i) = data{i}.sparse.C.mean - data{i}.IV.seafloor;
-    Yvariable(i) = data{i}.sparse.A.std; YSTR = 'Standard Deviation of Error (Sparse A)';
+%    Yvariable(i) = data{i}.sparse.A.mean - data{i}.IV.seafloor;
+     Yvariable(i) = data{i}.sparse.A.std; YSTR = 'Standard Deviation of Error (Sparse A)';
 
    hfov(i) = data{i}.IV.hfov;
    depth(i) = data{i}.IV.waterdepth;
@@ -54,31 +54,37 @@ for j=1:numel(SP_depths)
     end
     title(sprintf('Depth = %g',SP_depths(j)),'fontsize',20)
     xlabel('Horizontal Field of View','fontsize',20);
-    ylabel('Sparse Error in AOI','fontsize',20);
+    ylabel('Sparse Bias in AOI','fontsize',20);
 end
 hleg = legend(legendstr,'fontsize',30);
 title(hleg,'Overlap/Sidelap','fontsize',30);
-
 %% Plot Error with overlap on x axis, colored by hfov
 X_hfovs = 20:10:80;
 SP_depths = 0:4;
 legendstr = {'20°','30°','40°','50°','60°','70°','80°'};
+xstr = {'50.0\%','66.6\%','75.0\%','80.0\%','83.3\%','85.7\%','87.5\%'};
 nImages = 2:8;
 
 figure(2);clf; hold on
-cmap = flipud(parula(numel(X_hfovs)));
+cmap = (parula(numel(X_hfovs)));
 for j=1:numel(SP_depths)
     for i=1:numel(X_hfovs)
         subplot(2,3,j);hold on
         ind = hfov==X_hfovs(i) & depth==SP_depths(j);
-        plot(overlap(ind),Yvariable(ind),'.-','color',cmap(i,:),'linewidth',3)
+        plot(overlap(ind),Yvariable(ind),'.-','color',cmap(i,:),'linewidth',3);
+        set(gca,'fontsize',16,'ticklabelinterpreter','latex')
     end
-    title(sprintf('Depth = %g',SP_depths(j)),'fontsize',20)
-    xlabel('Number of Overlap Images','fontsize',20);
-    ylabel('Sparse Error in AOI','fontsize',20);
+    title(sprintf('Depth = %g',SP_depths(j)),'fontsize',28,'interpreter','latex')
+    xlabel('Sidelap/Overlap','fontsize',20,'interpreter','latex');
+    xticklabels(xstr)
+    ylabel('Sparse STD in AOI','fontsize',20,'interpreter','latex');
+    if j==1
+        ylim([-0.01 0.01])
+    end
 end
-hleg = legend(fliplr(legendstr),'fontsize',30);
+hleg = legend((legendstr),'fontsize',30);
 title(hleg,'HFOV','fontsize',30);
+bigtitle('Sparse Bias in Region A',0.5,0.95,'fontsize',30,'interpreter','latex');
 
 % %% Plot Error with HFOV on x axis, colored by overlap
 % X_hfovs = 20:10:80;

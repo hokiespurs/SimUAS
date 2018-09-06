@@ -1,0 +1,50 @@
+Scene Metadata Generated 1/2/2017 
+
+All textures are interpolated
+
+topo2 is a 200m x 200m surface with 1m vertices and quads for faces
+topo2 vertices are made using random number in matlab and convolved with 20x20m uniform averaging square, then 10x10, then 5x5
+topo2 is textured with:
+	a) 7200x7200 = 2.78cm GSD  (highaltitude_square) from NZ website
+	b) 10x10 tile 3456x3456 = 0.58 cm GSD (grass_tile) from DSLR image taken of Rocks in Corvallis, OR
+
+GCPs are 10 1m x 1m x 0.05m checkerboard targets dispersed throughout the scene 0.25m above the topography
+
+cube is a 3m x 3m cube
+cube is textured with 3456x3456 = 0.35cm GSD (rock_square) from DSLR image taken of Rocks in Corvallis, OR
+
+Sun is at nadir at the image 1 and linearly interpolated to a 30 degree rotation about the x axis at final image 77
+Sun is constant at with intensity = 1 and RGB = (1,1,1) (white)
+ambient light is constant with intensity = 0.25 and RGB = (1,1,1) (white)
+
+Camera is simulating a Sony A5000
+----sensor----
+	 hfov: 72.6 degrees
+	 vfov: 48.3 degrees
+	 hpix: 5456
+	 vpix: 3632
+----photogrammetry----
+	alt: 43.07m
+	gsd: 1.00cm
+	footprint: 63.3m x 38.6m 	 half: (31.6m x 19.3m)
+	doverlap: 9.66m 	 = 75.0%
+	dsidelap: 15.81m 	 = 75.0%
+----Survey Summary----
+	 N Flight Lines = 7 	 (-50.0,-34.2,-18.4,-2.6,13.3,29.1,44.9,)
+	 pics per line  = 11 	 (-50.0,-40.3,-30.7,-21.0,-11.4,-1.7,8.0,17.6,27.3,36.9,46.6,)
+	 Total Pictures = 77 pictures
+
+Cameras are Placed at that grid facing nadir x and y axis of camera aligned with coordinate system
+* Gaussian Noise of 1 sigma added to camera translation in all axes
+* Gaussian Noise of 2 sigma added to camera rotation degrees in all axes
+
+Images are rendered with antialiasing
+
+Images are postprocessed in Matlab for noise and distortion
+    <distortion k1 = "-0.06" k2 = "0.03" k3 = "-0.002" k4 = "0" p1 = "-0.001" p2 = "-0.001" isPhotoscanUnits = "1"/>
+    <vignetting v1 = "10" v2 = "0.2" v3 = "0"/>
+    <saltnoise prob = "0.0001"/>
+    <peppernoise prob = "0.0001"/>
+    <gaussiannoise mean = "0" variance = "0.02"/>
+    <gaussianblur sigma = "1"/>
+	

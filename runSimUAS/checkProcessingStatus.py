@@ -5,7 +5,7 @@ import datetime
 print(datetime.datetime.now())
 
 ## CONSTANTS
-FOLDERNAME = r'O:\simUAS\EXPERIMENTS\OVERSIDEB'
+FOLDERNAME = r'O:\simUAS\EXPERIMENTS\GPSQUALTEST'
 SETTINGNAME = r"*.xml"
 ## Determine if each folder has been rendered
 
@@ -83,5 +83,5 @@ for settingdir, processingstatus in zip(allsettingdir,agiprocstatus):
         foo,settingname = os.path.split(settingdir)
         procdirname, foo = os.path.split(foo)
         rmdirname = procdirname + "/results/" + settingname[0:-4]
-        # print("Removing: " + rmdirname)
-        # shutil.rmtree(rmdirname)
+        #print("Removing: " + rmdirname)
+        #shutil.rmtree(rmdirname)

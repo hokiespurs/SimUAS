@@ -1,0 +1,5 @@
+Experiment to determine effect of sidelap/overlap
+No Distortion
+HFOV (deg)           : 60.000000
+Water Depth (m)      : 0.00
+N Overlapping Images : 4.000000

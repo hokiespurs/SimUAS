@@ -9,11 +9,10 @@ fprintf(fid,'    <cameras>\n');
 for i=1:numel(xg)
     fprintf(fid,'      <camera label="%s">\n',sprintf('img%04.0f.png',i));
     fprintf(fid,'        <reference x="%f" y="%f" z="%f" enabled="true"/>\n',xg(i),yg(i),zg(i));
-    fprintf(fid,'      </camera>');
+    fprintf(fid,'      </camera>\n');
 end
-fprintf(fid,'    </camera>\n');
-fprintf(fid,'  </cameras>\n');
-fprintf(fid,'</reference>\n');
+fprintf(fid,'    </cameras>\n');
+fprintf(fid,'  </reference>\n');
 fclose(fid);
 
 end

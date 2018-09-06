@@ -49,9 +49,7 @@ for i=1:nExperiments
       %* scene must be 3 times bigger than AOI... plus some padding
     texturescale = AOI * 3 * SCALEPAD;
     scenedepth=depth;
-    if depth==0
-        scenedepth=-0.01; %dont want water surface and seafloor on same plane
-    end
+
     writeBathyScene([expdname '/input/scene_' sprintf('%03.0f.xml',i)],...
         'oversidetest',scenedepth,texturescale);
    
