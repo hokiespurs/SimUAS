@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reference version="1.2.0">
+  <cameras>
+    <camera label="A0001.png">
+      <reference x="-22.498838" y="-21.752266" z="30.570010" enabled="true"/>
+    </camera>
+    <camera label="A0002.png">
+      <reference x="-22.570837" y="-15.273047" z="31.025734" enabled="true"/>
+    </camera>
+    <camera label="A0003.png">
+      <reference x="-24.986284" y="-5.923700" z="30.908746" enabled="true"/>
+    </camera>
+    <camera label="A0004.png">
+      <reference x="-21.918828" y="-0.480937" z="30.209897" enabled="true"/>
+    </camera>
+    <camera label="A0005.png">
+      <reference x="-24.692435" y="7.827512" z="31.698864" enabled="true"/>
+    </camera>
+    <camera label="A0006.png">
+      <reference x="-24.819280" y="15.664734" z="29.392399" enabled="true"/>
+    </camera>
+    <camera label="A0007.png">
+      <reference x="-22.420066" y="22.585189" z="30.117798" enabled="true"/>
+    </camera>
+    <camera label="A0008.png">
+      <reference x="-15.948481" y="-21.619047" z="29.300840" enabled="true"/>
+    </camera>
+    <camera label="A0009.png">
+      <reference x="-14.588509" y="-14.676787" z="29.730351" enabled="true"/>
+    </camera>
+    <camera label="A0010.png">
+      <reference x="-14.323022" y="-8.284146" z="29.505713" enabled="true"/>
+    </camera>
+    <camera label="A0011.png">
+      <reference x="-14.142267" y="-1.805373" z="31.483121" enabled="true"/>
+    </camera>
+    <camera label="A0012.png">
+      <reference x="-15.691159" y="9.358593" z="31.020264" enabled="true"/>
+    </camera>
+    <camera label="A0013.png">
+      <reference x="-14.550622" y="14.395470" z="30.446995" enabled="true"/>
+    </camera>
+    <camera label="A0014.png">
+      <reference x="-14.899367" y="22.603360" z="29.890341" enabled="true"/>
+    </camera>
+    <camera label="A0015.png">
+      <reference x="-6.673930" y="-21.936833" z="28.871264" enabled="true"/>
+    </camera>
+    <camera label="A0016.png">
+      <reference x="-6.963843" y="-14.886403" z="30.289963" enabled="true"/>
+    </camera>
+    <camera label="A0017.png">
+      <reference x="-6.602112" y="-8.404726" z="28.738449" enabled="true"/>
+    </camera>
+    <camera label="A0018.png">
+      <reference x="-7.631938" y="-0.467715" z="29.524575" enabled="true"/>
+    </camera>
+    <camera label="A0019.png">
+      <reference x="-7.647201" y="7.375110" z="28.825883" enabled="true"/>
+    </camera>
+    <camera label="A0020.png">
+      <reference x="-6.492227" y="16.478958" z="29.873053" enabled="true"/>
+    </camera>
+    <camera label="A0021.png">
+      <reference x="-9.623655" y="21.639184" z="30.656816" enabled="true"/>
+    </camera>
+    <camera label="A0022.png">
+      <reference x="-0.504586" y="-21.715332" z="31.481399" enabled="true"/>
+    </camera>
+    <camera label="A0023.png">
+      <reference x="-1.270594" y="-14.691377" z="29.844511" enabled="true"/>
+    </camera>
+    <camera label="A0024.png">
+      <reference x="-0.382585" y="-7.733860" z="29.181449" enabled="true"/>
+    </camera>
+    <camera label="A0025.png">
+      <reference x="0.648679" y="-1.056973" z="30.292588" enabled="true"/>
+    </camera>
+    <camera label="A0026.png">
+      <reference x="0.825727" y="7.215859" z="30.540786" enabled="true"/>
+    </camera>
+    <camera label="A0027.png">
+      <reference x="-1.014944" y="14.913310" z="30.308642" enabled="true"/>
+    </camera>
+    <camera label="A0028.png">
+      <reference x="-0.471070" y="21.030605" z="31.096593" enabled="true"/>
+    </camera>
+    <camera label="A0029.png">
+      <reference x="7.637025" y="-22.307818" z="30.493010" enabled="true"/>
+    </camera>
+    <camera label="A0030.png">
+      <reference x="7.208137" y="-15.822293" z="30.180739" enabled="true"/>
+    </camera>
+    <camera label="A0031.png">
+      <reference x="7.801819" y="-7.594241" z="29.954159" enabled="true"/>
+    </camera>
+    <camera label="A0032.png">
+      <reference x="7.899931" y="0.336213" z="30.063783" enabled="true"/>
+    </camera>
+    <camera label="A0033.png">
+      <reference x="6.570038" y="6.595346" z="29.388665" enabled="true"/>
+    </camera>
+    <camera label="A0034.png">
+      <reference x="7.323170" y="14.711744" z="29.890682" enabled="true"/>
+    </camera>
+    <camera label="A0035.png">
+      <reference x="5.367905" y="22.850063" z="28.185985" enabled="true"/>
+    </camera>
+    <camera label="A0036.png">
+      <reference x="16.145362" y="-24.335859" z="29.687976" enabled="true"/>
+    </camera>
+    <camera label="A0037.png">
+      <reference x="14.370909" y="-13.964024" z="28.195506" enabled="true"/>
+    </camera>
+    <camera label="A0038.png">
+      <reference x="13.796150" y="-5.075539" z="30.723121" enabled="true"/>
+    </camera>
+    <camera label="A0039.png">
+      <reference x="14.746055" y="0.959401" z="29.473453" enabled="true"/>
+    </camera>
+    <camera label="A0040.png">
+      <reference x="13.571353" y="7.184228" z="30.260251" enabled="true"/>
+    </camera>
+    <camera label="A0041.png">
+      <reference x="14.979142" y="15.428623" z="29.399857" enabled="true"/>
+    </camera>
+    <camera label="A0042.png">
+      <reference x="14.439335" y="21.464015" z="29.406069" enabled="true"/>
+    </camera>
+    <camera label="A0043.png">
+      <reference x="24.677779" y="-20.622135" z="32.186022" enabled="true"/>
+    </camera>
+    <camera label="A0044.png">
+      <reference x="23.638465" y="-14.059296" z="31.327043" enabled="true"/>
+    </camera>
+    <camera label="A0045.png">
+      <reference x="20.003113" y="-6.712654" z="31.441014" enabled="true"/>
+    </camera>
+    <camera label="A0046.png">
+      <reference x="22.941327" y="-0.875874" z="29.598156" enabled="true"/>
+    </camera>
+    <camera label="A0047.png">
+      <reference x="21.101862" y="7.819949" z="28.529799" enabled="true"/>
+    </camera>
+    <camera label="A0048.png">
+      <reference x="22.244945" y="14.441706" z="30.326814" enabled="true"/>
+    </camera>
+    <camera label="A0049.png">
+      <reference x="22.664404" y="22.188571" z="29.187677" enabled="true"/>
+    </camera>
+  </cameras>
+</reference>

@@ -74,6 +74,11 @@ class ProcSettings:
             except:
                 self.epsg = ''
 
+            try:
+                self.maskfoldername = root.find('imagemasks').get('foldername')
+            except:
+                self.maskfoldername = ''
+
     class __PS:
         def __init__(self,root):
             self.referencesettingsmeasurementaccuracycamerapos = root.find('referencesettings').find('measurementaccuracy').get('camerapos')
@@ -220,6 +225,14 @@ msg = "Added Photos"
 proctime.write(msg.ljust(40) + " , " + strftime("%Y-%m-%d %H:%M:%S", gmtime()) + " , " + elaptime(lasttime,time.time()) +"\n")
 lasttime = time.time()
 proctime.flush()
+
+# Add Masks
+if not (ProcParams.importfiles.maskfoldername==''):
+    maskname = rootdir + ProcParams.importfiles.maskfoldername + '/{filename}_mask.png'
+    chunk.importMasks(path=maskname,source=PhotoScan.MaskSourceFile)
+else:
+    print("Not using Masks")
+
 
 # Add Sensor (Camera Calibration)
 if ProcParams.importfiles.sensorfilename!='':
@@ -407,6 +420,14 @@ proctime.write(msg.ljust(40) + " , " + strftime("%Y-%m-%d %H:%M:%S", gmtime()) +
 lasttime = time.time()
 proctime.flush()
 
+# Export GCP File
+gcpname = saverootname + "\\markers.txt"
+chunk.saveReference(gcpname,format=PhotoScan.ReferenceFormatCSV,items=PhotoScan.ReferenceItems.ReferenceItemsMarkers,columns='noxyzUVWXYZ',delimiter=',')
+msg = "Saved Markers"
+proctime.write(msg.ljust(40) + " , " + strftime("%Y-%m-%d %H:%M:%S", gmtime()) + " , " + elaptime(lasttime,time.time()) +"\n")
+lasttime = time.time()
+proctime.flush()
+
 # Export Markers
 if ProcParams.export.markersfilename!='':
     markersavename = saverootname + "\\" + ProcParams.export.markersfilename
@@ -435,7 +456,7 @@ for indq,q in enumerate(ProcParams.export.reprocMVSquality):
             proctime.write(msg.ljust(40) + " , " + strftime("%Y-%m-%d %H:%M:%S", gmtime()) + " , " + elaptime(lasttime,time.time()) +"\n")
             lasttime = time.time()
             proctime.flush()
-			
+
 # Save Log File
 logsavename = saverootname + "\\" + ProcParams.export.logfilefilename
 file = open(logsavename,"wt")

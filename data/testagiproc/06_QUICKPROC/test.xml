@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<procsettings projectname = "test" version = "1.0">
+
+<importfiles rootname = "..">
+	<images     foldername = "01_IMAGES" imagesToUse = ""/>
+	<sensor     filename = "" lock = "0"/>
+	<trajectory filename = "02_TRAJECTORY/traj.xml"/>
+	<controldata filename = "03_IMAGEMARKERS/pixelcontrol.xml"/>
+	<imagemasks foldername = "04_IMAGEMASKS"/>
+	<crs epsg=""/>
+</importfiles>
+
+<photoscan>
+	<referencesettings>
+		<measurementaccuracy camerapos = "10.000000" camerarot = "2.000000" marker = "0.005000" scalebar = "0.001000"/>
+		<imageaccuracy marker = "0.100000" tiepoint = "2.000000" />
+		<miscellaneous groundalt = ""/>
+	</referencesettings>
+	
+	<optimize execute = "1" fits = "11100111011000"/>
+	
+	<aligngeneral accuracy="medium" genericpre ="1" referencepre ="1"/>
+	<alignadvanced keypointlim = "40000" tiepointlim = "4000" adaptivecam = "1"/>
+	<dense quality="medium" depthfilt = "aggressive"/>
+</photoscan>
+
+<export rootname="./test">
+	<logfile         filename="photoscanlog.log"/>
+	<PhotoscanReport filename="report.pdf"/>
+	<sparsepoints    filename="sparse.las"/>
+	<densepoints     filename="dense.las"/>
+	
+	<camcalibration  filename="sensorcalib.xml"/>
+	<cameras         filename="trajectory.txt"/>
+	<markers         filename=""/>
+	<matches         filename=""/>
+
+	<reprocMVS       foldername="las" quality="00100"  depthfilt="0100"/>
+</export>
+
+</procsettings>
