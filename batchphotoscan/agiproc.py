@@ -116,6 +116,13 @@ class ProcSettings:
             self.matchesfilename = root.find('matches').get('filename')
             self.rootname = root.get('rootname')
 
+            try:
+                self.orthofilename = root.find('ortho').get('filename')
+                self.orthodx = float(root.find('ortho').get('dx'))
+            except:
+                self.orthofilename = ''
+                self.orthodx = 0
+
 def procDense(qualityval, filterval):
     if qualityval=='lowest':
         densequal = PhotoScan.Quality.LowestQuality
@@ -228,7 +235,7 @@ proctime.flush()
 
 # Add Masks
 if not (ProcParams.importfiles.maskfoldername==''):
-    maskname = rootdir + ProcParams.importfiles.maskfoldername + '/{filename}_mask.png'
+    maskname = rootdir + "\\" + ProcParams.importfiles.rootname + "/" + ProcParams.importfiles.maskfoldername + '/{filename}_mask.png'
     chunk.importMasks(path=maskname,source=PhotoScan.MaskSourceFile)
 else:
     print("Not using Masks")
@@ -361,12 +368,39 @@ if ProcParams.photoscan.optimizeexecute=='1':
 chunk.resetRegion()
 chunk.region.size = PhotoScan.Vector([10000, 10000, 2000])/chunk.transform.scale
 
+# Save Project
+projsavename = saverootname + "\\" + ProcParams.projectname + ".psx"
+doc.save(projsavename)
+doc.save()
+chunk = doc.chunks[0]
+
+msg = "Saved Project"
+proctime.write(msg.ljust(40) + " , " + strftime("%Y-%m-%d %H:%M:%S", gmtime()) + " , " + elaptime(lasttime,time.time()) +"\n")
+lasttime = time.time()
+proctime.flush()
+
 # dense pointcloud 
 procDense(ProcParams.photoscan.densequality, ProcParams.photoscan.densedepthfilt)
 msg = "Dense Reconstruction Complete"
 proctime.write(msg.ljust(40) + " , " + strftime("%Y-%m-%d %H:%M:%S", gmtime()) + " , " + elaptime(lasttime,time.time()) +"\n")
 lasttime = time.time()
 proctime.flush()
+
+if (ProcParams.export.orthodx!=0):
+    # Build Model
+    chunk.buildModel(surface=PhotoScan.HeightField, interpolation=PhotoScan.EnabledInterpolation, face_count=PhotoScan.MediumFaceCount, source=PhotoScan.PointCloudData, classes=[PhotoScan.Created])
+    msg = "Build Model"
+    proctime.write(msg.ljust(40) + " , " + strftime("%Y-%m-%d %H:%M:%S", gmtime()) + " , " + elaptime(lasttime,time.time()) +"\n")
+    lasttime = time.time()
+    proctime.flush()
+    doc.save()
+    
+    # Build Orthophoto
+    chunk.buildOrthomosaic(dx=ProcParams.export.orthodx,dy=ProcParams.export.orthodx)
+    msg = "Build Orthophoto"
+    proctime.write(msg.ljust(40) + " , " + strftime("%Y-%m-%d %H:%M:%S", gmtime()) + " , " + elaptime(lasttime,time.time()) +"\n")
+    lasttime = time.time()
+    proctime.flush()
 
 ## Save Data
 
@@ -382,14 +416,6 @@ proctime.flush()
 densesavename = saverootname + "\\" + ProcParams.export.densepointsfilename
 chunk.exportPoints(densesavename,PhotoScan.DataSource.PointCloudData.DenseCloudData,projection=doc.chunk.crs)
 msg = "Saved Dense"
-proctime.write(msg.ljust(40) + " , " + strftime("%Y-%m-%d %H:%M:%S", gmtime()) + " , " + elaptime(lasttime,time.time()) +"\n")
-lasttime = time.time()
-proctime.flush()
-
-# Save Project
-projsavename = saverootname + "\\" + ProcParams.projectname + ".psx"
-doc.save(projsavename)
-msg = "Saved Project"
 proctime.write(msg.ljust(40) + " , " + strftime("%Y-%m-%d %H:%M:%S", gmtime()) + " , " + elaptime(lasttime,time.time()) +"\n")
 lasttime = time.time()
 proctime.flush()
@@ -438,6 +464,15 @@ if ProcParams.export.matchesfilename!='':
     matchessavename = saverootname + "\\" + ProcParams.export.matchesfilename
     chunk.exportMatches(matchessavename)
 
+# Export Ortho
+if (ProcParams.export.orthodx!=0):
+    orthosavename = saverootname + "\\" + ProcParams.export.orthofilename
+    chunk.exportOrthomosaic(path=orthosavename, jpeg_quality=99)
+    msg = "Saved Orthophoto"
+    proctime.write(msg.ljust(40) + " , " + strftime("%Y-%m-%d %H:%M:%S", gmtime()) + " , " + elaptime(lasttime,time.time()) +"\n")
+    lasttime = time.time()
+    proctime.flush()
+    
 # Save Reproc Dense
 QualityType = ['lowest','low','medium','high','ultrahigh']
 FilterType = ['disabled','mild','moderate','aggressive']

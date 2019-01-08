@@ -10,7 +10,8 @@ import psutil
 if len(sys.argv)==1:
     photoscanname = r"C:\Program Files\Agisoft\PhotoScan Pro\photoscan.exe"
     scriptname    = r"C:\Users\slocumr\github\SimUAS\batchphotoscan\agiproc.py"
-    xmlnames      = r"P:\Slocum\USVI_project\01_DATA\20180319_USVI_UAS_BATHY\02_PROCDATA\06_PROCIMAGES\*\06_QUICKPROC\*2.xml"
+    #xmlnames      = r"P:\Slocum\USVI_project\01_DATA\20180319_USVI_UAS_BATHY\02_PROCDATA\06_PROCIMAGES\*\06_QUICKPROC\*2.xml"
+    xmlnames      = r"C:\Users\slocumr\github\SimUAS\data\testagiproc\06_QUICKPROC\*.xml"
     nprocesses    = 1
 else:
     photoscanname = sys.argv[1]

@@ -34,6 +34,7 @@
 	<cameras         filename="trajectory.txt"/>
 	<markers         filename=""/>
 	<matches         filename=""/>
+    <ortho           filename="ortho.tiff" dx="0.1"/>
 
 	<reprocMVS       foldername="las" quality="00100"  depthfilt="0100"/>
 </export>
